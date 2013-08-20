@@ -207,7 +207,7 @@ td {
 header {
 	background-color: #171717;
 	color: #FDFDFB;
-  width:170px;
+  width: 205px;
   float:left;
   position:fixed;
 	border: 1px solid #000;
@@ -228,7 +228,7 @@ p.header {
 
 h1.header {
 	font-family: Arvo, sans-serif;
-	font-size: 30px;
+	font-size: 26px;
 	font-weight: 300;
 	line-height: 1.3em;
 	border-bottom: none;
@@ -318,11 +318,11 @@ section {
 /* Footer */
 
 footer {
-  width:170px;
+  width: 205px;
   float:left;
   position:fixed;
   bottom:10px;
-	padding-left: 50px;
+	padding-left: 20px;
 }
 
 @media print, screen and (max-width: 960px) {
