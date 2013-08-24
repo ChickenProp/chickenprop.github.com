@@ -149,6 +149,13 @@ img {
   border: 1px solid #ccc;
 }
 
+/* I put LaTeX images in code blocks. */
+code img {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
 
 /* Code blocks */
 
