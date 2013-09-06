@@ -3,7 +3,9 @@ layout: default
 title: A Reasonable Approximation
 ---
 {% for post in site.posts %}
-<h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+<h3><a href="{{ post.url }}#disqus_thread">{{ post.title }}</a></h3>
 {{ post.content }}
 <em>Posted on {{ post.date | date_to_long_string }}</em>
 {% endfor %}
+
+<script async type="text/javascript" src="//reasonableapproximation.disqus.com/count.js"></script>
