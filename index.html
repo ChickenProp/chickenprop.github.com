@@ -5,11 +5,8 @@ title: A Reasonable Approximation
 {% for post in site.posts %}
 <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
 {{ post.content }}
-<em>Posted on {{ post.date | date_to_long_string }}
-  | <a href="{{post.url}}#disqus_thread">Comments</a></em>
+<em>Posted on {{ post.date | date_to_long_string }}</em>
+  | <a href="{{post.url}}#disqus_thread">Comments</a>
 {% endfor %}
 
-<script type="text/javascript">
-  var disqus_shortname='reasonableapproximation';
-</script>
 <script async type="text/javascript" src="//reasonableapproximation.disqus.com/count.js"></script>
