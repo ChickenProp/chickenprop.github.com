@@ -31,3 +31,19 @@ In my defense: I had a cold that day and was feeling a bit shitty (while wanderi
 \[\[I spoke with [Critch from CFAR](http://rationality.org/critch/) a few days afterwards, and he gave me a new perspective: if I go in expecting people to respond well to me, then when they don't, that's going to bother me. If I go in expecting to annoy people, but remembering that annoying people, while bad, doesn't correspond to any serious consequences, then it's going to be easier to handle. For any given interaction, I should be trying to make it go well, but I should choose the interactions such that they won't all go well. (Analogy: in a game of Go, the stronger player might give a handicap to the weaker player, but once play starts they'll do their best to win.)
 
 He also gave me a potential way to avoid chickening out: if I imagine myself doing something, and then I try to do it and it turns out to be scary, then that feels like new information and a reason to actually not do it. If I imagine myself doing something, *being scared and doing it anyway*, then when it turns out to be scary, that no longer counts as an excuse. I haven't had a chance to try this yet.\]\]
+
+Other people had more success. We'd primed ourselves by talking about staring contests a lot previously, so a few people asked strangers for those. I think only one stranger accepted. Trying to get high-fives was also common; one person observed that he sometimes does that anyway, and has a much higher success rate than he did in the mall. One person went into a high-end lingerie store and asked what he could buy on a budget of £20 (answer: nothing). And of course there were several other successes that I've forgotten. I got the impression that most people did better than me.
+
+There was interest in doing this again. At the time I was hesitant but realised that I would probably become less hesitant with time. I've now reached a point where I, too, would quite like to do it again. We haven't got any specific plans yet.
+
+**Things to take away:**
+
+- Have some well-defined way to transition from "about-to-start" to "started".
+
+- Having an audience makes some things much easier. This is potentially a way to escalate difficulty slowly.
+
+- When I did CoZE at the CFAR workshop I was hanging out with someone, who encouraged me to actually do things as well as provided an audience. At the time I wondered whether the fact that we were together meant we each did less, but I did far more with her than by myself.
+
+- We didn't do anything beforehand to get in state, like improv games. I can't say whether this would have helped, but it seems like it might have done.
+
+- We had a nonparticipant volunteer to be a meeting point if participants wanted to finish early. If she hadn't been there, I might not have quit twenty minutes early, but given that I did, it was nice to be able to hang out. This might be a good way to enable longer sessions.
