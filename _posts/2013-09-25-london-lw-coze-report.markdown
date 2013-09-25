@@ -1,6 +1,7 @@
 ---
 layout: post
 title: (DRAFT) London LW CoZE Exercise Report
+draft: true
 ---
 (This is a draft.)
 
@@ -39,11 +40,7 @@ There was interest in doing this again. At the time I was hesitant but realised 
 **Things to take away:**
 
 - Have some well-defined way to transition from "about-to-start" to "started".
-
 - Having an audience makes some things much easier. This is potentially a way to escalate difficulty slowly.
-
 - When I did CoZE at the CFAR workshop I was hanging out with someone, who encouraged me to actually do things as well as provided an audience. At the time I wondered whether the fact that we were together meant we each did less, but I did far more with her than by myself.
-
 - We didn't do anything beforehand to get in state, like improv games. I can't say whether this would have helped, but it seems like it might have done.
-
 - We had a nonparticipant volunteer to be a meeting point if participants wanted to finish early. If she hadn't been there, I might not have quit twenty minutes early, but given that I did, it was nice to be able to hang out. This might be a good way to enable longer sessions.
