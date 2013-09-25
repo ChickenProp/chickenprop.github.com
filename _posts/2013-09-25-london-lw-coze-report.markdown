@@ -1,6 +1,6 @@
 ---
 layout: post
-title: London LW CoZE Exercise Report
+title: (DRAFT) London LW CoZE Exercise Report
 draft: true
 ---
 (This is a draft.)
