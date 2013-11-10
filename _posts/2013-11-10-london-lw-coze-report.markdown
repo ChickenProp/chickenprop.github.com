@@ -3,23 +3,17 @@ layout: post
 title: (DRAFT) London LW CoZE Exercise Report
 draft: true
 ---
-(This is a draft.)
-
 Human brains are bad at evaluating consequences. Sometimes we want to do something, and logically we're pretty sure we won't die or anything, but our lizard hindbrains are screaming at us to flee. Comfort Zone Expansion (CoZE) is an exercise that [CFAR](http://appliedrationality.org) teaches to get our lizard hindbrains to accept that what we're doing is actually pretty safe.
 
 Roughly it involves two steps. One: do something that makes our lizard hindbrains get pretty antsy. Two: don't get eaten as a result.
 
-I organised a CoZE exercise for LessWrong London. We had a total of eight participants, [and two nonparticipants - probably cut this]
+I organised a CoZE exercise for LessWrong London on Septmeber 1st. We had a total of eight participants, I think I was the only one who'd done any structured CoZE before.
 
-Met at in theory 11, discussion actually started closer to 12, other people showed up even later.
+My plan was: we meet at 11am, have a discussion about CoZE, play some improv games to warm up, and then head to the nearby mall for 1.30 pm. In reality, the discussion started closer to 12pm, with some people showing up part way through or not until it was finished.
 
-During the discussion about ethics, someone brought up an objection, which I think cashes out as: there are good places to expand our comfort zones into, there are bad places, and there are lame places. A lot of the stuff on the recommended list of activities is lame (do we really need to be better at asking people for staring contests?), and it's not clear how much it generalises to good stuff. Under the novice-driver line of thought, bothering people is an acceptable cost of CoZE; but if we're using CoZE for lame things, the benefits become small, and maybe it's no longer worth the cost.
+After finishing the discussion, we didn't end up doing any improv games. We also became slightly disorganised; we agreed on a meeting time an hour and a half in the future, but then our group didn't really split up until about twenty minutes after that. I could have handled this better. We got distracted by the need for lunch, which I could have made specific plans for. (Ideally I would have started the discussion after lunch, but shops close early on Sunday.)
 
-I guess this boils down to a question of how much the lame stuff generalises. I'm optimistic; for example, it seems to me that a lot of the lame stuff is going to be overcoming a feeling of "I don't want to bother this person", which is also present in the good stuff, so that particular feature should generalise. (It may also be that the lame stuff is dominated by the good stuff, but that seems sufficiently complex to be low prior.)
-
-(There's also a question of whether or not people are actually bothered by strangers asking for staring contests. My initial assumption was not, but after doing the exercise, I'm not sure.)
-
-After finishing the discussion, we became slightly disorganised; we agreed on a meeting time an hour and a half in the future, but then our group didn't really split up until about twenty minutes after that. I could have handled this better. We got distracted by the need for lunch, which I could have made specific plans for. (Ideally I would have started the discussion after lunch, but shops close early on Sunday.)
+**Report**
 
 My solo activities went considerably less well than I'd expected. My first thing was to ask a vendor in the walkway for some free chocolate, which annoyed her more than I'd expected. Maybe she gets asked that a lot? It was kind of discouraging.
 
@@ -40,7 +34,19 @@ There was interest in doing this again. At the time I was hesitant but realised 
 **Things to take away:**
 
 - Have some well-defined way to transition from "about-to-start" to "started".
+
 - Having an audience makes some things much easier. This is potentially a way to escalate difficulty slowly.
+
 - When I did CoZE at the CFAR workshop I was hanging out with someone, who encouraged me to actually do things as well as provided an audience. At the time I wondered whether the fact that we were together meant we each did less, but I did far more with her than by myself.
+
 - We didn't do anything beforehand to get in state, like improv games. I can't say whether this would have helped, but it seems like it might have done.
+
 - We had a nonparticipant volunteer to be a meeting point if participants wanted to finish early. If she hadn't been there, I might not have quit twenty minutes early, but given that I did, it was nice to be able to hang out. This might be a good way to enable longer sessions.
+
+**An objection**
+
+During the discussion about ethics, someone brought up an objection, which I think cashes out as: there are good places to expand our comfort zones into, there are bad places, and there are lame places. A lot of the stuff on the recommended list of activities is lame (do we really need to be better at asking people for staring contests?), and it's not clear how much it generalises to good stuff. Under the novice-driver line of thought, bothering people is an acceptable cost of CoZE; but if we're using CoZE for lame things, the benefits become small, and maybe it's no longer worth the cost.
+
+I guess this boils down to a question of how much the lame stuff generalises. I'm optimistic; for example, it seems to me that a lot of the lame stuff is going to be overcoming a feeling of "I don't want to bother this person", which is also present in the good stuff, so that particular feature should generalise. (It may also be that the lame stuff is dominated by the good stuff, so there's no reason to ever practice anything lame; but that seems a sufficiently complicated hypothesis to be low prior.)
+
+(There's also a question of whether or not people are actually bothered by strangers asking for staring contests. My initial assumption was not, but after doing the exercise, I'm not sure.)
