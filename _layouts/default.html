@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>{{ page.title }}</title>
 
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml">
     <link rel="stylesheet" href="/stylesheets/styles.css">
     <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
     <script src="/javascripts/scale.fix.js"></script>
@@ -21,19 +22,13 @@
     <div class="wrapper">
       <header>
         <h1 class="header"><a href="/">A Reasonable Approximation</a></h1>
-        <p class="header"></p>
-
-
-
-        <ul>
-          <li><a class="buttons github" href="https://github.com/ChickenProp">GitHub Profile</a></li>
-        </ul>
-
       </header>
       <section>
 	{{ content }}
       </section>
       <footer>
+	<p><small><a href="/rss.xml">RSS</a>
+	    | I also have <a href="http://philh.net">a website</a></small></p>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme (more or less)</small></p>
       </footer>
     </div>
