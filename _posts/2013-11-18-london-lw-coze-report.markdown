@@ -2,6 +2,8 @@
 layout: post
 title: London LW CoZE Exercise Report
 ---
+([Cross-posted to LessWrong.](http://lesswrong.com/r/discussion/lw/j3n/london_lw_coze_exercise_report/))
+
 Human brains are bad at evaluating consequences. Sometimes we want to do something, and logically we're pretty sure we won't die or anything, but our lizard hindbrains are screaming at us to flee. Comfort Zone Expansion (CoZE) is an exercise that [CFAR](http://appliedrationality.org) teaches to get our lizard hindbrains to accept that what we're doing is actually pretty safe.
 
 Roughly it involves two steps. One: do something that makes our lizard hindbrains get pretty antsy. Two: don't get eaten as a result.
@@ -34,7 +36,7 @@ There was interest in doing this again. At the time I was hesitant but realised 
 
 - Have some well-defined way to transition from "about-to-start" to "started".
 - Having an audience makes some things much easier. This is potentially a way to escalate difficulty slowly.
-- When I did CoZE at the CFAR workshop I was hanging out with someone, who encouraged me to actually do things as well as provided an audience. At the time I wondered whether the fact that we were together meant we each did less, but I did far more with her than by myself.
+- When I did CoZE at the CFAR workshop I was hanging out with someone, who encouraged me to actually do things as well as provided an audience. At the time I wondered whether the fact that we were together meant I did less, but I did far more with her than by myself.
 - We didn't do anything beforehand to get in state, like improv games. I can't say whether this would have helped, but it seems like it might have done.
 - We had a nonparticipant volunteer to be a meeting point if participants wanted to finish early. If she hadn't been there, I might not have quit twenty minutes early, but given that I did, it was nice to be able to hang out. This might be a good way to enable longer sessions.
 
