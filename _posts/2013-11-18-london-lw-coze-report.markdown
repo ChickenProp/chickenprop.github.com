@@ -1,7 +1,6 @@
 ---
 layout: post
-title: (DRAFT) London LW CoZE Exercise Report
-draft: true
+title: London LW CoZE Exercise Report
 ---
 Human brains are bad at evaluating consequences. Sometimes we want to do something, and logically we're pretty sure we won't die or anything, but our lizard hindbrains are screaming at us to flee. Comfort Zone Expansion (CoZE) is an exercise that [CFAR](http://appliedrationality.org) teaches to get our lizard hindbrains to accept that what we're doing is actually pretty safe.
 
