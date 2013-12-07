@@ -18,8 +18,8 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font: inherit;
-  /* Not sure why this was here, but it breaks sup and sub. */
+  /* Not sure why these were here, but they break sup, sub, small, ... */
+  /* font: inherit; */
   /* vertical-align: baseline; */
 }
 
