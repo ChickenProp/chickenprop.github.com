@@ -33,38 +33,3 @@ numer() {
     fi
 }
 ```
-
-So now we can calculate the partial sums. Since we still only have integer division, we need to multiply them by a power of 10 to get rid of the decimal point.
-
-```sh
-nthsum() {
-    echo $(( 10**($1-1) * `numer $1` / `fac $1` ))
-}
-```
-
-Note that this fails for n=0 (10**-1 isn't allowed), but we can live with that.
-
-So this kind of works:
-
-```sh
-$ for i in `seq 1 15`; do nthsum $i; done
-2
-25
-266
-2708
-27166
-271805
-2718253
-27182787
-271828152
-2718281801
-27182818261
-2252447557
--1174490000
-104582974
-1946803
-```
-
-Up to n=11, we accurately calculate the first (n-3) digits of e. For n=12 and above, we get integer overflows.
-
-It doesn't look like we can go very far with this: the numbers we're working with are simply too large.
