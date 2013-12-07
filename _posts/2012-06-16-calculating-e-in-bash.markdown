@@ -1,6 +1,7 @@
 ---
-layout: posts
+layout: post
 title: Calculating e in bash
+draft: true
 ---
 *(Fri, 6 Dec 2013: Importing this post from its [original home as a gist](https://gist.github.com/ChickenProp/2942612).)*
 
@@ -21,5 +22,3 @@ fac() {
     fi
 }
 ```
-
-Since we only have integer division, we obviously can't calculate 1/2!. But note that x/a! + y/(a+1)! = (x(a+1) + y)/(a+1)!. We can use this to recursively calculate (sum 1/k! [0 ≤ k ≤ n]) as numer(n)/n!, where numer(0) = 0, numer(k) = k*numer(k-1) + 1.
