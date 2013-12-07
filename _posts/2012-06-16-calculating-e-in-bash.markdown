@@ -89,3 +89,61 @@ If you google "algorithm to calculate a specific digit of e", this paper comes u
 This isn't quite accurate: the original algorithm calculates m such that m! > 10^(n+1), and the loops over j go from m to 2 instead of n to 2. This means the algorithm is inaccurate for small n. (For n ≥ 27, n! > 10^(n+1) so it works out okay; for 22 ≤ n ≤ 26, we have 10^(n-1) < n! < 10^(n+1) and the result is accurate anyway. It seems like the algorithm is unnecessarily conservative, but we might also find that m! > 10^(n-1) is insufficient for larger n.) For large n, we do unnecessary work, but get the correct result.
 
 We can fix both these problems, but this algorithm isn't especially nice anyway. Its time complexity is O(n^2). Can we do better?
+
+###Third attempt###
+
+(Spoiler alert: this doesn't go so well.)
+
+The same google search also gives this page: <http://www.hulver.com/scoop/story/2004/7/22/153549/352> which hints at an algorithm without providing it explicitly. We can adapt our first attempt for this.
+
+Write numer(n) as a\_n, so a\_0 = 1 and a\_n = n * a\_(n-1) + 1. This gives 1/0! + 1/1! + ... + 1/n! = a\_n / n!. We know that e = lim [n→∞] a\_n / n!; but more than this, we can show that for any n ≥ 1, a\_n / n! < e < (a\_n + 1)/n!.
+
+(Proof of this: (a\_n+1) / n! = 1/0! + 1/1! + ... + 1/n! + 1/n!. This is greater than e if 1/n! > 1/(n+1)! + 1/(n+2)! + ..., which holds if 1 > 1/(n+1) (1 + 1/(n+2) (1 + ... )). For n ≥ 1, RHS is ≤ 1/2 (1 + 1/3 (1 + ... )) which we know is e-2 < 1.)
+
+So if a\_n / n! and (a\_n + 1) / n! agree up to k decimal places, these must be the first k decimal places of e.
+
+Moreover, we can extract specific decmial places while keeping to integer division: the fractional part of x/y is (x%y)/y, so the first decmal digit is int( (10\*(x%y))/y ) or int( (x%y)/(y/10) ) (assuming y%10 = 0), and we can extract further digits by doing the same thing again.
+
+This gives us an algorithm for calculating e to n decimal places, one digit at a time:
+
+    ecalc() {
+        let a=1
+        let b=1
+        let d=0
+        let k=1
+        let n=$1
+    
+        while (( d <= n )); do
+            while (( a/b != (a+1)/b || b%10 != 0 )); do
+                let a=k*a+1
+                let b*=k
+                let k+=1
+            done
+    
+            echo -n $(( a / b ))
+            let d+=1
+            let a%=b
+            let b/=10
+        done
+    
+        echo
+    }
+
+Unfortunately, this only works up to three decimal places before we get overflows. The problem is that b only gets a new power of 10 every time k%5 = 0. Unfortunately 24!/10000 overflows, so we only get digits from k=5, 10, 15, 20. (In fact, `ecalc 4` is also correct; but this seems to be just coincidence.)
+
+We can delay the inevitable by keeping track of powers of ten explicitly: when we generate a new digit, if b%10 != 0, increment a counter and consider (10^powten \* a)/b and (10^powten \* (a+1))/b. This gives us a few more digits, but before long 10^powten \* a overflows.
+
+So, how to get around this? Why not just implement arbitrary-precision integers in bash?
+
+It sounds crazy, but we don't actually need a complete implementation. The only operations we need are:
+
+- Add one to a bigint.
+- Multiply a bigint by an int.
+- Divide a bigint by 10.
+- Modulo a bigint by 10.
+- Integer division of bigints, with small ratio.
+- Modulo a bigint by another bigint, also with small ratio.
+
+The latter two can be implemented with subtraction and comparison, so it shouldn't be too hard.
+
+Let's represent a big integer as an array of numbers, each smaller than 2^32. Since bash can represent numbers up to 2^63 - 1, we can raise n up to 2^31 - 1 before overflows become a serious problem. As of 2010, e was only known up to about 2^40 digits, so this is an acceptable limit. But it's admittedly quite arbitrary, and there's no reason to hardcode it.
