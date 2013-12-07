@@ -19,7 +19,8 @@ time, mark, audio, video {
   padding: 0;
   border: 0;
   font: inherit;
-  vertical-align: baseline;
+  /* Not sure why this was here, but it breaks sup and sub. */
+  /* vertical-align: baseline; */
 }
 
 
