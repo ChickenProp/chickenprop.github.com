@@ -11,25 +11,3 @@ The point of this post is an attempt to calculate e to given precision in bash, 
 The obvious method to compute e is as the infinite sum of 1/n!, n from 0 to ∞. This converges quickly, but how far do we have to calculate to get the n'th digit of e? We can deal with that later.
 
 We obviously need a factorial function.
-
-```sh
-fac() {
-    if [[ $1 -eq 0 ]]; then
-        echo 1
-    else
-        echo $(( $1 * `fac $(($1 - 1))` ))
-    fi
-}
-```
-
-Since we only have integer division, we obviously can't calculate 1/2!. But note that x/a! + y/(a+1)! = (x(a+1) + y)/(a+1)!. We can use this to recursively calculate (sum 1/k! [0 ≤ k ≤ n]) as numer(n)/n!, where numer(0) = 0, numer(k) = k*numer(k-1) + 1.
-
-```sh
-numer() {
-    if [[ $1 -eq 0 ]]; then
-        echo 1
-    else
-        echo $(( $1 * `numer $(($1 - 1))` + 1 ))
-    fi
-}
-```
