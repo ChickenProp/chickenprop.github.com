@@ -44,7 +44,7 @@ nthsum() {
 }
 ```
 
-Note that this fails for n=0 (10**-1 isn't allowed), but we can live with that.
+Note that this fails for n=0 (10\*\*-1 isn't allowed), but we can live with that.
 
 So this kind of works:
 
