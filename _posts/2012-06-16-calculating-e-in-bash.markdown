@@ -61,3 +61,31 @@ So this kind of works:
 Up to n=11, we accurately calculate the first (n-3) digits of e. For n=12 and above, we get integer overflows.
 
 It doesn't look like we can go very far with this: the numbers we're working with are simply too large.
+
+###Second attempt###
+
+If you google "algorithm to calculate a specific digit of e", this paper comes up: http://eprints.utas.edu.au/121/1/Calculation_of_e.pdf . It provides a simple algorithm using (mostly) integer arithmetic, implemented in ALGOL. It's simple enough to translate into bash:
+
+    ecalc() {
+        let n=$1
+        echo -n 2.
+    
+        for (( j = n; j >= 2; j-- )); do
+            coef[j]=1
+        done
+    
+        for (( i = 1; i <= n; i++ )); do
+            let carry=0
+            for (( j = n; j >= 2; j-- )); do
+                let temp=coef[j]*10+carry
+                let carry=temp/j
+                let coef[j]=temp-carry*j
+            done
+            echo -n $carry
+        done
+        echo
+    }
+
+This isn't quite accurate: the original algorithm calculates m such that m! > 10^(n+1), and the loops over j go from m to 2 instead of n to 2. This means the algorithm is inaccurate for small n. (For n ≥ 27, n! > 10^(n+1) so it works out okay; for 22 ≤ n ≤ 26, we have 10^(n-1) < n! < 10^(n+1) and the result is accurate anyway. It seems like the algorithm is unnecessarily conservative, but we might also find that m! > 10^(n-1) is insufficient for larger n.) For large n, we do unnecessary work, but get the correct result.
+
+We can fix both these problems, but this algorithm isn't especially nice anyway. Its time complexity is O(n^2). Can we do better?
