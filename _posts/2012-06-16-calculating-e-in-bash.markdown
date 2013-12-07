@@ -64,7 +64,7 @@ It doesn't look like we can go very far with this: the numbers we're working wit
 
 ###Second attempt###
 
-If you google "algorithm to calculate a specific digit of e", this paper comes up: http://eprints.utas.edu.au/121/1/Calculation_of_e.pdf . It provides a simple algorithm using (mostly) integer arithmetic, implemented in ALGOL. It's simple enough to translate into bash:
+If you google "algorithm to calculate a specific digit of e", this paper comes up: <http://eprints.utas.edu.au/121/1/Calculation_of_e.pdf>. It provides a simple algorithm using (mostly) integer arithmetic, implemented in ALGOL. It's simple enough to translate into bash:
 
     ecalc() {
         let n=$1
