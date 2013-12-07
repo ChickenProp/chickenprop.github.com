@@ -147,3 +147,122 @@ It sounds crazy, but we don't actually need a complete implementation. The only 
 The latter two can be implemented with subtraction and comparison, so it shouldn't be too hard.
 
 Let's represent a big integer as an array of numbers, each smaller than 2^32. Since bash can represent numbers up to 2^63 - 1, we can raise n up to 2^31 - 1 before overflows become a serious problem. As of 2010, e was only known up to about 2^40 digits, so this is an acceptable limit. But it's admittedly quite arbitrary, and there's no reason to hardcode it.
+
+    let MAXINT=2**32
+
+We'll want some way of taking an array of numbers and turning it into a bigint, if some of its elements are greater than MAXINT or less than 0. I don't think there's a convenient way of passing around arrays in bash, so let's use a register-based approach, and operate destructively on the variable $res. (This is for convenience: $res will be the output variable of other operations, and we expect normalisation to be the last thing they do.)
+
+    normalise() {
+        local i
+    
+        for (( i = 0; i < ${#res[@]}; i++ )); do
+            if (( res[i] >= MAXINT )); then
+                let res[i+1]+=(res[i] / MAXINT)
+                let res[i]=(res[i] % MAXINT)
+            elif (( res[i] < 0 && ${#res[@]} > i+1 )); then
+                let res[i+1]-=1
+                let res[i]+=MAXINT
+            fi
+        done
+    }
+
+This doesn't handle every case; for example, a term smaller than -MAXINT will break things. But it will be sufficient for our purposes.
+
+With this, addition and subtraction are easy. We only need addition of an int and a bigint, so will call this addi (i for integer) and operate on the variable $op1.
+
+    addi() {
+        res=( ${op1[@]} )
+        let res[0]+=$1
+        normalise
+    }
+
+Subtraction needs to be defined between two bigints, but we only need positive results.
+
+    sub() {
+        local i
+        res=()
+        for (( i = 0; i < ${#op1[@]}; i++ )); do
+            let res[i]=op1[i]-op2[i]
+        done
+        normalise
+    }
+
+Multiplication and division follow similarly. (We only need to divide a bigint by 10, but allowing an arbitrary int is no harder.)
+
+    muli() {
+        local i
+        res=(${op1[@]})
+        for (( i = 0; i < ${#res[@]}; i++ )); do
+            let res[i]*=$1
+        done
+        normalise
+    }
+    
+    divi() {
+        local i
+        res=(${op1[@]})
+        for (( i = ${#res[@]}-1; i > 0; i-- )); do
+            let res[i-1]+="MAXINT*(res[i] % $1)"
+            let res[i]/=$1
+        done
+        let res[0]/=$1
+        normalise
+    }
+
+(We note that `muli` might break if the multiplicand is close to 2^32: if two adjacent terms in $res are sufficiently large, `normalise` might cause overflows. But we're assuming the multiplicand is at most 2^31 - 1, and testing indicates that this works fine.)
+
+For `modi`, even though the result is a normal integer, we'll return it in $res like a bigint. The other option would be to echo it, but then we'd need to spawn a subshell to use it. (Test this yourself: compare `echo 'echo hi' | strace -f bash` to `echo 'echo $(echo hi)' | strace -f bash`. The first doesn't fork at all, because `echo` is a builtin command; but the second forks a subshell to run `echo hi`.) Forking isn't cheating, but it seems worth avoiding.
+
+    modi() {
+        local i
+        let res=0
+        for (( i = 0; i < ${#op1[@]}; i++ )); do
+            let res+="${op1[i]}%$1 * (MAXINT%$1)**i"
+        done
+        let res%=$1
+    }
+
+For division and modulo, we need a ≤ operation; we can use its exit code for the return value. (We return 0 (true) if op1 ≤ op2, and 1 (false) otherwise.)
+
+    le() {
+        local i
+        local len=${#op1[@]}
+        (( len < ${#op2[@]} )) && len=${#op2[@]}
+    
+        for (( i = len-1; i >= 0; i-- )); do
+            if (( op1[i] > op2[i] )); then
+                return 1
+            elif (( op1[i] < op2[i] )); then
+                return 0
+            fi
+        done
+        return 0
+    }
+
+Finally we can implement division and modulo. We'll just define a mod operator, which can store the division result in a variable $div.
+
+    mod() {
+        local temp=( ${op1[@]} )
+        let div=0
+        res=( ${op1[@]} )
+    
+        until le; do
+            let div+=1
+            sub
+            op1=( ${res[@]} )
+        done
+    
+        op1=( ${temp[@]} )
+    }
+
+So mod stores $op1 % $op2 in $res, and $op1 / $op2 in $div. Since we know $op1 / $op2 will always be less than 10, we could maybe get a slight speed improvement with a binary search, but I really doubt that's going to be a bottleneck.
+
+It would be foolish not to test these. These Haskell functions (entered into GHCI, which only accepts one-line definitions) will help:
+
+    let x = 2^32
+    let splitint n = if n < x then (show n) else (show (n `mod` x)) ++ " " ++ splitint (n `div` x)
+    let unsplit s = sum $ map (\(a,b) -> b*x^a) $ zip [0..] $ map read $ words s
+
+`splitint` turns an arbitrary-precision Integer into a string that we can copy into a bash array. `unsplit` does the opposite, taking a space-separated list of integers and turning them into an arbitrary-precision Integer. (Haskell is good for this because it has arbitrary-precision arithmetic. I originally tried this in Python, and wasted a lot of time trying to track down a bug in my bash code before realising that Python was wrong.) So we choose a few arbitrary large numbers and verify that everything works as expected. (Unsurprisingly, I caught a few bugs when I actually tried this.)
+
+Having implemented bigints to the extent necessary, we can hopefully extract more digits from e. Arithmetic is ugly now, so we'll split off some functions, all using variables $a and $b.
