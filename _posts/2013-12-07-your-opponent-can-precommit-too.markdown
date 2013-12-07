@@ -1,13 +1,12 @@
 ---
 layout: post
 title: Your Opponent Can Precommit Too
-draft: true
 ---
 [Chicken](http://en.wikipedia.org/wiki/Chicken_%28game%29) is a well-known two-player game in which the players get inside different cars, drive towards each other, and hope that the other player swerves out of the way. If both players swerve, they both lose small amounts of charisma. If one player swerves and the other doesn't, the swerver loses a slightly larger amount of charisma, and the non-swerver gains a small amount. If neither player swerves, both lose a large (occasionally fatal) amount of HP, and a small amount of charisma.
 
 It is sometimes said<sup><small>[citation needed]</small></sup> that there is an optimal strategy to playing Chicken: after pointing your car at your opponent, remove your steering wheel. Now you can't swerve, so she knows that she can either swerve or crash.
 
-Hearing this strategy, you head down to your local Chicken field, armed with your trusty screwdriver, and eager for a game. You quickly find an opponent, a girl who you don't recognise. The two of you perform the traditional squaring-off ritual, enter your respective vehicles, and wheel around to face each other. You take your screwdriver in hand, smile sweetly at your opponent... and realise that she has had the same idea, and is already removing her steering wheel.
+Hearing this strategy, you head down to your local Chicken field, armed with your trusty screwdriver, and eager for a game. You quickly find an opponent. The two of you perform the traditional squaring-off ritual, enter your respective vehicles, and wheel around to face each other. You take your screwdriver in hand, smile sweetly at your opponent... and realise that she has had the same idea, and is already removing her steering wheel.
 
 Are you still going to remove your own wheel? Or are you going to swerve?
 
