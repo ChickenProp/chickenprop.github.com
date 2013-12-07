@@ -82,4 +82,4 @@ And I'm sure there are problems that I haven't anticipated. Which is the worst k
 
 Ultimately, I'm not sure how much use `cmd` will be. But until a few days ago, I don't think I'd ever thought about using a shell script in a shebang line, so I guess there's territory yet to explore. I'd be interested in hearing more ideas on  the subject.
 
-If you're interested, `cmd` can be found at http://github.com/ChickenProp/cmd .
+If you're interested, `cmd` can be found at <http://github.com/ChickenProp/cmd>.
