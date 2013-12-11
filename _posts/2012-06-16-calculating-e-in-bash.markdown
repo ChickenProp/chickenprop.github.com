@@ -266,3 +266,81 @@ It would be foolish not to test these. These Haskell functions (entered into GHC
 `splitint` turns an arbitrary-precision Integer into a string that we can copy into a bash array. `unsplit` does the opposite, taking a space-separated list of integers and turning them into an arbitrary-precision Integer. (Haskell is good for this because it has arbitrary-precision arithmetic. I originally tried this in Python, and wasted a lot of time trying to track down a bug in my bash code before realising that Python was wrong.) So we choose a few arbitrary large numbers and verify that everything works as expected. (Unsurprisingly, I caught a few bugs when I actually tried this.)
 
 Having implemented bigints to the extent necessary, we can hopefully extract more digits from e. Arithmetic is ugly now, so we'll split off some functions, all using variables $a and $b.
+
+Some things to note:
+
+* `b_has_power_10` is faster than `got_next_digit`, and more likely to fail. So we test that first.
+* To avoid repeating computations, `echo_next_digit` and `reduce_a_b` simply use the results of `a mod b` calculated in `got_next_digit`.
+
+    got_next_digit() {
+        op1=( ${a[@]} )
+        addi 1
+        op1=( ${res[@]} )
+    
+        op2=( ${b[@]} )
+        mod
+        div1=$div
+    
+        op1=( ${a[@]} )
+        mod
+        (( div1 == div ))
+    }
+    
+    echo_next_digit() {
+        echo -n $div
+    }
+    
+    b_has_power_10() {
+        op1=( ${b[@]} )
+        modi 10
+        (( res == 0 ))
+    }
+    
+    increase_a_b() {
+        op1=( ${a[@]} )
+        muli $1
+        op1=( ${res[@]} )
+        addi 1
+        a=( ${res[@]} )
+    
+        op1=( ${b[@]} )
+        muli $1
+        b=( ${res[@]} )
+    }
+    
+    reduce_a_b() {
+        a=( ${res[@]} )
+    
+        op1=( ${b[@]} )
+        divi 10
+        b=( ${res[@]} )
+    }
+    
+    ecalc() {
+        a=(1)
+        b=(1)
+        d=0
+        k=1
+        n=$1
+    
+        while (( d <= n )); do
+            until b_has_power_10 && got_next_digit; do
+                increase_a_b $k
+                let k+=1
+            done
+    
+            echo_next_digit
+            reduce_a_b
+            let d+=1
+        done
+    
+        echo
+    }
+
+This still seems to act as O(n^2). Which, in hindsight, shouldn't be too surprising: arithmetic is O(log b); b grows as O(k!); and k grows to approximately 4n. (k! needs to have n powers of 5, which means n ≈ k/5 + k/25 + k/125 + ... = k/4.) Since there are O(n) arithmetic operations, we should actually find that this is O(n^2 log n) if we look close enough. That's disappointing; and the algorithm is considerably slower than the previous one (7 minutes versus 40 seconds to calculate 100 digits), which is even more disappointing.
+
+But maybe we can still salvage something. (Or maybe we're just doubling down on a sunk cost.) The bottleneck right now is probably the powers of 10 in b. There's an easy way to see this: ask for e up to 20 places. Then take the values of a and b, put them into Haskell, and see just how many digits we'd actually generated at this point.
+
+It turns out to be about 130. (And this only took twelve seconds, so we're beating the second attempt considerably.)
+
+So if we can extract all these digits without needing so many powers of 10 in b, we can do a lot better. We might even be able to beat O(n^2), if k grows slower than O(n). So let's try to do that.
