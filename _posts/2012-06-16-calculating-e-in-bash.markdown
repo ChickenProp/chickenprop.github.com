@@ -269,10 +269,10 @@ Having implemented bigints to the extent necessary, we can hopefully extract mor
 
 Some things to note:
 
-`b_has_power_10` is faster than `got_next_digit`, and more likely to fail. So we test that first.
+* `b_has_power_10` is faster than `got_next_digit`, and more likely to fail. So we test that first.
+* To avoid repeating computations, `echo_next_digit` and `reduce_a_b` simply use the results of `a mod b` calculated in `got_next_digit`.
 
-To avoid repeating computations, `echo_next_digit` and `reduce_a_b` simply use the results of `a mod b` calculated in `got_next_digit`.
-
+```
     got_next_digit() {
         op1=( ${a[@]} )
         addi 1
@@ -337,6 +337,7 @@ To avoid repeating computations, `echo_next_digit` and `reduce_a_b` simply use t
     
         echo
     }
+```
 
 This still seems to act as O(n^2). Which, in hindsight, shouldn't be too surprising: arithmetic is O(log b); b grows as O(k!); and k grows to approximately 4n. (k! needs to have n powers of 5, which means n ≈ k/5 + k/25 + k/125 + ... = k/4.) Since there are O(n) arithmetic operations, we should actually find that this is O(n^2 log n) if we look close enough. That's disappointing; and the algorithm is considerably slower than the previous one (7 minutes versus 40 seconds to calculate 100 digits), which is even more disappointing.
 
