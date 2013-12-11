@@ -485,23 +485,23 @@ So let's return to the second attempt.
 Recall that this is the algorithm we're using:
 
     ecalc() {
-	let n=$1
-	echo -n 2.
+        let n=$1
+        echo -n 2.
 
-	for (( j = n; j >= 2; j-- )); do
-	    coef[j]=1
-	done
+        for (( j = n; j >= 2; j-- )); do
+            coef[j]=1
+        done
 
-	for (( i = 1; i <= n; i++ )); do
-	    let carry=0
-	    for (( j = n; j >= 2; j-- )); do
-		let temp=coef[j]*10+carry
-		let carry=temp/j
-		let coef[j]=temp-carry*j
-	    done
-	    echo -n $carry
-	done
-	echo
+        for (( i = 1; i <= n; i++ )); do
+            let carry=0
+            for (( j = n; j >= 2; j-- )); do
+                let temp=coef[j]*10+carry
+                let carry=temp/j
+                let coef[j]=temp-carry*j
+            done
+            echo -n $carry
+        done
+        echo
     }
 
 It seems foolish to rely on an algorithm without understanding it, so how does it work? The paper doesn't make it entirely clear, but what's going on is this:
@@ -527,26 +527,26 @@ So while I'd like to go into more depth on this issue, I won't do so at this poi
 It remains to fix the algorithm for small n. We simply calculate to at least 22 decimal places' worth of precision. This is a little slower than necessary, but the small-n case hardly seems worth optimising.
 
     ecalc() {
-	let n=$1
-	let m=n
-	(( n < 22 )) && m=22
+        let n=$1
+        let m=n
+        (( n < 22 )) && m=22
 
-	echo -n 2.
+        echo -n 2.
 
-	for (( j = m; j >= 2; j-- )); do
-	    coef[j]=1
-	done
+        for (( j = m; j >= 2; j-- )); do
+            coef[j]=1
+        done
 
-	for (( i = 1; i <= n; i++ )); do
-	    let carry=0
-	    for (( j = m; j >= 2; j-- )); do
-		let temp=coef[j]*10+carry
-		let carry=temp/j
-		let coef[j]=temp-carry*j
-	    done
-	    echo -n $carry
-	done
-	echo
+        for (( i = 1; i <= n; i++ )); do
+            let carry=0
+            for (( j = m; j >= 2; j-- )); do
+                let temp=coef[j]*10+carry
+                let carry=temp/j
+                let coef[j]=temp-carry*j
+            done
+            echo -n $carry
+        done
+        echo
     }
 
 We could at this point try to calculate the value of m actually needed. We could even use our arbitrary-precision arithmetic to do it; we haven't implemented logarithms, but we can get an upper bound using the inequality log(sum(a_i * (2^32)^i)) < sum(log(a_i) + i\*log(2^32)).
