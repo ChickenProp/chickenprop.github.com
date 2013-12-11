@@ -270,6 +270,7 @@ Having implemented bigints to the extent necessary, we can hopefully extract mor
 Some things to note:
 
 * `b_has_power_10` is faster than `got_next_digit`, and more likely to fail. So we test that first.
+
 * To avoid repeating computations, `echo_next_digit` and `reduce_a_b` simply use the results of `a mod b` calculated in `got_next_digit`.
 
     got_next_digit() {
