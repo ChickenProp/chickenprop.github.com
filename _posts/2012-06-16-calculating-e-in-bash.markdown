@@ -272,8 +272,6 @@ Some things to note:
 * `b_has_power_10` is faster than `got_next_digit`, and more likely to fail. So we test that first.
 * To avoid repeating computations, `echo_next_digit` and `reduce_a_b` simply use the results of `a mod b` calculated in `got_next_digit`.
 
-test
-
     got_next_digit() {
         op1=( ${a[@]} )
         addi 1
@@ -349,7 +347,7 @@ So if we can extract all these digits without needing so many powers of 10 in b,
 
 ###Fourth attempt###
 
-We can't simply multiply a by 10 every time we'd like to divide b by 10. That would break the algorithm, for one thing: we'd have to keep track of what power of 10 to multiply a by, and only use it when checking to see if we've got the next digit, not in `increase_a_b`. (It's okay for b because b only ever gets multiplied, so it doesn't matter whether we do that before or after dividing by 10. But when we do a = k*a + 1, it matters that we haven't already multiplied a by 10.)
+We can't simply multiply a by 10 every time we'd like to divide b by 10. That would break the algorithm, for one thing: we'd have to keep track of what power of 10 to multiply a by, and only use it when checking to see if we've got the next digit, not in `increase_a_b`. (It's okay for b because b only ever gets multiplied, so it doesn't matter whether we do that before or after dividing by 10. But when we do a = k\*a + 1, it matters that we haven't already multiplied a by 10.)
 
 That's a minor problem. More severely, our division algorithm was designed for small ratios. If we know a/b < 10, it's okay to examine, a, a-b, a-2b, ... to see when we get below b. That won't work so well if a/b could be in the thousands.
 
