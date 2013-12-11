@@ -435,3 +435,45 @@ These operations are all reasonably fast. (It is, however, O(n), which means we'
 Now this works, but it's even slower than the last attempt. We could improve things by reducing a and b as before when possible, but that's not going to gain us much.
 
 There is one other thing we can do, though it seems potentially unsafe. There's a lot of repeated work involved in figuring out how many digits we've accurately calculated. If we guess in advance how high we need to take k, we can save ourselves a lot of work.
+
+###Fifth attempt###
+
+Recall that we have n digits if a_k/k! and (a_k+1)/k! agree up to n decimal place
+s. The difference between these is 1/k!. If k! > 10^(n+1), then the decimal expansion of 1/k! will start with at least n+1 zeros. The only way a_k/k! and (a_k+1)/k! could disagree at or before the nth decimal place is if the digits of a_k/k! in positions n+1, n+2, ... log_10(k!) are all 9. If additionally a_k/k! disagrees with e at the nth decimal place, it follows that the digits of e in positions n+1, n+2, ..., log_10(k!) are all 0.
+
+e is conjectured to be normal, which would mean that any arbitrarily long string of 0s can be found in its decimal expansion. But the probability of l 0s starting at a given position is 10^-l; so if we ask for, say, 100 digits and take k up to 100, then since log_10(100!) = 157, the probability of getting a digit incorrect is 10^-57, which I feel is acceptable. So let's ignore the problem for now.
+
+    extract_many_digits() {
+        let d=0
+        op1=( ${a[@]} )
+        op2=( ${b[@]} )
+        while (( d <= $1 )); do
+              mod
+              echo -n $div
+              op1=( ${res[@]} )
+              muli 10
+              op1=( ${res[@]} )
+              let d+=1
+        done
+    }
+    
+    ecalc() {
+        a=(1)
+        b=(1)
+        k=1
+        n=$1
+    
+        while (( k <= n )); do
+            increase_a_b $k
+            let k+=1
+        done
+    
+        extract_many_digits $n
+        echo
+    }
+
+It's a lot faster, but still slightly slower than the second attempt. (And has the same caveat that as written, it only works for sufficiently large n.)
+
+I've now run out of ideas, which is a bit anticlimactic. (At least, I've run out of ideas that I think will do any good. We could get a more accurate bound on how high to take k; but that could be applied to our second attempt as well. We could reduce a as we go along; but that would make increase_a_b slower, probably gain us very little overall, and certainly not improve on O(n^2).)
+
+So let's return to the second attempt.
