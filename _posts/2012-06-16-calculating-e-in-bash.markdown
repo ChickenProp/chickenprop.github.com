@@ -549,7 +549,7 @@ It remains to fix the algorithm for small n. We simply calculate to at least 22 
 	echo
     }
 
-We could at this point try to calculate the value of m actually needed. We could even use our arbitrary-precision arithmetic to do it; we haven't implemented logarithms, but we can get an upper bound using the inequality log(sum(a_i * (2^32)^i)) < sum(log(a_i) + i*log(2^32)).
+We could at this point try to calculate the value of m actually needed. We could even use our arbitrary-precision arithmetic to do it; we haven't implemented logarithms, but we can get an upper bound using the inequality log(sum(a_i * (2^32)^i)) < sum(log(a_i) + i\*log(2^32)).
 
 But this would impose O(n^2 log n) startup cost, so is decidedly not a good tradeoff. There may well be better ways to approximate log_10(m!), but again, I've spent too much time on this.
 
