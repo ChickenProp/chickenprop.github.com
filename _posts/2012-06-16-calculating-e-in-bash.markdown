@@ -96,7 +96,7 @@ We can fix both these problems, but this algorithm isn't especially nice anyway.
 
 The same google search also gives this page: <http://www.hulver.com/scoop/story/2004/7/22/153549/352> which hints at an algorithm without providing it explicitly. We can adapt our first attempt for this.
 
-Write numer(n) as a\_n, so a\_0 = 1 and a\_n = n * a\_(n-1) + 1. This gives 1/0! + 1/1! + ... + 1/n! = a\_n / n!. We know that e = lim [n→∞] a\_n / n!; but more than this, we can show that for any n ≥ 1, a\_n / n! < e < (a\_n + 1)/n!.
+Write numer(n) as a\_n, so a\_0 = 1 and a\_n = n * a\_(n-1) + 1. This gives 1/0! + 1/1! + ... + 1/n! = a\_n / n!. We know that e = lim \[n→∞\] a\_n / n!; but more than this, we can show that for any n ≥ 1, a\_n / n! < e < (a\_n + 1)/n!.
 
 (Proof of this: (a\_n+1) / n! = 1/0! + 1/1! + ... + 1/n! + 1/n!. This is greater than e if 1/n! > 1/(n+1)! + 1/(n+2)! + ..., which holds if 1 > 1/(n+1) (1 + 1/(n+2) (1 + ... )). For n ≥ 1, RHS is ≤ 1/2 (1 + 1/3 (1 + ... )) which we know is e-2 < 1.)
 
@@ -512,7 +512,7 @@ This in turn is 2 + 1/10 (1/2 (10 + 1/3 (10 + ... 1/(n-1) (10 + 1/n (10)) ... ))
 
 Rewriting again, e = 2.7 + 1/100 (1/2 (10c\_2 + 1/3 (10c\_3 + ... 1/(n-1) (10c\_(n-1) + 1/n (10c\_n)) ... ))). We apply the same procedure to get the second digit of e, and so on.
 
-The algorithm's coef[j] takes the place of these c\_j. To get each digit, we recalculate the c\_j in one pass starting from the right; the digit is whatever term is left over outside of the 1/2 (...).
+The algorithm's coef\[j\] takes the place of these c\_j. To get each digit, we recalculate the c\_j in one pass starting from the right; the digit is whatever term is left over outside of the 1/2 (...).
 
 It's worth noting that this algorithm has the same probability of making mistakes as our fifth attempt. So it's probably worth thinking about this probability in more detail.
 
