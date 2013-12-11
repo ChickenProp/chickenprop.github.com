@@ -272,7 +272,7 @@ Some things to note:
 * `b_has_power_10` is faster than `got_next_digit`, and more likely to fail. So we test that first.
 * To avoid repeating computations, `echo_next_digit` and `reduce_a_b` simply use the results of `a mod b` calculated in `got_next_digit`.
 
-<!-- -->
+<!-- Keep code block out of list -->
 
     got_next_digit() {
         op1=( ${a[@]} )
@@ -479,3 +479,78 @@ It's a lot faster, but still slightly slower than the second attempt. (And has t
 I've now run out of ideas, which is a bit anticlimactic. (At least, I've run out of ideas that I think will do any good. We could get a more accurate bound on how high to take k; but that could be applied to our second attempt as well. We could reduce a as we go along; but that would make increase_a_b slower, probably gain us very little overall, and certainly not improve on O(n^2).)
 
 So let's return to the second attempt.
+
+###Second attempt, take two###
+
+Recall that this is the algorithm we're using:
+
+    ecalc() {
+	let n=$1
+	echo -n 2.
+
+	for (( j = n; j >= 2; j-- )); do
+	    coef[j]=1
+	done
+
+	for (( i = 1; i <= n; i++ )); do
+	    let carry=0
+	    for (( j = n; j >= 2; j-- )); do
+		let temp=coef[j]*10+carry
+		let carry=temp/j
+		let coef[j]=temp-carry*j
+	    done
+	    echo -n $carry
+	done
+	echo
+    }
+
+It seems foolish to rely on an algorithm without understanding it, so how does it work? The paper doesn't make it entirely clear, but what's going on is this:
+
+We approximate e as 2 + 1/2! + 1/3! + 1/4! + ... + 1/m!, where in our implementation m=n. Rewrite this as 2 + 1/2 (1 + 1/3 (1 + ... 1/(n-1) (1 + 1/n) ... )).
+
+This in turn is 2 + 1/10 (1/2 (10 + 1/3 (10 + ... 1/(n-1) (10 + 1/n (10)) ... ))). Some of the 10/k terms are greater than 1; we refactor so that, for example, 1/2 (10 + 1/3 (10 + ...)) becomes 1/2 (13 + 1/3 (1 + ...)) and then 6 + 1/2 (1 + 1/3 (1 + ...)). Eventually we have e = 2 + 1/10 (c + 1/2 (c\_2 + 1/3 (c\_3 + ... 1/(n-1) (c\_(n-1) + 1/n (c\_n)) ... ))) where each c\_k < k. It follows that the 1/2 (c\_2 + ... ) term is less than 1, so c must be 7, the first decimal digit of e.
+
+Rewriting again, e = 2.7 + 1/100 (1/2 (10c\_2 + 1/3 (10c\_3 + ... 1/(n-1) (10c\_(n-1) + 1/n (10c\_n)) ... ))). We apply the same procedure to get the second digit of e, and so on.
+
+The algorithm's coef[j] takes the place of these c\_j. To get each digit, we recalculate the c\_j in one pass starting from the right; the digit is whatever term is left over outside of the 1/2 (...).
+
+It's worth noting that this algorithm has the same probability of making mistakes as our fifth attempt. So it's probably worth thinking about this probability in more detail.
+
+However, we note that if the calculated sequence of digits ends with d 9s, then only the final d+1 digits have a chance of being incorrect. If they are, then the 9s should all be 0s, and the one preceding them should be one higher. This is reassuring; it permits us to say "if you really can't tolerate the slightest inaccuracy, then ask for more digits than you need, and throw away the final ones as appropriate".
+
+(We could automate the process, but that would require us to guess a new n, then run the algorithm again from scratch. If we want that behaviour, we really ought to write it as a seperate program. In this sense, the fifth attempt was better, because you could store intermediate results and use them to get a head start on later ones.)
+
+I also note that I've spent too much time on this already, and that the implementation as it stands chooses m larger than necessary (except for small n, which we shall soon fix), massively reducing the probability of an error. (For n>50 or so, the probability of an error is smaller than the probability of winning the lottery; if an error does appear, it seems more likely to be from some a mistake somewhere else.) And whatever the actual probability of error is, it was originally small enough that the authors of the paper didn't notice, and after cursory examination I haven't been able to find any instances where the original algorithm made a mistake. (Digit 327 looked promising, being followed by three 0s; but it turned out okay in the end.)
+
+So while I'd like to go into more depth on this issue, I won't do so at this point.
+
+It remains to fix the algorithm for small n. We simply calculate to at least 22 decimal places' worth of precision. This is a little slower than necessary, but the small-n case hardly seems worth optimising.
+
+    ecalc() {
+	let n=$1
+	let m=n
+	(( n < 22 )) && m=22
+
+	echo -n 2.
+
+	for (( j = m; j >= 2; j-- )); do
+	    coef[j]=1
+	done
+
+	for (( i = 1; i <= n; i++ )); do
+	    let carry=0
+	    for (( j = m; j >= 2; j-- )); do
+		let temp=coef[j]*10+carry
+		let carry=temp/j
+		let coef[j]=temp-carry*j
+	    done
+	    echo -n $carry
+	done
+	echo
+    }
+
+We could at this point try to calculate the value of m actually needed. We could even use our arbitrary-precision arithmetic to do it; we haven't implemented logarithms, but we can get an upper bound using the inequality log(sum(a_i * (2^32)^i)) < sum(log(a_i) + i*log(2^32)).
+
+But this would impose O(n^2 log n) startup cost, so is decidedly not a good tradeoff. There may well be better ways to approximate log_10(m!), but again, I've spent too much time on this.
+
+This has been interesting to write, even if more than half of it turns out to be useless.
