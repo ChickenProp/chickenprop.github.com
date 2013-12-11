@@ -344,3 +344,94 @@ But maybe we can still salvage something. (Or maybe we're just doubling down on 
 It turns out to be about 130. (And this only took twelve seconds, so we're beating the second attempt considerably.)
 
 So if we can extract all these digits without needing so many powers of 10 in b, we can do a lot better. We might even be able to beat O(n^2), if k grows slower than O(n). So let's try to do that.
+
+###Fourth attempt###
+
+We can't simply multiply a by 10 every time we'd like to divide b by 10. That would break the algorithm, for one thing: we'd have to keep track of what power of 10 to multiply a by, and only use it when checking to see if we've got the next digit, not in `increase_a_b`. (It's okay for b because b only ever gets multiplied, so it doesn't matter whether we do that before or after dividing by 10. But when we do a = k*a + 1, it matters that we haven't already multiplied a by 10.)
+
+That's a minor problem. More severely, our division algorithm was designed for small ratios. If we know a/b < 10, it's okay to examine, a, a-b, a-2b, ... to see when we get below b. That won't work so well if a/b could be in the thousands.
+
+Fortunately, we can improve division by using the digits we've already calculated. If we have e = 2.71828… and we haven't reduced a or b at all, then we know a / b = 2.71828…, 10a / b = 27.1828…, 100a / b = 271.828…, etc.
+
+And we know (a-2b)/b = 0.71828, so 10(a-2b)/b = 7.1828…; and (10a - 27b)/b = .1828… so 10(10a - 27b)/b = 10(10(a - 2b) - 7b)/b = 1.828…; and so on.
+
+In short, if we know that a/b = d\_0 . d\_1 d\_2 d\_3 … d\_n …, then we can extract unknown d\_(n+1) by:
+
+    let x = a
+    for i from 0 to n:
+        x -= d_i * b
+        x *= 10
+    d_(n+1) = x/b
+
+These operations are all reasonably fast. (It is, however, O(n), which means we're not going to beat O(n^2).) So, let's try it. We'll store digits of e in an array named e_digits.
+
+    next_digit_helper() {
+        local i
+        local tmp1=( ${op1[@]} )
+        local tmp2=( ${op2[@]} )
+        local x=( ${op1[@]} )
+        local y=( ${op2[@]} )
+    
+        for (( i = 0; i < ${#e_digits[@]}; i++ )); do
+            op1=( ${y[@]} )
+            muli ${e_digits[$i]}
+            op1=( ${x[@]} )
+            op2=( ${res[@]} )
+            sub
+            op1=( ${res[@]} )
+            muli 10
+            x=( ${res[@]} )
+        done
+    
+        op1=( ${x[@]} )
+        op2=( ${y[@]} )
+        mod
+    
+        op1=( ${tmp1[@]} )
+        op2=( ${tmp2[@]} )
+    }
+    
+    got_next_digit() {
+        op1=( ${a[@]} )
+        addi 1
+        op1=( ${res[@]} )
+        op2=( ${b[@]} )
+    
+        next_digit_helper
+        div1=$div
+    
+        op1=( ${a[@]} )
+        next_digit_helper
+    
+        (( div1 == div ))
+    }
+    
+    found_digit() {
+        echo -n $div
+        e_digits[${#e_digits[@]}]=$div
+    }
+    
+    ecalc() {
+        a=(1)
+        b=(1)
+        e_digits=()
+        d=0
+        k=1
+        n=$1
+    
+        while (( d <= n )); do
+            until got_next_digit; do
+                increase_a_b $k
+                let k+=1
+            done
+    
+            found_digit
+            let d+=1
+        done
+    
+        echo
+    }
+
+Now this works, but it's even slower than the last attempt. We could improve things by reducing a and b as before when possible, but that's not going to gain us much.
+
+There is one other thing we can do, though it seems potentially unsafe. There's a lot of repeated work involved in figuring out how many digits we've accurately calculated. If we guess in advance how high we need to take k, we can save ourselves a lot of work.
