@@ -1,3 +1,6 @@
 name: A Reasonable Approximation
 description: philh's blog
 url: http://reasonableapproximation.net
+
+maruku:
+    use_tex: true
