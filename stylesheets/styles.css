@@ -109,8 +109,9 @@ ol li {
 }
 
 blockquote {
-  margin: 0;
-  padding: 0 0 0 20px;
+  margin: 0 0 0 3px;
+  padding: 0 0 0 3px;
+  border-left: 2px solid #369;
   font-style: italic;
 }
 
