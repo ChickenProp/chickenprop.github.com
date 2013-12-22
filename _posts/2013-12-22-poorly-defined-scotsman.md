@@ -16,9 +16,9 @@ Worse, the person in question usually *has* a definition of science fiction. (In
 But what this should tell us is not "*Star Wars* is not science fiction". It's "your definition of science fiction is broken". Consider:
 
 > "No Scotsman takes sugar with their porridge!"
-
+>
 > "But my uncle Hamish takes sugar with his porridge."
-
+>
 > "No, sorry, I was unclear. I define a Scotsman as *a person of Scottish citizenship who does not take sugar with their porridge*."
 
 It's a bit ridiculous, isn't it?
