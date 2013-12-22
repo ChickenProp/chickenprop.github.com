@@ -29,9 +29,7 @@ The other reason is that the proposed definition of "Scotsman" is a silly defini
 
 Just not a reasonable definition of science fiction: it doesn't include *Star Wars*.
 
-I don't think that it's bad, in general, to take a poorly-defined concept and attempt to give it a rigorous definition. And sometimes we might find that in doing so, there are some things that we've been thinking of as frantles that don't seem to fit in very well with all the other things that we think of as frantles, and maybe we should stop calling them frantles.
-
-(Example? Primality of one is kind of technical, not great.)
+I don't think that it's bad, in general, to take a poorly-defined concept and attempt to give it a rigorous definition. And sometimes we might find that in doing so, there are some things that we've been thinking of as frantles that don't seem to fit in very well with all the other things that we think of as frantles, and maybe we should stop calling them frantles. I think something like that happened with the question of whether or not 1 is a prime number, for example.
 
 But I think that if you do that to science fiction, and eliminate *Star Wars*, you've done something wrong.
 
