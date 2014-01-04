@@ -258,13 +258,19 @@ a.name {
 
 header ul {
   list-style:none;
-  padding: 0px 0px 0px 5px;
+  padding: 0px 0px 0px 25px;
 }
 
 header li {
 	list-style-type: none;
 	padding: 6px 6px 6px 7px;
 	line-height: 1em;
+}
+
+header h3 {
+    border: 0px;
+    margin-top: 10px;
+    padding: 0px 0px 0px 20px;
 }
 
 a.buttons {
