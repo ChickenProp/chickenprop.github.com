@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Facists and Rakes
-draft: true
 ---
 It feels like most people have a moral intuition along the lines of "you should let people do what they want, unless they're hurting other people". We follow this guideline, and we expect other people to follow it. I'll call this the permissiveness principle, that behaviour should be permitted by default.
 
