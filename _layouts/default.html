@@ -22,7 +22,9 @@
     <div class="wrapper">
       <header>
         <h1 class="header"><a href="/">A Reasonable Approximation</a></h1>
+	<h6>Latest posts</h6>
 	<ul>
+	  {% comment There's no easy way to increment an integer. %}
 	  {% assign shown = '' %}
 	  {% for post in site.posts %}
 	    {% if shown.size < 5 %}
