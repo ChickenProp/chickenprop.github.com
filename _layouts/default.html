@@ -25,7 +25,7 @@
 	<ul>
 	  {% assign shown = '' %}
 	  {% for post in site.posts %}
-	    {% if shown.size < 5 %}
+	    {% if shown.size < 5 and ! post.draft %}
 	      {% capture temp %}{{ shown }}*{% endcapture %}
               {% assign shown = temp %}
 	      <li>{{shown.size}}<a href="{{ post.url }}">{{ post.title }}</a></li>
