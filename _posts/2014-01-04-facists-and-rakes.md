@@ -25,10 +25,10 @@ Meanwhile, you apply the permissiveness principle unless *you* think they're hur
 
 So when we disagree about whether or not something is hurting other people, I think you're a facist because you're failing to apply the permissiveness principle; and you think I'm a rake because I'm failing to apply the harm-minimisation principle; or vice-versa. Neither of these things is true, of course.
 
-It gets worse, because once I've decided that you're a facist, I think the *problem* is that you're a facist. If you would only stop being a facist, all our problems would be solved. You can go on thinking tic-tacs are sentient, you just need to stop being a facist.
+It gets worse, because once I've decided that you're a facist, I think the *reason we're arguing* is that you're a facist. If you would only stop being a facist, we could get along fine. You can go on thinking tic-tacs are sentient, you just need to stop being a facist.
 
-But you're not a facist. The *real* problem is that you think tic-tacs are sentient. You're acting exactly as you should do if tic-tacs were sentient, but they're not. I need to stop treating you like a facist, and start trying to convince you that tic-tacs are not sentient.
+But you're not a facist. The *real* reason we're arguing is that you think tic-tacs are sentient. You're acting exactly as you should do if tic-tacs were sentient, but they're not. I need to stop treating you like a facist, and start trying to convince you that tic-tacs are not sentient.
 
-And, of course, you've decided I'm a rake, which isn't true, and you've decided that that's the problem, which isn't true; the problem is that I think tic-tacs aren't sentient. You need to stop treating me like a rake, and start trying to convince me that tic-tacs are sentient.
+And, symmetrically, you've decided I'm a rake, which isn't true, and you've decided that that's why we're arguing, which isn't true; we're arguing because I think tic-tacs aren't sentient. You need to stop treating me like a rake, and start trying to convince me that tic-tacs are sentient.
 
 I don't expect either of us to actually convince the other, very often. If it was that easy, someone would probably have already done it. But at least I'd like us both to acknowledge that our opponent is neither a facist nor a rake, they just believe something that isn't true.
