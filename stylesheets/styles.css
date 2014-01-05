@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, ul, ol, table, dl {
-  margin:0 0 22px;
+  margin:0 0 10px;
 }
 
 h1, h2, h3 {
@@ -264,7 +264,7 @@ header ul {
 header li {
 	list-style-type: none;
 	padding: 6px 6px 6px 7px;
-	line-height: 1em;
+	line-height: 1.3em;
 }
 
 header h3 {
@@ -309,6 +309,7 @@ footer {
   position:fixed;
   bottom:10px;
 	padding-left: 20px;
+	line-height: 1em; /* maybe should only be for <small>? */
 }
 
 @media print, screen and (max-width: 960px) {
