@@ -4,9 +4,9 @@ title: Fascists and Rakes
 ---
 *[Cross-posted to Less Wrong.](http://lesswrong.com/r/discussion/lw/jfj/fascists_and_rakes/)*
 
-It feels like most people have a moral intuition along the lines of "you should let people do what they want, unless they're hurting other people". We follow this guideline, and we expect other people to follow it. I'll call this the permissiveness principle, that behaviour should be permitted by default.
+It feels like most people have a moral intuition along the lines of "you should let people do what they want, unless they're hurting other people". We follow this guideline, and we expect other people to follow it. I'll call this the permissiveness principle, that behaviour should be permitted by default. When someone violates the permissiveness principle, we might call them a fascist, someone who exercises control for the sake of control.
 
-And there's another moral intuition, the harm-minimising principle: "you should not hurt other people unless you have a good reason".
+And there's another moral intuition, the harm-minimising principle: "you should not hurt other people unless you have a good reason". When someone violates harm-minimisation, we might call them a rake, someone who acts purely for their own pleasure without regard for others.
 
 But sometimes people disagree about what counts as "hurting other people". Maybe one group of people believes that tic-tacs are sentient, and that eating them constitutes harm; and another group believes that tic-tacs are not sentient, so eating them does not hurt anyone.
 
@@ -18,11 +18,11 @@ Except that by the harm-minimising principle, those people probably *should* imp
 
 It's not that they disagree with the permissiveness principle, they just think it doesn't apply. So appealing to the permissiveness principle isn't going to help much.
 
-I think the problem, or at least part of it, is, depending how you look at it, either double standards or not-double-enough standards.
+I think the problem (or at least part of it) is, depending how you look at it, either double standards or not-double-enough standards.
 
 I apply the permissiveness principle "unless they're hurting other people", which really means "unless I think they're hurting other people". I want you to apply the permissiveness principle "unless they're hurting other people", which *still* means "unless I think they're hurting other people".
 
-Meanwhile, you apply the permissiveness principle unless *you* think they're hurting other people; and you want me to apply it unless *you* think they're hurting other people.
+Meanwhile, you apply the permissiveness principle unless *you* think someone is hurting other people; and you want me to apply it unless *you* think they're hurting other people.
 
 So when we disagree about whether or not something is hurting other people, I think you're a fascist because you're failing to apply the permissiveness principle; and you think I'm a rake because I'm failing to apply the harm-minimisation principle; or vice-versa. Neither of these things is true, of course.
 
