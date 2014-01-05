@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Facists and Rakes
+title: Fascists and Rakes
 ---
-*[Cross-posted to Less Wrong.](http://lesswrong.com/r/discussion/lw/jfj/facists_and_rakes/)*
+*[Cross-posted to Less Wrong.](http://lesswrong.com/r/discussion/lw/jfj/fascists_and_rakes/)*
 
 It feels like most people have a moral intuition along the lines of "you should let people do what they want, unless they're hurting other people". We follow this guideline, and we expect other people to follow it. I'll call this the permissiveness principle, that behaviour should be permitted by default.
 
@@ -24,12 +24,12 @@ I apply the permissiveness principle "unless they're hurting other people", whic
 
 Meanwhile, you apply the permissiveness principle unless *you* think they're hurting other people; and you want me to apply it unless *you* think they're hurting other people.
 
-So when we disagree about whether or not something is hurting other people, I think you're a facist because you're failing to apply the permissiveness principle; and you think I'm a rake because I'm failing to apply the harm-minimisation principle; or vice-versa. Neither of these things is true, of course.
+So when we disagree about whether or not something is hurting other people, I think you're a fascist because you're failing to apply the permissiveness principle; and you think I'm a rake because I'm failing to apply the harm-minimisation principle; or vice-versa. Neither of these things is true, of course.
 
-It gets worse, because once I've decided that you're a facist, I think the *reason we're arguing* is that you're a facist. If you would only stop being a facist, we could get along fine. You can go on thinking tic-tacs are sentient, you just need to stop being a facist.
+It gets worse, because once I've decided that you're a fascist, I think the *reason we're arguing* is that you're a fascist. If you would only stop being a fascist, we could get along fine. You can go on thinking tic-tacs are sentient, you just need to stop being a fascist.
 
-But you're not a facist. The *real* reason we're arguing is that you think tic-tacs are sentient. You're acting exactly as you should do if tic-tacs were sentient, but they're not. I need to stop treating you like a facist, and start trying to convince you that tic-tacs are not sentient.
+But you're not a fascist. The *real* reason we're arguing is that you think tic-tacs are sentient. You're acting exactly as you should do if tic-tacs were sentient, but they're not. I need to stop treating you like a fascist, and start trying to convince you that tic-tacs are not sentient.
 
 And, symmetrically, you've decided I'm a rake, which isn't true, and you've decided that that's why we're arguing, which isn't true; we're arguing because I think tic-tacs aren't sentient. You need to stop treating me like a rake, and start trying to convince me that tic-tacs are sentient.
 
-I don't expect either of us to actually convince the other, very often. If it was that easy, someone would probably have already done it. But at least I'd like us both to acknowledge that our opponent is neither a facist nor a rake, they just believe something that isn't true.
+I don't expect either of us to actually convince the other, very often. If it was that easy, someone would probably have already done it. But at least I'd like us both to acknowledge that our opponent is neither a fascist nor a rake, they just believe something that isn't true.
