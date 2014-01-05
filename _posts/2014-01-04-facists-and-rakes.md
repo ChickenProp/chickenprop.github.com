@@ -2,7 +2,7 @@
 layout: post
 title: Facists and Rakes
 ---
-*[Cross-posted to Less Wrong.](http://lesswrong.com/r/discussion/lw/jfj/facists_and_rakes/)
+*[Cross-posted to Less Wrong.](http://lesswrong.com/r/discussion/lw/jfj/facists_and_rakes/)*
 
 It feels like most people have a moral intuition along the lines of "you should let people do what they want, unless they're hurting other people". We follow this guideline, and we expect other people to follow it. I'll call this the permissiveness principle, that behaviour should be permitted by default.
 
