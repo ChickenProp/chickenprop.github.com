@@ -69,5 +69,12 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-43866313-1', 'reasonableapproximation.net');
 ga('send', 'pageview');
     </script>
+    <script type="text/javascript">
+console.log('here');
+console.log(MathJax.Hub instanceof Object);
+MathJax.Hub.Queue(['Typeset',
+                   MathJax.Hub,
+		   document.getElementsByTagName('code')[0] ]);
+    </script>
   </body>
 </html>
