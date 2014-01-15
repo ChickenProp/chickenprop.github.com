@@ -10,9 +10,7 @@
     <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
     <script src="/javascripts/scale.fix.js"></script>
     <script async src="/javascripts/textheworld7.user.js"></script>
-    <script type="text/javascript">
-      var disqus_shortname='reasonableapproximation';
-    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         tex2jax: {
@@ -23,6 +21,10 @@
       })
     </script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript">
+      var disqus_shortname='reasonableapproximation';
+      $('code').each(function () { MathJax.Hub.Queue(['Typeset', MathJax.Hub, this]); });
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
