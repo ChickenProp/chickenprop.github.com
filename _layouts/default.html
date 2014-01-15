@@ -23,10 +23,12 @@
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/javascript">
       var disqus_shortname='reasonableapproximation';
-      $('code').each(function () {
-          var html = $(this).html();
-          if (html[0] == '$' && html[html.length-1] == '$')
-              MathJax.Hub.Queue(['Typeset', MathJax.Hub, this]);
+      $(function () {
+          $('code').each(function () {
+              var html = $(this).html();
+              if (html[0] == '$' && html[html.length-1] == '$')
+                  MathJax.Hub.Queue(['Typeset', MathJax.Hub, this]);
+          });
       });
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
