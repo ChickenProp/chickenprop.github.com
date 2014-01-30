@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: Cliffs Notes: "Probability Theory: The Logic of Science", part 1
 draft: true
 ---
