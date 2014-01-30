@@ -25,7 +25,7 @@
       var disqus_shortname='reasonableapproximation';
       $(function () {
           $('code').each(function () {
-              var html = $(this).html();
+              var html = $(this).html().replace(/\n$/, '');
               if (html[0] == '$' && html[html.length-1] == '$')
                   MathJax.Hub.Queue(['Typeset', MathJax.Hub, this]);
           });
