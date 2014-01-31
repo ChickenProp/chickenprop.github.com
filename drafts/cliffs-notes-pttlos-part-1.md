@@ -72,8 +72,8 @@ Our robot reasons about propositions, and for now we restrict it to unambiguous 
 ```
 $$
 A ≡ \text{Beethoven and Berlioz never met.}\\
-B ≡ \text{Beethoven's music has a better sustained quality than that of
-          Berlioz, although Berlioz at his best is the equal of anybody.}
+B ≡ \text{Beethoven's music has a better sustained quality than that of}
+    \text{Berlioz, although Berlioz at his best is the equal of anybody.}
 $$
 ```
 
