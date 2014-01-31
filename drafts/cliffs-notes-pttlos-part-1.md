@@ -78,3 +78,19 @@ B ≡ & \text{Beethoven's music has a better sustained quality than that of}\\
 ```
 
 Our robot can think about proposition `$A$`, although its truth or falsehood probably can't be established today. But for now, `$B$` is off-limits. Later we'll see whether this restriction can be relaxed, and our robot can help with propositions like `$B$`. ("See chapter 18 on the `$A_p$` distribution.")
+
+### 1.5. Boolean algebra
+
+At this point Jaynes briefly introduces Boolean algebra. I assume the reader is familiar with it, but I note that we denote conjunction (logical AND) by `$AB$`, disjunction (logical OR) by `$A+B$`, and denial (logical NOT) by `$\bar A$`. `$≡$` means "equals by definition".
+
+Also, a brief reminder of certain identities:
+
+* **Idempotence**: `$AA = A+A = A$`.
+* **Commutativity**: `$AB = BA$`; `$A+B = B+A$`.
+* **Associativity**: `$A(BC) = (AB)C = ABC$`; `$A+(B+C) = (A+B)+C = A+B+C$`.
+* **Distributivity**: `$A(B+C) = AB + AC$`; `$A + (BC) = (A+B)(A+C)$`.
+* **Duality**: `$\overline{AB} = \bar A + \bar B$`; `$\overline{A+B} = \bar A \bar B$`.
+
+If `$A=B$`, by which we mean that `$A$` and `$B$` are logically equivalent, then `$A$` and `$B$` must also be equally plausible. This seems obvious, but Jaynes notes that Boole himself got it wrong.
+
+As usual, `$A ⇒ B$` means "`$A$` implies `$B$`", i.e. `$A+\overline B$`. Remember that this is a much narrower statement than it would be in ordinary language; it does not mean that there is any actual connection between `$A$` and `$B$`.
