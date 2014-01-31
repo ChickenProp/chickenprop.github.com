@@ -17,7 +17,8 @@
           processEscapes: true,
           skipTags: ["script", "noscript", "style", "textarea"]
         },
-        elements: [ 'this-doesnt-exist' ]{% comment %}I just want MathJax not to do anything unless I explicitly tell it to. This might not be the best way.{% endcomment%}
+        elements: [ 'this-doesnt-exist' ],{% comment %}I just want MathJax not to do anything unless I explicitly tell it to. This might not be the best way.{% endcomment%}
+        "HTML-CSS": { linebreaks: { automatic: true } },
       })
     </script>
     <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
