@@ -8,6 +8,8 @@ $(function () {
         // MathJax and pygments interfere with each other, and the markdown
         // interpreter wraps code blocks in a pygments div. This is a hacky way
         // to remove pygment highlighting from mathjax.
+        console.log($(this).parent().prop('tagName'))
+        console.log($(this).parent().parent().prop('tagName'))
         if ($(this).parent().prop('tagName') == 'PRE'
             && $(this).parent().parent().prop('tagName') == 'DIV')
         {
