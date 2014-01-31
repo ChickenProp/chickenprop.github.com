@@ -93,4 +93,12 @@ Also, a brief reminder of certain identities:
 
 If `$A=B$`, by which we mean that `$A$` and `$B$` are logically equivalent, then `$A$` and `$B$` must also be equally plausible. This seems obvious, but Jaynes notes that Boole himself got it wrong.
 
-As usual, `$A ⇒ B$` means "`$A$` implies `$B$`", i.e. `$A+\overline B$`. Remember that this is a much narrower statement than it would be in ordinary language; it does not mean that there is any actual connection between `$A$` and `$B$`.
+As usual, `$A ⇒ B$` means "`$A$` implies `$B$`", i.e. `$A+\bar B$`. Remember that this is a much narrower statement than it would be in ordinary language; it does not mean that there is any actual connection between `$A$` and `$B$`.
+
+### 1.6. Adequate sets of operations
+
+We have four operations (AND, OR, NOT and IMPLIES) that we can apply to propositions. We can use these to generate many new propositions, but two questions occur to us. Firstly, are there propositions defined from `$A$` and `$B$` that we can't represent using these operations? Secondly, can we reduce the number of operations without losing any propositions that we can currently generate?
+
+We answer the first question no: any logical function on `$n$` variables (of which there are `$2^{2^n}$` can be written as a disjunction of conjunctions of arguments and their negations. For example, `$AB\bar C + \bar A \bar B C + \bar A B \bar C$`. There is one exception, where we have zero conjunctions (the function which is constantly false), and this can be written `$A\bar A$`.
+
+We answer the second question yes: it is clear from the previous answer that IMPLIES is unnecessary, and from duality that we can do away with either (but not both) of AND and OR. We can't reduce either of the sets (AND, NOT) or (OR, NOT), but there are two operators which suffice by themselves: NAND, `$A↑B = \overline{AB}$`, and NOR, `$A↓B = \overline{A+B}$`.
