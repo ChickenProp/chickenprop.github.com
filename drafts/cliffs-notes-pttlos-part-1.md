@@ -70,11 +70,11 @@ Our robot reasons about propositions, and for now we restrict it to unambiguous 
 
 
 ```
-$$
-A ≡ \text{Beethoven and Berlioz never met.}\\
-B ≡ \text{Beethoven's music has a better sustained quality than that of}\\
-    \text{Berlioz, although Berlioz at his best is the equal of anybody.}
-$$
+$$\begin{aligned}
+A ≡ & \text{Beethoven and Berlioz never met.}\\
+B ≡ & \text{Beethoven's music has a better sustained quality than that of}\\
+    & \text{Berlioz, although Berlioz at his best is the equal of anybody.}
+\end{aligned}$$
 ```
 
 Our robot can think about proposition `$A$`, although its truth or falsehood probably can't be established today. But for now, `$B$` is off-limits. Later we'll see whether this restriction can be relaxed, and our robot can help with propositions like `$B$`. ("See chapter 18 on the `$A_p$` distribution.")
