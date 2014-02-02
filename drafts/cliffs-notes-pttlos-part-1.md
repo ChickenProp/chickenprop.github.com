@@ -137,11 +137,40 @@ This doesn't say anything about *how much* the plausibilities change, but it giv
 Finally, we wish our robot to reason consistently. By this we mean
 
 * **Desideratum (IIIa)**. If a conclusion can be reasoned out in more than one way, then every possible way must lead to the same result.
-
 * **Desideratum (IIIb)**. The robot always takes into account all of the evidence it has relevant to a question. It does not arbitrarily ignore some of the inormation, basing its conclusions only on what remains. In other words, the robot is completely nonideological.
-
 * **Desideratum (IIIc)**. The robot always represents equivalent states of knowledge by equivalent plausibility assignments. That is, if in two problems the robot's state of knowledge is the same (except perhaps for the labeling of the propositions), then it must assign the same plausibilities in both.
 
 Desiderata (I), (II) and (IIIa) are structural requirements on the robot's brain, while (IIIb) and (IIIc) show how the robot should relate to the outside world.
 
 It turns out that these are all the desiderata we need. There is only one set of mathematical operations for manipulating plausibilities which satisfies all of them; they uniquely determine the rules by which our robot must reason. These rules will be deduced in chapter 2.
+
+### 1.8. Comments
+
+Our robot's mental state about any proposition is going to be represented by a real number. A human's mental state is much more complicated: we judge propositions as being plausible, desirable, amusing, etc. A human's mental state might be better represented as a many-dimensioned vector of real numbers.
+
+Unemotional propositions like "the refractive index of water is less than 1.3" can be represented with fewer dimensions than propositions like "your mother-in-law just wrecked your new car". The situations we encounter in real life are often the ones requiring many coordinates. This may help explain why human reasoning about such situations is hard to model; and why math and science (dealing with propositions that generate simple mental states) are so successful.
+
+Many of these coordinates are not useful to us. We don't want our robot to get bored with a lengthy problem, or to get confused by emotional factors. But there is a large unexplored area of possible generalizations of the theory that we'll be developing, which could more accurately model actual human brains.
+
+#### 1.8.1. Common language vs. formal logic
+
+Ordinary language, if used carefully, does not need to be less precise than formal logic. But it's more complicated, giving it richer possibilities of expression. In particular, it has many ways to imply something without saying it, which are lost on formal logic. The claim "I believe what I see" and the retort "he doesn't see what he doesn't believe" would have the same meaning in formal logic, but convey opposite meanings in common language.
+
+Another example is that the word "is" is not commutative in common language. This example is taken from a math textbook: consider a straight line in the plane, and an infinite set of points in the plane, and the projections of the points onto the line. Then the statements
+
+* The projection of the limit is the limit of the projections
+* The limit of the projections is the projection of the limit
+
+Are not considered equivalent. The projections may have a limit while the points themselves do not (but not vice versa). The first statement implicitly asserts that the points have a limit, and is true conditional on that premise; the second implicitly asserts only that the projections have a limit, and is false.
+
+We can also distinguish between two different senses of the word "is". The epistemological sense, "the room is noisy", expresses something about the speaker's perception. The ontological sense, "there is noise in the room", asserts the physical existence of something. Mistaking one's thoughts and sensations for external realities is called the "mind projection fallacy", and causes much trouble in probability theory and elsewhere.
+
+(This is Jaynes' way of reminding us that [the map is not the territory](http://en.wikipedia.org/wiki/Map%E2%80%93territory_relation). It is not meant to imply that one's thoughts and sensations are completely unrelated to the real world.)
+
+We will not attempt to make our robot grasp common language.
+
+#### 1.8.2. Nitpicking
+
+Sometimes people question the second strong syllogism, "A implies B; not-B; therefore not-A". But Jaynes is happy to use it, noting among other things that if we exhibit a counterexample to a supposed theorem, then the supposed theorem is considered disproved. A new logic might lead to results which Aristotelian logic can't talk about, and that's just what we're trying to create here. But if a new logic was found to disagree with Aristotelian logic, then we would consider that a fatal flaw in the new logic.
+
+There are attempts to develop multiple-value logics. But arguments presented in appendix A suggest that there is no new content in these. An `$n$`-valued logic applied to a set of propositions is equivalent to a two-valued logic applied to a larger set; or it is inconsistent.
