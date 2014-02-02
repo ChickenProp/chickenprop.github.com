@@ -2,13 +2,13 @@
 layout: draft
 title: 'Cliffs Notes: "Probability Theory: The Logic of Science", part 1'
 ---
-A book sometimes cited on LessWrong as recommended reading is E.T. Jaynes' *Probability Theory: The Logic of Science*. I intend to write a series of posts reading this book, summarizing the key points, and solving the exercises. (There are no solutions in the book.)
+A book sometimes cited on LessWrong as recommended reading is E.T. Jaynes' [*Probability Theory: The Logic of Science*](http://www-biba.inrialpes.fr/Jaynes/prob.html). I intend to write a series of posts reading this book, summarizing the key points, and solving the exercises. (There are no solutions in the book.)
 
-The book has over 750 pages. This will take me a long time, if I finish at all.
+The book has over 750 pages. This will take me a long time, if I finish at all. I'm not committing to finishing. For example, if this turns out not to be a thing worth doing, I hope that I will notice that and stop. I'm also not committing to any particular posting rate while I continue.
 
 ## Preface
 
-Jaynes starts by telling us the audience of his book: readers with some knowledge of applied math "at the advanced undergraduate level or preferably higher". (At the time I write this, I've read up to part way through chapter four, and so far I think "advanced undergraduate" is more knowledge than you need.) Prior experience with statistics and probability is unnecessary and might be harmful.
+Jaynes starts by telling us the audience of his book: readers with some knowledge of applied math "at the advanced undergraduate level or preferably higher". Prior experience with statistics and probability is unnecessary and might be harmful.
 
 Next we get a brief history of the book. The rules of probability theory have been known for centuries, but in the mid 20th century, these were discovered to be rules for statistical inference in general, unique and inescapable. You cannot violate them without producing absurdity. These discoveries interested Jaynes, and he started giving lectures on them, and eventually they turned into a book.
 
