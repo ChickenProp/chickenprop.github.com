@@ -93,12 +93,55 @@ Also, a brief reminder of certain identities:
 
 If `$A=B$`, by which we mean that `$A$` and `$B$` are logically equivalent, then `$A$` and `$B$` must also be equally plausible. This seems obvious, but Jaynes notes that Boole himself got it wrong.
 
-As usual, `$A ⇒ B$` means "`$A$` implies `$B$`", i.e. `$A+\bar B$`. Remember that this is a much narrower statement than it would be in ordinary language; it does not mean that there is any actual connection between `$A$` and `$B$`.
+As usual, `$A ⇒ B$` means "`$A$` implies `$B$`", i.e. `$A+\bar B$`. Remember that this is a much narrower statement than it would be in ordinary language; it doesn't mean that there is any actual connection between `$A$` and `$B$`.
 
 ### 1.6. Adequate sets of operations
 
 We have four operations (AND, OR, NOT and IMPLIES) that we can apply to propositions. We can use these to generate many new propositions, but two questions occur to us. Firstly, are there propositions defined from `$A$` and `$B$` that we can't represent using these operations? Secondly, can we reduce the number of operations without losing any propositions that we can currently generate?
 
-We answer the first question no: any logical function on `$n$` variables (of which there are `$2^{2^n}$` can be written as a disjunction of conjunctions of arguments and their negations. For example, `$AB\bar C + \bar A \bar B C + \bar A B \bar C$`. There is one exception, where we have zero conjunctions (the function which is constantly false), and this can be written `$A\bar A$`.
+We answer the first question no: any logical function on `$n$` variables (of which there are `$2^{2^n}$`) can be written as a disjunction of conjunctions of arguments and their negations. Each conjunction includes every argument precisely once, either purely or negated, and is true at precisely one point of its domain. For example, `$AB\bar C + \bar A \bar B C + \bar A B \bar C$`. There is one semi-exception, where we have zero conjunctions (the function which is constantly false), and this can be written `$A\bar A$`.
 
 We answer the second question yes: it is clear from the previous answer that IMPLIES is unnecessary, and from duality that we can do away with either (but not both) of AND and OR. We can't reduce either of the sets (AND, NOT) or (OR, NOT), but there are two operators which suffice by themselves: NAND, `$A↑B = \overline{AB}$`, and NOR, `$A↓B = \overline{A+B}$`.
+
+### 1.7. The basic desiderata
+
+We now move on to our extension of logic. This will follow from the conditions to be discussed in this section. We don't call them "axioms" because we're not asserting that they're true, just that they appear to be desirable goals. In chapter 2 we'll discuss whether the goals are contradictory, and whether they determine any unique extension of logic.
+
+Our robot must assign a degree of plausibility to each proposition that it thinks about, based on the evidence it has available. When it collects new evidence, it must update these degrees of plausibility. To store these plausibility assignments in the brain, they have to be associated with some physical quantity, such as a voltage level. This means there must be some kind of association between degrees of plausibility and real numbers. Thus we have
+
+* **Desideratum (I)**. Degrees of plausibility are represented by real numbers.
+
+This is motivated by physical necessity, but appendix (A) shows that it's also a theoretical necessity.
+
+Being more specific, two other properties of this representation will be useful. Firstly, that a greater degree of plausibility is represented by a greater real number. And secondly, continuity; this is difficult to state precisely yet, so we say it intuitively: an infinitesimally greater plausibility should correspond to an infinitesimally greater number.
+
+The plausibility assigned to a proposition will often depend on whether some other proposition is true. We use the symbol `$A|B$` to denote "the conditional plausibility that `$A$` is true, given that `$B$` is true", or "`$A$` given `$B$`". We also have, for example, `$A | BC$`, the plausibility of `$A$` given that `$B$` and `$C$` are true; and `$A+B \mid CD$`, the plausibility that at least one of `$A$` and `$B$` is true, give that both of `$C$` and `$D$` are true; and so on.
+
+(I mildly dislike this notation, myself, but we're stuck with it. I think the problem is spacing: the way it's usually typeset, `$A + B | CD$` looks like it should be parethesised `$A + (B|(CD))$` rather than `$(A+B)|(CD)$`. I prefer to have more whitespace around operators with low precedence.)
+
+We're not going to attempt to define constructions like `$A|B$` when `$B$` is impossible; for example, if we write `$A|BC$`, we are implicitly assuming that `$B$` and `$C$` are compatible.
+
+We want our robot to think in a way which is qualitatively like the way humans try to reason, as described by the above weak syllogisms and similar ones. So suppose the robot has prior information `$C$` which gets updated to `$C'$` such that the plausibility for `$A$` is increased, but the plausibility of `$B$` given `$A$` does not change:
+
+    $$ A|C' > A | C; \\
+       B|AC = B|AC'. $$
+
+This can never decrease the plausibility that both `$A$` and `$B$` are true:
+
+    $$ AB | C' ≥ AB | C $$
+
+This doesn't say anything about *how much* the plausibilities change, but it gives a sense of direction. These qualitative requirements will be stated explicitly in chapter 2; for now we sum them up as
+
+* **Desideratum (II)**. Qualitative correspondance with common sense.
+
+Finally, we wish our robot to reason consistently. By this we mean
+
+* **Desideratum (IIIa)**. If a conclusion can be reasoned out in more than one way, then every possible way must lead to the same result.
+
+* **Desideratum (IIIb)**. The robot always takes into account all of the evidence it has relevant to a question. It does not arbitrarily ignore some of the inormation, basing its conclusions only on what remains. In other words, the robot is completely nonideological.
+
+* **Desideratum (IIIc)**. The robot always represents equivalent states of knowledge by equivalent plausibility assignments. That is, if in two problems the robot's state of knowledge is the same (except perhaps for the labeling of the propositions), then it must assign the same plausibilities in both.
+
+Desiderata (I), (II) and (IIIa) are structural requirements on the robot's brain, while (IIIb) and (IIIc) show how the robot should relate to the outside world.
+
+It turns out that these are all the desiderata we need. There is only one set of mathematical operations for manipulating plausibilities which satisfies all of them; they uniquely determine the rules by which our robot must reason. These rules will be deduced in chapter 2.
