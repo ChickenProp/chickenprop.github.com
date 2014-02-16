@@ -1,6 +1,6 @@
 ---
-title: Meetup report: London LW paranoid debating session
 layout: default
+title: Meetup report: London LW paranoid debating session
 ---
 ![/images/lw-meetup-20140209-photo.jpg]
 *A photo from a (different) recent LW London meetup*
