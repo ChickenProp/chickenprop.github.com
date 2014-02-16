@@ -2,7 +2,7 @@
 layout: draft
 title: "Meetup report: London LW paranoid debating session"
 ---
-![/images/lw-meetup-20140209-photo.jpg]
+![photo](/images/lw-meetup-20140209-photo.jpg)
 *A photo from a (different) recent LW London meetup*
 
 I wasn't going to bother writing this up, but then I remembered it's important to publish negative results.
