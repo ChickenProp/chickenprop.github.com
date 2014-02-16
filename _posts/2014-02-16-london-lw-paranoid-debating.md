@@ -1,5 +1,5 @@
 ---
-layout: draft
+layout: post
 title: "Meetup report: London LW paranoid debating session"
 ---
 ![photo](/images/lw-meetup-20140209-photo.jpg)
