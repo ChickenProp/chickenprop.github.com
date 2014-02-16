@@ -2,9 +2,6 @@
 layout: default
 title: Meetup report: London LW paranoid debating session
 ---
-![/images/lw-meetup-20140209-photo.jpg]
-*A photo from a (different) recent LW London meetup*
-
 I wasn't going to bother writing this up, but then I remembered it's important to publish negative results.
 
 LessWrong London played a few rounds of paranoid debating at our meetup on 02/02/14. I'm not sure we got too much from the experience, except that it was fun. (I enjoyed it, at any rate.)
