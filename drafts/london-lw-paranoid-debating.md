@@ -17,7 +17,7 @@ In reality, the longest river is 4,100 miles, the third longest is 3900 miles, a
 
 The other team did considerably better, getting answers in the 8,000s for a true answer of 8,600.
 
-I'd devised a scoring system, where every player submits their own answer, and non-moles score proportional to `$-|\log\left({\text{given answer} \over \text{true answer}}\right)$`; the mole scores the negative mean of everyone else's score. But after calculating it for a few people, we decided we didn't really care, and we probably wouldn't be playing enough rounds for it to become meaningful.
+I'd devised a scoring system, where every player submits their own answer, and non-moles score proportional to `$-\left|\log\left({\text{given answer} \over \text{true answer}}\right)\right|$`; the mole scores the negative mean of everyone else's score. But after calculating it for a few people, we decided we didn't really care, and we probably wouldn't be playing enough rounds for it to become meaningful.
 
 Those questions weren't so great, because we felt there wasn't much you could do to approach them beyond having some idea of the correct answer. For round two we tried to pick questions more amenable to Fermi estimates: annual U.S. electricity consumption (sourced from Wolfram Alpha), and the number of pennies that could fit inside St. Paul's Cathedral. This round, we gave the correct answers to the moles.
 
