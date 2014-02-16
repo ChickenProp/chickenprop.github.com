@@ -1,6 +1,6 @@
 ---
 layout: draft
-title: Meetup report: London LW paranoid debating session
+title: "Meetup report: London LW paranoid debating session"
 ---
 ![/images/lw-meetup-20140209-photo.jpg]
 *A photo from a (different) recent LW London meetup*
