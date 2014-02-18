@@ -5,11 +5,13 @@ title: "Meetup report: London LW paranoid debating session"
 ![photo](/images/lw-meetup-20140209-photo.jpg)
 *A photo from a (different) recent LW London meetup*
 
+[*Cross-posted to LessWrong*](http://lesswrong.com/lw/jor/meetup_report_london_lw_paranoid_debating_session/)
+
 I wasn't going to bother writing this up, but then I remembered it's important to publish negative results.
 
 LessWrong London played a few rounds of paranoid debating at our meetup on 02/02/14. I'm not sure we got too much from the experience, except that it was fun. (I enjoyed it, at any rate.)
 
-There were nine of us, which was unwieldy, so we split into to groups. Our first questions probably weren't very good: we wanted the height of the third-highest mountain in the world, and the length of the third-longest river. (The groups had different questions so that someone on the other group could verify that the answer was well-defined and easy to discover. I had intended to ask "tallness of the third-tallest mountain", but the wikipedia page I found sorted by height, so I went with that.)
+There were nine of us, which was unwieldy, so we split into two groups. Our first questions probably weren't very good: we wanted the height of the third-highest mountain in the world, and the length of the third-longest river. (The groups had different questions so that someone on the other group could verify that the answer was well-defined and easy to discover. I had intended to ask "tallness of the third-tallest mountain", but the wikipedia page I found sorted by height, so I went with that.)
 
 I was on the "river" question, and we did pretty badly. None of us really knew what ballpark we were searching in. I made the mistake of saying an actual number that was in my head but I didn't know where from and I didn't trust it, that the longest river was something like 1,800 miles long. Despite my unconfidence, we became anchored there. Someone else suggested that the thing to do would be to take a quarter of the circumference of earth (which comes to 6,200 miles) as a baseline and adjust for the fact that rivers wiggle. I thought, that's crazy, you must be the mole. I think I answered 1500 miles.
 
