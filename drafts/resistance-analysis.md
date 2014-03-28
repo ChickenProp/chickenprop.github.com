@@ -10,7 +10,11 @@ This probably wouldn't be very fun to actually play as a group (and you'd need a
 
 This game is also a lot easier to analyse than the original. Everyone has the same information, so there's no need to vote on missions. In fact, we can think of it as a one-player game against a random opponent; all the opponent does is pick the spies, and the player needs to pick teams to execute three successful missions.
 
-My hypothesis, which I'm stating vaugely, is that for many game sizes, the spies will have considerably greater than even odds of winning. Note that if I'm wrong, that doesn't mean the original Resistance is unbalanced, although it's evidence against it (strength depending on just how badly wrong I am); but if I'm right, the Resistance certainly is unbalanced.
+My hypothesis is that for many game sizes, the spies will have considerably greater than even odds of winning. I'm stating this vaguely because I don't have many concrete predictions; I expect the spies to have a disadvantage in five-player games at least<sup>1</sup>, but for six I'm not sure which way it would go, and by ten I expect the spies to be usually winning.
+
+<sup>1</sup> Although I don't remember specifically predicting this prior to beginning the analysis below. I got as far as "40% of the time, the resistance wins just based on the first round" before writing anything down.
+
+Note that if I'm wrong, that doesn't mean the original Resistance is unbalanced, although it's evidence against it (strength depending on just how badly wrong I am); but if I'm right, the Resistance certainly is unbalanced.
 
 Resistance-B is easy to analyse case-by-case for five players (three resistance, two spies). With no information, we select the starting team (two players) randomly. There are three equivalence classes of outcomes:
 
@@ -22,10 +26,20 @@ Resistance-B is easy to analyse case-by-case for five players (three resistance,
 
 - - ABC is a guaranteed fail, but
 
-- - - If we get two failure cards (p = 1/3), we know C is a spy. We can't afford to fail any more missions, and we can't distinguish between A and B. So we send AC on mission 3; if it succeds (p = 0.5) we win, if it fails (p = 0.5) we lose.
+- - - If we get two failure cards (p = 1/3), we know C is a spy. We can't afford to fail any more missions, and we can't distinguish between A and B. So we send AD on mission 3; if it succeds (p = 0.5) we win, if it fails (p = 0.5) we lose.
 
 - - - If we get one failure card (p = 2/3), we know C is not a spy. One of AB, and one of DE, is a spy; we can't afford to send any more spies on missions, so we have a 1/4 chance of winning.
 
     So ABC gives us a 1/3 chance of winning.
 
-- - ACD has a $1/2 \cdot 1/3 = 1/6$ chance of succeding, but if it does we know who the spies are and winning. It has a $1/2 \cdot 2/3 = 1/3$ chance of getting two failure cards; now we know BE are good, A is bad, and have a 50/50 chance of selecting between CD to win. And there's a $1/2$ chance of getting one failure card. This is where the analysis gets complicated.
+- - ACD has a $1/2 \cdot 1/3 = 1/6$ chance of succeding, but if it does we know who the spies are and win. It has a $1/2 \cdot 2/3 = 1/3$ chance of getting two failure cards; now we know BE are good, A is bad, and have a 50/50 chance of selecting between CD to win. And there's a $1/2$ chance of getting one failure card.
+
+    In this case, $1/3$ of the time, AE are spies and BCD are not. $2/3$ of the time, the spies are B and one of CD. Again, we can't afford to fail any more missions. So we can choose either BCD or ACE to go on the remaining missions, and we'll have a $1/3$ chance of winning.
+
+    So ACD has a $1/6 + 1/3 \cdot 1/2 + 1/2 \cdot 1/3 = 1/2$ chance of winning.
+
+  So if there's one spy amongst AB, we select team ACD for mission two, and win half the time.
+
+In total then, we win the five-player game 70% of the time. That's not surprising.
+
+The six-player analysis could probably be done analagously without too much trouble, since there are still only two spies. But the mission sizes go 2-3-4-3-4, which means that if we select no spies in the first mission, it's not obvious that we win, and if we select one spy we also have the choice of selecting CDE for mission two... the decision tree gets a lot more complicated, and I'd rather try to solve this problem intelligently (to work for game sizes 7+ as well).
