@@ -5,7 +5,11 @@ layout: default
 
 <p><em>This is a draft. Please assume that I would prefer you not to share it, unless I've told you otherwise. Comments are appreciated, but they will not be carried over to the published version.</em></p>
 
-{{ explicit_math }}
+'{{ explicit_math }}'
+
+{% unless explicit_math %}hi{% endunless %}
+
+{% if explicit_math %}bye{% endif%}
 
 {{ content }}
 
