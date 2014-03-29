@@ -11,9 +11,9 @@ layout: default
 
 '{{ em }}'
 
-{% unless em %}hi{% endunless %}
+{% unless em != '' %}hi{% endunless %}
 
-{% if em %}bye{% endif%}
+{% if em != '' %}bye{% endif%}
 
 {{ content }}
 
