@@ -44,7 +44,7 @@ So ABC gives us a $1/3$ chance of winning.</li>
 
 In this case, $1/3$ of the time, AE are spies and BCD are not. $2/3$ of the time, the spies are B and one of CD. Again, we can't afford to fail any more missions. So we can choose either BCD or ACE to go on the remaining missions, and we'll have a $1/3$ chance of winning.
 
-So ACD has a ${1 \over 6} + ({1 \over 3} \cdot {1 \over 2}) + {1 \over 2} {1 \over 3} = 1/2$ chance of winning.</li>
+So ACD has a ${1 \over 6} + \left({1 \over 3} \cdot {1 \over 2}\right) + \left({1 \over 2} \cdot {1 \over 3}\right) = 1/2$ chance of winning.</li>
     </ul>
 
 So if there's one spy amongst AB, we select team ACD for mission two, and win half the time.</li>
