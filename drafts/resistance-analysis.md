@@ -18,9 +18,12 @@ Note that if I'm wrong, that doesn't mean the original Resistance is unbalanced,
 
 Resistance-B is easy to analyse case-by-case for five players (three resistance, two spies). With no information, we select the starting team (two players) randomly. There are three equivalence classes of outcomes:
 
-- No spies ($p = { 3 \choose 2 } / { 5 \choose 2 } = 0.3$). In this case, the resistance always wins. Mission three also only takes two members, so it's a guaranteed success. On each of missions 2, 4 and 5, take one of the remaining players until you find the one who isn't a spy.
-- Two spies ($p = 1 / { 5 \choose 2 } = 0.1$). Now we know exactly who the spies are. Easy win.
-- One spy ($p = 0.6$, by elimination). We have players A through E, and precisely one of A and B is a spy, and precisely one of C, D, E is a spy. For mission two, our choices are (wlog) ABC and ACD. (CDE is stupid, because we gain no information and are guaranteed the mission will fail).
+<ul>
+  <li>No spies ($p = { 3 \choose 2 } / { 5 \choose 2 } = 0.3$). In this case, the resistance always wins. Mission three also only takes two members, so it's a guaranteed success. On each of missions 2, 4 and 5, take one of the remaining players until you find the one who isn't a spy.</li>
+
+  <li>Two spies ($p = 1 / { 5 \choose 2 } = 0.1$). Now we know exactly who the spies are. Easy win.</li>
+
+  <li>One spy ($p = 0.6$, by elimination). We have players A through E, and precisely one of A and B is a spy, and precisely one of C, D, E is a spy. For mission two, our choices are (wlog) ABC and ACD. (CDE is stupid, because we gain no information and are guaranteed the mission will fail).
 
 - - ABC is a guaranteed fail, but
 - - - If we get two failure cards (p = 1/3), we know C is a spy. We can't afford to fail any more missions, and we can't distinguish between A and B. So we send AD on mission 3; if it succeds (p = 0.5) we win, if it fails (p = 0.5) we lose.
@@ -34,7 +37,7 @@ Resistance-B is easy to analyse case-by-case for five players (three resistance,
 
     So ACD has a $1/6 + 1/3 \cdot 1/2 + 1/2 \cdot 1/3 = 1/2$ chance of winning.
 
-  So if there's one spy amongst AB, we select team ACD for mission two, and win half the time.
+  So if there's one spy amongst AB, we select team ACD for mission two, and win half the time.</li>
 
 In total then, we win the five-player game 70% of the time. That's not surprising.
 
