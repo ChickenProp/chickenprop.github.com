@@ -10,7 +10,7 @@ This probably wouldn't be very fun to actually play as a group (and you'd need a
 
 This game is also a lot easier to analyse than the original. Everyone has the same information, so there's no need to vote on teams. In fact, we can think of it as a one-player game against a random opponent; all the opponent does is pick the spies, and the player needs to pick teams to execute three successful missions.
 
-My hypothesis is that for many game sizes, the spies will have considerably greater than even odds of winning. I'm stating this vaguely because I don't have many concrete predictions; I expect the spies to have a disadvantage in five-player games at least<sup>1</sup>, but for six I'm not sure which way it would go, and by ten I expect the spies to be usually winning.
+My hypothesis is that for many game sizes, the spies will have considerably greater than even odds of winning. To be less vague, I expect the spies to have a disadvantage in five-player games at least<sup>1</sup>, but for six I'm not sure which way it would go, and by eight I expect the spies to be usually winning. (I also expect the game generally gets harder for the resistance as you add players, except that nine players is obviously easier than eight. Having one more exception wouldn't surprise me much, but two would. (If ten is easier than eight, that doesn't count as an exception, because ten is clearly harder than nine. However, it would also surprise me a little if ten was easier than eight.))
 
 <small>1. Although I don't remember specifically predicting this prior to beginning the analysis below. I got as far as "40% of the time, the resistance wins just based on the first round" before I started to write this post.</small>
 
