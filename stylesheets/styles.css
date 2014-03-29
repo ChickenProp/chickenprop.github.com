@@ -43,8 +43,12 @@ h1, h2, h3, h4, h5, h6 {
   margin:36px 0 10px;
 }
 
-p, ul, ol, table, dl {
+p, ul, ol, table, dl, li {
   margin:0 0 10px;
+}
+
+header li {
+    margin: 0px;
 }
 
 h1, h2, h3 {
@@ -98,8 +102,7 @@ strong {
   font-weight:700;
 }
 
-ul li {
-  list-style: inside;
+ul {
   padding-left: 25px;
 }
 
