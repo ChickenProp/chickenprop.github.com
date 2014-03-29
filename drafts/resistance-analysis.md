@@ -1,6 +1,7 @@
 ---
 layout: draft
 title: How unbalanced is The Resistance?
+explicit_math: true
 ---
 I'm a big fan of the board/card game [The Resistance](http://en.wikipedia.org/wiki/The_Resistance_%28game%29), but I feel like the base game is massively unbalanced in favour of the spies. I think that if the spies play well, they will usually win regardless of how well the resistance plays; and I think that playing well simply involves not outing themselves.
 
