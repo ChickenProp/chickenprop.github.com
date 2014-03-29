@@ -8,7 +8,7 @@ To test this, I intend to analyse a similar, simpler game which I call Resistanc
 
 This probably wouldn't be very fun to actually play as a group (and you'd need a GM, or some other way to find out how many spies were on a mission without the spies themselves knowing). But it seems clear that, provided all players are good at acting, this is a variant which is strictly harder for the spies to win. Their strategy in this game is available in plain Resistance (always act like a resistance member in public, but sabotage all missions), but some options have been removed, and the resistance members know that this is their strategy.
 
-This game is also a lot easier to analyse than the original. Everyone has the same information, so there's no need to vote on missions. In fact, we can think of it as a one-player game against a random opponent; all the opponent does is pick the spies, and the player needs to pick teams to execute three successful missions.
+This game is also a lot easier to analyse than the original. Everyone has the same information, so there's no need to vote on teams. In fact, we can think of it as a one-player game against a random opponent; all the opponent does is pick the spies, and the player needs to pick teams to execute three successful missions.
 
 My hypothesis is that for many game sizes, the spies will have considerably greater than even odds of winning. I'm stating this vaguely because I don't have many concrete predictions; I expect the spies to have a disadvantage in five-player games at least<sup>1</sup>, but for six I'm not sure which way it would go, and by ten I expect the spies to be usually winning.
 
