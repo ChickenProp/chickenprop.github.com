@@ -2,7 +2,7 @@
 layout: draft
 title: How unbalanced is The Resistance?
 ---
-I'm a big fan of the board/card game [The Resistance](http://en.wikipedia.org/wiki/The_Resistance_%28game%29), but I feel like it's massively unbalanced in favour of the spies. I think that if the spies play well, they will usually win regardless of how well the resistance plays; and I think that playing well simply involves not outing themselves.
+I'm a big fan of the board/card game [The Resistance](http://en.wikipedia.org/wiki/The_Resistance_%28game%29), but I feel like the base game is massively unbalanced in favour of the spies. I think that if the spies play well, they will usually win regardless of how well the resistance plays; and I think that playing well simply involves not outing themselves.
 
 To test this, I intend to analyse a similar, simpler game which I call Resistance-B. "B" for "brainwashed", because in this game the spies don't know they're spies, and they don't know who the other spies are either. However, any time they go on a mission, their programming takes over and they sabotage it without knowing what they're doing. If there are multiple spies on a mission, they all sabotage it.
 
@@ -15,6 +15,10 @@ My hypothesis is that for many game sizes, the spies will have considerably grea
 <small><sup>1</sup> Although I don't remember specifically predicting this prior to beginning the analysis below. I got as far as "40% of the time, the resistance wins just based on the first round" before writing anything down.</small>
 
 Note that if I'm wrong, that doesn't mean the original Resistance is unbalanced, although it's evidence against it (strength depending on just how badly wrong I am); but if I'm right, the Resistance certainly is unbalanced.
+
+For people not familiar with the original game, here are the rules of Resistance-B. You have a specified number of players<sup>2</sup>, some of whom are "resistance members" (good guys) and some of whom are "government spies" (bad guys). A third of the players, rounded up, are spies, but you don't know which. The game progresses in up-to-five rounds. In each round, you select a specified number of your players, and find out how many of them were spies. If none of them were spies, you win that round. If any of them were spies, you loose that round. Your goal is to win three rounds. The number of players selected in each round depends on the total number of players, and the round number ([the table is given on wikipedia](http://en.wikipedia.org/wiki/The_Resistance_%28game%29#Rounds)). In addition, for seven players and up, you win round four unless you select two or more spies, not one or more.
+
+<small><sup>2</sup> The way I'm presenting the game, these aren't real players. You are "the player", and the game contains fictional players whom you control.</small>
 
 Resistance-B is easy to analyse case-by-case for five players (three resistance, two spies). With no information, we select the starting team (two players) randomly. There are three equivalence classes of outcomes:
 
