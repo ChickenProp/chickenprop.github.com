@@ -7,9 +7,9 @@ layout: default
 
 '{{ explicit_math }}'
 
-{% unless explicit_math %}hi{% endunless %}
+{% unless explicit_math == '' %}hi{% endunless %}
 
-{% if explicit_math %}bye{% endif%}
+{% if explicit_math == '' %}bye{% endif%}
 
 {{ content }}
 
