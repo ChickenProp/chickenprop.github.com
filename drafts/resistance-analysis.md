@@ -21,6 +21,7 @@ Resistance-B is easy to analyse case-by-case for five players (three resistance,
 - No spies ($p = { 3 \choose 2 } / { 5 \choose 2 } = 0.3$). In this case, the resistance always wins. Mission three also only takes two members, so it's a guaranteed success. On each of missions 2, 4 and 5, take one of the remaining players until you find the one who isn't a spy.
 - Two spies ($p = 1 / { 5 \choose 2 } = 0.1$). Now we know exactly who the spies are. Easy win.
 - One spy ($p = 0.6$, by elimination). We have players A through E, and precisely one of A and B is a spy, and precisely one of C, D, E is a spy. For mission two, our choices are (wlog) ABC and ACD. (CDE is stupid, because we gain no information and are guaranteed the mission will fail).
+
 - - ABC is a guaranteed fail, but
 - - - If we get two failure cards (p = 1/3), we know C is a spy. We can't afford to fail any more missions, and we can't distinguish between A and B. So we send AD on mission 3; if it succeds (p = 0.5) we win, if it fails (p = 0.5) we lose.
 - - - If we get one failure card (p = 2/3), we know C is not a spy. One of AB, and one of DE, is a spy; we can't afford to send any more spies on missions, so we have a 1/4 chance of winning.
