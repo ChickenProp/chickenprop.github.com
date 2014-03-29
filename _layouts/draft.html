@@ -7,9 +7,9 @@ layout: default
 
 '{{ page.explicit_math }}'
 
-{% unless page.explicit_math == '' %}hi{% endunless %}
+{% unless page.explicit_math != '' %}hi{% endunless %}
 
-{% if page.explicit_math == '' %}bye{% endif%}
+{% if page.explicit_math != '' %}bye{% endif%}
 
 {{ content }}
 
