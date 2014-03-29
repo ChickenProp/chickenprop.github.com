@@ -12,13 +12,13 @@ This game is also a lot easier to analyse than the original. Everyone has the sa
 
 My hypothesis is that for many game sizes, the spies will have considerably greater than even odds of winning. I'm stating this vaguely because I don't have many concrete predictions; I expect the spies to have a disadvantage in five-player games at least<sup>1</sup>, but for six I'm not sure which way it would go, and by ten I expect the spies to be usually winning.
 
-<small><sup>1</sup> Although I don't remember specifically predicting this prior to beginning the analysis below. I got as far as "40% of the time, the resistance wins just based on the first round" before I started to write this post.</small>
+<small>1. Although I don't remember specifically predicting this prior to beginning the analysis below. I got as far as "40% of the time, the resistance wins just based on the first round" before I started to write this post.</small>
 
 Note that if I'm wrong, that doesn't mean the original Resistance is unbalanced, although it's evidence against it (strength depending on just how badly wrong I am); but if I'm right, the Resistance certainly is unbalanced.
 
 For people not familiar with the original game, here are the rules of Resistance-B. You have a specified number of players<sup>2</sup>, some of whom are "resistance members" (good guys) and some of whom are "government spies" (bad guys). A third of the players, rounded up, are spies, but you don't know which. The game progresses in up-to-five rounds. In each round, you select a specified number of your players, and find out how many of them were spies. If none of them were spies, you win that round. If any of them were spies, you loose that round. Your goal is to win three rounds. The number of players selected in each round depends on the total number of players, and the round number ([the table is given on wikipedia](http://en.wikipedia.org/wiki/The_Resistance_%28game%29#Rounds)). In addition, for seven players and up, you win round four unless you select two or more spies, not one or more.
 
-<small><sup>2</sup> The way I'm presenting the game, these aren't real players. You are "the player", and the game contains fictional players whom you control.</small>
+<small>2. The way I'm presenting the game, these aren't real players. You are "the player", and the game contains fictional players whom you control.</small>
 
 Resistance-B is easy to analyse case-by-case for five players (three resistance, two spies). With no information, we select the starting team (two players) randomly. There are three equivalence classes of outcomes:
 
