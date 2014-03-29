@@ -4,6 +4,7 @@ $(function () {
         var html = $(this).html().replace(/\n$/, '');
         if (html[0] == '$' && html[html.length-1] == '$') {
             $(this).html(html);
+            $(this).addClass('do-math');
             MathJax.Hub.Queue(['Typeset', MathJax.Hub, this]);
         }
 

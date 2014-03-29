@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Cliffs Notes: "Probability Theory: The Logic of Science", part 1'
+explicit_math: true
 ---
 A book sometimes cited on LessWrong as recommended reading is E.T. Jaynes' [*Probability Theory: The Logic of Science*](http://www-biba.inrialpes.fr/Jaynes/prob.html). I intend to write a series of posts reading this book, summarizing the key points, and solving the exercises. (There are no solutions in the book.)
 

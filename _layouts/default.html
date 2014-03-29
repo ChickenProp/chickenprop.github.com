@@ -15,9 +15,11 @@
         tex2jax: {
           inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
           processEscapes: true,
-          skipTags: ["script", "noscript", "style", "textarea"]
+          processClass: 'do-math',
         },
-        elements: [ 'this-doesnt-exist' ],{% comment %}I just want MathJax not to do anything unless I explicitly tell it to. This might not be the best way.{% endcomment%}
+        {% unless explicit_math %}
+          elements: [ 'this-doesnt-exist' ],{% comment %}I just want MathJax not to do anything unless I explicitly tell it to. This might not be the best way.{% endcomment%}
+        {% endunless %}
         "HTML-CSS": { linebreaks: { automatic: true } },
       })
     </script>
