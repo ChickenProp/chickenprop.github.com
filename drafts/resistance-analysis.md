@@ -33,18 +33,18 @@ Resistance-B is easy to analyse case-by-case for five players (three resistance,
       <li>ABC is a guaranteed fail, but
 
         <ul>
-	  <li>If we get two failure cards ($p = {1 \over 3}$), we know C is a spy. We can't afford to fail any more missions, and we can't distinguish between A and B. So we send AD on mission 3; if it succeds ($p = 0.5$) we win, if it fails ($p = 0.5$) we lose.</li>
+	  <li>If we get two failure cards ($p = 1/3$), we know C is a spy. We can't afford to fail any more missions, and we can't distinguish between A and B. So we send AD on mission 3; if it succeds ($p = 0.5$) we win, if it fails ($p = 0.5$) we lose.</li>
 
           <li>If we get one failure card ($p = 2/3$), we know C is not a spy. One of AB, and one of DE, is a spy; we can't afford to send any more spies on missions, so we have a $1/4$ chance of winning.</li>
 	</ul>
 
 So ABC gives us a $1/3$ chance of winning.</li>
 
-      <li>ACD has a $1/2 \cdot 1/3 = 1/6$ chance of succeding, but if it does we know who the spies are and win. It has a $1/2 \cdot 2/3 = 1/3$ chance of getting two failure cards; now we know BE are good, A is bad, and have a 50/50 chance of selecting between CD to win. And there's a $1/2$ chance of getting one failure card.
+      <li>ACD has a ${1 \over 2} \cdot {1 \over 3} = 1/6$ chance of succeding, but if it does we know who the spies are and win. It has a ${1 \over 2} \cdot {2 \over 3} = 1/3$ chance of getting two failure cards; now we know BE are good, A is bad, and have a 50/50 chance of selecting between CD to win. And there's a $1/2$ chance of getting one failure card.
 
 In this case, $1/3$ of the time, AE are spies and BCD are not. $2/3$ of the time, the spies are B and one of CD. Again, we can't afford to fail any more missions. So we can choose either BCD or ACE to go on the remaining missions, and we'll have a $1/3$ chance of winning.
 
-So ACD has a $1/6 + 1/3 \cdot 1/2 + 1/2 \cdot 1/3 = 1/2$ chance of winning.</li>
+So ACD has a ${1 \over 6} + {1 \over 3} \cdot {1 \over 2} + {1 \over 2} \cdot {1 \over 3} = 1/2$ chance of winning.</li>
     </ul>
 
 So if there's one spy amongst AB, we select team ACD for mission two, and win half the time.</li>
