@@ -17,9 +17,10 @@
           processEscapes: true,
           processClass: 'do-math',
         },
-        {% unless explicit_math %}
+        {% capture em %}{{ page.explicit_math }}{% endcapture %}
+        {% if em != '' %}
           elements: [ 'this-doesnt-exist' ],{% comment %}I just want MathJax not to do anything unless I explicitly tell it to. This might not be the best way.{% endcomment%}
-        {% endunless %}
+        {% endif %}
         "HTML-CSS": { linebreaks: { automatic: true } },
       })
     </script>
