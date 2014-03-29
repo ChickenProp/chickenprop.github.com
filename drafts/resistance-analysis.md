@@ -12,7 +12,7 @@ This game is also a lot easier to analyse than the original. Everyone has the sa
 
 My hypothesis is that for many game sizes, the spies will have considerably greater than even odds of winning. I'm stating this vaguely because I don't have many concrete predictions; I expect the spies to have a disadvantage in five-player games at least<sup>1</sup>, but for six I'm not sure which way it would go, and by ten I expect the spies to be usually winning.
 
-<small><sup>1</sup> Although I don't remember specifically predicting this prior to beginning the analysis below. I got as far as "40% of the time, the resistance wins just based on the first round" before writing anything down.</small>
+<small><sup>1</sup> Although I don't remember specifically predicting this prior to beginning the analysis below. I got as far as "40% of the time, the resistance wins just based on the first round" before I started to write this post.</small>
 
 Note that if I'm wrong, that doesn't mean the original Resistance is unbalanced, although it's evidence against it (strength depending on just how badly wrong I am); but if I'm right, the Resistance certainly is unbalanced.
 
