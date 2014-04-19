@@ -18,9 +18,9 @@ I found *Divergent* decent while watching it, but no more than that; and thinkin
 
 It's pretending to be a failed-utopia story: at some point in the past, someone came up with a really dumb idea ("let's end conflict by separating everyone into five factions based on personality traits!") and apparently society rolled with it. Now the heroine, along with the audience, learns that it's a really dumb idea ("oh hey, it turns out that some people have more than one personality trait, guess we'll have to kill them"). So far, so *Gattaca*.
 
-But in this case, just in case you weren't convinced that the faction idea was dumb, you get to see what happens when <spoiler>the faction system meets mind-control drugs</spoiler>. The answer is "pretty much what happens when <spoiler>mind-control drugs enter</spoiler> any society", but because it's happening to the faction system, it's the faction system that looks bad.
+But in this case, just in case you weren't convinced that the faction idea was dumb, you get to see what happens when the faction system <spoiler>meets mind-control drugs</spoiler>. The answer is "pretty much what happens when <spoiler>mind-control drugs enter</spoiler> any society", but because it's happening to the faction system, it's the faction system that looks bad.
 
-There's also a sort of Mary-Sue thing going on, but a viewer insert rather than an author insert. In the film world, people have only one of the traits brave/honest/friendly/selfless/clever, except for the rare divergents. So the message is "if you have two or more of these traits, you are rare and special and <spoiler>immune to mind-control drugs</spoiler>, and people will hate you for it", which is probably a message that will appeal to angsty teenagers.
+There's also a sort of Mary-Sue thing going on, but a viewer insert rather than an author insert. In the film world, people supposedly have only one of the traits brave/honest/friendly/selfless/clever, except for the rare divergents. So the message is "if you have two or more of these traits, you are rare and special and <spoiler>immune to mind-control drugs</spoiler>, and people will hate you for it", which is probably a message that will appeal to angsty teenagers.
 
 ###Captain America: The Winter Soldier###
 
