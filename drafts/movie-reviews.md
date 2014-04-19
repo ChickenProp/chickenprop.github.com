@@ -72,9 +72,9 @@ I am probably a little too quick to say that fictional characters should be kill
 
 Don't run away on a raft. The Ark is safer. You are the last hope for the human race. Kill Noah.
 
-When Noah has attempted to kill your children, and discovered that he can't do it, kill him anyway. He hasn't changed his mind about what God wants, he just thinks he's failed God, and do you trust him not to try again? Kill him.
+When Noah has attempted to kill your children, and discovered that he can't do it, kill him anyway. He hasn't changed his mind about what God wants, he just thinks he's failed God, and do you trust him not to try again? Kill him. (Eventually, Noah does change his mind, when Ila suggests that maybe God deliberately left the choice to Noah. Now Noah believes he's not only vital to God's plans, but is permitted to shape them.)
 
-Well, Shem makes a cursory attempt, at least. But it's not good enough. NPCs, the lot of them.
+Well, Shem eventually makes a cursory attempt, at least. But it's not good enough. NPCs, the lot of them.
 
 There are two more characters. Tubal-Cain is the villain. He thinks that man should have dominion over nature. He also decides that since God has forsaken them, so much for ethics, and he'll kill anyone he wants.
 
@@ -84,6 +84,18 @@ When Tubal-Cain breaks on to the Ark, Ham finds him and becomes his protégé. S
 
 Meanwhile, God is classic Old Testament God. He's not very communicative, which causes Noah no end of confusion; He only ever intervenes at the last minute; and apparently "flood the world" was the best plan He could come up with for making everything cool again.
 
-Apart from all the ethics, the film is still pretty bad. The script is uninspired. Tubal-Cain gets some villainous monologues and a rousing pre-battle speech, but they pretty much consist of him talking about how much killing he's going to do. Russell Crowe and Emma Watson do the best they can. I did enjoy the visuals.
+Apart from all the ethics, the film is still pretty bad. The script is uninspired. Tubal-Cain gets some villainous monologues and a rousing pre-battle speech, but they pretty much consist of him talking about how much killing he's going to do. I did enjoy the visuals, and Russell Crowe and Emma Watson do the best they can.
 
 I do not recommend *Noah*.
+
+###Ocho Apellidos Vascos (Eight Basque Surnames / Spanish Affairs)###
+
+This reminded me a lot of *Intouchables*. That was a French feelgood comedy-drama which ended up making a lot of money. This is a Spanish feelgood romcom which is making a lot of money. Both are heavily based on the cultural divide between the main characters. Both are well-made, but very paint-by-numbers.
+
+*Apellidos* features the boy and the girl meeting. The boy thinking there's something Special between them. The girl disagreeing. The two of them getting up to crazy antics. The girl changing her mind. The boy rejecting her, and then changing *his* mind. The assumption that these people, who first met a week ago, and now think they're in love, will live happily ever after.
+
+In this case, the boy is Andalusian, and the girl is Basque. I don't know much about Spanish politics, and the film doesn't go out of its way to explain (why would it?), but I get the impression that there's a great deal of tension between the Basque people and everyone else in Spain; much like Northern Ireland and the rest of the UK, back in the days when the IRA was bombing pubs and cars and stuff (okay, I don't know too much about local politics either). Accordingly, just about every character in the film is incredibly casually racist. Sometimes that's played for laughs, and probably exaggerated; other times it seems entirely plausible. It was kind of distracting: I kept thinking *there is no way you could show this if you substituted Basque for Black*. But then, maybe you could if you went for Irish instead.
+
+I found the subtitles hard to follow at times. There were some words which weren't translated (I think maybe these were spoken in the Basque language), and they were easy enough to pick up but required slightly more effort than normal. And there were a number of references to things I'm not familiar with, which I had to piece together from context; again, not difficult to do, but not effortless.
+
+Mostly, I thought this film was funny, sweet, and forgettable.
