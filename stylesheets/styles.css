@@ -142,6 +142,15 @@ hr {
   margin:0 0 24px;
 }
 
+spoiler {
+    color: black;
+    background-color: black;
+}
+
+spoiler:hover {
+    color: white;
+}
+
 /* Images */
 
 img {
