@@ -82,8 +82,9 @@ But by symmetry, we must also have
 
     $$ w(AB|C) = w(BA|C) = w(B|C)S\left({ w(B\bar A|C) \over w(B|C) }\right). $$
 
-This holds for all possible values of $A, B, C$. Choose some arbitrary proposition $D$, and set $B = \overline{AD}$. Thus, $A\bar B = \bar B, B\bar A
- \bar A$, and $w(A\bar B|C) = S(w(B|C)), w(B\bar A|C = S(w(A|C))$. Substitute $x = w(A|C), y = w(B|C)$ and we get the equation
+This holds for all possible values of $A, B, C$.
+
+Choose some arbitrary proposition $D$, and set $B = \overline{AD}$. Thus, $A\bar B = \bar B, so $w(A\bar B|C) = S(w(B|C))$; and $B\bar A = \bar A$, so $w(B\bar A|C) = S(w(A|C))$. Substitute $x = w(A|C), y = w(B|C)$ and we get the equation
 
     $$ xS\left({ S(y) \over x }\right) = yS\left({ S(x) \over y }\right). $$
 
@@ -91,7 +92,7 @@ From this, Jaynes proves that $S$ must have the form
 
     $$ S(x) = (1-x^m)^{1/m}, $$
 
-for some $m > 0$. (Unlike for the product rule, I confess that I haven't made a good-faith attempt to follow this proof.)
+for some $m > 0$. (Unlike for the product rule, I confess that I haven't made a proper attempt to follow this proof.)
 
 This was derived using the choice of $B = \overline{AD}$. Thus, this form of $S$ is necessary for our theory to be consistent; but it may be that other choices of $B$ would impose further conditions on $S$. We show that this is not so: substituting into our general equation,
 
