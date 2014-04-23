@@ -99,5 +99,38 @@ This was derived using the choice of $B = \overline{AD}$. Thus, this form of $S$
     $$ w(A|C)S\left({ w(A\bar B|C) \over w(A|C) }\right)
            = w(B|C)S\left({ w(B\bar A|C) \over w(B|C) }\right) \\
        w(A|C) \left(1 - { w(A\bar B|C)^m \over w(A|C)^m } \right)^{1/m}
-           = w(B|C) \left(1 - { w(B\bar A|C)^m \over w(B|C)^m } \right)^{1/m}
+           = w(B|C) \left(1 - { w(B\bar A|C)^m \over w(B|C)^m } \right)^{1/m} \\
+       w(A|C)^m \left(1 - { w(A\bar B|C)^m \over w(A|C)^m } \right)
+           = w(B|C)^m \left(1 - { w(B\bar A|C)^m \over w(B|C)^m } \right) \\
+       w(A|C)^m - w(A \bar B|C)^m = w(B|C)^m - w(B \bar A|C)^m.
     $$
+
+Jaynes says this identity is trivial by virtue of the product rule. I disagree. But to continue,
+
+    $$ w(A|C)^m - w(A|C)^m w(\bar B|AC)^m = w(B|C)^m - w(B|C)^m w(\bar A|BC)^m \\
+       w(A|C)^m (1 - w(\bar B|AC)^m) = w(B|C)^m (1 - w(\bar A|BC)^m) \\
+       w(A|C)^m w(B|AC)^m = w(B|C)^m w(A|BC)^m \\
+       w(AB|C)^m = w(BA|C)^m, $$
+
+where the third line follows from the second by applying $S$ again to get $w(X|Y)^m = 1 - w(\bar X|Y)^m$.
+
+That is: $S$ must follow the form that we derived for it, or our general equation fails; and as long as it does follow this form, our general equation holds true. So this form of $S$ is both necessary and sufficient for our theory.
+
+Now, we have already implicitly used an equivalent form of the product rule $w(AB|C)^m = w(A|C)^m w(B|AC)^m$; and we have that $w(A|C)^m + w(\bar A|C)^m = 1$. Thus, we may define $p = w^m$, and we get the familiar forms of the product rule,
+
+    $$ p(AB|C) = p(A|C) p(B|AC), $$
+
+and of a specific case of the sum rule,
+
+    $$ p(\bar A|C) = 1 - p(A|C). $
+
+In part 1, we noted that conjunction and negation were sufficient to construct any boolean function. Thus, these two rules allow us to calculate the plausibility of any logical proposition. For example, we can calculate the general form of the sum rule:
+
+    $$ p(A+B|C) = p(\overline{\bar A \bar B}|C) = 1 - p(\bar A \bar B|C) \\
+           = 1 - p(\bar A|C) p(\bar B | \bar A C)
+           = 1 - p(\bar A|C) (1 - p(B | \bar A C)) \\
+           = p(A|C) + p(\bar A B|C) = p(A|C) + p(B|C)p(\bar A|BC) \\
+           = p(A|C) + p(B|C)(1 - p(A|BC)) = p(A|C) + p(B|C) - p(B|C)p(A|BC) \\
+           = p(A|C) + p(B|C) - p(AB|C), $$
+
+as expected.
