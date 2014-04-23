@@ -67,3 +67,36 @@ To clarify what's happened up to this point: we know that the plausibility $AB|C
 We know that $F$ satisfies certain properties, notably associativity; and it turns out that as long as it does so, its precise definition doesn't matter. Instead of using $F$ directly, we can define a function $w$ in terms of $F$, and if we work with $w$ we have the product rule. $w$ also gives us the familiar rules that $w$ of certainty is $1$, and $w$ of impossibility is $0$.
 
 From now on, there is little or no reason to use bare symbols like $A|C$. Instead we work with $w(A|C)$, and (spoiler alert) soon we'll replace that with the familiar $p$.
+
+### 2.2. The sum rule
+
+Since propositions are always true xor false, we must have that $A\bar A$ is always false, and $A + \bar A$ is always true. The plausibility that $A$ is false must depend on the plausibility that it is true. So there must be some function $S$
+
+    $$ w(A|B) = S(w(\bar A | B)). $$
+
+By common sense, $S$ must be continuous, monotonically decreasing on `$[0,1]$`, and have extreme values $S(0) = 1, S(1) = 0$. Further, $S$ must be consistent with the product rule. We have $w(A\bar B | C) = w(A|C)w(\bar B | AC)$, and $w(B|AC) = S(w(\bar B|AC))$, and it follows that
+
+    $$ w(AB|C) = w(A|C)S(w(\bar B|AC)) = w(A|C)S\left({ w(A\bar B|C) \over w(A|C) }\right). $$
+
+But by symmetry, we must also have
+
+    $$ w(AB|C) = w(BA|C) = w(B|C)S\left({ w(B\bar A|C) \over w(B|C) }\right). $$
+
+This holds for all possible values of $A, B, C$. Choose some arbitrary proposition $D$, and set $B = \overline{AD}$. Thus, $A\bar B = \bar B, B\bar A
+ \bar A$, and $w(A\bar B|C) = S(w(B|C)), w(B\bar A|C = S(w(A|C))$. Substitute $x = w(A|C), y = w(B|C)$ and we get the equation
+
+    $$ xS\left({ S(y) \over x }\right) = yS\left({ S(x) \over y }\right). $$
+
+From this, Jaynes proves that $S$ must have the form
+
+    $$ S(x) = (1-x^m)^{1/m}, $$
+
+for some $m > 0$. (Unlike for the product rule, I confess that I haven't made a good-faith attempt to follow this proof.)
+
+This was derived using the choice of $B = \overline{AD}$. Thus, this form of $S$ is necessary for our theory to be consistent; but it may be that other choices of $B$ would impose further conditions on $S$. We show that this is not so: substituting into our general equation,
+
+    $$ w(A|C)S\left({ w(A\bar B|C) \over w(A|C) }\right)
+           = w(B|C)S\left({ w(B\bar A|C) \over w(B|C) }\right) \\
+       w(A|C) \left(1 - { w(A\bar B|C)^m \over w(A|C)^m } \right)^{1/m}
+           = w(B|C) \left(1 - { w(B\bar A|C)^m \over w(B|C)^m } \right)^{1/m}
+    $$
