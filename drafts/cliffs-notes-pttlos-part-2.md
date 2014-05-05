@@ -8,7 +8,7 @@ The book has over 750 pages. This will take me a long time, if I finish at all. 
 
 ## Chapter 2: The Quantitative Rules
 
-In [chapter 1](/posts/2014/02/02/cliffs-notes-pttlos-part-1.html), we formulated our problem. In this chapter, we deduce the quantitative rules for inference that follow from  ouur desiderata. To recap, the desiderata can be broadly stated as:
+In [chapter 1](/2014/02/02/cliffs-notes-pttlos-part-1.html), we formulated our problem. In this chapter, we deduce the quantitative rules for inference that follow from  ouur desiderata. To recap, the desiderata can be broadly stated as:
 
 * (I) Representation of degrees of plausibility by real numbers;
 * (II) Qualitative correspondance with common sense;
@@ -105,7 +105,7 @@ This was derived using the choice of $B = \overline{AD}$. Thus, this form of $S$
        w(A|C)^m - w(A \bar B|C)^m = w(B|C)^m - w(B \bar A|C)^m.
     $$
 
-Jaynes says this identity is trivial by virtue of the product rule. I disagree. But to continue,
+Jaynes says this identity is trivial by virtue of the product rule. I disagree about "trivial". But to continue,
 
     $$ w(A|C)^m - w(A|C)^m w(\bar B|AC)^m = w(B|C)^m - w(B|C)^m w(\bar A|BC)^m \\
        w(A|C)^m (1 - w(\bar B|AC)^m) = w(B|C)^m (1 - w(\bar A|BC)^m) \\
@@ -122,7 +122,7 @@ Now, we have already implicitly used an equivalent form of the product rule $w(A
 
 and of a specific case of the sum rule,
 
-    $$ p(\bar A|C) = 1 - p(A|C). $
+    $$ p(\bar A|C) = 1 - p(A|C). $$
 
 In part 1, we noted that conjunction and negation were sufficient to construct any boolean function. Thus, these two rules allow us to calculate the plausibility of any logical proposition. For example, we can calculate the general form of the sum rule:
 
@@ -131,6 +131,12 @@ In part 1, we noted that conjunction and negation were sufficient to construct a
            = 1 - p(\bar A|C) (1 - p(B | \bar A C)) \\
            = p(A|C) + p(\bar A B|C) = p(A|C) + p(B|C)p(\bar A|BC) \\
            = p(A|C) + p(B|C)(1 - p(A|BC)) = p(A|C) + p(B|C) - p(B|C)p(A|BC) \\
-           = p(A|C) + p(B|C) - p(AB|C), $$
+           = p(A|C) + p(B|C) - p(AB|C), \tag{} $$
 
 as expected.
+
+---
+
+**Exercise 2.1.** Is it possible to find a general formula for $P(C|A+B)$, analogous to (*), from the product and sum rules? If so, derive it; if not, explain why this cannot be done.
+
+**Answer.**
