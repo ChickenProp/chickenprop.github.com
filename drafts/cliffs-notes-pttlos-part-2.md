@@ -131,7 +131,7 @@ In part 1, we noted that conjunction and negation were sufficient to construct a
            = 1 - p(\bar A|C) (1 - p(B | \bar A C)) \\
            = p(A|C) + p(\bar A B|C) = p(A|C) + p(B|C)p(\bar A|BC) \\
            = p(A|C) + p(B|C)(1 - p(A|BC)) = p(A|C) + p(B|C) - p(B|C)p(A|BC) \\
-           = p(A|C) + p(B|C) - p(AB|C), \tag{} $$
+           = p(A|C) + p(B|C) - p(AB|C), \label{foo} $$
 
 as expected.
 
