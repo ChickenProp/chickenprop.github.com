@@ -45,7 +45,7 @@ This is great, but I just don't like writing asserts like that. So here's [a new
 How it works is that `bsert | x` returns a new object, `_Wrapped(x)`; and `_Wrapped(x) == y` calls `assertEqual(x, y)`. Other comparison methods are overloaded as well. Now we can do things like:
 
 ```
-bsert $ python
+$ python
 Python 2.7.5 (default, Dec  1 2013, 00:22:45)
 [GCC 4.7.3] on linux2
 Type "help", "copyright", "credits" or "license" for more information.
