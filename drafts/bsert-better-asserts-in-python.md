@@ -127,11 +127,21 @@ so there's no way for `bsert` to know that there's another comparison going on. 
 
 because there's no way to overload the `in` operator from the left hand side. (In this case, you at least get an `AssertionError: 1 != 3` telling you you did something wrong, because `a in someList` basially does `any(a == x for x in someList)`, and so it fails at `bsert | 3 == 1`. If you had a dict, set, or empty list on the right hand side, it would just return `False` and not raise an exception.)
 
-You also can't do
+Similarly, `bsert | x is y` doesn't work, because `is` can't be overridden at all. You also can't do
 
     bsert | False
 
 because that just returns `_Wrapped(False)`.
+
+I think all the other operators should work fine, if you're using them in ways that make sense. Most of them have higher-precedence than `|`, so that for example
+
+    bsert | a + b == c
+
+cashes out to
+
+    (bsert | (a + b)) == c
+
+The only exception is `|` itself, and I've added support so that `_Wrapped(x) | y` returns `_Wrapped(x|y)`.
 
 I don't necessarily recommend that you use `bsert`. I'm not sure that I will. But it's there.
 
