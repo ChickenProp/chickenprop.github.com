@@ -21,11 +21,8 @@ I'm aware of two approaches that improve the situation. [`nose`](http://nose.rea
 fails, it:
 
 1. Finds the source location of the failed assert,
-
 2. Reads and parses this line,
-
 3. Substitutes variables with their values,
-
 4. Reports the substituted line.
 
 This is an *awesome* hack, and I love that it's possible, but I don't find it all that useful. You still need to play spot-the-difference with deeply nested data structures, but that would be pretty easy to fix. The deeper problem is that it also doesn't help with
@@ -59,10 +56,6 @@ True
 Traceback (most recent call last):
   ...
 AssertionError: 3 != 4
->>> bsert [3] + [4] == [3, 4]
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: '_Bsert' object does not support indexing
 >>> bsert | [3] + [4] == [3, 4]
 True
 >>> bsert | [3] + [4] == [3, 4, 5]
