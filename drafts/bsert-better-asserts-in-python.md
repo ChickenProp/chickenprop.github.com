@@ -81,12 +81,13 @@ AssertionError: {1: {2: 3, 4: 5}, 6: 7} != {1: {2: 4, 4: 5}, 6: 7}
 + {1: {2: 4, 4: 5}, 6: 7}
 ?         ^
 
->>> bsert | 1 / 2 == 0
-True
->>> bsert | 1.0 / 2 == 0
+>>> bsert | 1 / 2 != 0
 Traceback (most recent call last):
   ...
-AssertionError: 0.5 != 0
+AssertionError: 0 == 0
+
+>>> bsert | 1.0 / 2 != 0
+True
 >>> import time
 >>> bsert | time.time() != time.time()
 True
