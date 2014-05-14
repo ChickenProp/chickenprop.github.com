@@ -128,11 +128,11 @@ so there's no way for `bsert` to know that there's another comparison going on. 
 
 because there's no way to overload the `in` operator from the left hand side. (In this case, you at least get an `AssertionError: 1 != 3` telling you you did something wrong, because `a in someList` basially does `any(a == x for x in someList)`, and so it fails at `bsert | 3 == 1`. If you had a dict, set, or empty list on the right hand side, it would just return `False` and not raise an exception.)
 
-Similarly, `bsert | x is y` doesn't work, because `is` can't be overridden at all. You also can't do
+Similarly, `bsert | x is y`, `bsert | x and y` and `bsert | x or y` don't work, because those operators can't be overridden at all. (Even if they did work, they're low precedence, so it would need to be e.g. `(bsert | x) and y`, which is horrible.) You also can't do
 
     bsert | False
 
-because that just returns `_Wrapped(False)`.
+because that just returns `_Wrapped(False)`
 
 I think all the other operators should work fine, if you're using them in ways that make sense. Most of them have higher-precedence than `|`, so that for example
 
@@ -191,3 +191,21 @@ class _Wrapped(unittest.TestCase):
 
 bsert = _Bsert()
 ```
+
+**Belated update:**
+
+On reddit, [Liorithiel informs me](http://www.reddit.com/r/coding/comments/258v7x/bsert_better_asserts_in_python/chev2i5) that [py.test](http://pytest.org/latest/) can extract useful failure messages from `assert` statements. Like what nose does, but implemented differently, so that it can show the values of intermediate expressions in more detail than bsert can. (It rewrites the AST on import time, which is an even more awesome hack than nose's.) As far as I'm concerned, this knowledge makes bsert obsolete.
+
+Meanwhile, obeleh on github has [provided a patch](https://github.com/ChickenProp/bsert/pull/1) which allows bsert to be used with boolean expressions, with different syntax. So
+
+    bsert(3 in [1,2,3])
+
+is like `assert 3 in [1,2,3]`, but with a slightly nicer exception message. (The old syntax still applies for expressions using comparison operators.) Now you get
+
+    AssertionError: bsert(3 in [1,2,3])
+
+instead of just
+
+    AssertionError:
+
+It comes at the cost of a slightly longer traceback - I wonder if that can be worked around. And it doesn't provide intermediate expressions at all, so it's kind of a neat trick, but I don't know if it's useful. (Especially since the old traceback had the failing expression near the bottom anyway - there are cases where you'll see the exception but not the traceback, but we're getting into niche territory.) But that's pretty much how I felt about bsert in the first place, so I decided to go ahead and include it.
