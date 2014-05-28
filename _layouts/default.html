@@ -17,6 +17,7 @@
           processEscapes: true,
           ignoreClass: 'no-math',
           processClass: 'do-math',
+          equationNumbers: { autoNumber: "AMS" },
         },
         {% capture em %}{{ page.explicit_math }}{% endcapture %}
         {% if em != '' %}
