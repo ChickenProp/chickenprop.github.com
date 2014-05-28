@@ -126,17 +126,19 @@ and of a specific case of the sum rule,
 
 In part 1, we noted that conjunction and negation were sufficient to construct any boolean function. Thus, these two rules allow us to calculate the plausibility of any logical proposition. For example, we can calculate the general form of the sum rule:
 
-    $$ p(A+B|C) = p(\overline{\bar A \bar B}|C) = 1 - p(\bar A \bar B|C) \\
+    $$\begin{equation}
+        p(A+B|C) = p(\overline{\bar A \bar B}|C) = 1 - p(\bar A \bar B|C) \\
            = 1 - p(\bar A|C) p(\bar B | \bar A C)
            = 1 - p(\bar A|C) (1 - p(B | \bar A C)) \\
            = p(A|C) + p(\bar A B|C) = p(A|C) + p(B|C)p(\bar A|BC) \\
            = p(A|C) + p(B|C)(1 - p(A|BC)) = p(A|C) + p(B|C) - p(B|C)p(A|BC) \\
-           = p(A|C) + p(B|C) - p(AB|C), \label{foo} $$
+           = p(A|C) + p(B|C) - p(AB|C), \label{sumrule}
+    \end{equation}$$
 
 as expected.
 
 ---
 
-**Exercise 2.1.** Is it possible to find a general formula for $P(C|A+B)$, analogous to (*), from the product and sum rules? If so, derive it; if not, explain why this cannot be done.
+**Exercise 2.1.** Is it possible to find a general formula for $P(C|A+B)$, analogous to (\ref{sumrule}), from the product and sum rules? If so, derive it; if not, explain why this cannot be done.
 
 **Answer.**
