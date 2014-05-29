@@ -127,7 +127,7 @@ and of a specific case of the sum rule,
 In part 1, we noted that conjunction and negation were sufficient to construct any boolean function. Thus, these two rules allow us to calculate the plausibility of any logical proposition. For example, we can calculate the general form of the sum rule:
 
     $$\begin{equation}
-        p(A+B|C) = p(A|C) + p(B|C) - p(AB|C). \label{sumrule}
+        p(A+B|C) = p(A|C) + p(B|C) - p(AB|C). \tag{test}\label{sumrule}
     \end{equation}$$
 
 ---
