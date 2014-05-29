@@ -84,7 +84,7 @@ But by symmetry, we must also have
 
 This holds for all possible values of $A, B, C$.
 
-Choose some arbitrary proposition $D$, and set $B = \overline{AD}$. Thus, $A\bar B = \bar B, so $w(A\bar B|C) = S(w(B|C))$; and $B\bar A = \bar A$, so $w(B\bar A|C) = S(w(A|C))$. Substitute $x = w(A|C), y = w(B|C)$ and we get the equation
+Choose some arbitrary proposition $D$, and set $B = \overline{AD}$. Thus, $A\bar B = \bar B$, so $w(A\bar B|C) = S(w(B|C))$; and $B\bar A = \bar A$, so $w(B\bar A|C) = S(w(A|C))$. Substitute $x = w(A|C), y = w(B|C)$ and we get the equation
 
     $$ xS\left({ S(y) \over x }\right) = yS\left({ S(x) \over y }\right). $$
 
@@ -127,15 +127,8 @@ and of a specific case of the sum rule,
 In part 1, we noted that conjunction and negation were sufficient to construct any boolean function. Thus, these two rules allow us to calculate the plausibility of any logical proposition. For example, we can calculate the general form of the sum rule:
 
     $$\begin{equation}
-        p(A+B|C) = p(\overline{\bar A \bar B}|C) = 1 - p(\bar A \bar B|C) \\
-           = 1 - p(\bar A|C) p(\bar B | \bar A C)
-           = 1 - p(\bar A|C) (1 - p(B | \bar A C)) \\
-           = p(A|C) + p(\bar A B|C) = p(A|C) + p(B|C)p(\bar A|BC) \\
-           = p(A|C) + p(B|C)(1 - p(A|BC)) = p(A|C) + p(B|C) - p(B|C)p(A|BC) \\
-           = p(A|C) + p(B|C) - p(AB|C), \label{sumrule}
+        p(A+B|C) = p(A|C) + p(B|C) - p(AB|C). \label{sumrule}
     \end{equation}$$
-
-as expected.
 
 ---
 
