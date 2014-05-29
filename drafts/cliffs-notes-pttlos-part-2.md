@@ -132,6 +132,6 @@ In part 1, we noted that conjunction and negation were sufficient to construct a
 
 ---
 
-**Exercise 2.1.** Is it possible to find a general formula for $P(C|A+B)$, analogous to (\ref{sumrule}), from the product and sum rules? If so, derive it; if not, explain why this cannot be done.
+**Exercise 2.1.** Is it possible to find a general formula for $P(C|A+B)$, analogous to (\eqref{sumrule}), from the product and sum rules? If so, derive it; if not, explain why this cannot be done.
 
 **Answer.**
