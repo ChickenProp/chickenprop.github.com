@@ -5,7 +5,6 @@ $(function () {
         if (html[0] == '$' && html[html.length-1] == '$') {
             $(this).html(html);
             $(this).addClass('do-math');
-            MathJax.Hub.Queue(['Typeset', MathJax.Hub, this]);
 
 	    // MathJax and pygments interfere with each other, and the markdown
 	    // interpreter wraps code blocks in a pygments div. This is a hacky
@@ -17,4 +16,6 @@ $(function () {
 	    }
         }
     });
+
+    MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
 });
