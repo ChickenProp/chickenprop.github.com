@@ -20,5 +20,5 @@ $(function () {
         }
     });
 
-    MathJax.Hub.Queue(['Process', MathJax.Hub]);
+    MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
 });
