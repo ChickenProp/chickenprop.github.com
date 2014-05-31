@@ -15,6 +15,9 @@ $(function () {
 		$(this).parent().parent().removeClass('highlight');
 	    }
         }
+        else {
+            $(this).addClass('no-math');
+        }
     });
 
     MathJax.Hub.Queue(['Process', MathJax.Hub]);
