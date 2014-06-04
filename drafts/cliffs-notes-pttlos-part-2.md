@@ -142,7 +142,7 @@ Still: suppose that despite our intuition, we could find a general formula. This
 
 ---
 
-**Exercise 2.2.** Now suppose we have a set of propositions `$\{A_1, \ldots, A_n\}$` which on information $X$ are mutually exclusive: `$p(A_iA_j|X) = p(a_i|X)\delta_{ij}$`. Show that `$p(C|(A_1 + A_2 + \ldots + A_N)X$` is a weighted average of the separate plausibilities `$p(C|A_iX)$`:
+**Exercise 2.2.** Now suppose we have a set of propositions `$\{A_1, \ldots, A_n\}$` which on information $X$ are mutually exclusive: `$p(A_iA_j|X) = p(a_i|X)\delta_{ij}$`. Show that `$p(C|(A_1 + A_2 + \ldots + A_N)X)$` is a weighted average of the separate plausibilities `$p(C|A_iX)$`:
 
     $$ p(C|(A_1 + \ldots + A_n)X) = p(C|A_1X + \ldots + A_nX)
         = { \sum_i p(A_i|X)p(C|A_iX) \over \sum_i p(A_i|X) } $$
