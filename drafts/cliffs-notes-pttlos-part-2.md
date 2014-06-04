@@ -136,4 +136,15 @@ In part 1, we noted that conjunction and negation were sufficient to construct a
 
 **Answer.**
 
-No, it isn't. [Insert intuitive explanation here.] Any such formula would have to work in the degenerate case $B=\bar A$; but then $A+B$ is necessarily true, and we are simply asking for the plausibility of $C$ given no background knowledge.
+There's no particular reason we would expect one, since the $|$ notation isn't symmetrical. And it intuitively feels unfair to ask someone, "either it is raining or my sprinkler is on. How plausible is it that the sun is shining?" In one case, it is implausible; in another case, it is quite plausible; but without knowing which case we are in, how can we answer?
+
+Still: suppose that despite our intuition, we could find a general formula. This formula would have to work for any values of $A$, $B$ and $C$. In particular, it would have to work in the case $B = \bar A$. But then $A+B$ gives us no information at all, and $P(C|A+B)$ is simply asking "how plausible is C, given no knowledge at all?" We have no way to answer this question, so the general formula cannot exist.
+
+---
+
+**Exercise 2.2.** Now suppose we have a set of propositions $\{A_1, \ldots, A_n\}$ which on information $X$ are mutually exclusive: $p(A_iA_j|X) = p(a_i|X)\delta_{ij}$. Show that $p(C|(A_1 + A_2 + \ldots + A_N)X is a weighted average of the separate plausibilities $p(C|A_iX)$:
+
+    $$ p(C|(A_1 + \ldots + A_n)X) = p(C|A_1X + \ldots + A_nX)
+        = { \sum_i p(A_i|X)p(C|A_iX) \over \sum_i p(A_i|X) }
+
+**Answer.**
