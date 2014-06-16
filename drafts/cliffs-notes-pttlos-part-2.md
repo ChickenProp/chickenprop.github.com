@@ -157,4 +157,8 @@ Still: suppose that despite our intuition, we could find a general formula. This
 
 ### Qualitative properties
 
+We started with two syllogisms of deductive logic. These can be written in our new notation. For example, consider the syllogism: "$A$ implies $B$; $A$; therefore $B$". Let $C$ stand for the background knowledge $A \implies B$. Then we have the premise $AC$, and by the product rule,
 
+    $$ p(B|AC) = { p(AB|C) \over p(A|C) } $$
+
+But $C$ says that $p(AB|C) = p(A|C)$, and so we have $p(B|AC) = 1$.
