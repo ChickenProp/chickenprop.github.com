@@ -157,8 +157,18 @@ Still: suppose that despite our intuition, we could find a general formula. This
 
 ### Qualitative properties
 
-We started with two syllogisms of deductive logic. These can be written in our new notation. For example, consider the syllogism: "$A$ implies $B$; $A$; therefore $B$". Let $C$ stand for the background knowledge $A \implies B$. Then we have the premise $AC$, and by the product rule,
+We started with two syllogisms of deductive logic. These can be written in our new notation. For example, consider the syllogism: "$A$ implies $B$; $A$; therefore $B$". Let $C$ stand for the background knowledge $A \Rightarrow B$. Then we have the premise $AC$, and by the product rule,
 
     $$ p(B|AC) = { p(AB|C) \over p(A|C) } $$
 
-But $C$ says that $p(AB|C) = p(A|C)$, and so we have $p(B|AC) = 1$.
+But $C$ says that $p(AB|C) = p(A|C)$, and so we have $p(B|AC) = 1$. That is, the deductive syllogism follows as a specific case of our rules for plausible reasoning. Similarly, $p(A|\bar{B}C)$ corresponds to the other deductive syllogism.
+
+We can also express the weak syllogisms, but now we have quantitative forms of them. For example, we have
+
+    $$ p(A|BC) = p(A|C) { p(B|AC) \over p(B|C) } $$
+
+where $p(B|AC) = 1$ and $p(B|C) \le 1$, so that
+
+    $$ p(A|BC) \ge p(A|C) $$
+
+corresponding to the syllogism "$A$ implies $B$; $B$; therefore $A$ becomes more plausible".
