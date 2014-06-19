@@ -161,7 +161,7 @@ We started with two syllogisms of deductive logic. These can be written in our n
 
     $$ p(B|AC) = { p(AB|C) \over p(A|C) } $$
 
-But $C$ says that $p(AB|C) = p(A|C)$, and so we have $p(B|AC) = 1$. That is, the deductive syllogism follows as a specific case of our rules for plausible reasoning. Similarly, $p(A|\bar{B}C)$ corresponds to the other deductive syllogism.
+But $C$ says that $p(AB|C) = p(A|C)$, and so we have $p(B|AC) = 1$. That is, the deductive syllogism follows as a specific case of our rules for plausible reasoning. Similarly, $p(A|\bar{B}C) = 0$, corresponding to the other deductive syllogism.
 
 We can also express the weak syllogisms, but now we have quantitative forms of them. For example, we have
 
@@ -171,4 +171,10 @@ where $p(B|AC) = 1$ and $p(B|C) \le 1$, so that
 
     $$ p(A|BC) \ge p(A|C) $$
 
-corresponding to the syllogism "$A$ implies $B$; $B$; therefore $A$ becomes more plausible".
+corresponding to the weak syllogism "$A$ implies $B$; $B$; therefore $A$ becomes more plausible".
+
+The policeman's still-weaker syllogism was: "if $A$ is true, $B$ becomes more plausible; $B$; therefore $A$ becomes more plausible". $C$ now becomes background information, and we have the premise $p(B|AC) > p(B|C)$. This once again gives us $p(A|BC) > p(A|C)$.
+
+But now we can quantify how much effect $B$ has on $A$. Our policeman made a large update, from $A|C$ being very implausible to $A|BC$ being very implausible. This can only happen when $p(B|AC) / p(B|C)$ is large, which in turn requires $p(B|C)$ to be small.
+
+### Numerical values
