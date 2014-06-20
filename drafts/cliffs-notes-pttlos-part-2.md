@@ -181,7 +181,7 @@ But now we can quantify how much effect $B$ has on $A$. Our policeman made a lar
 
 We've found the most general consistent rules for manipulating plausibilities that our robot might use. But our job is not yet finished.
 
-For starters, the product and sum rules limit how plausibilities must be related to each other. But it seems that we haven't found any unique rules. We have found that a function $p$ exists relating the plausibilities $A|C$, $B|C$, $A+B|C$, $AB|C$, etc. in a certain way. But we could choose another monotonic function, and come up with a different set of rules.
+For starters, the product and sum rules limit how plausibilities must be related to each other. But it seems that we haven't found any unique rules. We have found that a function $p$ exists relating the plausibilities $A|C, B|C, A+B|C, AB|C$, etc. in a certain way. But we could choose another monotonic function, and come up with a different set of rules.
 
 Secondly, we can find plausibilities *in terms of others*, but we have no way to get started with a problem by assigning plausibilities based on the background knowledge.
 
