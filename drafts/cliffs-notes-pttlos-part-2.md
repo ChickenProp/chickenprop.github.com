@@ -178,3 +178,13 @@ The policeman's still-weaker syllogism was: "if $A$ is true, $B$ becomes more pl
 But now we can quantify how much effect $B$ has on $A$. Our policeman made a large update, from $A|C$ being very implausible to $A|BC$ being very implausible. This can only happen when $p(B|AC) / p(B|C)$ is large, which in turn requires $p(B|C)$ to be small.
 
 ### Numerical values
+
+We've found the most general consistent rules for manipulating plausibilities that our robot might use. But our job is not yet finished.
+
+For starters, the product and sum rules limit how plausibilities must be related to each other. But it seems that we haven't found any unique rules. We have found that a function $p$ exists relating the plausibilities $A|C$, $B|C$, $A+B|C$, $AB|C$, etc. in a certain way. But we could choose another monotonic function, and come up with a different set of rules.
+
+Secondly, we can find plausibilities *in terms of others*, but we have no way to get started with a problem by assigning plausibilities based on the background knowledge.
+
+We begin to solve the second problem as follows: suppose we have propositions $A_1 \ldots A_n$ which are mutually exclusive and exhaustive given background knowledge $B$. That is, precisely one of the $A_i$ must be true. It follows easily that
+
+    $$ p(A_1 + \ldots + A_n|B) = \sum_{i=1}^n p(A_i|B) = 1. $$
