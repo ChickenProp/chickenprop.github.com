@@ -185,6 +185,6 @@ For starters, the product and sum rules limit how plausibilities must be related
 
 Secondly, we can find plausibilities *in terms of others*, but we have no way to get started with a problem by assigning plausibilities based on the background knowledge.
 
-We begin to solve the second problem as follows: suppose we have propositions `$A_1 \ldots A_n$` which are mutually exclusive and exhaustive given background knowledge $B$. That is, precisely one of the `$A_i$` must be true. It follows easily that
+We begin to solve the second problem as follows: suppose we have propositions `$A_1, \ldots, A_n$` which are mutually exclusive and exhaustive given background knowledge $B$. That is, precisely one of the `$A_i$` must be true. It follows easily that
 
     $$ p(A_1 + \ldots + A_n|B) = \sum_{i=1}^n p(A_i|B) = 1. $$
