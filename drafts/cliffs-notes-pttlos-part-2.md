@@ -181,10 +181,20 @@ But now we can quantify how much effect $B$ has on $A$. Our policeman made a lar
 
 We've found the most general consistent rules for manipulating plausibilities that our robot might use. But our job is not yet finished.
 
-For starters, the product and sum rules limit how plausibilities must be related to each other. But it seems that we haven't found any unique rules. We have found that a function $p$ exists relating the plausibilities $A|C, B|C, A+B|C, AB|C$, etc. in a certain way. But we could choose another monotonic function, and come up with a different set of rules.
+For starters, the product and sum rules limit how plausibilities must be related to each other. But it seems that we haven't found any unique rules. We have found that a function $p$ exists relating the plausibilities $A|C, B|C, A+B|C, AB|C$, etc. in a certain way. But we have not shown that $p$ is unique. Perhaps we could choose another monotonic function `$p_2$` and come up with a different set of rules.
 
 Secondly, we can find plausibilities *in terms of others*, but we have no way to get started with a problem by assigning plausibilities based on the background knowledge.
 
 We begin to solve the second problem as follows: suppose we have propositions `$A_1, \ldots, A_n$` which are mutually exclusive and exhaustive given background knowledge $B$. That is, precisely one of the `$A_i$` must be true. It follows easily that
 
     $$ p(A_1 + \ldots + A_n|B) = \sum_{i=1}^n p(A_i|B) = 1. $$
+
+We now see that if $B$ is indifferent between the `$A_i$` - that is, if anything $B$ says about one, it says about the others, so that the robot has no reason to prefer one over the other - then all the `$A_i$` must be equal. (This seems intuitively obvious, but Jaynes warns us to avoid intuition, and constructs an actual argument.) Thus,
+
+    $$ p(A_i | B) = { 1 \over n } $$
+
+giving us our first set of definite numerical values. This is called the *principle of indifference*.
+
+This also solves our first problem. The principle of indifference cannot be violated, any more than the product or sum rules. If functions $p$ and $p_2$ both satisfy our desiderata, they must agree at $A_i|B$.
+
+[[This is weak.]]
