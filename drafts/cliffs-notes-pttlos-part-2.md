@@ -195,6 +195,6 @@ We now see that if $B$ is indifferent between the `$A_i$` - that is, if anything
 
 giving us our first set of definite numerical values. This is called the *principle of indifference*.
 
-This also solves our first problem. The principle of indifference cannot be violated, any more than the product or sum rules. If functions $p$ and $p_2$ both satisfy our desiderata, they must agree at $A_i|B$.
+This also solves our first problem. The principle of indifference cannot be violated, any more than the product or sum rules. If functions $p$ and `$p_2$` both satisfy our desiderata, they must agree at `$A_i|B$`.
 
 [[This is weak.]]
