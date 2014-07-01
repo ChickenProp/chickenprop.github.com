@@ -189,7 +189,7 @@ We begin to solve the second problem as follows: suppose we have propositions `$
 
     $$ p(A_1 + \ldots + A_n|B) = \sum_{i=1}^n p(A_i|B) = 1. $$
 
-We now see that if $B$ is indifferent between the `$A_i$` - that is, if anything $B$ says about one, it says about the others, so that the robot has no reason to prefer one over the other - then all the `$A_i$` must be equal. (This seems intuitively obvious, but Jaynes warns us to avoid intuition, and constructs an actual argument.) Thus,
+We now see that if $B$ is indifferent between the `$A_i$` - that is, if anything $B$ says about one, it says about the others, so that the robot has no reason to prefer one over the others - then all the `$A_i$` must be equal. (This seems intuitively obvious, but Jaynes warns us to avoid intuition, and constructs an actual argument.) Thus,
 
     $$ p(A_i | B) = { 1 \over n } $$
 
