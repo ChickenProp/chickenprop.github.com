@@ -199,3 +199,6 @@ This also solves our first problem. The information given to the robot determine
 
 Having discovered this, we finally apply the name *probability* to the quantities $p(x)$. The word has an imprecise colloquial meaning, but we use it in a technical sense; and we can only justify that now, having determined that the $p(x)$ have a precise meaning.
 
+$p$ is not the only function that could serve this purpose. Many others work equally well. We choose $p$ not because it is the most correct, but because it gives particularly simple forms for the product and sum rules.
+
+The principle of indifference gives us a new rule. Suppose we have ten numbered balls in an urn, of which three are black and seven white, and we shake the urn and draw a ball while blindfold. Then the probability of drawing a black ball is $3/10$. More generally, if there are $N$ balls, and some proposition $A$ is true for $M$ of them, then the probability of drawing an $A$-ball is $M/N$. This was taken as the original *definition* of probability.
