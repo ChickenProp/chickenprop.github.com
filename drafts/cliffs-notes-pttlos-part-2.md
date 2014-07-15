@@ -181,7 +181,7 @@ But now we can quantify how much effect $B$ has on $A$. Our policeman made a lar
 
 We've found the most general consistent rules for manipulating plausibilities that our robot might use. But our job is not yet finished.
 
-For starters, the product and sum rules limit how plausibilities must be related to each other. We have found that a function $p$ exists relating the plausibilities $A|C, B|C, A+B|C, AB|C$, etc. in a certain way. But it seems that we haven't found any unique rules. The values of $A|C$ etc. are still undetermined; whatever they happen to be (subject to desideratum (II)), we can find a continuous monotonic $p$ to relate them. So for every possible such $p$, it seems that there is a different set of rules for plausible reasoning.
+For starters, the product and sum rules limit how plausibilities must be related to each other. We have found that a function $p$ exists relating the plausibilities $A|C, B|C, A+B|C, AB|C$, etc. in a certain way. But it seems that we haven't found any unique rules. The values of $A|C$ etc. are still undetermined; whatever they happen to be (subject to desideratum (II)), we can find a continuous monotonic $p$ to relate them, and vice versa. So for every possible such $p$, it seems that there is a different set of rules for plausible reasoning.
 
 Secondly, we can find plausibilities *in terms of others*, but we have no way to get started with a problem by assigning plausibilities based on the background knowledge.
 
@@ -195,6 +195,7 @@ We now see that if $B$ is indifferent between the `$A_i$` - that is, if anything
 
 giving us our first set of definite numerical values. This is called the *principle of indifference*.
 
-This also solves our first problem. The principle of indifference cannot be violated, any more than the product or sum rules. If functions $p$ and `$p_2$` both satisfy our desiderata, they must agree at `$A_i|B$`.
+This also solves our first problem. The information given to the robot determines the value `$p(x) = p(A_i|B)$`, not the value `$x = A_i|B$`. Whatever the value of $x$, we shall find $p(x)$ to be the same. Until now, we have considered $p$ to be an arbitrary monotonic function of $x$; but instead, we can say that $x$ is an arbitrary monotonic function of $p$, where $0 \le p \le 1$. Since the values of $p(x)$ are fixed by the data, there is only one set of consistent rules to reason by.
 
-[[This is weak.]]
+Having discovered this, we finally apply the name *probability* to the quantities $p(x)$. The word has an imprecise colloquial meaning, but we use it in a technical sense; and we can only justify that now, having determined that the $p(x)$ have a precise meaning.
+
