@@ -10,7 +10,7 @@ If you were to mix the blood of the human race into the oceans, how red would th
 
 A quick fermi estimate: there are seven billion humans, with about eight pints of blood each, which is about five litres. So we have about 35 billion litres of blood to work with.
 
-How about the oceans? They cover two thirds of the earth's surface. I know that the surface of the earth is $4πr^2$ where $r$ is 6,400 km. $(64 × 10^5)^2 = 2^{12} × 10^{10} = 4,096 × 10^{10}$. $4π$ is approximately ten, so the surface area of the earth is about $4×10^{14}$ m². Two thirds of that is $2.5 × 10^{14}$. I don't know how deep they are, but 100m seems like a reasonable guess at an average. That gives us about $2.5 × 10^{16}$ m³ of ocean.
+How about the oceans? They cover two thirds of the earth's surface. I know that the surface of the earth is $4πr^2$ where $r$ is 6,400 km. $(64 × 10^5)^2 = 2^{12} × 10^{10} = 4096 × 10^{10}$. $4π$ is approximately ten, so the surface area of the earth is about $4×10^{14}$ m². Two thirds of that is $2.5 × 10^{14}$. I don't know how deep they are, but 100m seems like a reasonable guess at an average. That gives us about $2.5 × 10^{16}$ m³ of ocean.
 
 A cubic metre is a thousand litres, so we have about 25 billion billion litres of ocean. For every drop of blood, we have almost ten billion drops of ocean.
 
