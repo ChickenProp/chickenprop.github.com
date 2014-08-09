@@ -1,5 +1,5 @@
 ---
-title: The Oceans Will Run How Red With Blood?
+title: How Red Will the Oceans Run?
 layout: draft
 ---
 *In which I inexpertly channel [Randall Munroe](http://what-if.xkcd.com/)*
