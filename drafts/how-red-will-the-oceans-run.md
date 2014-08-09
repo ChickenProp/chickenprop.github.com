@@ -2,9 +2,11 @@
 title: The Oceans Will Run How Red With Blood?
 layout: draft
 ---
-> Soon the seas will turn red with the blood of the human race, as the unspeakable terrors come from beyond the gate, which is Yog Sothoth, to devour all in their path! Ia! Shub Niggurath! Ia! Ia!
+*In which I inexpertly channel [Randall Munroe](http://what-if.xkcd.com/)*
 
--- [Who will be eaten first?](http://foo.ca/wp/chick-tract-satire/who-will-be-eaten-first/)
+> *Soon the seas will turn red with the blood of the human race, as the unspeakable terrors come from beyond the gate, which is Yog Sothoth, to devour all in their path! Ia! Shub Niggurath! Ia! Ia!*
+
+— [Who will be eaten first?](http://foo.ca/wp/chick-tract-satire/who-will-be-eaten-first/)
 
 If you were to mix the blood of the human race into the oceans, how red would they turn?
 
