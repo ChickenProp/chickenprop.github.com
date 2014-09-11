@@ -32,7 +32,11 @@ The latter quote can fairly be read as, "it is extremely likely that humans are 
 
 > global average temperature over the past 60 years would [not] have been as high without human-caused greenhouse gas emissions
 
+and
+
 > objective assessment linking global temperature increases to human activity
+
+and
 
 > humans are contributing to significant changes in our climate
 
@@ -51,17 +55,10 @@ The authors describe their method thus:
 More precisely, their model is the sum of a linear regression and an [autoregressive moving-average model](http://en.wikipedia.org/wiki/Autoregressive%E2%80%93moving-average_model). I haven't encountered ARMA models before, but it looks like the factors taken into account are:
 
 1. The factors listed above:
-
-  - **f(eCO<sub>2</sub>)** (equivalent carbon dioxide) combines greenhouse gasses, aerosols and particulates into a single number. I guess this number is meant to be something like, "if we removed all the greenhouse gases and stuff and replaced them with this amount of CO<sub>2</sub>, then <some relevant factor like the amount of heat sent back to Earth by the atmosphere> would be conserved". *f* is a logarithmic function, because apparently that's what the relationship in question looks like.
-
-  - **SOI** (southern oscillation index) is [this thing](http://en.wikipedia.org/wiki/El_Ni%C3%B1o_Southern_Oscillation).
-
-  - **TSI** (total solar irradiance) measures how much sunlight the Earth's atmosphere receives.
-
-  - **VOLRF** (volcanic stratospheric aerosol radiative forcing) 
-
+    - **f(eCO<sub>2</sub>)** (equivalent carbon dioxide) combines greenhouse gasses, aerosols and particulates into a single number. I guess this number is meant to be something like, "if we removed all the greenhouse gases and stuff and replaced them with this amount of CO<sub>2</sub>, then [[some relevant factor like the amount of heat sent back to Earth by the atmosphere]] would be conserved". *f* is a logarithmic function, because apparently that's what the relationship in question looks like.
+    - **SOI** (southern oscillation index) is [this thing](http://en.wikipedia.org/wiki/El_Ni%C3%B1o_Southern_Oscillation).
+    - **TSI** (total solar irradiance) measures how much sunlight the Earth's atmosphere receives.
+    - **VOLRF** (volcanic stratospheric aerosol radiative forcing) is [[apparently I didn't write this yet]]
 2. The difference between "the previous month's temperature", and "the temperature that would have been predicted if we modelled it with only (1)". (This is the autoregressive part of the ARMA model.)
-
 3. White noise, uncorrelated month-on-month.
-
 4. The white noise from (3) that went into the calculations 1, 2, 12 and 24 months ago. (But not the additional white noise from (4) that went into those calculations.) (This is the moving-average part of the ARMA model.)
