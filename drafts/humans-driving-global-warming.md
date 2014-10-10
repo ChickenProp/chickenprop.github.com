@@ -12,7 +12,7 @@ PING! My impression of the general quality of science reporting is somewhere bet
 
 PING! And I remember that a lot of scientists are not statisticians, and that there's a good chance they made a mistake in the paper.
 
-PING! Something else I think of is the notion of [confidence levels inside and outside an argument](http://lesswrong.com/lw/3be/confidence_levels_inside_and_outside_an_argument/). Even if the study does make the 99.999% claim, and it contains no internal mathematical or statistical errors, it might not be using a model that corresponds to reality. (The difference between this PING and the previous PING is that here, the scientists may be doing correct science, but they're doing it on flawed premises. In the other PING, the premises might be correct, but the science is bad.)
+PING! Something else I think of is the notion of [confidence levels inside and outside an argument](http://lesswrong.com/lw/3be/confidence_levels_inside_and_outside_an_argument/). Even if the study does make the 99.999% claim, and it contains no internal mathematical or statistical errors, it might not be using a model that corresponds to reality. And even if it's not obvious how the model might differ from reality, we need to consider the possibility that there is a problem we don't see, and adjust our probability estimates accordingly. (The boundary between this PING and the previous PING is not necessarily well-defined.)
 
 So here are three potential ways in which the claim might be bullshit. They seem pretty exhaustive. Either the premises are wrong - or the inferences are wrong - or the reporting misrepresents the conclusion - or the reporting is correct.
 
@@ -58,7 +58,69 @@ More precisely, their model is the sum of a linear regression and an [autoregres
     - **f(eCO<sub>2</sub>)** (equivalent carbon dioxide) combines greenhouse gasses, aerosols and particulates into a single number. I guess this number is meant to be something like, "if we removed all the greenhouse gases and stuff and replaced them with this amount of CO<sub>2</sub>, then [[some relevant factor like the amount of heat sent back to Earth by the atmosphere]] would be conserved". *f* is a logarithmic function, because apparently that's what the relationship in question looks like.
     - **SOI** (southern oscillation index) is [this thing](http://en.wikipedia.org/wiki/El_Ni%C3%B1o_Southern_Oscillation).
     - **TSI** (total solar irradiance) measures how much sunlight the Earth's atmosphere receives.
-    - **VOLRF** (volcanic stratospheric aerosol radiative forcing) is [[apparently I didn't write this yet]]
-2. The difference between "the previous month's temperature", and "the temperature that would have been predicted if we modelled it with only (1)". (This is the autoregressive part of the ARMA model.)
-3. White noise, uncorrelated month-on-month.
-4. The white noise from (3) that went into the calculations 1, 2, 12 and 24 months ago. (But not the additional white noise from (4) that went into those calculations.) (This is the moving-average part of the ARMA model.)
+    - **VOLRF** (volcanic stratospheric aerosol radiative forcing) measures the effect on global temperature from the stuff released by volcanic activity.
+2. White noise, uncorrelated month-on-month.
+3. The white noise from (2) that went into the calculations 1, 2, 12 and 24 months ago. (But not the additional white noise from (3) that went into those calculations.) (This is the moving-average part of the ARMA model.)
+4. The factors (2), (3) and (4) that went into the previous month. (This is the autoregressive part of the ARMA model.)
+
+I have no reason to think this is a bad model, and the authors spend some time justifying it. I don't feel particularly capable of evaluating their arguments.
+
+Having developed the model, their approach is as follows: they run a simulation of the model over the time period (1882-2010), and count the largest number of consecutive months where temperature exceeds the mean 20th century average for that month. (I'm not sure whether they're comparing to actual 20th century averages, or simulated ones.) They also count the number of ten-year windows during which temperatures fell.
+
+Then they do the same thing again, but removing the effects of eCO<sub>2</sub>. They do that by simply setting the regression parameter to zero.
+
+They do both of these things lots of times, and compare the results. They find that with eCO<sub>2</sub> removed, there are far fewer consecutive hot months, and far more ten-year cooling periods.
+
+Before I go into any depth on the results, some extra details that probably don't matter too much. Firstly, when they run a simulation of the model, they actually run two simulations. The first simulation is used to generate new parameter estimates, and those estimates are used to run the second simulation, which temperatures are taken from. I assume, but I'm not actually sure, that the new estimates are generated in the same way as the original ones, just using different data.
+
+Secondly, they actually use two different sets of paramater estimates. One ("model B") was generated from the whole time series, the other ("model E") was generated from just the data from 1950 onwards. The parameters used in the models are identical, and the *values* of the parameters are very similar.
+
+Thirdly, they actually use *three* different sets of parameter estimates. "Model F" uses almost the same parameters as models B and E, but it doesn't include a term for f(eCO<sub>2</sub>) and it was only trained on the data for 1882-1949. This gets very similar results as when you set that term to zero in models B and E, which is used to justify doing that.
+
+So, the results:
+
+> The chance of observing 304 consecutive months or more with temperature exceeding the 20th century average for the corresponding month is approximately 24.9 percent when eCO<sub>2</sub> forcing is included in Model B and 52.9 percent in Model E (Fig. 7a). When eCO<sub>2</sub> forcing is excluded from the simulations the probability of this occurring is less than 0.001 percent for both Models B and E. Under the scenario that climate like that observed from 1882 to 1949 had continued to 2010 (Model F, Table 3), the chance of observing the anomalous temperature event is also very small; only about 0.04 percent.
+
+from which they conclude
+
+> The results of our statistical analysis would suggest that it is highly likely (99.999 percent) that the 304 consecutive months of anomalously warm global temperatures to June 2010 is directly attributable to the accumulation of global greenhouse gases in the atmosphere.
+
+*pingpingpingpingpingpingping*
+
+You can't do this!
+
+Okay, numerically it isn't totally awful, but this is an example of "getting a not-totally-wrong answer by a totally-wrong method".
+
+Bayes 101:
+
+    $$ { P(H_0|O) \over P(H_1|O) }
+           = { P(H_0) \over P(H_1) } \cdot { P(O|H_0) \over P(O|H_1) } $$
+
+One way that we might instantiate this formula is: `$H_0$` represents model B, and `$H_1$` represents model $B$ with the f(eCO<sub>2</sub>) parameter set to 0. (`$P(H_0)$` and `$P(H_1)$` represent how likely we think it is that these models accurately represent the real world.) $O$ is the observation of 304 or more consecutive warm months.
+
+The conclusion appears to read: "`$P(O|H_1) < 10^{-5}$`, therefore `$P(H_0|O) > 1 - 10^{-5}$`". (At least, I assume this is the reasoning for the 99.999 percent figure, since they don't actually explain it.) This is not a valid inference.
+
+What we actually get from the data is the Bayes factor,
+
+    $$ { P(O|H_0) \over P(O|H_1) }, $$
+
+where `$P(O|H_1)$` is "less than 0.001 percent" - I'm going to be unfair and round it to *exactly* 0.001 percent, or $0.00001$. (Hey, if it was much less than that, they would have picked a lower number to say it was less than.) And `$P(O|H_0)$` is "approximately 24.9 percent", or $0.249$. Then the Bayes factor comes out at $24900$.
+
+If we assume that `$H_0$` and `$H_1$` are exhaustive and mutually exclusive (i.e. precisely one of them is true), then after a small amount of arithmetic we finish with
+
+    $$ P(H_0|O) = { 24900 \over 24901 } \approx 0.99996 $$
+
+in other words, using the numbers from the article, and doing slightly better math, **there is only 99.996 percent certainty that humans are driving global warming**. In your *face*, scientists!
+
+Okay, yeah. Like I said, the actual conclusion wasn't totally wrong, but the method was.
+
+(If instead of model B, we choose model E, then we get 99.998% certainty.)
+
+
+---
+
+(Notes that might enter the finished version in some form.)
+
+What problems might there be?
+
+One thing that seems a little sketchy is that data for f(eCO<sub>2</sub>) is only available yearly, but the simulation is run monthly. Monthly values were obatined by linear interpolation - which I interpret to mean something like, if f(eCO<sub>2</sub>) was 0 in 1910 and 12 in 1911, then they model it as being 0 in July 1910, 1 in August 1910, ..., 11 in June 1911, and 12 in July 1911. Given that f(eCO<sub>2</sub>) is basically
