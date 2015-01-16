@@ -24,12 +24,12 @@ Okay, some details are important. Here are some things to think about:
 
   It might actually be better (certainly simpler) to have some way of marking this in-file. For example, in python:
 
-```python
-def foo(bar):
-   """Do a thing
-   """ # 2014-01-07 11:25 (edit this comment to mark the docs up to date)
-   pass
-```
+  ```python
+  def foo(bar):
+     """Do a thing
+     """ # 2014-01-07 11:25 (edit this comment to mark the docs up to date)
+     pass
+  ```
 
 * Tracking a function across revision changes is probably really hard, in general. In the specific case of "the sort of revision changes that actually occur in real codebases", it might be possible most of the time.
 
