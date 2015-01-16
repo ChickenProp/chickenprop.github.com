@@ -1,6 +1,6 @@
 ---
-title: Keeping Code and Docs in Sync
-layout: draft
+title: A Half-Baked Idea for Keeping Code and Docs in Sync
+layout: post
 ---
 It's widely regarded that documentation is an important task that doesn't get as much attention as it deserves.
 
