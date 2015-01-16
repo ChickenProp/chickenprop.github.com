@@ -22,20 +22,20 @@ Okay, some details are important. Here are some things to think about:
 
 * Not every code edit needs you to touch the docstring, so you want a database of some sort, which can be used to mark "the docstring is up to date as of commit A, even though it hasn't been touched since commit B". Keep this database inside your repository. This is probably quite a large detail, with many details of its own.
 
-  It might actually be better (certainly simpler) to have some way of marking this in-file. For example, in python:
+    It might actually be better (certainly simpler) to have some way of marking this in-file. For example, in python:
 
-  ```python
-  def foo(bar):
-     """Do a thing
-     """ # 2014-01-07 11:25 (edit this comment to mark the docs up to date)
-     pass
-  ```
+    ```python
+    def foo(bar):
+       """Do a thing
+       """ # 2014-01-07 11:25 (edit this comment to mark the docs up to date)
+       pass
+    ```
 
 * Tracking a function across revision changes is probably really hard, in general. In the specific case of "the sort of revision changes that actually occur in real codebases", it might be possible most of the time.
 
-  ((I would start by working out which lines constitute a function's code and docstring, and running `git blame` to see which was updated most recently. This might be good enough, but for example it breaks if you swap the order of two functions in the source file. One of them is going to be blamed entirely on that commit. It also breaks if you delete lines from the function body.
+    ((I would start by working out which lines constitute a function's code and docstring, and running `git blame` to see which was updated most recently. This might be good enough, but for example it breaks if you swap the order of two functions in the source file. One of them is going to be blamed entirely on that commit. It also breaks if you delete lines from the function body.
 
-  A more complicated solution would be to track the function by its identifier. Look at past revisions of the file in its entirety, search for the function, and see whether it's changed. This could go wrong in *so many* ways, and even if it doesn't, it still won't catch you if you move a function from one file to another.))
+    A more complicated solution would be to track the function by its identifier. Look at past revisions of the file in its entirety, search for the function, and see whether it's changed. This could go wrong in *so many* ways, and even if it doesn't, it still won't catch you if you move a function from one file to another.))
 
 * This probably works best if you run it frequently. You could have it in a hook: if there are unsynced changes, you aren't allowed to push unless you sync them (either by editing the docs, or marking them clean).
 
