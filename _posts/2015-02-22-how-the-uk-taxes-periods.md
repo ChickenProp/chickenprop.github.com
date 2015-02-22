@@ -1,5 +1,5 @@
 ---
-layout: draft
+layout: post
 title: How the UK taxes periods
 ---
 *Content note: politics, gender politics.*
