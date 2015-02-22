@@ -62,7 +62,7 @@ Under EU law, the government [isn't allowed](http://en.wikipedia.org/wiki/Europe
 
 We might (or, quite likely, might not) be able to exempt sanitary products instead of zero-rating them. But there's an [important difference](http://en.wikipedia.org/wiki/European_Union_value_added_tax#Exemption_from_VAT). If you buy raw materials, produce a product, sell it, and have to pay VAT on the sale, then you can claim back the VAT that your supplier paid on the materials. If you *don't* pay VAT on the sale, you can't claim back that VAT. If sanitary products were exempt rather than not zero-rated, the selling price might (or might not) go up because of this, depending on the cost of raw materials. It's almost certainly more complicated than this, but:
 
-Suppose you buy £30 worth of cloth, of which £5 is VAT. You make a lot of tampons and sell them for £100. You have to pay £5 VAT on that sale, and can claim back the £6 VAT you paid on the cloth. Profit: £100 - £30 - £5 + £6 = £71. If tampons were VAT exempt, you'd need to sell them for £101 to make the same profit.
+Suppose you buy £30 worth of cloth, of which £6 is VAT. You make a lot of tampons and sell them for £100. You have to pay £5 VAT on that sale, and can claim back the £6 VAT you paid on the cloth. Profit: £100 - £30 - £5 + £6 = £71. If tampons were VAT exempt, you'd need to sell them for £101 to make the same profit.
 
 (The past two paragraphs were written from the perspective that the seller pays VAT. Mostly we seem to talk about the buyer paying VAT. It's all equivalent, but I hope I wasn't too confusing.)
 
