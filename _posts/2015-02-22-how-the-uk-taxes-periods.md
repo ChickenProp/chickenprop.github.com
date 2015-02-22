@@ -80,7 +80,9 @@ It seems like most of the conversation is fueled by outrage. I don't think there
 
 Secondly, I don't really like the tactic of petitioning the UK government over this. The petition acknowledges that they can't do anything under current EU law. So the goal is to get the UK to get the EU to change its laws.
 
-That seems... really unfair. Like, suppose I notice that I've been overcharged on my phone bill. I call up the company, and the customer service rep is very polite and helpful and refunds me. I tell her, "that's not good enough, I also want to be refunded for the price of this phone call to you, that I shouldn't have had to make". She tells me that she simply doesn't have the power to do that. So I tell her that she needs to complain to her managers until they give her that power, and I'm going to keep calling her every day until she can refund me for the cost of this phone call.
+That seems... really unfair. I don't think I can argue clearly and succinctly for that position, which usually means I should spend more time clarifying my thoughts to myself. Instead of doing that, I'm going to argue by analogy. I don't think these analogies are the same in every way, or even in every relevant way; they just seem to me to have some structural similarities to the case at hand.
+
+So, suppose I notice that I've been overcharged on my phone bill. I call up the company, and the customer service rep is very polite and helpful and refunds me. I tell her, "that's not good enough, I also want to be refunded for the price of this phone call to you, that I shouldn't have had to make". She tells me that she simply doesn't have the power to do that. So I tell her that she needs to complain to her managers until they give her that power, and I'm going to keep calling her every day until she can refund me for the cost of this phone call.
 
 This isn't her battle. She's sympathetic to my plight, but she has other priorities. And I'm blackmailing her into fighting for me.
 
