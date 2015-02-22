@@ -23,9 +23,7 @@ I'm less sure about the second sentence, *HM Revenue and Customs justified this 
 I don't think this is true, but I think I can see how the story could have been chinese-whispered into existence:
 
 1. When the UK joined the Common Market in 1973, [we introduced VAT](http://en.wikipedia.org/wiki/Value_Added_Tax_\(United_Kingdom\)#History). The standard rate of VAT used to be 17.5%.
-
 2. My current belief is that until 2000 or 2001, sanitary products were standard-rated. It's not that there was a specific "sanitary tax", but VAT was a tax that applied to sanitary products.
-
 3. It seems to be widely assumed that VAT exemptions are given to essential items, and not to others. Since sanitary products were standard-rated, they must not have been considered essential, so they must have been considered luxury.
 
 But: In 1973, the standard rate of VAT was 10%. I'd be very surprised if sanitary products were taxed at 17.5% in 1973.
@@ -34,9 +32,9 @@ VAT actually replaced [purchase tax](http://en.wikipedia.org/wiki/Purchase_Tax),
 
 Putting "non-essential, luxury" in quotes would seem to imply that this is a direct quote from *something*, but the first page of google results for that page all seems to be inspired by the petition at hand. The second page has nothing helpful, the third is back to this petition. I haven't found a source for this phrase.
 
-I haven't found any official source that suggests that the government thinks sanitary products are non-essential. The evidence for this seems to be purely the fact that they have 5% VAT imposed on them.
+In fact, I haven't found any official source that suggests that the government thinks sanitary products are non-essential. The evidence for this seems to be purely the fact that they have 5% VAT imposed on them.
 
-But this assumes that VAT is not applied to essential products, which as far as I can tell just isn't true. Here is the evidence I've found which connects essential-ness to VAT status: [a page on gov.uk](https://www.gov.uk/tax-on-shopping/vat-duties) which says "You pay 20% VAT most of the time - but less on essential items."
+But this assumes that VAT is not applied to essential products, which as far as I can tell just isn't true. Here is the entirety of the official-seeming evidence I've found which connects essential-ness to VAT status: [a page on gov.uk](https://www.gov.uk/tax-on-shopping/vat-duties) which says "You pay 20% VAT most of the time - but less on essential items."
 
 One reading of this is that all essential items, and only essential items, are taxed at less than 20%. By this reading, sanitary products are essential, being taxed at 5%.
 
@@ -60,7 +58,7 @@ So. In 1973, the government probably did not consider sanitary products to be "n
 
 Since 2001, the government almost certainly doesn't consider sanitary products to be non-essential. It taxes them at a reduced rate compared to almost everything else, but at a higher rate than some other things.
 
-Under EU law, the government [isn't allowed](http://en.wikipedia.org/wiki/European_Union_value_added_tax#Zero_rate_derogation) to zero-rate them. We have other zero-rated things, but they were zero-rated before we joined the EU.
+Under EU law, the government [isn't allowed](http://en.wikipedia.org/wiki/European_Union_value_added_tax#Zero_rate_derogation) to zero-rate them. We have other zero-rated things, but they were zero-rated before we joined the EU. The VAT on sanitary products is as low as it is permitted to be.
 
 We might (or might not) be able to exempt sanitary products instead of zero-rating them. But there's an [important difference](http://en.wikipedia.org/wiki/European_Union_value_added_tax#Exemption_from_VAT). If you buy raw materials, produce a product, sell it, and have to pay VAT on the sale, then you can claim back the VAT that your supplier paid on the materials. If you *don't* pay VAT on the sale, you can't claim back that VAT. If sanitary products were exempt rather than not zero-rated, the selling price might (or might not) go up because of this, depending on the cost of raw materials. It's almost certainly more complicated than this, but:
 
@@ -78,9 +76,9 @@ Financially, we're talking about £150 a lifetime lost to taxation on sanitary p
 
 From a [gender-politics perspective](http://www.bad-housekeeping.com/2014/08/07/sanitary-tax-attacking-the-5/)... it also just doesn't seem like a big deal. If sanitary products were still standard-rated, I could maybe kind of get behind this, even though I don't actually think that standard-rated implies non-essential. But they're at the lowest VAT rate the UK government is allowed to put them at. I just don't see this as a sign that we value crocodile meat more than female participation; or of male-focused agenda setting; or any form of institutional misogyny.
 
-It seems like most of the conversation is fueled by outrage. I don't think there's much to be outraged about, and I would prefer that the energy being put into this outrage goes elsewhere.
+It seems like most of the conversation is fueled by outrage. I don't think there's much here to be outraged about, and I would prefer that the energy being put into this outrage goes elsewhere.
 
-Secondly, I don't much like the tactic of petitioning the UK government over this. The petition acknowledges that they can't do anything under current EU law. So the goal is to get the UK to get the EU to change its laws.
+Secondly, I don't really like the tactic of petitioning the UK government over this. The petition acknowledges that they can't do anything under current EU law. So the goal is to get the UK to get the EU to change its laws.
 
 That seems... really unfair. Like, suppose I notice that I've been overcharged on my phone bill. I call up the company, and the customer service rep is very polite and helpful and refunds me. I tell her, "that's not good enough, I also want to be refunded for the price of this phone call to you, that I shouldn't have had to make". She tells me that she simply doesn't have the power to do that. So I tell her that she needs to complain to her managers until they give her that power, and I'm going to keep calling her every day until she can refund me for the cost of this phone call.
 
