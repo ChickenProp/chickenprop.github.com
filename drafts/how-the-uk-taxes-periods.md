@@ -50,7 +50,7 @@ If we ignore that one linked page, it just doesn't seem like the government clas
 
 There is still that one linked page, but currently I'm dismissing it as an anomaly. Gov.uk is intended to be accessible and accurate, and in this case I suspect that accessibility triumphed over accuracy, and/or someone just made a mistake while writing it.
 
-I worry that I'm simply ignoring contarary evidence here, but consider: the government publishes a list of things. It doesn't put things on the list just for being essential, or deny them from the list for being nonessential. It doesn't correlate very well with what most people would consider essential. I can only find one place where the government comes close to describing it as a list of essential things, and that's in a descriptive context, not normative.
+I worry that I'm simply ignoring contarary evidence here, but consider: the government publishes a list of things. It doesn't put things on the list just for being essential, or deny them from the list for being nonessential. It doesn't correlate very well with what most people would consider essential. I can only find one place where the government comes close to describing it as a list of essential things, and that's in a descriptive context, not a binding one.
 
 If it doesn't look like a duck, quack like a duck, or fly like a duck...
 
@@ -60,7 +60,7 @@ Since 2001, the government almost certainly doesn't consider sanitary products t
 
 Under EU law, the government [isn't allowed](http://en.wikipedia.org/wiki/European_Union_value_added_tax#Zero_rate_derogation) to zero-rate them. We have other zero-rated things, but they were zero-rated before we joined the EU. The VAT on sanitary products is as low as it is permitted to be.
 
-We might (or might not) be able to exempt sanitary products instead of zero-rating them. But there's an [important difference](http://en.wikipedia.org/wiki/European_Union_value_added_tax#Exemption_from_VAT). If you buy raw materials, produce a product, sell it, and have to pay VAT on the sale, then you can claim back the VAT that your supplier paid on the materials. If you *don't* pay VAT on the sale, you can't claim back that VAT. If sanitary products were exempt rather than not zero-rated, the selling price might (or might not) go up because of this, depending on the cost of raw materials. It's almost certainly more complicated than this, but:
+We might (or, quite likely, might not) be able to exempt sanitary products instead of zero-rating them. But there's an [important difference](http://en.wikipedia.org/wiki/European_Union_value_added_tax#Exemption_from_VAT). If you buy raw materials, produce a product, sell it, and have to pay VAT on the sale, then you can claim back the VAT that your supplier paid on the materials. If you *don't* pay VAT on the sale, you can't claim back that VAT. If sanitary products were exempt rather than not zero-rated, the selling price might (or might not) go up because of this, depending on the cost of raw materials. It's almost certainly more complicated than this, but:
 
 Suppose you buy £30 worth of cloth, of which £5 is VAT. You make a lot of tampons and sell them for £100. You have to pay £5 VAT on that sale, and can claim back the £6 VAT you paid on the cloth. Profit: £100 - £30 - £5 + £6 = £71. If tampons were VAT exempt, you'd need to sell them for £101 to make the same profit.
 
@@ -72,7 +72,7 @@ Having established (what I believe to be) the facts, here are my thoughts on the
 
 Firstly, it doesn't strike me as a particularly big deal.
 
-Financially, we're talking about £150 a lifetime lost to taxation on sanitary products, assuming £5/month for 50 years. I don't think anyone is claiming it's a particularly heavy burden.
+Financially, we're talking about £150 a lifetime lost to taxation on sanitary products, assuming £5/month for 50 years. I don't think anyone is claiming it's a particularly heavy burden, it's not about money.
 
 From a [gender-politics perspective](http://www.bad-housekeeping.com/2014/08/07/sanitary-tax-attacking-the-5/)... it also just doesn't seem like a big deal. If sanitary products were still standard-rated, I could maybe kind of get behind this, even though I don't actually think that standard-rated implies non-essential. But they're at the lowest VAT rate the UK government is allowed to put them at. I just don't see this as a sign that we value crocodile meat more than female participation; or of male-focused agenda setting; or any form of institutional misogyny.
 
@@ -88,4 +88,4 @@ This feels kind of like that kind of power dynamic.
 
 Or: "hey man, I just need 20p for my bus fair, can you help?" "Sorry, I'd like to, but I have nothing smaller than a tenner." "So give me a tenner, don't be a tightass."
 
-There's only so far that you can expect someone to go for you, and this feels like overstepping that bound.
+There's only so far that you can expect someone to go for you, and I feel like this petition is asking for more than that.
