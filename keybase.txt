@@ -1,0 +1,76 @@
+I hereby claim:
+
+  * I am an admin of http://reasonableapproximation.net
+  * I am philh (https://keybase.io/philh) on keybase.
+  * I have a public key with fingerprint 84A5 6F31 7B32 3DBD 160C  37E8 6EAA 563A 7D8D E4A4
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.7"
+        },
+        "key": {
+            "fingerprint": "84a56f317b323dbd160c37e86eaa563a7d8de4a4",
+            "host": "keybase.io",
+            "key_id": "6EAA563A7D8DE4A4",
+            "uid": "35c3cf3ccfb449d8073a7c14c9158b19",
+            "username": "philh"
+        },
+        "merkle_root": {
+            "ctime": 1425415744,
+            "hash": "ba7ccb446d97dbf04f13cb1655b951203c3b724d2bef02ad2a27efa5f067668a1b005d91107cf8935a1eda0e79f601e28819dd618c545569b351f9433e79e4a8",
+            "seqno": 170534
+        },
+        "service": {
+            "hostname": "reasonableapproximation.net",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1425415822,
+    "expire_in": 157680000,
+    "prev": "f0ca5132222df27f0018a384577e7cf8d1390e37a9b3abd71060b6d3a43a5eaa",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2
+
+owFVUn9MVVUcBwQhJ0OcgRuEdB29NZ94z/19USMG1KSZ05i4uXiee++5cOFx7+O+
+BzxCwLdCFG2iKIqpaGkipTko06BRjRAHaETlD9RBywqNcLYoeESdy2jl+euc8/18
+P9/P5/v91obPCQgK1Js3JpW/+cPJwJ4RKSBzPG5/GSEZSimRVEbITg3pHuumwwJE
+JBH5qFSCbpSoGfG6oaDEPHf8LMZOFCPTrRk6RpGJfCJPlNstuJWsanoOMl2mZnER
+AgNZTqUBL9EUrUgK4EiZ5pHAIYgDNOQVQUEMZDBlruH2PFaVmOF0aAr+5dJTUjA+
+hU8T0tKZFAtfNBOgWZmWVVqWVYlhREUgeUwqA0YWAStIQLSAbmTOWnLlas5cS2wB
+MvOdyGEaxoxj2aNZccBQLANYnmGwHOjOxRkSZpMxNaeIvCKpJKMCWpYAx7KSyAKK
+pGVa4ilGoSSkkhRUKEjxSIWsSnI8xwkQSCTJKiIAJC+rgkizECAFkogXVY4EiBIE
+ICoKBwSZZViWEyWaBarI0DRG4MYIWL8bFeoGFseTLM2UW2+zWJORpdvq2aw1E0G3
+oUPJiaDLZRperQB68IQSdWTNC/94DNlwYmCux+NKwj24RHhKXVZmCZIcs5wOSdMV
+PMD/Txjgko/3R6AoO4G8Ls1EDs1CsDwnkPhYdVAxplRJGbKApvBRVIpXSRIIkBYY
+lueR1QcF0CKJaB5iv1BSeEBypMQpNGRoyOLV+M81byc8MAdTurUcHXqKTESU7wyK
+DQ4IDAqYGxJkrXDAvCcW/LvX3zdHTK9q/v3aKaVxsjnkWz5vqOqlrW9xy+Ys0efG
+77v394urF9deQ+eHjuW1Sey57mRfct9pIax/EEz6WofHu4YXPDKq/d1DYX8x0tJ3
+myR/m/O1FzL3bQ9J8UXVxRlRDeDMOdv8xdX+/jsd86609DTt6jx+amBhYWX2lvVv
+f5Rwa8lY2x/r3gnYtm7o55Apv9F1uvigt6e0tebKZaUv8mtbV689ftGBq88IaWfD
+QiL2ajd39x5tj/2T6d1/fPLzO81b5tQEpvg2Frg3mU//+krwhU4koE/3bEs9Uxo1
+dsR2dCSz3rFrhWBzttwNjdRPhMWO7o6y3657rvViizehOuumHr1586XLDyIzWurG
+yqIiqbDej+sept7vKhtw9Hc0NiwHEa3DD4obtJMx0tDL0WNtsNF2a9HaeytcF1Mr
+SnZmDNfG9F267kteWXLhwVdplUVBdz/r3xrzE3U4+42msc13e/1p6avua09550+N
+qN2HfGe/bD2fM9XuuRn+QdWHP659flP+iaCsLWe1tRPTzo7M8998knn4l2Xm6o7V
+Oyqu1nZWvHcjw98y3pfqjK4Z+M578MByv297pXin/0joWGrbsxfrqdsHX417cmIo
+aceavMHXkxOy6q/bJmxn9oxuaP9idP3eh4GrGoSKQ4XTjdnv2wZXLvV5bzzaYC/N
+zrWF5svBVXx9ePFvcV3Z7LFpx8J/AA==
+=eM7D
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/philh
