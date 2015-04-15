@@ -1,8 +1,8 @@
 ---
 title: Cooperative conversational threading
-layout: draft
+layout: post
 ---
-Sometimes at LW meetups, I'll want to raise a topic for discussion. But we're currently already talking about something, so I'll wait for a lull in the current conversation... but it feels like the duration of lull needed before I can bring up something totally unrelated, is longer than the duration of lull before someone else will bring up something marginally related. And so we can go for a long time, changing from topic to topic to topic, without me ever having a chance to deliberately change the topic.
+Sometimes at LW meetups, I'll want to raise a topic for discussion. But we're currently already talking about something, so I'll wait for a lull in the current conversation. But it feels like the duration of lull needed before I can bring up something totally unrelated, is longer than the duration of lull before someone else will bring up something marginally related. And so we can go for a long time, with the topic frequently changing incidentally, but without me ever having a chance to change it deliberately.
 
 Which is fine. I shouldn't expect people to want to talk about something just because I want to talk about it, and it's not as if I find the actual conversation boring. But it's not necessarily optimal. People might in fact want to talk about the same thing as me, and following the path of least resistance in a conversation is unlikely to result in the best possible conversation.
 
