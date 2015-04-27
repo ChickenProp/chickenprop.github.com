@@ -42,9 +42,9 @@ and
 
 *Contributing* and *driving* are very different. This is a small, but fairly forgivable, amount of bullshit.
 
-### Bad science?
+### Bad statistics?
 
-It turns out that the [actual paper](http://www.sciencedirect.com/science/article/pii/S2212096314000163) is open-access. That's awesome! And it's only twelve pages long, with lots of tables and pretty graphs (and a few ugly graphs).
+It turns out that the [actual paper](http://www.sciencedirect.com/science/article/pii/S2212096314000163) is open-access. That's awesome! And it's only twelve pages long, with lots of tables and pretty graphs (and a few ugly graphs) taking up space so that I don't have to read as much.
 
 I said above that I know something about statistics. I do not know enough about statistics to sensibly evaluate this paper, but I can make a few comments.
 
@@ -55,7 +55,7 @@ The authors describe their method thus:
 More precisely, their model is the sum of a linear regression and an [autoregressive moving-average model](http://en.wikipedia.org/wiki/Autoregressive%E2%80%93moving-average_model). I haven't encountered ARMA models before, but it looks like the factors taken into account are:
 
 1. The factors listed above:
-    - **f(eCO<sub>2</sub>)** (equivalent carbon dioxide) combines greenhouse gasses, aerosols and particulates into a single number. I guess this number is meant to be something like, "if we removed all the greenhouse gases and stuff and replaced them with this amount of CO<sub>2</sub>, then [[some relevant factor like the amount of heat sent back to Earth by the atmosphere]] would be conserved". *f* is a logarithmic function, because apparently that's what the relationship in question looks like.
+    - **f(eCO<sub>2</sub>)** (equivalent carbon dioxide) combines greenhouse gasses, aerosols and particulates into a single number. I guess this number is meant to be something like, "if we removed all the greenhouse gases and stuff and replaced them with this amount of CO<sub>2</sub>, then [some relevant factor like the amount of heat sent back to Earth by the atmosphere] would be conserved". *f* is a logarithmic function, because apparently that's what the relationship in question looks like.
     - **SOI** (southern oscillation index) is [this thing](http://en.wikipedia.org/wiki/El_Ni%C3%B1o_Southern_Oscillation).
     - **TSI** (total solar irradiance) measures how much sunlight the Earth's atmosphere receives.
     - **VOLRF** (volcanic stratospheric aerosol radiative forcing) measures the effect on global temperature from the stuff released by volcanic activity.
@@ -110,16 +110,40 @@ If we assume that `$H_0$` and `$H_1$` are exhaustive and mutually exclusive (i.e
 
     $$ P(H_0|O) = { 24900 \over 24901 } \approx 0.99996 $$
 
-in other words, using the numbers from the article, and doing slightly better math, **there is only 99.996 percent certainty that humans are driving global warming**. In your *face*, scientists!
+in other words, using the numbers from the paper, and doing slightly better math, **there is only 99.996 percent certainty that humans are driving global warming**. In your *face*, scientists!
 
-Okay, yeah. Like I said, the actual conclusion wasn't totally wrong, but the method was.
+Okay, yeah. Like I said, the actual conclusion wasn't totally wrong, but the method was. (There actually is a reasonable difference between 99.996% and 99.999% - it's about the same as the difference between 50% and 80%. But I'm not going to split hairs over it.)
 
-(If instead of model B, we choose model E, then we get 99.998% certainty.)
+And this is looking only at model B. If instead we choose model E, then we get 99.998% certainty. If we use model F... model F already doesn't include a term for f(eCO<sub>2</sub>), so it's not clear what `$H_0$` should be. But the Bayes factor can be at most 2500, and $P(H_0)$ would be at most 99.96%, which is much lower than the other two.
 
+I also haven't touched on the results from the ten-year cooling periods. I haven't looked at them in as much depth, but they look similar to the consecutive-warm-months results, with the same problems.
+
+Note that what I'm doing here isn't *good* statistics. The math should be correct, but reality is far more complicated than any of the hypotheses I've been considering.
+
+### Bad premises?
+
+An earlier paragraph hints at the question of whether their approach is even valid. Model E was generated "to test the similarity of the parameter estimates" of model B. They note that "most parameters changed by only a small amount and are within the 95% confidence intervals of the Model B parameters". And yet model E is twice as likely as model B to simulate 304 warm months in a row. Model F was generated to test the validity of removing f(eCO<sub>2</sub>) from models B and E, but it was *forty* times more likely to do so. What this suggests is: you can't trust these models too far.
+
+The correct amount to trust them isn't zero, either. I don't know how much to trust them. Suppose we think there's a one percent chance that this study is complete rubbish - that the methodology would have arrived at the same results regardless of what reality says. Then at the very least, you have to prefix the results from the study with "there is a 99% chance that...". In this case, "there is a 99% chance that there is a 99.999% chance that humans are driving global warming". These two probabilities combine, the 99% dominates, and you get "there is a 99% chance that humans are driving global warming".
+
+The difference between 99% and 99.999% is massive. It's the difference between something that happens three times a year, and something that happens once every three hundred years.
+
+Of course, the question isn't "is the study total bullshit, or is it correct?" It's more subtle than that. Ideally, we want to answer the question: *what is the probability that a study with this method would have gotten these results, conditional on humans driving global warming? What is the probability, conditional on humans not driving global warming?* And of course, we can't answer that.
+
+But we can make some general observations. There's a decent chance that I'm going to embarrass myself here, not being a climate scientist or a statistician, but I can live with that.
+
+It looks as though the main thing that the models tell us is "global temperature tracks f(eCO<sub>2</sub>) pretty well". Of the nine model parameters, only three exceed 0.1 in either model, which are the parameters for f(eCO<sub>2</sub>) (model B 0.38/model E 0.42), the auto-regressive parameter (0.93/0.85), and the one-month moving-average parameter (-0.44/-0.35). This is valuable information, but I don't think it's anything new.
+
+Another takeaway is the ten-year cooling periods. We can't say "99.999% certainty that there would have been more of those if it weren't for humans". But it does give us reason to believe that cooling periods are 
+
+That's valuable information, but it's hardly new.
+
+The models don't seem to be checked against reality very hard. I think thats's what the section "Model diagnostics" (p. 8, and fig. 5) is about, but it's not clear to me exactly what's going on, and it doesn't look very thorough. I think they're mostly saying that when they run a simulation using the full models, the divergences from reality look random (and satisfy some tests for randomness). That's valuable.
 
 ---
 
 (Notes that might enter the finished version in some form.)
+
 
 What problems might there be?
 
