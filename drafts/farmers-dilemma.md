@@ -16,7 +16,7 @@ You object that I'm being dumb not to take those four utils.
 
 The farmer's dilemma is game-theoretically equivalent to [chicken](http://en.wikipedia.org/wiki/Chicken_%28game%29). Both of us choose to either cooperate by digging the ditch ("swerve" in chicken), or defect by sitting at home ("straight" in chicken). If both of us cooperate ("C/C"), we both get an okay result. If both of us defect ("D/D"), we both get a terrible result. If one of us cooperates while the other defects ("C/D"), then the defector gets the best possible result for themselves, and the cooperator gets a result between C/C and D/D.
 
-If you're cooperating and I'm defecting (or vice versa), then neither of us have any incentive to change our strategies. I could start to cooperate, but then I'd just be giving you utility. You'd like that, but I wouldn't. And you could start to defect, but then you'd be throwing away utility, neither of us would like that.
+If you're cooperating and I'm defecting (or vice versa), then neither of us have any incentive to change our strategies. I could start to cooperate, but then I'd just be giving you utility. You'd like that, but I wouldn't. And you could start to defect, but then you'd be throwing away utility. Neither of us would like that.
 
 On the other hand, if we're both cooperating, then we both have an incentive to defect, as long as the other doesn't do the same; and if we're both defecting, we both have an incentive to cooperate, as long as the other doesn't do the same.
 
