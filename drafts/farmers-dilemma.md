@@ -36,9 +36,11 @@ Another option is to tell me that if I don't help you dig, you'll spend an extra
 
 You can also tell me that if I don't help, you're not going to dig at all. Or even that you're simply not going to dig, if I'm going to be an asshole about it I can dig the whole thing myself or go without. Once again, I'm likely to dig if I think you're not bluffing.
 
+([Precommitment](https://en.wikipedia.org/wiki/Precommitment) is a powerful strategy in many situations. But [two can play at that game](http://reasonableapproximation.net/2013/12/07/your-opponent-can-precommit-too.html)...)
+
 ---
 
-The real world is usually more complicated than game theory, so I'm going to close by listing some variations on the farmer's dilemma:
+The real world is usually more complicated than game theory. Here are some variations on the farmer's dilemma:
 
 Maybe I have a bad back, and digging is more costly for me than for you. This may or may not change the Nash equilibria, and it may or may not change the amount of sympathy we each get in the various continuations.
 
