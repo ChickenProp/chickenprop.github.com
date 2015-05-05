@@ -1,6 +1,6 @@
 ---
 title: "The Farmer's Dilemma"
-layout: draft
+layout: post
 ---
 Suppose you and I are farmers, owning adjacent fields. One day you have a brilliant idea. If we dig a ditch from the nearby river, between our fields, then irrigating our fields becomes a lot less work. It would cost two [utils](https://en.wikipedia.org/wiki/Utility) to dig the ditch - one utilon each - and we'd get five utils each from its existence.
 
