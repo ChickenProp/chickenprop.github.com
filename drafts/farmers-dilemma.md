@@ -2,8 +2,6 @@
 title: "The Farmer's Dilemma"
 layout: draft
 ---
-I could have sworn that the farmer's dilemma was a standard term in game theory, much like the [prisoner's dilemma](http://en.wikipedia.org/wiki/Prisoner%27s_dilemma). Apparently it isn't. But I think it would be a useful term to have, so I'm writing about it so that if I need to use it in future I can link people here.
-
 Suppose you and I are farmers, owning adjacent fields. One day you have a brilliant idea. If we dig a ditch from the nearby river, between our fields, then irrigating our fields becomes a lot less work. It would cost two utils to dig the ditch - one utilon each - and we'd get five utils each from its existence.
 
 You come to me with this suggestion. "That sounds great," I say, "but I don't think I'm going to bother."
