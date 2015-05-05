@@ -64,8 +64,8 @@ Although the farmer's dilemma and chicken are game-theoretically equivalent, I t
 
 The other reason, which is kind of the same reason, is that game theory assumes you've decided to play. If nobody wants to play chicken, you both get a better outcome than C/C. If nobody notices how valuable a ditch would be, you get the same outcome as D/D.
 
-So describing a situation as chicken, and describing it as a farmer's dilemma, seem different. I don't know of an existing name that's a good fit for the farmer's dilemma.
-
 Another equivalent game is the snowdrift dilemma: the road is covered with snow, and we both want it cleared, but we'd both rather not clear it ourselves. My intuitions about this feel different again. You can't decline to play (except by living somewhere less snowy), but if you could, that would be better than C/C.
 
-So the farmer's dilemma seems like a useful concept that doesn't currently exist. (For a long time I thought it did, but I can't find anything about it online. Wikipedia redirects it to the [prisoner's dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma), but that has a very different structure.) Now it exists. You're welcome.
+So describing a situation as chicken, or snowdrift, or a farmer's dilemma, all seem different. I don't know of an existing name that feels like a good fit for the farmer's dilemma. (For a while I thought the farmer's dilemma was a standard name, but I can't find anything about it online. Wikipedia redirects it to the [prisoner's dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma), but that has a very different structure.)
+
+So it seems like a useful concept with no name. Now it has a name. You're welcome.
