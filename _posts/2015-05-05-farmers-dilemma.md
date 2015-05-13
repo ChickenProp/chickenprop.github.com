@@ -1,6 +1,6 @@
 ---
 title: "The Farmer's Dilemma"
-layout: draft
+layout: post
 ---
 Suppose you and I are farmers, owning adjacent fields. One day you have a brilliant idea. If we dig a ditch from the nearby river, between our fields, then irrigating our fields becomes a lot less work. It would cost two [utils](https://en.wikipedia.org/wiki/Utility) to dig the ditch - one utilon each - and we'd get five utils each from its existence.
 
@@ -60,12 +60,12 @@ Sometimes the ditch requires constant maintenance. We could model that as a sequ
 
 Why am I talking about this? I think farmer's dilemma situations come up from time to time in online discussions, and I want to be able to say "let's not be too harsh on AcmeCorp here, they're cooperating in a farmer's dilemma and everyone else is benefiting from that". (I don't want to discuss the specific examples I have in mind because they're kind of [mind-killey](http://lesswrong.com/lw/gw/politics_is_the_mindkiller/).)
 
-Although the farmer's dilemma and chicken are game-theoretically equivalent, I think our intuitions about them are different. At any rate, mine are. I can think of two reasons for this. One is that game theory only considers utility up to affine transformations. The games "Global thermonuclear war", where every player loses a million utils, and "Global happiness project", where every player gains a million utils, are also equivalent. But in the real world, two people crashing their cars into each other is a worse outcome than two people failing to dig a ditch.
+Although the farmer's dilemma and chicken are game-theoretically equivalent, I think our intuitions about them are different. At any rate, mine are. I can think of two reasons for this. One is that game theory only considers utility up to [affine transformations](http://en.wikipedia.org/wiki/Affine_transformation#Affine_transformations_over_the_real_numbers). The games "Global thermonuclear war", where every player loses a million utils, and "Global happiness project", where every player gains a hundred utils, are also equivalent. But in the real world, two people crashing their cars into each other is a worse outcome than two people failing to dig a ditch.
 
 The other reason, which is kind of the same reason, is that game theory assumes you've decided to play. If nobody wants to play chicken, you both get a better outcome than C/C. If nobody notices how valuable a ditch would be, you get the same outcome as D/D.
 
-So describing a situation as chicken, and describing it as a farmer's dilemma, seem different. I don't know of an existing name that's a good fit for the farmer's dilemma.
-
 Another equivalent game is the snowdrift dilemma: the road is covered with snow, and we both want it cleared, but we'd both rather not clear it ourselves. My intuitions about this feel different again. You can't decline to play (except by living somewhere less snowy), but if you could, that would be better than C/C.
 
-So the farmer's dilemma seems like a useful concept that doesn't currently exist. (For a long time I thought it did, but I can't find anything about it online. Wikipedia redirects it to the [prisoner's dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma), but that has a very different structure.) Now it exists. You're welcome.
+So describing a situation as chicken, or snowdrift, or a farmer's dilemma, all seem different. I don't know of an existing name that feels like a good fit for the farmer's dilemma. (For a while I thought the farmer's dilemma was a standard name, but I can't find anything about it online. Wikipedia redirects it to the [prisoner's dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma), but that has a very different structure.)
+
+So it seems like a useful concept with no name. Now it has a name. You're welcome.
