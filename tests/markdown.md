@@ -2,7 +2,7 @@
 layout: draft
 title: Markdown testing page
 ---
-I want footnotes[^1] to work[^2].
+I want footnotes[^1], including named footnotes[^here] to work[^2].
 
 Also, lists should work, ideally:
 
@@ -33,4 +33,5 @@ and
 3. one line
 
 [^1]: Like this
+[^here]: And this
 [^2]: And this
