@@ -14,8 +14,22 @@ Also, lists should work, ideally:
 
 and also
 
-1. like this
-2. with only one line
-3. between points
+* like this
+* with only one line
+* between points
+
+and the same for numbered lists:
+
+1. two lines
+
+2. two lines
+
+3. two lines
+
+and
+
+1. one line
+2. one line
+3. one line
 
 [^1]: Like this
