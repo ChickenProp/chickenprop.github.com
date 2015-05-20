@@ -37,5 +37,5 @@ and
 [^2]: And this
 [^3]: Which should more-or-less work work even if
 
-    the footnote title has multiple paragraphs,
+    the footnote has multiple paragraphs,
     and *formatting*, and so on.
