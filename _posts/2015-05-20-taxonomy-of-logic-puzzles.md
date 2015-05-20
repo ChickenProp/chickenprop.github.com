@@ -1,6 +1,6 @@
 ---
 title: Towards a Taxonomy of Logic Puzzles
-layout: draft
+layout: post
 ---
 (Content note: minor untagged spoilers for the solutions to certain logic puzzles. No major spoilers.)
 
