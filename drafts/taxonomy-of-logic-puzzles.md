@@ -72,7 +72,7 @@ Different puzzles require different "levels" of theory of mind, and I suspect th
 
 Another future direction to explore might be a taxonomy of video game puzzles. I think there'd be some similar themes, but for example, video games can have progression in a sense that doesn't exist in most of the puzzles I've described so far.
 
-Two senses, in fact. You can progress within a level, when you change the board state.[^2] (Not all progression takes you towards your goal.) Different games/levels have different attitudes to (a) how many ways you can do this at any given moment, and (b) whether it's possible to make a level unsolvable.
+Two senses, in fact. You can progress within a level, when you change the board state.[^2] Different games/levels have different attitudes to (a) how many ways you can do this at any given moment, and (b) whether it's possible to make a level unsolvable.
 
 But also a level can teach you something by holding your hand, and in future levels you can use that without having your hand held. So level ten would have seemed impossible if you'd started with it, but after levels one through nine it's just challenging enough to be fun. Logic puzzles can have this: the fork in the road teaches you a tool to apply to THLPE. But the level order in video games gets to be designed deliberately. Whereas in real life, I mostly encounter logic puzzles by accident, with no guarantee that I've already encountered any precursors.
 
@@ -80,3 +80,4 @@ But also a level can teach you something by holding your hand, and in future lev
 
 [^0]: Though I'm not sure what the difference is.
 [^1]: Brute force seems like it could fit as either verify or deep, or just as a separate category.
+[^2]: For current purposes, not all progress takes you in the right direction.
