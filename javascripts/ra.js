@@ -26,6 +26,7 @@ $(function () {
     // handles them.
     $('a[rel=footnote]').each(function () {
         var text = $($(this).attr('href')).text();
-        $(this).attr('title', text.slice(1, -3)); // strip whitespace and "↩"
+        text = $.trim(text.replace('↩', ''));
+        $(this).attr('title', text);
     });
 });
