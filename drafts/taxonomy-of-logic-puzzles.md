@@ -46,7 +46,7 @@ I don't intend for these descriptions to be fully general. I think that they're 
 
 Even if they did, I expect these clusters are going to fail to capture a lot of variation, and attempting to shove things into them will sometimes be a silly thing to do. But let's make a start with them, and try to classify some problems that come to mind:
 
-This [transfinite epistemic logic puzzle challenge](http://jdh.hamkins.org/transfinite-epistemic-logic-puzzle-challenge/) is mostly a combination of deep and wide I think, but also some learn because I wouldn't recommend attempting it if you don't know about order types. I didn't find it overly challenging.
+This [transfinite epistemic logic puzzle challenge](http://jdh.hamkins.org/transfinite-epistemic-logic-puzzle-challenge/) is mostly a combination of deep and wide I think, but also some learn because I wouldn't recommend attempting it if you don't know about order types. I didn't find it overly challenging. (Except that reading the solution, I no longer remember if I got the answer exactly correct. I might have made a fencepost error.)
 
 I haven't solved the [sum and product puzzle](http://en.wikipedia.org/wiki/Sum_and_Product_Puzzle), but [as far as I've got](http://lesswrong.com/lw/m1p/open_thread_apr_13_apr_19_2015/c9od) has been a wide. I'm pretty sure I could finish it with brute force,[^brute] but I suspect there's an elegant way to do it which is either a verify or a learn, possibly involving number theory.
 
