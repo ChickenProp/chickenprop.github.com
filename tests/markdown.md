@@ -2,7 +2,7 @@
 layout: draft
 title: Markdown testing page
 ---
-I want footnotes[^1], including named footnotes[^here] to work[^2].
+I want footnotes[^1], including named footnotes[^here] to work[^2]. And they should have hover titles[^3].
 
 Also, lists should work, ideally:
 
@@ -35,3 +35,6 @@ and
 [^1]: Like this
 [^here]: And this
 [^2]: And this
+[^3]: Which should more-or-less work work even if
+
+    the footnote title has multiple paragraphs, and *formatting*, and so on.
