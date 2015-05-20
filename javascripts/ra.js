@@ -21,4 +21,11 @@ $(function () {
     });
 
     MathJax.Hub.Queue(['Typeset', MathJax.Hub]);
+
+    // Add title text to footnotes. Very dependent on how the markdown compiler
+    // handles them.
+    $('a[rel=footnote]').each(function () {
+        var text = $($(this).attr('href')).text();
+        $(this).attr('title', text.slice(1, -3)); // strip whitespace and "↩"
+    });
 });
