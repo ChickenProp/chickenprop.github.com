@@ -47,11 +47,9 @@
 	  {% assign shown = '' %}
 	  {% for post in site.posts %}
 	    {% if shown.size < 5 %}
-              {% unless post.draft %}
-	        {% capture temp %}{{ shown }}*{% endcapture %}
-                {% assign shown = temp %}
-	        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-              {% endunless %}
+	      {% capture temp %}{{ shown }}*{% endcapture %}
+              {% assign shown = temp %}
+	      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
 	    {% endif %}
 	  {% endfor %}
 	</ul>
@@ -61,9 +59,10 @@
       </section>
       <footer>
 	<p><small><a href="/rss.xml">RSS</a>
-	    | <a href="http://admonymous.com/philh">Anonymous feedback</a>
-	    | I also have <a href="http://philh.net">a website</a></small></p>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme (more or less)</small></p>
+	    | <a href="http://sayat.me/philh">Anonymous feedback</a>
+	    | <a href="http://philh.net">The author</a></small></p>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a>
+            <br>using the Dinky theme (more or less)</small></p>
       </footer>
     </div>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->

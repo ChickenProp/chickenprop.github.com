@@ -3,3 +3,5 @@ description: philh's blog
 url: http://reasonableapproximation.net
 
 markdown: redcarpet
+redcarpet:
+  extensions: [footnotes]
