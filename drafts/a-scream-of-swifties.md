@@ -52,7 +52,7 @@ Explaining a joke is like dissecting a frog: it's one way to learn about frogs. 
 
 "Bring me the head of my enemy," said Emacs vicariously.
 
-"I have affirming the consequent, base rate neglect, and I've just collected ad hominem," said Tom, getting cocky.
+"I have affirming the consequent, base rate neglect, and now also ad hominem," said Tom, getting cocky.
 
 "We lost the treaty, so we had to ratify it again," said Tom, resigned.
 
