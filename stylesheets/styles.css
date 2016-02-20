@@ -139,6 +139,11 @@ hr {
     margin: 15px 0px;
 }
 
+div.footnotes {
+    border-top: 1px solid #CCC;
+    padding-top: 5px;
+}
+
 spoiler {
     color: black;
     background-color: black;
