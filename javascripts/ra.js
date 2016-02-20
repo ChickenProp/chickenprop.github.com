@@ -12,7 +12,7 @@ $(function () {
 	    if ($(this).parent().prop('tagName') == 'PRE'
 		&& $(this).parent().parent().prop('tagName') == 'DIV')
 	    {
-		$(this).parent().parent().removeClass('highlight');
+		$(this).parent().removeClass('highlight');
 	    }
         }
         else {
@@ -25,7 +25,8 @@ $(function () {
     // Add title text to footnotes. Very dependent on how the markdown compiler
     // handles them.
     $('a[rel=footnote]').each(function () {
-        var text = $($(this).attr('href')).text();
+        var id = $(this).attr('href').substr(1);
+        var text = $('[id="' + id + '"]').text();
         text = $.trim(text.replace('↩', ''));
         $(this).attr('title', text);
     });
