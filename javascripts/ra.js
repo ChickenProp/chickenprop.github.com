@@ -24,7 +24,7 @@ $(function () {
 
     // Add title text to footnotes. Very dependent on how the markdown compiler
     // handles them.
-    $('a[rel=footnote]').each(function () {
+    $('a.footnote').each(function () {
         var id = $(this).attr('href').substr(1);
         var text = $('[id="' + id + '"]').text();
         text = $.trim(text.replace('↩', ''));
