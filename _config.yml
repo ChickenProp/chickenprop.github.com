@@ -2,6 +2,5 @@ name: A Reasonable Approximation
 description: philh's blog
 url: http://reasonableapproximation.net
 
-markdown: redcarpet
-redcarpet:
-  extensions: [footnotes]
+kramdown:
+  smart_quotes: ['apos', 'apos', 'quot', 'quot']
