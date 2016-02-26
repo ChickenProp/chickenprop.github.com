@@ -32,6 +32,20 @@ and
 2. one line
 3. one line
 
+Blockquotes ideally should carry over between paragraphs, but I don't think that's possible with kramdown. What I want:
+
+> one
+>
+> two
+
+what I get:
+
+> one
+
+> two
+
+I think this needs to be fixed in my posts, as long as I'm stuck with kramdown.
+
 [^1]: Like this
 [^here]: And this
 [^2]: And this
