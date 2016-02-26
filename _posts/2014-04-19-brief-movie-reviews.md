@@ -4,7 +4,7 @@ layout: draft
 ---
 I don't expect anyone cares about what I think about the movies I've seen lately, so I'm bundling those thoughts into one post to be less annoying.
 
-###The Lego Movie###
+### The Lego Movie
 
 This is the most pure fun I've had watching a movie in a long time. It's going for funny, and it is, the whole way through. As I write this, I saw the movie almost a month ago, and remembering some of the jokes still makes me smile.
 
@@ -12,7 +12,7 @@ The attention to detail is also impressive. I think that if I rewatched this, I'
 
 Highly recommended.
 
-###Divergent###
+### Divergent
 
 I found *Divergent* decent while watching it, but no more than that; and thinking about it afterwards only makes it worse.
 
@@ -22,7 +22,7 @@ But in this case, just in case you weren't convinced that the faction idea was d
 
 There's also a sort of Mary-Sue thing going on, but a viewer insert rather than an author insert. In the film world, people supposedly have only one of the traits brave/honest/friendly/selfless/clever, except for the rare divergents. So the message is "if you have two or more of these traits, you are rare and special and <spoiler>immune to mind-control drugs</spoiler>, and people will hate you for it", which is probably a message that will appeal to angsty teenagers.
 
-###Captain America: The Winter Soldier###
+### Captain America: The Winter Soldier
 
 This is an action film. It has people shooting people, and punching people, and jumping through glass windows. I have it on good authority that a lot of people enjoy that sort of thing.
 
@@ -44,7 +44,7 @@ I did like how there was no romantic subplot.
 
 Also, faceblind world problems: a minor character suddenly unleashes some ass kicking. Everyone looks at her like wtf. She presses a button, her face shimmers as a hologram disappears, and suddenly she looks *exactly the same*. (She then proceeds to remove her wig, so it's not too confusing.)
 
-###Noah###
+### Noah
 
 Everybody in this film fails ethics and/or metaethics forever.
 
@@ -88,7 +88,7 @@ Apart from all the ethics, the film is still pretty bad. The script is uninspire
 
 I do not recommend *Noah*.
 
-###Ocho Apellidos Vascos (Eight Basque Surnames / Spanish Affairs)###
+### Ocho Apellidos Vascos (Eight Basque Surnames / Spanish Affairs)
 
 This reminded me a lot of *Intouchables*. That was a French feelgood comedy-drama which ended up making a lot of money. This is a Spanish feelgood romcom which is making a lot of money. Both are heavily based on the cultural divide between the main characters. Both are well-made, but very paint-by-numbers.
 

@@ -7,7 +7,7 @@ explicit_math: true
 
 The point of this post is an attempt to calculate e to given precision in bash, a challenge given in a job listing that I saw recently. I kind of got [nerd sniped](http://xkcd.com/356/). I wrote this as I went along, so there may be inconsistencies.
 
-###First attempt###
+### First attempt
 
 The obvious method to compute e is as the infinite sum of 1/n!, n from 0 to ∞. This converges quickly, but how far do we have to calculate to get the n'th digit of e? We can deal with that later.
 
@@ -62,7 +62,7 @@ Up to n=11, we accurately calculate the first (n-3) digits of e. For n=12 and ab
 
 It doesn't look like we can go very far with this: the numbers we're working with are simply too large.
 
-###Second attempt###
+### Second attempt
 
 If you google "algorithm to calculate a specific digit of e", this paper comes up: <http://eprints.utas.edu.au/121/1/Calculation_of_e.pdf>. It provides a simple algorithm using (mostly) integer arithmetic, implemented in ALGOL. It's simple enough to translate into bash:
 
@@ -90,7 +90,7 @@ This isn't quite accurate: the original algorithm calculates m such that m! > 10
 
 We can fix both these problems, but this algorithm isn't especially nice anyway. Its time complexity is O(n^2). Can we do better?
 
-###Third attempt###
+### Third attempt
 
 (Spoiler alert: this doesn't go so well.)
 
@@ -347,7 +347,7 @@ It turns out to be about 130. (And this only took twelve seconds, so we're beati
 
 So if we can extract all these digits without needing so many powers of 10 in b, we can do a lot better. We might even be able to beat O(n^2), if k grows slower than O(n). So let's try to do that.
 
-###Fourth attempt###
+### Fourth attempt
 
 We can't simply multiply a by 10 every time we'd like to divide b by 10. That would break the algorithm, for one thing: we'd have to keep track of what power of 10 to multiply a by, and only use it when checking to see if we've got the next digit, not in `increase_a_b`. (It's okay for b because b only ever gets multiplied, so it doesn't matter whether we do that before or after dividing by 10. But when we do a = k\*a + 1, it matters that we haven't already multiplied a by 10.)
 
@@ -438,7 +438,7 @@ Now this works, but it's even slower than the last attempt. We could improve thi
 
 There is one other thing we can do, though it seems potentially unsafe. There's a lot of repeated work involved in figuring out how many digits we've accurately calculated. If we guess in advance how high we need to take k, we can save ourselves a lot of work.
 
-###Fifth attempt###
+### Fifth attempt
 
 Recall that we have n digits if a_k/k! and (a_k+1)/k! agree up to n decimal place
 s. The difference between these is 1/k!. If k! > 10^(n+1), then the decimal expansion of 1/k! will start with at least n+1 zeros. The only way a_k/k! and (a_k+1)/k! could disagree at or before the nth decimal place is if the digits of a_k/k! in positions n+1, n+2, ... log_10(k!) are all 9. If additionally a_k/k! disagrees with e at the nth decimal place, it follows that the digits of e in positions n+1, n+2, ..., log_10(k!) are all 0.
@@ -480,7 +480,7 @@ I've now run out of ideas, which is a bit anticlimactic. (At least, I've run out
 
 So let's return to the second attempt.
 
-###Second attempt, take two###
+### Second attempt, take two
 
 Recall that this is the algorithm we're using:
 
