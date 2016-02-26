@@ -1,5 +1,5 @@
 ---
-layout: draft
+layout: post
 title: "Political Polarization in the US House of Representatives"
 ---
 I've created an interactive graph of <a href="http://bl.ocks.org/ChickenProp/raw/9dd807b7a14f7b797421/">historical levels of political polarization in the US House of Representatives</a>. It would be tricky to embed in this blog, so I'm only linking it. Summary:
