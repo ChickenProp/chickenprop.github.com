@@ -6,7 +6,7 @@ I'd like to coin a term. The **Sally-Anne fallacy** is the mistake of assuming t
 
 The name comes from the [Sally-Anne test](https://en.wikipedia.org/wiki/Sally%E2%80%93Anne_test), used in developmental psychology to detect theory of mind. Someone who lacks theory of mind will fail the Sally-Anne test, thinking that Sally knows where the marble is. The Sally-Anne fallacy is also a failure of theory of mind.
 
-In internet arguments, this will come up as part of a chain of reasoning, such as: *you think X; X implies Y; therefore you think Y.* Or: *you support X; X leads to Y; therefore you support Y*.[^support]
+In internet arguments, this will often come up as part of a chain of reasoning, such as: *you think X; X implies Y; therefore you think Y.* Or: *you support X; X leads to Y; therefore you support Y*.[^support]
 
 So for example, we have [this complaint](http://lesserjoke.tumblr.com/post/141930028249/bruce-banner-in-avengers-age-of-ultron-2015) about the words "African dialect" used in *Age of Ultron*. The argument goes: a dialect is a variation on a language, therefore [Marvel](https://en.wikipedia.org/wiki/Metonymy) thinks "African" is a language.
 
@@ -20,6 +20,6 @@ Many political conflicts include arguments that look like this. *You fight our c
 
 If you want to convince someone to change their mind, it's important to know what they're wrong about. The Sally-Anne fallacy causes us to mistarget our counterarguments, and to mistake potential allies for inevitable enemies.
 
-[^outside]: From the outside, this looks like "simply because *you believe* that thing.
+[^outside]: From the outside, this looks like "simply because *you believe* that thing".
 [^support]: Another possible misunderstanding here, is if you agree that X leads to Y and Y is bad, but still think X is worth it.
 [^dastardly]: Of course, sometimes people will *pretend* not to believe the obvious truth so that they can further their dastardly ends. But sometimes they're just wrong. And sometimes they'll be right, and the obvious truth will be untrue.
