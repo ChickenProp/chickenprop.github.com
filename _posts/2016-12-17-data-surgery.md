@@ -117,7 +117,7 @@ For one thing, I might have been able to generate my own long file in ffmpeg. Bu
 
 It plays fine. But when I try to mix it with the target file, it doesn't play. It complains about the missing moov atom, even though that's also missing in the working concatenated file. I'm not sure what's wrong.
 
-Failing that, I could have recorded the long file myself in the same app my friend used, to spare his attention for things he actually wanted to be doing. (Which, after all, was the reason he was willing to pay someone else to fix the file.)
+Failing that, I could have recorded the long file myself in the same app my friend used, to spare his attention for things he actually wanted to be doing. (Which, after all, was the reason he was willing to pay someone else to fix the file.) I could also, for curiousity's sake, have recorded another short file, and attempted to find more durations by comparing the headers.
 
 But perhaps the simplest thing would have been to take a completely different approach from the beginning. It turns out that other people have encountered this problem before, and paved the way for those like me. For example, someone on facebook posted [this page](http://sysfrontier.com/en/2014/12/31/hello-world/), which teaches you to fix these files using a piece of software called "faad.exe". More research reveals that this is [open source](http://www.audiocoding.com/index.html), and even available in portage.
 
