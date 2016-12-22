@@ -1,6 +1,6 @@
 ---
 title: The Parable of the Clock
-layout: draft
+layout: post
 ---
 The monk Dawa had a clock that had stopped, and he was content. When he wished to know the hour, he would glance at the clock, and discover that it was noon.
 
