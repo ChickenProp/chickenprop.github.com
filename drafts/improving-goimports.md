@@ -3,9 +3,9 @@ layout: draft
 title: Improving goimports
 ---
 
-*Epistemic status: I have never used Go. This might make me unqualified to say what I'm about to say. Also, I had this idea several months ago, and haven't particularly checked whether anything's changed since then.*
+*Epistemic status: Pure dilettantism. I have never used Go. This might make me unqualified to say what I'm about to say.*
 
-In Go, if you have an unused import, your program fails to compile. This has made a lot of people mildly angry and been sometimes regarded as a bad idea.
+In Go, if you have an unused import, your program fails to compile. This has made a lot of people mildly annoyed and been sometimes regarded as a bad idea, but not universally.
 
 The devs [decline](https://golang.org/doc/faq#unused_variables_and_imports) to add a compiler flag to change this behaviour, "because compiler options should not affect the semantics of the language and because the Go compiler does not report warnings, only errors that prevent compilation". This strikes me as reasonable, if not the decision I personally would make.
 
@@ -36,11 +36,13 @@ import unused
 var _ = unused.Item
 ```
 
-Neither affects the semantics of the program. If one is worth complaining about, so is the other. But the devs are sending mixed signals. It seems the first is worth complaining about, because the compiler complains. But it seems the second is not, because the devs recommend it. This should be a sign that something about this whole situation is unsatisfactory.
+Neither affects the semantics of the program[^semantics]. If one is worth complaining about, so is the other. But the devs are sending mixed signals. It seems the first is worth complaining about, because the compiler complains. But it seems the second is not, because the devs recommend it. This should be a sign that something about this whole situation is unsatisfactory.
 
 There is another solution, in the form of a tool called [`goimports`](https://godoc.org/golang.org/x/tools/cmd/goimports). The idea is that you don't write imports at all. If you have a symbol that isn't imported, it searches your filesystem for an appropriate package and adds an import line. If you have an unused import, it deletes it.
 
 But [word on the street](https://news.ycombinator.com/item?id=12208242) is that some names are ambiguous, supplied by multiple packages, and `goimports` has no way to choose which one you mean. So if you comment out a line, and then uncomment it, `goimports` might add back a different import than the one you originally used. This, too, seems not entirely satisfactory.
+
+---
 
 I propose a new solution, which could be implemented as two new modes for `goimports` to run in or as one or two completely new tools.
 
@@ -49,3 +51,5 @@ In the first mode, this tool acts like `goimports`, but more conservatively. Ins
 In the second mode, this tool checks for commented out import lines, and tells you whether it found any (or optionally deletes them). It can be called in commit hooks, to prevent such lines from cluttering up a repository.
 
 This seems to me like it would be an improvement on the status quo.
+
+[^semantics]: At least, they don't look like they do. Not knowing Go, it's conceivable that one or both could. If the second can have different effects than the first, then the devs' recommendation seems particularly bad. In that case, if a `var _ = unused.Item` line shows up in a codebase, it's *probably* a mistake - but you can't be sure without checking, which takes much longer.
