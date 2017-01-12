@@ -19,7 +19,7 @@ import "unused"
 var _ = unused.Item  // TODO: Delete before committing!
 ```
 
-\- that is, add a line of code to trick the compiler into thinking that you're using the import, even though you're not.
+\- that is, add a line of code to trick the compiler into thinking that you're using the import, even though you're not.[^oneline]
 
 This does not strike me as a very good substitute. With a compiler flag, I could turn it on while debugging and turn it off for production to make sure I had no unused imports. I could use a commit hook to keep unused imports out of the repository. By tricking the compiler, there's no particularly easy way to do this. (I suppose I could put the string "FAKEIMPORT" is a comment on those lines, and grep for that string. This is still not a great solution.)
 
@@ -36,7 +36,7 @@ import unused
 var _ = unused.Item
 ```
 
-Neither affects the semantics of the program[^semantics]. If one is worth complaining about, so is the other. But the devs are sending mixed signals. It seems the first is worth complaining about, because the compiler complains. But it seems the second is not, because the devs recommend it. This should be a sign that something about this whole situation is unsatisfactory.
+Neither affects the semantics of the program, if we ignore that the first one doesn't compile[^semantics]. If one is worth complaining about, so is the other. But the devs are sending mixed signals. It seems the first is worth complaining about, because the compiler complains. But it seems the second is not, because the devs recommend it. This should be a sign that something about this whole situation is unsatisfactory.
 
 There is another solution, in the form of a tool called [`goimports`](https://godoc.org/golang.org/x/tools/cmd/goimports). The idea is that you don't write imports at all. If you have a symbol that isn't imported, it searches your filesystem for an appropriate package and adds an import line. If you have an unused import, it deletes it.
 
@@ -52,4 +52,5 @@ In the second mode, this tool checks for commented out import lines, and tells y
 
 This seems to me like it would be an improvement on the status quo.
 
-[^semantics]: At least, they don't look like they do. Not knowing Go, it's conceivable that one or both could. If the second can have different effects than the first, then the devs' recommendation seems particularly bad. In that case, if a `var _ = unused.Item` line shows up in a codebase, it's *probably* a mistake - but you can't be sure without checking, which takes much longer.
+[^oneline]: It seems that a one-line version of this is `import _ "unused"`. I'm not sure if there's any semantic difference between the two.
+[^semantics]: At least, they don't look like they do. Not knowing Go, it's conceivable that they could. If the second does have effects, then the devs' recommendation seems particularly bad. In that case, if a `var _ = unused.Item` line shows up in a codebase, it's *probably* a mistake - but you can't be sure without checking, which takes much longer.
