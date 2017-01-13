@@ -50,9 +50,9 @@ All of which is to say: although I don't use Go, it seems to me that Go has a pr
 
 I propose a new solution, which could be implemented as two new modes for `goimports` to run in or as one or two completely new tools.
 
-In the first mode, this tool acts like `goimports`, but more conservatively. Instead of removing unused imports, it merely comments them out. And instead of searching your filesystem for packages, it merely searches your comment lines, and uncomments them if there's a match. This solves the ambiguous naming problem.
+In the first mode, this tool acts like `goimports`, but more conservatively. Instead of removing unused imports, it merely comments them out. And instead of searching your filesystem for packages, it merely searches your comment lines, and uncomments them if there's a match.
 
-So if you're debugging, and comment out the only use of a package, this tool will comment out the import for you. When you uncomment that use, the import will be added back
+So if you're debugging, and comment out the only use of a package, this tool will comment out the import for you. When you uncomment that use, the import will be added back in, but without the ambiguous naming problem. At no point do you have to trick the compiler, so you don't have to remember to stop tricking the compiler.
 
 In the second mode, this tool checks for commented out import lines, and tells you whether it found any (or optionally deletes them). It can be called in commit hooks, to prevent such lines from cluttering up a repository.
 
