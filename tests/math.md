@@ -24,4 +24,4 @@ But I don't want most code blocks to process math, so `$foo - $bar` should be cl
 
     $foo - $bar.
 
-For that matter, sometimes I want to use currency in text, like $3 - $1. As you can see, that either does or doesn't work. Backslashes should definitely work: \$3 - \$1.
+For that matter, sometimes I want to use currency in text, like $3 - $1. But that doesn't work. Backslashes work, but they need to be doubled up for markdown: \\$3 - \\$1.
