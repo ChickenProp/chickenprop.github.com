@@ -23,3 +23,5 @@ And if I include a label tag \eqref{testlabel}, I should be able to reference it
 But I don't want most code blocks to process math, so `$foo - $bar` should be clean, and so should
 
     $foo - $bar.
+
+For that matter, sometimes I want to use currency in text, like $3 - $1. As you can see, that either does or doesn't work. Backslashes should definitely work: \$3 - \$1.
