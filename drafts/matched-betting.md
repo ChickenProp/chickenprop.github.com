@@ -101,7 +101,7 @@ each line represents a contour of the function, a set of points that all have th
 We can reparameterise in terms of $O_b$ and $σ = O_l - O_b$, the spread between the back and lay odds. Since $O_l ≥ O_b$, we only need to consider $σ ≥ 0$. This gives us
 
     $$ \begin{align}
-        P_q &= S_b(1 - C_l){ O_b + C_b - O_bC_b \over O_b + σ - C_l } - S_b
+        P_q &= S_b(1 - C_l){ O_b + C_b - O_bC_b \over O_b + σ - C_l } - S_b  \\
         P_f &= S_b (1 - C_l) (1 - C_b) { O_b - 1 \over O_b + σ - C_l }.
     \end{align} $$
 
@@ -113,7 +113,7 @@ We can be more precise, and figure out some ways to improve on a bet. Since the 
 
 To maximise profit, we usually need to consider that $S_b, C_b$ and $C_l$ are fixed, and find the dependence of $P$ on $O_b$ and $O_l$. For a free bet, that means we want to maximise the term
 
-     $$ P_f ∝ {O_b - 1 \over O_l - C_l}. $$
+    $$ P_f ∝ {O_b - 1 \over O_l - C_l}. $$
 
 This tells us several things. The first is that we want high back odds and low lay odds. That's not surprising, but it's also not very helpful; we expect back and lay odds to more-or-less rise and fall together. But it does tell us that adding a constant to both odds will increase profit; odds of 5 and 6 will be better than odds of 4 and 5. (We could also see this on the graph of $P_f(O_b, σ)$.)
 
@@ -127,7 +127,7 @@ That is, given a free bet $B_1$ with $σ(B_1) ≥ 0$, we can find a free bet $B_
 
 Or: given odds $O_b, O_l$, we can calulate the odds $O'$ that would give you the same profit, if you could find these odds for both a back and a lay bet.
 
-In turn, that tells you that if you want to improve your profits, you can ignore bets with $O_b < O'$. (Because those bets have lower back odds and surely also higher lay odds, and so lower profit.) This is a useful thing to know, that matched bet calculators don't tell you.
+In turn, that tells you that if you want to improve your profits, you can ignore bets with $O_b < O'$. This is a useful thing to know, that matched bet calculators don't tell you.
 
 To find $O'$:
 
@@ -138,7 +138,7 @@ To find $O'$:
 
 or
 
-     $$ O' = O_b { 1 - C_l + σ/O_b \over 1 - C_l + σ } $$
+    $$ O' = O_b { 1 - C_l + σ/O_b \over 1 - C_l + σ } $$
 
 which isn't exactly simpler but I think is more aesthetically pleasing (consider that $1-C_l$ is approximately as fundamental as $C_l$ itself).
 
