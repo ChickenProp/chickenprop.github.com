@@ -24,13 +24,13 @@ Now if Liverpool wins the match, the bookmaker pays you £30 and you lose £23.0
 
 (I'm ignoring for now the commission that the exchange will usually collect when you win a bet on them. With 2% commission, you would instead accept stakes of £7.01, wagering your own £23.13; if Liverpool doesn't win, you would earn $£7.01 · 0.98 = £6.87$, which is also what you'd earn if Liverpool does win.)
 
-Before bookmakers will give you a free bet, you'll usually have to place a bet with them using your own money.
+Before bookmakers will give you a free bet, you'll usually have to place a bet with them using your own money. You lose a small amount of money on this bet, but you can use the same principles to ensure that you lose the same amount no matter who wins. You might lose around £0.50 on a £10 qualifying bet, in which case you end up with around £6.50 profit when all's said and done.
 
 This has been a very brief introduction to matched betting. Now, into the math. I'm going to be focusing on two kinds of bet: qualifying bets, which are usually known as just bets, and free bets, where you don't lose anything if your back bet loses. I'm also going to ignore rounding; let's just pretend that the sterling is infinitely divisible.
 
 **Some definitions**
 
-We can think of a "matched bet" as an object with six values, $(O_b, O_l, S_b, S_l, C_b, C_l)$ representing a pair of back and lay bets. (A "free bet" and "qualifying bet" are also matched bets.)
+We can think of a "matched bet" as an object with six values, $(O_b, O_l, S_b, S_l, C_b, C_l)$ representing a pair of back and lay bets. (A "free bet" and "qualifying bet" are also matched bets.[^risk-free])
 
 $O_b, O_l$ are the odds on the back and lay bets. It's typically safe to assume $O_b < O_l$; otherwise, modulo commission, you could make a profit even on your qualifying bets. Also, because we're using decimal odds, we have $O_b, O_l ≥ 1$ (anything less than 1 corresponds to a probability below 0.)
 
@@ -292,60 +292,12 @@ where $O_S$ is the odds offered on Smarkets and $O_B$ is the odds offered on Bet
 
     $$ 98·O_b = 95·O_S. $$
 
-Since $98/95 ≈ 1.03, it's better to use Betfair than Smarkets if the offered odds are roughly 3% lower, which happens to be the difference in commission. So for example, odds of $6$ on Betfair correspond to roughly $6.19$ on Smarkets.
+Since $98/95 ≈ 1.03$, it's better to use Betfair than Smarkets if the offered odds are roughly 3% lower, which happens to be the difference in commission. So for example, odds of $6$ on Betfair correspond to roughly $6.19$ on Smarkets.
 
 It should be easy to take a bunch of equivalent bets on the two sites, and compare to see which seems likely to give better profit. I looked at three football games, and they all had exactly the same odds on all three positions (win/draw/win), even when they fluctuated slightly pre-game. (I did look at one game as it began, and the two sites didn't quite stay in sync then. But betting while odds are fluctuating a lot is a bad idea.) Which suggests that Smarkets is the better site. But it's plausible that Betfair offers better odds on smaller games (the ones I looked at were very popular).
 
+[^risk-free]: I'm assuming that all free bets are "stake not returned", which means that if you win, you collect your winnings but you don't also get to keep the stake that wasn't yours in the first place. If you have a "stake returned" free bet, that effectively increases the odds on the back side by $1$. I've not yet encountered one of these, myself.
+
+    Another type is the "risk-free" bet, which I won't go into here partly because I'm not 100% sure what it means. But I *think* that e.g. a "£10 risk-free bet" is the same as a £10 free (stake not returned) bet; and "£10 in risk-free bets" allows you to make a bet of more than £10, and if you lose, you get £10 back. I think the way to treat it is as putting £10 into a free bet and the remainder of your stake into a qualifying bet, and so by default you should put in no more than the risk-free amount.
 
 [^graph-shape]: Another way to look at this is by the shape of the "more profitable" space on the graphs of $P_q(O_b, σ)$ and $P_f(O_b, σ)$. In both cases, this is the space below and to the right of one of the level curves. On the $P_f$ graph, it's defined by two lines: $σ = 0$ and the level curve itself. If we add a line with constant $O_b$, that line can carve up the "less profitable" space without entering the "more profitable" space. But on the $P_q$ graph, the "more profitable" space is also defined by the line $O_b = 1$. Any line we draw with constant $O_b ≠ 1$ or $σ ≠ 0$ will carve up the "more profitable" space.
-
-
-
-In both cases, to get high profit we want high back odds and low lay odds. This isn't a surprise, but it's also not very helpful; we expect back and lay odds to more-or-less rise and fall together. But it does tell us that adding a constant to both odds will increase profit; odds of 5 and 6 will be better than odds of 4 and 5.
-
-But consider the unlikely scenario where $O_l = O_b$. We have derivatives
-
-     $$ { d \over d O_b } {O_b \over O_b - C_l }
-            = - { C_l \over (O_b - C_l)^2 } < 0         \\
-        { d \over d O_b } {O_b - 1 \over O_b - C_l }
-            = { 1 - C_l \over (O_b - C_l)^2 } > 0.      $$
-
-Both equations approach 1 as $O_b \to ∞$, but for a qualifying bet, it approaches from above, and for a free bet it approaches from below.
-
-What that suggests is that for a free bet, you'll find high profits by looking at bets with high odds. For a qualifying bet, you'll find high profits by looking at bets with low odds. (Unfortunately, qualifying bets often have a minimum odds to qualify.)
-
-
-We can't do the analagous thing for a qualifying bet. In real examples, ${O_b \over O_l - C_l} < 1$; but in the no-spread case, ${O_b \over O_b - C_l } > 1$. Any pair of bets with no spread will have more profit than any realistic pair of bets.
-
-But what we can do is find equivalent pairs with reduced spread. If we fix a target spread $σ'$, we have
-
-    $$ { O_b \over O_l - C_l } = { O' \over O' + σ' - C_l } \\
-       O_b (O' + σ' - C_l) = O'(O_l - C_l)                  \\
-       O'(O_l - C_l - O_b) = O_b(σ' - C_l)                  \\
-       O' = O_b{ σ' - C_l \over σ - C_l }                   $$
-
-$O'$ goes up as $σ'$ goes up
-
-Now remember that $O' ≥ 1$ by type constraints. So we can even get a minimum spread:
-
-    $$ σ'_\min = {1 \over O_b} (σ - C_l) + C_l. $$
-
-Summing up: if you can find a bet with odds $1$ and $1 + σ'_\min$, it'll have the same profit as your actual bet with odds $O_b$ and $O_l$. If you can find a bet with less spread than this, it'll have more profit than your actual bet, regardless of the specific odds.
-
-Note that in general, you can expect spread to be lower at lower odds. That's because odds are more sensitive to evidence when they're high than when they're low.
-
-For example, consider the probabilities 1/5 and 1/6. These are isomorphic to 4/5 and 5/6. In decimal, 1/5 and 1/6 are 1.25 and 1.2, while 4/5 and 5/6 are 5 and 6. In other words, the difference between the odds 1.25 and 1.2 is in one sense same as the difference between 5 and 6. But when it comes to betting, the differences are very different; we prefer the low odds.
-
-
-
-
-a/(b-c) = x/(x-c)
-a(x-c) = x(b-c)
-xa - ac = xb - xc
-xa - xb + xc = ac
-x(a - b + c) = ac
-x = ac / (a - b + c)
-
-
-should have x > a,b, I think?
-we have b > a, c<1. And usually a-b+c < 0, so this is <0.
