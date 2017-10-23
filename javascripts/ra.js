@@ -6,14 +6,16 @@ $(function () {
             $(this).html(html);
             $(this).addClass('do-math');
 
-	    // MathJax and pygments interfere with each other, and the markdown
-	    // interpreter wraps code blocks in a pygments div. This is a hacky
-	    // way to remove pygment highlighting from mathjax.
-	    if ($(this).parent().prop('tagName') == 'PRE'
-		&& $(this).parent().parent().prop('tagName') == 'DIV')
-	    {
-		$(this).parent().removeClass('highlight');
-	    }
+            // MathJax and pygments interfere with each other, and the markdown
+            // interpreter wraps code blocks in a pygments div. This is a hacky
+            // way to remove pygment highlighting from mathjax.
+            if ($(this).parent().prop('tagName') == 'PRE'
+                && $(this).parent().parent().prop('tagName') == 'DIV')
+            {
+                // Both PRE and DIV have the class, we don't want either.
+                $(this).parent().removeClass('highlight');
+                $(this).parent().parent().removeClass('highlight');
+            }
         }
         else {
             $(this).addClass('no-math');
