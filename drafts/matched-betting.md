@@ -8,7 +8,7 @@ This post isn't advice about how to get into matched betting. That market is pro
 
 (Um, but after that I feel obliged to give at least *some* safety information. So here goes: if you're not in the UK, this may be a bad idea. Don't use credit cards to deposit funds; it seems they interpret that as a cash transaction and charge fees. Start small; that way there's less at risk in case you do something silly like use a credit card to deposit funds. Probably don't expect to earn lots of money this way, either in total or per-hour.)
 
-Instead, I want to go into the math behind it, in more depth than I've seen in other places.
+Instead, I want to go into the math behind it, in more depth than I've seen in other places. None of this math is complicated, but some of it is useful, and I haven't seen anyone do it before. (I even deliberately went looking.)
 
 **A simple example**
 
@@ -296,8 +296,20 @@ Since $98/95 ≈ 1.03$, it's better to use Betfair than Smarkets if the offered 
 
 It should be easy to take a bunch of equivalent bets on the two sites, and compare to see which seems likely to give better profit. I looked at three football games, and they all had exactly the same odds on all three positions (win/draw/win), even when they fluctuated slightly pre-game. (I did look at one game as it began, and the two sites didn't quite stay in sync then. But betting while odds are fluctuating a lot is a bad idea.) Which suggests that Smarkets is the better site. But it's plausible that Betfair offers better odds on smaller games (the ones I looked at were very popular).
 
+---
+
+And that's it. I'm sure there are other interesting questions you could ask, but I'm going to stop there.
+
+Something that would be nice would be a calculator that can make use of this. The online calculators all seem pretty crap: they only tell you profit, lay stake and lay liability, and only for one bet at a time. Being able to compare bets seems like it would be a pretty important feature, but I haven't seen it anywhere. (Some of them have features to work with more complicated types of bets than I've looked at, but I don't care about that. [Here's one](https://matchedbettingblog.com/matched-betting-calculator/) that's no worse than any other.) I've also seen an excel calculator, which had the neat feature of automatically adding bets to a spreadsheet. But again, only one bet at a time; plus, I don't have excel, and don't keep track of my bets in a spreadsheet. (I use [ledger](http://ledger-cli.org/), though it's not a great fit.)
+
+I've written a command-line tool that can show you multiple bets at a time for comparison purposes. It also shows you, for a free bet, the lowest possible back odds to improve on your highest-profit bet ($O'$); or, for a qualifying bet, the highest possible spread that *won't* improve on it ($σ'$).
+
+But the interface isn't very good, I think partly because of the limits of the command line and partly because of a questionable design decision (see the README). And it can't show graphs, which I think would be nice. If you want to use it anyway, it's [on github](https://github.com/ChickenProp/matched-bets).
+
+If I were to dedicate more time to the project, I currently think I'd start again in Javascript. I think I have a vague idea of how a decent one could work. But right now, as far as I can tell there are no good calculators.
+
 [^risk-free]: I'm assuming that all free bets are "stake not returned", which means that if you win, you collect your winnings but you don't also get to keep the stake that wasn't yours in the first place. If you have a "stake returned" free bet, that effectively increases the odds on the back side by $1$. I've not yet encountered one of these, myself.
 
-    Another type is the "risk-free" bet, which I won't go into here partly because I'm not 100% sure what it means. But I *think* that e.g. a "£10 risk-free bet" is the same as a £10 free (stake not returned) bet; and "£10 in risk-free bets" allows you to make a bet of more than £10, and if you lose, you get £10 back. I think the way to treat it is as putting £10 into a free bet and the remainder of your stake into a qualifying bet, and so by default you should put in no more than the risk-free amount.
+    Another type is the "risk-free" bet, which I won't go into here partly because I'm not 100% sure what it means. But I *think* that "£10 in risk-free bets" allows you to make a bet of more than £10, and if you lose, you get £10 back. I think the way to treat it is as putting £10 into a free bet (stake not returned) and the remainder of your stake into a qualifying bet, and so by default you should put in no more than the risk-free amount.
 
 [^graph-shape]: Another way to look at this is by the shape of the "more profitable" space on the graphs of $P_q(O_b, σ)$ and $P_f(O_b, σ)$. In both cases, this is the space below and to the right of one of the level curves. On the $P_f$ graph, it's defined by two lines: $σ = 0$ and the level curve itself. If we add a line with constant $O_b$, that line can carve up the "less profitable" space without entering the "more profitable" space. But on the $P_q$ graph, the "more profitable" space is also defined by the line $O_b = 1$. Any line we draw with constant $O_b ≠ 1$ or $σ ≠ 0$ will carve up the "more profitable" space.
