@@ -57,7 +57,7 @@ So your profit is $R_{bb} + R_{bl}$ if your back bet wins; and $R_{lb} + R_{ll}$
 
 **Optimal lay stake**
 
-The first question we'll ask is, given $O_*$, $C_*$ and $S_b$, what must $S_l$ be to make our bet a matched bet? Or in other words, what $S_l$ should we choose to eliminate all risk?
+The first question we'll ask is, given $O_\*$, $C_\*$ and $S_b$, what must $S_l$ be to make our bet a matched bet? Or in other words, what $S_l$ should we choose to eliminate all risk?
 
 We need
 
