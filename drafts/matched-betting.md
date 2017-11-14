@@ -79,23 +79,17 @@ A thing to note here is that $O_l$ and $C_l$ only appear in the term $O_l - C_l$
 
 **Profit**
 
-Next, we'll want to know how much profit we make. This is given by
+Next, we'll want to know how much profit we make. This is given by $R_{lb} + R_{ll}$, where we calculate $R_{ll}$ using the lay stake we just found. But we'll find it more convenient to think in terms of
 
-    $$ P = R_{lb} + R_{ll} $$
+    $$ P = { R_{lb} + R_{ll} \over S_b }, $$
 
-using the lay stake that we just calculated. Under a qualifying bet, this is
+since profit is always directly proportional to $S_b$. Under a qualifying bet, this is
 
-    $$ \begin{align}
-        P_q &= -S_b + S_l (1 - C_l)                                    \\
-            &= S_b(1 - C_l){ O_b + C_b - O_bC_b \over O_l - C_l } - S_b
-    \end{align} $$
+    $$ P_q = (1 - C_l){ (O_b - 1)(1 - C_b) + 1 \over O_l - C_l } - 1, $$
 
 and for a free bet, it's
 
-    $$ \begin{align}
-        P_f &= S_l (1 - C_l)                                           \\
-            &= S_b (1 - C_l) (1 - C_b) { O_b - 1 \over O_l - C_l }.
-    \end{align} $$
+    $$ P_f = (1 - C_l) (1 - C_b) { O_b - 1 \over O_l - C_l }. $$
 
 We can look at these functions graphically:
 
