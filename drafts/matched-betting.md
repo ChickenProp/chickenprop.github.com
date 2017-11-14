@@ -4,7 +4,7 @@ layout: draft
 ---
 I've been doing a little bit of matched betting lately. The idea is that you place two opposite bets on the same event, calibrated so that your profit will be the same no matter which bet wins. If you do this entirely with your own money, your profit will (under reasonable assumptions) be negative. But bookmakers often offer free bets; you can use matched betting to extract most of the amount of that free bet as actual money.
 
-This post isn't advice about how to get into matched betting. That market is probably saturated; if you want to learn, I used [this guide](https://matchedbettingblog.com/matched-betting-intro/#.WdlEVoj6xhE) and it served me well. (However, if anyone is inspired to try it by this post, I have a referral code for [smarkets](https://smarkets.com): **safto14**. It looks like if you sign up with that and bet £20, both you and I will receive £10 in risk-free bets.)
+This post isn't advice about how to get into matched betting. That market is probably saturated; if you want to learn, I used [this guide](https://matchedbettingblog.com/matched-betting-intro/) and it served me well. (However, if anyone is inspired to try it by this post, I have a referral code for [smarkets](https://smarkets.com): **safto14**. It looks like if you sign up with that and bet $£20$, both you and I will receive $£10$ in risk-free bets.)
 
 (Um, but after that I feel obliged to give at least *some* safety information. So here goes: if you're not in the UK, this may be a bad idea. Don't use credit cards to deposit funds; it seems they interpret that as a cash transaction and charge fees. Start small; that way there's less at risk in case you do something silly like use a credit card to deposit funds. Probably don't expect to earn lots of money this way, either in total or per-hour.)
 
@@ -14,17 +14,17 @@ Instead, I want to go into the math behind it, in more depth than I've seen in o
 
 (If you've seen one example of matched betting, you've seen them all, and you can skip this particular one.)
 
-You have a £10 free bet at a bookmaker. You find a football game, say Manchester Utd versus Liverpool, that you want to bet on. The bookmaker offers odds of $4$ on Liverpool, and you bet your £10 on them.
+You have a $£10$ free bet at a bookmaker. You find a football game, say Manchester Utd versus Liverpool, that you want to bet on. The bookmaker offers odds of $4$ on Liverpool, and you bet your $£10$ on them.
 
-A note on odds: the usual convention in gambling seems to be to use decimal odds. Odds of $x$ mean that your potential winnings are $x-1$ times your stake. Thus, odds of $4$ mean a bet of £10 has the potential to pay out £30. If you're used to odds notated $a:b$ or (equivalently) $a/b$, then the decimal odds are given by $a/b + 1$.
+A note on odds: the usual convention in gambling seems to be to use decimal odds. Odds of $x$ mean that your potential winnings are $x-1$ times your stake. Thus, odds of $4$ mean a bet of $£10$ has the potential to pay out $£30$. If you're used to odds notated $a:b$ or (equivalently) $a/b$, then the decimal odds are given by $a/b + 1$.
 
-So if Liverpool wins, you'll earn £30; if they lose or draw, you lose nothing. You then look up the same match at a betting exchange. An exchange allows you to take both sides of a bet, which a bookmaker won't. The exchange offers odds of 4.3 to lay Liverpool; this means that you win your bet in the exchange only if Liverpool *doesn't* win. You accept a stake of £6.98, which means your own stake is £23.03.
+So if Liverpool wins, you'll earn $£30$; if they lose or draw, you lose nothing. You then look up the same match at a betting exchange. An exchange allows you to take both sides of a bet, which a bookmaker won't. The exchange offers odds of 4.3 to lay Liverpool; this means that you win your bet in the exchange only if Liverpool *doesn't* win. You accept a stake of $£6.98$, which means your own stake is $£23.03$.
 
-Now if Liverpool wins the match, the bookmaker pays you £30 and you lose £23.03 in the exchange, for a net profit of £6.97. And if Liverpool loses, you earn £6.98 in the exchange and lose nothing at the bookmaker, for a net profit of £6.98. You've turned a £10 free bet into almost £7 of actual money.
+Now if Liverpool wins the match, the bookmaker pays you $£30$ and you lose $£23.03$ in the exchange, for a net profit of $£6.97$. And if Liverpool loses, you earn $£6.98$ in the exchange and lose nothing at the bookmaker, for a net profit of $£6.98$. You've turned a $£10$ free bet into almost $£7$ of actual money.
 
-(I'm ignoring for now the commission that the exchange will usually collect when you win a bet on them. With 2% commission, you would instead accept stakes of £7.01, wagering your own £23.13; if Liverpool doesn't win, you would earn $£7.01 · 0.98 = £6.87$, which is also what you'd earn if Liverpool does win.)
+(I'm ignoring for now the commission that the exchange will usually collect when you win a bet on them. With $2\%$ commission, you would instead accept stakes of $£7.01$, wagering your own $£23.13$; if Liverpool doesn't win, you would earn $£7.01 · 0.98 = £6.87$, which is also what you'd earn if Liverpool does win.)
 
-Before bookmakers will give you a free bet, you'll usually have to place a bet with them using your own money. You lose a small amount of money on this bet, but you can use the same principles to ensure that you lose the same amount no matter who wins. You might lose around £0.50 on a £10 qualifying bet, in which case you end up with around £6.50 profit when all's said and done.
+Before bookmakers will give you a free bet, you'll usually have to place a bet with them using your own money. You lose a small amount of money on this bet, but you can use the same principles to ensure that you lose the same amount no matter who wins. You might lose around $£0.50$ on a $£10$ qualifying bet, in which case you end up with around $£6.50$ profit when all's said and done.
 
 This has been a very brief introduction to matched betting. Now, into the math. I'm going to be focusing on two kinds of bet: qualifying bets, which are usually known as just bets, and free bets, where you don't lose anything if your back bet loses. I'm also going to ignore rounding; let's just pretend that the sterling is infinitely divisible.
 
@@ -32,11 +32,11 @@ This has been a very brief introduction to matched betting. Now, into the math. 
 
 We can think of a "matched bet" as an object with six values, $(O_b, O_l, S_b, S_l, C_b, C_l)$ representing a pair of back and lay bets. (A "free bet" and "qualifying bet" are also matched bets.[^risk-free])
 
-$O_b, O_l$ are the odds on the back and lay bets. It's typically safe to assume $O_b < O_l$; otherwise, modulo commission, you could make a profit even on your qualifying bets. Also, because we're using decimal odds, we have $O_b, O_l ≥ 1$ (anything less than 1 corresponds to a probability below 0.)
+$O_b, O_l$ are the odds on the back and lay bets. It's typically safe to assume $O_b < O_l$; otherwise, modulo commission, you could make a profit even on your qualifying bets. Also, because we're using decimal odds, we have $O_b, O_l ≥ 1$ (anything less than $1$ corresponds to a probability below $0$.)
 
 $S_b, S_l ≥ 0$ are the stakes on the back and lay bets. Note that $S_l$ is the stake offered by the *other party* to your lay bet; it's (roughly) the amount you stand to win on that bet, not the amount you stand to lose. This may seem strange, but it's the convention used.
 
-And $C_b, C_l ∈ [0, 1]$ are the commission charged on your winnings on each side. Usually $C_b = 0$: bookmakers don't charge commissions, they make money by offering low odds. The two exchanges I've used have $C_l = 2% = 0.02$ (Smarkets) and $C_l = 5% = 0.05$ (Betfair).
+And $C_b, C_l ∈ [0, 1]$ are the commission charged on your winnings on each side. Usually $C_b = 0$: bookmakers don't charge commissions, they make money by offering low odds. The two exchanges I've used have $C_l = 2\% = 0.02$ (Smarkets) and $C_l = 5\% = 0.05$ (Betfair).
 
 A matched bet is one that gives the same profit no matter which side wins; as such, these six values are over-determined. Knowing any five of them will fix the value of the sixth.
 
