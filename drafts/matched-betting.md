@@ -4,9 +4,9 @@ layout: draft
 ---
 I've been doing a little bit of matched betting lately. The idea is that you place two opposite bets on the same event, calibrated so that your profit will be the same no matter which bet wins. If you do this entirely with your own money, your profit will (under reasonable assumptions) be negative. But bookmakers often offer free bets; you can use matched betting to extract most of the amount of that free bet as actual money.
 
-This post isn't advice about how to get into matched betting. That market is probably saturated; if you want to learn, I used [this guide](https://matchedbettingblog.com/matched-betting-intro/) and it served me well. (However, if anyone is inspired to try it by this post, I have a referral code for [smarkets](https://smarkets.com): **safto14**. It looks like if you sign up with that and bet $£20$, both you and I will receive $£10$ in risk-free bets.)
+This post isn't advice about how to get into matched betting. That market is probably saturated; if you want to learn, I used [this guide](https://matchedbettingblog.com/matched-betting-intro/) and it served me well. (However, if anyone is inspired to try it by this post, I have a referral code for [smarkets](https://smarkets.com): **safto14**. It looks like if you sign up with that and bet $£20$, both you and I will receive $£10$ in risk-free bets. I swear that's not why I'm posting this.)
 
-(Um, but after that I feel obliged to give at least *some* safety information. So here goes: if you're not in the UK, this may be a bad idea. Don't use credit cards to deposit funds; it seems they interpret that as a cash transaction and charge fees. Start small; that way there's less at risk in case you do something silly like use a credit card to deposit funds. Probably don't expect to earn lots of money this way, either in total or per-hour.)
+(Um, but after that I feel obliged to give at least *some* safety information. So here goes: if you're not a UK citizen currently in the UK, this may be a bad idea. Don't use credit cards to deposit funds; it seems they interpret that as a cash transaction and charge fees. Start small; that way there's less at risk in case you do something silly like use a credit card to deposit funds. Probably don't expect to earn lots of money this way, either in total or per-hour.)
 
 Instead, I want to go into the math behind it, in more depth than I've seen in other places. None of this math is complicated, but some of it is useful, and I haven't seen anyone do it before. (I even deliberately went looking.)
 
@@ -18,7 +18,7 @@ You have a $£10$ free bet at a bookmaker. You find a football game, say Manches
 
 A note on odds: the usual convention in gambling seems to be to use decimal odds. Odds of $x$ mean that your potential winnings are $x-1$ times your stake. Thus, odds of $4$ mean a bet of $£10$ has the potential to pay out $£30$. If you're used to odds notated $a:b$ or (equivalently) $a/b$, then the decimal odds are given by $a/b + 1$.
 
-So if Liverpool wins, you'll earn $£30$; if they lose or draw, you lose nothing. You then look up the same match at a betting exchange. An exchange allows you to take both sides of a bet, which a bookmaker won't. The exchange offers odds of 4.3 to lay Liverpool; this means that you win your bet in the exchange only if Liverpool *doesn't* win. You accept a stake of $£6.98$, which means your own stake is $£23.03$.
+So if Liverpool wins, you'll earn $£30$; if they lose or draw, you lose nothing. You then look up the same match at a betting exchange. An exchange allows you to take both sides of a bet, which a bookmaker won't. The exchange offers odds of $4.3$ to lay Liverpool; this means that you win your bet in the exchange only if Liverpool *doesn't* win. You accept a stake of $£6.98$, which means your own stake is $£23.03$.
 
 Now if Liverpool wins the match, the bookmaker pays you $£30$ and you lose $£23.03$ in the exchange, for a net profit of $£6.97$. And if Liverpool loses, you earn $£6.98$ in the exchange and lose nothing at the bookmaker, for a net profit of $£6.98$. You've turned a $£10$ free bet into almost $£7$ of actual money.
 
@@ -40,7 +40,7 @@ And $C_b, C_l ∈ [0, 1]$ are the commission charged on your winnings on each si
 
 A matched bet is one that gives the same profit no matter which side wins; as such, these six values are over-determined. Knowing any five of them will fix the value of the sixth.
 
-Now let $R_{xy}$ (where $x,y ∈ \{b,l\}$) be your return on side $y$ if your bet on side $x$ wins. So for a qualifying bet, we have:
+Now let $R_{xy}$ (where $x,y ∈ \\{b,l\\}$) be your return on side $y$ if your bet on side $x$ wins. So for a qualifying bet, we have:
 
     $$ \begin{align}
          R_{bb} &= S_b (O_b - 1) (1 - C_b)     \\
@@ -57,28 +57,25 @@ So your profit is $R_{bb} + R_{bl}$ if your back bet wins; and $R_{lb} + R_{ll}$
 
 **Optimal lay stake**
 
-The first question we'll ask is, given $O_·, C_·$ and $S_b$, what must $S_l$ be to make our bet a matched bet? Or, what $S_l$ should we choose to eliminate all risk? We need
+The first question we'll ask is, given $O_*$, $C_*$ and $S_b$, what must $S_l$ be to make our bet a matched bet? Or in other words, what $S_l$ should we choose to eliminate all risk?
 
-    $$ R_{bb} + R_{bl} = R_{lb} + R_{ll}. $$
+We need
 
-Rearranging, we get
+    $$ R_{bb} + R_{bl} = R_{lb} + R_{ll} $$
 
-    $$ R_{ll} - R_{bl} = R_{bb} - R_{lb}                       \\
-       S_l (R_{ll}/S_l - R_{bl}/S_l) = R_{bb} - R_{lb}         \\
-       S_l = { R_{bb} - R_{lb} \over R_{ll}/S_l - R_{bl}/S_l } $$
+which after some (perhaps silly-seeming) substitution and rearrangement gives
 
-which seems circular, but when we substitute values $S_l$ disappears from the right hand side. For a qualifying bet, this gives
+    $$ S_l = { R_{bb} - R_{lb} \over R_{ll}/S_l - R_{bl}/S_l }. $$
 
-    $$ \begin{align}
-        S_l &= { S_b (O_b - 1) (1 - C_b) + S_b \over (1 - C_l) + (O_l - 1) } \\
-            &= S_b { O_b - C_b(O_b - 1) \over O_l - C_l }.
-    \end{align}$$
+This looks circular, but when we substitute for the values of $R_{**}$, $S_l$ disappears from the right hand side. For a qualifying bet, this gives
 
-And for a free bet, we have
+    $$ S_l = S_b { (O_b - 1)(1 - C_b) + 1 \over O_l - C_l }, $$
+
+and for a free bet,
 
     $$ S_l = S_b { (O_b - 1)(1 - C_b) \over O_l - C_l }. $$
 
-A thing to note here is that $O_l$ only appears in the term $O_l - C_l$. In other words, the effect of lay commission is to decrease the effective lay odds in the most natural way. This will show up again, but it's not universal.
+A thing to note here is that $O_l$ and $C_l$ only appear in the term $O_l - C_l$. In other words, the effect of lay commission is to decrease the effective lay odds in the most natural way. It would be nice if this happened in other contexts too, but unfortunately I haven't come across it. The $O_l - C_l$ term is common, but it's usually accompanied by another $O_l$ and/or $C_l$ somewhere else in the expression.
 
 **Profit**
 
