@@ -42,12 +42,12 @@ A matched bet is one that gives the same profit no matter which side wins; as su
 
 Now let $R_{xy}$ (where $x,y ∈ \\{b,l\\}$) be your return on side $y$ if your bet on side $x$ wins. So for a qualifying bet, we have:
 
-    $$ \begin{align}
+    $$ \begin{align*}
          R_{bb} &= S_b (O_b - 1) (1 - C_b)     \\
          R_{bl} &= - S_l (O_l - 1)             \\
          R_{lb} &= - S_b                       \\
          R_{ll} &= S_l (1 - C_l).
-    \end{align} $$
+    \end{align*} $$
 
 For a free bet, the only change is
 
@@ -79,11 +79,11 @@ A thing to note here is that $O_l$ and $C_l$ only appear in the term $O_l - C_l$
 
 **Profit**
 
-Next, we'll want to know how much profit we make. This is given by $R_{lb} + R_{ll}$, where we calculate $R_{ll}$ using the lay stake we just found. But we'll find it more convenient to think in terms of
+Next, we'll want to know how much profit we make. This is given by $R_{lb} + R_{ll}$, where we calculate $R_{ll}$ using the lay stake we just found. But since both of these terms are proportional to $S_b$, we'll find it more convenient to think in terms of profit *per unit of back stake*,
 
-    $$ P = { R_{lb} + R_{ll} \over S_b }, $$
+    $$ P = { R_{lb} + R_{ll} \over S_b }. $$
 
-since profit is always directly proportional to $S_b$. Under a qualifying bet, this is
+Under a qualifying bet, this is
 
     $$ P_q = (1 - C_l){ (O_b - 1)(1 - C_b) + 1 \over O_l - C_l } - 1, $$
 
@@ -93,30 +93,35 @@ and for a free bet, it's
 
 We can look at these functions graphically:
 
-each line represents a contour of the function, a set of points that all have the same profit. The sets of contours look superficially similar, but they're generally steeper for a free bet.
+each line represents a contour of the function, a set of points that all have the same profit. The sets of contours look superficially similar, but they're generally steeper for a free bet. In both cases, profit increases with $O_b$ and decreases with $O_l$.
 
 We can reparameterise in terms of $O_b$ and $σ = O_l - O_b$, the spread between the back and lay odds. Since $O_l ≥ O_b$, we only need to consider $σ ≥ 0$. This gives us
 
-    $$ \begin{align}
-        P_q &= S_b(1 - C_l){ O_b - C_b(1 - O_b) \over O_b + σ - C_l } - S_b  \\
-        P_f &= S_b (1 - C_l) (1 - C_b) { O_b - 1 \over O_b + σ - C_l }.
-    \end{align} $$
+    $$ \begin{align*}
+        P_q &= (1 - C_l){ (O_b - 1)(1 - C_b) + 1 \over O_b + σ - C_l } - 1  \\
+        P_f &= (1 - C_l) (1 - C_b) { O_b - 1 \over O_b + σ - C_l }.
+    \end{align*} $$
 
 These are more distinct. Looking at these graphs, it seems that for a qualifying bet, having low $σ$ is more significant than having high $O_b$; but for a free bet, having high $O_b$ is more significant than having low $σ$. We'll make this more precise later.
 
-Note that in both types of bet, profit is directly proportional to $S_b$. So it makes just as much sense to think about $P/S_b$, our profit as a fraction of the bet amount. This simplifies a lot of equations.
+We can also look at $P_q - P_f$, the difference in profit between a qualifying bet and a free bet. This isn't particularly useful to compare bets: you place qualifying bets to get free bets, and you place free bets to get qualifying bets, and if you're doing pure matched betting, I don't think you'll ever be asking yourself *should I place this bet free or as a qualifier?* Still, the difference is
+
+    $$ P_q - P_f = {1 \over O_l - C_l} - 1
+                 = { 1 - (O_l - C_l) \over O_l - C_l }. $$
+
+If your $O_l$ is unrealistically tiny, you'll make slightly more money on a qualifier than a free bet. But the more $O_l$ grows, the worse a qualifier becomes relative to a free bet. This, too, is evidence that you should be looking at different sorts of bets for your qualifiers and your free bets.
 
 **Liability**
 
-One more thing is important when making a matched bet: lay liability. This is how much you stand to lose on the exchange where you make your lay bet. It's only important for boring real-world liquidity reasons: you need to have this much money in your account at the exchange, which means you need to be able to spare it from your bank account for a week or so. Low-liability bets are also safer if something goes wrong, which makes them a good choice for early dabblers in matched betting.
+One more thing is important when making a matched bet: lay liability. This is how much you stand to lose on the exchange where you make your lay bet. It's only important for boring real-world reasons like liquidity and exogenous risk. You need to have this much money in your account at the exchange, which means you need to be able to spare it from your bank account for a week or so. Low-liability bets are also safer if something goes wrong, which makes them a good choice for early dabblers in matched betting.
 
 Liability is simply given by $-R_{bl} = S_l (O_l - 1)$, which is
 
-    $$ S_b { (O_l - 1)(O_b - C_b(O_b - 1)) \over O_l - C_l } $$
+    $$ S_b (O_l - 1) { (O_b - 1)(1 - C_b) - 1 \over O_l - C_l } $$
 
 for a qualifying bet and
 
-    $$ S_b { (O_b - 1)(O_l - 1)(1 - C_b) \over O_l - C_l }  $$
+    $$ S_b (O_l - 1) { (O_b - 1)(1 - C_b) \over O_l - C_l }  $$
 
 for a free bet.
 
