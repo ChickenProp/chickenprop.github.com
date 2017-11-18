@@ -147,13 +147,14 @@ What that means is: given any free bet, we can construct another free bet with e
 
 Or: given odds $O_b, O_l$, we can calulate the odds $O'$ that would give you the same profit, if you could find these odds for both a back and a lay bet.
 
-In turn, that tells you that if you want to improve your profits, you can ignore bets with $O_b < O'$. (Because for those bets, $P_f(O_b, σ) < P_f(O', σ) < P_f(O', 0)$. The first inequality comes from adding a constant to both odds, and the second comes from reducing $O_l$.) This is a useful thing to know, that matched bet calculators don't tell you.
+In turn, that tells you that if you want to improve your profits, you can ignore bets with $O_b < O'$. (Because for those bets, $P_f(O_b, σ) < P_f(O', σ) ≤ P_f(O', 0)$. The first inequality comes from adding a constant to both odds, and the second comes from reducing $O_l$.) This is a useful thing to know, that matched bet calculators don't tell you.
 
 To find $O'$, we set
 
     $$ { O_b - 1 \over O_l - C_l } = { O' - 1 \over O' - C_l } $$
 
 and deduce
+
     $$ \begin{align*}
         O' = { O_l - O_bC_l \over 1 + O_l - O_b - C_l } \\
           &= O_b { 1 - C_l + σ/O_b \over 1 - C_l + σ }.
