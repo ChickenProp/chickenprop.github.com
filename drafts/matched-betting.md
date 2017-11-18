@@ -135,44 +135,40 @@ To maximise profit, we usually need to consider that $S_b, C_b$ and $C_l$ are fi
 
     $$ P_f ∝ {O_b - 1 \over O_l - C_l}. $$
 
-This tells us several things. The first is that we want high back odds and low lay odds. We already knew that, and it's not very helpful; we expect back and lay odds to more-or-less rise and fall together. But it does tell us that adding a constant to both odds will increase profit; odds of 5 and 6 will be better than odds of 4 and 5. (We could also see this on the graph of $P_f(O_b, σ)$.)
+This tells us a few things. The first is that we want high back odds and low lay odds. We already knew that, and it's not very helpful; we expect back and lay odds to more-or-less rise and fall together. It also tells us that adding a constant to both odds will increase profit; odds of 5 and 6 will be better than odds of 4 and 5. (This, too, we could have deduced before; or we could have seen it on the graph of $P_f(O_b, σ)$.)
 
-If we set $σ = 0$, the term to maximise is
+But consider what happens when $σ = 0$. Then the term in question is
 
     $$ { O_b - 1 \over O_b - C_l } $$
 
-which takes all values in $[0, 1)$, just as it does when $σ > 0$.
+which, as $O_b$ ranges from $1$ to $∞$, takes all values in $[0, 1)$. But when $σ > 0$, the possible values are exactly the same; high $σ$ changes the $O_b$ that gives you any particular profit, but it doesn't make any profit value available or unavailable.
 
-That is, given any free bet, we can find another free bet with equal profit but $σ = 0$, not changing $S_b$, $C_l$ or $C_b$.
+What that means is: given any free bet, we can construct another free bet with equal profit but $σ = 0$, not changing $S_b$ or $C_\*$.
 
 Or: given odds $O_b, O_l$, we can calulate the odds $O'$ that would give you the same profit, if you could find these odds for both a back and a lay bet.
 
-In turn, that tells you that if you want to improve your profits, you can ignore bets with $O_b < O'$. This is a useful thing to know, that matched bet calculators don't tell you.
+In turn, that tells you that if you want to improve your profits, you can ignore bets with $O_b < O'$. (Because for those bets, $P_f(O_b, σ) < P_f(O', σ) < P_f(O', 0)$. The first inequality comes from adding a constant to both odds, and the second comes from reducing $O_l$.) This is a useful thing to know, that matched bet calculators don't tell you.
 
-To find $O'$:
+To find $O'$, we set
 
-    $$ { O_b - 1 \over O_l - C_l } = { O' - 1 \over O' - C_l } \\
-       (O_b - 1)(O' - C_l) = (O' - 1)(O_l - C_l)               \\
-       O'(O_b - 1 - O_l + C_l) = O_bC_l - O_l                  \\
-       O' = { O_l - O_bC_l \over 1 + O_l - O_b - C_l }         $$
+    $$ { O_b - 1 \over O_l - C_l } = { O' - 1 \over O' - C_l } $$
 
-or
+and deduce
+    $$ \begin{align*}
+        O' = { O_l - O_bC_l \over 1 + O_l - O_b - C_l } \\
+          &= O_b { 1 - C_l + σ/O_b \over 1 - C_l + σ }.
+    \end{align*} $$
 
-    $$ O' = O_b { 1 - C_l + σ/O_b \over 1 - C_l + σ } $$
-
-which isn't exactly simpler but I think is more aesthetically pleasing (consider that $1-C_l$ is approximately as fundamental as $C_l$ itself).
+The expression with $σ$ isn't exactly simpler, but I think it's more aesthetically pleasing. (Consider that $1-C_l$ is approximately as fundamental as $C_l$ itself.)
 
 We can also calculate $O'$ and $P_f$ as functions of each other:
 
-    $$ P_f = S_b (1 - C_l) (1 - C_b) { O' - 1 \over O' - C_l }             \\
-       (O' - C_l)P_f = S_b(1 - C_l)(1 - C_b)(O' - 1)                       \\
-       O'P_f - O'(S_b(1 - C_l)(1 - C_b)) = C_lP_f - S_b(1 - C_l)(1 - C_b)  \\
-       O' = {    C_lP_f - S_b(1 - C_l)(1 - C_b)
-              \over P_f - S_b(1 - C_l)(1 - C_b) }                          $$
+    $$ P_f = (1 - C_l) (1 - C_b) { O' - 1 \over O' - C_l }                 \\
+       O' = { C_lP_f - (1 - C_l)(1 - C_b) \over P_f - (1 - C_l)(1 - C_b) } $$
 
 (image)
 
-$P_f$ approaches an asymtote at $S_b (1 - C_l)(1 - C_b)$, but slowly. With $C_b = 0, C_l = 0.02$, extracting 80% of a free bet is only possible if $O_b ≥ 5.36$. For 90%, you need $O_b ≥ 12.03$. Such bets are rare in my experience, and have high spread.
+$P_f$ approaches an asymtote at $(1 - C_l)(1 - C_b)$, but slowly. With $C_b = 0, C_l = 0.02$, extracting 80% of a free bet is only possible if $O_b ≥ 5.36$. For 90%, you need $O_b ≥ 12.03$. Such bets are somewhat rare in my experience, and typically have high spread.
 
 One more option is, given profit, to calculate the level curve of all bets which give that profit. This curve divides bet-space into two regions, and it should be easy to see whether a bet gives more or less than this amount of profit.
 
