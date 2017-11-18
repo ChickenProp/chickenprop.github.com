@@ -168,32 +168,27 @@ We can also calculate $O'$ and $P_f$ as functions of each other:
 
 (image)
 
-$P_f$ approaches an asymtote at $(1 - C_l)(1 - C_b)$, but slowly. With $C_b = 0, C_l = 0.02$, extracting 80% of a free bet is only possible if $O_b ≥ 5.36$. For 90%, you need $O_b ≥ 12.03$. Such bets are somewhat rare in my experience, and typically have high spread.
+$P_f$ approaches an asymtote at $(1 - C_l)(1 - C_b)$, but slowly. With $C_b = 0, C_l = 0.02$, extracting $80\%$ of a free bet is only possible if $O_b ≥ 5.36$. For $90\%$, you need $O_b ≥ 12.03$. Such bets are somewhat rare in my experience, and typically have high spread.
 
-One more option is, given profit, to calculate the level curve of all bets which give that profit. This curve divides bet-space into two regions, and it should be easy to see whether a bet gives more or less than this amount of profit.
+We can go more general. Given a profit, we can calculate the level curve of all bets which generate that profit; the case $σ=0$ gives us only a single point on that curve. The curve divides bet-space into two regions, so that it's easy to see whether a bet gives more or less than this amount of profit.
+
+(Earlier we saw this level curve graphically, for certain specific profits. Now we find the explicit formula for the curve.)
 
 We already have
 
     $$ \begin{align}
         P_f &= S_b (1 - C_l) (1 - C_b) { O_b - 1 \over O_l - C_l }    \\
-            &= S_b (1 - C_l) (1 - C_b) { O_b - 1 \over O_b + σ - C_l }.
+            &= S_b (1 - C_l) (1 - C_b) { O_b - 1 \over O_b + σ - C_l },
     \end{align} $$
 
-It's just a matter of rearranging this:
+and it's just a matter of rearranging these:
 
-    $$ (O_b + σ - C_l)P_f = S_b (1 - C_l) (1 - C_b) (O_b - 1)             \\
-       P_fO_b + P_f(σ - C_l) = O_b(S_b(1-C_l)(1-C_b)) - S_b(1-C_l)(1-C_b) \\
-       O_b(S_b(1-C_l)(1-C_b) - P_f) = P_f(σ - C_l) + S_b(1-C_l)(1-C_b)    \\
-       O_b = {1 \over S_b(1-C_l)(1-C_b)-P_f}(P_fσ + S_b(1-C_l)(1-C_b) - P_fC_l).
-    $$
+    $$ (1-C_l)(1-C_b)(O_b - 1) = (O_l - C_l)P_f \\
+       O_b((1-C_l)(1-C_b) - P_f) = (P_fσ + (1-C_l)(1-C_b) - P_fC_l). $$
 
-This has a crazy number of terms, but it's not awful conceptually. The term $S_b(1-C_l)(1-C_b)$ is the asymtote that profit approaches, so the reciprocal term can be thought of as how much profit is being left on the table. And fundamentally, this is just a linear relation, no different from $y = mx + c$.
+These two equations can be used to find $O_b$ in terms of $O_l$ or $σ$, and vice-versa. Although the second one has a crazy number of terms, both are very simple at heart: they're linear relationships, rearranged forms of $y = mx + c$.
 
-(The less profit you leave behind, the larger the reciprocal term becomes, and the more $σ$ has to change to compensate for a small change in $O_b$. In other words, when profit is high, the level curve on the graph of $P_f(O_b, σ)$ becomes steeper, as we've seen.)
-
-We can of course calculate $σ$ as a function of $O_b$ and $P_f$:
-
-    $$ σ = { (O_b - 1)S_b(1-C_l)(1-C_b) \over P_f } + C_l. $$
+Looking more closely at the second one, notice that $(1-C_l)(1-C_b)$ is the upper bound on profit. So the term in $O_b$ can be thought of as how much profit is being left on the table, compared to what you could hypothetically get if odds of $∞$ were a thing. The less profit you leave behind, the less $σ$ has to change to compensate for a given change in $O_b$. In other words, when profit is high, the level curve on the graph of $P_f(O_b, σ)$ becomes shallower, as we saw above.
 
 **Improving on a qualifying bet**
 
