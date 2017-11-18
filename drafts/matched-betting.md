@@ -156,8 +156,8 @@ To find $O'$, we set
 and deduce
 
     $$ \begin{align*}
-        O' = { O_l - O_bC_l \over 1 + O_l - O_b - C_l } \\
-          &= O_b { 1 - C_l + σ/O_b \over 1 - C_l + σ }.
+        O' &= { O_l - O_bC_l \over 1 + O_l - O_b - C_l } \\
+           &= O_b { 1 - C_l + σ/O_b \over 1 - C_l + σ }.
     \end{align*} $$
 
 The expression with $σ$ isn't exactly simpler, but I think it's more aesthetically pleasing. (Consider that $1-C_l$ is approximately as fundamental as $C_l$ itself.)
