@@ -207,17 +207,22 @@ We also can't set $O_b$ to its best possible value, because it can go arbitraril
 
 which gives us
 
-    $$ σ' = {σ - C_l(1 + O_b) \over O_b}. $$
+    $$ σ' = {σ + C_l(O_b - 1) \over O_b}. $$
 
-(doesn't assume $C_b = 0$)
+(This result is still under the assumption $C_b = 0$. In general, we get
+
+    $$ σ' = { σ + (O_b - 1)(1 - (1 - C_l)(1 - C_b))
+              \over (O_b - 1)(1 - C_b) + 1 } $$
+
+which is just super ugly.)
 
 Now we know that any bet with a spread less than $σ'$ will give better profit than the bet we started with. Unfortunately, I think this still isn't as good as what we got for a free bet, for three reasons.
 
-1. For a free bet, we had an easy negative test: some bets could be ruled out on a glance, but verifying them took more work. Here, the test is positive: some bets can be accepted on a glance, but verifying the others takes more work.[^graph-shape]
+1. For a free bet, we had an easy negative test: some bets (those with $O_b < O'$) could be ruled out on a glance, but verifying them took more work. Here, the test is positive: some bets (those with $σ < σ'$) can be accepted on a glance, but verifying the others takes more work.[^graph-shape]
 
-    In practice, I expect the positive test will almost alway be inconclusive, meaning you need to do the expensive check on every bet. (I haven't done enough betting myself, while writing this, to say from experience.)
+    In practice, I expect the positive test will almost alway be inconclusive, meaning you still need to do the more difficult check on every bet. (I haven't done enough betting myself, while writing this, to say from experience.)
 
-2. My workflow is to find a plausible-looking back bet and then see how it would be matched. With a free bet, I can run the cheap test without looking for the match. With this test, I need to find both sides of the bet before I can run the cheap test.
+2. My workflow is to find a plausible-looking back bet and then see how it would be matched. With a free bet, I can run the easy test without looking for the match. For a qualifying bet, I need to find both sides of the bet before I can run the easy test.
 
 3. Qualifying bets often must be placed at a minimum odds (on the back side) in order to count. That typically rules out the lowest-spread bets (see below digression).
 
