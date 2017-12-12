@@ -177,87 +177,82 @@ We can go more general. Given a profit, we can calculate the level curve of all 
 
 We already have
 
-    $$ \begin{align}
+    $$ \begin{align*}
         P_f &= S_b (1 - C_l) (1 - C_b) { O_b - 1 \over O_l - C_l }    \\
             &= S_b (1 - C_l) (1 - C_b) { O_b - 1 \over O_b + σ - C_l },
-    \end{align} $$
+    \end{align*} $$
 
 and it's just a matter of rearranging these:
 
     $$ (1-C_l)(1-C_b)(O_b - 1) = (O_l - C_l)P_f \\
        O_b((1-C_l)(1-C_b) - P_f) = (P_fσ + (1-C_l)(1-C_b) - P_fC_l). $$
 
-These two equations can be used to find $O_b$ in terms of $O_l$ or $σ$, and vice-versa. Although the second one has a crazy number of terms, both are very simple at heart: they're linear relationships, rearranged forms of $y = mx + c$.
+These two equations can be used to find $O_b$ in terms of $O_l$ or $σ$, and vice-versa. Although the second one has a crazy number of terms, both are very simple at heart: they're linear relationships, that could be rearranged to the form $y = mx + c$.
 
 Looking more closely at the second one, notice that $(1-C_l)(1-C_b)$ is the upper bound on profit. So the term in $O_b$ can be thought of as how much profit is being left on the table, compared to what you could hypothetically get if odds of $∞$ were a thing. The less profit you leave behind, the less $σ$ has to change to compensate for a given change in $O_b$. In other words, when profit is high, the level curve on the graph of $P_f(O_b, σ)$ becomes shallower, as we saw above.
 
 **Improving on a qualifying bet**
 
-For a qualifying bet, things become much simpler if we assume $C_b = 0$. Then the term we want to maximise is
+For a qualifying bet, we can't quite do the same thing. If we assume $C_b = 0$, then the term we want to maximise is
 
-    $$ P_q + S_b ∝ {O_b \over O_l - C_l} $$
+    $$ P_q + 1 ∝ {O_b \over O_l - C_l}. $$
 
-This term doesn't work the same as the equivalent term for a free bet. If you keep $σ$ fixed and consider profit as a function of $O_b$, then you get different behaviour depending on $\mathrm{sgn}(σ - C_l)$. If $σ ≤ C_l$, then regardless of $O_b$ you get more profit than is ever possible with $σ > C_l$.
+This doesn't work the same as the equivalent term for a free bet. If you keep $σ$ fixed and consider profit as a function of $O_b$, then you get different behaviour depending on $\mathrm{sgn}(σ - C_l)$. If $σ ≤ C_l$, then regardless of $O_b$ you get more profit than is ever possible with $σ > C_l$.
 
-For a free bet, we could set $σ$ to its best possible value and still realise the entire range of profits. If we try that for a qualifying bet, many profits are no longer available. And we can't set $O_b$ to its best possible value, because it can go arbitrarily high.
+This isn't immediately practically important, because $σ > C_l$ is a pretty safe assumption. But it's mathematically significant. For a free bet, setting $σ$ to $0$ doesn't rule out any profit levels, so we could ask "how do we get this particular profit with $σ = 0$?" If we try to ask that for a qualifying bet, the answer is typically that we can't. So the approach we used for a free bet doesn't work on a qualifying bet.
 
-But we can try setting $O_b$ to its limiting worst value ($1$).
+We also can't set $O_b$ to its best possible value, because it can go arbitrarily high. But we can try setting it to its limiting worst value ($1$). We find $σ'$ such that
 
-    $$ { O_b \over O_l - C_l } = { 1 \over 1 + σ' - C_l }   \\
-       O_b (1 + σ' - C_l) = O_l - C_l                       \\
-       O_bσ' = O_l - C_l - O_b - O_bC_l                     \\
-       O_bσ' = σ - C_l(1 + O_b)                             \\
-       σ' = {σ - C_l(1 + O_b) \over O_b}                    $$
+    $$ { O_b \over O_b + σ - C_l } = { 1 \over 1 + σ' - C_l }, $$
+
+which gives us
+
+    $$ σ' = {σ - C_l(1 + O_b) \over O_b}. $$
 
 (doesn't assume $C_b = 0$)
 
-Now we know that any bet with a spread less than $σ'$ will give better profit.
+Now we know that any bet with a spread less than $σ'$ will give better profit than the bet we started with. Unfortunately, I think this still isn't as good as what we got for a free bet, for three reasons.
 
-For a free bet, we had an easy negative test: some bets could be ruled out on a glance, but verifying them took more work. Here, the test is positive: some bets can be accepted on a glance, but verifying the others takes more work.[^graph-shape]
+1. For a free bet, we had an easy negative test: some bets could be ruled out on a glance, but verifying them took more work. Here, the test is positive: some bets can be accepted on a glance, but verifying the others takes more work.[^graph-shape]
 
-I think this result is less useful than the free bet result, for three reasons.
-
-1. In practice, I expect the positive test will almost alway be inconclusive, meaning you need to do the expensive check on every bet. (I haven't done enough betting myself, while writing this, to say from experience.)
+    In practice, I expect the positive test will almost alway be inconclusive, meaning you need to do the expensive check on every bet. (I haven't done enough betting myself, while writing this, to say from experience.)
 
 2. My workflow is to find a plausible-looking back bet and then see how it would be matched. With a free bet, I can run the cheap test without looking for the match. With this test, I need to find both sides of the bet before I can run the cheap test.
 
-3. Qualifying bets often must be placed at a minimum odds in order to count.
+3. Qualifying bets often must be placed at a minimum odds (on the back side) in order to count. That typically rules out the lowest-spread bets (see below digression).
 
 Still, this is what we have. Following a similar theme as before, we can calculate $σ'$ and $P_q$ as functions of each other:
 
-    $$ P_q = S_b(1 - C_l){ 1 \over 1 + σ' - C_l } - S_b            \\
-       { P_q + S_b \over S_b(1 - C_l) } = {1 \over 1 + σ' - C_l}   \\
-       σ' = { S_b(1 - C_l) \over P_q + S_b } + C_l - 1             \\
-    $$
+    $$ P_q = (1 - C_l){ 1 \over 1 + σ' - C_l } - 1  \\
+       σ' = { (1 - C_l) \over P_q + 1 } + C_l - 1   $$
 
 (doesn't assume $C_b = 0$ because $O_b = 1$)
 
 (image)
 
-Interestingly, the graph of $P_q(1, 1+σ')$ reaches its maximum of exactly 0, regardless of commission. (That may not be clear on this image, but it's easy to see algrebraically.) But that's just an artefact of $1$ not being a real odds: you have no chance of losing anything on the lay bet, you're just asking someone to maybe give you free money.
+Interestingly, $P_q$ reaches its maximum at $P_q(O_b=1, σ'=0) = 0$, regardless of commission. (That may not be clear on this image, but it's easy to see algrebraically.) That's because at $O_b = O_l = 1$, both bets are completely one-sided. On the back side you have a chance of losing money, but no way to win it; on the lay side you have a chance of winning money, but no way to lose it. In particular, if the back bet wins, you make no profit or loss on either bet, so commission is irrelevant. And so the lay stake is calibrated for your lay winnings, after commission, to cancel out your back loss. (But if someone is willing to give you free maybe-money, you might as well ask for as much maybe-money as they're willing to give you.)
 
-And again, given profit, we can calculate the level curve of bets which return that profit.
+And again, given profit, we can calculate the level curve of bets which return that profit. Unsurprisingly, we find another linear relationship; it comes to
 
-    $$ P_q = S_b(1 - C_l){ O_b(1 - C_b) + C_b \over O_l - C_l } - S_b    \\
-       {(P_q + S_b)(O_l - C_l) \over S_b(1 - C_l) } = O_b(1 - C_b) + C_b \\
-       {(P_q + S_b)(O_b + σ - C_l) \over S_b(1 - C_l) } = O_b(1 - C_b) + C_b \\
-       {(P_q + S_b)(σ - C_l) \over S_b(1 - C_l) }
-           = O_b(1 - C_b - {P_q + S_b \over S_b(1 - C_l)} + C_b   \\
-       Λ(σ - C_l) = O_b(1 - C_b - Λ) + C_b $$
+    $$ Λ(σ - C_l) = O_b(1 - C_b - Λ) + C_b, $$
 
 where
 
-    $$ Λ = { P_q + S_b \over S_b(1 - C_l) } $$
+    $$ Λ = { P_q + 1 \over 1 - C_l }. $$
 
-which again, unsurprisingly, is a linear relationship between $σ$ and $O_b$. I can offer no particular interpretation of the $Λ$ term. Note that if $Λ ≥ 1 - C_b$, then $σ$ and $O_b$ move in opposite directions. I haven't particularly explored how that might hypothetically come about, but I'm confident it won't happen realistically.
+I'm afraid I can offer no particular interpretation of what $Λ$ means. Note that if $Λ ≥ 1 - C_b$, equivalently if $P_q + 1 ≥ (1 - C_l)(1 - C_b)$, then $σ$ and $O_b$ move in opposite directions. At this point, you get more profit with low $O_b$ as well as with low $σ$, which would be convenient if it was ever realistically going to happen.
+
+(It turns out that $P_q + 1 ≥ (1 - C_l)(1 - C_b)$ precisely when $σ ≤ C_l + C_b/(1 - C_b)$. I noted above that if $C_b = 0$, the possible values of $P_q + 1$ depend on $\mathrm{sgn}(σ-C_l)$. This is the same result, generalized to all values of $C_b$.)
 
 **A digression on odds**
 
 Note that in general, you can expect spread to be lower at lower odds. That's because odds are more sensitive to evidence when they're high than when they're low.
 
-For example, consider the probabilities $1/5$ and $1/6$. These are complementary to $4/5$ and $5/6$. In decimal, $1/5$ and $1/6$ are $1.25$ and $1.2$, while $4/5$ and $5/6$ are $5$ and $6$. So the difference between the odds $1.25$ and $1.2$ is in one sense same as the difference between $5$ and $6$. But when it comes to betting, the spreads of $0.05$ and $1$ are very different.
+There's a [technical interpretation](https://arbital.com/p/bayes_log_odds/) of that, but I'm just going to illustrate by example. Consider the probabilities $1/5$ and $1/6$. These are complementary to $4/5$ and $5/6$ - the two pairs of probabilities encode the same information. Converting to decimal, probabilities $1/5$ and $1/6$ are decimal odds $1.25$ and $1.2$; and probabilities $4/5$ and $5/6$ are decimal odds $5$ and $6$.
 
-So for qualifying bets, you should be looking at bets with low odds. High odds have better returns, but the effect of low spread is much more significant, and low spread comes with low odds.
+So the difference between the odds $1.25$ and $1.2$ is, in a very important sense, the same as the difference between $5$ and $6$. But when it comes to betting, the spreads of $0.05$ and $1$ are very different.
+
+The takeaway from this is that for qualifying bets, you should be looking at bets with low odds. High odds have better returns, but the effect of low spread is much more significant, and low spread comes with low odds.
 
 **The effects of commission**
 
