@@ -109,7 +109,7 @@ We can also look at $P_q - P_f$, the difference in profit between a qualifying b
     $$ P_q - P_f = {1 \over O_l - C_l} - 1
                  = { 1 - (O_l - C_l) \over O_l - C_l }. $$
 
-If your $O_l$ is unrealistically tiny, you'll make slightly more money on a qualifier than a free bet. But the more $O_l$ grows, the worse a qualifier becomes relative to a free bet. This, too, is evidence that you should be looking at different sorts of bets for your qualifiers and your free bets.
+If your $O_l$ is unrealistically tiny, you'll make slightly more money on a qualifier than a free bet. But the more $O_l$ grows, the worse a qualifier becomes relative to a free bet. This, too, is suggestive that you should be looking at different sorts of bets for your qualifiers and your free bets.
 
 **Liability**
 
@@ -178,14 +178,14 @@ We can go more general. Given a profit, we can calculate the level curve of all 
 We already have
 
     $$ \begin{align*}
-        P_f &= S_b (1 - C_l) (1 - C_b) { O_b - 1 \over O_l - C_l }    \\
-            &= S_b (1 - C_l) (1 - C_b) { O_b - 1 \over O_b + σ - C_l },
+        P_f &= (1 - C_l) (1 - C_b) { O_b - 1 \over O_l - C_l }    \\
+            &= (1 - C_l) (1 - C_b) { O_b - 1 \over O_b + σ - C_l },
     \end{align*} $$
 
 and it's just a matter of rearranging these:
 
-    $$ (1-C_l)(1-C_b)(O_b - 1) = (O_l - C_l)P_f \\
-       O_b((1-C_l)(1-C_b) - P_f) = (P_fσ + (1-C_l)(1-C_b) - P_fC_l). $$
+    $$ (1-C_l)(1-C_b)(O_b - 1) = P_f(O_l - C_l) \\
+       O_b((1-C_l)(1-C_b) - P_f) = P_f(σ - C_l) + (1-C_l)(1-C_b). $$
 
 These two equations can be used to find $O_b$ in terms of $O_l$ or $σ$, and vice-versa. Although the second one has a crazy number of terms, both are very simple at heart: they're linear relationships, that could be rearranged to the form $y = mx + c$.
 
@@ -239,7 +239,12 @@ Interestingly, $P_q$ reaches its maximum at $P_q(O_b=1, σ'=0) = 0$, regardless 
 
 And again, given profit, we can calculate the level curve of bets which return that profit. Unsurprisingly, we find another linear relationship; it comes to
 
-    $$ Λ(σ - C_l) = O_b(1 - C_b - Λ) + C_b, $$
+    $$ (1 - C_l)(1 - C_b)(O_b - 1) + 1 = (P_q + 1)(O_l - C_l) \\
+       O_b(1 - C_b - Λ) + C_b = Λ(σ - C_l), $$
+
+    $$ (1-C_l)(1-C_b)(O_b - 1) = (O_l - C_l)P_f \\
+       O_b((1-C_l)(1-C_b) - P_f) = (P_fσ + (1-C_l)(1-C_b) - P_fC_l). $$
+       O_b((1-C_l)(1-C_b) - P_f) = P_f(σ - C_l) + (1-C_l)(1-C_b). $$
 
 where
 
