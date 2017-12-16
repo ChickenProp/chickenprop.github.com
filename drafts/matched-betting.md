@@ -186,37 +186,30 @@ We already have
 
 and it's just a matter of rearranging these:
 
-    $$ C^+ (O_b - 1) = P_f (O_l - C_l) \\
+    $$ O_b C^+ = P_f (O_l - C_l) + C^+\\
        O_b (C^+ - P_f) = P_f (σ - C_l) + C^+. $$
 
-These two equations can be used to find $O_b$ in terms of $O_l$ or $σ$, and vice-versa. Although the second one has a crazy number of terms, both are very simple at heart: they're linear relationships, that could be rearranged to the form $y = mx + c$.
+These two equations can be used to find $O_b$ in terms of $O_l$ or $σ$, and vice-versa. Both are very simple at heart: they're linear relationships, that could be rearranged to the form $y = mx + c$.
 
-Looking more closely at the second one, notice that $(1-C_l)(1-C_b)$ is the upper bound on profit. So the term in $O_b$ can be thought of as how much profit is being left on the table, compared to what you could hypothetically get if odds of $∞$ were a thing. The less profit you leave behind, the less $σ$ has to change to compensate for a given change in $O_b$. In other words, when profit is high, the level curve on the graph of $P_f(O_b, σ)$ becomes shallower, as we saw above.
+Looking more closely at the second one, notice that $C^+$ is the upper bound on profit. So the term $C^+ - P_f$ can be thought of as how much profit is being left on the table, compared to what you could hypothetically get if odds of $∞$ were a thing. The less profit you leave behind, the less $σ$ has to change to compensate for a given change in $O_b$. In other words, when profit is high, the level curve on the graph of $P_f(O_b, σ)$ becomes shallower, as we saw above.
 
 **Improving on a qualifying bet**
 
-For a qualifying bet, we can't quite do the same thing. If we assume $C_b = 0$, then the term we want to maximise is
+For a qualifying bet, we can't quite do the same thing. If we temporarily assume $C_b = 0$, then the term we want to maximise is
 
     $$ P_q + 1 ∝ {O_b \over O_l - C_l}. $$
 
-This doesn't work the same as the equivalent term for a free bet. If you keep $σ$ fixed and consider profit as a function of $O_b$, then you get different behaviour depending on $\mathrm{sgn}(σ - C_l)$. If $σ ≤ C_l$, then regardless of $O_b$ you get more profit than is ever possible with $σ > C_l$.
+This doesn't work the same as the equivalent term for a free bet. If you keep $σ$ fixed and consider profit as a function of $O_b$, then this function acts differently depending on $\mathrm{sgn}(σ - C_l)$. If $σ ≤ C_l$, then regardless of $O_b$ you get more profit than is ever possible with $σ > C_l$.
 
-This isn't immediately practically important, because $σ > C_l$ is a pretty safe assumption. But it's mathematically significant. For a free bet, setting $σ$ to $0$ doesn't rule out any profit levels, so we could ask "how do we get this particular profit with $σ = 0$?" If we try to ask that for a qualifying bet, the answer is typically that we can't. So the approach we used for a free bet doesn't work on a qualifying bet.
+This isn't immediately practically important, because $σ > C_l$ is a pretty safe assumption. But it's mathematically significant. For a free bet, setting $σ$ to $0$ doesn't rule out any profit levels, so we could ask "how would we get this particular profit with $σ = 0$?" If we try to ask that for a qualifying bet, the answer is typically that we can't. So the approach we used for a free bet doesn't work on a qualifying bet.
 
-We also can't set $O_b$ to its best possible value, because it can go arbitrarily high. But we can try setting it to its limiting worst value ($1$). We find $σ'$ such that
+We also can't set $O_b$ to its best possible value, because it can go arbitrarily high. But we can try setting it to its limiting worst value ($O_b = 1$). We find $σ'$ such that
 
     $$ { O_b \over O_b + σ - C_l } = { 1 \over 1 + σ' - C_l }, $$
 
 which gives us
 
-    $$ σ' = {σ + C_l(O_b - 1) \over O_b}. $$
-
-(This result is still under the assumption $C_b = 0$. In general, we get
-
-    $$ σ' = { σ + (O_b - 1)(1 - (1 - C_l)(1 - C_b))
-              \over (O_b - 1)(1 - C_b) + 1 } $$
-
-which is just super ugly.)
+    $$ σ' = { σ + (O_b - 1)(1 - C^+) \over 1 + (O_b - 1)(1 - C_b) } $$
 
 Now we know that any bet with a spread less than $σ'$ will give better profit than the bet we started with. Unfortunately, I think this still isn't as good as what we got for a free bet, for three reasons.
 
