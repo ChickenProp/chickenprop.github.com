@@ -38,6 +38,8 @@ $S_b, S_l ≥ 0$ are the stakes on the back and lay bets. Note that $S_l$ is the
 
 And $C_b, C_l ∈ [0, 1]$ are the commission charged on your winnings on each side. Usually $C_b = 0$: bookmakers don't charge commissions, they make money by offering low odds. The two exchanges I've used have $C_l = 2\% = 0.02$ (Smarkets) and $C_l = 5\% = 0.05$ (Betfair).
 
+I'm also going to introduce the symbol $C^+ = (1 - C_l)(1 - C_b)$. If you passed $£1$ through your bookmaker and exchange, and they each charged commission and nothing else, you would have $£C^+$ left at the end. $C^+$ isn't enough for us to fully understand a matched bet, we need the individual back and lay commissions as well, but it'll be convenient shorthand.
+
 A matched bet is one that gives the same profit no matter which side wins; as such, these six values are over-determined. Knowing any five of them will fix the value of the sixth.
 
 Now let $R_{xy}$ (where $x,y ∈ \\{b,l\\}$) be your return on side $y$ if your bet on side $x$ wins. So for a qualifying bet, we have:
@@ -86,10 +88,11 @@ Next, we'll want to know how much profit we make. This is given by $R_{lb} + R_{
 Under a qualifying bet, this is
 
     $$ P_q = (1 - C_l){ (O_b - 1)(1 - C_b) + 1 \over O_l - C_l } - 1, $$
+    $$ P_q = C^+ { (O_b - 1) + 1/(1 - C_b) \over O_l - C_l } - 1, $$
 
 and for a free bet, it's
 
-    $$ P_f = (1 - C_l) (1 - C_b) { O_b - 1 \over O_l - C_l }. $$
+    $$ P_f = C^+ { O_b - 1 \over O_l - C_l }. $$
 
 We can look at these functions graphically:
 
