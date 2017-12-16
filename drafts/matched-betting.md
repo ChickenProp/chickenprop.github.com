@@ -264,10 +264,10 @@ I want to explore one more question: how does profit depend on commission? For t
 
 Conveniently, the term we want to maximise is the same,
 
-    $$ \begin{align}
+    $$ \begin{align*}
         P_q + 1 ∝ { 1 - C_l \over O_l - C_l }  \\
         P_f ∝ { 1 - C_l \over O_l - C_l }.
-    \end{align} $$
+    \end{align*} $$
 
 So if we find the same lay bet on two different exchanges, we can compare them without regard for the back bet we'd be matching.
 
