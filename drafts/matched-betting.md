@@ -237,14 +237,14 @@ On the other edge of the graph, we always have $P_q(O_b=1, σ'=0) = 0$. (That ma
 
 And again, given profit, we can calculate the level curve of bets which return that profit. Unsurprisingly, we find another linear relationship; it comes to
 
-    $$ C^+ (O_b - 1) + 1 = (P_q + 1)(O_l - C_l) \\
+    $$ O_bC^+ + 1 - C^+ = (P_q + 1)(O_l - C_l) \\
        O_b(1 - C_b - Λ) + C_b = Λ(σ - C_l), $$
 
 where
 
     $$ Λ = { P_q + 1 \over 1 - C_l }. $$
 
-I'm afraid I can offer no particular interpretation of what $Λ$ means. Note that if $Λ ≥ 1 - C_b$, equivalently if $P_q + 1 ≥ C^+$, then $σ$ and $O_b$ move in opposite directions. At this point, you get more profit with low $O_b$ as well as with low $σ$, which would be convenient if it was ever realistically going to happen.
+I'm afraid I can offer no particular interpretation of what $Λ$ means, though I observe that we can substitute it into a previous equation, $σ' = 1/Λ + C_l - 1$. Note that if $Λ ≥ 1 - C_b$, equivalently if $P_q + 1 ≥ C^+$, then $σ$ and $O_b$ start to move in opposite directions: for fixed profit, $σ$ goes up as $O_b$ goes down. At this point, you get more profit with low $O_b$ as well as with low $σ$, which would be convenient if it was ever realistically going to happen.
 
 (It turns out that $P_q + 1 ≥ C^+$ precisely when $σ ≤ C_l + C_b/(1 - C_b)$. I noted above that if $C_b = 0$, the possible values of $P_q + 1$ depend on $\mathrm{sgn}(σ-C_l)$. This is the same result, generalized to all values of $C_b$.)
 
@@ -260,18 +260,18 @@ The takeaway from this is that for qualifying bets, you should be looking at bet
 
 **The effects of commission**
 
-I want to explore one more question: how does profit depend on commission? For this, we'll keep $S_b$, $C_b$ and $O_b$ fixed, and explore how $O_l$ and $C_l$ affect profit.
+I want to explore one more question: how does profit depend on commission? For this, we'll keep $C_b$ and $O_b$ fixed, and explore how $O_l$ and $C_l$ affect profit.
 
 Conveniently, the term we want to maximise is the same,
 
     $$ \begin{align}
-        P_q + S_b ∝ { 1 - C_l \over O_l - C_l }  \\
+        P_q + 1 ∝ { 1 - C_l \over O_l - C_l }  \\
         P_f ∝ { 1 - C_l \over O_l - C_l }.
     \end{align} $$
 
-Doubly convenient, no other variables are involved. So if we find the same lay bet on two different exchanges, we can compare them regardless of the back bet we'd be matching.
+So if we find the same lay bet on two different exchanges, we can compare them without regard for the back bet we'd be matching.
 
-The two exchanges I use have $C_l$ of $0.02$ and $0.05$, so they give equal profits when
+The two exchanges I've used have $C_l$ of $0.02$ and $0.05$, so they give equal profits when
 
     $$ { 0.98 \over O_S - 0.02 } = { 0.95 \over O_B - 0.95 } $$
 
@@ -279,9 +279,11 @@ where $O_S$ is the odds offered on Smarkets and $O_B$ is the odds offered on Bet
 
     $$ 98·O_b = 95·O_S. $$
 
-Since $98/95 ≈ 1.03$, it's better to use Betfair than Smarkets if the offered odds are roughly 3% lower, which happens to be the difference in commission. So for example, odds of $6$ on Betfair correspond to roughly $6.19$ on Smarkets.
+Since $98/95 ≈ 1.03$, it's better to use Betfair than Smarkets if the offered odds are roughly $3%$ lower, which happens to be the difference in commission. So for example, odds of $6$ on Betfair correspond to roughly $6.19$ on Smarkets.
 
-It should be easy to take a bunch of equivalent bets on the two sites, and compare to see which seems likely to give better profit. I looked at three football games, and they all had exactly the same odds on all three positions (win/draw/win), even when they fluctuated slightly pre-game. (I did look at one game as it began, and the two sites didn't quite stay in sync then. But betting while odds are fluctuating a lot is a bad idea.) Which suggests that Smarkets is the better site. But it's plausible that Betfair offers better odds on smaller games (the ones I looked at were very popular).
+It should be easy to take a bunch of equivalent bets on the two sites, and compare to see which seems likely to give better profit in general. I started doing that, but then I looked at three football games and got bored and stopped.
+
+They all had exactly the same odds on all three positions (win/draw/win), even when they fluctuated slightly pre-game. (I did look at one game as it began, and the two sites didn't quite stay in sync then. But betting while odds are fluctuating a lot is a bad idea.) This suggests that Smarkets typically offers better profits. But Betfair is a more popular site, which probably has advantages; in particular, it's plausible that a large bet would be harder to fully match on Smarkets.
 
 ---
 
