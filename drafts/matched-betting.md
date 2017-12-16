@@ -87,7 +87,7 @@ Next, we'll want to know how much profit we make. This is given by $R_{lb} + R_{
 
 Under a qualifying bet, this is
 
-    $$ P_q = C^+ { O_b - 1 + 1/(1 - C_b) \over O_l - C_l } - 1, $$
+    $$ P_q = C^+ { O_b + C_b/(1 - C_b) \over O_l - C_l } - 1, $$
 
 and for a free bet, it's
 
@@ -100,7 +100,7 @@ each line represents a contour of the function, a set of points that all have th
 We can reparameterise in terms of $O_b$ and $σ = O_l - O_b$, the spread between the back and lay odds. Since $O_l ≥ O_b$, we only need to consider $σ ≥ 0$. This gives us
 
     $$ \begin{align*}
-        P_q &= C^+ { O_b - 1 + 1/(1 - C_b) \over O_b + σ - C_l } - 1  \\
+        P_q &= C^+ { O_b + C_b/(1 - C_b) \over O_b + σ - C_l } - 1  \\
         P_f &= C^+ { O_b - 1 \over O_b + σ - C_l }.
     \end{align*} $$
 
@@ -108,7 +108,7 @@ These are more distinct. Looking at these graphs, it seems that for a qualifying
 
 We can also look at $P_q - P_f$, the difference in profit between a qualifying bet and a free bet. This isn't particularly useful to compare bets: you place qualifying bets to get free bets, and you place free bets to get qualifying bets, and if you're doing pure matched betting, I don't think you'll ever be asking yourself *should I place this bet free or as a qualifier?* Still, the difference is
 
-    $$ P_q - P_f = {1 \over O_l - C_l} - 1
+    $$ P_q - P_f = { 1 \over O_l - C_l } - 1
                  = { 1 - (O_l - C_l) \over O_l - C_l }. $$
 
 If your $O_l$ is unrealistically tiny, you'll make slightly more money on a qualifier than a free bet. But the more $O_l$ grows, the worse a qualifier becomes relative to a free bet. This, too, is suggestive that you should be looking at different sorts of bets for your qualifiers and your free bets.
@@ -166,12 +166,12 @@ The expression with $σ$ isn't exactly simpler, but I think it's more aesthetica
 
 We can also calculate $O'$ and $P_f$ as functions of each other:
 
-    $$ P_f = (1 - C_l) (1 - C_b) { O' - 1 \over O' - C_l }                 \\
-       O' = { C_lP_f - (1 - C_l)(1 - C_b) \over P_f - (1 - C_l)(1 - C_b) } $$
+    $$ P_f = C^+ { O' - 1 \over O' - C_l }                 \\
+       O' = { C_lP_f - C^+ \over P_f - C^+ } $$
 
 (image)
 
-$P_f$ approaches an asymtote at $(1 - C_l)(1 - C_b)$, but slowly. With $C_b = 0, C_l = 0.02$, extracting $80\%$ of a free bet is only possible if $O_b ≥ 5.36$. For $90\%$, you need $O_b ≥ 12.03$. Such bets are somewhat rare in my experience, and typically have high spread.
+$P_f$ approaches an asymtote at $C^+$, but slowly. With $C_b = 0, C_l = 0.02$, extracting $80\%$ of a free bet is only possible if $O_b ≥ 5.36$. For $90\%$, you need $O_b ≥ 12.03$. Such bets are somewhat rare in my experience, and typically have high spread.
 
 We can go more general. Given a profit, we can calculate the level curve of all bets which generate that profit; the case $σ=0$ gives us only a single point on that curve. The curve divides bet-space into two regions, so that it's easy to see whether a bet gives more or less than this amount of profit.
 
@@ -180,14 +180,14 @@ We can go more general. Given a profit, we can calculate the level curve of all 
 We already have
 
     $$ \begin{align*}
-        P_f &= (1 - C_l) (1 - C_b) { O_b - 1 \over O_l - C_l }    \\
-            &= (1 - C_l) (1 - C_b) { O_b - 1 \over O_b + σ - C_l },
+        P_f &= C^+ { O_b - 1 \over O_l - C_l }    \\
+            &= C^+ { O_b - 1 \over O_b + σ - C_l },
     \end{align*} $$
 
 and it's just a matter of rearranging these:
 
-    $$ (1-C_l)(1-C_b)(O_b - 1) = P_f(O_l - C_l) \\
-       O_b((1-C_l)(1-C_b) - P_f) = P_f(σ - C_l) + (1-C_l)(1-C_b). $$
+    $$ C^+ (O_b - 1) = P_f (O_l - C_l) \\
+       O_b (C^+ - P_f) = P_f (σ - C_l) + C^+. $$
 
 These two equations can be used to find $O_b$ in terms of $O_l$ or $σ$, and vice-versa. Although the second one has a crazy number of terms, both are very simple at heart: they're linear relationships, that could be rearranged to the form $y = mx + c$.
 
