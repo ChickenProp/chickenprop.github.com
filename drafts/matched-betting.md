@@ -87,8 +87,7 @@ Next, we'll want to know how much profit we make. This is given by $R_{lb} + R_{
 
 Under a qualifying bet, this is
 
-    $$ P_q = (1 - C_l){ (O_b - 1)(1 - C_b) + 1 \over O_l - C_l } - 1, $$
-    $$ P_q = C^+ { (O_b - 1) + 1/(1 - C_b) \over O_l - C_l } - 1, $$
+    $$ P_q = C^+ { O_b - 1 + 1/(1 - C_b) \over O_l - C_l } - 1, $$
 
 and for a free bet, it's
 
@@ -101,8 +100,8 @@ each line represents a contour of the function, a set of points that all have th
 We can reparameterise in terms of $O_b$ and $σ = O_l - O_b$, the spread between the back and lay odds. Since $O_l ≥ O_b$, we only need to consider $σ ≥ 0$. This gives us
 
     $$ \begin{align*}
-        P_q &= (1 - C_l){ (O_b - 1)(1 - C_b) + 1 \over O_b + σ - C_l } - 1  \\
-        P_f &= (1 - C_l) (1 - C_b) { O_b - 1 \over O_b + σ - C_l }.
+        P_q &= C^+ { O_b - 1 + 1/(1 - C_b) \over O_b + σ - C_l } - 1  \\
+        P_f &= C^+ { O_b - 1 \over O_b + σ - C_l }.
     \end{align*} $$
 
 These are more distinct. Looking at these graphs, it seems that for a qualifying bet, having low $σ$ is more significant than having high $O_b$; but for a free bet, having high $O_b$ is more significant than having low $σ$. We'll make this more precise later.
