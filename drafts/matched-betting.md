@@ -205,7 +205,8 @@ This isn't immediately practically important, because $σ > C_l$ is a pretty saf
 
 We also can't set $O_b$ to its best possible value, because it can go arbitrarily high. But we can try setting it to its limiting worst value ($O_b = 1$). We find $σ'$ such that
 
-    $$ { O_b \over O_b + σ - C_l } = { 1 \over 1 + σ' - C_l }, $$
+    $$ { O_b + C_b/(1 - C_b) \over O_b + σ - C_l }
+       = { 1 + C_b/(1 - C_b) \over 1 + σ' - C_l }, $$
 
 which gives us
 
@@ -223,31 +224,29 @@ Now we know that any bet with a spread less than $σ'$ will give better profit t
 
 Still, this is what we have. Following a similar theme as before, we can calculate $σ'$ and $P_q$ as functions of each other:
 
-    $$ P_q = (1 - C_l){ 1 \over 1 + σ' - C_l } - 1  \\
-       σ' = { (1 - C_l) \over P_q + 1 } + C_l - 1   $$
+    $$ P_q = { 1 - C_l \over 1 - C_l + σ' } - 1 \\
+       σ' = { 1 - C_l \over P_q + 1 } + C_l - 1. $$
 
-(doesn't assume $C_b = 0$ because $O_b = 1$)
+(Note that these equations don't contain $C_b$. That's not because we're assuming it's $0$: when you set $O_b = 1$, $C_b$ completely disappears from the equation for $P_q$.)
 
 (image)
 
-Interestingly, $P_q$ reaches its maximum at $P_q(O_b=1, σ'=0) = 0$, regardless of commission. (That may not be clear on this image, but it's easy to see algrebraically.) That's because at $O_b = O_l = 1$, both bets are completely one-sided. On the back side you have a chance of losing money, but no way to win it; on the lay side you have a chance of winning money, but no way to lose it. In particular, if the back bet wins, you make no profit or loss on either bet, so commission is irrelevant. And so the lay stake is calibrated for your lay winnings, after commission, to cancel out your back loss. (But if someone is willing to give you free maybe-money, you might as well ask for as much maybe-money as they're willing to give you.)
+Interestingly, the bounds of $P_q$ don't depend on commission at all. As $σ'$ grows, $P_q$ always approaches an asymtote at $-1$, which isn't surprising: you can't quite lose your entire back stake, but you can get arbitrarily close to that, even with no commission.
+
+On the other edge of the graph, we always have $P_q(O_b=1, σ'=0) = 0$. (That may not be clear on this image, but it's easy to see algrebraically.) That's because at $O_b = O_l = 1$, both bets are completely one-sided. On the back side you have a chance of losing money, but no way to win it; on the lay side you have a chance of winning money, but no way to lose it. In particular, if the back bet wins, you make no profit or loss on either bet, so commission is irrelevant. And so the lay stake is calibrated for your lay winnings, after commission, to cancel out your back loss. (But if someone is willing to give you free maybe-money, you might as well ask for as much maybe-money as they're willing to give you.)
 
 And again, given profit, we can calculate the level curve of bets which return that profit. Unsurprisingly, we find another linear relationship; it comes to
 
-    $$ (1 - C_l)(1 - C_b)(O_b - 1) + 1 = (P_q + 1)(O_l - C_l) \\
+    $$ C^+ (O_b - 1) + 1 = (P_q + 1)(O_l - C_l) \\
        O_b(1 - C_b - Λ) + C_b = Λ(σ - C_l), $$
-
-    $$ (1-C_l)(1-C_b)(O_b - 1) = (O_l - C_l)P_f \\
-       O_b((1-C_l)(1-C_b) - P_f) = (P_fσ + (1-C_l)(1-C_b) - P_fC_l). $$
-       O_b((1-C_l)(1-C_b) - P_f) = P_f(σ - C_l) + (1-C_l)(1-C_b). $$
 
 where
 
     $$ Λ = { P_q + 1 \over 1 - C_l }. $$
 
-I'm afraid I can offer no particular interpretation of what $Λ$ means. Note that if $Λ ≥ 1 - C_b$, equivalently if $P_q + 1 ≥ (1 - C_l)(1 - C_b)$, then $σ$ and $O_b$ move in opposite directions. At this point, you get more profit with low $O_b$ as well as with low $σ$, which would be convenient if it was ever realistically going to happen.
+I'm afraid I can offer no particular interpretation of what $Λ$ means. Note that if $Λ ≥ 1 - C_b$, equivalently if $P_q + 1 ≥ C^+$, then $σ$ and $O_b$ move in opposite directions. At this point, you get more profit with low $O_b$ as well as with low $σ$, which would be convenient if it was ever realistically going to happen.
 
-(It turns out that $P_q + 1 ≥ (1 - C_l)(1 - C_b)$ precisely when $σ ≤ C_l + C_b/(1 - C_b)$. I noted above that if $C_b = 0$, the possible values of $P_q + 1$ depend on $\mathrm{sgn}(σ-C_l)$. This is the same result, generalized to all values of $C_b$.)
+(It turns out that $P_q + 1 ≥ C^+$ precisely when $σ ≤ C_l + C_b/(1 - C_b)$. I noted above that if $C_b = 0$, the possible values of $P_q + 1$ depend on $\mathrm{sgn}(σ-C_l)$. This is the same result, generalized to all values of $C_b$.)
 
 **A digression on odds**
 
