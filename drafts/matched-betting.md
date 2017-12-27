@@ -98,7 +98,7 @@ We can look at these functions graphically:
 <a href="/images/matched-betting/Pf_Ob_Ol.png"><img src="/images/matched-betting/Pf_Ob_Ol.png" alt="(Graph of P_f(O_b, O_l))" style="width: 45%"></a>
 <a href="/images/matched-betting/Pq_Ob_Ol.png"><img src="/images/matched-betting/Pq_Ob_Ol.png" alt="(Graph of P_q(O_b, O_l))" style="width: 45%"></a>
 
-*(images link to full-size versions)*
+*(all images link to full-size versions)*
 
 each line represents a contour of the function, a set of points that all have the same profit. The sets of contours look superficially similar, but they're generally steeper for a free bet. In both cases, profit increases with $O_b$ and decreases with $O_l$.
 
@@ -108,6 +108,9 @@ We can reparameterise in terms of $O_b$ and $σ = O_l - O_b$, the spread between
         P_q &= C^+ { O_b + C_b/(1 - C_b) \over O_b + σ - C_l } - 1  \\
         P_f &= C^+ { O_b - 1 \over O_b + σ - C_l }.
     \end{align*} $$
+
+<a href="/images/matched-betting/Pf_Ob_σ.png"><img src="/images/matched-betting/Pf_Ob_σ.png" alt="(Graph of P_f(O_b, σ))" style="width: 45%"></a>
+<a href="/images/matched-betting/Pq_Ob_σ.png"><img src="/images/matched-betting/Pq_Ob_σ.png" alt="(Graph of P_q(O_b, σ))" style="width: 45%"></a>
 
 These are more distinct. Looking at these graphs, it seems that for a qualifying bet, having low $σ$ is more significant than having high $O_b$; but for a free bet, having high $O_b$ is more significant than having low $σ$. We'll make this more precise later.
 

@@ -6,12 +6,16 @@ import numpy as np
 import pandas as pd
 import plotnine as gg
 import warnings
+import matplotlib as mpl
 
 # defaults
 Cb = 0
 Cl = 0.02
 
+
 C = (1 - Cb) * (1 - Cl)
+
+commission_string = 'C_b = %g, C_l = %g' % (Cb, Cl)
 
 # math
 
@@ -56,6 +60,9 @@ def Opr_Pf(Opr):
 def dollars(s):
     return '$%s$' % (s,)
 
+def titles(t, s=commission_string): # title, hacky subtitle
+    return gg.ggtitle('$%s$\n${}_{%s}$' % (t, s))
+
 def colors(name):
     return gg.scale_color_hue(name=dollars(name),
                               labels=lambda l: ['%.1f' % x for x in l])
@@ -88,13 +95,16 @@ def concat_map(f, cat, l):
     return ret
 
 def main():
+    mpl.rc('mathtext', fontset='cm')
+
     warnings.filterwarnings('ignore', r'geom_\w+: Removed \d+ rows')
     warnings.filterwarnings('ignore', r'Saving .+ x .+ in image')
     warnings.filterwarnings('ignore', r'Filename: .+\.png')
 
     df = concat_map(Pf_Ob_Ol, 'P_f', np.linspace(0.1, 1, 10))
     (gg.ggplot(df, gg.aes('O_b', 'O_l', group='P_f', color='P_f'))
-     + gg.ggtitle(dollars('P_f(O_b, O_l)'))
+     # + gg.ggtitle('$P_f(O_b, O_l)$\n${}_{C_b = 0, C_l = 0.02}$')
+     + titles('P_f(O_b, O_l)')
      + colors('P_f')
      + labs('O_b', 'O_l')
      + limits((1, 10))
@@ -105,7 +115,7 @@ def main():
 
     df = concat_map(Pf_Ob_σ, 'P_f', np.linspace(0.1, 1, 10))
     (gg.ggplot(df, gg.aes('O_b', 'σ', group='P_f', color='P_f'))
-     + gg.ggtitle(dollars('P_f(O_b, σ)'))
+     + titles('P_f(O_b, σ)')
      + colors('P_f')
      + labs('O_b', 'σ')
      + limits((1, 10), (0, 5))
@@ -114,7 +124,7 @@ def main():
 
     df = concat_map(Pq_Ob_Ol, 'P_q', np.linspace(-0.9, 0, 10))
     (gg.ggplot(df, gg.aes('O_b', 'O_l', group='P_q', color='P_q'))
-     + gg.ggtitle(dollars('P_q(O_b, O_l)'))
+     + titles('P_q(O_b, O_l)')
      + colors('P_q')
      + labs('O_b', 'O_l')
      + limits((1, 10))
@@ -125,7 +135,7 @@ def main():
 
     df = concat_map(Pq_Ob_σ, 'P_q', np.linspace(-0.9, 0, 10))
     (gg.ggplot(df, gg.aes('O_b', 'σ', group='P_q', color='P_q'))
-     + gg.ggtitle(dollars('P_q(O_b, σ)'))
+     + titles('P_q(O_b, σ)')
      + colors('P_q')
      + labs('O_b', 'σ')
      + limits((1, 10), (0, 5))
@@ -134,7 +144,7 @@ def main():
 
     df = concat_map(Opr_Ob_Ol, 'Opr', np.linspace(1, 5, 9))
     (gg.ggplot(df, gg.aes('O_b', 'O_l', group='Opr', color='Opr'))
-     + gg.ggtitle(dollars("O'(O_b, O_l)"))
+     + titles("O'(O_b, O_l)")
      + colors("O'")
      + labs('O_b', 'Ol')
      + limits((1, 10), (1, 10))
@@ -145,7 +155,7 @@ def main():
 
     df = concat_map(Opr_Ob_σ, 'Opr', np.linspace(1, 5, 9))
     (gg.ggplot(df, gg.aes('O_b', 'σ', group='Opr', color='Opr'))
-     + gg.ggtitle(dollars("O'(O_b, σ)"))
+     + titles("O'(O_b, σ)")
      + colors("O'")
      + labs('O_b', 'σ')
      + limits((1, 10), (0, 5))
@@ -155,7 +165,7 @@ def main():
     df = (pd.DataFrame({'Opr': np.linspace(1, 20, 91)})
             .assign(Pf=lambda x: Opr_Pf(x.Opr)))
     (gg.ggplot(df, gg.aes('Opr', 'Pf'))
-     + gg.ggtitle(dollars("P_f(O')"))
+     + titles("P_f(O')")
      + labs("O'", 'P_f')
      + limits((1, 20), (0, 1),
               xbreaks=np.linspace(2, 20, 10),
