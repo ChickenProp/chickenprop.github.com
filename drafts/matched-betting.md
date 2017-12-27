@@ -95,8 +95,10 @@ and for a free bet, it's
 
 We can look at these functions graphically:
 
-![(Graph of P_f(O_b, O_l))](/images/matched-betting/Pf_Ob_Ol.png)
-![(Graph of P_q(O_b, O_l))](/images/matched-betting/Pq_Ob_Ol.png)
+<a href="/images/matched-betting/Pf_Ob_Ol.png"><img src="/images/matched-betting/Pf_Ob_Ol.png" alt="(Graph of P_f(O_b, O_l))" style="width: 45%"></a>
+<a href="/images/matched-betting/Pq_Ob_Ol.png"><img src="/images/matched-betting/Pq_Ob_Ol.png" alt="(Graph of P_q(O_b, O_l))" style="width: 45%"></a>
+
+*(images link to full-size versions)*
 
 each line represents a contour of the function, a set of points that all have the same profit. The sets of contours look superficially similar, but they're generally steeper for a free bet. In both cases, profit increases with $O_b$ and decreases with $O_l$.
 
