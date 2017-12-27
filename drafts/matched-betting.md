@@ -95,6 +95,9 @@ and for a free bet, it's
 
 We can look at these functions graphically:
 
+![(Graph of P_f(O_b, O_l))](/images/matched-betting/Pf_Ob_Ol.png)
+![(Graph of P_q(O_b, O_l))](/images/matched-betting/Pq_Ob_Ol.png)
+
 each line represents a contour of the function, a set of points that all have the same profit. The sets of contours look superficially similar, but they're generally steeper for a free bet. In both cases, profit increases with $O_b$ and decreases with $O_l$.
 
 We can reparameterise in terms of $O_b$ and $σ = O_l - O_b$, the spread between the back and lay odds. Since $O_l ≥ O_b$, we only need to consider $σ ≥ 0$. This gives us
@@ -237,7 +240,7 @@ On the other edge of the graph, we always have $P_q(O_b=1, σ'=0) = 0$. (That ma
 
 And again, given profit, we can calculate the level curve of bets which return that profit. Unsurprisingly, we find another linear relationship; it comes to
 
-    $$ O_bC^+ + 1 - C^+ = (P_q + 1)(O_l - C_l) \\
+    $$ O_bC^+ + C_b(1 - C_l) = (Pq + 1)(Ol - Cl) \\
        O_b(1 - C_b - Λ) + C_b = Λ(σ - C_l), $$
 
 where
