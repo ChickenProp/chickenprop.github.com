@@ -175,8 +175,8 @@ and deduce
 
 The expression with $σ$ isn't exactly simpler, but I think it's more aesthetically pleasing. (Consider that $1-C_l$ is approximately as fundamental as $C_l$ itself.) Graphically:
 
-<a href="/images/matched-betting/Obr_Ob_Ol.png"><img src="/images/matched-betting/Obr_Ob_Ol.png" alt="(Graph of P_f(O_b, Ol))" style="width: 45%"></a>
-<a href="/images/matched-betting/Obr_Ob_σ.png"><img src="/images/matched-betting/Obr_Ob_σ.png" alt="(Graph of P_f(O_b, σ))" style="width: 45%"></a>
+<a href="/images/matched-betting/Opr_Ob_Ol.png"><img src="/images/matched-betting/Opr_Ob_Ol.png" alt="(Graph of P_f(O_b, Ol))" style="width: 45%"></a>
+<a href="/images/matched-betting/Opr_Ob_σ.png"><img src="/images/matched-betting/Opr_Ob_σ.png" alt="(Graph of P_f(O_b, σ))" style="width: 45%"></a>
 
 We can also calculate $O'$ simply as a function of profit, and vice versa:
 
