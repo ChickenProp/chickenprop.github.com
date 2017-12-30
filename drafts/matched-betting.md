@@ -95,8 +95,8 @@ and for a free bet, it's
 
 We can look at these functions graphically:
 
-<a href="/images/matched-betting/Pf_Ob_Ol.png"><img src="/images/matched-betting/Pf_Ob_Ol.png" alt="(Graph of P_f(O_b, O_l))" style="width: 45%"></a>
 <a href="/images/matched-betting/Pq_Ob_Ol.png"><img src="/images/matched-betting/Pq_Ob_Ol.png" alt="(Graph of P_q(O_b, O_l))" style="width: 45%"></a>
+<a href="/images/matched-betting/Pf_Ob_Ol.png"><img src="/images/matched-betting/Pf_Ob_Ol.png" alt="(Graph of P_f(O_b, O_l))" style="width: 45%"></a>
 
 *(all images link to full-size versions)*
 
@@ -109,15 +109,18 @@ We can reparameterise in terms of $O_b$ and $σ = O_l - O_b$, the spread between
         P_f &= C^+ { O_b - 1 \over O_b + σ - C_l }.
     \end{align*} $$
 
-<a href="/images/matched-betting/Pf_Ob_σ.png"><img src="/images/matched-betting/Pf_Ob_σ.png" alt="(Graph of P_f(O_b, σ))" style="width: 45%"></a>
 <a href="/images/matched-betting/Pq_Ob_σ.png"><img src="/images/matched-betting/Pq_Ob_σ.png" alt="(Graph of P_q(O_b, σ))" style="width: 45%"></a>
+<a href="/images/matched-betting/Pf_Ob_σ.png"><img src="/images/matched-betting/Pf_Ob_σ.png" alt="(Graph of P_f(O_b, σ))" style="width: 45%"></a>
 
-These are more distinct. Looking at these graphs, it seems that for a qualifying bet, having low $σ$ is more significant than having high $O_b$; but for a free bet, having high $O_b$ is more significant than having low $σ$. We'll make this more precise later.
+These are slightly more distinct. Looking at these graphs, it seems that for a qualifying bet, having low $σ$ is more significant than having high $O_b$; but for a free bet, having high $O_b$ is more significant than having low $σ$. We'll make this more precise later.
 
 We can also look at $P_q - P_f$, the difference in profit between a qualifying bet and a free bet. This isn't particularly useful to compare bets: you place qualifying bets to get free bets, and you place free bets to get qualifying bets, and if you're doing pure matched betting, I don't think you'll ever be asking yourself *should I place this bet free or as a qualifier?* Still, the difference is
 
     $$ P_q - P_f = { 1 \over O_l - C_l } - 1
                  = { 1 - (O_l - C_l) \over O_l - C_l }. $$
+
+    # $$ P_q = C^+ { O_b + C_b/(1 - C_b) \over O_l - C_l } - 1, $$
+    # $$ P_f = C^+ { O_b - 1 \over O_l - C_l }. $$
 
 If your $O_l$ is unrealistically tiny, you'll make slightly more money on a qualifier than a free bet. But the more $O_l$ grows, the worse a qualifier becomes relative to a free bet. This, too, is suggestive that you should be looking at different sorts of bets for your qualifiers and your free bets.
 
@@ -170,14 +173,17 @@ and deduce
            &= O_b { 1 - C_l + σ/O_b \over 1 - C_l + σ }.
     \end{align*} $$
 
-The expression with $σ$ isn't exactly simpler, but I think it's more aesthetically pleasing. (Consider that $1-C_l$ is approximately as fundamental as $C_l$ itself.)
+The expression with $σ$ isn't exactly simpler, but I think it's more aesthetically pleasing. (Consider that $1-C_l$ is approximately as fundamental as $C_l$ itself.) Graphically:
 
-We can also calculate $O'$ and $P_f$ as functions of each other:
+<a href="/images/matched-betting/Obr_Ob_Ol.png"><img src="/images/matched-betting/Obr_Ob_Ol.png" alt="(Graph of P_f(O_b, Ol))" style="width: 45%"></a>
+<a href="/images/matched-betting/Obr_Ob_σ.png"><img src="/images/matched-betting/Obr_Ob_σ.png" alt="(Graph of P_f(O_b, σ))" style="width: 45%"></a>
+
+We can also calculate $O'$ simply as a function of profit, and vice versa:
 
     $$ P_f = C^+ { O' - 1 \over O' - C_l }                 \\
        O' = { C_lP_f - C^+ \over P_f - C^+ } $$
 
-(image)
+<a href="/images/matched-betting/Pf_Opr.png"><img src="/images/matched-betting/Pf_Opr.png" alt="(Graph of P_f(O'))" style="width: 45%"></a>
 
 $P_f$ approaches an asymtote at $C^+$, but slowly. With $C_b = 0, C_l = 0.02$, extracting $80\%$ of a free bet is only possible if $O_b ≥ 5.36$. For $90\%$, you need $O_b ≥ 12.03$. Such bets are somewhat rare in my experience, and typically have high spread.
 
@@ -295,7 +301,7 @@ They all had exactly the same odds on all three positions (win/draw/win), even w
 
 ---
 
-And that's it. I'm sure there are other interesting questions you could ask, but I'm going to stop there.
+And that's it. There are plenty more interesting questions you could ask[^interesting-questions], but I'm going to stop there.
 
 Something that would be nice would be a calculator that can make use of this. The online calculators all seem pretty crap: they only tell you profit, lay stake and lay liability, and only for one bet at a time. Being able to compare bets seems like it would be a pretty important feature, but I haven't seen it anywhere. (Some of them have features to work with more complicated types of bets than I've looked at, but I don't care about that. [Here's one](https://matchedbettingblog.com/matched-betting-calculator/) that's no worse than any other.) I've also seen an excel calculator, which had the neat feature of automatically adding bets to a spreadsheet. But again, only one bet at a time; plus, I don't have excel, and don't keep track of my bets in a spreadsheet. (I use [ledger](http://ledger-cli.org/), though it's not a great fit.)
 
@@ -310,3 +316,5 @@ If I were to dedicate more time to the project, I currently think I'd start agai
     Another type is the "risk-free" bet, which I won't go into here partly because I'm not 100% sure what it means. But I *think* that "£10 in risk-free bets" allows you to make a bet of more than £10, and if you lose, you get £10 back. I think the way to treat it is as putting £10 into a free bet (stake not returned) and the remainder of your stake into a qualifying bet, and so by default you should put in no more than the risk-free amount.
 
 [^graph-shape]: Another way to look at this is by the shape of the "more profitable" space on the graphs of $P_q(O_b, σ)$ and $P_f(O_b, σ)$. In both cases, this is the space below and to the right of one of the level curves. On the $P_f$ graph, it's defined by two lines: $σ = 0$ and the level curve itself. If we add a line with constant $O_b$, that line can carve up the "less profitable" space without entering the "more profitable" space. But on the $P_q$ graph, the "more profitable" space is also defined by the line $O_b = 1$. Any line we draw with constant $O_b ≠ 1$ or $σ ≠ 0$ will carve up the "more profitable" space.
+
+[^interesting-questions]: A thing I'd like to explore at some point, is qualifying bets where you only win a free bet under certain circumstances. For example, you bet on a team to win a football match, and you win a free bet iff your team is winning at the end of both halves. Here you're not guaranteed to turn a profit, but you might still make one in expectation.
