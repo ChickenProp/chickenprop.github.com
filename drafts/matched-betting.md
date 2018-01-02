@@ -176,16 +176,17 @@ The expression with $σ$ isn't exactly simpler, but I think it's more aesthetica
 
 We can also calculate $O'$ simply as a function of profit, and vice versa:
 
+<p style="float: right; width: 45%"><a href="/images/matched-betting/Pf_Opr.png"><img src="/images/matched-betting/Pf_Opr.png" alt="(Graph of P_f(O'))" style="width: 100%; margin: 0px"></a></p>
+
     $$ P_f = C^+ { O' - 1 \over O' - C_l }                 \\
        O' = { C_lP_f - C^+ \over P_f - C^+ } $$
 
-<a href="/images/matched-betting/Pf_Opr.png"><img src="/images/matched-betting/Pf_Opr.png" alt="(Graph of P_f(O'))" style="width: 45%"></a>
 
 $P_f$ approaches an asymtote at $C^+$, but slowly. With $C_b = 0, C_l = 0.02$, extracting $80\%$ of a free bet is only possible if $O_b ≥ 5.36$. For $90\%$, you need $O_b ≥ 12.03$. Such bets are somewhat rare in my experience, and typically have high spread.
 
 We can go more general. Given a profit, we can calculate the level curve of all bets which generate that profit; the case $σ=0$ gives us only a single point on that curve. The curve divides bet-space into two regions, so that it's easy to see whether a bet gives more or less than this amount of profit.
 
-(Earlier we saw this level curve graphically, for certain specific profits. Now we find the explicit formula for the curve.)
+(Earlier we saw this level curve graphically, for certain specific profits. Now we find the explicit formula for the curve, which I secretly already used to draw the graphs.)
 
 We already have
 
