@@ -114,15 +114,11 @@ We can reparameterise in terms of $O_b$ and $σ = O_l - O_b$, the spread between
 
 These are slightly more distinct. Looking at these graphs, it seems that for a qualifying bet, having low $σ$ is more significant than having high $O_b$; but for a free bet, having high $O_b$ is more significant than having low $σ$. We'll make this more precise later.
 
-We can also look at $P_q - P_f$, the difference in profit between a qualifying bet and a free bet. This isn't particularly useful to compare bets: you place qualifying bets to get free bets, and you place free bets to get qualifying bets, and if you're doing pure matched betting, I don't think you'll ever be asking yourself *should I place this bet free or as a qualifier?* Still, the difference is
+We can also look at $P_f - P_q$, the difference in profit between a qualifying bet and a free bet. This isn't particularly useful to compare bets: you place qualifying bets to get free bets, and you place free bets to get money, and if you're doing pure matched betting, I don't think you'll ever be asking yourself *should I place this bet free or as a qualifier?* Still, the difference is
 
-    $$ P_q - P_f = { 1 \over O_l - C_l } - 1
-                 = { 1 - (O_l - C_l) \over O_l - C_l }. $$
+    $$ P_f - P_q = 1 - { (1 - C_l)(1 - 2C_b) \over O_l - C_l }. $$
 
-    # $$ P_q = C^+ { O_b + C_b/(1 - C_b) \over O_l - C_l } - 1, $$
-    # $$ P_f = C^+ { O_b - 1 \over O_l - C_l }. $$
-
-If your $O_l$ is unrealistically tiny, you'll make slightly more money on a qualifier than a free bet. But the more $O_l$ grows, the worse a qualifier becomes relative to a free bet. This, too, is suggestive that you should be looking at different sorts of bets for your qualifiers and your free bets.
+The more $O_l$ grows, the worse a qualifier becomes relative to a free bet. This is another suggestion that you should be looking at different sorts of bets for your qualifiers and your free bets.
 
 **Liability**
 
