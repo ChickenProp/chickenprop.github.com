@@ -55,6 +55,13 @@ def Opr_Ob_σ(Opr):
 def Opr_Pf(Opr):
     return C * (Opr - 1)/(Opr - Cl)
 
+def σpr_Ob_σ(σpr):
+    Pq = σpr_Pq(σpr)
+    return Pq_Ob_σ(Pq).assign(σpr=σpr)
+
+def σpr_Pq(σpr):
+    return (1 - Cl) / (1 - Cl + σpr) - 1
+
 # helpers
 
 def dollars(s):
@@ -103,7 +110,6 @@ def main():
 
     df = concat_map(Pf_Ob_Ol, 'P_f', np.linspace(0.1, 1, 10))
     (gg.ggplot(df, gg.aes('O_b', 'O_l', group='P_f', color='P_f'))
-     # + gg.ggtitle('$P_f(O_b, O_l)$\n${}_{C_b = 0, C_l = 0.02}$')
      + titles('P_f(O_b, O_l)')
      + colors('P_f')
      + labs('O_b', 'O_l')
@@ -173,6 +179,26 @@ def main():
      + gg.geom_line()
      + gg.geom_hline(yintercept=C, linetype='dashed', color='grey')
     ).save(savepath('Pf_Opr.png'))
+
+    df = concat_map(σpr_Ob_σ, 'σpr', np.linspace(0, 5, 11))
+    (gg.ggplot(df, gg.aes('O_b', 'σ', group='σpr', color='σpr'))
+     + titles("σ'(O_b, σ)")
+     + colors("σ'")
+     + labs('O_b', 'σ')
+     + limits((1, 10), (0, 5))
+     + gg.geom_line()
+    ).save(savepath('σpr_Ob_σ.png'))
+
+    df = (pd.DataFrame({'σpr': np.linspace(0, 20, 101)})
+            .assign(Pq=lambda x: σpr_Pq(x.σpr)))
+    (gg.ggplot(df, gg.aes('σpr', 'Pq'))
+     + titles("P_q(σ')")
+     + labs("σ'", 'P_q')
+     + limits((0, 20), (-1, 0),
+              xbreaks=np.linspace(0, 20, 11),
+              ybreaks=np.linspace(-1, 0, 11))
+     + gg.geom_line()
+    ).save(savepath('Pq_σpr.png'))
 
 if __name__ == '__main__':
     main()

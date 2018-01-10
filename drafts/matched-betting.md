@@ -2,7 +2,7 @@
 title: The Mathematics of Matched Betting
 layout: draft
 ---
-I've been doing a little bit of matched betting lately. The idea is that you place two opposite bets on the same event, calibrated so that your profit will be the same no matter which bet wins. If you do this entirely with your own money, your profit will (under reasonable assumptions) be negative. But bookmakers often offer free bets; you can use matched betting to extract most of the amount of that free bet as actual money.
+I've been doing a little bit of matched betting lately[^lately]. The idea is that you place two opposite bets on the same event, calibrated so that your profit will be the same no matter which bet wins. If you do this entirely with your own money, your profit will (under reasonable assumptions) be negative. But bookmakers often offer free bets; you can use matched betting to extract most of the amount of that free bet as actual money.
 
 This post isn't advice about how to get into matched betting. That market is probably saturated; if you want to learn, I used [this guide](https://matchedbettingblog.com/matched-betting-intro/) and it served me well. (However, if anyone is inspired to try it by this post, I have a referral code for [smarkets](https://smarkets.com): **safto14**. It looks like if you sign up with that and bet $£20$, both you and I will receive $£10$ in risk-free bets. I swear that's not why I'm posting this.)
 
@@ -221,7 +221,9 @@ We also can't set $O_b$ to its best possible value, because it can go arbitraril
 
 which gives us
 
-    $$ σ' = { σ + (O_b - 1)(1 - C^+) \over 1 + (O_b - 1)(1 - C_b) } $$
+<p style="float: right; width: 45%"><a href="/images/matched-betting/σpr_Ob_σ.png"><img src="/images/matched-betting/σpr_Ob_σ.png" alt="(Graph of σ'(O_b, σ))" style="width: 100%; margin: 0px"></a></p>
+
+    $$ σ' = { σ + (O_b - 1)(1 - C^+) \over 1 + (O_b - 1)(1 - C_b) }. $$
 
 Now we know that any bet with a spread less than $σ'$ will give better profit than the bet we started with. Unfortunately, I think this still isn't as good as what we got for a free bet, for three reasons.
 
@@ -234,6 +236,8 @@ Now we know that any bet with a spread less than $σ'$ will give better profit t
 3. Qualifying bets often must be placed at a minimum odds (on the back side) in order to count. That typically rules out the lowest-spread bets (see below digression).
 
 Still, this is what we have. Following a similar theme as before, we can calculate $σ'$ and $P_q$ as functions of each other:
+
+<p style="float: right; width: 45%"><a href="/images/matched-betting/Pq_σpr.png"><img src="/images/matched-betting/Pq_σpr.png" alt="(Graph of P_q(σ'))" style="width: 100%; margin: 0px"></a></p>
 
     $$ P_q = { 1 - C_l \over 1 - C_l + σ' } - 1 \\
        σ' = { 1 - C_l \over P_q + 1 } + C_l - 1. $$
@@ -307,6 +311,8 @@ I've written a command-line tool that can show you multiple bets at a time for c
 But the interface isn't very good, I think partly because of the limits of the command line and partly because of a questionable design decision (see the README). And it can't show graphs, which I think would be nice. If you want to use it anyway, it's [on github](https://github.com/ChickenProp/matched-bets).
 
 If I were to dedicate more time to the project, I currently think I'd start again in Javascript. I think I have a vague idea of how a decent one could work. But right now, as far as I can tell there are no good calculators.
+
+[^lately]: Well, I haven't done any for a few months now. This post took a long time to write.
 
 [^risk-free]: I'm assuming that all free bets are "stake not returned", which means that if you win, you collect your winnings but you don't also get to keep the stake that wasn't yours in the first place. If you have a "stake returned" free bet, that effectively increases the odds on the back side by $1$. I've not yet encountered one of these, myself.
 
