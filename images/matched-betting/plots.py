@@ -117,7 +117,7 @@ def main():
      + gg.geom_abline(slope=1, intercept=0,
                       linetype='dashed', color='grey')
      + gg.geom_line()
-    ).save(savepath('Pf_Ob_Ol.png'))
+    ).save(savepath('Pf_Ob_Ol.png'), width=4.8, height=3.6)
 
     df = concat_map(Pf_Ob_σ, 'P_f', np.linspace(0.1, 1, 10))
     (gg.ggplot(df, gg.aes('O_b', 'σ', group='P_f', color='P_f'))
@@ -126,7 +126,7 @@ def main():
      + labs('O_b', 'σ')
      + limits((1, 10), (0, 5))
      + gg.geom_line()
-    ).save(savepath('Pf_Ob_σ.png'))
+    ).save(savepath('Pf_Ob_σ.png'), width=4.8, height=3.6)
 
     df = concat_map(Pq_Ob_Ol, 'P_q', np.linspace(-0.9, 0, 10))
     (gg.ggplot(df, gg.aes('O_b', 'O_l', group='P_q', color='P_q'))
@@ -137,7 +137,7 @@ def main():
      + gg.geom_abline(slope=1, intercept=0,
                       linetype='dashed', color='grey')
      + gg.geom_line()
-    ).save(savepath('Pq_Ob_Ol.png'))
+    ).save(savepath('Pq_Ob_Ol.png'), width=4.8, height=3.6)
 
     df = concat_map(Pq_Ob_σ, 'P_q', np.linspace(-0.9, 0, 10))
     (gg.ggplot(df, gg.aes('O_b', 'σ', group='P_q', color='P_q'))
@@ -146,7 +146,7 @@ def main():
      + labs('O_b', 'σ')
      + limits((1, 10), (0, 5))
      + gg.geom_line()
-    ).save(savepath('Pq_Ob_σ.png'))
+    ).save(savepath('Pq_Ob_σ.png'), width=4.8, height=3.6)
 
     df = concat_map(Opr_Ob_Ol, 'Opr', np.linspace(1, 5, 9))
     (gg.ggplot(df, gg.aes('O_b', 'O_l', group='Opr', color='Opr'))
@@ -157,7 +157,7 @@ def main():
      + gg.geom_line()
      + gg.geom_abline(slope=1, intercept=0,
                       linetype='dashed', color='grey')
-    ).save(savepath('Opr_Ob_Ol.png'))
+    ).save(savepath('Opr_Ob_Ol.png'), width=4.8, height=3.6)
 
     df = concat_map(Opr_Ob_σ, 'Opr', np.linspace(1, 5, 9))
     (gg.ggplot(df, gg.aes('O_b', 'σ', group='Opr', color='Opr'))
@@ -166,7 +166,7 @@ def main():
      + labs('O_b', 'σ')
      + limits((1, 10), (0, 5))
      + gg.geom_line()
-    ).save(savepath('Opr_Ob_σ.png'))
+    ).save(savepath('Opr_Ob_σ.png'), width=4.8, height=3.6)
 
     df = (pd.DataFrame({'Opr': np.linspace(1, 20, 91)})
             .assign(Pf=lambda x: Opr_Pf(x.Opr)))
@@ -178,7 +178,7 @@ def main():
               ybreaks=np.linspace(0, 1, 11))
      + gg.geom_line()
      + gg.geom_hline(yintercept=C, linetype='dashed', color='grey')
-    ).save(savepath('Pf_Opr.png'))
+    ).save(savepath('Pf_Opr.png'), width=4.8, height=3.6)
 
     df = concat_map(σpr_Ob_σ, 'σpr', np.linspace(0, 5, 11))
     (gg.ggplot(df, gg.aes('O_b', 'σ', group='σpr', color='σpr'))
@@ -187,7 +187,7 @@ def main():
      + labs('O_b', 'σ')
      + limits((1, 10), (0, 5))
      + gg.geom_line()
-    ).save(savepath('σpr_Ob_σ.png'))
+    ).save(savepath('σpr_Ob_σ.png'), width=4.8, height=3.6)
 
     df = (pd.DataFrame({'σpr': np.linspace(0, 20, 101)})
             .assign(Pq=lambda x: σpr_Pq(x.σpr)))
@@ -198,7 +198,7 @@ def main():
               xbreaks=np.linspace(0, 20, 11),
               ybreaks=np.linspace(-1, 0, 11))
      + gg.geom_line()
-    ).save(savepath('Pq_σpr.png'))
+    ).save(savepath('Pq_σpr.png'), width=4.8, height=3.6)
 
 if __name__ == '__main__':
     main()
