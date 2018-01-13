@@ -106,6 +106,12 @@ def save_both(plot, basename):
     plot.save(savepath('%s.small.png' % (basename,)),
               width=2.4, height=1.8)
 
+def my_plot(df, x, y, color=None):
+    aes = { 'color': color, 'group': color } if color else {}
+    return (gg.ggplot(df, gg.aes(x, y, **aes))
+            + labs(x, y)
+            + (colors(color.replace('pr', "'")) if color else []))
+
 def main():
     mpl.rc('mathtext', fontset='cm')
 
@@ -114,10 +120,8 @@ def main():
     warnings.filterwarnings('ignore', r'Filename: .+\.png')
 
     df = concat_map(Pf_Ob_Ol, 'P_f', np.linspace(0.1, 1, 10))
-    save_both(gg.ggplot(df, gg.aes('O_b', 'O_l', group='P_f', color='P_f'))
+    save_both(my_plot(df, 'O_b', 'O_l', 'P_f')
               + titles('P_f(O_b, O_l)')
-              + colors('P_f')
-              + labs('O_b', 'O_l')
               + limits((1, 10))
               + gg.geom_abline(slope=1, intercept=0,
                                linetype='dashed', color='grey')
@@ -125,19 +129,15 @@ def main():
               , 'Pf_Ob_Ol')
 
     df = concat_map(Pf_Ob_σ, 'P_f', np.linspace(0.1, 1, 10))
-    save_both(gg.ggplot(df, gg.aes('O_b', 'σ', group='P_f', color='P_f'))
+    save_both(my_plot(df, 'O_b', 'σ', 'P_f')
               + titles('P_f(O_b, σ)')
-              + colors('P_f')
-              + labs('O_b', 'σ')
               + limits((1, 10), (0, 5))
               + gg.geom_line()
               , 'Pf_Ob_σ')
 
     df = concat_map(Pq_Ob_Ol, 'P_q', np.linspace(-0.9, 0, 10))
-    save_both(gg.ggplot(df, gg.aes('O_b', 'O_l', group='P_q', color='P_q'))
+    save_both(my_plot(df, 'O_b', 'O_l', 'P_q')
               + titles('P_q(O_b, O_l)')
-              + colors('P_q')
-              + labs('O_b', 'O_l')
               + limits((1, 10))
               + gg.geom_abline(slope=1, intercept=0,
                                linetype='dashed', color='grey')
@@ -145,19 +145,15 @@ def main():
               , 'Pq_Ob_Ol')
 
     df = concat_map(Pq_Ob_σ, 'P_q', np.linspace(-0.9, 0, 10))
-    save_both(gg.ggplot(df, gg.aes('O_b', 'σ', group='P_q', color='P_q'))
+    save_both(my_plot(df, 'O_b', 'σ', 'P_q')
               + titles('P_q(O_b, σ)')
-              + colors('P_q')
-              + labs('O_b', 'σ')
               + limits((1, 10), (0, 5))
               + gg.geom_line()
               , 'Pq_Ob_σ')
 
     df = concat_map(Opr_Ob_Ol, 'Opr', np.linspace(1, 5, 9))
-    save_both(gg.ggplot(df, gg.aes('O_b', 'O_l', group='Opr', color='Opr'))
+    save_both(my_plot(df, 'O_b', 'O_l', 'Opr')
               + titles("O'(O_b, O_l)")
-              + colors("O'")
-              + labs('O_b', 'Ol')
               + limits((1, 10), (1, 10))
               + gg.geom_line()
               + gg.geom_abline(slope=1, intercept=0,
@@ -165,17 +161,15 @@ def main():
               , 'Opr_Ob_Ol')
 
     df = concat_map(Opr_Ob_σ, 'Opr', np.linspace(1, 5, 9))
-    save_both(gg.ggplot(df, gg.aes('O_b', 'σ', group='Opr', color='Opr'))
+    save_both(my_plot(df, 'O_b', 'σ', 'Opr')
               + titles("O'(O_b, σ)")
-              + colors("O'")
-              + labs('O_b', 'σ')
               + limits((1, 10), (0, 5))
               + gg.geom_line()
               , 'Opr_Ob_σ')
 
     df = (pd.DataFrame({'Opr': np.linspace(1, 20, 91)})
             .assign(Pf=lambda x: Opr_Pf(x.Opr)))
-    save_both(gg.ggplot(df, gg.aes('Opr', 'Pf'))
+    save_both(my_plot(df, 'Opr', 'Pf')
               + titles("P_f(O')")
               + labs("O'", 'P_f')
               + limits((1, 20), (0, 1),
@@ -186,17 +180,15 @@ def main():
               , 'Pf_Opr')
 
     df = concat_map(σpr_Ob_σ, 'σpr', np.linspace(0, 5, 11))
-    save_both(gg.ggplot(df, gg.aes('O_b', 'σ', group='σpr', color='σpr'))
+    save_both(my_plot(df, 'O_b', 'σ', 'σpr')
               + titles("σ'(O_b, σ)")
-              + colors("σ'")
-              + labs('O_b', 'σ')
               + limits((1, 10), (0, 5))
               + gg.geom_line()
               , 'σpr_Ob_σ')
 
     df = (pd.DataFrame({'σpr': np.linspace(0, 20, 101)})
             .assign(Pq=lambda x: σpr_Pq(x.σpr)))
-    save_both(gg.ggplot(df, gg.aes('σpr', 'Pq'))
+    save_both(my_plot(df, 'σpr', 'Pq')
               + titles("P_q(σ')")
               + labs("σ'", 'P_q')
               + limits((0, 20), (-1, 0),
