@@ -95,10 +95,10 @@ and for a free bet, it's
 
 We can look at these functions graphically:
 
-<a href="/images/matched-betting/Pq_Ob_Ol.png"><img src="/images/matched-betting/Pq_Ob_Ol.png" alt="(Graph of P_q(O_b, O_l))" style="width: 45%"></a>
-<a href="/images/matched-betting/Pf_Ob_Ol.png"><img src="/images/matched-betting/Pf_Ob_Ol.png" alt="(Graph of P_f(O_b, O_l))" style="width: 45%"></a>
+<a href="/images/matched-betting/Pq_Ob_Ol.png"><img src="/images/matched-betting/Pq_Ob_Ol.small.png" alt="(Graph of P_q(O_b, O_l))" style="width: 45%"></a>
+<a href="/images/matched-betting/Pf_Ob_Ol.png"><img src="/images/matched-betting/Pf_Ob_Ol.small.png" alt="(Graph of P_f(O_b, O_l))" style="width: 45%"></a>
 
-*(all images link to full-size versions)*
+*(all images link to larger versions)*
 
 each line represents a contour of the function, a set of points that all have the same profit. The sets of contours look superficially similar, but they're generally steeper for a free bet. In both cases, profit increases with $O_b$ and decreases with $O_l$.
 
@@ -109,8 +109,8 @@ We can reparameterise in terms of $O_b$ and $σ = O_l - O_b$, the spread between
         P_f &= C^+ { O_b - 1 \over O_b + σ - C_l }.
     \end{align*} $$
 
-<a href="/images/matched-betting/Pq_Ob_σ.png"><img src="/images/matched-betting/Pq_Ob_σ.png" alt="(Graph of P_q(O_b, σ))" style="width: 45%"></a>
-<a href="/images/matched-betting/Pf_Ob_σ.png"><img src="/images/matched-betting/Pf_Ob_σ.png" alt="(Graph of P_f(O_b, σ))" style="width: 45%"></a>
+<a href="/images/matched-betting/Pq_Ob_σ.png"><img src="/images/matched-betting/Pq_Ob_σ.small.png" alt="(Graph of P_q(O_b, σ))" style="width: 45%"></a>
+<a href="/images/matched-betting/Pf_Ob_σ.png"><img src="/images/matched-betting/Pf_Ob_σ.small.png" alt="(Graph of P_f(O_b, σ))" style="width: 45%"></a>
 
 These are slightly more distinct. Looking at these graphs, it seems that for a qualifying bet, having low $σ$ is more significant than having high $O_b$; but for a free bet, having high $O_b$ is more significant than having low $σ$. We'll make this more precise later.
 
@@ -171,12 +171,12 @@ and deduce
 
 The expression with $σ$ isn't exactly simpler, but I think it's more aesthetically pleasing. (Consider that $1-C_l$ is approximately as fundamental as $C_l$ itself.) Graphically:
 
-<a href="/images/matched-betting/Opr_Ob_Ol.png"><img src="/images/matched-betting/Opr_Ob_Ol.png" alt="(Graph of P_f(O_b, Ol))" style="width: 45%"></a>
-<a href="/images/matched-betting/Opr_Ob_σ.png"><img src="/images/matched-betting/Opr_Ob_σ.png" alt="(Graph of P_f(O_b, σ))" style="width: 45%"></a>
+<a href="/images/matched-betting/Opr_Ob_Ol.png"><img src="/images/matched-betting/Opr_Ob_Ol.small.png" alt="(Graph of P_f(O_b, Ol))" style="width: 45%"></a>
+<a href="/images/matched-betting/Opr_Ob_σ.png"><img src="/images/matched-betting/Opr_Ob_σ.small.png" alt="(Graph of P_f(O_b, σ))" style="width: 45%"></a>
 
 We can also calculate $O'$ simply as a function of profit, and vice versa:
 
-<p style="float: right; width: 45%"><a href="/images/matched-betting/Pf_Opr.png"><img src="/images/matched-betting/Pf_Opr.png" alt="(Graph of P_f(O'))" style="width: 100%; margin: 0px"></a></p>
+<p style="float: right; width: 45%"><a href="/images/matched-betting/Pf_Opr.png"><img src="/images/matched-betting/Pf_Opr.small.png" alt="(Graph of P_f(O'))" style="width: 100%; margin: 0px"></a></p>
 
     $$ P_f = C^+ { O' - 1 \over O' - C_l }                 \\
        O' = { C_lP_f - C^+ \over P_f - C^+ } $$
@@ -221,7 +221,7 @@ We also can't set $O_b$ to its best possible value, because it can go arbitraril
 
 which gives us
 
-<p style="float: right; width: 45%"><a href="/images/matched-betting/σpr_Ob_σ.png"><img src="/images/matched-betting/σpr_Ob_σ.png" alt="(Graph of σ'(O_b, σ))" style="width: 100%; margin: 0px"></a></p>
+<p style="float: right; width: 45%"><a href="/images/matched-betting/σpr_Ob_σ.png"><img src="/images/matched-betting/σpr_Ob_σ.small.png" alt="(Graph of σ'(O_b, σ))" style="width: 100%; margin: 0px"></a></p>
 
     $$ σ' = { σ + (O_b - 1)(1 - C^+) \over 1 + (O_b - 1)(1 - C_b) }. $$
 
@@ -237,7 +237,7 @@ Now we know that any bet with a spread less than $σ'$ will give better profit t
 
 Still, this is what we have. Following a similar theme as before, we can calculate $σ'$ and $P_q$ as functions of each other:
 
-<p style="float: right; width: 45%"><a href="/images/matched-betting/Pq_σpr.png"><img src="/images/matched-betting/Pq_σpr.png" alt="(Graph of P_q(σ'))" style="width: 100%; margin: 0px"></a></p>
+<p style="float: right; width: 45%"><a href="/images/matched-betting/Pq_σpr.png"><img src="/images/matched-betting/Pq_σpr.small.png" alt="(Graph of P_q(σ'))" style="width: 100%; margin: 0px"></a></p>
 
     $$ P_q = { 1 - C_l \over 1 - C_l + σ' } - 1 \\
        σ' = { 1 - C_l \over P_q + 1 } + C_l - 1. $$
