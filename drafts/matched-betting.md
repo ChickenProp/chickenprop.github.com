@@ -30,7 +30,7 @@ This has been a very brief introduction to matched betting. Now, into the math. 
 
 **Some definitions**
 
-We can think of a "matched bet" as an object with six values, $(O_b, O_l, S_b, S_l, C_b, C_l)$ representing a pair of back and lay bets. (A "free bet" and "qualifying bet" are also matched bets.[^risk-free])
+We can think of a paired bet as having six parameters, $(O_b, O_l, S_b, S_l, C_b, C_l)$. These are three parameters for each of a pair of back and lay bets.
 
 $O_b, O_l$ are the odds on the back and lay bets. It's typically safe to assume $O_b < O_l$; otherwise, modulo commission, you could make a profit even on your qualifying bets. Also, because we're using decimal odds, we have $O_b, O_l ≥ 1$ (anything less than $1$ corresponds to a probability below $0$.)
 
@@ -40,9 +40,7 @@ And $C_b, C_l ∈ [0, 1]$ are the commission charged on your winnings on each si
 
 I'm also going to introduce the symbol $C^+ = (1 - C_l)(1 - C_b)$. If you passed $£1$ through your bookmaker and exchange, and they each charged commission and nothing else, you would have $£C^+$ left at the end. $C^+$ isn't enough for us to fully understand a matched bet, we need the individual back and lay commissions as well, but it'll be convenient shorthand.
 
-A matched bet is one that gives the same profit no matter which side wins; as such, these six values are over-determined. Knowing any five of them will fix the value of the sixth.
-
-Now let $R_{xy}$ (where $x,y ∈ \\{b,l\\}$) be your return on side $y$ if your bet on side $x$ wins. So for a qualifying bet, we have:
+Now let $R_{xy}$ (where $x,y ∈ \\{b,l\\}$) be your return on side $y$ if your bet on side $x$ wins. So for a standard (or qualifying) bet, we have:
 
     $$ \begin{align*}
          R_{bb} &= S_b (O_b - 1) (1 - C_b)     \\
@@ -56,6 +54,10 @@ For a free bet, the only change is
     $$ R_{lb} = 0. $$
 
 So your profit is $R_{bb} + R_{bl}$ if your back bet wins; and $R_{lb} + R_{ll}$ if your lay bet wins.
+
+And now we can say that a matched bet is simply a paired bet, where your profit is the same in either case. I won't need to talk about simple paired bets from now on; all bets are matched. When I talk about a "free bet" or "qualifying bet", those are matched bets too.[^risk-free]
+
+Incidentally, the six prameters are over-determined. Most commonly we want to learn $S_l$ given the other five; but knowing any five of them will fix the value of the sixth.
 
 **Optimal lay stake**
 
@@ -314,10 +316,10 @@ If I were to dedicate more time to the project, I currently think I'd start agai
 
 [^lately]: Well, I haven't done any for a few months now. This post took a long time to write.
 
-[^risk-free]: I'm assuming that all free bets are "stake not returned", which means that if you win, you collect your winnings but you don't also get to keep the stake that wasn't yours in the first place. If you have a "stake returned" free bet, that effectively increases the odds on the back side by $1$. I've not yet encountered one of these, myself.
+[^risk-free]: I'm also assuming that all free bets are "stake not returned". In a standard bet, if you win, you get your stake back and also collect your winnings. If you win a stake not returned free bet, you collect your winnings; but you don't also get to keep the stake, because that wasn't yours in the first place. If you have a "stake returned" free bet, that effectively increases the odds on the back side by $1$. I've not yet encountered one of these, myself.
 
     Another type is the "risk-free" bet, which I won't go into here partly because I'm not 100% sure what it means. But I *think* that "£10 in risk-free bets" allows you to make a bet of more than £10, and if you lose, you get £10 back. I think the way to treat it is as putting £10 into a free bet (stake not returned) and the remainder of your stake into a qualifying bet, and so by default you should put in no more than the risk-free amount.
 
 [^graph-shape]: Another way to look at this is by the shape of the "more profitable" space on the graphs of $P_q(O_b, σ)$ and $P_f(O_b, σ)$. In both cases, this is the space below and to the right of one of the level curves. On the $P_f$ graph, it's defined by two lines: $σ = 0$ and the level curve itself. If we add a line with constant $O_b$, that line can carve up the "less profitable" space without entering the "more profitable" space. But on the $P_q$ graph, the "more profitable" space is also defined by the line $O_b = 1$. Any line we draw with constant $O_b ≠ 1$ or $σ ≠ 0$ will carve up the "more profitable" space.
 
-[^interesting-questions]: A thing I'd like to explore at some point, is qualifying bets where you only win a free bet under certain circumstances. For example, you bet on a team to win a football match, and you win a free bet iff your team is winning at the end of both halves. Here you're not guaranteed to turn a profit, but you might still make one in expectation.
+[^interesting-questions]: A thing I'd like to explore at some point, is qualifying bets where you only win a free bet under certain circumstances. For example, you bet on a team to win a football match, and you win a free bet iff your team is winning at the end of both halves. I think you can still guarantee a profit with the right combination of bets, but there are more variables involved. (On the exchange, you lay your team to win, like normal. That way you turn a profit if they win both halves, and lose a small amount otherwise. So you also lay them to win both halves - that's not a standard win/lose/draw bet, but I think it's generally available. If you pick the right stakes, you can turn a profit in both cases. Though probably not exactly the same profit in both cases, because you can't easily predict exactly how much the free bet will be worth.)
