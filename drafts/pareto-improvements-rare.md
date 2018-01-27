@@ -28,7 +28,7 @@ But I think that if Platform 3 is brought back into use, the second group loses 
 
 And they lose some power to say "if you ignore us, we'll make things difficult for you". Maybe it would take \\$1 trillion to make Platform 3 accessible. If Platform 3 remains out of use, people are more likely to spend \\$1 million to make their building projects accessible, because they've seen what happens if they don't. Conversely, if Platform 3 comes back, people are more likely to exaggerate future costs of accessibility. "If I say it costs \\$1 million, I'll have to pay. If I say it costs \\$10 million, maybe I won't."
 
-I expect that the actual power dynamics in question don't look quite like that, and I haven't researched the situation in question. But I think the point stands.
+I haven't researched the situation in question, and I expect that the actual power dynamics in play don't look quite like that. But I think the point stands.
 
 (My original reply said: "If it's easier to turn an unused inaccessible platform into a used accessible platform, than to turn a used inaccessible platform into a used accessible platform - I don't know if that's the case, but it sounds plausible - then opening the platform isn't a Pareto improvement." That still seems true to me, but it's not what I'm talking about here. There are lots of reasons why something might not be a Pareto improvement.)
 
