@@ -26,7 +26,7 @@ The model here is that there are two parties, people who can access the platform
 
 But I think that if Platform 3 is brought back into use, the second group loses some power. They lose the power to say "we'll let you bring back Platform 3 if you give us...". Maybe Platform 3 can be made accessible for $1 million. Then they can say "we'll let you bring it back if you make it accessible", but they can't do that if it's already back in use.
 
-And they lose some power to say "if you ignore us, we'll make things difficult for you". Maybe it would take \$1 trillion to make Platform 3 accessible. If Platform 3 remains out of use, people are more likely to spend \$1 million to make their building projects accessible, because they've seen what happens if they don't. Conversely, if Platform 3 comes back, people are more likely to exaggerate future costs of accessibility. "If I say it costs \$1 million, I'll have to pay. If I say it costs \$10 million, maybe I won't."
+And they lose some power to say "if you ignore us, we'll make things difficult for you". Maybe it would take \\$1 trillion to make Platform 3 accessible. If Platform 3 remains out of use, people are more likely to spend \\$1 million to make their building projects accessible, because they've seen what happens if they don't. Conversely, if Platform 3 comes back, people are more likely to exaggerate future costs of accessibility. "If I say it costs \\$1 million, I'll have to pay. If I say it costs \\$10 million, maybe I won't."
 
 I expect that the actual power dynamics in question don't look quite like that, and I haven't researched the situation in question. But I think the point stands.
 
