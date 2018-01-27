@@ -1,6 +1,6 @@
 ---
 title: Pareto improvements are rarer than they seem
-layout: draft
+layout: post
 ---
 *this is surely not an original insight, but I haven't seen it before*
 
