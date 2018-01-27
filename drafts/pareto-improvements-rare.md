@@ -32,4 +32,4 @@ I haven't researched the situation in question, and I expect that the actual pow
 
 (My original reply said: "If it's easier to turn an unused inaccessible platform into a used accessible platform, than to turn a used inaccessible platform into a used accessible platform - I don't know if that's the case, but it sounds plausible - then opening the platform isn't a Pareto improvement." That still seems true to me, but it's not what I'm talking about here. There are lots of reasons why something might not be a Pareto improvement.)
 
-This doesn't mean Pareto improvements don't exist. But I don't think they're always easy to find, and I think a lot of things that look like them are not.
+This doesn't mean Pareto improvements don't exist. But I think a lot of things that look like them are not.
