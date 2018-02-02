@@ -33,3 +33,11 @@ I haven't researched the situation in question, and I expect that the actual pow
 (My original reply said: "If it's easier to turn an unused inaccessible platform into a used accessible platform, than to turn a used inaccessible platform into a used accessible platform - I don't know if that's the case, but it sounds plausible - then opening the platform isn't a Pareto improvement." That still seems true to me, but it's not what I'm talking about here. There are lots of reasons why something might not be a Pareto improvement.)
 
 This doesn't mean Pareto improvements don't exist. But I think a lot of things that look like them are not.
+
+---
+
+**Update 2018-02-02:** some good comments on [reddit](https://www.reddit.com/r/slatestarcodex/comments/7tfxen/pareto_improvements_are_rarer_than_they_seem/) and [LessWrong](https://www.lesserwrong.com/posts/5AQBNwDoKW5YXDbvc/pareto-improvements-are-rarer-than-they-seem). Following those, I have two things in particular to add.
+
+First, that I like /u/AntiTwister's summary: "If you have the power to prevent another party from gaining utility, then you lose utility by giving up that power even if you are allies. There is opportunity cost in abstaining from using your power as a bargaining chip to increase your own utility."
+
+Second, that there is a related (weaker) concept called [Kaldor-Hicks efficiency](https://en.wikipedia.org/wiki/Kaldor%E2%80%93Hicks_efficiency). I think that a lot of the things that look-like-but-aren't Pareto improvements, are still Kaldor-Hicks improvements - meaning that the utility lost by the losing parties is still less than the utility gained by the winners. In theory, that means that the winners could compensate the losers by giving them some money, to reach a Pareto improvement over the original state. But various political and practical issues can (and often do) get in the way of that.
