@@ -20,27 +20,27 @@ commission_string = 'C_b = %g, C_l = %g' % (Cb, Cl)
 # math
 
 def Pf_Ob_Ol(Pf):
-    Ol = np.linspace(1, 10, 46)
+    Ol = np.linspace(1, 10.5, 5)
     Ob = (Pf * (Ol - Cl) + C) / C
 
     return pd.DataFrame({'O_l': Ol, 'O_b': Ob, 'P_f': Pf})
 
 def Pf_Ob_σ(Pf):
-    σ = np.linspace(0, 5, 501)
+    σ = np.linspace(0, 5.5, 5)
     Ob = (Pf * (σ - Cl) + C) / (C - Pf)
 
     return pd.DataFrame({'σ': σ, 'O_b': Ob, 'P_f': Pf})
 
 def Pq_Ob_Ol(Pq):
-    Ol = np.linspace(1, 10, 46)
-    Ob = ((Pq + 1) * (Ol - Cl) - Cb*(1 - Cl))/C
+    Ob = np.linspace(1, 10.5, 5)
+    Ol = (Ob*C + Cb*(1 - Cl))/(Pq + 1) + Cl
 
     return pd.DataFrame({'O_l': Ol, 'O_b': Ob, 'P_q': Pq})
 
 def Pq_Ob_σ(Pq):
-    σ = np.linspace(0, 5, 501)
     Λ = (Pq + 1)/(1 - Cl)
-    Ob = (Λ*(σ - Cl) - Cb) / (1 - Cb - Λ)
+    Ob = np.linspace(1, 10.5, 5)
+    σ = (Ob*(1 - Cb - Λ) + Cb)/Λ + Cl
 
     return pd.DataFrame({'σ': σ, 'O_b': Ob, 'P_q': Pq})
 
@@ -67,6 +67,9 @@ def σpr_Pq(σpr):
 def dollars(s):
     return '$%s$' % (s,)
 
+def mathrm(s):
+    return ' '.join('$\\mathrm{%s}$' % (x,) for x in s.split())
+
 def titles(t, s=commission_string): # title, hacky subtitle
     return gg.ggtitle('$%s$\n${}_{%s}$' % (t, s))
 
@@ -89,6 +92,10 @@ def limits(x, y=None, xbreaks=None, ybreaks=None):
     if ybreaks is None:
         ybreaks = np.linspace(y0, y1, y1 - y0 + 1)
 
+    # We want these plots to continue to the top and left.
+    return [ gg.coord_cartesian(xlim=x, ylim=y),
+             gg.scale_x_continuous(limits=(x0, None), breaks=xbreaks),
+             gg.scale_y_continuous(limits=(y0, None), breaks=ybreaks) ]
     return [ gg.scale_x_continuous(limits=x, breaks=xbreaks),
              gg.scale_y_continuous(limits=y, breaks=ybreaks) ]
 
@@ -103,8 +110,10 @@ def concat_map(f, cat, l):
 
 def save_both(plot, basename):
     plot.save(savepath('%s.png' % (basename,)))
+    print(basename)
     plot.save(savepath('%s.small.png' % (basename,)),
               width=2.4, height=1.8)
+    print('%s - small' % (basename,))
 
 def my_plot(df, x, y, color=None):
     aes = { 'color': color, 'group': color } if color else {}
@@ -115,7 +124,8 @@ def my_plot(df, x, y, color=None):
 def main():
     mpl.rc('mathtext', fontset='cm')
 
-    warnings.filterwarnings('ignore', r'geom_\w+: Removed \d+ rows')
+    warnings.filterwarnings('ignore',
+                            r'(geom|position)_\w+ ?: Removed \d+ rows')
     warnings.filterwarnings('ignore', r'Saving .+ x .+ in image')
     warnings.filterwarnings('ignore', r'Filename: .+\.png')
 
@@ -167,7 +177,7 @@ def main():
               + gg.geom_line()
               , 'Opr_Ob_σ')
 
-    df = (pd.DataFrame({'Opr': np.linspace(1, 20, 91)})
+    df = (pd.DataFrame({'Opr': np.linspace(1, 21, 101)})
             .assign(Pf=lambda x: Opr_Pf(x.Opr)))
     save_both(my_plot(df, 'Opr', 'Pf')
               + titles("P_f(O')")
@@ -186,7 +196,7 @@ def main():
               + gg.geom_line()
               , 'σpr_Ob_σ')
 
-    df = (pd.DataFrame({'σpr': np.linspace(0, 20, 101)})
+    df = (pd.DataFrame({'σpr': np.linspace(0, 21, 106)})
             .assign(Pq=lambda x: σpr_Pq(x.σpr)))
     save_both(my_plot(df, 'σpr', 'Pq')
               + titles("P_q(σ')")
@@ -196,6 +206,38 @@ def main():
                        ybreaks=np.linspace(-1, 0, 11))
               + gg.geom_line()
               , 'Pq_σpr')
+
+    df_Pf = Pf_Ob_σ(0.6).assign(profit=dollars('P_f'))
+    df_Pq = Pq_Ob_σ(-0.3).assign(profit=dollars('P_q'))
+    df = pd.concat((df_Pf, df_Pq), ignore_index=True)
+    df.drop_duplicates('O_b', inplace=True)
+
+    Opr = df_Pf.query('σ==0').O_b[0]
+    σpr = df_Pq.query('O_b==1').σ[0]
+
+    labels = pd.DataFrame({
+        'x': [Opr+0.1, 1, 9.8], 'y': [4.8, σpr, σpr + 0.3],
+        'label': ["$O'$", "$σ'$", mathrm('More profit')]
+    })
+    lab_aes = gg.aes('x', 'y', label='label')
+
+    save_both(
+        gg.ggplot(df, gg.aes(x='O_b', y='σ'))
+        + gg.geom_area(gg.aes(fill='profit'), alpha=0.3)
+        + gg.geom_vline(xintercept=Opr, linetype='dashed')
+        + gg.geom_hline(yintercept=σpr, linetype='dashed')
+        # text alignment can't be specified in an aes
+        + gg.geom_text(lab_aes, data=labels.ix[:0], ha='left', va='top')
+        + gg.geom_text(lab_aes, data=labels.ix[1:1], ha='left', va='bottom')
+        + gg.geom_text(lab_aes, data=labels.ix[2:], ha='right', va='bottom')
+        + gg.scale_fill_discrete(name=mathrm('Bet type'),
+                                 labels=['Free', 'Qualifying'])
+        + limits((1, 10), (0, 5))
+        + gg.ggtitle('%s "%s" %s' % (mathrm('Shape of the'),
+                                     mathrm('more profitable'),
+                                     mathrm('space')))
+        + labs('O_b', 'σ')
+        , 'Px_shapes')
 
 if __name__ == '__main__':
     main()
