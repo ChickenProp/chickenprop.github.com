@@ -10,13 +10,13 @@ This post isn't advice about how to get into matched betting. That market is pro
 
 Instead, I want to go into the math behind it, in more depth than I've seen in other places. None of this math is complicated, but some of it is useful, and I haven't seen anyone do it before. (I even deliberately went looking.)
 
-**A simple example**
+### A simple example
 
 (If you've seen one example of matched betting, you've seen them all, and you can skip this particular one.)
 
 You have a $£10$ free bet at a bookmaker. You find a football game, say Manchester Utd versus Liverpool, that you want to bet on. The bookmaker offers odds of $4$ on Liverpool, and you bet your $£10$ on them.
 
-A note on odds: the usual convention in gambling seems to be to use decimal odds. Odds of $x$ mean that your potential winnings are $x-1$ times your stake. Thus, odds of $4$ mean a bet of $£10$ has the potential to pay out $£30$. If you're used to odds notated $a:b$ or (equivalently) $a/b$, then the decimal odds are given by $a/b + 1$.
+(A note on odds: the usual convention in gambling seems to be to use decimal odds. Odds of $x$ mean that your potential winnings are $x-1$ times your stake. Thus, odds of $4$ mean a bet of $£10$ has the potential to pay out $£30$. If you're used to odds notated $a:b$ or (equivalently) $a/b$, then the decimal odds are given by $a/b + 1$.)
 
 So if Liverpool wins, you'll earn $£30$; if they lose or draw, you lose nothing. You then look up the same match at a betting exchange. An exchange allows you to take both sides of a bet, which a bookmaker won't. The exchange offers odds of $4.3$ to lay Liverpool; this means that you win your bet in the exchange only if Liverpool *doesn't* win. You accept a stake of $£6.98$, which means your own stake is $£23.03$.
 
@@ -28,11 +28,11 @@ Before bookmakers will give you a free bet, you'll usually have to place a bet w
 
 This has been a very brief introduction to matched betting. Now, into the math. I'm going to be focusing on two kinds of bet: qualifying bets, which are usually known as just bets, and free bets, where you don't lose anything if your back bet loses. I'm also going to ignore rounding; let's just pretend that the sterling is infinitely divisible.
 
-**Some definitions**
+### Some definitions
 
 We can think of a paired bet as having six parameters, $(O_b, O_l, S_b, S_l, C_b, C_l)$. These are three parameters for each of a pair of back and lay bets.
 
-$O_b, O_l$ are the odds on the back and lay bets. It's typically safe to assume $O_b < O_l$; otherwise, modulo commission, you could make a profit even on your qualifying bets. Also, because we're using decimal odds, we have $O_b, O_l ≥ 1$ (anything less than $1$ corresponds to a probability below $0$.)
+$O_b, O_l$ are the odds on the back and lay bets. It's typically safe to assume $O_b < O_l$; otherwise, modulo commission, you could make a profit even on your qualifying bets. Also, because we're using decimal odds, we have $O_b, O_l ≥ 1$ (anything less than $1$ corresponds to a probability below $0$).
 
 $S_b, S_l ≥ 0$ are the stakes on the back and lay bets. Note that $S_l$ is the stake offered by the *other party* to your lay bet; it's (roughly) the amount you stand to win on that bet, not the amount you stand to lose. This may seem strange, but it's the convention used.
 
@@ -59,7 +59,7 @@ And now we can say that a matched bet is simply a paired bet, where your profit 
 
 Incidentally, the six prameters are over-determined. Most commonly we want to learn $S_l$ given the other five; but knowing any five of them will fix the value of the sixth.
 
-**Optimal lay stake**
+### Optimal lay stake
 
 The first question we'll ask is, given $O_\*$, $C_\*$ and $S_b$, what must $S_l$ be to make our bet a matched bet? Or in other words, what $S_l$ should we choose to eliminate all risk?
 
@@ -81,7 +81,7 @@ and for a free bet,
 
 A thing to note here is that $O_l$ and $C_l$ only appear in the term $O_l - C_l$. In other words, the effect of lay commission is to decrease the effective lay odds in the most natural way. It would be nice if this happened in other contexts too, but unfortunately I haven't come across it. The $O_l - C_l$ term is common, but it's usually accompanied by another $O_l$ and/or $C_l$ somewhere else in the expression.
 
-**Profit**
+### Profit
 
 Next, we'll want to know how much profit we make. This is given by $R_{lb} + R_{ll}$, where we calculate $R_{ll}$ using the lay stake we just found. But since both of these terms are proportional to $S_b$, we'll find it more convenient to think in terms of profit *per unit of back stake*,
 
@@ -122,7 +122,7 @@ We can also look at $P_f - P_q$, the difference in profit between a qualifying b
 
 The more $O_l$ grows, the worse a qualifier becomes relative to a free bet. This is another suggestion that you should be looking at different sorts of bets for your qualifiers and your free bets.
 
-**Liability**
+### Liability
 
 One more thing is important when making a matched bet: lay liability. This is how much you stand to lose on the exchange where you make your lay bet. It's only important for boring real-world reasons like liquidity and exogenous risk. You need to have this much money in your account at the exchange, which means you need to be able to spare it from your bank account for a week or so. Low-liability bets are also safer if something goes wrong, which makes them a good choice for early dabblers in matched betting.
 
@@ -138,7 +138,7 @@ for a free bet.
 
 Unlike profit, liability increases with both $O_b$ and $O_l$. But it increases arbitrarily with $O_b$, and asymtotically with $O_l$; it's bounded above by roughly $S_b O_b$ for a qualifying bet and $S_b (O_b - 1)$ for a free bet.
 
-**Improving on a free bet**
+### Improving on a free bet
 
 Matched bet calculators aren't hard to find, and what I've given so far is nothing that they can't do for you. But they don't tell you everything you might want to know. Let's look at a bet, and see how we might find a better bet. Since the two types have different behaviours, we'll treat them separately.
 
@@ -206,7 +206,7 @@ These two equations can be used to find $O_b$ in terms of $O_l$ or $σ$, and vic
 
 Looking more closely at the second one, notice that $C^+$ is the upper bound on profit. So the term $C^+ - P_f$ can be thought of as how much profit is being left on the table, compared to what you could hypothetically get if odds of $∞$ were a thing. The less profit you leave behind, the less $σ$ has to change to compensate for a given change in $O_b$. In other words, when profit is high, the level curve on the graph of $P_f(O_b, σ)$ becomes shallower, as we saw above.
 
-**Improving on a qualifying bet**
+### Improving on a qualifying bet
 
 For a qualifying bet, we can't quite do the same thing. If we temporarily assume $C_b = 0$, then the term we want to maximise is
 
@@ -263,7 +263,7 @@ I'm afraid I can offer no particular interpretation of what $Λ$ means, though I
 
 (It turns out that $P_q + 1 ≥ C^+$ precisely when $σ ≤ C_l + C_b/(1 - C_b)$. I noted above that if $C_b = 0$, the possible values of $P_q + 1$ depend on $\mathrm{sgn}(σ-C_l)$. This is the same result, generalized to all values of $C_b$.)
 
-**A digression on odds**
+### A digression on odds
 
 Note that in general, you can expect spread to be lower at lower odds. That's because odds are more sensitive to evidence when they're high than when they're low.
 
@@ -273,7 +273,7 @@ So the difference between the odds $1.25$ and $1.2$ is, in a very important sens
 
 The takeaway from this is that for qualifying bets, you should be looking at bets with low odds. High odds have better returns, but the effect of low spread is much more significant, and low spread comes with low odds.
 
-**The effects of commission**
+### The effects of commission
 
 I want to explore one more question: how does profit depend on commission? For this, we'll keep $C_b$ and $O_b$ fixed, and explore how $O_l$ and $C_l$ affect profit.
 

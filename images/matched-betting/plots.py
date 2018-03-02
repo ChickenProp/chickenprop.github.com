@@ -226,12 +226,14 @@ def main():
         + gg.geom_area(gg.aes(fill='profit'), alpha=0.3)
         + gg.geom_vline(xintercept=Opr, linetype='dashed')
         + gg.geom_hline(yintercept=σpr, linetype='dashed')
+
         # text alignment can't be specified in an aes
         + gg.geom_text(lab_aes, data=labels.ix[:0], ha='left', va='top')
         + gg.geom_text(lab_aes, data=labels.ix[1:1], ha='left', va='bottom')
         + gg.geom_text(lab_aes, data=labels.ix[2:], ha='right', va='bottom')
+
         + gg.scale_fill_discrete(name=mathrm('Bet type'),
-                                 labels=['Free', 'Qualifying'])
+                                 labels=[mathrm('Free'), mathrm('Qualifying')])
         + limits((1, 10), (0, 5))
         + gg.ggtitle('%s "%s" %s' % (mathrm('Shape of the'),
                                      mathrm('more profitable'),
