@@ -83,11 +83,15 @@ def liab_Ob_Ol_qual(liab):
 def dollars(s):
     return '$%s$' % (s,)
 
-def mathrm(s):
-    return ' '.join('$\\mathrm{%s}$' % (x,) for x in s.split())
+def mathrm(s, dollars=True):
+    d = '$' if dollars else ''
+    return r'%s\mathrm{%s}%s' % (d, r'\ '.join(s.split()), d)
 
-def titles(t, s=commission_string): # title, hacky subtitle
-    return gg.ggtitle('$%s$\n${}_{%s}$' % (t, s))
+def titles(t, *s): # title, hacky subtitles
+    if not s:
+        s = [commission_string]
+    s = ['${}_{%s}$' % (x,) for x in s]
+    return gg.ggtitle('\n'.join(['$%s$' % (t,)] + s))
 
 def colors(name):
     return gg.scale_color_hue(name=dollars(name),
@@ -228,7 +232,8 @@ def main():
 
     df = concat_map(liab_Ob_Ol_free, 'liab', np.linspace(0, 10, 11))
     save_both(my_plot(df, 'O_b', 'O_l', 'liab', clab='-R_{bl}')
-              + titles("-R_{bl}(O_b, O_l)", "S_b = 1, C_b = 0, C_l = 0.02")
+              + titles("-R_{bl}(O_b, O_l)", "S_b = 1, C_b = 0, C_l = 0.02",
+                       mathrm('Free bet', dollars=False))
               + limits((1,20), (1, 10))
               + gg.geom_line()
               + gg.geom_abline(slope=1, intercept=0,
@@ -237,14 +242,16 @@ def main():
 
     df = concat_map(liab_Ob_Ol_free, 'liab', np.linspace(0, 10, 11))
     save_both(my_plot(df, 'O_b', 'σ', 'liab', clab='-R_{bl}')
-              + titles("-R_{bl}(O_b, σ)", "S_b = 1, C_b = 0, C_l = 0.02")
+              + titles("-R_{bl}(O_b, σ)", "S_b = 1, C_b = 0, C_l = 0.02",
+                       mathrm('Free bet', dollars=False))
               + limits((1,20), (1, 10))
               + gg.geom_line()
               , 'liab_Ob_σ_free')
 
     df = concat_map(liab_Ob_Ol_qual, 'liab', np.linspace(0, 10, 11))
     save_both(my_plot(df, 'O_b', 'O_l', 'liab', clab='-R_{bl}')
-              + titles("-R_{bl}(O_b, O_l)", "S_b = 1, C_b = 0, C_l = 0.02")
+              + titles("-R_{bl}(O_b, O_l)", "S_b = 1, C_b = 0, C_l = 0.02",
+                       mathrm('Qualifying bet', dollars=False))
               + limits((1,20), (1, 10))
               + gg.geom_line()
               + gg.geom_abline(slope=1, intercept=0,
@@ -253,7 +260,8 @@ def main():
 
     df = concat_map(liab_Ob_Ol_qual, 'liab', np.linspace(0, 10, 11))
     save_both(my_plot(df, 'O_b', 'σ', 'liab', clab='-R_{bl}')
-              + titles("-R_{bl}(O_b, σ)", "S_b = 1, C_b = 0, C_l = 0.02")
+              + titles("-R_{bl}(O_b, σ)", "S_b = 1, C_b = 0, C_l = 0.02",
+                       mathrm('Qualifying bet', dollars=False))
               + limits((1,20), (1, 10))
               + gg.geom_line()
               , 'liab_Ob_σ_qual')
