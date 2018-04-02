@@ -131,11 +131,14 @@ def save_both(plot, basename):
               width=2.4, height=1.8)
     print('%s - small' % (basename,))
 
-def my_plot(df, x, y, color=None):
+def my_plot(df, x, y, color=None, clab=None):
     aes = { 'color': color, 'group': color } if color else {}
+    if clab is None and color is not None:
+        clab = color.replace('pr', "'")
+
     return (gg.ggplot(df, gg.aes(x, y, **aes))
             + labs(x, y)
-            + (colors(color.replace('pr', "'")) if color else []))
+            + (colors(clab) if color else []))
 
 def main():
     mpl.rc('mathtext', fontset='cm')
@@ -224,7 +227,7 @@ def main():
               , 'Pq_σpr')
 
     df = concat_map(liab_Ob_Ol_free, 'liab', np.linspace(0, 10, 11))
-    save_both(my_plot(df, 'O_b', 'O_l', 'liab')
+    save_both(my_plot(df, 'O_b', 'O_l', 'liab', clab='-R_{bl}')
               + titles("-R_{bl}(O_b, O_l)", "S_b = 1, C_b = 0, C_l = 0.02")
               + limits((1,20), (1, 10))
               + gg.geom_line()
@@ -233,14 +236,14 @@ def main():
               , 'liab_Ob_Ol_free')
 
     df = concat_map(liab_Ob_Ol_free, 'liab', np.linspace(0, 10, 11))
-    save_both(my_plot(df, 'O_b', 'σ', 'liab')
+    save_both(my_plot(df, 'O_b', 'σ', 'liab', clab='-R_{bl}')
               + titles("-R_{bl}(O_b, σ)", "S_b = 1, C_b = 0, C_l = 0.02")
               + limits((1,20), (1, 10))
               + gg.geom_line()
               , 'liab_Ob_σ_free')
 
     df = concat_map(liab_Ob_Ol_qual, 'liab', np.linspace(0, 10, 11))
-    save_both(my_plot(df, 'O_b', 'O_l', 'liab')
+    save_both(my_plot(df, 'O_b', 'O_l', 'liab', clab='-R_{bl}')
               + titles("-R_{bl}(O_b, O_l)", "S_b = 1, C_b = 0, C_l = 0.02")
               + limits((1,20), (1, 10))
               + gg.geom_line()
@@ -249,7 +252,7 @@ def main():
               , 'liab_Ob_Ol_qual')
 
     df = concat_map(liab_Ob_Ol_qual, 'liab', np.linspace(0, 10, 11))
-    save_both(my_plot(df, 'O_b', 'σ', 'liab')
+    save_both(my_plot(df, 'O_b', 'σ', 'liab', clab='-R_{bl}')
               + titles("-R_{bl}(O_b, σ)", "S_b = 1, C_b = 0, C_l = 0.02")
               + limits((1,20), (1, 10))
               + gg.geom_line()

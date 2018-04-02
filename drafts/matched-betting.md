@@ -8,7 +8,7 @@ This post isn't advice about how to get into matched betting. That market is pro
 
 (Um, but after that I feel obliged to give at least *some* safety information. So here goes: if you're not a UK citizen currently in the UK, this may be a bad idea. Don't use credit cards to deposit funds; it seems they interpret that as a cash transaction and charge fees. Start small; that way there's less at risk in case you do something silly like use a credit card to deposit funds. Probably don't expect to earn lots of money this way, either in total or per-hour.)
 
-Instead, I want to go into the math behind it, in more depth than I've seen in other places. None of this math is complicated, but some of it is useful, and I haven't seen anyone do it before. (I even deliberately went looking.)
+Instead, I want to go into the math behind it, in more depth than I've seen in other places. None of this math is complicated, but some of it is useful, and I haven't found it anywhere else. (I even deliberately went looking.)
 
 ### A simple example
 
