@@ -128,7 +128,7 @@ One more thing is important when making a matched bet: lay liability. This is ho
 
 Liability is simply given by $-R_{bl} = S_l (O_l - 1)$, which is
 
-    $$ S_b (O_l - 1) { (O_b - 1)(1 - C_b) - 1 \over O_l - C_l } $$
+    $$ S_b (O_l - 1) { (O_b - 1)(1 - C_b) + 1 \over O_l - C_l } $$
 
 for a qualifying bet and
 
@@ -136,7 +136,12 @@ for a qualifying bet and
 
 for a free bet.
 
-Unlike profit, liability increases with both $O_b$ and $O_l$. But it increases arbitrarily with $O_b$, and asymtotically with $O_l$; it's bounded above by roughly $S_b O_b$ for a qualifying bet and $S_b (O_b - 1)$ for a free bet.
+<a href="/images/matched-betting/liab_Ob_Ol_qual.png"><img src="/images/matched-betting/liab_Ob_Ol_qual.small.png" alt="(Graph of liability(O_b, O_l), qualifying bet)" style="width: 45%"></a>
+<a href="/images/matched-betting/liab_Ob_Ol_free.png"><img src="/images/matched-betting/liab_Ob_Ol_free.small.png" alt="(Graph of liability(O_b, σ), free bet)" style="width: 45%"></a>
+
+*(I made the graphs in $σ$ as well, but they're <a href="/images/matched-betting/liab_Ob_σ_qual.png">too</a> <a href="/images/matched-betting/liab_Ob_σ_boring.png">boring</a> to include inline)*
+
+Unlike profit, liability increases with both $O_b$ and $O_l$. But it increases arbitrarily with $O_b$, and asymtotically with $O_l$; it's bounded above by roughly $S_b O_b$ for a qualifying bet and $S_b (O_b - 1)$ for a free bet. (If the graphs were extended further, as they stretch upwards the lines would become ever more vertical, but they'd always stay separate. To the right, the lines would become ever more horizontal, all of them converging on $O_l = 1$.)
 
 ### Improving on a free bet
 

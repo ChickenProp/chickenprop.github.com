@@ -62,6 +62,22 @@ def σpr_Ob_σ(σpr):
 def σpr_Pq(σpr):
     return (1 - Cl) / (1 - Cl + σpr) - 1
 
+# The σ graphs from these aren't very good, but they don't appear inline in the
+# post so whatever.
+def liab_Ob_Ol_free(liab):
+    Ol = np.linspace(1.01, 30.5, 1000)
+    Ob = 1 + liab * (Ol - Cl) / ((Ol - 1) * (1 - Cb))
+    σ = Ol - Ob
+
+    return pd.DataFrame({'O_l': Ol, 'O_b': Ob, 'σ': σ, 'liab': liab})
+
+def liab_Ob_Ol_qual(liab):
+    Ol = np.linspace(1.01, 30.5, 1000)
+    Ob = 1 - 1/(1 - Cb) + liab * (Ol - Cl) / ((Ol - 1) * (1 - Cb))
+    σ = Ol - Ob
+
+    return pd.DataFrame({'O_l': Ol, 'O_b': Ob, 'σ': σ, 'liab': liab})
+
 # helpers
 
 def dollars(s):
@@ -206,6 +222,38 @@ def main():
                        ybreaks=np.linspace(-1, 0, 11))
               + gg.geom_line()
               , 'Pq_σpr')
+
+    df = concat_map(liab_Ob_Ol_free, 'liab', np.linspace(0, 10, 11))
+    save_both(my_plot(df, 'O_b', 'O_l', 'liab')
+              + titles("-R_{bl}(O_b, O_l)", "S_b = 1, C_b = 0, C_l = 0.02")
+              + limits((1,20), (1, 10))
+              + gg.geom_line()
+              + gg.geom_abline(slope=1, intercept=0,
+                               linetype='dashed', color='grey')
+              , 'liab_Ob_Ol_free')
+
+    df = concat_map(liab_Ob_Ol_free, 'liab', np.linspace(0, 10, 11))
+    save_both(my_plot(df, 'O_b', 'σ', 'liab')
+              + titles("-R_{bl}(O_b, σ)", "S_b = 1, C_b = 0, C_l = 0.02")
+              + limits((1,20), (1, 10))
+              + gg.geom_line()
+              , 'liab_Ob_σ_free')
+
+    df = concat_map(liab_Ob_Ol_qual, 'liab', np.linspace(0, 10, 11))
+    save_both(my_plot(df, 'O_b', 'O_l', 'liab')
+              + titles("-R_{bl}(O_b, O_l)", "S_b = 1, C_b = 0, C_l = 0.02")
+              + limits((1,20), (1, 10))
+              + gg.geom_line()
+              + gg.geom_abline(slope=1, intercept=0,
+                               linetype='dashed', color='grey')
+              , 'liab_Ob_Ol_qual')
+
+    df = concat_map(liab_Ob_Ol_qual, 'liab', np.linspace(0, 10, 11))
+    save_both(my_plot(df, 'O_b', 'σ', 'liab')
+              + titles("-R_{bl}(O_b, σ)", "S_b = 1, C_b = 0, C_l = 0.02")
+              + limits((1,20), (1, 10))
+              + gg.geom_line()
+              , 'liab_Ob_σ_qual')
 
     df_Pf = Pf_Ob_σ(0.6).assign(profit=dollars('P_f'))
     df_Pq = Pq_Ob_σ(-0.3).assign(profit=dollars('P_q'))
