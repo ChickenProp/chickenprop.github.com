@@ -32,7 +32,7 @@ This has been a very brief introduction to matched betting. Now, into the math. 
 
 We can think of a paired bet as having six parameters, $(O_b, O_l, S_b, S_l, C_b, C_l)$. These are three parameters for each of a pair of back and lay bets.
 
-$O_b, O_l$ are the odds on the back and lay bets. It's typically safe to assume $O_b < O_l$; otherwise, modulo commission, you could make a profit even on your qualifying bets. Also, because we're using decimal odds, we have $O_b, O_l ≥ 1$ (anything less than $1$ corresponds to a probability below $0$).
+$O_b, O_l ≥ 1$ are the odds on the back and lay bets. It's typically safe to assume $O_b < O_l$; otherwise, modulo commission, you could make a profit even on your qualifying bets[^ob-gt-ol]. They can't be less than $1$ because we're using decimal odds; that would correspond to a probability below $0$.
 
 $S_b, S_l ≥ 0$ are the stakes on the back and lay bets. Note that $S_l$ is the stake offered by the *other party* to your lay bet; it's (roughly) the amount you stand to win on that bet, not the amount you stand to lose. This may seem strange, but it's the convention used.
 
@@ -40,7 +40,7 @@ And $C_b, C_l ∈ [0, 1]$ are the commission charged on your winnings on each si
 
 I'm also going to introduce the symbol $C^+ = (1 - C_l)(1 - C_b)$. If you passed $£1$ through your bookmaker and exchange, and they each charged commission and nothing else, you would have $£C^+$ left at the end. $C^+$ isn't enough for us to fully understand a matched bet, we need the individual back and lay commissions as well, but it'll be convenient shorthand.
 
-Now let $R_{xy}$ (where $x,y ∈ \\{b,l\\}$) be your return on side $y$ if your bet on side $x$ wins. So for a standard (or qualifying) bet, we have:
+Now let $R_{xy}$ (where $x,y ∈ \\{b,l\\}$) be your return on side $y$ if your bet on side $x$ wins. So for a qualifying bet (which is just a regular bet, outside the context of matched betting), we have:
 
     $$ \begin{align*}
          R_{bb} &= S_b (O_b - 1) (1 - C_b)     \\
@@ -102,7 +102,7 @@ We can look at these functions graphically:
 
 *(all images link to larger versions)*
 
-each line represents a contour of the function, a set of points that all have the same profit. The sets of contours look superficially similar, but they're generally steeper for a free bet. In both cases, profit increases with $O_b$ and decreases with $O_l$.
+each line represents a contour of the function, a set of points that all have the same profit. The sets of contours look superficially similar, but they're generally steeper for a free bet, and they get cut off on the bottom edge instead of the left edge. In both cases, profit increases with $O_b$ and decreases with $O_l$.
 
 We can reparameterise in terms of $O_b$ and $σ = O_l - O_b$, the spread between the back and lay odds. Since $O_l ≥ O_b$, we only need to consider $σ ≥ 0$. This gives us
 
@@ -114,7 +114,7 @@ We can reparameterise in terms of $O_b$ and $σ = O_l - O_b$, the spread between
 <a href="/images/matched-betting/Pq_Ob_σ.png"><img src="/images/matched-betting/Pq_Ob_σ.small.png" alt="(Graph of P_q(O_b, σ))" style="width: 45%"></a>
 <a href="/images/matched-betting/Pf_Ob_σ.png"><img src="/images/matched-betting/Pf_Ob_σ.small.png" alt="(Graph of P_f(O_b, σ))" style="width: 45%"></a>
 
-These are slightly more distinct. Looking at these graphs, it seems that for a qualifying bet, having low $σ$ is more significant than having high $O_b$; but for a free bet, having high $O_b$ is more significant than having low $σ$. We'll make this more precise later.
+These are slightly more distinct. Looking at these graphs, it seems that for a qualifying bet, having low $σ$ is more significant than having high $O_b$; but for a free bet, having high $O_b$ is more significant than having low $σ$. If so, that suggests you might want to be looking for different sorts of bets at each stage. (It is so, and we'll make it more precise later.)
 
 We can also look at $P_f - P_q$, the difference in profit between a qualifying bet and a free bet. This isn't particularly useful to compare bets: you place qualifying bets to get free bets, and you place free bets to get money, and if you're doing pure matched betting, I don't think you'll ever be asking yourself *should I place this bet free or as a qualifier?* Still, the difference is
 
@@ -124,7 +124,7 @@ The more $O_l$ grows, the worse a qualifier becomes relative to a free bet. This
 
 ### Liability
 
-One more thing is important when making a matched bet: lay liability. This is how much you stand to lose on the exchange where you make your lay bet. It's only important for boring real-world reasons like liquidity and exogenous risk. You need to have this much money in your account at the exchange, which means you need to be able to spare it from your bank account for a week or so. Low-liability bets are also safer if something goes wrong, which makes them a good choice for early dabblers in matched betting.
+One more thing is important when making a matched bet: lay liability. This is how much you stand to lose on the exchange where you make your lay bet. (It's only important for boring real-world reasons like liquidity and the possibility of doing something stupid, but those are still important.) You need to have this much money in your account at the exchange, which means you need to be able to spare it from your bank account for a week or so. Low-liability bets are also safer if something goes wrong, which makes them a good choice for early dabblers in matched betting.
 
 Liability is simply given by $-R_{bl} = S_l (O_l - 1)$, which is
 
@@ -217,7 +217,7 @@ For a qualifying bet, we can't quite do the same thing. If we temporarily assume
 
     $$ P_q + 1 ∝ {O_b \over O_l - C_l}. $$
 
-This doesn't work the same as the equivalent term for a free bet. If you keep $σ$ fixed and consider profit as a function of $O_b$, then this function acts differently depending on $\mathrm{sgn}(σ - C_l)$. If $σ ≤ C_l$, then regardless of $O_b$ you get more profit than is ever possible with $σ > C_l$.
+This doesn't work the same as the equivalent term for a free bet. If you keep $σ$ fixed and consider profit as a function of $O_b$, then this function acts differently depending on the sign of $σ - C_l$. If $σ ≤ C_l$, then regardless of $O_b$ you get more profit than is ever possible with $σ > C_l$.
 
 This isn't immediately practically important, because $σ > C_l$ is a pretty safe assumption. But it's mathematically significant. For a free bet, setting $σ$ to $0$ doesn't rule out any profit levels, so we could ask "how would we get this particular profit with $σ = 0$?" If we try to ask that for a qualifying bet, the answer is typically that we can't. So the approach we used for a free bet doesn't work on a qualifying bet.
 
@@ -266,7 +266,8 @@ where
 
 I'm afraid I can offer no particular interpretation of what $Λ$ means, though I observe that we can substitute it into a previous equation, $σ' = 1/Λ + C_l - 1$. Note that if $Λ ≥ 1 - C_b$, equivalently if $P_q + 1 ≥ C^+$, then $σ$ and $O_b$ start to move in opposite directions: for fixed profit, $σ$ goes up as $O_b$ goes down. At this point, you get more profit with low $O_b$ as well as with low $σ$, which would be convenient if it was ever realistically going to happen.
 
-(It turns out that $P_q + 1 ≥ C^+$ precisely when $σ ≤ C_l + C_b/(1 - C_b)$. I noted above that if $C_b = 0$, the possible values of $P_q + 1$ depend on $\mathrm{sgn}(σ-C_l)$. This is the same result, generalized to all values of $C_b$.)
+(It turns out that $P_q + 1 ≥ C^+$ precisely when $σ ≤ C_l + C_b/(1 - C_b)$. I noted above that if $C_b = 0$, the possible values of $P_q + 1$ depend on the sign of $σ-C_l$. This is the same result, generalized to all values of $C_b$.)
+
 
 ### A digression on odds
 
@@ -318,6 +319,8 @@ But the interface isn't very good, I think partly because of the limits of the c
 If I were to dedicate more time to the project, I currently think I'd start again in Javascript. I think I have a vague idea of how a decent one could work. But right now, as far as I can tell there are no good calculators.
 
 [^lately]: Well, I haven't done any for a few months now. This post took a long time to write.
+
+[^ob-gt-ol]: I think maybe sometimes bookmakers will offer improved odds as a special offer, and maybe then sometimes you'll find $O_b > O_l$. But it's not a case I'll particularly consider in this post.
 
 [^risk-free]: I'm also assuming that all free bets are "stake not returned". In a standard bet, if you win, you get your stake back and also collect your winnings. If you win a stake not returned free bet, you collect your winnings; but you don't also get to keep the stake, because that wasn't yours in the first place. If you have a "stake returned" free bet, that effectively increases the odds on the back side by $1$. I've not yet encountered one of these, myself.
 
