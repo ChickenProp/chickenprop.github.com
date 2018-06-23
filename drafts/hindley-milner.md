@@ -1,7 +1,13 @@
 ---
-title: Hindley-Milner type inference
+title: A reckless introduction to Hindley-Milner type inference
 layout: draft
 ---
+A few weeks ago I gave a talk at work about Hindley-Milner type inference. When I agreed to give the talk I didn't know much about the subject, so I learned about it. And now I'm writing about it, based on the contents of my talk but more fleshed out and hopefully better explained.
+
+I call this a reckless introduction, because my main source is [wikipedia](https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system). A bunch of people on the internet have collectively attempted to synthesise a technical subject. I've read their synthesis, and now I'm trying to re-synthesise it, without particularly putting in the effort to check my own understanding. I can't argue that this is a good idea.
+
+I'm also trying to tie in some quasi-philosophy that surely isn't original to me but I don't know where or if I've encountered it before.
+
 1.
 
 When people write software, sometimes it doesn't do exactly what we want. One way to find out is to try running it and see, but that's not ideal because any complicated program will have way too many possible inputs to test. So it would be nice if we could mathematically prove whether our software does what we want, without actually running it. Can we do that?
@@ -22,21 +28,33 @@ And that's not possible. But we can compromise on any of the three. We can make 
 
 And when you allow that answer, you can create a *language* on which the halting problem is tractable. You can write a program that will tell you truthfully whether any program written *in that language* will terminate; and for any other program, will say "I don't know". (Perhaps expressed in words like "syntax error on line 1".)
 
-Now, the halting problem is tricky. It turns out that if you create a language like that, there are a lot of interesting things that programs written in that language just won't be able to do. But there are also lots of interesting things that they can do. To give three examples of such languages:
+Now, the halting problem is tricky. It turns out that if you create a language like that, there are a lot of interesting things that programs written in that language just won't be able to do. But there are also lots of interesting things that they can do. To give three examples of such languages[^nonterminating]:
+
+[^nonterminating]: To nitpick myself: these aren't just languages for which you can prove termination, they're languages which never terminate, at least not for finite inputs. I don't offhand know any languages which are Turing-incomplete but have the ability to loop forever, though such a thing can exist.
 
 * Regular expressions are really useful for certain operations on strings, but that's about all they're good for.
 * SQL is really useful for working with databases. According to someone on stack overflow, the ANSI SQL-92 standard was Turing-incomplete and the ANSI SQL-99 standard is Turing complete. (No word on the SQL-96 standard that came between these.) But I've never actually needed the feature that makes it Turing-complete; so at least for my purposes, it might as well not be.
-* Coq is used for proving math theorems. It's an interesting one because when you write your program, you have to also provide a proof that your program terminates.
+* Coq is used for proving math theorems. It's an interesting one because when you write your program, you have to also provide a proof that your program terminates. (I think this is slightly false, but again, good enough for the point I'm making.)
 
-I'm trying to illustrate here something important, which is that there's a tradeoff between what I'll call expressiveness and legibility. A programming language is *expressive* if you can easily write many interesting programs in it; it's *legible* if you can easily say many interesting things about the programs you've written in it. And I claim that the most expressive programming languages won't be the most legible, and vice-versa; though there will certainly be languages which are neither expressive nor legible. This tradeoff seems fundamental to me, and I expect that some approximation of it has been proven as a theorem.
+So although these languages can't do much, they can still do enough to be useful. And in the domains where they're useful, being able to prove non-termination is a useful property of the language. If you had to write a SQL query in C, it would be all too easy to write some C code that would accidentally loop forever.
 
-I haven't defined these very well, but hopefully the kinds of things that I mean will become clear. I will clarify that both of them are highly dimensional; and that "raw computational power" is one of the things that expressiveness can point at, and "human readability" is one of the things that legibility can point at, but neither of those are synonyms.
+I'm trying to illustrate here something that seems to me important, which is that there's a tradeoff between what I'll call expressiveness and legibility. A programming language is *expressive* if you can easily write many interesting programs in it; it's *legible* if you can easily say many interesting things about the programs you've written in it. And I claim that the most expressive programming languages won't be the most legible, and vice-versa; though there will certainly be [languages](https://en.wikipedia.org/wiki/Malbolge) which are neither expressive nor legible. This tradeoff seems fundamental to me, and I expect that some approximation of it has been proven as a theorem.
+
+I haven't defined these very well, but hopefully some examples will help. I will also clarify that both of them are highly dimensional; and that "raw computational power" is one of the things that expressiveness can point at, and "human readability" is one of the things that legibility can point at, but neither of those are synonyms.
+
+* Perl-compatible regular expressions are more expressive than true regular expressions, but harder to make time and space guarantees about.
+
+* Under certain assumptions, Haskell's monadic IO gives you legibility (because you can look at the type of a piece of code and know that it doesn't depend on external state) and costs you expressivity (because a function can only bring in external state if its caller allows it to). The assumptions in question are false (partly because `unsafePerformIO` exists), but I've been able to get away with pretending they're true (partly because `unsafePerformIO` is punishable with excommunication).
+
+* Custom operators don't gain or cost much in terms of legibility and expressivity, since they're equivalent to function calls. But operator overloading gains expressivity at the cost of legibility (you no longer know that `a + b` will do anything remotely like an addition). This is especially true given dynamic typing.
+
+* Macros cost legibility in forms like "this code that looks like a function call will call a function" and "this code will not be affected at runtime by the phase of the moon during compilation". They gain expressivity in forms like DSLs and parsing config files at compile time.
 
 2.
 
 So we've got this tradeoff, and in our programming language design we try to navigate it. We try to find kinds of legibility that can be bought for little cost in expressiveness. Or more precisely, we try to find kinds of legibility *that we care about*, and that can be bought for little cost in *kinds of expressiveness that we care about*.
 
-And Hindley-Milner type systems are a tradeoff that's proved fairly successful, both in direct use and as inspiration. At my company[^my-company], we use Elm, which runs on a HM type system. (Elm might need minor extensions to HM, to deal with extensible record types; I'm not sure. With that one possible extension, I think all of Elm's types can be expressed in an HM system.) We also use Haskell, which runs on a type system that extends HM in many directions. Haskell's system is more expressive and less legible, but still successful. (I'll mostly be using Elm for examples in this post, and not extensible records.)
+And Hindley-Milner type systems are a tradeoff that's proved fairly successful, both in direct use and as inspiration. At my company[^my-company], we use Elm, which runs on an approximately HM type system. (I don't think it's pure HM, due to extensible record types.) We also use Haskell, which runs on a type system that extends HM in many directions. Haskell's system is more expressive and less legible, but still successful. (I'll mostly be using Elm for examples in this post, and not extensible records.) ML and OCaml are other notable languages based on HM, though I haven't used either.
 
 [^my-company]: "My company" is a phrase which sometimes means "the company I own or run" and sometimes "the company I work for". Here it means the latter. I don't know an unambigous way to phrase that which I don't find slightly awkward, so instead I'm using a super-awkward footnote. But, y'know. Ironically, or something.
 
@@ -44,31 +62,29 @@ The legibility HM offers is, roughly, the ability to prove that a program typech
 
 More precisely, what HM offers isn't type *checking* but the more general type *inference*. (And beyond that, type inference *in roughly linear time*.) Type inference doesn't just tell you *whether* a program typechecks, but *what* its type is; a program fails to typecheck iff no type can be inferred for it.
 
-What this means is that there's no need to supply type annotations. And indeed, in Elm you can get away without them, except I think for extensible records[^extensible-records]. In Haskell you sometimes can't, because Haskell loses some of the legibility that HM offers.
+What this means is that there's no need to supply type annotations. And indeed, in Elm you can get away without them, except I think for extensible records. In Haskell you sometimes can't, because Haskell loses some of the legibility that HM offers.
 
-We typically do supply type annotations, but that's because they're useful. Partly as documentation for humans, partly to help pinpoint errors in typechecking.
+(We typically do supply type annotations, but that's because they're useful. Partly as documentation for humans, partly to help pinpoint errors in typechecking.)
 
-And so in an HM system you get no runtime type errors. Elm goes further, and tries to promise no runtime errors, period. One one level, I think that's something you get "for free" once you have typechecking, by deciding that none of the built-in functions you provide will ever throw a runtime error. On another level, it seems completely impractical to decide that `cons` will return a meaningful value if it can't allocate more memory. I'm not aware that Elm even tries to handle those errors.
+And so in an HM system you get no runtime type errors. And although not all runtime errors are type errors, in many cases they could be. For example, an array out-of-bounds exception isn't a type error. But when designing a language, you can decide that array out-of-bounds exceptions won't exist, any array lookup will return either a value from the array or `null`. If type errors are possible, you've just eliminated one source of errors by pushing them somewhere else, and possibly somewhere harder to debug. But in HM, you've eliminated one source of errors by pushing them somewhere more visible, where they can be ruthlessly executed.
 
-Haskell doesn't try to promise the ssame thing, and allows functions to return `undefined`. This is another legibility-expressiveness tradeoff.
+Elm actually tries to promise no runtime errors, period, provided you stay inside Elm. On one level, I think that's a fairly minor imposition on language design, something you get "for free" by deciding that none of the built-in functions you provide will ever throw a runtime error. On another level, it seems completely impractical to decide for example that `cons` will return a meaningful value if it can't allocate more memory. I'm not aware that Elm even tries to handle those errors.
 
-[^extensible-records]: There's some tension here. I said above that I'm not sure whether extensible records need an extension to HM, but now I'm saying that they need type annotations. My answer is that I suspect a compiler could turn extensible records into something that pure HM would support, but that type annotations would be needed to tell the compiler to do that. Again, I'm unsure.
+(Haskell doesn't try to promise the same thing, and allows functions to return `undefined`. This is another legibility-expressiveness tradeoff.)
 
-    Also, even if it's *possible*, I suspect that's not how elm actually does it.
-
-So the legibility gain is: type inference, no runtime type errors, optionally no runtime errors at all. It's good.
+So HM's legibility gain is: type inference, powerful type system, no runtime type errors, optionally no runtime errors at all. It's good.
 
 Meanwhile, the expressiveness cost is that you need to write your programs in ways that the type inference algorithms can work with, which forbids some things that you might like to do.
 
-For example, suppose you want to clamp a number to between -1 and +1. In haskell, you could write that like
+For example, suppose you want to clamp a number to between -1 and +1. In Python, you could write that like
 
-```haskell
-clamp x = sort [-1, x, 1] !! 1
+```python
+def clamp(x): sorted([-1, x, 1])[1]
 ```
 
-and as long as `sort` always returns a list of the same length it started with, that works fine. But it only works because the Haskell compiler allows the `!!` operator to crash if it goes out of range. For comparison, the Elm compiler attempts to offer "no runtime errors", and so Elm has no equavalent operator. If you tried to write the same function in the same way in Elm, the result in the compiler's eyes would not be a number but a `Maybe` number - AKA "either a number or `Nothing`". (`Nothing` is roughly equivalent to `None` in python or `null` in many other languages.) When you actually run the program, you will always get a number and never `Nothing`. But the compiler can't prove that.
+and as long as `sorted` always returns a list of the same length it started with, that works fine. But it only works because the Python interpreter allows array indexing to crash if it goes out of range. For comparison, the Elm compiler attempts to offer "no runtime errors", and so Elm has no equavalent operator. If you tried to write the same function in the same way in Elm, the result in the compiler's eyes would not be a number but a `Maybe` number - AKA "either a number or `Nothing`". (`Nothing` is roughly equivalent to `None` in python or `null` in many other languages, but you have to explicitly flag when it's allowed.) When you actually run the program, you will always get a number and never `Nothing`. But the compiler can't prove that.
 
-(Again, I stress that you will never get `Nothing` *as long as* `sort` always returns a list of the same length it started with. That's something you can prove for yourself, but it's not something the compiler can prove. It's not even the sort of thing the compiler knows can be proven.)
+(Again, I stress that you will never get `Nothing` *as long as* your sort function always returns a list of the same length it started with. That's something you can prove for yourself, but it's not something the compiler can prove. It's not even the sort of thing the compiler knows can be proven.)
 
 And then the Elm compiler would force you to account for the possibility of `Nothing`, even though there's no way that possibility could occur at runtime. One option is to pick an arbitrary result that will never be exposed - until the code goes through several layers of changes, an assumption that used to be true is now violated, and suddenly that arbitrary result is wreaking havoc elsewhere. Or in Haskell, your program is crashing at runtime.
 
@@ -87,7 +103,7 @@ stringify_list(["hello",
                 stringify_list])
 ```
 
-but impossible in Elm[^het-list]. You can *sort of* get the same effect by creating a type with many constructors
+but impossible in Elm. You can *sort of* get the same effect by creating a type with many constructors
 
 ```elm
 type HeteroType = HTInt Int
@@ -97,15 +113,13 @@ type HeteroType = HTInt Int
                 | ...
 ```
 
-but it's not quite the same, because it can only accept types you know about in advance. Also, it's a massive pain to work with[^htfunc].
+but it's not quite the same, because it can only accept types you know about in advance. Also, it's a massive pain to work with.
 
-[^htfunc]: Also, suppose you want to include functions. You can add the constructor `HTFunc (HeteroType -> HeteroType)`, but it's not clear how to turn a function `Int -> String` into an "equivalent" function `HeteroType -> HeteroType` - the `String` can be wrapped in `HTString`, but the `Int` can't be safely unwrapped. So you need `HTFuncInt (Int -> HeteroType)`, `HTFuncString (String -> HeteroType)` and so on. The number of constructors needed grows at least as O(n²).
-
-For a third example: Haskell is known for its monads. But Elm has no equivalent, because an HM type system can't support generic monad programming. You can implement the generic monad functions for specific caes, so there's `Maybe.map` and `List.map`, but there's no equivalent of Haskell's `fmap` which works on all monads.
+For a third example: Haskell is known for its monads. But Elm has no equivalent, because an HM type system can't support generic monad programming. You can implement the generic monad functions for specific cases, so there's `Maybe.map` and `List.map`, but there's no equivalent of Haskell's `fmap` which works on all monads.
 
 3.
 
-So I've talked about the tradeoffs that HM type systems offer, but not what HM type systems actually are. So here is where I get reckless.
+So I've talked about the tradeoffs that HM type systems offer, but not what HM type systems actually are. So here is where I get particularly reckless. Also, this part is likely to make more sense if you're familiar with at least on HM-based language.
 
 You need types, you need a language, and you need a way to relate the two.
 
@@ -156,7 +170,7 @@ Reading clockwise from top left, this says: if you have a variable $x$ declared 
 
 A type *judgment*, as opposed to a declaration, provides a type that an expression can be used as. A judgment is always as a monotype.
 
-And type specialisation, denoted $⊑$, is the process of replacing quantified variables with specific ones. So for example the type `∀a b. a -> b -> a` can be specialized to $∀b. Int -> b -> Int` and then to `Int -> String -> Int`.
+And type specialisation, denoted $⊑$, is the process of replacing quantified variables with less-quantified ones. So for example the type `∀a b. a -> b -> a` might be specialized to `∀a. a -> String -> a`, or to `∀b. Int -> b -> Int`; and from either of those, it could be further specialised to `Int -> String -> Int`. Of course `String -> Int -> String` and `List Float -> (Float -> String) -> List String` are valid specialisations too.
 
 Thus: we have the type declaration `[] : ∀a. List a`, and we have `∀a. List a ⊑ List Int`, and so we can form the type judgment `[] ~ List Int`. We also have `∀a. List a ⊑ List String`, and so `[] ~ List String`. And `[] ~ List (List (Maybe Bool))`, and so on.
 
@@ -209,10 +223,85 @@ Let expressions compensate for this deficiency, with the rule *let expressions a
 
 Or: suppose that $a$ can be judged to have type $μ$, and that the declaration $x : \bar{μ}$ would allow us to infer the judgment $b \sim μ'$. In that case, we could judge that $(\mathtt{let}\ x = a\ \mathtt{in}\ b)$ has type $μ'$.
 
-This introduces the syntax $\bar{μ}$, which generalises a monotype to a polytype. How it works is: if $μ$ mentions a type variable $a$, and $a$ isn't quantified over in the surrounding context, then $\bar{μ}$ contains a "$∀a$".
+This introduces $\bar{μ}$, which generalises a monotype to a polytype. How it works is: if $μ$ mentions a type variable $a$, and $a$ isn't quantified over in the surrounding context, then $\bar{μ}$ contains a "$∀a$".
 
 Thus: we can infer `(\x -> x) ~ a -> List a`, where `a` is a type variable unused in the surrounding context. That type generalises to `∀a. a -> List a`. And given the declaration `f : ∀a. a -> List a`, we can infer `(f "", f True) ~ (List String, List Bool)`. So in total, we can infer `let f x = [x] in (f "", f True) ~ (List String, List Bool)`.
 
 (It seems a little strange to me that the approach here is to first construct a meaningless type, and then quantify over it. Still, that's my understanding. It's of course possible I'm mistaken.)
 
 Why do we need both `let` and lambda? Well, we can't replace lambda expressions with let expressions: they're not re-usable. (When you translate a let expression into a lambda expression, you actually generate a lambda *applied to an argument*. There's no way to translate a lambda expression by itself into a let expression.) Meanwhile, I'm not entirely sure why we can't make lambdas polymorphic in the same way let expressions are. I assume the answer is that if we tried it, we'd lose some of the legibility that HM offers, but I'm not sure exactly what. Let can be more powerful in the type system because it's less powerful in the language.
+
+3.3.
+
+There's an interesting thing about the system I just described: it may or may not be Turing complete.
+
+The problem is that there's no specified way of doing recursion. But the initial set of variables may include a fixed-point combinator. Failing that, the proper recursive types can be used to define one.
+
+Failing both of those, we can introduce a new kind of expression
+
+    $$ \frac{x : μ ⇒ a \sim μ \quad x : \bar{μ} ⇒ b \sim μ'}
+            {(\mathtt{letrec}\ x = a\ \mathtt{in}\ b) \sim μ'}. $$
+
+This is much the same as `let`, but makes the variable `x = a` available when evaluating `a`. (But it's only available as a *monotype* when evaluating `a`, and still doesn't get generalised to a polytype until evaluating `b`.)
+
+(Elm and Haskell provide `letrec` as `let` and don't provide simple `let` at all. They also allow us to define the types that let us [define](http://rosettacode.org/wiki/Y_combinator) a fixed-point combinator[^brag].)
+
+[^brag]: Minor brag: I myself contributed the Elm implementation on that page.
+
+But if an HM language doesn't provide the appropriate variables or types, and doesn't implement `letrec` or something similar, it won't be Turing complete. Legibility gain, expressivity cost.
+
+4.
+
+And modulo some small details, that's the entirety of a Hindley-Milner type system. If you have a language with those features, and a suitable set of types, you can perform type inference.
+
+What we have is a set of rules that allows us to construct proofs. That is, if we look at a program written in this language, we would be able to construct a proof of its type (or lack thereof). But I already said HM is better than that: it lets us *mechanically* construct a proof, in (roughly) linear time.
+
+I confess, I'm not entirely sure how to do that. The outline is obvious, recurse down the parse tree and at each step apply the appropriate rule. But since a constant can be judged as one of many types, you need to keep track of which types are acceptable. Wikipedia hints at how it works, but not in a way that I understand particularly well.
+
+(Here I just start to infer things for myself.)
+
+Elm and Haskell both support many things not covered so far. To look at some of them briefly,
+
+* It seems obvious, but both allow you to evaluate the language, something I haven't touched on much. Their evaluation models are pretty different though - Haskell is lazy, Elm is eager.
+
+* Both have ways to introduce new types. That doesn't change what we've seen, but it does separate the languages into two parts. One part describes the types used in a program and one part implements the semantics of a program.
+
+* Both also support case statements along with destructuring, like
+
+  ```elm
+  mHead : Maybe (List a) -> Result Bool a
+  mHead ml = case ml of
+      Just (a::_) -> Ok a
+      Just _ ->     Err True
+      Nothing ->    Err False
+  ```
+
+  To implement these, you'd want to add a fifth class of language expression. But I think it would be possible in theory to write a "thin" first-pass compiler to translate these statements into the existing language. By "thin" I mean to do this in such a way that we don't lose any of the legibility guarantees we care about.[^case-compiled] (For example, if this compiler turned $n$ bytes of code in a case statement into more than $O(n)$ bytes of code in the base language, or if it ran in more than O(n) time, this condition would fail.)
+
+  If I'm right about that, then case statements neither make the language more expressive nor less legible, at least in one important sense. (But not the only important sense. They do make the language easier to read and write for humans.)
+
+[case-compiled]: I think it might look something like this:
+
+  ```elm
+  mHead ml =
+      if *isJust ml && (*fromJust ml (\_x -> *isCons _x)) then
+          *fromJust ml (\_x -> *fromCons _x (\a _ -> Ok a))
+      else if *isJust ml then
+          *fromJust ml (\_ -> Err True)
+      else if *isNothing ml then
+          Err False
+      else
+          *fail
+  ```
+
+  functions marked with a `*` can be hidden from the language user. Additionally, `*fromJust`, `*fromCons` and `*fail` would be able to throw runtime errors. These don't violate Elm's "no runtime errors" policy, because the compiler would only generate them in contexts where it could prove they wouldn't throw. (In the case of `*fail`, when it could prove that code branch was unreachable, so it could also just not bother.)
+
+  I'm very much spitballing here. I wouldn't be surprised to discover that the approach I've described is completely unworkable.
+
+* (By comparison, if-then-else statements are also another class of language expression, but one which can obviously be thinly compiled down to the existing ones.)
+
+* In the type system, Elm supports record types, which are a lot like tuples but with nicer syntax. I believe these too could be thinly compiled down. But it also supports *extensible* records, which are more complicated. On one level you can think of a type like `{a | x : Int, y : Int}` like a tuple `∀a. (a, Int, Int)`. But then this tuple needs to be unpacked and manipulated when you pass it into a function expecting an `{a | x : Int}`.
+
+  I suspect this is unresolvable, and extensible records represent an extension of Elm from HM, to become more expressive and less legible.
+
+* Haskell supports typeclasses, which are a way of allowing functions to operate on multiple different types. (For example, the `show` function can be applied to a `String`, an `Int`, a `()`, a `[Float]`, ....) Elm doesn't, but simple typeclasses can be emulated with only a little added verbosity.
