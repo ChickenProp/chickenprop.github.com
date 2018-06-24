@@ -280,7 +280,7 @@ Elm and Haskell both support many things not covered so far. To look at some of 
 
   If I'm right about that, then case statements neither make the language more expressive nor less legible, at least in one important sense. (But not the only important sense. They do make the language easier to read and write for humans.)
 
-[case-compiled]: I think it might look something like this:
+[^case-compiled]: I think it might look something like this:
 
   ```elm
   mHead ml =
