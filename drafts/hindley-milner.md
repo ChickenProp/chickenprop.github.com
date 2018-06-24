@@ -268,7 +268,7 @@ Elm and Haskell both support many things not covered so far. To look at some of 
 
 * Both also support case statements along with destructuring, like
 
-  ```elm
+    ```elm
   mHead : Maybe (List a) -> Result Bool a
   mHead ml = case ml of
       Just (a::_) -> Ok a
@@ -282,21 +282,21 @@ Elm and Haskell both support many things not covered so far. To look at some of 
 
 [^case-compiled]: I think it might look something like this:
 
-  ```elm
-  mHead ml =
-      if *isJust ml && (*fromJust ml (\_x -> *isCons _x)) then
-          *fromJust ml (\_x -> *fromCons _x (\a _ -> Ok a))
-      else if *isJust ml then
-          *fromJust ml (\_ -> Err True)
-      else if *isNothing ml then
-          Err False
-      else
-          *fail
-  ```
+    ```elm
+    mHead ml =
+        if *isJust ml && (*fromJust ml (\_x -> *isCons _x)) then
+            *fromJust ml (\_x -> *fromCons _x (\a _ -> Ok a))
+        else if *isJust ml then
+            *fromJust ml (\_ -> Err True)
+        else if *isNothing ml then
+            Err False
+        else
+            *fail
+    ```
 
-  functions marked with a `*` can be hidden from the language user. Additionally, `*fromJust`, `*fromCons` and `*fail` would be able to throw runtime errors. These don't violate Elm's "no runtime errors" policy, because the compiler would only generate them in contexts where it could prove they wouldn't throw. (In the case of `*fail`, when it could prove that code branch was unreachable, so it could also just not bother.)
+    functions marked with a `*` can be hidden from the language user. Additionally, `*fromJust`, `*fromCons` and `*fail` would be able to throw runtime errors. These don't violate Elm's "no runtime errors" policy, because the compiler would only generate them in contexts where it could prove they wouldn't throw. (In the case of `*fail`, when it could prove that code branch was unreachable, so it could also just not bother.)
 
-  I'm very much spitballing here. I wouldn't be surprised to discover that the approach I've described is completely unworkable.
+    I'm very much spitballing here. I wouldn't be surprised to discover that the approach I've described is completely unworkable.
 
 * (By comparison, if-then-else statements are also another class of language expression, but one which can obviously be thinly compiled down to the existing ones.)
 
