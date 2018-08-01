@@ -4,7 +4,7 @@ layout: draft
 ---
 A few weeks ago I gave a talk at work about Hindley-Milner type inference. When I agreed to give the talk I didn't know much about the subject, so I learned about it. And now I'm writing about it, based on the contents of my talk but more fleshed out and hopefully better explained.
 
-I call this a reckless introduction, because my main source is [wikipedia](https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system). A bunch of people on the internet have collectively attempted to synthesise a technical subject. I've read their synthesis, and now I'm trying to re-synthesise it, without particularly putting in the effort to check my own understanding. I can't argue that this is a good idea.
+I call this a reckless introduction, because my main source is [wikipedia](https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system). A bunch of people on the internet have collectively attempted to synthesise a technical subject. I've read their synthesis, and now I'm trying to re-synthesise it, without particularly putting in the effort to check my own understanding. I'm not going to argue that this is a good idea. Let's just roll with it.
 
 I'm also trying to tie in some quasi-philosophy that surely isn't original to me but I don't know where or if I've encountered it before.
 
@@ -16,7 +16,7 @@ That's not a very well-defined question, but we can ask more precise versions of
 
 That question is known as the halting problem[^halting], and the simple answer is no, we can't. But the full answer is more complicated.
 
-[^halting]: Technically the halting problem only requires you to answer for a specific input, but it's close enough enough for these purposes.
+[^halting]: Technically the halting problem only requires you to answer for a specific input, but my version is equivalent. If you can solve either one, you can solve the other.
 
 To solve the halting problem, we want a program that, when given another program as input, satisfies three different conditions:
 
@@ -38,17 +38,24 @@ Now, the halting problem is tricky. It turns out that if you create a language l
 
 So although these languages can't do much, they can still do enough to be useful. And in the domains where they're useful, being able to prove non-termination is a useful property of the language. If you had to write a SQL query in C, it would be all too easy to write some C code that would accidentally loop forever.
 
-I'm trying to illustrate here something that seems to me important, which is that there's a tradeoff between what I'll call expressiveness and legibility. A programming language is *expressive* if you can easily write many interesting programs in it; it's *legible* if you can easily say many interesting things about the programs you've written in it. And I claim that the most expressive programming languages won't be the most legible, and vice-versa; though there will certainly be [languages](https://en.wikipedia.org/wiki/Malbolge) which are neither expressive nor legible. This tradeoff seems fundamental to me, and I expect that some approximation of it has been proven as a theorem.
+I'm trying to illustrate here something that seems to me important, which is that there's a tradeoff between what I'll call expressiveness and legibility. A programming language is *expressive* if you can easily write many interesting programs in it[^expressive]; it's *legible* if you can easily say many interesting things about the programs you've written in it. And I claim that the most expressive programming languages won't be the most legible, and vice-versa; though there will certainly be [languages](https://en.wikipedia.org/wiki/Malbolge) which are neither expressive nor legible. This tradeoff seems fundamental to me, and I expect that some approximation of it has been proven as a theorem.[^zfpa]:
 
-I haven't defined these very well, but hopefully some examples will help. I will also clarify that both of them are highly dimensional; and that "raw computational power" is one of the things that expressiveness can point at, and "human readability" is one of the things that legibility can point at, but neither of those are synonyms.
+[^expressive]: I've subsequently discovered that wikipedia uses [the same name](https://en.wikipedia.org/wiki/Expressive_power_\(computer_science\)) for this concept.
 
-* Perl-compatible regular expressions are more expressive than true regular expressions, but harder to make time and space guarantees about.
+[^zfpa]: I think this is related to the way that ZF set theory can encode Peano arithmetic. Thus, ZF is more expressive than PA. But because ZF allows you to construct objects that PA doesn't, there are more things you can say about "all objects in PA" than about "all objects in ZF". So PA is more legible than ZF.
 
-* Under certain assumptions, Haskell's monadic IO gives you legibility (because you can look at the type of a piece of code and know that it doesn't depend on external state) and costs you expressivity (because a function can only bring in external state if its caller allows it to). The assumptions in question are false (partly because `unsafePerformIO` exists), but I've been able to get away with pretending they're true (partly because `unsafePerformIO` is punishable with excommunication).
+I haven't defined these very well, but hopefully some examples will help. I will also clarify that both of them are highly dimensional; and that "raw computational power" is one of the things that expressiveness can point at, but not the only thing; and "human readability" is not really one of the things that legibility points at.
 
-* Custom operators don't gain or cost much in terms of legibility and expressivity, since they're equivalent to function calls. But operator overloading gains expressivity at the cost of legibility (you no longer know that `a + b` will do anything remotely like an addition). This is especially true given dynamic typing.
+* [Perl-compatible regular expressions](https://en.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions) can classify sets of strings that normal regular expressions can't. But they're harder to make time and space guarantees about. And it's possible to prove whether two regular expressions are equivalent, but that's not possible in general for PCREs (proof: [PCREs can encode CFGs](https://nikic.github.io/2012/06/15/The-true-power-of-regular-expressions.html); [CFGs can't be proved equivalent](https://math.stackexchange.com/questions/231187/an-efficient-way-to-determine-if-two-context-free-grammars-are-equivalent)).
 
-* Macros cost legibility in forms like "this code that looks like a function call will call a function" and "this code will not be affected at runtime by the phase of the moon during compilation". They gain expressivity in forms like DSLs and parsing config files at compile time.
+* Under certain assumptions, Haskell's monadic IO lets you look at the type of a piece of code and know that it won't depend on external state. In return, a function can only bring in external state if its caller allows it to (which requires having permission from its own caller, and so on).
+
+  The assumptions in question are false (partly because `unsafePerformIO` exists), but I've been able to get away with pretending they're true (partly because `unsafePerformIO` is punishable with excommunication).
+
+* Custom operators don't gain or cost much in terms of legibility and expressivity, since they're equivalent to function calls. They simply make code more or less readable. But operator overloading, at least when combined with dynamic typing, gains expressivity at the cost of legibility (you no longer know that `a + b` will do anything remotely like an addition).
+
+* Macros make it easier to do things like create DSLs, reduce boilerplate, and set compile-time config options. But they mean that a function call might not look like one, or vice-versa; expressions might get evaluated many times, or not at all; and the code might perform differently depending on the phase of the moon when it was compiled.
+
 
 2.
 
@@ -56,7 +63,7 @@ So we've got this tradeoff, and in our programming language design we try to nav
 
 And Hindley-Milner type systems are a tradeoff that's proved fairly successful, both in direct use and as inspiration. At my company[^my-company], we use Elm, which runs on an approximately HM type system. (I don't think it's pure HM, due to extensible record types.) We also use Haskell, which runs on a type system that extends HM in many directions. Haskell's system is more expressive and less legible, but still successful. (I'll mostly be using Elm for examples in this post, and not extensible records.) ML and OCaml are other notable languages based on HM, though I haven't used either.
 
-[^my-company]: "My company" is a phrase which sometimes means "the company I own or run" and sometimes "the company I work for". Here it means the latter. I don't know an unambigous way to phrase that which I don't find slightly awkward, so instead I'm using a super-awkward footnote. But, y'know. Ironically, or something.
+[^my-company]: "My company" is a phrase which sometimes means "the company I own or run" and sometimes "the company I work for". Here it means [the latter](https://proda.ai). I don't know an unambigous way to phrase that which I don't find slightly awkward, so instead I'm using a super-awkward footnote. But, y'know. Ironically, or something.
 
 The legibility HM offers is, roughly, the ability to prove that a program typechecks. What exactly that means I'll get to later, but we probably all have a decent idea. It's the thing that lets the Elm compiler say "no, that program is trying to add a string to an int, bad program", while the python interpreter doesn't know that's going to happen until it's too late. The Elm compiler will refuse to compile your program unless it can logically prove that it will typecheck.
 
@@ -235,18 +242,20 @@ Why do we need both `let` and lambda? Well, we can't replace lambda expressions 
 
 There's an interesting thing about the system I just described: it may or may not be Turing complete.
 
-The problem is that there's no specified way of doing recursion. But the initial set of variables may include a fixed-point combinator. Failing that, the proper recursive types can be used to define one.
+The problem is that there's no specified way of doing recursion. A function can't call itself, and it can't call any other function that can call it.
+
+But a [fixed-point combinator](https://en.wikipedia.org/wiki/Fixed-point_combinator) allows recursion, and might be included in the initial set of variables. Failing that, the proper recursive types can be used to define one. (Elm and Haskell [allow us](http://rosettacode.org/wiki/Y_combinator) to define such types[^brag].)
+
+[^brag]: Minor brag: I myself contributed the Elm implementation on that page.
 
 Failing both of those, we can introduce a new kind of expression
 
     $$ \frac{x : μ ⇒ a \sim μ \quad x : \bar{μ} ⇒ b \sim μ'}
             {(\mathtt{letrec}\ x = a\ \mathtt{in}\ b) \sim μ'}. $$
 
-This is much the same as `let`, but makes the variable `x = a` available when evaluating `a`. (But it's only available as a *monotype* when evaluating `a`, and still doesn't get generalised to a polytype until evaluating `b`.)
+This is much the same as `let`, but makes the variable `x = a` available when evaluating `a`. It's only available as a monotype when evaluating `a`, and still doesn't get generalised to a polytype until evaluating `b`.
 
-(Elm and Haskell provide `letrec` as `let` and don't provide simple `let` at all. They also allow us to define the types that let us [define](http://rosettacode.org/wiki/Y_combinator) a fixed-point combinator[^brag].)
-
-[^brag]: Minor brag: I myself contributed the Elm implementation on that page.
+(Elm and Haskell provide `letrec` as `let` and don't provide simple `let` at all.)
 
 But if an HM language doesn't provide the appropriate variables or types, and doesn't implement `letrec` or something similar, it won't be Turing complete. Legibility gain, expressivity cost.
 
@@ -262,13 +271,13 @@ I confess, I'm not entirely sure how to do that. The outline is obvious, recurse
 
 Elm and Haskell both support many things not covered so far. To look at some of them briefly,
 
-* It seems obvious, but both allow you to evaluate the language, something I haven't touched on much. Their evaluation models are pretty different though - Haskell is lazy, Elm is eager.
+* It seems obvious, but both allow you to evaluate the language, something I haven't touched on much. Their evaluation models are different though - Haskell is lazy, Elm is eager.
 
 * Both have ways to introduce new types. That doesn't change what we've seen, but it does separate the languages into two parts. One part describes the types used in a program and one part implements the semantics of a program.
 
 * Both also support case statements along with destructuring, like
 
-    ```elm
+  ```elm
   mHead : Maybe (List a) -> Result Bool a
   mHead ml = case ml of
       Just (a::_) -> Ok a
@@ -305,3 +314,11 @@ Elm and Haskell both support many things not covered so far. To look at some of 
   I suspect this is unresolvable, and extensible records represent an extension of Elm from HM, to become more expressive and less legible.
 
 * Haskell supports typeclasses, which are a way of allowing functions to operate on multiple different types. (For example, the `show` function can be applied to a `String`, an `Int`, a `()`, a `[Float]`, ....) Elm doesn't, but simple typeclasses can be emulated with only a little added verbosity.
+
+Another thing I'll say is that I've been talking about legibility and expressivity of a language. But a type system is itself a language, and may be more or less legible and expressive. I don't have a strong intuition for how these interact.
+
+There's a lot more I could add to this post. Some things that I omitted for brevity, some that I omitted because I don't know enough about them yet[^enough], and some that I omitted because I don't know about them at all. I don't know what a sensible cutoff point is, so I'm just going to end it here.
+
+[^enough]: Not that that stopped me from writing this entire post.
+
+From writing my original talk, and subsequently this blog post, I think I understand HM type systems much better than I used to. Hopefully you think the same. Hopefully we're both correct. If you see any inaccuracies, please point them out.
