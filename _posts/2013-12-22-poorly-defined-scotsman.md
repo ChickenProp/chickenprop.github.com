@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The "Poorly Defined Scotsman" fallacy
+lw_xpost: true
 ---
 If you hang out on [/r/scifi](http://reddit.com/r/scifi/) for long enough, you'll hear someone say that *Star Wars* is not science fiction. It's fantasy in space, or space opera, or whatever, but it isn't science fiction.
 

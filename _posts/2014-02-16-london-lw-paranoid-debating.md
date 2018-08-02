@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Meetup report: London LW paranoid debating session"
+lw_xpost: true
 ---
 ![photo](/images/lw-meetup-20140209-photo.jpg)
 *A photo from a (different) recent LW London meetup*

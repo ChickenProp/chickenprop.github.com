@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Fascists and Rakes
+lw_xpost: true
 ---
 *[Cross-posted to Less Wrong.](http://lesswrong.com/r/discussion/lw/jfj/fascists_and_rakes/)*
 

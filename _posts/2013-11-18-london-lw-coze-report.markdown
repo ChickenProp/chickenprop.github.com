@@ -1,6 +1,7 @@
 ---
 layout: post
 title: London LW CoZE Exercise Report
+lw_xpost: true
 ---
 ([Cross-posted to LessWrong.](http://lesswrong.com/r/discussion/lw/j3n/london_lw_coze_exercise_report/))
 
