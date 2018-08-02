@@ -1,6 +1,6 @@
 ---
 title: Brief movie reviews
-layout: draft
+layout: post
 ---
 I don't expect anyone cares about what I think about the movies I've seen lately, so I'm bundling those thoughts into one post to be less annoying.
 
