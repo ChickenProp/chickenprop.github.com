@@ -10,7 +10,8 @@ layout: none
     <atom:link href="{{ site.url }}/lw-rss.xml" rel="self" type="application/rss+xml" />
       {% comment %}There's no easy way to increment an integer, so use hacky string-length method.{% endcomment %}
       {% assign shown = '' %}
-      {% for post in {{ site.posts | where_exp: "item", "item.lw_xpost" }} %}
+      {% assign xposts = site.posts | where_exp: "item", "item.lw_xpost" %}
+      {% for post in xposts %}
         {% if shown.size < 20 %}
           {% capture temp %}{{ shown }}*{% endcapture %}
           {% assign shown = temp %}
