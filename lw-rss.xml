@@ -10,19 +10,17 @@ layout: none
     <atom:link href="{{ site.url }}/lw-rss.xml" rel="self" type="application/rss+xml" />
       {% comment %}There's no easy way to increment an integer, so use hacky string-length method.{% endcomment %}
       {% assign shown = '' %}
-      {% for post in site.posts %}
-        {% if post.lw_xpost %}
-          {% if shown.size < 20 %}
-            {% capture temp %}{{ shown }}*{% endcapture %}
-            {% assign shown = temp %}
-            <item>
-              <title>{{ post.title }}</title>
-              <description>{{ post.content | xml_escape }}</description>
-              <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
-              <link>{{ site.url }}{{ post.url }}</link>
-              <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
-            </item>
-          {% endif %}
+      {% for post in {{ site.posts | where_exp: "item", "item.lw_xpost" }} %}
+        {% if shown.size < 20 %}
+          {% capture temp %}{{ shown }}*{% endcapture %}
+          {% assign shown = temp %}
+          <item>
+            <title>{{ post.title }}</title>
+            <description>{{ post.content | xml_escape }}</description>
+            <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+            <link>{{ site.url }}{{ post.url }}</link>
+            <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+          </item>
         {% endif %}
       {% endfor %}
   </channel>
