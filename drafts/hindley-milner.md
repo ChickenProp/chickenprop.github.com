@@ -44,7 +44,7 @@ I'm trying to illustrate here something that seems to me important, which is tha
 
 [^expressive]: I've subsequently discovered that wikipedia uses [the same name](https://en.wikipedia.org/wiki/Expressive_power_\(computer_science\)) for this concept.
 
-[^zfpa]: I think this is related to the way that ZF set theory can encode Peano arithmetic. Thus, ZF is more expressive than PA. But because ZF allows you to construct objects that PA doesn't, there are more things you can say about "all objects in PA" than about "all objects in ZF". So PA is more legible than ZF.
+[^zfpa]: I think this is related to the way that ZF set theory can encode Peano arithmetic. Thus, ZF is more expressive than PA. But because ZF allows you to construct objects that PA doesn't, there are more things you can say about "all objects in PA" than about "all objects in ZF". So PA is more legible than ZF. I don't understand the [Curry-Howard correspondence](https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence), but I think that's related too.
 
 I haven't defined these very well, but hopefully some examples will help. I will also clarify that both of them are highly dimensional; and that "raw computational power" is one of the things that expressiveness can point at, but not the only thing; and "human readability" is not really one of the things that legibility points at.
 
@@ -58,16 +58,17 @@ I haven't defined these very well, but hopefully some examples will help. I will
 
 * Macros make it easier to do things like create DSLs, reduce boilerplate, and set compile-time config options. But they mean that a function call might not look like one, or vice-versa; expressions might get evaluated many times, or not at all; and the code might perform differently depending on the phase of the moon when it was compiled.
 
-
-2.
+### Motivation
 
 So we've got this tradeoff, and in our programming language design we try to navigate it. We try to find kinds of legibility that can be bought for little cost in expressiveness. Or more precisely, we try to find kinds of legibility *that we care about*, and that can be bought for little cost in *kinds of expressiveness that we care about*.
 
-And Hindley-Milner type systems are a tradeoff that's proved fairly successful, both in direct use and as inspiration. At my company[^my-company], we use Elm, which runs on an approximately HM type system. (I don't think it's pure HM, due to extensible record types.) We also use Haskell, which runs on a type system that extends HM in many directions. Haskell's system is more expressive and less legible, but still successful. (I'll mostly be using Elm for examples in this post, and not extensible records.) ML and OCaml are other notable languages based on HM, though I haven't used either.
+And Hindley-Milner type systems are a tradeoff that's proved fairly successful, both in direct use and as inspiration. At my company[^my-company], we use [Elm](https://en.wikipedia.org/wiki/Elm_\(programming_language\)), which runs on an approximately HM type system. (I don't think it's pure HM, due to extensible record types.) We also use [Haskell](https://en.wikipedia.org/wiki/Haskell_\(programming_language\))[^ghc], which runs on a type system that extends HM in many directions. Haskell's system is more expressive and less legible, but still successful. (I'll mostly be using Elm for examples in this post, and not extensible records.) ML and OCaml are other notable languages based on HM, though I haven't used either.
 
 [^my-company]: "My company" is a phrase which sometimes means "the company I own or run" and sometimes "the company I work for". Here it means [the latter](https://proda.ai). I don't know an unambigous way to phrase that which I don't find slightly awkward, so instead I'm using a super-awkward footnote. But, y'know. Ironically, or something.
 
-The legibility HM offers is, roughly, the ability to prove that a program typechecks. What exactly that means I'll get to later, but we probably all have a decent idea. It's the thing that lets the Elm compiler say "no, that program is trying to add a string to an int, bad program", while the python interpreter doesn't know that's going to happen until it's too late. The Elm compiler will refuse to compile your program unless it can logically prove that it will typecheck.
+[^ghc]: Specifically [GHC](https://en.wikipedia.org/wiki/Glasgow_Haskell_Compiler), which offers many extensions over Haskell proper. Whenever I refer to Haskell, I'm really talking about the language that GHC implements.
+
+The legibility HM offers is, roughly, the ability to prove that a program typechecks. I'm not going to clarify exactly what that means, but we probably all have a decent idea. It's the thing that lets the Elm compiler say "no, that program is trying to add a string to an int, bad program", while the Python interpreter doesn't know that's going to happen until it's too late. The Elm compiler will refuse to compile your program unless it can logically prove that it will typecheck.
 
 More precisely, what HM offers isn't type *checking* but the more general type *inference*. (And beyond that, type inference *in roughly linear time*.) Type inference doesn't just tell you *whether* a program typechecks, but *what* its type is; a program fails to typecheck iff no type can be inferred for it.
 
@@ -97,7 +98,7 @@ and as long as `sorted` always returns a list of the same length it started with
 
 And then the Elm compiler would force you to account for the possibility of `Nothing`, even though there's no way that possibility could occur at runtime. One option is to pick an arbitrary result that will never be exposed - until the code goes through several layers of changes, an assumption that used to be true is now violated, and suddenly that arbitrary result is wreaking havoc elsewhere. Or in Haskell, your program is crashing at runtime.
 
-...or you can rewrite your function to avoid indexing into a list. The point isn't that you can't do the thing. The point is that (a) even if the thing is safe, the compiler might not know that, and (b) if you decide it's safe anyway and find some way to work around the compiler, you're in dangerous territory.
+Which is no worse than you get in Python, to be fair. But we were hoping for better. In this case you can just write your function to avoid indexing into a list, which is fine. The point isn't that you can't do the thing. The point is that (a), even if the thing is safe, the compiler might not know that; (b), if you decide it's safe anyway and find some way to trick the compiler, the compiler no longer protects you; and (c), if you want to do it in a way the compiler knows is safe, you might need to put in some extra work.
 
 For another example, HM type systems can't implement heterogenous lists. So this is really easy in python:
 
@@ -126,19 +127,19 @@ but it's not quite the same, because it can only accept types you know about in 
 
 For a third example: Haskell is known for its monads. But Elm has no equivalent, because an HM type system can't support generic monad programming. You can implement the generic monad functions for specific cases, so there's `Maybe.map` and `List.map`, but there's no equivalent of Haskell's `fmap` which works on all monads.
 
-3.
+### Hindley-Milner type systems
 
 So I've talked about the tradeoffs that HM type systems offer, but not what HM type systems actually are. So here is where I get particularly reckless. Also, this part is likely to make more sense if you're familiar with at least on HM-based language.
 
 You need types, you need a language, and you need a way to relate the two.
 
-3.1.
+#### Types
 
-**Types** come in a conceptual hierarchy which starts with type constants. That's things like, in Elm, `Int`, `Float`, `Bool`, `String`, `Date`, `()`. It also includes type variables, which in Elm are notated with initial lower-case, like `a` and `msg`. (Though the type variables `number`, `comparable` and `appendable` are special cases that I won't cover here.)
+Types come in a conceptual hierarchy which starts with **type constants**. That's things like, in Elm, `Int`, `Float`, `Bool`, `String`, `Date`, `()`. It also includes type variables, which in Elm are notated with initial lower-case, like `a` and `msg`. (Though the type variables `number`, `comparable` and `appendable` are special cases that I won't cover here.)
 
-Next in the type hierarchy is applied types like `List Int`, `Maybe (List Float)`, `a -> String` and `Result () Date`. (`->` is the only type that HM specifically requires.) Notably, an applied type *must* have a specific named "root"; you can't have `m Int`, which you would need for generalised monads. The "leaves" in an applied type can be any type constants or applied types.
+Next in the type hierarchy is **applied types**, where a "type function" is given type constants and/or other applied types as arguments. These are things like `List Int`, `Maybe (List Float)`, `Result () Date`, and `a -> String`. (That last might also be written `(->) a String`, since `(->)` is the type function. Also, `(->)` is the only type that HM specifically requires to exist.) Notably, an applied type *must* have a specific named root; you can't have `m Int`, which you would need for generalised monads.
 
-Type constants and applied types are *monotypes*. You get a *polytype* by optionally sticking one or more "∀"s in front of a monotype. So for example `a -> Int` is a monotype, but `∀a. a -> Int` is a polytype. `∀b. a -> Int` is also a polytype, and so is `∀a. ∀b. Int` (which I'll write equivalently as `∀a b. Int`). As a degenerate case, all monotypes also count as polytypes.
+Type constants and applied types are **monotypes**. You get a **polytype** by optionally sticking one or more "∀"s in front of a monotype. So for example `a -> Int` is a monotype, but `∀a. a -> Int` is a polytype. So is `∀a. ∀b. a -> Int -> b`, which I'll write equivalently as `∀a b. a -> Int -> b`. `∀b. a -> Int` is also a polytype; since the quantified variable doesn't show up, it's equivalent to the monotype `a -> Int`, so for simplicity we might as well decide that monotypes count as polytypes.
 
 Type signatures in Elm typically have an implied "∀" over whichever variables it makes sense to quantify. So the type of `List.map` would be written
 
@@ -163,11 +164,11 @@ const x = let foo : b -> a
 
 `const` has a polytype here, but `foo` has a monotype, because (in context) its argument type and return type are constrained. If you tried to swap `a` and `b` in the type signature for `foo`, or rename either of them, the Elm compiler would complain.
 
-3.2.
+#### Language
 
 The **language** has four kinds of expression, and each has a rule relating it to the type system. You need variables and constants, function calls, lambda expressions, and let statements.
 
-3.2.1.
+##### Variables and constants
 
 Variables and constants are things like `True`, `0.2`, `Just`, `"Hello"`, `[]`, `()`, `List.map`. Each of these has a declared type, which in Elm is notated with `:`. So `True : Bool`, `0.2 : Float`, `Just : ∀a. a -> Maybe a`, `"Hello": String`, `[] : ∀a. List a`, `() : ()`, `List.map : ∀a b. (a -> b) -> List a -> List b`.
 
@@ -179,11 +180,11 @@ Reading clockwise from top left, this says: if you have a variable $x$ declared 
 
 A type *judgment*, as opposed to a declaration, provides a type that an expression can be used as. A judgment is always as a monotype.
 
-And type specialisation, denoted $⊑$, is the process of replacing quantified variables with less-quantified ones. So for example the type `∀a b. a -> b -> a` might be specialized to `∀a. a -> String -> a`, or to `∀b. Int -> b -> Int`; and from either of those, it could be further specialised to `Int -> String -> Int`. Of course `String -> Int -> String` and `List Float -> (Float -> String) -> List String` are valid specialisations too.
+And type specialisation, denoted $⊑$, is the process of replacing quantified variables with less-quantified ones. So for example the type `∀a b. a -> b -> a` might be specialized to `∀a. a -> String -> a`, or to `∀b. Int -> b -> Int`; and from either of those, it could be further specialised to `Int -> String -> Int`. Of course `String -> Int -> String` and `List Float -> (Float -> String) -> List Float` are valid specialisations too.
 
 Thus: we have the type declaration `[] : ∀a. List a`, and we have `∀a. List a ⊑ List Int`, and so we can form the type judgment `[] ~ List Int`. We also have `∀a. List a ⊑ List String`, and so `[] ~ List String`. And `[] ~ List (List (Maybe Bool))`, and so on.
 
-3.2.2.
+##### Function calls
 
 Function calls are things like `not True`, `(+ 1)`, `List.Map Just`. And the rule relating them to the type system is that *function calls consume function types*. This is the simplest of the rules. Mathematically it looks like
 
@@ -193,9 +194,9 @@ Or: if $f$ can be judged to have a function type $μ → μ'$, and $v$ can be ju
 
 Thus: we can infer the type judgment `toString ~ Int -> String`, and we can infer `3 ~ Int`, and so we can infer `toString 3 ~ String`.
 
-And we can infer `List.map ~ (Int -> Maybe Int) -> (List Int -> List (Maybe Int))`, and we can infer `Just ~ Int -> Maybe Int`. So we can infer `List.map Just ~ List Int -> List (Maybe Int)`
+Also, we can infer `List.map ~ (Int -> Maybe Int) -> (List Int -> List (Maybe Int))`, and we can infer `Just ~ Int -> Maybe Int`. So we can infer `List.map Just ~ List Int -> List (Maybe Int)`
 
-3.2.3.
+##### Lambda expressions
 
 Lambda expressions are things like `\x -> Just x`, and in Elm they're used implicitly when something like `const x y = x` is turned into `const = \x -> \y -> x`. The type system rule is that *lambda expressions produce function types*. Mathematically:
 
@@ -207,7 +208,7 @@ Typically $e$ would be some expression mentioning the variable $x$, but it's no 
 
 Thus: given the declaration `x : Int`, we can infer the judgment `[x] ~ List Int`. And so we can infer the judgment `(\x -> [x]) ~ Int -> List Int`.
 
-3.2.4.
+##### Let expressions
 
 Let expressions read like `let x = y in a`. Semantically, this is very similar to using a lambda expression, `(\x -> a) y`. But HM treats them differently in the type system, allowing a let expression to introduce polytypes. That permits code like
 
@@ -238,9 +239,9 @@ Thus: we can infer `(\x -> x) ~ a -> List a`, where `a` is a type variable unuse
 
 (It seems a little strange to me that the approach here is to first construct a meaningless type, and then quantify over it. Still, that's my understanding. It's of course possible I'm mistaken.)
 
-Why do we need both `let` and lambda? Well, we can't replace lambda expressions with let expressions: they're not re-usable. (When you translate a let expression into a lambda expression, you actually generate a lambda *applied to an argument*. There's no way to translate a lambda expression by itself into a let expression.) Meanwhile, I'm not entirely sure why we can't make lambdas polymorphic in the same way let expressions are. I assume the answer is that if we tried it, we'd lose some of the legibility that HM offers, but I'm not sure exactly what. Let can be more powerful in the type system because it's less powerful in the language.
+Why do we need both `let` and lambda? Well, we can't replace lambda expressions with let expressions: they're not re-usable. (When you translate a let expression into a lambda expression, you actually generate a lambda *applied to an argument*. There's no way to translate a lambda expression by itself into a let expression.) Meanwhile, I'm not entirely sure why we can't make lambdas polymorphic in the same way let expressions are. I think the answer is that if we tried it, we'd lose some of the legibility that HM offers - so let can be more powerful in the type system because it's less powerful in the language. But I'm not sure exactly what legibility would be lost.
 
-3.3.
+#### Recursion
 
 There's an interesting thing about the system I just described: it may or may not be Turing complete.
 
@@ -261,7 +262,7 @@ This is much the same as `let`, but makes the variable `x = a` available when ev
 
 But if an HM language doesn't provide the appropriate variables or types, and doesn't implement `letrec` or something similar, it won't be Turing complete. Legibility gain, expressivity cost.
 
-4.
+### Wrapping up
 
 And modulo some small details, that's the entirety of a Hindley-Milner type system. If you have a language with those features, and a suitable set of types, you can perform type inference.
 
@@ -269,11 +270,9 @@ What we have is a set of rules that allows us to construct proofs. That is, if w
 
 I confess, I'm not entirely sure how to do that. The outline is obvious, recurse down the parse tree and at each step apply the appropriate rule. But since a constant can be judged as one of many types, you need to keep track of which types are acceptable. Wikipedia hints at how it works, but not in a way that I understand particularly well.
 
-(Here I just start to infer things for myself.)
+Elm and Haskell both support many things not covered so far. To look at some of them briefly, and occasionally getting even more recklesss,
 
-Elm and Haskell both support many things not covered so far. To look at some of them briefly,
-
-* It seems obvious, but both allow you to evaluate the language, something I haven't touched on much. Their evaluation models are different though - Haskell is lazy, Elm is eager.
+* It seems obvious, but both allow you to evaluate the language, something I haven't touched on much. And it does need to be touched on, because there's more than one way to do it. Haskell uses a lazy evaluation model, while Elm is strict.
 
 * Both have ways to introduce new types. That doesn't change what we've seen, but it does separate the languages into two parts. One part describes the types used in a program and one part implements the semantics of a program.
 
@@ -289,7 +288,7 @@ Elm and Haskell both support many things not covered so far. To look at some of 
 
   To implement these, you'd want to add a fifth class of language expression. But I think it would be possible in theory to write a "thin" first-pass compiler to translate these statements into the existing language. By "thin" I mean to do this in such a way that we don't lose any of the legibility guarantees we care about.[^case-compiled] (For example, if this compiler turned $n$ bytes of code in a case statement into more than $O(n)$ bytes of code in the base language, or if it ran in more than O(n) time, this condition would fail.)
 
-  If I'm right about that, then case statements neither make the language more expressive nor less legible, at least in one important sense. (But not the only important sense. They do make the language easier to read and write for humans.)
+  If I'm right about that, then case statements neither make the language more expressive nor less legible, at least in one important sense.
 
 [^case-compiled]: I think it might look something like this:
 
