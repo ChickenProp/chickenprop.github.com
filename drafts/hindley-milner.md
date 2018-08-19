@@ -2,13 +2,13 @@
 title: A reckless introduction to Hindley-Milner type inference
 layout: draft
 ---
-A few weeks ago I gave a talk at work about Hindley-Milner type inference. When I agreed to give the talk I didn't know much about the subject, so I learned about it. And now I'm writing about it, based on the contents of my talk but more fleshed out and hopefully better explained.
+A few months ago I gave a talk at work about Hindley-Milner type inference. When I agreed to give the talk I didn't know much about the subject, so I learned about it. And now I'm writing about it, based on the contents of my talk but more fleshed out and hopefully better explained.
 
 I call this a reckless introduction, because my main source is [wikipedia](https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system). A bunch of people on the internet have collectively attempted to synthesise a technical subject. I've read their synthesis, and now I'm trying to re-synthesise it, without particularly putting in the effort to check my own understanding. I'm not going to argue that this is a good idea. Let's just roll with it.
 
-I'm also trying to tie in some quasi-philosophy that surely isn't original to me but I don't know where or if I've encountered it before.
+I'm also trying to tie in some quasi-philosophy that surely isn't original to me but I don't know if or where I've encountered it before.
 
-1.
+### Background
 
 When people write software, sometimes it doesn't do exactly what we want. One way to find out is to try running it and see, but that's not ideal because any complicated program will have way too many possible inputs to test. So it would be nice if we could mathematically prove whether our software does what we want, without actually running it. Can we do that?
 
@@ -30,15 +30,17 @@ And when you allow that answer, you can create a *language* on which the halting
 
 Now, the halting problem is tricky. It turns out that if you create a language like that, there are a lot of interesting things that programs written in that language just won't be able to do. But there are also lots of interesting things that they can do. To give three examples of such languages[^nonterminating]:
 
-[^nonterminating]: To nitpick myself: these aren't just languages for which you can prove termination, they're languages which never terminate, at least not for finite inputs. I don't offhand know any languages which are Turing-incomplete but have the ability to loop forever, though such a thing can exist.
+[^nonterminating]: To nitpick myself: these aren't just languages for which you can prove termination, they're languages which never terminate, at least not for finite inputs. I don't offhand know any languages which are Turing incomplete but have the ability to loop forever, though such a thing can exist.
 
 * Regular expressions are really useful for certain operations on strings, but that's about all they're good for.
-* SQL is really useful for working with databases. According to someone on stack overflow, the ANSI SQL-92 standard was Turing-incomplete and the ANSI SQL-99 standard is Turing complete. (No word on the SQL-96 standard that came between these.) But I've never actually needed the feature that makes it Turing-complete; so at least for my purposes, it might as well not be.
+* SQL is really useful for working with databases. According to [some people on stack overflow](https://stackoverflow.com/questions/900055/is-sql-or-even-tsql-turing-complete), the ANSI SQL-92 standard was Turing incomplete and the ANSI SQL-99 standard is Turing complete. (No mention of the SQL-96 standard that came between these, but reading between the lines, probably Turing incomplete.) If I understand correctly, the feature required to make SQL-99 Turing complete[^recursive-cte] is one I've literally never used; so for my purposes, it may as well be Turing incomplete.
 * Coq is used for proving math theorems. It's an interesting one because when you write your program, you have to also provide a proof that your program terminates. (I think this is slightly false, but again, good enough for the point I'm making.)
+
+[^recursive-cte]: Specifically, it looks to me like SQL-99 without recursive common table expressions is Turing incomplete. I've only ever used nonrecursive CTEs.
 
 So although these languages can't do much, they can still do enough to be useful. And in the domains where they're useful, being able to prove non-termination is a useful property of the language. If you had to write a SQL query in C, it would be all too easy to write some C code that would accidentally loop forever.
 
-I'm trying to illustrate here something that seems to me important, which is that there's a tradeoff between what I'll call expressiveness and legibility. A programming language is *expressive* if you can easily write many interesting programs in it[^expressive]; it's *legible* if you can easily say many interesting things about the programs you've written in it. And I claim that the most expressive programming languages won't be the most legible, and vice-versa; though there will certainly be [languages](https://en.wikipedia.org/wiki/Malbolge) which are neither expressive nor legible. This tradeoff seems fundamental to me, and I expect that some approximation of it has been proven as a theorem.[^zfpa]:
+I'm trying to illustrate here something that seems to me important, which is that there's a tradeoff between what I'll call expressiveness and legibility. A programming language is *expressive* if you can easily write many interesting programs in it[^expressive]; it's *legible* if you can easily say many interesting things about the programs you've written in it. And I claim that the most expressive programming languages won't be the most legible, and vice-versa; though there will certainly be [languages](https://en.wikipedia.org/wiki/Malbolge) which are neither expressive nor legible. This tradeoff seems fundamental to me, and I expect that some approximation of it has been proven as a theorem.[^zfpa]
 
 [^expressive]: I've subsequently discovered that wikipedia uses [the same name](https://en.wikipedia.org/wiki/Expressive_power_\(computer_science\)) for this concept.
 
