@@ -8,7 +8,7 @@ A premise of this post is that punching people is sometimes better than the alte
 
 I mean that literally, but mostly metaphorically. Things I take as metaphorical punching include name calling, writing angry tweets to or about someone, ejecting them from a group, callout posts, and arguing that we should punch them.
 
-Given that punching people is sometimes better than the alternatives, I think we need to be able to have conversations about when "sometimes" is. And indeed we can and do have those conversations. Many words have been spilled on the legitimate use of force.
+Given that punching people is sometimes better than the alternatives, I think we need to be able to have conversations about when "sometimes" is. And indeed we can and do have those conversations. Many words have been spilled on the subject.
 
 But I think it's probably a good idea to try to avoid having those conversations *while actually punching people*.
 
@@ -16,7 +16,7 @@ Here's what I mean. Alice thinks that punching Bob is better than the alternativ
 
 So she writes an essay in which:
 
-1. She proposes a theory for when punching people is better than the alternative. (She readily admits that the theory is not complete, nor is it intended to be, but it covers part of the space.)
+1. She proposes a theory for when punching people is better than the alternatives. (She readily admits that the theory is not complete, nor is it intended to be, but it covers part of the space.)
 
 2. She describes the situation with Bob, and how the theory justifies punching him.
 
@@ -50,7 +50,7 @@ However, I don't think this is always unambiguously a good thing. There are some
 
 * It's slower. Sometimes that's probably neutral-to-good. But often, if punching someone is better than the alternatives, it's because they're currently hurting other people. If punching them will make them stop, then ideally we want to punch quickly.
 
-I'm not sure how all these factors really shake out, and I think it'll vary from case to case. So I think my advice is: if you're thinking of writing one of those all-in-one posts, consider splitting it up. It won't necessarily always be the right thing to do, but I think it's an option to bear in mind. Here are some questions to ask that might sway you in one direction or the other:
+I'm not sure how all these factors really shake out, and I expect it'll vary from case to case. So I don't want to offer a blanket suggestion. I think my advice is: if you're thinking of writing one of those all-in-one posts, consider splitting it up. It won't always be the right thing to do, but I think it's an option to bear in mind. Here are some questions to ask that might sway you in one direction or the other:
 
 * How hard are you punching? (And not just you personally, but your audience. If your audience is large and vicious, then no matter how gently you yourself punch someone, they're going to experience a lot of pummelling.) If someone googles Bob, will they find your punches? At least once, Scott Alexander used a pseudonym for a person he was punching; this seems like a useful tool.
 
@@ -58,4 +58,4 @@ I'm not sure how all these factors really shake out, and I think it'll vary from
 
 * Does the theory apply more generally than it needs to for this specific case? Thinking of similar cases might help, especially real ones but also fictional. (If you can think of lots of real cases, the value of having a reference post for the theory goes up, and its value as a reference post goes up if it has less baggage.)
 
-(As an aside: I want to note that a post which looks like an all-in-one might not be. It may be recapping previously established theory, for example because the author considers it almost-but-not-quite common knowledge. Since common knowledge is rarely absolutely common, that's probably often a good idea.)
+(As an aside: I want to note that a post which looks like an all-in-one might not be. It may be recapping previously established theory. Common knowledge is rarely absolutely common, so I suspect this will usually be a good idea.)
