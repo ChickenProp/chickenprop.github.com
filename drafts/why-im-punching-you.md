@@ -57,3 +57,5 @@ I'm not sure how all these factors really shake out, and I think it'll vary from
 * If the punching is delayed, does anything bad happen?
 
 * Does the theory apply more generally than it needs to for this specific case? Thinking of similar cases might help, especially real ones but also fictional. (If you can think of lots of real cases, the value of having a reference post for the theory goes up, and its value as a reference post goes up if it has less baggage.)
+
+(As an aside: I want to note that a post which looks like an all-in-one might not be. It may be recapping previously established theory, for example because the author considers it almost-but-not-quite common knowledge. Since common knowledge is rarely absolutely common, that's probably often a good idea.)
