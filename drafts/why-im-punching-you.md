@@ -40,11 +40,11 @@ However, I don't think this is always unambiguously a good thing. There are some
 
 * The initial post is likely to be drier, less compelling, without concrete examples.[^examples] And perhaps harder to evaluate, especially for less abstract thinkers.
 
-[examples]: See for example, this post. (Though the reason I don't have examples here is different. My motivating example hasn't been written yet, and I didn't go looking for others. Still, I expect the effects of not having examples are similar.)
+[^examples]: See for example, this post. (Though the reason I don't have examples here is different. My motivating example hasn't been written yet, and I didn't go looking for others. Still, I expect the effects of not having examples are similar.)
 
 * You can't really remove the initial post from its context of "Alice thinks we should punch Bob". You can hide that context, but that doesn't remove its influence. For example, if there are cases similar to Bob's that would be covered by the same theory, Alice's post is likely to gloss over the parts of the theory that relate to them-but-not-Bob, and to focus too much on the parts that relate to Bob-but-not-them.
 
-* Suppose the theory is sound, but the facts of the case don't support punching Bob. Splitting the posts adds more opportunity for sleight-of-hand, such as using a term to mean different things in different places. This would be harder to notice if each post is internally consistent.
+* Suppose the theory is sound, but the facts of the case don't support punching Bob. Splitting the posts adds more opportunity for sleight-of-hand, such as using a term to mean different things in different places. This would be harder to notice in a split post than a monolithic post, if each part is internally consistent.
 
 * It may be harder to write this way, which may cause some better-than-the-alternatives punching to go unperformed.
 
