@@ -41,7 +41,9 @@ However, I don't think this is always unambiguously a good thing. There are some
 
 * The initial post is likely to be drier, less compelling, without concrete examples.[^examples] And perhaps harder to evaluate, especially for less abstract thinkers.
 
-[^examples]: See for example, this post. (Though the reason I don't have examples here is different. My motivating example hasn't been written yet, and I didn't go looking for others. Still, I expect the effects of not having examples are similar.)
+[^examples]: See for example, this post. (Though the reason I don't have examples here is different. My motivating example hasn't been written yet[^motivating], and I didn't go looking for others. Still, I expect the effects of not having examples are similar.)
+
+[^motivating]: And there's a decent chance it won't ever, given my track record.
 
 * You can't really remove the initial post from its context of "Alice thinks we should punch Bob". You can hide that context, but that doesn't remove its influence. For example, if there are cases similar to Bob's that would be covered by the same theory, Alice's post is likely to gloss over the parts of the theory that relate to them-but-not-Bob, and to focus too much on the parts that relate to Bob-but-not-them.
 
