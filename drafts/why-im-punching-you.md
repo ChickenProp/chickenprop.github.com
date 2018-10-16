@@ -1,5 +1,6 @@
 ---
 title: "\"Now here's why I'm punching you...\""
+lw-xpost: true
 layout: draft
 ---
 Related: [be nice, at least until you can coordinate meanness](http://slatestarcodex.com/2016/05/02/be-nice-at-least-until-you-can-coordinate-meanness/).
@@ -52,7 +53,9 @@ However, I don't think this is always unambiguously a good thing. There are some
 
 I'm not sure how all these factors really shake out, and I expect it'll vary from case to case. So I don't want to offer a blanket suggestion. I think my advice is: if you're thinking of writing one of those all-in-one posts, consider splitting it up. It won't always be the right thing to do, but I think it's an option to bear in mind. Here are some questions to ask that might sway you in one direction or the other:
 
-* How hard are you punching? (And not just you personally, but your audience. If your audience is large and vicious, then no matter how gently you yourself punch someone, they're going to experience a lot of pummelling.) If someone googles Bob, will they find your punches? At least once, Scott Alexander used a pseudonym for a person he was punching; this seems like a useful tool.
+* How hard are you punching?[^audience] If someone googles Bob, will they find your punches? (At least once, Scott Alexander used a pseudonym for a person he was punching; this seems like a useful tool.)
+
+[^audience]: And not just you personally, but your audience. If your audience is large and vicious, then no matter how gently you yourself punch someone, they're going to experience a lot of pummelling.
 
 * If the punching is delayed, does anything bad happen?
 
