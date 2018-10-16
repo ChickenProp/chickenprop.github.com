@@ -1,7 +1,7 @@
 ---
 title: "\"Now here's why I'm punching you...\""
 lw-xpost: true
-layout: draft
+layout: post
 ---
 Related: [be nice, at least until you can coordinate meanness](http://slatestarcodex.com/2016/05/02/be-nice-at-least-until-you-can-coordinate-meanness/).
 
