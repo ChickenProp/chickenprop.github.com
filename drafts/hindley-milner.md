@@ -10,15 +10,13 @@ I'm also trying to tie in some quasi-philosophy that surely isn't original to me
 
 ### Background
 
-When people write software, sometimes it doesn't do exactly what we want. One way to find out is to try running it and see, but that's not ideal because any complicated program will have way too many possible inputs to test. So it would be nice if we could mathematically prove whether our software does what we want, without actually running it. Can we do that?
+When people write software, sometimes it doesn't do exactly what we want. One way to find out is to try running it and see, but that's not ideal because any complicated program will have way too many possible inputs to test. (Especially when you consider that inputs include things like "amount of free space on disk" and "time taken for a web server to respond to a request".) So it would be nice if we could mathematically prove whether our software does what we want, without actually running it. Can we do that?
 
-That's not a very well-defined question, but we can ask more precise versions of it. Here's a well-known one: we might want to prove that our software will always terminate. No matter what input it sees, eventually it will always return a result. Can we prove whether our software does that?
+That's not a very well-defined question, but we can ask more precise versions of it. Here's a well-known one: given some possible input to our software, we might want to prove that our software will eventually stop running. Can we prove that?
 
-That question is known as the halting problem[^halting], and the simple answer is no, we can't. But the full answer is more complicated.
+That question is known as the halting problem[^halting], and the simple answer is no we can't, not in general. The technical terminology is that the halting problem is *undecideable*. But the full answer is more complicated.
 
-[^halting]: Technically the halting problem only requires you to answer for a specific input, but my version is equivalent. If you can solve either one, you can solve the other.
-
-To solve the halting problem, we want a program that, when given another program as input, satisfies three different conditions:
+To solve the halting problem, we want a program that, when shown another program and some input to be fed to that program, satisfies three different conditions:
 
 1. It will always return an answer.
 2. The answer will always be either "yes, this always terminates" or "no, sometimes this doesn't terminate".
@@ -26,15 +24,17 @@ To solve the halting problem, we want a program that, when given another program
 
 And that's not possible. But we can compromise on any of the three. We can make a program that sometimes doesn't return an answer, or one that sometimes gets the answer wrong. But most interestingly, we can make a program that sometimes says "I don't know".
 
-And when you allow that answer, you can create a *language* on which the halting problem is tractable. You can write a program that will tell you truthfully whether any program written *in that language* will terminate; and for any other program, will say "I don't know". (Perhaps expressed in words like "syntax error on line 1".)
+And when you allow that answer, you can create a *language* on which the halting problem is decideable. You can write a program that will tell you truthfully whether any program written *in that language* will terminate; and for any other program, will say "I don't know". (Perhaps expressed in words like "syntax error on line 1".)
 
-Now, the halting problem is tricky. It turns out that if you create a language like that, there are a lot of interesting things that programs written in that language just won't be able to do. But there are also lots of interesting things that they can do. To give three examples of such languages[^nonterminating]:
+Now, the halting problem is tricky. It turns out that if you create a language like that, there are a lot of interesting things that programs written in that language just won't be able to do; the language will necessarily be [Turing incomplete](https://en.wikipedia.org/wiki/Turing_completeness).[^incomplete] But there are also lots of interesting things that they can do. To give three examples of such languages[^nonterminating]:
+
+[^incomplete]: If the halting problem is decideable on a language, the language is necessarily Turing incomplete. I don't know whether the reverse is true: are there Turing incomplete languages on which the halting problem is still undecideable? I'm mostly going to assume not. At any rate, I don't think I'm going to discuss any such languages.
 
 [^nonterminating]: To nitpick myself: these aren't just languages for which you can prove termination, they're languages which never terminate, at least not for finite inputs. I don't offhand know any languages which are Turing incomplete but have the ability to loop forever, though such a thing can exist.
 
 * Regular expressions are really useful for certain operations on strings, but that's about all they're good for.
 * SQL is really useful for working with databases. According to [some people on stack overflow](https://stackoverflow.com/questions/900055/is-sql-or-even-tsql-turing-complete), the ANSI SQL-92 standard was Turing incomplete and the ANSI SQL-99 standard is Turing complete. (No mention of the SQL-96 standard that came between these, but reading between the lines, probably Turing incomplete.) If I understand correctly, the feature required to make SQL-99 Turing complete[^recursive-cte] is one I've literally never used; so for my purposes, it may as well be Turing incomplete.
-* Coq is used for proving math theorems. It's an interesting one because when you write your program, you have to also provide a proof that your program terminates. (I think this is slightly false, but again, good enough for the point I'm making.)
+* Coq is used for proving math theorems. It's an interesting one because when you write your program, you have to also provide a proof that your program terminates. (I think this is [slightly false](https://news.ycombinator.com/item?id=9038315), but again, good enough for the point I'm making.)
 
 [^recursive-cte]: Specifically, it looks to me like SQL-99 without recursive common table expressions is Turing incomplete. I've only ever used nonrecursive CTEs.
 
@@ -46,7 +46,7 @@ I'm trying to illustrate here something that seems to me important, which is tha
 
 [^zfpa]: I think this is related to the way that ZF set theory can encode Peano arithmetic. Thus, ZF is more expressive than PA. But because ZF allows you to construct objects that PA doesn't, there are more things you can say about "all objects in PA" than about "all objects in ZF". So PA is more legible than ZF. I don't understand the [Curry-Howard correspondence](https://en.wikipedia.org/wiki/Curry%E2%80%93Howard_correspondence), but I think that's related too.
 
-I haven't defined these very well, but hopefully some examples will help. I will also clarify that both of them are highly dimensional; and that "raw computational power" is one of the things that expressiveness can point at, but not the only thing; and "human readability" is not really one of the things that legibility points at.
+I haven't defined these very well, but hopefully some examples will help. I will also clarify that both of them are highly dimensional; and that "raw computational power" is one of the things that expressiveness can point at, but not the only thing; and "human readability" is not really one of the things that legibility points at, but many things that increase legibility will also increase human readability.
 
 * [Perl-compatible regular expressions](https://en.wikipedia.org/wiki/Perl_Compatible_Regular_Expressions) can classify sets of strings that normal regular expressions can't. But they're harder to make time and space guarantees about. And it's possible to prove whether two regular expressions are equivalent, but that's not possible in general for PCREs (proof: [PCREs can encode CFGs](https://nikic.github.io/2012/06/15/The-true-power-of-regular-expressions.html); [CFGs can't be proved equivalent](https://math.stackexchange.com/questions/231187/an-efficient-way-to-determine-if-two-context-free-grammars-are-equivalent)).
 
