@@ -6,7 +6,9 @@ A few months ago I gave a talk at work about Hindley-Milner type inference. When
 
 I call this a reckless introduction, because my main source is [wikipedia](https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system). A bunch of people on the internet have collectively attempted to synthesise a technical subject. I've read their synthesis, and now I'm trying to re-synthesise it, without particularly putting in the effort to check my own understanding. I'm not going to argue that this is a good idea. Let's just roll with it.
 
-I'm also trying to tie in some quasi-philosophy that surely isn't original to me but I don't know if or where I've encountered it before.
+I'm also trying to tie in some quasi-philosophy that surely isn't original to me but I don't know if or where I've encountered it before.[^constraints-liberties]
+
+[^constraints-liberties]: While writing this essay I came across the talk [Constraints Liberate, Liberties Constrain](https://www.youtube.com/watch?v=GqmsQeSzMdwz). From the title and the way people reference it, it sounds like it's on the same subject. But I haven't watched it, because it's in the form of a 50 minute video.
 
 ### Background
 
@@ -14,7 +16,7 @@ When people write software, sometimes it doesn't do exactly what we want. One wa
 
 That's not a very well-defined question, but we can ask more precise versions of it. Here's a well-known one: given some possible input to our software, we might want to prove that our software will eventually stop running. Can we prove that?
 
-That question is known as the halting problem[^halting], and the simple answer is no we can't, not in general. The technical terminology is that the halting problem is *undecideable*. But the full answer is more complicated.
+That question is known as the halting problem, and the simple answer is that we can't, not in general; the halting problem is *undecideable*. But the full answer is more complicated.
 
 To solve the halting problem, we want a program that, when shown another program and some input to be fed to that program, satisfies three different conditions:
 
@@ -28,7 +30,7 @@ And when you allow that answer, you can create a *language* on which the halting
 
 Now, the halting problem is tricky. It turns out that if you create a language like that, there are a lot of interesting things that programs written in that language just won't be able to do; the language will necessarily be [Turing incomplete](https://en.wikipedia.org/wiki/Turing_completeness).[^incomplete] But there are also lots of interesting things that they can do. To give three examples of such languages[^nonterminating]:
 
-[^incomplete]: If the halting problem is decideable on a language, the language is necessarily Turing incomplete. I don't know whether the reverse is true: are there Turing incomplete languages on which the halting problem is still undecideable? I'm mostly going to assume not. At any rate, I don't think I'm going to discuss any such languages.
+[^incomplete]: If the halting problem is decideable on a language, the language is Turing incomplete. I don't know whether the reverse is true: are there Turing incomplete languages on which the halting problem is still undecideable? I'm mostly going to assume not. At any rate, I don't think I'm going to discuss any such languages.
 
 [^nonterminating]: To nitpick myself: these aren't just languages for which you can prove termination, they're languages which never terminate, at least not for finite inputs. I don't offhand know any languages which are Turing incomplete but have the ability to loop forever, though such a thing can exist.
 
@@ -38,7 +40,7 @@ Now, the halting problem is tricky. It turns out that if you create a language l
 
 [^recursive-cte]: Specifically, it looks to me like SQL-99 without recursive common table expressions is Turing incomplete. I've only ever used nonrecursive CTEs.
 
-So although these languages can't do much, they can still do enough to be useful. And in the domains where they're useful, being able to prove non-termination is a useful property of the language. If you had to write a SQL query in C, it would be all too easy to write some C code that would accidentally loop forever.
+So although these languages can't do everything, they can still be incredibly useful in their domains. More useful than a more general purpose language might be. One reason for this is that being able to prove non-termination is a useful property of the language. If you had to write a SQL query in C, it would be all too easy to write some C code that would accidentally loop forever.
 
 I'm trying to illustrate here something that seems to me important, which is that there's a tradeoff between what I'll call expressiveness and legibility. A programming language is *expressive* if you can easily write many interesting programs in it[^expressive]; it's *legible* if you can easily say many interesting things about the programs you've written in it. And I claim that the most expressive programming languages won't be the most legible, and vice-versa; though there will certainly be [languages](https://en.wikipedia.org/wiki/Malbolge) which are neither expressive nor legible. This tradeoff seems fundamental to me, and I expect that some approximation of it has been proven as a theorem.[^zfpa]
 
