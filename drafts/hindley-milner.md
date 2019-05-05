@@ -1,7 +1,10 @@
 ---
 title: A reckless introduction to Hindley-Milner type inference
 layout: draft
+lw_xpost: true
 ---
+*(I've been editing this post on and off for almost a year. I'm not really happy with it, but I suspect I never will be.)*
+
 Several months ago I gave a talk at work about Hindley-Milner type inference. When I agreed to give the talk I didn't know much about the subject, so I learned about it. And now I'm writing about it, based on the contents of my talk but more fleshed out and hopefully better explained.
 
 I call this a reckless introduction, because my main source is [wikipedia](https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system). A bunch of people on the internet have collectively attempted to synthesise a technical subject. I've read their synthesis, and now I'm trying to re-synthesise it, without particularly putting in the effort to check my own understanding. I'm not going to argue that this is a good idea. Let's just roll with it.
