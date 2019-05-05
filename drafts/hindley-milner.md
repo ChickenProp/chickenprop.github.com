@@ -56,7 +56,7 @@ I haven't defined these very well, but hopefully some examples will help. I will
 
   The assumptions in question are false (partly because `unsafePerformIO` exists), but I've been able to get away with pretending they're true (partly because `unsafePerformIO` is punishable with excommunication).
 
-* Custom operators don't gain or cost much in terms of legibility and expressivity, since they're equivalent to function calls. They simply make code more or less readable. But operator overloading, at least when combined with dynamic typing, gains expressivity at the cost of legibility (you no longer know that `a + b` will do anything remotely like an addition).
+* Custom operators (at least as implemented in Haskell and Elm) are equivalent to named functions, and don't gain or cost much in terms of legibility and expressivity. They simply make code more or less readable. But operator overloading, at least when combined with dynamic typing, gains expressivity at the cost of legibility (you no longer know that `a + b` will do anything remotely like an addition).
 
 * Macros make it easier to do things like create DSLs, reduce boilerplate, and set compile-time config options. But they mean that a function call might not look like one, or vice-versa; expressions might get evaluated many times, or not at all; and the code might perform differently depending on the phase of the moon when it was compiled.
 
@@ -64,9 +64,11 @@ I haven't defined these very well, but hopefully some examples will help. I will
 
 So we've got this tradeoff, and in our programming language design we try to navigate it. We try to find kinds of legibility that can be bought for little cost in expressiveness. Or more precisely, we try to find kinds of legibility *that we care about*, and that can be bought for little cost in *kinds of expressiveness that we care about*.
 
-And Hindley-Milner type systems are a tradeoff that's proved fairly successful, both in direct use and as inspiration. At my company[^my-company], we use [Elm](https://en.wikipedia.org/wiki/Elm_\(programming_language\)), which runs on an approximately HM type system. (I don't think it's pure HM, due to extensible record types.) We also use [Haskell](https://en.wikipedia.org/wiki/Haskell_\(programming_language\))[^ghc], which runs on a type system that extends HM in many directions. Haskell's system is more expressive and less legible, but still successful. (I'll mostly be using Elm for examples in this post, and not extensible records.) ML and OCaml are other notable languages based on HM, though I haven't used either.
+And Hindley-Milner type systems are a tradeoff that's proved fairly successful, both in direct use and as inspiration. At my company[^my-company], we use [Elm](https://en.wikipedia.org/wiki/Elm_\(programming_language\))[^elm18], which runs on an approximately HM type system. (I don't think it's pure HM, due to extensible record types.) We also use [Haskell](https://en.wikipedia.org/wiki/Haskell_\(programming_language\))[^ghc], which runs on a type system that extends HM in many directions. Haskell's system is more expressive and less legible, but still successful. (I'll mostly be using Elm for examples in this post, and not extensible records.) ML and OCaml are other notable languages based on HM, though I haven't used either.
 
 [^my-company]: "My company" is a phrase which sometimes means "the company I own or run" and sometimes "the company I work for". Here it means [the latter](https://proda.ai). I don't know an unambigous way to phrase that which I don't find slightly awkward, so instead I'm using a super-awkward footnote. But, y'know. Ironically, or something.
+
+[^elm18]: We use Elm 0.18. 0.19 is a fairly significant version change, but I think not different enough to be relevant for this post.
 
 [^ghc]: Specifically [GHC](https://en.wikipedia.org/wiki/Glasgow_Haskell_Compiler), which offers many extensions over Haskell proper. Whenever I refer to Haskell, I'm really talking about the language that GHC implements.
 
@@ -76,7 +78,7 @@ More precisely, what HM offers isn't type *checking* but the more general type *
 
 What this means is that there's no need to supply type annotations. And indeed, in Elm you can get away without them, except I think for extensible records. In Haskell you sometimes can't, because Haskell loses some of the legibility that HM offers.
 
-(We typically do supply type annotations, but that's because they're useful. Partly as documentation for humans, partly to help pinpoint errors in typechecking.)
+(We typically do supply type annotations, but that's because they're useful. Partly as documentation for humans, partly to help pinpoint errors when our programs fail to typecheck.)
 
 And so in an HM system you get no runtime type errors. And although not all runtime errors are type errors, in many cases they could be. For example, an array out-of-bounds exception isn't a type error. But when designing a language, you can decide that array out-of-bounds exceptions won't exist, any array lookup will return either a value from the array or `null`. If type errors are possible, you've just eliminated one source of errors by pushing them somewhere else, and possibly somewhere harder to debug. But in HM, you've eliminated one source of errors by pushing them somewhere more visible, where they can be ruthlessly executed.
 
@@ -94,13 +96,17 @@ For example, suppose you want to clamp a number to between -1 and +1. In Python,
 def clamp(x): sorted([-1, x, 1])[1]
 ```
 
-and as long as `sorted` always returns a list of the same length it started with, that works fine. But it only works because the Python interpreter allows array indexing to crash if it goes out of range. For comparison, the Elm compiler attempts to offer "no runtime errors", and so Elm has no equavalent operator. If you tried to write the same function in the same way in Elm, the result in the compiler's eyes would not be a number but a `Maybe` number - AKA "either a number or `Nothing`". (`Nothing` is roughly equivalent to `None` in python or `null` in many other languages, but you have to explicitly flag when it's allowed.) When you actually run the program, you will always get a number and never `Nothing`. But the compiler can't prove that.
+and as long as `sorted` always returns a list of the same length it started with, that works fine[^clamp]. But it only works because the Python interpreter allows you to be reckless with array indexing. Elm doesn't let you be reckless, and so Elm has no equivalent way to perform array lookup. If you tried to write the same function in the same way in Elm, the result in the compiler's eyes would not be a number but a `Maybe` number - AKA "either a number or `Nothing`". (`Nothing` is roughly equivalent to `None` in python or `null` in many other languages, but you have to explicitly flag when it's allowed.) When you actually run this code, you will always get a number and never `Nothing`. But the compiler can't prove that.
 
-(Again, I stress that you will never get `Nothing` *as long as* your sort function always returns a list of the same length it started with. That's something you can prove for yourself, but it's not something the compiler can prove. It's not even the sort of thing the compiler knows can be proven.)
+[^clamp]: At any rate, it works fine when you pass it a number. If you pass it something else, it might do anything.
 
-And then the Elm compiler would force you to account for the possibility of `Nothing`, even though there's no way that possibility could occur at runtime. One option is to pick an arbitrary result that will never be exposed - until the code goes through several layers of changes, an assumption that used to be true is now violated, and suddenly that arbitrary result is wreaking havoc elsewhere. Or in Haskell, your program is crashing at runtime.
+(Again, I stress that you will never get `Nothing` *as long as* your sort function always returns a list of the same length it started with. That's something you can prove for yourself, but it's not something the Elm compiler can prove. It's not even the sort of thing the Elm compiler knows can be proven. And so in turn, it can't prove that you'll never get a `Nothing` here.)
 
-Which is no worse than you get in Python, to be fair. But we were hoping for better. In this case you can just write your function to avoid indexing into a list, which is fine. The point isn't that you can't do the thing. The point is that (a), even if the thing is safe, the compiler might not know that; (b), if you decide it's safe anyway and find some way to trick the compiler, the compiler no longer protects you; and (c), if you want to do it in a way the compiler knows is safe, you might need to put in some extra work.
+And then the Elm compiler would force you to account for the possibility of `Nothing`, even though there's no way that possibility could occur at runtime. One option is to pick an arbitrary result that will never be exposed. That works fine until the code goes through several layers of changes, an assumption that used to be true is now violated, and suddenly that arbitrary result is wreaking havoc elsewhere. Or in Haskell, your program is crashing at runtime.
+
+To be clear, that's not significantly worse than what we get in Python, where the code can also go through several layers of changes that result in it crashing at runtime. But we were hoping for better.
+
+And in this case "better" is easy enough, you can just write your function to avoid indexing into a list, and then it can return a number with no need for trickery. The point isn't that you can't do the thing. The point is that (a), even if the thing is safe, the compiler might not know that; (b), if you decide it's safe anyway and find some way to trick the compiler, the compiler no longer protects you; and (c), if you want to do it in a way the compiler knows is safe, you might need to put in some extra work.
 
 For another example, HM type systems can't implement heterogenous lists. So this is really easy in python:
 
@@ -131,17 +137,23 @@ For a third example: Haskell is known for its monads. But Elm has no equivalent,
 
 ### Hindley-Milner type systems
 
-So I've talked about the tradeoffs that HM type systems offer, but not what HM type systems actually are. So here is where I get particularly reckless. Also, this part is likely to make more sense if you're familiar with at least on HM-based language.
+I've talked about the tradeoffs that HM type systems offer, but not what HM type systems actually are. So here is where I get particularly reckless.
 
-You need types, you need a language, and you need a way to relate the two.
+This bit is more formal than the rest. It's based on the treatment at wikipedia, but I've tried to simplify the notation. I'm aiming for something that I would have found fairly readable several months ago.
+
+Also, this part is likely to make more sense if you're familiar with at least one HM-based language. That's not a design feature, I just don't trust myself to bridge that inferential gap.
+
+For an HM system, you need a language to run type inference on, and you need types to run type inference with, and you need some way to combine the two. You could use the language with no type inference, if you didn't mind crashes or weird behaviour at runtime, when you made a mistake with typing. (Haskell [allows this](https://ghc.haskell.org/trac/ghc/wiki/DeferErrorsToRuntime) with a compiler option.[^defer-type-errors]) And you could run type inference without caring about the semantics of the language, treating it as essentially a SuDoku, an interesting puzzle but meaningless. (Haskell [supports this](https://stackoverflow.com/questions/12373722/make-ghc-only-type-check), too.) But by combining them, the semantics of the language are constrained by the type system, and runtime type errors are eliminated.
+
+[^defer-type-errors]: Well, sort of. It still performs type inference, it just allows it to fail. I'm not sure if "no type inference at all" would work for Haskell; but I do think it would work for a pure HM system, if you count things like "`3` is of type `Int`" as a raw fact, non-inferred.
 
 #### Types
 
 Types come in a conceptual hierarchy which starts with **type constants**. That's things like, in Elm, `Int`, `Float`, `Bool`, `String`, `Date`, `()`. It also includes type variables, which in Elm are notated with initial lower-case, like `a` and `msg`. (Though the type variables `number`, `comparable` and `appendable` are special cases that I won't cover here.)
 
-Next in the type hierarchy is **applied types**, where a "type function" is given type constants and/or other applied types as arguments. These are things like `List Int`, `Maybe (List Float)`, `Result () Date`, and `a -> String`. (That last might also be written `(->) a String`, since `(->)` is the type function. Also, `(->)` is the only type that HM specifically requires to exist.) Notably, an applied type *must* have a specific named root; you can't have `m Int`, which you would need for generalised monads.
+Next in the type hierarchy is **applied types**. Here a "type function" is applied to arguments, which are type constants and/or other applied types. These are things like `List Int`, `Maybe (List Float)`, `Result () Date`, and `a -> String`. (In that last one, the type function is the arrow; Haskell would allow you to write it `(->) a String`. Also, `(->)` is the only type that HM specifically requires to exist.) Notably, an applied type must have a specific named type function as its root; you can't have `m Int`, which you would need for generalised monads.
 
-Type constants and applied types are **monotypes**. You get a **polytype** by optionally sticking one or more "∀"s in front of a monotype. So for example `a -> Int` is a monotype, but `∀a. a -> Int` is a polytype. So is `∀a. ∀b. a -> Int -> b`, which I'll write equivalently as `∀a b. a -> Int -> b`. `∀b. a -> Int` is also a polytype; since the quantified variable doesn't show up, it's equivalent to the monotype `a -> Int`, so for simplicity we might as well decide that monotypes count as polytypes.
+Type constants and applied types are **monotypes**. You get a **polytype** by optionally sticking one or more "∀"s in front of a monotype. So for example `a -> Int` is a monotype, but `∀a. a -> Int` is a polytype. So is `∀a. ∀b. a -> Int -> b`, which is written equivalently as `∀a b. a -> Int -> b`. `∀b. a -> Int` is also a polytype; since the quantified variable doesn't show up, it's equivalent to the monotype `a -> Int`. We can do something like that to any monotype, so for simplicity we might as well decide that monotypes count as a special case of polytypes, not as a distinct set.
 
 Type signatures in Elm typically have an implied "∀" over whichever variables it makes sense to quantify. So the type of `List.map` would be written
 
