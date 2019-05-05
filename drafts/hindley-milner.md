@@ -2,13 +2,13 @@
 title: A reckless introduction to Hindley-Milner type inference
 layout: draft
 ---
-A few months ago I gave a talk at work about Hindley-Milner type inference. When I agreed to give the talk I didn't know much about the subject, so I learned about it. And now I'm writing about it, based on the contents of my talk but more fleshed out and hopefully better explained.
+Several months ago I gave a talk at work about Hindley-Milner type inference. When I agreed to give the talk I didn't know much about the subject, so I learned about it. And now I'm writing about it, based on the contents of my talk but more fleshed out and hopefully better explained.
 
 I call this a reckless introduction, because my main source is [wikipedia](https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system). A bunch of people on the internet have collectively attempted to synthesise a technical subject. I've read their synthesis, and now I'm trying to re-synthesise it, without particularly putting in the effort to check my own understanding. I'm not going to argue that this is a good idea. Let's just roll with it.
 
 I'm also trying to tie in some quasi-philosophy that surely isn't original to me but I don't know if or where I've encountered it before.[^constraints-liberties]
 
-[^constraints-liberties]: While writing this essay I came across the talk [Constraints Liberate, Liberties Constrain](https://www.youtube.com/watch?v=GqmsQeSzMdwz). From the title and the way people reference it, it sounds like it's on the same subject. But I haven't watched it, because it's in the form of a 50 minute video.
+[^constraints-liberties]: While writing this essay I came across the talk [Constraints Liberate, Liberties Constrain](https://www.youtube.com/watch?v=GqmsQeSzMdwz). From the title and the context I encountered it, it sounds like it's on the same subject. But I haven't watched it, because it's in the form of a 50 minute video.
 
 ### Background
 
@@ -24,7 +24,7 @@ To solve the halting problem, we want a program that, when shown another program
 2. The answer will always be either "yes, this always terminates" or "no, sometimes this doesn't terminate".
 3. The answer is always correct.
 
-And that's not possible. But we can compromise on any of the three. We can make a program that sometimes doesn't return an answer, or one that sometimes gets the answer wrong. But most interestingly, we can make a program that sometimes says "I don't know".
+And that's not possible. But we can compromise on any of the three. We can make a program that sometimes doesn't return an answer, or one that sometimes gets the answer wrong. But perhaps most interestingly, we can make a program that sometimes says "I don't know".
 
 And when you allow that answer, you can create a *language* on which the halting problem is decideable. You can write a program that will tell you truthfully whether any program written *in that language* will terminate; and for any other program, will say "I don't know". (Perhaps expressed in words like "syntax error on line 1".)
 
@@ -139,7 +139,7 @@ For a third example: Haskell is known for its monads. But Elm has no equivalent,
 
 I've talked about the tradeoffs that HM type systems offer, but not what HM type systems actually are. So here is where I get particularly reckless.
 
-This bit is more formal than the rest. It's based on the treatment at wikipedia, but I've tried to simplify the notation. I'm aiming for something that I would have found fairly readable several months ago.
+This bit is more formal than the rest. It's based on the treatment at wikipedia, but I've tried to simplify the notation. I'm aiming for something that I would have found fairly readable several months ago, but I no longer have access to that version of me.
 
 Also, this part is likely to make more sense if you're familiar with at least one HM-based language. That's not a design feature, I just don't trust myself to bridge that inferential gap.
 
@@ -155,7 +155,7 @@ Next in the type hierarchy is **applied types**. Here a "type function" is appli
 
 Type constants and applied types are **monotypes**. You get a **polytype** by optionally sticking one or more "∀"s in front of a monotype. So for example `a -> Int` is a monotype, but `∀a. a -> Int` is a polytype. So is `∀a. ∀b. a -> Int -> b`, which is written equivalently as `∀a b. a -> Int -> b`. `∀b. a -> Int` is also a polytype; since the quantified variable doesn't show up, it's equivalent to the monotype `a -> Int`. We can do something like that to any monotype, so for simplicity we might as well decide that monotypes count as a special case of polytypes, not as a distinct set.
 
-Type signatures in Elm typically have an implied "∀" over whichever variables it makes sense to quantify. So the type of `List.map` would be written
+Type signatures in Elm typically have an implied "∀" over whichever variables it makes sense to quantify. (There's no syntax for explicitly writing the "∀".) So the type of `List.map` would be written
 
 ```elm
 map : (a -> b) -> List a -> List b
@@ -196,7 +196,7 @@ A type *judgment*, as opposed to a declaration, provides a type that an expressi
 
 And type specialisation, denoted $⊑$, is the process of replacing quantified variables with less-quantified ones. So for example the type `∀a b. a -> b -> a` might be specialized to `∀a. a -> String -> a`, or to `∀b. Int -> b -> Int`; and from either of those, it could be further specialised to `Int -> String -> Int`. Of course `String -> Int -> String` and `List Float -> (Float -> String) -> List Float` are valid specialisations too.
 
-Thus: we have the type declaration `[] : ∀a. List a`, and we have `∀a. List a ⊑ List Int`, and so we can form the type judgment `[] ~ List Int`. We also have `∀a. List a ⊑ List String`, and so `[] ~ List String`. And `[] ~ List (List (Maybe Bool))`, and so on.
+Thus: we have the type declaration `[] : ∀a. List a`, and we have `(∀a. List a) ⊑ List Int`, and so we can form the type judgment `[] ~ List Int`. We also have `(∀a. List a) ⊑ List String`, and so `[] ~ List String`. And `[] ~ List (List (Maybe Bool))`, and so on.
 
 ##### Function calls
 
@@ -206,9 +206,9 @@ Function calls are things like `not True`, `(+ 1)`, `List.Map Just`. And the rul
 
 Or: if $f$ can be judged to have a function type $μ → μ'$, and $v$ can be judged to have type $μ$, then the function call $fv$ can be judged to have type $μ'$.
 
-Thus: we can infer the type judgment `toString ~ Int -> String`, and we can infer `3 ~ Int`, and so we can infer `toString 3 ~ String`.
+Thus: we can infer the type judgment `toString ~ (Int -> String)`, and we can infer `3 ~ Int`, and so we can infer `toString 3 ~ String`.
 
-Also, we can infer `List.map ~ (Int -> Maybe Int) -> (List Int -> List (Maybe Int))`, and we can infer `Just ~ Int -> Maybe Int`. So we can infer `List.map Just ~ List Int -> List (Maybe Int)`
+Also, we can infer `List.map ~ ((Int -> Maybe Int) -> (List Int -> List (Maybe Int)))`, and we can infer `Just ~ (Int -> Maybe Int)`. So we can infer `List.map Just ~ (List Int -> List (Maybe Int))`
 
 ##### Lambda expressions
 
@@ -216,11 +216,11 @@ Lambda expressions are things like `\x -> Just x`, and in Elm they're used impli
 
     $$ \frac{x : μ ⇒ e \sim μ'}{λx.e \sim μ → μ'}. $$
 
-Or: suppose that the type declaration $x : μ$ would allow us to infer the judgment $e \sim μ'$. In that case, we could judge that $λx.e \sim μ → μ'$.
+Or: suppose that the type declaration $x : μ$ would allow us to infer the judgment $e \sim μ'$. In that case, we could judge that $λx.e \sim (μ → μ)'$.
 
-Typically $e$ would be some expression mentioning the variable $x$, but it's no problem if not. In that case, if you can get $e \sim μ'$ at all, you can get it assuming any $x : μ$, and so you have $λx.e \sim Int → μ'$ and $λx.e \sim String → μ'$ and $λx.e \sim Result String (List (Maybe Float)) → μ'$ and so on.
+Typically $e$ would be some expression mentioning the variable $x$, but it's no problem if not. In that case, if you can get $e \sim μ'$ at all, you can get it assuming any $x : μ$, and so you have $λx.e \sim (\mathtt{Int} → μ')$ and $λx.e \sim (\mathtt{String} → μ')$ and $λx.e \sim (\mathtt{Result String (List (Maybe Float))} → μ')$ and so on.
 
-Thus: given the declaration `x : Int`, we can infer the judgment `[x] ~ List Int`. And so we can infer the judgment `(\x -> [x]) ~ Int -> List Int`.
+Thus: given the declaration `x : Int`, we can infer the judgment `[x] ~ List Int`. And so we can infer the judgment `(\x -> [x]) ~ (Int -> List Int)`.
 
 ##### Let expressions
 
@@ -240,16 +240,19 @@ If you tried to rewrite this as a lambda, you would get
 
 But type inference fails here, because there's no monotype declaration for `f` that allows a type judgment for `(f "", f True)`. So the precondition for the lambda rule never obtains, and so in turn, no type judgment can be made for the expression `\f -> (f "", f True)`.
 
-Let expressions compensate for this deficiency, with the rule *let expressions are like polymorphic lambda applications*. Mathematically:
+Let expressions compensate for this deficiency, with the rule *let expressions are like polymorphic lambda applications*. (I don't have a good name for it.) Mathematically:
 
     $$ \frac{a \sim μ \quad x : \bar{μ} ⇒ b \sim μ'}
             {(\mathtt{let}\ x = a\ \mathtt{in}\ b) \sim μ'} $$
 
 Or: suppose that $a$ can be judged to have type $μ$, and that the declaration $x : \bar{μ}$ would allow us to infer the judgment $b \sim μ'$. In that case, we could judge that $(\mathtt{let}\ x = a\ \mathtt{in}\ b)$ has type $μ'$.
 
-This introduces $\bar{μ}$, which generalises a monotype to a polytype. How it works is: if $μ$ mentions a type variable $a$, and $a$ isn't quantified over in the surrounding context, then $\bar{μ}$ contains a "$∀a$".
+This introduces the notation $\bar{μ}$, which generalises a monotype to a polytype. How it works is: if $μ$ mentions a type variable $a$, and $a$ isn't quantified over in the surrounding context, then $\bar{μ}$ contains a "$∀a$".
 
-Thus: we can infer `(\x -> x) ~ a -> List a`, where `a` is a type variable unused in the surrounding context. That type generalises to `∀a. a -> List a`. And given the declaration `f : ∀a. a -> List a`, we can infer `(f "", f True) ~ (List String, List Bool)`. So in total, we can infer `let f x = [x] in (f "", f True) ~ (List String, List Bool)`.
+Thus: we can infer `(\x -> [x]) ~ (a -> List a)`, where `a` is a type variable unused in the surrounding context. That type generalises to `∀a. a -> List a`. And given the declaration `f : ∀a. a -> List a`, we can infer `(f "", f True) ~ (List String, List Bool)`. So in total, we can infer
+
+    $$ (\mathtt{let f x = [x] in (f "", f True))}
+       ~ \mathtt{(List String, List Bool)}. $$
 
 (It seems a little strange to me that the approach here is to first construct a meaningless type, and then quantify over it. Still, that's my understanding. It's of course possible I'm mistaken.)
 
@@ -326,7 +329,7 @@ Elm and Haskell both support many things not covered so far. To look at some of 
 
 * In the type system, Elm supports record types, which are a lot like tuples but with nicer syntax. I believe these too could be thinly compiled down. But it also supports *extensible* records, which are more complicated. On one level you can think of a type like `{a | x : Int, y : Int}` like a tuple `∀a. (a, Int, Int)`. But then this tuple needs to be unpacked and manipulated when you pass it into a function expecting an `{a | x : Int}`.
 
-  I suspect this is unresolvable, and extensible records represent an extension of Elm from HM, to become more expressive and less legible.
+  I believe this is unresolvable, and extensible records represent an extension of Elm from HM. (But one with fairly minor legibility costs, in comparison to the expressiveness gains.)
 
 * Haskell supports typeclasses, which are a way of allowing functions to operate on multiple different types. (For example, the `show` function can be applied to a `String`, an `Int`, a `()`, a `[Float]`, ....) Elm doesn't, but simple typeclasses can be emulated with only a little added verbosity.
 
