@@ -251,8 +251,8 @@ This introduces the notation $\bar{μ}$, which generalises a monotype to a polyt
 
 Thus: we can infer `(\x -> [x]) ~ (a -> List a)`, where `a` is a type variable unused in the surrounding context. That type generalises to `∀a. a -> List a`. And given the declaration `f : ∀a. a -> List a`, we can infer `(f "", f True) ~ (List String, List Bool)`. So in total, we can infer
 
-    $$ (\mathtt{let f x = [x] in (f "", f True))}
-       ~ \mathtt{(List String, List Bool)}. $$
+    $$ (\mathtt{let\ f\ x\ =\ [x]\ in\ (f\ "",\ f\ True)})
+       \sim \mathtt{(List\ String,\ List\ Bool)}. $$
 
 (It seems a little strange to me that the approach here is to first construct a meaningless type, and then quantify over it. Still, that's my understanding. It's of course possible I'm mistaken.)
 
