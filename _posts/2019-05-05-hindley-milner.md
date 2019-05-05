@@ -1,6 +1,6 @@
 ---
 title: A reckless introduction to Hindley-Milner type inference
-layout: draft
+layout: post
 lw_xpost: true
 ---
 *(I've been editing this post on and off for almost a year. I'm not really happy with it, but I suspect I never will be.)*
