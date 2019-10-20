@@ -9,7 +9,7 @@ I don't like writing tests in Elm[^dont-like-elm]. Naively, it seems like the fa
 
 It's possible that I'm not very good at writing tests in general. But even if that's true, I don't think it's the whole story.
 
-I have another hypothesis, which is: much of the reason is that although Elm functions are *pure* - in the sense of "given the same input, they return the same output" - they aren't necessarily *transparent* - in the sense of "you can look at the output and verify that it's correct".
+I have another hypothesis, which is: much of the reason is that although Elm functions are *pure*, in the sense of "given the same input, they return the same output" - they aren't necessarily *transparent*, in the sense of "you can look at the output and verify that it's correct".
 
 To recap[^accessibility], I would describe the Elm architecture as consisting of:
 
