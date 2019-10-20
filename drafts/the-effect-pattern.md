@@ -21,7 +21,7 @@ To recap[^accessibility], I would describe the Elm architecture as consisting of
 
 * `update : Msg -> Model -> (Model, Cmd Msg)` - a function describing the logic of your app (or whatever it is you're architecting). The `Model` and `Msg` are still transparent, but the second return value is a `Cmd Msg` which is completely opaque, and which is the main source of the problem.
 
-* `view : Model -> Html Msg` - a function describing the rendering of your app. `Html Msg` is also completely opaque, but you can inspect it using [elmer](https://github.com/brian-watkins/elmer)[^Elmer], or (as I discovered while writing this post) the `Test.Html` modules in the [test](https://package.elm-lang.org/packages/elm-explorations/test/1.2.2/) package. I'm not sure if you can inspect it as deeply as you might want, I haven't explored these much yet.
+* `view : Model -> Html Msg` - a function describing the rendering of your app. `Html Msg` is also completely opaque, but you can inspect it using [elmer](https://github.com/brian-watkins/elmer)[^elmer], or (as I discovered while writing this post) the `Test.Html` modules in the [test](https://package.elm-lang.org/packages/elm-explorations/test/1.2.2/) package. I'm not sure if you can inspect it as deeply as you might want, I haven't explored these much yet.
 
 [^philosophically-opposed]: I'm somewhat philosophically opposed to this kind of opacity, even if practically I don't think it's a big problem. But my philosophical objections aren't relevant here.
 
@@ -153,7 +153,7 @@ runUpdates updateE_ runEffect_ initialState initialModel_ messages =
 
 On a high level, the way it works is this: you pass it your regular `updateE` function and a mocked `runEffect` function, together with an initial model and a list of messages to send. The messages get sent, one at a time, to the model. Any effects caused by `updateE` are handled by the mock `runEffect`, which returns a list of additional messages to be sent in future. We keep running until there are no more messages.
 
-There are two complications. One is that we also thread through some arbitrary state, that can be updated both by `updateE` and `runEffect`[^updateE]. We'll see the value of that later, but if you don't need it,
+There are two complications. One is that we also thread through some arbitrary state, that can be updated both by `updateE` and `runEffect`[^updateE-state]. We'll see the value of that later, but if you don't need it,
 
 ```elm
 stateless : (a -> b -> c) -> (() -> a -> b -> ((), c))
