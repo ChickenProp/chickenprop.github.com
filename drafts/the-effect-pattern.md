@@ -45,11 +45,11 @@ I'm going to demonstrate with a simple app. It'll be buggy, and the bug will be 
 
 So [here's the app](https://ellie-app.com/6XP8K8dLqZda1). It has a number, and a button to increase the number by one, and a button to multiply it by two. When you press one of those buttons, the number gets "saved to the server"; normally that would be an http request, but we emulate that by just sending a time delayed response. There's a message telling you whether the number has been successfully saved yet.
 
-Actually, most of the app supports increasing the number by any integer, and multiplying it by any integer. That's not implemented in the view though. The Watsonian justification for this is that the developer has a habit of overengineering things. The Doylist justification is that it makes the interesting bits more interesting, but not significantly more complicated; and the view code is boring.
+Actually, most of the app supports increasing the number by any integer, and multiplying it by any integer. That's not implemented in the view though. The [Watsonian](https://scifi.stackexchange.com/questions/109910/what-do-the-terms-doylist-doylian-and-watsonian-mean) explanation for this is that the developer has a habit of overengineering things. The Doylist explanation is that it makes the interesting bits more interesting, but not significantly more complicated; and the view code is boring.
 
-The bug is: if you press buttons quickly, the "saved" message will temporarily be wrong. You've sent two messages to the server, and one hasn't come back yet; the number that's been saved is not the number on display. Silly, but I think a decent demonstration of a common and serious class of bug.
+The bug is: if you press buttons quickly, the "saved" message will temporarily be wrong. You've sent two messages to the server, and one hasn't come back yet; the number that's been saved is not the number on display. Silly, but I think it works as a demonstration.
 
-(There are surely also bugs related to the size of numbers, but I'm not interested in those right now. Additionally, a real life server would have additional problems like "sometimes requests will fail" and "sometimes requests will be handled out of order"; the second in particular is hairy, but I haven't emulated these possibilities.)
+(There are surely also bugs related to the size of numbers, but I'm not interested in those right now. Additionally, a real life server would have other problems like "sometimes requests will fail" and "sometimes requests will be handled out of order"; the second in particular is hairy, but I haven't emulated these possibilities.)
 
 Here's the update function:
 
@@ -126,29 +126,28 @@ Here's a helper function that you can use to test `updateE`:
 
 ```elm
 runUpdates
-    : (msg -> model -> (model, List effect))
-    -> (state -> effect -> model
-        -> (state, List (state -> model -> state, msg)))
+    : (state -> msg -> model -> (state, (model, List effect)))
+    -> (state -> effect -> model -> (state, List msg))
     -> state
     -> model
-    -> List (List (state -> model -> state, msg))
+    -> List (List msg)
     -> (state, model)
-runUpdates updateE_ runEffect_ initialState initialModel_ messages =
-    let go = runUpdates updateE_ runEffect_
-    in
-    case messages of
-        [] -> (initialState, initialModel_)
-        [] :: moreMsgs -> go initialState initialModel_ moreMsgs
-        ((stUpdate, msg1) :: moreMsgs1) :: moreMoreMsgs ->
-            let (newModel, effs) = updateE_ msg1 initialModel_
-                (newState, newMsgs) =
+runUpdates updateE runEffect initialState initialModel messages =
+    let go = runUpdates updateE runEffect
+    in case messages of
+        [] -> (initialState, initialModel)
+        [] :: moreMsgs -> go initialState initialModel moreMsgs
+        (msg1 :: moreMsgs1) :: moreMoreMsgs ->
+            let (newState1, (newModel, effs)) =
+                    updateE initialState msg1 initialModel
+                (newState2, newMsgs) =
                     List.foldl
-                        (\e (s, m) -> runEffect_ s e newModel
+                        (\e (s, m) -> runEffect s e newModel
                             |> Tuple.mapSecond ((++) m)
                         )
-                        (stUpdate initialState model, [])
+                        (newState1, [])
                         effs
-            in go newState newModel ((moreMsgs1 ++ newMsgs) :: moreMoreMsgs)
+            in go newState2 newModel ((moreMsgs1 ++ newMsgs) :: moreMoreMsgs)
 ```
 
 On a high level, the way it works is this: you pass it your regular `updateE` function and a mocked `runEffect` function, together with an initial model and a list of messages to send. The messages get sent, one at a time, to the model. Any effects caused by `updateE` are handled by the mock `runEffect`, which returns a list of additional messages to be sent in future. We keep running until there are no more messages.
@@ -178,29 +177,37 @@ type alias TState = (Int, List Expectation)
 testSave : Test
 testSave =
     let
+        mockUpdateE : TState -> Msg -> Model -> (TState, (Model, List Effect))
+        mockUpdateE (n, exps) msg model =
+            let (newModel, effs) = updateE msg model
+                newState = case msg of
+                    Saved ->
+                        ( n - 1
+                        , (newModel.saved |> Expect.equal (n - 1 == 0))
+                            :: exps
+                        )
+                    _ -> (n, exps)
+            in (newState, (newModel, effs))
+
         mockRunEffect
             : TState
             -> Effect
             -> Model
-            -> (TState, List (TState -> Model -> TState, Msg))
-        mockRunEffect (n, e) eff model =
-            let updateStateSaved (n2, es) m =
-                    ( n2 - 1
-                    , es ++ [m.saved |> Expect.equal (n2 - 1 == 0)]
-                    )
-            in case eff of
-                ESaveCount _ -> ( (n+1, e), [(updateStateSaved, Saved)] )
+            -> (TState, List Msg)
+        mockRunEffect (n, exps) eff model =
+            case eff of
+                ESaveCount _ -> ( (n+1, exps), [Saved] )
     in
     test "Doesn't pretend to be saved" <| \() ->
         let ((_, es), _) =
-                runUpdates updateE mockRunEffect (0, []) initialModel
-                    [[(always, IncBy 1), (always, IncBy 1)]]
+                runUpdates mockUpdateE mockRunEffect (0, []) initialModel
+                    [[IncBy 1, IncBy 1]]
         in () |> Expect.all (List.map always es)
 ```
 
-I admit, this is pretty ugly. But I think it's conceptually quite simple. The state keeps track of two things: how many save requests are currently "in flight", which gets updated as we step through; and a list of assertions, which we verify at the end. Every time we send a request (with `ESaveCount`), we increase the in-flight count. Every time we receive a Saved message, we decrease it, and add a new assertion to the list: `model.saved` should be `True` iff there are no requests remaining in-flight.
+I admit, this is pretty ugly. But I think it's conceptually quite simple. The state keeps track of two things: how many save requests are currently "in flight", which gets updated as we step through; and a list of assertions, which we verify at the end. (That final line looks weird because `Expect` doesn't have a function `and : List Expectation -> Expectation`.) Every time we send a request (with `ESaveCount`), we increase the in-flight count. Every time we receive a Saved message, we decrease it, and add a new assertion to the list: `model.saved` should be `True` iff there are no requests remaining in-flight.
 
-You can see this version off the app [here](https://ellie-app.com/6YqM2vkLWkba1). Note that to avoid the hassle of playing with `Test.Runner`, I've replaced the `Test` with an `Expectation` by commenting out the `test "..."` line (but nothing underneath), and put the result in the view. You can remove the second `IncBy` and check that it now passes (because if there's only one `IncBy`, the bug doesn't exhibit).
+You can see this version of the app [here](https://ellie-app.com/6YqM2vkLWkba1). Note that to avoid the hassle of playing with `Test.Runner`, I've replaced the `Test` with an `Expectation` by commenting out the `test "..."` line (but nothing underneath), and put the result in the view. You can remove the second `IncBy` and check that it now passes (because if there's only one `IncBy`, the bug doesn't exhibit).
 
 Now to fix the bug, and see what effect that has on the tests. If you can't fix a bug without changing the tests you wrote for it, that's a bad sign about your tests.
 
