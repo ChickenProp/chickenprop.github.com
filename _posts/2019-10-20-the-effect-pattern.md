@@ -1,6 +1,6 @@
 ---
 title: "The Effect pattern: Transparent updates in Elm"
-layout: draft
+layout: post
 lw_xpost: true
 ---
 I don't like writing tests in Elm[^dont-like-elm]. Naively, it seems like the fact that all Elm functions are pure would make it easy. But I've still never really been able to test the things I really want to.
