@@ -199,13 +199,13 @@ testSave =
                 ESaveCount _ -> ( (n+1, exps), [Saved] )
     in
     test "Doesn't pretend to be saved" <| \() ->
-        let ((_, es), _) =
+        let ((_, exps), _) =
                 runUpdates mockUpdateE mockRunEffect (0, []) initialModel
                     [[IncBy 1, IncBy 1]]
-        in () |> Expect.all (List.map always es)
+        in Expect.all (List.map (\e () -> e) exps) ()
 ```
 
-I admit, this is pretty ugly. But I think it's conceptually quite simple. The state keeps track of two things: how many save requests are currently "in flight", which gets updated as we step through; and a list of assertions, which we verify at the end. (That final line looks weird because `Expect` doesn't have a function `and : List Expectation -> Expectation`.) Every time we send a request (with `ESaveCount`), we increase the in-flight count. Every time we receive a Saved message, we decrease it, and add a new assertion to the list: `model.saved` should be `True` iff there are no requests remaining in-flight.
+I admit, this is pretty ugly. But I think it's conceptually quite simple. The state keeps track of two things: how many save requests are currently "in flight", which gets updated as we step through; and a list of assertions, which we verify at the end. Every time we send a request (with `ESaveCount`), we increase the in-flight count. Every time we receive a Saved message, we decrease it, and add a new assertion to the list: `model.saved` should be `True` iff there are no requests remaining in-flight.
 
 You can see this version of the app [here](https://ellie-app.com/6YqM2vkLWkba1). Note that to avoid the hassle of playing with `Test.Runner`, I've replaced the `Test` with an `Expectation` by commenting out the `test "..."` line (but nothing underneath), and put the result in the view. You can remove the second `IncBy` and check that it now passes (because if there's only one `IncBy`, the bug doesn't exhibit).
 
