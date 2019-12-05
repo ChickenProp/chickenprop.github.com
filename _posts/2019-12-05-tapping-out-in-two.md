@@ -1,5 +1,5 @@
 ---
-layout: draft
+layout: post
 lw_xpost: true
 title: Tapping Out In Two
 _comment_list:
