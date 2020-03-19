@@ -13,7 +13,9 @@ In order of date I made the bet:
 
 I placed this bet on 20-Oct-2019, on
 [Betfair](https://www.betfair.com/exchange/plus/politics/market/1.129133401),
-after a friend said on Facebook that the odds seemed very favorable to him. The odds at the time were 1.3, giving an implied probability of ${1.3 - 1 \over 1.3} = 30\%$ that he'd leave. I bet £50 against this, giving me £15 profit if he doesn't. (Minus commission, so £14.25.) Currently the odds are 1.12, for an implied probability of 11% that he'll leave and giving me £7.56 minus commission if he doesn't. (I could cash out now, taking my £50 back immediately and the rest when the market closes - because if he gets assasinated all bets are void. I'm not inclined to do that.)
+after a friend said on Facebook that the odds seemed very favorable to him. The odds at the time were 1.3, giving an implied probability of ${1.3 - 1 \over 1.3} = 30\%$ that he'd leave. I bet £50 against this, giving me £15 profit if he doesn't. (Minus commission, so £14.25.) As of 19-Mar-2020 the odds are 1.12, for an implied probability of 11% that he'll leave. (I could cash out now, taking my £50 back immediately and £7.56 minus commission when the market closes[^void]. I'm not inclined to do that.)
+
+[^void]: I can't take any profit now, because if he gets assassinated the market is void.
 
 ### I lost: NO on a large increase in working from home.
 
