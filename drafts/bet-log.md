@@ -13,7 +13,7 @@ In order of date I made the bet:
 
 I placed this bet on 20-Oct-2019, on
 [Betfair](https://www.betfair.com/exchange/plus/politics/market/1.129133401),
-after a friend said on Facebook that the odds seemed very favorable to him. The odds at the time were 1.3, giving an implied probability of ${1.3 - 1 \over 1.3} = 30%$ that he'd leave. I bet £50 against this, giving me £15 profit if he doesn't. (Minus commission, so £14.25.) Currently the odds are 1.12, for an implied probability of 11% that he'll leave and giving me £7.56 minus commission if he doesn't. (I could cash out now, taking my £50 back immediately and the rest when the market closes - because if he gets assasinated all bets are void. I'm not inclined to do that.)
+after a friend said on Facebook that the odds seemed very favorable to him. The odds at the time were 1.3, giving an implied probability of ${1.3 - 1 \over 1.3} = 30\%$ that he'd leave. I bet £50 against this, giving me £15 profit if he doesn't. (Minus commission, so £14.25.) Currently the odds are 1.12, for an implied probability of 11% that he'll leave and giving me £7.56 minus commission if he doesn't. (I could cash out now, taking my £50 back immediately and the rest when the market closes - because if he gets assasinated all bets are void. I'm not inclined to do that.)
 
 ### I lost: NO on a large increase in working from home.
 
@@ -39,11 +39,11 @@ On 04-Mar-2020, I noticed that the betting markets' odds on Trump's re-election 
 
 The obvious objection was: "if you can predict that happening, so can anyone. Why haven't the odds changed already?" I didn't have an answer for that, but the stock markets had seemed to react slowly to the news[^stocks] so maybe it would happen here too. (And the next obvious objection was: "oh, so you're expecting the same thing to work *twice in a row*?" I didn't have an answer for that either.)
 
-[^stocks]: I hadn't sold any stocks at the time, and I still haven't.
+[^stocks]: This didn't do me any good. I hadn't sold any stocks at the time, and I still haven't.
 
 Less obvious objections that I realized/someone pointed out after I'd made the bet:
 
 * Bush's popularity rose after 9/11.
 * Covid-19 seems to play very nicely into Trump's anti-immigrant, anti-globalist narrative.
 
-In any case, I went ahead. I bet £100 against Trump at odds of 1.76. The odds started to drop pretty soon after that. Two weeks later, on 18-Mar-2020, I cashed out (by betting £110.26 for Trump at odds of 2.1, but actually by pressing the "cash out" button). I've claimed my initial £100 back, and no matter who wins I'll earn £21.29. (£20.23 after commission, but nothing if the market is voided.)
+In any case, I went ahead. Again on [Betfair](https://www.betfair.com/exchange/plus/politics/market/1.128151441), I bet £100 against Trump at odds of 1.76. The odds started to drop pretty soon after that. Two weeks later, on 18-Mar-2020, I cashed out (by betting £110.26 for Trump at odds of 2.1, but actually by pressing the "cash out" button). I've claimed my initial £100 back, and no matter who wins I'll earn £21.29. (£20.23 after commission, but nothing if the market is voided.)
