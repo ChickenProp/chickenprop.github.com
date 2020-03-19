@@ -5,7 +5,9 @@ lw_xpost: true
 ---
 I occasionally make bets about future events. I think I probably should do that more often than I currently do. Given that, I think it's good practice to have a public record of the bets I've made and their outcomes, when available.
 
-I'll try to keep this updated going forward, if I continue to make bets.
+I'll try to keep this updated going forward, if I continue to make bets. Currently I'm down £72.46 with one win and one loss.
+
+(This has nothing to do with the [matched betting](http://reasonableapproximation.net/2018/06/02/matched-betting.html) that I previously wrote about. There I was earning money from sign-up bonuses. Here I'm trying to earn money by being better at predicting the future than other people.)
 
 In order of date I made the bet:
 
@@ -25,7 +27,7 @@ LessWrong user Liron [said](https://www.greaterwrong.com/posts/7XTnz7S77hRzLbpDA
 
 I took him up on this for $100 each. We confirmed on 02-Jan-2020. I don't think I'd heard the term "coronavirus" at the time.
 
-This cost me $100, but I got a bunch of LW karma for it. Swings and roundabouts.
+This cost me $100 (£92.69 over Paypal, which I think included £2.99 transaction fee). But I got a bunch of LW karma for it. Swings and roundabouts.
 
 ### Undecided: YES on someone contracting Covid-19.
 
