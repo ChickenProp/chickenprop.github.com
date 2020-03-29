@@ -73,7 +73,7 @@ So we should try to deliver zinc to the relevant tissues. What are those?
 
 The infection would begin somewhere between the nose or throat (where the virus mostly enters our body) and lungs (where it primarily infects), wherever the virus first encounters ACE2. There are two papers trying to answer this question, and they give different opinions.
 
-(Question: this seems to assume that the virus doesn't first infect something other than the lungs, and then move on to them. Is that a safe assumption?)
+(Question: this seems to assume that the virus doesn't first infect something other than the lungs, and then move on to them. Is that a safe assumption? I would guess so.)
 
 Hamming et al (2004)[^cite-hamming] suggests that the virus wouldn't find any ACE2 until it reached the lungs. They did find ACE2 in the oral and nasal mucous membranes, but on the wrong side to be any use to the virus.
 
