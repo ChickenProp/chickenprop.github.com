@@ -22,7 +22,7 @@ My intention here is mostly to summarize his reasoning, in more detail than is o
 The report makes twelve recommendations:
 
 * Four "essentials": elderberry, nutritional zinc, ionic zinc, and copper.
-* Four "optional add-ons": garlic or stabilized allicin, echinacea, vitamin C, and N-acetyl-cysteine.
+* Four "optional add-ons": garlic or stabilized allicin, echinacea, vitamin C, and N-acetyl-cysteine. Chris is taking all of these except vitamin C, and he plans to take a low-dose supplement of that if he can't get fresh food.
 * Four "things to limit or avoid": these are much less pithy. "Don't take high doses of vitamins A or D" (but don't get deficient either); "Limit Calcium and Don't Use Calcium Supplements That Aren't Balanced by Phosphorus"; "Don't Use Monolaurin"; "Don't Use High-Dose Vitamin C, Pelargonium Sidoides (Umcka), or Bee Propolis".
 
 I'm not convinced twelve recommendations is the natural grouping for this, but there we are. In this post I'm going to focus on the "essentials"; my current plan is to do the rest in future posts.
@@ -43,7 +43,7 @@ SARS-CoV-2 (the virus that causes the disease Covid-19) is not like the common c
 
 The two main things the report focuses on are [ACE2](https://en.wikipedia.org/wiki/Angiotensin-converting_enzyme_2) and [interferon](https://en.wikipedia.org/wiki/Interferon).
 
-ACE2 is an enzyme used in regulating blood pressure. SARS-CoV-2 enters our cells by docking to ACE2. It has this in common with just two other human coronaviruses, SARS-CoV (the virus which causes SARS) and [HCoV-NL63](https://en.wikipedia.org/wiki/Human_coronavirus_NL63). So heightened levels of ACE2 could increase susceptibility to SARS-CoV-2.
+ACE2 is an enzyme used in regulating blood pressure. SARS-CoV-2 enters our cells by docking to ACE2. It has this in common with just two other human coronaviruses, SARS-CoV and [HCoV-NL63](https://en.wikipedia.org/wiki/Human_coronavirus_NL63). So heightened levels of ACE2 could increase susceptibility to SARS-CoV-2.
 
 (By comparison, the common cold is mostly caused by rhinoviruses, and most of those dock to ICAM-1. Some colds are caused by coronaviruses, but those dock to aminopeptidase N or sialic acid. The flu docks to sialic acid. So if something protects against those by preventing them from docking, it's likely to have no effect on Covid-19.)
 
