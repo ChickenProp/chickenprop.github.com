@@ -1,6 +1,6 @@
 ---
 title: "Chris Masterjohn on Coronavirus, Part 1"
-layout: draft
+layout: post
 lw_xpost: true
 ---
 Chris Masterjohn is a nutritionist who has some [advice on supplements](https://chrismasterjohnphd.com/what-im-doing-for-the-coronavirus) to take to help protect against Covid-19, and some to avoid. The raw advice is available for free, but the full report with explanation and references costs $10. I bought a copy.
