@@ -13,9 +13,9 @@ On the other hand, Chris previously turned me on to [zinc](https://www.greaterwr
 
 [^bullshit]: There are some things that kind of smell like bullshit to me. Most notably, I feel like at times, the report goes into a lot of detail on things that aren't super relevant, like the renin-angiotensin system that ACE2 plays a part in. As far as I've seen so far, the precise mechanics of that don't really matter. Meanwhile, a lot of the important claims are speculative - necessarily so, because things are moving too fast to have good evidence here, but speculative all the same. In combination, this can kind of feel like... "throw a lot of impeccably researched, uncontroversial and unimportant science at the reader; then try to sneak in the difficult bits under the radar"? I'm sure there's a term for this that I'm forgetting.
 
-  I don't actually think this is what's happening. My sense is that it's more likely to be bad editing, and I'm not even confident it's that. But it seemed important to note.
+    I don't actually think this is what's happening. My sense is that it's more likely to be bad editing, and I'm not even confident it's that. But it seemed important to note.
 
-  I've also noticed some numeric inconsistencies that I chalk up to bad proofreading.
+    I've also noticed some numeric inconsistencies that I chalk up to bad proofreading.
 
 My intention here is mostly to summarize his reasoning, in more detail than is on the linked page but less detail than is in the full report. You can make up your own minds. Much of it I haven't even checked how actionable it is right now (i.e. are these things available in stores or for delivery, and how much do they cost). I do have some questions and commentary of my own that I've scattered about, possibly not always well-flagged.
 
