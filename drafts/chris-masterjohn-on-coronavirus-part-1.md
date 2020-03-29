@@ -67,7 +67,7 @@ This is zinc from food or most supplements (including tablets or capsules).
 
 Zinc "inhibits three proteins required for SARS-CoV replication: papain-like protease-2, 3CL protease, and helicase." So it probably inhibits the homologous proteins in SARS-CoV-2.
 
-(Question: how similar do proteins need to be for this to be a decent guess? [This](https://www.researchgate.net/post/When_do_you_consider_two_proteins_to_be_homologous) suggests proteins called "homologous" might be only 40% similar in sequence. So if these ones are >85% similar, like most, maybe that makes it a pretty good guess?)
+(Question: how similar do proteins need to be for this to be a decent guess? [This](https://www.researchgate.net/post/When_do_you_consider_two_proteins_to_be_homologous) suggests proteins called "homologous" might be only 40% similar in sequence. If I guess that "homologous" means this is likely to be a decent guess; and that these ones are >85% similar (based on base rates of similarity between the viruses)... that suggests it's probably a pretty good guess? But I'm not at all cofident in this thinking.)
 
 So we should try to deliver zinc to the relevant tissues. What are those?
 
