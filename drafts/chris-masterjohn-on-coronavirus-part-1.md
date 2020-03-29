@@ -7,17 +7,17 @@ Chris Masterjohn is a nutritionist who has some [advice on supplements](https://
 
 Should we trust him? On the one hand, "nutritionist" is not a profession I necessarily hold much respect for (it's not a protected term). Nor do I tend to think highly of people emphasizing that they have a PhD. Also, [his website](https://chrismasterjohnphd.com/) looks super sketchy to my eyes. Also also, something that costs money gets fewer eyeballs than something free, and so mistakes are less likely to be discovered.
 
-(Only the last one of those should be considered a problem with the report; the rest are just priors. They're whatever the opposite of an argument from authority is.)
+(Only the last one of those should be considered a problem with the report; the rest are just priors.)
 
-On the other hand, Chris previously turned me on to [zinc](https://www.greaterwrong.com/posts/un2fgBad4uqqwm9sH/is-this-info-on-zinc-lozenges-accurate) so he has some credibility with me. Also, although I'm out of my depth in actually evaluating the science, I do think I have a decent bullshit detector, and the report is superficially very convincing to me.[^bullshit] I get the sense that he actually really knows what he's doing, is weighing the evidence appropriately and making claims that are justified by it. He admits to uncertainty, and some of his recommendations are "this probably won't help, but just in case"; but he does speak precisely enough to be falsifiable. This doesn't mean he's right of course, but I think he's worth paying attention to.
+On the other hand, Chris previously turned me on to [zinc](https://www.greaterwrong.com/posts/un2fgBad4uqqwm9sH/is-this-info-on-zinc-lozenges-accurate) so he has some credibility with me. Also, although I'm out of my depth in actually evaluating the science, I do think I have a decent bullshit detector, and the report is superficially very convincing to me.[^bullshit] I get the sense that he actually really knows what he's doing, is weighing the evidence appropriately and making claims that are justified by it. He admits to uncertainty, and some of his recommendations are "this probably won't help, but just in case"; but he does speak precisely enough to be falsifiable. This doesn't mean he's right, of course. But I think he's worth some people paying some attention to.
 
 [^bullshit]: There are some things that kind of smell like bullshit to me. Most notably, I feel like at times, the report goes into a lot of detail on things that aren't super relevant, like the renin-angiotensin system that ACE2 plays a part in. As far as I've seen so far, the precise mechanics of that don't really matter. Meanwhile, a lot of the important claims are speculative - necessarily so, because things are moving too fast to have good evidence here, but speculative all the same. In combination, this can kind of feel like... "throw a lot of impeccably researched, uncontroversial and unimportant science at the reader; then try to sneak in the difficult bits under the radar"? I'm sure there's a term for this that I'm forgetting.
 
-    I don't actually think this is what's happening. My sense is that it's more likely to be bad editing, and I'm not even confident it's that. But it seemed important to note.
+  I don't actually think this is what's happening. My sense is that it's more likely to be bad editing, and I'm not even confident it's that. But it seemed important to note.
 
-    I've also noticed some numeric inconsistencies that I chalk up to bad proofreading.
+  I've also noticed some numeric inconsistencies that I chalk up to bad proofreading.
 
-My intention here is mostly to summarize his reasoning, in more detail than is on the linked page but less detail than is in the full report. You can make up your own minds. Much of it I haven't even checked how actionable it is right now. I do have some questions and commentary of my own that I've scattered about, possibly not always well-flagged.
+My intention here is mostly to summarize his reasoning, in more detail than is on the linked page but less detail than is in the full report. You can make up your own minds. Much of it I haven't even checked how actionable it is right now (i.e. are these things available in stores or for delivery, and how much do they cost). I do have some questions and commentary of my own that I've scattered about, possibly not always well-flagged.
 
 The report makes twelve recommendations:
 
@@ -58,8 +58,6 @@ As a bonus, elderberry is also effective against avian infectious bronchitis vir
 Other foods include caffeic acid, but only black chokeberries have anything like a comparable amount. And elderberry extract is the thing that's been actually studied, so that's what Chris recommends.
 
 There are studies using elderberry in humans to treats colds, the flu, and cardiovascular disease, but Chris doesn't mention their results. He just uses them to determine a safe dose.
-
-My take: not strong experimental or observational evidence. Theoretical evidence seems solid, but I don't know how much to trust theory.
 
 ### Essential: Nutritional zinc
 
@@ -107,16 +105,18 @@ This specifically means zinc from [the kind of lozenges that work for a cold](ht
 
 It delivers ionic zinc to the mouth, nose and throat tissues, like we couldn't do with the lungs. But as discussed above, those probably aren't infected, so this probably won't help. It's included "as a hedge against the possibility" that they are. He takes one a day, and plans to increase that if he gets cold symptoms or Covid-19 symptoms.
 
-(Question: this delivers ionic zinc to the surfaces of these tissues, while we want it on the inside. Is that fine?)
+(Question: this delivers ionic zinc to the surfaces of these tissues, while we want it on the inside. Will that work?)
 
 I'm not really sure why this is an "essential" instead of an "optional add-on".
 
 ### Essential: Copper
 
-Copper surfaces work great against coronaviruses. This knowledge is not super helpful.
+Copper surfaces work great against coronaviruses. This knowledge is not super helpful, since we are not copper surfaces.
 
-It may be that copper ions in our cells would also be toxic to the virus. But this has never been well studied.
+It does suggest that copper ions in our cells might be toxic to the virus. But this has never been well studied.
 
 Like zinc, copper inhibits papain-like protease 2 of SARS CoV. But it's much less effective at it.
 
 The main reason to take copper is to keep the zinc-to-copper ratio acceptable. It should be between 10:1 and 15:1. (At one point he says 2:1 - 15:1, but again, I think that's bad proofreading.)
+
+Like with zinc, he recommends also using a copper spray just in case SARS-CoV-2 infects the throat.
