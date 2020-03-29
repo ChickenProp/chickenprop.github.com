@@ -31,7 +31,7 @@ So far, I've followed this advice to the extent of:
 
 * I've stopped taking daily vitamin D supplements, and advised my partner to do the same. (Somewhat to my embarassment, as they'd only started taking them on my recommendation. I've been taking it 5x/week for years.) He says not to supplement with vitamin D at all, but he also says to get normal amounts from sunshine and vitamin D-rich foods, and we're not doing that. So maybe we should take one a week instead of one a day.
 * I bought a bulb of garlic, but I haven't done anything with it yet.
-* I took one of the zinc capsules that came free with my last order of zinc lozenges. Then I had GI symptoms that day. Possibly unrelated, but they also had something of an unpleasant smell that I'm not sure is normal. I haven't tried again. Maybe I will. It's 50mg, which is more than Chris recommends at one time.
+* I took one of the zinc capsules that came free with my last order of zinc lozenges. Then I had a bad gastrointesinal day. Possibly unrelated, but they also had something of an unpleasant smell that I don't know whether it was normal. I haven't tried again. Maybe I will. They're 50mg, which is more than Chris recommends at one time.
 
 If you're going to follow any of it yourself, you should at least read his public post, and ideally also the report.
 
