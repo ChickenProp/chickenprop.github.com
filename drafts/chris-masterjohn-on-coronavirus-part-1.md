@@ -83,7 +83,7 @@ The two used different methods. Xu had better resolution, down to single-cell. B
 
 We don't have a specific mechanism to target the lung with zinc. We just have to take it orally in the normal way (that is, in food or supplements) and let it be distributed there.
 
-Chris recommends 7-15mg of zinc four times a day, away from sources of phytate ("whole grains, nuts, seeds, and legumes"), helps.
+Chris recommends 7-15mg of zinc four times a day, away from sources of phytate ("whole grains, nuts, seeds, and legumes") which can inhibit zinc intake.
 
 (At one point he says 10-15mg, and at one point 7-10, but I think this is just bad proofreading. Mostly he says 7-15.)
 
