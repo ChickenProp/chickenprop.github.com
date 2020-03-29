@@ -37,7 +37,9 @@ If you're going to follow any of it yourself, you should at least read his publi
 
 ### General info: ACE2
 
-SARS-CoV-2 (the virus that causes the disease Covid-19) is not like the common cold or the flu, and things which work against those may not be helpful here.
+SARS-CoV-2 (the virus that causes the disease Covid-19) is not like the common cold or the flu, and things which work against those may not be helpful here. On the other hand, it's very like SARS-CoV (the virus that causes SARS). The genomes are 80% identical, and "the majority of its proteins are 85-100% homologous, with an average homology of 87%".
+
+(Question: That seems like a really low average, given that range?)
 
 The two main things the report focuses on are [ACE2](https://en.wikipedia.org/wiki/Angiotensin-converting_enzyme_2) and [interferon](https://en.wikipedia.org/wiki/Interferon).
 
@@ -63,9 +65,9 @@ There are studies using elderberry in humans to treats colds, the flu, and cardi
 
 This is zinc from food or most supplements (including tablets or capsules).
 
-Zinc "inhibits three proteins required for SARS-CoV replication: papain-like protease-2, 3CL protease, and helicase." So it probably inhibits "the homologous proteins in SARS-CoV-2".
+Zinc "inhibits three proteins required for SARS-CoV replication: papain-like protease-2, 3CL protease, and helicase." So it probably inhibits the homologous proteins in SARS-CoV-2.
 
-(Question: how similar do proteins need to be for this to be a decent guess? [This](https://www.researchgate.net/post/When_do_you_consider_two_proteins_to_be_homologous) suggests homologous proteins might be only 40% similar in sequence. Are we confident that SARS-CoV-2 even has homologous proteins? I guess just based on the prior of "similar to SARS-CoV" it probably does and they're probably more than 40% similar, but do we have any more than that?)
+(Question: how similar do proteins need to be for this to be a decent guess? [This](https://www.researchgate.net/post/When_do_you_consider_two_proteins_to_be_homologous) suggests proteins called "homologous" might be only 40% similar in sequence. So if these ones are >85% similar, like most, maybe that makes it a pretty good guess?)
 
 So we should try to deliver zinc to the relevant tissues. What are those?
 
