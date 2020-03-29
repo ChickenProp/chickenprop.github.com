@@ -15,7 +15,7 @@ On the other hand, Chris previously turned me on to [zinc](https://www.greaterwr
 
     I don't actually think this is what's happening. My sense is that it's more likely to be bad editing, and I'm not even confident it's that. But it seemed important to note.
 
-    I've also noticed some numeric inconsistencies that I chalk up to bad proofreading.
+    I've also noticed some inconsistencies that I chalk up to bad proofreading.
 
 My intention here is mostly to summarize his reasoning, in more detail than is on the linked page but less detail than is in the full report. You can make up your own minds. Much of it I haven't even checked how actionable it is right now (i.e. are these things available in stores or for delivery, and how much do they cost). I do have some questions and commentary of my own that I've scattered about, possibly not always well-flagged.
 
