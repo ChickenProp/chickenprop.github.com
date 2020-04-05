@@ -30,6 +30,18 @@ The report makes fifteen recommendations about fifteen supplements (some supplem
 * One "optional add-on" only when you get sick: echinacea. Chris used to take this daily, but has since decided against that.
 * Four "things to limit or avoid": these are much less pithy. "Don't take high doses of vitamins A or D" (but don't get deficient either); "Limit Calcium and Don't Use Calcium Supplements That Aren't Balanced by Phosphorus"; "Don't Use Monolaurin"; "Don't Use High-Dose Vitamin C, Pelargonium Sidoides (Umcka), or Bee Propolis".
 
+"Potential exposure" is quite broad, including:
+
+> * Going into public spaces to perform essential errands.
+> * Accidentally encountering someone you don’t live with face-to-face within six feet, or making physical content with such a person.
+> * Touching any surfaces that someone you don’t live with may have touched in the last nine days without any personal protective equipment.
+> * Incorrect use of personal protective equipment (for example, taking gloves off your hands in any other way than [explained here](https://www.globus.co.uk/how-to-safely-remove-disposable-gloves) or reusing a mask without following [these guidelines](https://www.cdc.gov/niosh/topics/hcwcontrols/recommendedguidanceextuse.html#respreuse)).
+> * Putting your fingers into your mouth or nose, regardless of whether you washed them beforehand.
+
+I think he's mostly expecting these won't happen very often. Personally, I'm doing most of those about once a week to go shopping, and the last one probably several times a day.
+
+It includes any physical contact with someone you don't live with, coming face-to-face with such a person within six feet, and putting your fingers in your mouth or nose even if you washed them first.
+
 In this post I'm going to focus on elderberry, zinc and copper; my current plan is to do the rest in future posts.
 
 So far, I've followed this advice to the extent of:
