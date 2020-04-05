@@ -4,7 +4,7 @@ layout: default
 <h3><a href="{{ page.url }}">{{ page.title }}</a></h3>
 <h3>Version 1: Chris Masterjohn on Coronavirus, Part 1</h3>
 
-*This is version 1 of this document, and is no longer up to date. <a href="http://reasonableapproximation.net/2020/03/29/chris-masterjohn-on-coronavirus-part-1.html">The most recent version can be found here.</a>
+*This is version 1 of this document, and is no longer up to date. <a href="http://reasonableapproximation.net/2020/03/29/chris-masterjohn-on-coronavirus-part-1.html">The most recent version can be found here.</a>*
 
 Chris Masterjohn is a nutritionist who has some [advice on supplements](https://chrismasterjohnphd.com/what-im-doing-for-the-coronavirus) to take to help protect against Covid-19, and some to avoid. The raw advice is available for free, but the full report with explanation and references costs $10. I bought a copy.
 
