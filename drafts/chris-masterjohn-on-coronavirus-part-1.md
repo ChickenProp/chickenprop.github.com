@@ -38,7 +38,7 @@ The report makes fifteen recommendations about fifteen supplements (some supplem
 > * Incorrect use of personal protective equipment (for example, taking gloves off your hands in any other way than [explained here](https://www.globus.co.uk/how-to-safely-remove-disposable-gloves) or reusing a mask without following [these guidelines](https://www.cdc.gov/niosh/topics/hcwcontrols/recommendedguidanceextuse.html#respreuse)).
 > * Putting your fingers into your mouth or nose, regardless of whether you washed them beforehand.
 
-I think he's mostly expecting these won't happen very often. Personally, I'm doing most of those about once a week to go shopping, and the last one probably several times a day.
+I think he's mostly expecting these won't happen very often. Personally, I'm doing most of them about once a week to go shopping, and the last one probably several times a day.
 
 It includes any physical contact with someone you don't live with, coming face-to-face with such a person within six feet, and putting your fingers in your mouth or nose even if you washed them first.
 
@@ -57,7 +57,7 @@ If you're going to follow any of it yourself, you should at least read his publi
 
 SARS-CoV-2 (the virus that causes the disease Covid-19) is not like the common cold or the flu, and things which work against those may not be helpful here. On the other hand, it's very like SARS-CoV (the virus that causes SARS). The genomes are 80% identical, and "the majority of its proteins are 85-100% homologous, with an average homology of 87%".
 
-(Question: That seems like a really low average, given that range?)
+(Question: That seems like a really low average, given that range? Though I guess it includes the ones below 85%.)
 
 The two main things the report focuses on are [ACE2](https://en.wikipedia.org/wiki/Angiotensin-converting_enzyme_2) and [interferon](https://en.wikipedia.org/wiki/Interferon).
 
@@ -69,7 +69,7 @@ ACE2 is an enzyme used in regulating blood pressure. SARS-CoV-2 enters our cells
 
 (Question: "The binding of SARS-CoV to ACE2 is thought to downregulate ACE2 expression, leading to a loss of the anti-proliferative and anti-fibrotic actions of ACE2 in the lung, thereby contributing to the lung damage that occurs in SARS." That seems to point in favor of increasing levels of ACE2, so that it getting downregulated is not such a big deal. How to weigh these two concerns? I haven't read it closely, but [this](https://www.microbiologyresearch.org/content/journal/jgv/10.1099/vir.0.043919-0#tab2) sounds like NL63 only affects ACE2 on infected cells, and doesn't so much "downregulate" it as "obliterate" it. So my super tentative take is: even if we start with high levels, that may not be sufficient to be protective if the infection gets bad; it would be more important to focus on stopping it from getting bad. But followup questions would be: what percent of cells express ACE2? What percent of those get infected, in a (light/moderate/bad) infection? When we do things that increase/decrease ACE2, does that increase the amount of ACE2 on individual cells, or the number of cells with any ACE2, or both? If a cell has lots of ACE2, does it do more of the sorts of things that ACE2 is good for?)
 
-I'll talk about interferon in a future post, because it's not relevant to any of the "essentials".
+I'll talk about interferon in a future post, because it's not relevant to anything in this post.
 
 ### Daily essential: Elderberry
 
@@ -111,7 +111,7 @@ But now there's direct evidence that [the virus infects the throat too](https://
 
 So it seems that although the main infection site is the lungs, the infection starts in the mouth, nose or throat. We can specifically target those with ionic zinc, for which see below.
 
-We don't have a specific mechanism to target the lung with zinc. We just have to take it orally in the normal way (that is, in food or supplements) and let it be distributed there.
+We don't have a specific mechanism to target the lungs with zinc. We just have to take it orally in the normal way (that is, in food or supplements) and let it be distributed there.
 
 Chris recommends 7-15mg of zinc four times a day, away from sources of phytate ("whole grains, nuts, seeds, and legumes") which can inhibit zinc intake.
 
@@ -137,7 +137,7 @@ This specifically means zinc from [the kind of lozenges that work for a cold](ht
 
 It delivers ionic zinc to the mouth, nose and throat tissues, like we couldn't do with the lungs. Chris recommends using one lozenge a day preventatively; plus several a day on the first sign of symptoms; plus an extra one before and after any potential exposure.
 
-(Question: this delivers ionic zinc to the surfaces of these tissues, while we want it on the inside. Will that work?)
+(Question: to be effective against the cold, this delivers ionic zinc to the surfaces of these tissues. Here we want it on the inside. Will that work?)
 
 ### Daily essential: Copper
 
