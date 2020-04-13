@@ -6,7 +6,7 @@ If you maintain an open source project, what responsibilities do you have toward
 
 (In the drama in question, this wasn't the only thing at issue. But it was a relevant question.)
 
-I thought I'd take a stab at describing my best guess as to how we answer it [in my culture](https://medium.com/@ThingMaker/in-my-culture-29c6464072b2): in the culture that I think (and hope) many copies of me would implement, if we had that opportunity. (That culture doesn't attempt to exclude people who *aren't* copies of me, so it does need to be robust to attack. In my culture, we do not just assume in defiance of all evidence that everyone is friendly and trustworthy.)
+I thought I'd take a stab at describing my best guess as to how we answer it [in my culture](https://medium.com/@ThingMaker/in-my-culture-29c6464072b2): in the culture that exists only in my mind, but that I think (and hope) many copies of me would implement, if we had that opportunity. (That culture doesn't attempt to exclude people who *aren't* copies of me, so it does need to be robust to attack. In my culture, we do not just assume in defiance of all evidence that everyone is friendly and trustworthy.)
 
 Some of this will probably seem obvious to many readers, like "in my culture, murder is considered bad". Probably different bits to different readers. I'm interested in discovering which bits seem obvious to almost everyone, and which bits are controversial.
 
@@ -14,7 +14,7 @@ A lot of it follows from how I think about responsibility in general. But if you
 
 I do not intend, in this essay, to discuss whether any particular person or group is living up to the standards I outline here. I may do that [in future](https://www.greaterwrong.com/posts/Btdy7Fefer7S5J6qE/now-here-s-why-i-m-punching-you). But how likely that is, and what that follow-up looks like, depends on whether the responses to this essay suggest a lot of people agree with my culture.
 
-I think there are at least three important limitations to this essay. One is that as far as I know I've never been a maintainer of an open source project that had users other than myself, though I've made small contributions to a few. As such, I don't really know what the experience is like or how my culture deals with its challenges, much like I don't really know how my culture deals with the challenges of being on a moon base. I can make educated guesses, but that's all they are. I'm not going to explicitly flag them as such in the main body. (I'm already using the words "in my culture, we..." far too much. I'm not changing it to "in my culture, my educated guess is that we...")
+I think there are at least three important limitations to this essay. One is that as far as I know I've never been a maintainer of an open source project that had users other than myself, though I've made small contributions to a few. As such, I don't really know what the experience is like or how my culture deals with its challenges, much like I don't really know how my culture deals with the challenges of living in Antarctica. I can make educated guesses, but that's all they are. I'm not going to explicitly flag them as such in the main body. (I'm already using the words "in my culture, we..." far too much. I'm not changing it to "in my culture, my educated guess is that we...")
 
 Another is that I don't talk at all about the responsibilities of *users*, which is also an important part of the question. I'd like to, but... this essay has been knocking around in my head for at least a year and a half, I've made at least one previous attempt to write it that I gave up on, and I'm worried that if I don't publish it quickly I never will. I hope and believe that even with this omission, it is better for this essay to be published than to not be published.
 
@@ -32,9 +32,9 @@ In my culture, merely making something available does not make you responsible f
 
 In my culture, you take on more responsibility for a project if...
 
-* If you start *encouraging* people to use your project. If someone happens to stumble across your repository, you have no responsibility for what they do. If you see them describe a problem they have, and you say "oh hey, I had that problem too, you might want to check out my repo" you have a little. If you create a website for your project where you describe it as "the best way to solve this problem", you have more.
+* If you start *encouraging* people to use your project. If someone happens to stumble across a repository you never specifically shared, you have no responsibility for it. If you see them describe a problem they have, and you say "oh hey, I had that problem too, you might want to check out my repo" you have a little. If you create a website for your project where you describe it as "the best way to solve this problem", you have more.
 
-* If you have *many* users, whether you encouraged them or not. If you shirk your responsibilities, most of the harm done is to your users[^other-stakeholders]. With fewer users, the harm from not-acting-responsibly is lower, and so the responsibilities themselves are lower.
+* If you have *many* users. If you shirk your responsibilities, most of the harm done is to your users[^other-stakeholders]. With fewer users, the harm from not-acting-responsibly is lower, and so the responsibilities themselves are lower.
 
 * If your users are *invested* in your project. If they can't easily stop using it, you have more responsibility to treat them well.
 
