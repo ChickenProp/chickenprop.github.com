@@ -1,6 +1,7 @@
 ---
 title: "In my culture: the responsibilities of open source maintainers"
-layout: draft
+layout: post
+lw_xpost: true
 ---
 If you maintain an open source project, what responsibilities do you have towards your users? Some recent drama (that I won't link to) reminded me that there are large differences in how people answer that question.
 
