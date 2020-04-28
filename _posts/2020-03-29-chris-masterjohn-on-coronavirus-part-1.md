@@ -3,6 +3,8 @@ title: "Chris Masterjohn on Coronavirus, Part 1"
 layout: post
 lw_xpost: true
 ---
+**Update (April 28th 2020): [Part 2](http://reasonableapproximation.net/2020/04/28/chris-masterjohn-on-coronavirus-part-2.html) published.
+
 **Update (April 5th 2020): Chris released version two of his recommendations on April 2nd. There are some fairly major revisions. In particular, Chris now thinks [Coronavirus infects the throat, not just the lungs](https://chrismasterjohnphd.com/the-covid-19-coronavirus-infects-the-throat-covid-19-updates). He was already making recommendations just in case this turned out to be true, so he hasn't specifically added anything, but it's still an important update. The other thing of note is that he no longer recommends using copper spray or taking echinacea until you get sick, except (for the copper) before and after potential exposure. I've updated this post accordingly. You can still read [version 1](http://reasonableapproximation.net/history/chris-masterjohn-on-coronavirus-part-1-v1.html).**
 
 Chris Masterjohn is a nutritionist who has some [advice on supplements](https://chrismasterjohnphd.com/what-im-doing-for-the-coronavirus) to take to help protect against Covid-19, and some to avoid. The raw advice is available for free, but the full report with explanation and references costs $10. I bought a copy. (The public advice has not been updated to reflect version 2.)
@@ -68,6 +70,8 @@ ACE2 is an enzyme used in regulating blood pressure. SARS-CoV-2 enters our cells
     By comparison, the common cold is mostly caused by rhinoviruses, and most of those dock to ICAM-1. Some colds are caused by coronaviruses, but those dock to aminopeptidase N or sialic acid. The flu docks to sialic acid. So if something protects against those by preventing them from docking, it's likely to have no effect on Covid-19.
 
 (Question: "The binding of SARS-CoV to ACE2 is thought to downregulate ACE2 expression, leading to a loss of the anti-proliferative and anti-fibrotic actions of ACE2 in the lung, thereby contributing to the lung damage that occurs in SARS." That seems to point in favor of increasing levels of ACE2, so that it getting downregulated is not such a big deal. How to weigh these two concerns? I haven't read it closely, but [this](https://www.microbiologyresearch.org/content/journal/jgv/10.1099/vir.0.043919-0#tab2) sounds like NL63 only affects ACE2 on infected cells, and doesn't so much "downregulate" it as "obliterate" it. So my super tentative take is: even if we start with high levels, that may not be sufficient to be protective if the infection gets bad; it would be more important to focus on stopping it from getting bad. But followup questions would be: what percent of cells express ACE2? What percent of those get infected, in a (light/moderate/bad) infection? When we do things that increase/decrease ACE2, does that increase the amount of ACE2 on individual cells, or the number of cells with any ACE2, or both? If a cell has lots of ACE2, does it do more of the sorts of things that ACE2 is good for?)
+
+**Update 28th April 2020:** Chris has [written more about this](https://chrismasterjohnphd.com/covid-19/my-response-to-rhonda-patrick-on-vitamin-d-and-covid-19), see section "ACE2: Friend or Foe?" He points out that differing ACE2 levels are likely to have much more effect on viral replication (which is an exponential process) than on normal bodily functioning (which isn't).
 
 I'll talk about interferon in a future post, because it's not relevant to anything in this post.
 
