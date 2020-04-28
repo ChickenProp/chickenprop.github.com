@@ -10,9 +10,9 @@ Background on this in [part one](http://reasonableapproximation.net/2020/03/29/c
 
 They also have a bunch of other ways to limit production of interferon, and on top of that they limit the response to the interferon that does get produced.
 
-This all sounds like "so we should ramp up interferon". But that's probably a bad idea. During early stages of the virus, interferon is suppressed, so the virus can replicate quickly. But when the infection is established, macrophages generate a lot of interferon, leading to a [cytokine storm](https://en.wikipedia.org/wiki/Cytokine_release_syndrome). In a mouse trial, deleting the genes for the main interferon receptor made the subjects very resistant to SARS-CoV, but very vulnerable to mouse hepatitis virus and influeza A, compared to normal mice. (0% died to a dose of SARS-CoV[^mouse-trial-sars-cov] that killed 85% of normal mice; but 100% died to a dose of the other viruses that killed 10-20% of normal mice.)
+This all sounds like "so we should ramp up interferon". But that's probably a bad idea. During early stages of the virus, interferon is suppressed, so the virus can replicate quickly. But when the infection is established, macrophages generate a lot of interferon, leading to a [cytokine storm](https://en.wikipedia.org/wiki/Cytokine_release_syndrome). In a [mouse trial](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4752723/), deleting the genes for the main interferon receptor made the subjects very resistant to SARS-CoV, but very vulnerable to mouse hepatitis virus and influeza A, compared to normal mice. (0% died to a dose of SARS-CoV[^mouse-trial-sars-cov] that killed 85% of normal mice; but 100% died to a dose of the other viruses that killed 10-20% of normal mice. Well, none of the mice were "normal", they all had to be engineered to have human ACE2 to make them vulnerable to SARS-CoV in the first place.)
 
-[^mouse-trial-sars-cov]: In the first reference to this study, Chris says this was a dose of SARS-CoV-2. I think that was just a typo/brain fart. He later refers to it as if it was SARS-CoV, and the reference is from 2016.
+[^mouse-trial-sars-cov]: In the first reference to this study, Chris says this was a dose of SARS-CoV-2. I think that was just a typo/brain fart. Though actually, it wasn't SARS-CoV either, it was [MA15](https://www.ncbi.nlm.nih.gov/pubmed/17222058) which is a strain of SARS-CoV adapted to infect mice. Chris doesn't mention this, but to be fair the paper calls it SARS-CoV. I guess the idea is that it's a close enough model as we ever really get in this kind of work? I think I've also seen references to mice engineered to have human ACE2 (I think as well as their native ACE2), but I can't find them now.
 
 (Question: "During the replication of the virus, macrophages are recruited to the lung". These are what release the interferon. What is a macrophage and what is recruiting them and why?)
 
@@ -20,7 +20,9 @@ We don't yet know that any of this applies to SARS-CoV-2 as well, but it seems l
 
 (Question: LW user CellBioGuy [is bullish on](https://www.lesswrong.com/posts/nRX7uwT2wNvvmd2Yd/coronavirus-justified-key-insights-thread#comment-hRzw8sejgnb5C8C7B) inhaled interferon pretreatment, which I take it means "inhaling interferon before the disease gets bad". Does this square with Chris' recommendations? It wouldn't surprise me if inhaling interferon increases your levels in the short term but not the long term, which is exactly what we want. On the other hand, he links a paper whose abstract says SARS-CoV-2 "is much more sensitive [than SARS-CoV] to type I interferon pretreatment", so maybe this is just a case of "generalizing from SARS-CoV didn't work here".)
 
-On April 25, Chris [wrote more about this](https://chrismasterjohnphd.com/covid-19/new-evidence-that-interferon-can-be-harmful-in-covid-19) on his mailing list. My own summary: in hamsters with their native ACE2 (which is similar enough to human ACE2 that they can get infected), eliminating the type 1 interferon response increased the amount of virus in various body parts including the lungs; but dramatically reduced lung damage. Chris notes that this is a bit weird, but takes it as supporting his hypothesis, and I'm inclined to agree.
+On April 25, Chris [wrote more about this](https://chrismasterjohnphd.com/covid-19/new-evidence-that-interferon-can-be-harmful-in-covid-19) on his mailing list. My own summary: in hamsters infected with SARS-CoV-2[^hamster-trial], eliminating the type 1 interferon response increased the amount of virus in various body parts including the lungs; but dramatically reduced lung damage. Chris notes that this is a bit weird, but takes it as supporting his hypothesis, and I'm inclined to agree.
+
+[^hamster-trial]: This was actual SARS-CoV-2. Unlike mouse ACE2, hamster ACE2 is similar enough to human ACE2 that they can get a severe infection going from the regular virus.
 
 ### Every-day optional add-on: Garlic or stabilized allicin
 
@@ -40,7 +42,7 @@ Chris recommends this as an optional daily add-on, because although it's never b
 
 ### If you get sick optional add-on: Echinacea
 
-I've never heard of this. Apparently [it's a herb](https://en.wikipedia.org/wiki/Echinacea). It "[has been used for the common cold](https://www.ncbi.nlm.nih.gov/pubmed/16678640)", which isn't saying much (what hasn't?) but the citation suggests it was also at least somewhat effective. Wikipedia is skeptical, and this seems to be the only evidence Chris provides that it has any positive effects at all.
+I've never heard of this. Apparently [it's a herb](https://en.wikipedia.org/wiki/Echinacea). It "[has been used for the common cold](https://www.ncbi.nlm.nih.gov/pubmed/16678640)", which isn't saying much (what hasn't?) but the citation suggests it was also at least somewhat effective. But this seems to be the only evidence Chris provides that it has any positive effects at all; Wikipedia is skeptical.
 
 The mechanism of its effect seems to be boosting the immune system, so we might worry that it does so by increasing interferon. But instead it seems to work by increasing "inducible nitric oxide synthase" (iNOS). That doesn't seem to be protective against contracting SARS, but in mice it helps protect against the long-term damage that SARS does to the lungs.
 
@@ -56,7 +58,7 @@ Chris recommends getting enough vitamin C "to support normal immune function", w
 
 In the first version of the report, Chris considered this an optional add-on. He no longer includes it in his list of recommendations, but the sections where he explained his recommendation are still in the report, unchanged. I'm not sure what's up with that.
 
-Another thing that I'm not sure what's up with: In one section, Chris says: Normally we get cysteine by eating protein. [NAC](https://en.wikipedia.org/wiki/Acetylcysteine) helps us get more [cysteine](https://en.wikipedia.org/wiki/Cysteine) into our cells, and the extra cysteine is good for the immune system and lung health. In another section, he says NAC "is a precursor to [glutathione](https://en.wikipedia.org/wiki/Glutathione), which is critical for lung function." He's not very detailed about either of these claims, so I'm not sure how to put them together, and a quick glance at wikipedia doesn't really help. (There's totally room in my lack-of-understanding for them both to be true, it's just a bit weird that we have two different descriptions of its effects.)
+Another thing that I'm not sure what's up with. In one section, Chris says: Normally we get cysteine by eating protein. [NAC](https://en.wikipedia.org/wiki/Acetylcysteine) helps us get more [cysteine](https://en.wikipedia.org/wiki/Cysteine) into our cells, and the extra cysteine is good for the immune system and lung health. In another section, he says NAC "is a precursor to [glutathione](https://en.wikipedia.org/wiki/Glutathione), which is critical for lung function." He's not very detailed about either of these claims, so I'm not sure how to put them together, and a quick glance at wikipedia doesn't really help. (There's totally room in my lack-of-understanding for them both to be true, it's just a bit weird that we have two different descriptions of its effects.)
 
 Apart from being generally good for the lungs, the reason for recommending it - if he does recommend it - seems to be a single case where large amounts of NAC helped someone to recover from pneumonia caused by H1N1. There's no reason to think it might help prevent COVID-19, but it might help mitigate the damage.
 
@@ -66,7 +68,7 @@ Vitamin A is vital to the immune system, and you shouldn't get deficient. But it
 
 (Question: how easy is it to avoid publication bias / confirmation bias / etc. here? If some people found situations where ACE2 didn't get raised by Vitamin A, would that result have been published and would Chris have found it? He does mention studies like that for vitamin D, so that's at least evidence for yes and yes.)
 
-### Limit: Vitamin D
+### Limit with caveats: Vitamin D
 
 Like vitamin A, vitamin D runs the risk of increasing ACE2 levels. We have three rat studies supporting this, two rat studies contradicting it, and one human study contradicting it.
 
