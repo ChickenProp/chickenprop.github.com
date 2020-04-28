@@ -104,6 +104,6 @@ This hasn't been found to have significant direct antiviral properties against a
 
 Monolaurin seems to damage lipid envelopes, as well as the membrane of cells without cell walls, so SARS-CoV-2 is probably vulnerable to it. But so are human T cells. The risk of impairing those seems unacceptably high, and Chris recommends avoiding monolaurin.
 
-There's an argument that it "only [hurts] pathogenic organisms because it is effective against yeast and the bacteria that cause bacterial vaginosis, but not against lactobacillus", but Chris thinks that's just because [lactobacillus](https://en.wikipedia.org/wiki/Lactobacillus) has a cell wall, and there are probiotics which don't have anything like that which would probably be vulnerable too.
+There's an argument that it hurts only pathogens "because it is effective against yeast and the bacteria that cause bacterial vaginosis, but not against lactobacillus", but Chris thinks that's just because [lactobacillus](https://en.wikipedia.org/wiki/Lactobacillus) has a cell wall, and there are probiotics which don't have anything like that which would probably be vulnerable too.
 
 (I think the idea that this would only hurt pathogens seems absurd, but what do I know. The [citation](https://www.ncbi.nlm.nih.gov/pubmed/20008774) for that clause doesn't seem to present the argument, so I'm not sure who's making it or if Chris is representing it accurately, but people have been to occasionally say absurd things.)
