@@ -1,6 +1,7 @@
 ---
 title: "Chris Masterjohn on Coronavirus, Part 2"
-layout: draft
+layout: post
+lw_xpost: true
 ---
 Background on this in [part one](http://reasonableapproximation.net/2020/03/29/chris-masterjohn-on-coronavirus-part-1.html).
 
