@@ -40,7 +40,7 @@ Separately, allicin has antibacterial effects, which work by the same mechanism 
 
 Chris recommends this as an optional daily add-on, because although it's never been tested directly against coronaviruses, it's plausible and seems to be safe.
 
-### If you get sick optional add-on: Echinacea
+### If you get sick, optional add-on: Echinacea
 
 I've never heard of this. Apparently [it's a herb](https://en.wikipedia.org/wiki/Echinacea). It "[has been used for the common cold](https://www.ncbi.nlm.nih.gov/pubmed/16678640)", which isn't saying much (what hasn't?) but the citation suggests it was also at least somewhat effective. But this seems to be the only evidence Chris provides that it has any positive effects at all; Wikipedia is skeptical.
 
