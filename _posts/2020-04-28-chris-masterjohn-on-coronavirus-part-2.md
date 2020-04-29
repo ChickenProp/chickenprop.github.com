@@ -3,6 +3,8 @@ title: "Chris Masterjohn on Coronavirus, Part 2"
 layout: post
 lw_xpost: true
 ---
+**Update (29th April 2020):** I've made a significant update to the vitamin D section in response to version 3 of the report.
+
 Background on this in [part one](http://reasonableapproximation.net/2020/03/29/chris-masterjohn-on-coronavirus-part-1.html).
 
 ### General info: Interferon
@@ -69,7 +71,7 @@ Vitamin A is vital to the immune system, and you shouldn't get deficient. But it
 
 (Question: how easy is it to avoid publication bias / confirmation bias / etc. here? If some people found situations where ACE2 didn't get raised by Vitamin A, would that result have been published and would Chris have found it? He does mention studies like that for vitamin D, so that's at least evidence for yes and yes.)
 
-### Limit with caveats: Vitamin D
+### Supplement to a point: Vitamin D
 
 Like vitamin A, vitamin D runs the risk of increasing ACE2 levels. We have three rat studies supporting this, two rat studies contradicting it, and one human study contradicting it.
 
@@ -79,11 +81,31 @@ Of the contradicting evidence, the human study and one of the rat studies looked
 
 The final rat study was looking at injury response of rat kidneys; the injury in question would normally increase ACE2 levels but vitamin D (or at least calcidiol, its partially activated metabolite) reduces that effect. But this seems to be caused by vitamin D making the kidneys more resilient to injury, not by directly suppressing ACE2. So it probably isn't relevant here.
 
-Weighing up, vitimin D seems likely to increase ACE2, and Chris recommends against supplementing it (but still against becoming deficient).
+Weighing up, vitimin D seems likely to increase ACE2, and in versions one and two of the report Chris recommended against supplementing it (but still against becoming deficient).
 
-**Except that** based on a more recent study, Chris [now recommends](https://chrismasterjohnphd.com/covid-19/update-on-vitamin-d-and-covid-19-using-the-first-observational-study-released) supplementing "to shoot for a 25(OH)D of 30 ng/mL" (more info at the link). He still recommends not going higher than that. He sent that to his mailing list on April 24th, and said he'd update the report "tomorrow"; as of this writing he has not done so.
+**Update (April 29th 2020):** The rest of this section is based on info added in version three of the report, which Chris released less than an hour after I published.
 
-(Note: He says 900 IU/day is sufficient for the average person to reach that level. By comparison, different institutions generally recommend daily intakes around [600 IU/day](https://en.wikipedia.org/wiki/Vitamin_D#Recommended_levels), and for the past few years I've been supplementing with 3000 IU on weekdays.)
+However, vitamin D may affect some of the factors that predict a severe or lethal case of COVID-19. The factors Chris mentions are: "low lymphocytes, a high ratio of neutrophils to CD8+ T cells, and high interleukin-6 (IL-6)." (These are all in the bad direction, i.e. low lymphocytes predicts worse disease progression.)
+
+There's lots of confusing and somewhat contradictory studies here. Some of it is to do with CD4 T cell counts, which I'm not sure what the relevance is. But it seems there's at least some reason to think that vitamin D supplementation may sometimes increase lymphocyte counts and/or decrease the ratio of neutrophils to lymphocytes. (I guess that last is good for at least one of those factors whether it incseases the numerator or denominator, as long as it doesn't decrease CD8+ T cells.)
+
+There's also lots of studies on the effect of vitamin D on IL-6 in specific contexts. "Middle-age and older adults": four studies, no effect. "Hemodialysis patents": four studies, no effect. "Obese and overweight patients": eight studies, no effect. "Diabetes": five studies, no effect. "Heart failure": reduction in one study, not in another. "Diabetic kidney disease": three studies, reduction in all. "Ventilator-associated pneumonia": one study, reduction. Notably, this last is most relevant to COVID-19.
+
+Chris sums up: "A reasonable interpretation of these studies is that vitamin D does not affect IL-6 under conditions of chronic low-grade inflammation, but does lower IL-6 during acute and highly inflammatory conditions." (I note two reasons to be unsure of this. Firstly, that with this many conditions being tested, and so few positives, we should probably make sure we're not accidentally p-hacking. Secondly, that the the pneumonia study involved "intramuscular injection of 300,000 IU vitamin D" which may not tell us much about oral vitamin D supplements of less than 1% that amount.)
+
+But we also have observational studies between vitamin D levels and COVID-19 severity. Chris has [written about one of them publicly](https://chrismasterjohnphd.com/covid-19/update-on-vitamin-d-and-covid-19-using-the-first-observational-study-released)[^other-studies]; the other is [here](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3585561), though I think all the specific numbers in the report are from the first one. The summary is that given a case of COVID-19, case severity is strongly correlated with low levels of vitamin D in the bloodstream.
+
+[^other-studies]: He also briefly discusses some of the studies mentioned above, in that post.
+
+We haven't established causality here, and there's reason to think it goes the other way (inflammation depletes vitamin D).
+
+We have no information on high levels, and Chris is worried about a U-shaped curve. I note a complexity penalty: if the correlation is monotonic in the region of the space that we've explored, expecting it to shift direction in the space we haven't explored requires some justification. Is there a reason it doesn't shift in the space we explored, or just bad luck?
+
+Chris doesn't really address this. But the space we haven't explored here is [anything above the level associated with the lowest all-cause mortality] ("in all relevant studies except a single outlier that was only published as a conference abstract"). Plus, if we assume the patients mostly weren't supplementing vitamin D, then maybe the space we haven't explored here is also [anything above the highest natural levels humans seem to reach], and it's not too surprising if things shift direction in that space. So it's not as suspicious as it looks at first.
+
+Anyway. Based on all this, Chris now recommends aiming for a specific level of vitamin D in the bloodstream: 30 ng/mL. He thinks the ideal is to test your levels every 2-4 weeks, but the [home testing kit](https://www.grassrootshealth.net/project/daction/) he links to seems to cost $65/test plus shipping, and he hasn't convinced me it's worth that much. Failing that, he recommends supplementing 1000 IU/day.
+
+(I also note that, by recommending against both supplementation and deficiency, Chris was always implicitly predicting a U-shaped curve - just with the inflection point at a lower level. By comparison, different institutions generally recommend daily intakes around [600 IU/day](https://en.wikipedia.org/wiki/Vitamin_D#Recommended_levels). So supplementing 1000 IU, on top of whatever you get from food and sunlight, seems like give-or-take doubling his previous recommendation.)
 
 ### Limit: Calcium
 
