@@ -3,6 +3,8 @@ title: "Chris Masterjohn on Coronavirus, Part 2"
 layout: post
 lw_xpost: true
 ---
+**Update (May 8th 2020):** Some small updates to the interferon and vitamin D sections.
+
 **Update (29th April 2020):** I've made a significant update to the vitamin D section in response to version 3 of the report.
 
 Background on this in [part one](http://reasonableapproximation.net/2020/03/29/chris-masterjohn-on-coronavirus-part-1.html).
@@ -10,6 +12,8 @@ Background on this in [part one](http://reasonableapproximation.net/2020/03/29/c
 ### General info: Interferon
 
 [Interferon](https://en.wikipedia.org/wiki/Interferon) is an antiviral that our immune system naturally releases when it detects invasion. But SARS-CoV and MERS-CoV (the virus that causes MERS) manage to avoid this response. The trigger is the presence of double-stranded RNA, which viruses need but our own cells don't. (We make single-stranded RNA from DNA, and then proteins from single-stranded RNA. We never need to copy our RNA. But viruses do need to copy their RNA, and apparently that means viral RNA needs to be double-stranded.) SARS-CoV and MERS-CoV hide their double-stranded RNA inside "double-membrane vesicles" to avoid detection.
+
+**Update May 8th 2020:** I've seen multiple sources saying SARS-CoV-2 is a single-stranded RNA virus, and wikipedia says SARS-CoV and MERS-CoV are too. I'm a bit confused by this, and frustratingly Chris doesn't cite this part. From a quick google, the abstract of [this paper](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2535663/) sounds like a single-stranded RNA virus can still have double-stranded RNA, or produce double-stranded RNA at some point, or something? Note that Chris doesn't say that the viruses *are* double-stranded RNA viruses, just that they *have* double-stranded RNA.
 
 They also have a bunch of other ways to limit production of interferon, and on top of that they limit the response to the interferon that does get produced.
 
@@ -106,6 +110,8 @@ Chris doesn't really address this. But the space we haven't explored here is [an
 Anyway. Based on all this, Chris now recommends aiming for a specific level of vitamin D in the bloodstream: 30 ng/mL. He thinks the ideal is to test your levels every 2-4 weeks, but the [home testing kit](https://www.grassrootshealth.net/project/daction/) he links to seems to cost $65/test plus shipping, and he hasn't convinced me it's worth that much. Failing that, he recommends supplementing 1000 IU/day.
 
 (I also note that, by recommending against both supplementation and deficiency, Chris was always implicitly predicting a U-shaped curve - just with the inflection point at a lower level. By comparison, different institutions generally recommend daily intakes around [600 IU/day](https://en.wikipedia.org/wiki/Vitamin_D#Recommended_levels). So supplementing 1000 IU, on top of whatever you get from food and sunlight, seems like give-or-take doubling his previous recommendation.)
+
+**Update May 8th 2020:** Chris has now also written about [the second study](https://chrismasterjohnphd.com/covid-19/the-second-study-on-vitamin-d-and-covid-19-is-now-out) as well as [two others](https://chrismasterjohnphd.com/covid-19/two-new-vitamin-d-studies) that don't change his recommendation. We now have a little data about patients with high vitamin D levels - not enough to draw strong conclusions, but at least one of them did have a severe case. He says these studies make the link between vitamin D and severity seem to be more robust but weaker - that is, he's more confident that there is a link, but the link seems less strong than previously.
 
 ### Limit: Calcium
 
