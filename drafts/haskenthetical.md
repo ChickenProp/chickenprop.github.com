@@ -1,6 +1,7 @@
 ---
 title: Haskenthetical
 layout: draft
+lw_xpost: true
 ---
 This is a toy language I've been designing, or at least implementing, for about a year.
 
@@ -207,7 +208,7 @@ Finally, [evaluation](https://github.com/ChickenProp/haskenthetical/blob/master/
 * A closure is the thing that gets returned when we evaluate a `λ` expression. It captures a snapshot of the current environment, the name of the argument, and the body expression. If a λ has multiple arguments, it returns nested closures.
 * A builtin is a regular Haskell function of type `Val -> Either Text Val` (plus a name to distinguish them). Builtins and closures are ultimately the only things that can be called as functions.
 * A Thunk is an unevaluated expression, with a copy of its environment. They get evaluated as soon as anything returns them. Currently they're used in two places. `letrec` needs them because we can't evaluate bindings before adding them to the environment or we'd get infinite recursion. Type eliminators are builtin values, but the `Val` they return is a Thunk (with empty environment) to avoid the Haskell file Env.hs from having to reference Eval.hs.
-* A tag is just a symbol (a Haskell `Text` under the hood) paired with a list of other values. Constructors wrap their arguments in a tag, and eliminators and pattern matching compare tags. There's no way to look at or manipulate the symbol directly in Haskenthetical, but I'd be curious to explore that direction.
+* A tag is just a symbol (a Haskell `Text` under the hood) paired with a list of other values. Constructors wrap their arguments in a tag, and eliminators and pattern matching compare those symbols. There's no way to look at or manipulate the symbol directly in Haskenthetical, but I'd be curious to explore that direction.
 
 I'll mention a couple other things that might be of note. These probably require more background knowledge of Haskell to make sense.
 
