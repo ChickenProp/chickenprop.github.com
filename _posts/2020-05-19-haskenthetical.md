@@ -1,6 +1,6 @@
 ---
 title: Haskenthetical
-layout: draft
+layout: post
 lw_xpost: true
 ---
 This is a toy language I've been designing, or at least implementing, for about a year.
