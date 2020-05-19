@@ -124,9 +124,9 @@ Other type declarations would look like:
 
 ```
 (letrec ((id (λ x
-                (let ((a (id 3))
-                      (b (id "foo")))
-                  x))))
+               (let ((a (id 3))
+                     (b (id "foo")))
+                 x))))
   ...)
 ```
 
@@ -184,15 +184,15 @@ Then I parse each tree into a statement (or expression, but that's just a type o
 
 [Typechecking](https://github.com/ChickenProp/haskenthetical/blob/master/src/TypeCheck.hs)<sup><small>[¶](https://github.com/ChickenProp/haskenthetical/blob/54d7571f1662af68418840645435ab7d0e719003/src/TypeCheck.hs)</small></sup> is [Hindley-Milner](http://reasonableapproximation.net/2019/05/05/hindley-milner.html). When I wrote that essay, I said I didn't know how to implement HM typechecking. I have some idea now, and would describe it vaguely like this:
 
-> Recurse down the parse tree. At each step there are a few relevant types that you get to say "unify" with each other, roughly meaning "these are two different ways of writing the same type". Sometimes you look those types up in the environment, sometimes you just generate fresh type variables, and sometimes you generate fresh type variables and then add them to the environment. But as you go, you're building up a big list of *constraints*, pairs of types that unify. Also, each node gets a specific type assigned to it, which will generally be placed in a constraint. This stage is called "unification". For example, if you see the function call `(foo bar)`, you'll recurse down to get types `t1` for `foo` and `t2` for `bar`, and you'll generate a fresh type variable `t3` for the result. Then you'll say that `t1` unifies with `(-> t2 t3)`.
+> Recurse down the parse tree. At each step there are a few relevant types that you get to say "unify" with each other, roughly meaning "these are two different ways of writing the same type". Sometimes you look those types up in the environment, sometimes you just generate fresh type variables, and sometimes you generate fresh type variables and then add them to the environment. But as you go, you're building up a big list of *constraints*, pairs of types that unify. Also, each node gets a specific type assigned to it, which will generally be placed in a constraint. This stage is called "unification". For example, if you see the function call `(foo bar)`, you'll recurse down to get types `t1` for `foo` and `t2` for `bar`, and you'll generate a fresh type variable `t3` for the result. Then you'll say that `t1` unifies with `-> t2 t3`.
 >
-> When you've finished, you loop back over the list of constraints, and build up a *substitution*. Any time you see "this type variable should be the same as this other type", you add that to the substitution, and you make that substitution in the remaining constraints before looking at them. If you see two types that should be the same but the non-variable parts of them don't match up, that indicates a type error in the program. This stage is called "solving". For example, if we have the constraint that types `(-> $a String)` and `(-> (Maybe Float) String)` unify, then whenever we see type variable `$a` in future we can substitute it for `Maybe Float`; if the second one had instead been `(-> (Maybe Float) Float)`, then those don't match up and the program doesn't typecheck.
+> When you've finished, you loop back over the list of constraints, and build up a *substitution*. Any time you see "this type variable should be the same as this other type", you add that to the substitution, and you make that substitution in the remaining constraints before looking at them. If you see two types that should be the same but the non-variable parts of them don't match up, that indicates a type error in the program. This stage is called "solving". For example, if we have the constraint that types `-> $a String` and `-> (Maybe Float) String` unify, then whenever we see type variable `$a` in future we can replace it with `Maybe Float`; if the second one had instead been `-> (Maybe Float) Float`, then those don't match up and the program doesn't typecheck.
 >
 > In the end, you apply your substitution to the type of the program as a whole that you got from unification, and that's the ultimate type inferred for the program. If there are any type variables left, the program doesn't fix them. (An example of this would be if the program was simply `Nothing`.)
 
 Of course it's more complicated than that. For example, `let` and `letrec` need you to run solving during the unification phase. Also, declared types need to be treated specially so that you can reject if the user declares `Just 3` as `Maybe $a`.
 
-Aside, a thing I don't fully understand: this implementation looks to me like it's something like O(n^2) in the size of the input. It's supposed to be roughly linear. I'm not sure if I'm missing something or if there's just a more efficient algorithm.
+Aside, a thing I don't fully understand: I haven't tried timing it, but this implementation looks to me like it's something like O(n²) in the size of the input. It's supposed to be roughly linear. I'm not sure if I'm missing something or if there's just a more efficient algorithm.
 
 Anyway, that's roughly how I do it. I take this approach mostly from [Write You a Haskell](http://dev.stephendiehl.com/fun/) (notably chapter 7, section "constraint generation"[^chapter-7], but also other chapters were useful for other parts of Haskenthetical). But I had to figure out how to handle `letrec` myself, because the language implemented there uses `fix` instead[^fix]. I also took a lot from [Typing Haskell in Haskell](http://web.cecs.pdx.edu/~mpj/thih/thih.pdf), especially pattern matching. (I hadn't discovered it by the time I implemented `letrec`.) Neither source implements explicit type declarations[^h98], so I had to figure out those for myself too. I'm not convinced I did a very good job.
 
@@ -202,7 +202,7 @@ Anyway, that's roughly how I do it. I take this approach mostly from [Write You 
 
 [^h98]: THIH does have them for binding groups (like found in `let` and at the top level), but not expressions. That made me wonder if those weren't in the [Haskell 98 report](https://www.haskell.org/definition/haskell98-report.pdf), like how Elm doesn't have them. But they're there: §3.16, "Expression Type-Signatures".
 
-Finally, [evaluation](https://github.com/ChickenProp/haskenthetical/blob/master/src/Eval.hs)<sup><small>[¶](https://github.com/ChickenProp/haskenthetical/blob/54d7571f1662af68418840645435ab7d0e719003/src/Eval.hs): for the most part that's fairly straightforward. For example, when we evaluate a variable, we look up its value in the environment. When we evaluate a `let`, we evaluate something, add it to the environment under the relevant name, and go on to the next thing. There are a few [types of values](https://github.com/ChickenProp/haskenthetical/blob/master/src/Syntax.hs#L128)<sup><small>[¶](https://github.com/ChickenProp/haskenthetical/blob/54d7571f1662af68418840645435ab7d0e719003/src/Syntax.hs#L128)</small></sup> that we need only when evaluating:
+Finally, [evaluation](https://github.com/ChickenProp/haskenthetical/blob/master/src/Eval.hs)<sup><small>[¶](https://github.com/ChickenProp/haskenthetical/blob/54d7571f1662af68418840645435ab7d0e719003/src/Eval.hs)</small></sup>: for the most part that's fairly straightforward. For example, when we evaluate a variable, we look up its value in the environment. When we evaluate a `let`, we evaluate something, add it to the environment under the relevant name, and go on to the next thing. There are a few [types of values](https://github.com/ChickenProp/haskenthetical/blob/master/src/Syntax.hs#L128)<sup><small>[¶](https://github.com/ChickenProp/haskenthetical/blob/54d7571f1662af68418840645435ab7d0e719003/src/Syntax.hs#L128)</small></sup> that we need only when evaluating:
 
 * A closure is the thing that gets returned when we evaluate a `λ` expression. It captures a snapshot of the current environment, the name of the argument, and the body expression. If a λ has multiple arguments, it returns nested closures.
 * A builtin is a regular Haskell function of type `Val -> Either Text Val` (plus a name to distinguish them). Builtins and closures are ultimately the only things that can be called as functions.
@@ -292,4 +292,4 @@ I dunno if this is much better, honestly, but there we are. It needs `Applicativ
 
 ---
 
-So that's where it's at right now. Feel free to point out ways that it sucks, although not-sucking isn't the point. I'm also interested in pointers to how I might implement some of the things on my future list (I'm aware of [Implementing a JIT Compiled Language with Haskell and LLVM](http://www.stephendiehl.com/llvm/), or other cool things I may like to put on that list, or even things you might happen to like about Haskenthetical.
+So that's where it's at right now. Feel free to point out ways that it sucks, although not-sucking isn't the point. I'm also interested in pointers to how I might implement some of the things on my future list (I'm aware of [Implementing a JIT Compiled Language with Haskell and LLVM](http://www.stephendiehl.com/llvm/)), or other cool things I may like to put on that list, or even things you might happen to like about Haskenthetical.
