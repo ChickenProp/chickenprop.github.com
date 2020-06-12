@@ -26,7 +26,7 @@ This was a really well regarded movie. It won six Oscars, including best picture
 
 I suspect all the praise came for reasons that I missed either because I was distracted by this stuff or because I'm just not into the kind of movie it was trying to be or something. But that's really not very specific.
 
-### The 2016 live action *[Jungle Book](https://en.wikipedia.org/wiki/The_Jungle_Book_\(2016_film\))* is surprisingly pro-human?
+### *[The Jungle Book](https://en.wikipedia.org/wiki/The_Jungle_Book_%282016_film%29)* (2016) is surprisingly pro-human?
 
 I don't think it was intended, and I might be putting too much of myself into it. But like-
 
@@ -34,7 +34,7 @@ Right up until the climax, tool use is shown as almost unambiguously good. Mowgl
 
 (The music to that scene is "The Bare Necessities", a song about how you should just take life easy and all your needs will be met. Everything you need is right within your reach. The implication seems to be that "using tools to extend your reach" is just the obvious, natural, path-of-least-resistance thing to do?)
 
-And the counterpoint isn't really there. Shere Khan says man isn't allowed in the jungle, but doesn't talk about why. Akela and Bagheera tell Mowgli to act more like a wolf and less like a man, his "tricks" are not the wolf way, but don't say what the problems are with manhood. Kaa shows fire being dangerous, but then with more realism shows fire being used to fight off Shere Khan and save Mowgli's life. Mowgli refuses to give fire to King Louie but doesn't explain his refusal. The elephant could have fallen into a human trap, but instead it was apparently just a pit. And the bees?
+And the counterpoint isn't really there, though there's plenty of opportunity. Shere Khan says man isn't allowed in the jungle, but doesn't talk about why. Akela and Bagheera tell Mowgli to act more like a wolf and less like a man, his "tricks" are not the wolf way, but don't say what the problems are with manhood. Kaa shows fire being dangerous, but then with more realism shows fire being used to fight off Shere Khan and save Mowgli's life. Mowgli refuses to give fire to King Louie but doesn't explain his refusal. The elephant could have fallen into a human trap, but instead it was apparently just a pit. And the bees?
 
 From the bees' perspective, I imagine Mowgli is probably terrifying. He knocks down honeycomb after honeycomb and he just keeps going. He's an existential threat to their society and there's nothing they can do about it, though they throw their lives away trying to stop him. I imagine.
 
@@ -52,9 +52,9 @@ And the fire is put out without too much trouble (when the elephants decide "act
 
 So the film roughly seems to be about how the things that separate man from the animals are actually really great. And that's... not what I was expecting.
 
-### Review: *[The Book of Mormon](https://en.wikipedia.org/wiki/The_Book_of_Mormon_\(musical\))*
+### Review: *[The Book of Mormon](https://en.wikipedia.org/wiki/The_Book_of_Mormon_%28musical%29)*
 
-From memory, *Team America* was funny and it had decent music. But what made it so great was that at the same time as being a parody of action films, it was also just legitimately good as an action film.
+From memory, *[Team America](https://en.wikipedia.org/wiki/Team_America:_World_Police)* was funny and it had decent music. But what made it so great was that while parodying action films, it still managed to be just legitimately good as an action film.
 
 *The Book of Mormon* was funny and it had decent music.
 
@@ -70,7 +70,7 @@ Also relevant: if it's critical of society, or even just the singers, then by ex
 
 I've been idly wondering this for over ten years. Today I got around to actually rewatching/relistening to it. It didn't help much.
 
-### Superhero origin stories: *[Matilda](https://en.wikipedia.org/wiki/Matilda_the_Musical)* and *[Wonder Woman](https://en.wikipedia.org/wiki/Wonder_Woman_\(2017_film\))*
+### Superhero origin stories: *[Matilda](https://en.wikipedia.org/wiki/Matilda_the_Musical)* and *[Wonder Woman](https://en.wikipedia.org/wiki/Wonder_Woman_%282017_film%29)*
 
 Wonder Woman has the overt message that ordinary people can't do very much (though not literally nothing). You need someone with super powers to beat up the villain and then everything will be fine. The love interest keeps trying to tell the hero that things are just not that simple, and he keeps getting proved wrong. This message is undercut by the historical realities of WWI.
 
@@ -88,17 +88,17 @@ Assorted other thoughts:
 
 "Sean" is derived from John, meaning "God is gracious". Arrows are of course both straight and narrow, signifying the path of God; "Archer" doesn't just follow the path of God, he directs it.
 
-Meanwhile, "Castor" is cognate to (or at least sounds a bit like) "caster", as in a Witch; and "Troy" refers to the Trojan war, signifying violence and trickery. Castor's brother is named "Pollux", a decidedly ugly name that sounds a lot like "pox", the plague. According to Wikipedia, Castor and Pollux (brothers of Helen of Troy) spent some time being venerated with Christian saints; and one of them may even have been the basis of John (Sean) the Apostle.
+Meanwhile, "Castor" is cognate to (or at least sounds a bit like) "caster", as in a witch; and "Troy" refers to the Trojan war, signifying violence and trickery. Castor's brother is named "Pollux", a decidedly ugly name that sounds a lot like "pox", the plague. According to Wikipedia, [Castor and Pollux](https://en.wikipedia.org/wiki/Castor_and_Pollux) (brothers of Helen of Troy) spent some time being venerated with Christian saints; and one of them may even have been the basis of John (Sean) the Apostle.
 
 "Adam", as I said before, signifies Man; Archer's daughter is named "Jamie", a gender-neutral name, to ensure we know that God loves his sons and daughters and nonbinary children equally.
 
-Archer's blood type is O-, the "purest" blood type (i.e. fewest antigens in the cells), which gives to all. Troy's is AB (unspecified, so probably AB+), the most "contaminated" type, which takes from all and never gives back. ("House" has used this same metaphor.)
+Archer's blood type is O-, the "purest" blood type (i.e. fewest antigens in the cells), which gives to all. Troy's is AB (unspecified, so probably AB+), the most "contaminated" type, which takes from all and never gives back. (*House* has used this same metaphor.)
 
 Canonically, I think Jesus is supposed to get crucified and stabbed with the holy lance. The film has both of these elements, but gets it a bit confused; while Troy is in the classic raised-arms position, Archer shoots him with a harpoon gun.
 
 The final confrontation, in which Good defeats Evil once and for all, is kicked off in a church; symbolically, in The Church, the hearts of God's followers. The battle startles the doves in the church, but we never see a dove die: the peace in our hearts may be disturbed, but will always return.
 
-It's hard to miss the symbolism of Archer breaking out of a hellish prison.[^miss] (The part of Thomas is briefly played by Jamie, when she shoots him.) The prison being named Erewhon ("nowhere" spelled almost backwards) probably intends to take a position on some Christian point of contention that I'm not really familiar with.
+It's hard to miss the symbolism of Archer breaking out of a hellish prison.[^miss] (The part of Thomas is briefly played by Jamie, when she shoots him.) The prison being named Erewhon ("nowhere" spelled almost backwards) probably intends to take a position on some Christian point of contention that I'm not familiar with.
 
 [^miss]: Confession: I totally missed that when I first wrote this.
 
@@ -108,17 +108,17 @@ This is perhaps the most overtly anti-makeup film I remember seeing ever.
 
 Don't think too hard about the fact that Archer's wife, Adam's adoptive mother, is named Eve.
 
-### Hot take: the *[Saw](https://en.wikipedia.org/wiki/Saw_\(franchise\))* franchise as exploration of meritocracy
+### Hot take: the *[Saw](https://en.wikipedia.org/wiki/Saw_%28franchise%29)* franchise as exploration of meritocracy
 
 Members of the underclass are given tests. If they pass, they get a new life. Thus, the meritorious are elevated to the elite. Meritocracy!
 
 (Once you've survived a Saw trap, food tastes nicer, your addiction vanishes, you quit the job you hate and get the one you've always dreamed of, puppies and rainbows and so on. I'm not sure how much this is actually shown in the series, but it's what Jigsaw is going for, and the series is much more interesting if it works.)
 
-This would be pretty dumb, but not obviously dumber than some of the [other stuff](https://en.wikipedia.org/wiki/3%25) out there.[^3%]
+This would be pretty dumb, but not obviously dumber than some of the [other stuff](https://en.wikipedia.org/wiki/3%25) out there.[^3-pct]
 
-[^3%]: I haven't actually seen *3%*. From memory, this was inspired by a reddit discussion where someone said good things about the show as an exploration of meritocracy. Based on wikipedia, I disagree.
+[^3-pct]: I haven't actually seen *3%*. From memory, this was inspired by a reddit discussion where someone said good things about the show as an exploration of meritocracy. Based on wikipedia, I disagree.
 
-### *[Captain Fantastic](https://en.wikipedia.org/wiki/Captain_Fantastic_\(film\))* is such a good movie
+### *[Captain Fantastic](https://en.wikipedia.org/wiki/Captain_Fantastic_%28film%29)* is such a good movie
 
 It's an exploration of culture. Ben and Leslie created their own culture and raised their kids in it. The kids have almost no exposure to American culture. Culture Fantastic isn't perfect, and Ben isn't a flawless exemplar of it. There are some things it does better than American culture, and other things it does worse. But it's fine.
 
@@ -140,7 +140,7 @@ Act 1: Stick to your principles.
 Act 2: War is hell.  
 Act 3: *[The War Prayer](https://en.wikipedia.org/wiki/The_War_Prayer)*, but unironically.
 
-### *[Once Upon a Time](https://en.wikipedia.org/wiki/Once_Upon_a_Time_\(TV_series\))* has terrible ethics
+### *[Once Upon a Time](https://en.wikipedia.org/wiki/Once_Upon_a_Time_%28TV_series%29)* has terrible ethics
 
 (Spoilers only up to season 2.)
 
