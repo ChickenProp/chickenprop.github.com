@@ -66,7 +66,7 @@ But then they go on to take his place, and as far as I can see they do it fine? 
 
 If we're meant to see them as incompetent, then it reads to me like a criticism of society-at-large; a claim that the singers' narcissism is widespread. But if we're not, then...?
 
-Also relevant: if it's critical of society, or even just the singers, then by extension it's defensive of Mr A. And if Mr A is meant to be identified with the comic book character, it becomes a defense of objectivism, which feels implausible on priors to me. (But maybe it was more likely in 1997? Wizard's First Rule only came out a few years before, I think that was objectivist? (By reputation that wikipedia doesn't immediately confirm.))
+Also relevant: if it's critical of society, or even just the singers, then by extension it's defensive of Mr A. And if Mr A is meant to be identified with the comic book character, it becomes a defense of objectivism, which feels implausible on priors to me. (But maybe it was more likely in 1997? [Wizard's First Rule](https://en.wikipedia.org/wiki/Wizard%27s_First_Rule) only came out a few years before, I think that was objectivist? By reputation that wikipedia doesn't immediately confirm.)
 
 I've been idly wondering this for over ten years. Today I got around to actually rewatching/relistening to it. It didn't help much.
 
