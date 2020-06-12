@@ -4,7 +4,7 @@ layout: draft
 ---
 Sometimes I write things in places that aren't here. Sometimes I think those things are worth preserving. Some of those things follow, with minor editing, mostly on the subject of various movies that I've watched. Also two stage musicals, one TV show, and one music video. They were written over the past four years, so I can't necessarily talk intelligently about these things any more. When I name a thing, spoilers generally follow.
 
-### I don't really get *The Hurt Locker*
+### I don't really get *[The Hurt Locker](https://en.wikipedia.org/wiki/The_Hurt_Locker)*
 
 It seemed like it was going to be a film about a cowboy with a death wish, who should be removed from duty but isn't because of institutional dysfunction in the US army. Or something along those lines.
 
@@ -26,13 +26,13 @@ This was a really well regarded movie. It won six Oscars, including best picture
 
 I suspect all the praise came for reasons that I missed either because I was distracted by this stuff or because I'm just not into the kind of movie it was trying to be or something. But that's really not very specific.
 
-### The 2016 live action *Jungle Book* is surprisingly pro-human?
+### The 2016 live action *[Jungle Book](https://en.wikipedia.org/wiki/The_Jungle_Book_\(2016_film\))* is surprisingly pro-human?
 
 I don't think it was intended, and I might be putting too much of myself into it. But like-
 
 Right up until the climax, tool use is shown as almost unambiguously good. Mowgli bangs rocks together to get a sharp stone to cut vines to make rope so he can climb down a cliff face and knock honeycombs with a stick, armored in clothes he makes. He collects honey on an unprecedented scale. Then he saves an elephant from a pit.
 
-(The music to that scene is "The Bare Necessities", a song about how you should just take life easy and all your needs will be met. Everything you need is right within your reach. The implication seems to be that "using tools to extend your reach" is just the obvious, natural thing to do?)
+(The music to that scene is "The Bare Necessities", a song about how you should just take life easy and all your needs will be met. Everything you need is right within your reach. The implication seems to be that "using tools to extend your reach" is just the obvious, natural, path-of-least-resistance thing to do?)
 
 And the counterpoint isn't really there. Shere Khan says man isn't allowed in the jungle, but doesn't talk about why. Akela and Bagheera tell Mowgli to act more like a wolf and less like a man, his "tricks" are not the wolf way, but don't say what the problems are with manhood. Kaa shows fire being dangerous, but then with more realism shows fire being used to fight off Shere Khan and save Mowgli's life. Mowgli refuses to give fire to King Louie but doesn't explain his refusal. The elephant could have fallen into a human trap, but instead it was apparently just a pit. And the bees?
 
@@ -52,15 +52,15 @@ And the fire is put out without too much trouble (when the elephants decide "act
 
 So the film roughly seems to be about how the things that separate man from the animals are actually really great. And that's... not what I was expecting.
 
-### Review: The Book of Mormon
+### Review: *[The Book of Mormon](https://en.wikipedia.org/wiki/The_Book_of_Mormon_\(musical\))*
 
 From memory, *Team America* was funny and it had decent music. But what made it so great was that at the same time as being a parody of action films, it was also just legitimately good as an action film.
 
 *The Book of Mormon* was funny and it had decent music.
 
-### How many levels of irony is [Goodbye Mr A](https://www.youtube.com/watch?v=OeNNfS0ZTnU) on?
+### How many levels of irony is [Goodbye Mr A](https://en.wikipedia.org/wiki/Goodbye_Mr._A) on?
 
-The lyrics are overtly critical of Mr A, but subtextually feel critical of the singers, who dislike him for exposing their flaws to themselves. ("You claim science ain't magic and expect me to buy it"; "you promised you would love us but you knew too much" "so busy showing me where I'm wrong, you forgot to switch your feelings on". And like, "if love is subtraction, your number is up / your love is a fraction, it's not adding up" - I could believe that was written seriously, but I hope not.) And the first part of video clearly makes out the Hoosiers to be the villains, partly the whole "kidnapping a superhero" thing and partly idk, they just look subtly villainous. Possibly related to camera angles.
+The lyrics are overtly critical of Mr A, but subtextually feel critical of the singers, who dislike him for exposing their flaws to themselves. ("You claim science ain't magic and expect me to buy it"; "you promised you would love us but you knew too much" "so busy showing me where I'm wrong, you forgot to switch your feelings on". And like, "if love is subtraction, your number is up / your love is a fraction, it's not adding up" - I could believe that was written seriously, but I hope not.) And the first part of [the video](https://www.youtube.com/watch?v=OeNNfS0ZTnU) clearly makes out the Hoosiers to be the villains, partly the whole "kidnapping a superhero" thing and partly idk, they just look subtly villainous. Possibly related to camera angles.
 
 But then they go on to take his place, and as far as I can see they do it fine? We only see two of their deeds, but they rescue a cat and stop a burglary. Wikipedia says they fight crime as incompetent antiheros, but I'm not seeing the incompetence. And they become immensely popular.
 
@@ -70,13 +70,13 @@ Also relevant: if it's critical of society, or even just the singers, then by ex
 
 I've been idly wondering this for over ten years. Today I got around to actually rewatching/relistening to it. It didn't help much.
 
-### Superhero origin stories: Matilda and Wonder Woman
+### Superhero origin stories: *[Matilda](https://en.wikipedia.org/wiki/Matilda_the_Musical)* and *[Wonder Woman](https://en.wikipedia.org/wiki/Wonder_Woman_\(2017_film\))*
 
-Wonder Woman (the 2017 film) has the overt message that ordinary people can't do very much (though not literally nothing). You need someone with super powers to beat up the villain and then everything will be fine. The love interest keeps trying to tell the hero that things are just not that simple, and he keeps getting proved wrong. This message is undercut by the historical realities of WWI.
+Wonder Woman has the overt message that ordinary people can't do very much (though not literally nothing). You need someone with super powers to beat up the villain and then everything will be fine. The love interest keeps trying to tell the hero that things are just not that simple, and he keeps getting proved wrong. This message is undercut by the historical realities of WWI.
 
-Matilda (the stage show) has the overt message that ordinary people, even young children, can save the day if they stand up to villainy. Before she gets powers, Matilda tells us that even young kids can do something to make things right, and she turns her dad's hair green and glues his hat on his head. In the climax, the kids revolt against Miss Trunchbull, saying "she can't put us all in chokey". This message is undercut by the fact that all of this is completely ineffectual. Matilda's dad doesn't become any less abusive or criminal. Trunchbull can and does put them all in chokey. What saves the day is someone using super powers to scare Miss Truchbull into running away, and then someone using the Russian mafia to scare the dad into running away.
+Matilda has the overt message that ordinary people, even young children, can save the day if they stand up to villainy. Before she gets powers, Matilda tells us that even young kids can do something to make things right, and she turns her dad's hair green and glues his hat on his head. In the climax, the kids revolt against Miss Trunchbull, saying "she can't put us all in chokey". This message is undercut by the fact that all of this is completely ineffectual. Matilda's dad doesn't become any less abusive or criminal. Trunchbull can and does put them all in chokey. What saves the day is someone using super powers to scare Miss Truchbull into running away, and then someone using the Russian mafia to scare the dad into running away.
 
-### Face/Off as a retelling of the Gospel narrative
+### *[Face/Off](https://en.wikipedia.org/wiki/Face/Off)* as a retelling of the Gospel narrative
 
 Admittedly I haven't really read the gospels, so maybe I'm completely off base here. But consider:
 
@@ -108,7 +108,7 @@ This is perhaps the most overtly anti-makeup film I remember seeing ever.
 
 Don't think too hard about the fact that Archer's wife, Adam's adoptive mother, is named Eve.
 
-### Hot take: the *Saw* franchise as exploration of meritocracy.
+### Hot take: the *[Saw](https://en.wikipedia.org/wiki/Saw_\(franchise\))* franchise as exploration of meritocracy
 
 Members of the underclass are given tests. If they pass, they get a new life. Thus, the meritorious are elevated to the elite. Meritocracy!
 
@@ -118,7 +118,7 @@ This would be pretty dumb, but not obviously dumber than some of the [other stuf
 
 [^3%]: I haven't actually seen *3%*. From memory, this was inspired by a reddit discussion where someone said good things about the show as an exploration of meritocracy. Based on wikipedia, I disagree.
 
-### *Captain Fantastic* is such a good movie
+### *[Captain Fantastic](https://en.wikipedia.org/wiki/Captain_Fantastic_\(film\))* is such a good movie
 
 It's an exploration of culture. Ben and Leslie created their own culture and raised their kids in it. The kids have almost no exposure to American culture. Culture Fantastic isn't perfect, and Ben isn't a flawless exemplar of it. There are some things it does better than American culture, and other things it does worse. But it's fine.
 
@@ -134,7 +134,13 @@ Sometimes I read things that feel like the author thinks my culture is bad and s
 
 *Captain Fantastic* comes down firmly on the side of "not bad", and vaguely-noncomitally on the side of "do not take away".
 
-### Once Upon a Time has terrible ethics
+### *[Hacksaw Ridge](https://en.wikipedia.org/wiki/Hacksaw_Ridge)* is three different films
+
+Act 1: Stick to your principles.  
+Act 2: War is hell.  
+Act 3: *[The War Prayer](https://en.wikipedia.org/wiki/The_War_Prayer)*, but unironically.
+
+### *[Once Upon a Time](https://en.wikipedia.org/wiki/Once_Upon_a_Time_\(TV_series\))* has terrible ethics
 
 (Spoilers only up to season 2.)
 
