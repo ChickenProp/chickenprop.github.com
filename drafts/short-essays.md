@@ -2,7 +2,7 @@
 title: Short essays on various things I've watched
 layout: draft
 ---
-Sometimes I write things in places that aren't here. Sometimes I think those things are worth preserving. Some of those things follow, with minor editing, mostly on the subject of various movies that I've watched. Also two stage musicals, one TV show, and one music video. They were written over the past four years, so I can't necessarily talk intelligently about these things any more. When I name a thing, spoilers generally follow.
+Sometimes I write things in places that aren't here. Sometimes I think those things are worth preserving. Some of those things follow, with minor editing, mostly on the subject of various movies that I've watched. Also two stage musicals, one TV show, one short story, and one music video. They were written over the past four years, so I can't necessarily talk intelligently about these things any more. When I name a thing, spoilers generally follow.
 
 ### I don't really get *[The Hurt Locker](https://en.wikipedia.org/wiki/The_Hurt_Locker)*
 
@@ -117,6 +117,30 @@ Members of the underclass are given tests. If they pass, they get a new life. Th
 This would be pretty dumb, but not obviously dumber than some of the [other stuff](https://en.wikipedia.org/wiki/3%25) out there.[^3-pct]
 
 [^3-pct]: I haven't actually seen *3%*. From memory, this was inspired by a reddit discussion where someone said good things about the show as an exploration of meritocracy. Based on wikipedia, I disagree.
+
+### Review: *[A Yellow Rose](https://thefloatinglibrary.com/2008/09/13/a-yellow-rose/)*
+
+(Someone on reddit was wondering whether books are worth it. Someone recommended [Borges](https://en.wikipedia.org/wiki/Jorge_Luis_Borges) to them, and in particular this story. The version I initially read was a slightly different translation to the one linked. I didn't like the story, but it has the virtue of being considerably shorter than this review.)
+
+I gotta admit, this does not sell Borges to me.
+
+Fair warning, this is gonna come across as fairly dismissive/derisive/antagonistic. I could try to describe my reaction without coming across like that, but it would be hard to do, and especially hard to do honestly.
+
+To me it feels like a short piece of philosophy ("it lay within... the world's contents"), wrapped in some prose.
+
+I don't feel like the prose adds anything to the philosophy. Like for example I don't see it as an illustration of the thing the philosophy is meant to teach us. (If anything, the philosophy is trying to teach us that the prose can't illustrate it.) So if that's all it is, then I'd rather the philosophy be presented by itself, so that I could read it more easily, and comment on it without feeling like someone's going to tell me I'm missing the point.
+
+Commenting on the prose by itself... stylistically, it uses too many words in too few sentences, and feels like a chore to read.
+
+One thing that strikes me is that for Borges to write this story, he must have had the same epiphany as Marino and (maybe) Homer and Dante. Since those are the only people mentioned in relation to the epiphany, it seems that Borges is comparing himself to the three of them. Is that deliberate?
+
+Another thing that strikes me is that if "the motionless and silent act that took place that afternoon" is meant to be "Marino having an epiphany", then we're told that: it happened "on the eve of his death"; that it was "the last thing that happened in his life"; but also that "it was neither that afternoon nor the next that Giambattista Marino died". This seems inconsistent, and given the focus on it, I assume it was intentional. But I have no idea why.
+
+I don't know what the poetry means, or whether the meaning is important.[^translation]
+
+[^translation]: In the version I initially read, the poetry was (I assume) untranslated from the original Spanish. But even translated, I still don't know what it means.
+
+I could well be missing something here, and whether I am or not I suspect it's partly just a question of taste.
 
 ### *[Captain Fantastic](https://en.wikipedia.org/wiki/Captain_Fantastic_%28film%29)* is such a good movie
 
