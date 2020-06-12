@@ -120,7 +120,7 @@ This would be pretty dumb, but not obviously dumber than some of the [other stuf
 
 ### Review: *[A Yellow Rose](https://thefloatinglibrary.com/2008/09/13/a-yellow-rose/)*
 
-*(Someone on reddit was wondering whether books are worth it. Someone recommended [Borges](https://en.wikipedia.org/wiki/Jorge_Luis_Borges) to them, and in particular this story. The version I initially read was a slightly different translation to the one linked. I didn't like the story, but it has the virtue of being considerably shorter than this review.)*
+*(Someone on reddit was [wondering](https://www.reddit.com/r/slatestarcodex/comments/ejxotj/are_books_worth_it/) whether books are worth it. Someone recommended [Borges](https://en.wikipedia.org/wiki/Jorge_Luis_Borges) to them, and in particular this story. The version I initially read was a slightly different translation to the one linked. I didn't like the story, but it has the virtue of being considerably shorter than this review.)*
 
 I gotta admit, this does not sell Borges to me.
 
