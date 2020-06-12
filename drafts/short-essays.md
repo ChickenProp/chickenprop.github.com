@@ -120,7 +120,7 @@ This would be pretty dumb, but not obviously dumber than some of the [other stuf
 
 ### Review: *[A Yellow Rose](https://thefloatinglibrary.com/2008/09/13/a-yellow-rose/)*
 
-(Someone on reddit was wondering whether books are worth it. Someone recommended [Borges](https://en.wikipedia.org/wiki/Jorge_Luis_Borges) to them, and in particular this story. The version I initially read was a slightly different translation to the one linked. I didn't like the story, but it has the virtue of being considerably shorter than this review.)
+*(Someone on reddit was wondering whether books are worth it. Someone recommended [Borges](https://en.wikipedia.org/wiki/Jorge_Luis_Borges) to them, and in particular this story. The version I initially read was a slightly different translation to the one linked. I didn't like the story, but it has the virtue of being considerably shorter than this review.)*
 
 I gotta admit, this does not sell Borges to me.
 
@@ -128,7 +128,7 @@ Fair warning, this is gonna come across as fairly dismissive/derisive/antagonist
 
 To me it feels like a short piece of philosophy ("it lay within... the world's contents"), wrapped in some prose.
 
-I don't feel like the prose adds anything to the philosophy. Like for example I don't see it as an illustration of the thing the philosophy is meant to teach us. (If anything, the philosophy is trying to teach us that the prose can't illustrate it.) So if that's all it is, then I'd rather the philosophy be presented by itself, so that I could read it more easily, and comment on it without feeling like someone's going to tell me I'm missing the point.
+I don't feel like the prose adds anything to the philosophy. Like for example I don't see it as an illustration of the thing the philosophy is meant to teach us. (If anything, the philosophy is trying to teach us that the prose *can't* illustrate it.) So if that's all it is, then I'd rather the philosophy be presented by itself, so that I could read it more easily, and comment on it without feeling like someone's going to tell me I'm missing the point.
 
 Commenting on the prose by itself... stylistically, it uses too many words in too few sentences, and feels like a chore to read.
 
