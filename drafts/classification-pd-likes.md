@@ -29,21 +29,21 @@ As far as I can tell, we can classify games according to the ordering of $W, X, 
 
 * Reversing the order of everything doesn't change the analysis, it just swaps the labels Krump and Flitz. So we can assume without loss of generality that $W > Z$. That eliminates half the combinations.
 * Obviously $2W > 2Z$, so it's just a question of where $X + Y$ falls in comparison to them. That eliminates another half.
-* If $W > Z > _ > _$ then $X + Y < 2Z$. That eliminates another four combinations.
-* If $_ > _ > W > Z$ then $X + Y > 2W$, eliminating another four.
-* If $W > _ > _ > Z$ then $2W > X + Y > 2Z$, eliminating four.
-* If $W > _ > Z > _$ then $2W > X + Y$, eliminating two.
-* If $_ > W > _ > Z$ then $X + Y > 2Z$, eliminating two.
+* If $W > Z > • > •$ then $X + Y < 2Z$. That eliminates another four combinations.
+* If $• > • > W > Z$ then $X + Y > 2W$, eliminating another four.
+* If $W > • > • > Z$ then $2W > X + Y > 2Z$, eliminating four.
+* If $W > • > Z > •$ then $2W > X + Y$, eliminating two.
+* If $• > W > • > Z$ then $X + Y > 2Z$, eliminating two.
 
 That brings us down to just 20 combinations, and we've already looked at three of them, so this seems tractable. In the following, I've grouped games together mostly according to how interesting I think it is to distinguish them, and I've given them names when I didn't know an existing name. Both the names and the grouping should be considered tentative.
 
-### Cake Eating: $W > _ > _ > Z$ (two games)
+### Cake Eating: $W > • > • > Z$ (two games)
 
 In this game, you can either Eat Cake or Go Hungry. You like eating cake. You like when your playmate eats cake. There's enough cake for everyone, and no reason to go hungry. The only Nash equilibrium is the one where everyone eats cake, and this is the socially optimal result. Great game! We should play it more often.
 
 (If $X > Y$, then if you had to choose between yourself and your playmate eating cake, you'd eat it yourself. If $Y > X$, then in that situation you'd give it to them. Equalities between $W, Z$ and $X, Y$ signify indifference to (yourself, your playmate) eating cake in various situations.)
 
-### Let's Party: $W > Z > _ > _$ (two games)
+### Let's Party: $W > Z > • > •$ (two games)
 
 In this game, you can either go to a Party or stay Home. If you both go to a party, great! If you both stay home, that's cool too. If either of you goes to a party while the other stays home, you'd both be super bummed about that.
 
@@ -69,7 +69,7 @@ The Nash equilibria are at Stag/Stag and Hare/Hare, and Stag/Stag is socially op
 
 See: [The Schelling Choice is "Rabbit", not "Stag"](https://www.lesswrong.com/posts/zp5AEENssb8ZDnoZR/the-schelling-choice-is-rabbit-not-stag).
 
-### The Abundant Commons: $X > W > _ > _$ (five games)
+### The Abundant Commons: $X > W > • > •$ (five games)
 
 You can Take some resource from the commons, or you can Leave it alone. There's plenty of resource to be taken, and you'll always be better off taking it. But if you and your playmate both play Take, you get in each other's way and reduce efficiency (unless $X = W$).
 
@@ -89,7 +89,7 @@ If $2W > X + Y$ then the socially optimal outcome is Work/Work, and a means to c
 
 Also known as [Chicken](https://en.wikipedia.org/wiki/Chicken_%28game%29), Hawk/Dove and Snowdrift.
 
-### Anti-coordination: $_ > _ > W > Z$ (two games)
+### Anti-coordination: $• > • > W > Z$ (two games)
 
 In this game, the goal is to play a different move than your playmate. If $X = Y$ then there's no reason to prefer one move over another, but if they're not equal there'll be some maneuvering around who gets which reward. If you're not happy with the outcome, then changing the move you play will harm your playmate more than it harms you. The Nash equilibria are when you play different moves, and these are socially optimal.
 
