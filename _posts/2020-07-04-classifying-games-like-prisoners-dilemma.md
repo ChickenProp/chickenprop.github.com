@@ -83,7 +83,7 @@ Take/Take is the only Nash equilibrium.
 
 ### [Farmer's Dilemma](http://reasonableapproximation.net/2015/05/05/farmers-dilemma.html): $Y > W > X > Z$ (two games)
 
-In the "Farmer's Dilemma" formulation, you can Work (pitch in to help build a mutual resource) or Shirk (not do that). If either of you Works, it provides more than its cost to both of you. Ideally, you want to Shirk while your playmate Works; but if your playmate Shirks, you'd rather Work than leave the work undone. The Nash equilibria are at Work/Shirk and Shirk/Work.
+In this game, you can Work (pitch in to help build a mutual resource) or Shirk (not do that). If either of you Works, it provides more than its cost to both of you. Ideally, you want to Shirk while your playmate Works; but if your playmate Shirks, you'd rather Work than leave the work undone. The Nash equilibria are at Work/Shirk and Shirk/Work.
 
 If $2W > X + Y$ then the socially optimal outcome is Work/Work, and a means to coordinate on that outcome would be socially useful. If $2W < X + Y$, the socially optimal outcome is for one player to Work while the other Shirks, but with no obvious choice for which one of you it should be.
 
