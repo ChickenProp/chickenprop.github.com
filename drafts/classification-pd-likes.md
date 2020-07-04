@@ -12,14 +12,16 @@ Consider games with the following payoff matrix:
 | **Player 1** | **Krump** | $(W, W)$     | $(X, Y)$  |
 |              | **Flitz** | $(Y, X)$     | $(Z, Z)$  |
 
-One such game is the Prisoner's Dilemma (in which strategy "Krump" is usually called "Cooperate", and "Flitz" is usually called "Defect"). But the Prisoner's Dilemma has additional structure. Specifically, to qualify as a PD, we must have $Y > W > Z > X$. ($Y > W$ gives the motivation to defect if the other player cooperates, and $Z > X$ gives that motivation if the other player defects. With these two constraints, the nash equilibrium is always going to be Flitz/Flitz for a payoff of $(Z, Z)$. $W > Z$ is what gives the dilemma its teeth; if instead $Z > W$, then that equilibrium is a perfectly fine outcome, possibly the optimal one.
+One such game is the [Prisoner's Dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma) (in which strategy "Krump" is usually called "Cooperate", and "Flitz" is usually called "Defect"). But the Prisoner's Dilemma has additional structure. Specifically, to qualify as a PD, we must have $Y > W > Z > X$. ($Y > W$ gives the motivation to defect if the other player cooperates, and $Z > X$ gives that motivation if the other player defects. With these two constraints, the nash equilibrium is always going to be Flitz/Flitz for a payoff of $(Z, Z)$. $W > Z$ is what gives the dilemma its teeth; if instead $Z > W$, then that equilibrium is a perfectly fine outcome, possibly the optimal one.
 
-I usually think of a Prisoner's Dilemma as also having $2W > X + Y > 2Z$. That specifies that mutual cooperation has the highest total return - it's "socially optimal" in a meaningful sense[^socially-optimal] - while mutual defection has the lowest. It also means you can model the "defect" action as "take some value for yourself, but destroy value in the process". (Alternatively, "cooperate" as "gave some of your value to your opponent, adding to that value in the process".) We might consider instead:
+I usually think of a Prisoner's Dilemma as also having $2W > X + Y > 2Z$. That specifies that mutual cooperation has the highest total return - it's "socially optimal" in a meaningful sense[^socially-optimal] - while mutual defection has the lowest. It also means you can model the "defect" action as "take some value for yourself, but destroy value in the process". (Alternatively, "cooperate" as "give some of your value to your playmate[^playmate], adding to that value in the process".) We might consider instead:
 
 [^socially-optimal]: My use of the phrase comes from Ellickson's [Order Without Law](https://www.hup.harvard.edu/catalog.php?isbn=9780674641693). Part of why I'm writing this is to help clarify my thinking about that book. I don't mean to imply anything in particular by it, I just like the ring of it better than alternatives like "welfare maximizing".
 
-* If $2W < X + Y$, then defecting while your opponent cooperates *creates* value. From a social perspective, K/F or F/K is preferable to K/K; and in an iterated game of this sort, you'd prefer to alternate K/F with F/K than to have a constant K/K. Wikipedia still classes this as a Prisoner's Dilemma, but I think that's dubious terminology, and I don't think it's standard. I might suggest calling it the Too Many Cooks game. (Spoiled broth is better than no broth.)
-* If $2Z > X + Y$, then defecting while your opponent defects creates value. I have no issue thinking of this as a Prisoner's Dilemma; my instinct is that most analyses of the central case will also apply to this.
+[^playmate]: Calling them your "opponent" assumes a level of antagonism that may not be present.
+
+* If $2W < X + Y$, then defecting while your playmate cooperates *creates* value (relative to cooperating). From a social perspective, Krump/Flitz or Flitz/Krump is preferable to Krump/Krump; and in an iterated game of this sort, you'd prefer to alternate $X$ with $Y$ than to get a constant $W$. Wikipedia still classes this as a Prisoner's Dilemma, but I think that's dubious terminology, and I don't think it's standard. I might offhand suggest calling it the Too Many Cooks game. (This name assumes that you'd rather go hungry than cook, and that spoiled broth is better than no broth.)
+* If $2Z > X + Y$, then defecting while your playmate defects creates value. I have no issue thinking of this as a Prisoner's Dilemma; my instinct is that most analyses of the central case will also apply to this.
 
 By assigning different values to the various numbers, what other games can we get?
 
@@ -27,29 +29,29 @@ As far as I can tell, we can classify games according to the ordering of $W, X, 
 
 * Reversing the order of everything doesn't change the analysis, it just swaps the labels Krump and Flitz. So we can assume without loss of generality that $W > Z$. That eliminates half the combinations.
 * Obviously $2W > 2Z$, so it's just a question of where $X + Y$ falls in comparison to them. That eliminates another half.
-* If $W > Z > ? > ?$ then $X + Y < 2Z$. That eliminates another four combinations.
-* If $? > ? > W > Z$ then $X + Y > 2W$, eliminating another four.
-* If $W > ? > ? > Z$ then $2W > X + Y > 2Z$, eliminating four.
-* If $W > ? > Z > ?$ then $2W > X + Y$, eliminating two.
-* If $? > W > ? > Z$ then $X + Y > 2Z$, eliminating two.
+* If $W > Z > _ > _$ then $X + Y < 2Z$. That eliminates another four combinations.
+* If $_ > _ > W > Z$ then $X + Y > 2W$, eliminating another four.
+* If $W > _ > _ > Z$ then $2W > X + Y > 2Z$, eliminating four.
+* If $W > _ > Z > _$ then $2W > X + Y$, eliminating two.
+* If $_ > W > _ > Z$ then $X + Y > 2Z$, eliminating two.
 
-That brings us down to just 20 combinations, and we've already looked at three of them, so this seems tractable.
+That brings us down to just 20 combinations, and we've already looked at three of them, so this seems tractable. In the following, I've grouped games together mostly according to how interesting I think it is to distinguish them, and I've given them names when I didn't know an existing name. Both the names and the grouping should be considered tentative.
 
-### Cake Eating: $W > ? > ? > Z$ (two games)
+### Cake Eating: $W > _ > _ > Z$ (two games)
 
 In this game, you can either Eat Cake or Go Hungry. You like eating cake. You like when your playmate eats cake. There's enough cake for everyone, and no reason to go hungry. The only Nash equilibrium is the one where everyone eats cake, and this is the socially optimal result. Great game! We should play it more often.
 
 (If $X > Y$, then if you had to choose between yourself and your playmate eating cake, you'd eat it yourself. If $Y > X$, then in that situation you'd give it to them. Equalities between $W, Z$ and $X, Y$ signify indifference to (yourself, your playmate) eating cake in various situations.)
 
-### Let's Party: $W > Z > ? > ?$ (two games)
+### Let's Party: $W > Z > _ > _$ (two games)
 
-In this game, you can either go to a party or stay home. If you both go to a party, great! If you both stay home, that's cool too. If either of you goes to a party while the other stays home, you'd both be super bummed about that.
+In this game, you can either go to a Party or stay Home. If you both go to a party, great! If you both stay home, that's cool too. If either of you goes to a party while the other stays home, you'd both be super bummed about that.
 
-Both staying home is a Nash equilibrium, but it's not optimal either individually or socially.
+Home/Home is a Nash equilibrium, but it's not optimal either individually or socially.
 
-In the case $W = Z$, this is a pure coordination game, which doesn't have the benefit of an obvious choice that you can make without communicating.
+In the case $W = Z$, this is a pure [coordination game](https://en.wikipedia.org/wiki/Coordination_game), which doesn't have the benefit of an obvious choice that you can make without communicating.
 
-(Wikipedia calls this the assurance game on one page, but uses that name for the stag hunt on another, so I'm not using that name.)
+(Wikipedia calls this the assurance game on that page, but uses that name for the Stag Hunt on the page for that, so I'm not using that name.)
 
 ### Studying For a Test: $W > X > Z > Y$ (two games)
 
@@ -57,41 +59,45 @@ You can either Study or Bunk Off. No matter what your playmate does, you're bett
 
 The only Nash equilibrium is Study/Study, which is also socially optimal.
 
-### Stag hunt: $W > Y > Z > X$ (two games)
+### [Stag hunt](https://en.wikipedia.org/wiki/Stag_hunt): $W > Y > Z > X$ (two games)
 
-You can either hunt Stag or Hare (sometimes Rabbit). If you both hunt Stag, you successfully catch a stag between you, which is great. If you both hunt Hare, you each catch a hare, which is fine. You can catch a hare by yourself, but if you hunt Stag and your playmate hunts Hare, you get nothing.
+You can either hunt Stag or Hare (sometimes "Rabbit"). If you both hunt Stag, you successfully catch a stag between you, which is great. If you both hunt Hare, you each catch a hare, which is fine. You can catch a hare by yourself, but if you hunt Stag and your playmate hunts Hare, you get nothing.
 
-This also works with $Y = Z$. If $Y > Z$ then two people hunting Hare get in each other's way slightly.
+This also works with $Y = Z$. If $Y > Z$ then two people hunting Hare get in each other's way.
 
-The Nash equilibria are at Stag/Stag and Hare/Hare, and Stag/Stag is socially optimal. Hare/Hare might be the worst possible social result, though I think this game is usually formulated with $2Z > Y + X$.
+The Nash equilibria are at Stag/Stag and Hare/Hare, and Stag/Stag is socially optimal. Hare/Hare might be the worst possible social result, though I think this game is usually described with $2Z > Y + X$.
 
 See: [The Schelling Choice is "Rabbit", not "Stag"](https://www.lesswrong.com/posts/zp5AEENssb8ZDnoZR/the-schelling-choice-is-rabbit-not-stag).
 
-### The Abundant Commons: $X > W > ? > ?$ (five games)
+### The Abundant Commons: $X > W > _ > _$ (five games)
 
-You can Take some resource from the commons, or you can Leave it alone. There's plenty of resource to be taken, and you'll always be better off taking it. But if you and your playmate both play Take, you get in each other's way (unless $X = W$).
+You can Take some resource from the commons, or you can Leave it alone. There's plenty of resource to be taken, and you'll always be better off taking it. But if you and your playmate both play Take, you get in each other's way and reduce efficiency (unless $X = W$).
 
-If $2W > X + Y$ then you don't intefere with each other significantly; the socially optimal result is also the Nash equilibrium. But if $2W < X + Y$ then the cost of interfering is more than the value of resource either of you can take, and some means of coordinating one person to Take and one to Leave would be socially valuable.
+If $2W > X + Y$ then you don't intefere with each other significantly; the socially optimal result is also the Nash equilibrium. But if $2W < X + Y$ then the total cost of interfering is more than the value of resource either of you can take, and some means of coordinating one person to Take and one to Leave would be socially valuable.
 
 If $Y > Z$ then if (for whatever reason) you Leave the resource, you'd prefer your partner Takes it. If $Z > Y$ you'd prefer them to also Leave it.
 
-An interesting case here is $X > W > Z > Y$ and $X + Y > 2W$. T/L and L/T are social optimal, but the L player would prefer literally any other outcome.
+An interesting case here is $X > W > Z > Y$ and $X + Y > 2W$. Take/Leave and Leave/Take are social optimal, but the Leave player would prefer literally any other outcome.
 
-### Farmer's Dilemma: $Y > W > X > Z$ (two games)
+Take/Take is the only Nash equilibrium.
 
-In the "Farmer's Dilemma" formulation, you can Work (pitch in to help build a mutual resource) or Shirk (not do that). If either of you Works, it provides more than its cost to both of you. Ideally, you want to Shirk while your opponent Works; but if your opponent Shirks, you'd rather Work.
+### [Farmer's Dilemma](http://reasonableapproximation.net/2015/05/05/farmers-dilemma.html): $Y > W > X > Z$ (two games)
+
+In the "Farmer's Dilemma" formulation, you can Work (pitch in to help build a mutual resource) or Shirk (not do that). If either of you Works, it provides more than its cost to both of you. Ideally, you want to Shirk while your playmate Works; but if your playmate Shirks, you'd rather Work than leave the work undone. The nash equilibria are at Work/Shirk and Shirk/Work.
 
 If $2W > X + Y$ then the socially optimal outcome is Work/Work, and a means to coordinate on that outcome would be socially useful. If $2W < X + Y$, the socially optimal outcome is for one player to Work while the other Shirks, but with no obvious choice for which one of you it should be.
 
-Also known as Chicken, Hawk/Dove and Snowdrift.
+Also known as [Chicken](https://en.wikipedia.org/wiki/Chicken_%28game%29), Hawk/Dove and Snowdrift.
 
-### Anti-coordination: $? > ? > W > Z$ (two games)
+### Anti-coordination: $_ > _ > W > Z$ (two games)
 
-In this game, the goal is to play a different move than your playmate. If $X = Y$ then there's no reason to prefer one move over another, but if they're not equal there'll be some maneuvering around who gets which reward. If you're not happy with the outcome, then changing the move you play will harm your playmate more than it harms you.
+In this game, the goal is to play a different move than your playmate. If $X = Y$ then there's no reason to prefer one move over another, but if they're not equal there'll be some maneuvering around who gets which reward. If you're not happy with the outcome, then changing the move you play will harm your playmate more than it harms you. The Nash equilibria are when you play different moves, and these are socially optimal.
 
 ### Prisoner's Dilemma/Too Many Cooks: $Y > W > Z > X$
 
-Covered in preamble. I'm a little surprised that this is the only case where I've wanted to rename the game depending on the social preference of the outcomes. Thinking about it, the only other games where $X + Y$ isn't forced to be greater or less than $2X$ are the Farmer's Dilemma and the Abundant Commons
+Covered in preamble.
+
+(I'm a little surprised that this is the only case where I've wanted to rename the game depending on the social preference of the outcomes. That said, the only other games where $X + Y$ isn't forced to be greater or less than $2X$ are the Farmer's Dilemma and the Abundant Commons, and those are the ones I'd most expect to want to split in future.)
 
 ### A graph
 
