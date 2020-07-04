@@ -93,7 +93,7 @@ Also known as [Chicken](https://en.wikipedia.org/wiki/Chicken_%28game%29), Hawk/
 
 In this game, the goal is to play a different move than your playmate. If $X = Y$ then there's no reason to prefer one move over another, but if they're not equal there'll be some maneuvering around who gets which reward. If you're not happy with the outcome, then changing the move you play will harm your playmate more than it harms you. The Nash equilibria are when you play different moves, and these are socially optimal.
 
-### Prisoner's Dilemma/Too Many Cooks: $Y > W > Z > X$
+### Prisoner's Dilemma/Too Many Cooks: $Y > W > Z > X$ (three games)
 
 Covered in preamble.
 
