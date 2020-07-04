@@ -1,6 +1,6 @@
 ---
-title: "Classification of games like Prisoner's Dilemma"
-layout: draft
+title: "Classifying games like the Prisoner's Dilemma"
+layout: post
 lw_xpost: true
 ---
 
@@ -12,7 +12,7 @@ Consider games with the following payoff matrix:
 | **Player 1** | **Krump** | $(W, W)$     | $(X, Y)$  |
 |              | **Flitz** | $(Y, X)$     | $(Z, Z)$  |
 
-One such game is the [Prisoner's Dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma) (in which strategy "Krump" is usually called "Cooperate", and "Flitz" is usually called "Defect"). But the Prisoner's Dilemma has additional structure. Specifically, to qualify as a PD, we must have $Y > W > Z > X$. ($Y > W$ gives the motivation to defect if the other player cooperates, and $Z > X$ gives that motivation if the other player defects. With these two constraints, the [Nash equilibrium](https://en.wikipedia.org/wiki/Nash_equilibrium) is always going to be Flitz/Flitz for a payoff of $(Z, Z)$. $W > Z$ is what gives the dilemma its teeth; if instead $Z > W$, then that equilibrium is a perfectly fine outcome, possibly the optimal one.
+One such game is the [Prisoner's Dilemma](https://en.wikipedia.org/wiki/Prisoner%27s_dilemma) (in which strategy "Krump" is usually called "Cooperate", and "Flitz" is usually called "Defect"). But the Prisoner's Dilemma has additional structure. Specifically, to qualify as a PD, we must have $Y > W > Z > X$. $Y > W$ gives the motivation to defect if the other player cooperates, and $Z > X$ gives that motivation if the other player defects. With these two constraints, the [Nash equilibrium](https://en.wikipedia.org/wiki/Nash_equilibrium) is always going to be Flitz/Flitz for a payoff of $(Z, Z)$. $W > Z$ is what gives the dilemma its teeth; if instead $Z > W$, then that equilibrium is a perfectly fine outcome, possibly the optimal one.
 
 I usually think of a Prisoner's Dilemma as also having $2W > X + Y > 2Z$. That specifies that mutual cooperation has the highest total return - it's "socially optimal" in a meaningful sense[^socially-optimal] - while mutual defection has the lowest. It also means you can model the "defect" action as "take some value for yourself, but destroy value in the process". (Alternatively, "cooperate" as "give some of your value to your playmate[^playmate], adding to that value in the process".) We might consider instead:
 
