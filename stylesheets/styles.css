@@ -197,16 +197,10 @@ table {
   text-align: left;
 }
 
-th {
-  font-family: 'Arvo', Helvetica, Arial, sans-serif;
-	font-size: 18px;
-	font-weight: normal;
-  padding: 10px;
-  background: #232323;
-  color: #FDFEFB;
-}
-
-td {
+/* Markdown always makes the first table row a header. I'm not sure I want that.
+*/
+td, th {
+  font-weight: normal;
   padding: 10px;
 }
 
