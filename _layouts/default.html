@@ -27,7 +27,10 @@
         {% if em != '' %}
           elements: [ 'this-doesnt-exist' ],{% comment %}I just want MathJax not to do anything unless I explicitly tell it to. This might not be the best way.{% endcomment%}
         {% endif %}
-        "HTML-CSS": { linebreaks: { automatic: true } },
+        "HTML-CSS": {
+          linebreaks: { automatic: true },
+          scale: 100
+        },
         skipStartupTypeset: true,
       })
     </script>
