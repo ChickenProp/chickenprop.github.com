@@ -44,7 +44,7 @@ I believe boots theory points towards one component of socioeconomic unfairness.
 
 ---
 
-To be a little more precise, I think you can describe three levels of boots theory:
+To be a little more precise, I think boots theory as written makes three increasingly strong claims, that we could think of as "levels of boots theory":
 
 1. Being rich enables you to spend less money on things. (More generally: having incrementally more capital lets you spend incrementally less money. Also, being rich is super convenient in many ways.) This phenomenon is also called a [ghetto tax](https://en.wikipedia.org/wiki/Ghetto_tax).
 2. Also, rich people do in fact spend less money on things.
