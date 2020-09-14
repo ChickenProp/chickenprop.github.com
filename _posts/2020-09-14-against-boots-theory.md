@@ -1,6 +1,7 @@
 ---
 title: Against boots theory
 layout: post
+lw_xpost: true
 ---
 > The reason that the rich were so rich, Vimes reasoned, was because they managed to spend less money.
 >
