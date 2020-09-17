@@ -2,6 +2,9 @@
 title: "Classifying games like the Prisoner's Dilemma"
 layout: post
 lw_xpost: true
+external_comments:
+  - name: LessWrong
+    url: https://lesswrong.com/posts/KwbJFexa4MEdhJbs4/classifying-games-like-the-prisoner-s-dilemma
 ---
 
 Consider games with the following payoff matrix:

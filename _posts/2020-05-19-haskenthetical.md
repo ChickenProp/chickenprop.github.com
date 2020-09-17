@@ -2,6 +2,13 @@
 title: Haskenthetical
 layout: post
 lw_xpost: true
+external_comments:
+  - name: LessWrong
+    url: https://lesswrong.com/posts/LCcmgwChdidMjhu9d/short-essays-on-various-things-i-ve-watched
+  - name: /r/haskell
+    url: https://www.reddit.com/r/haskell/comments/gmybcf/haskenthetical_another_take_on_haskell_with_a/
+  - name: /r/ProgrammingLanguages
+    url: https://www.reddit.com/r/ProgrammingLanguages/comments/gmyc6v/haskenthetical_another_take_on_haskell_with_a/
 ---
 This is a toy language I've been designing, or at least implementing, for about a year.
 

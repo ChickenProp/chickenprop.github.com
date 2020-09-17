@@ -2,6 +2,9 @@
 title: Short essays on various things I've watched
 layout: post
 lw_xpost: true
+external_comments:
+  - name: LessWrong
+    url: https://lesswrong.com/posts/LCcmgwChdidMjhu9d/short-essays-on-various-things-i-ve-watched
 ---
 Sometimes I write things in places that aren't here. Sometimes I think those things are worth preserving. Some of those things follow, with minor editing, mostly on the subject of various movies that I've watched. Also two stage musicals, one TV show, one short story, and one music video. They were written over the past four years, so I can't necessarily talk intelligently about these things any more. When I name a thing, spoilers generally follow.
 
