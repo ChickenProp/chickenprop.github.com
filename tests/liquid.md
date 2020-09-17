@@ -5,7 +5,7 @@ squares: [1,4,9,16]
 ---
 Can I use liquid inside markdown pages?
 
-{% for square in squares %}
+{% for square in page.squares %}
   {{ square }}
 {% endfor %}
 
