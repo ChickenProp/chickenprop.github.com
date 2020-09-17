@@ -1,0 +1,23 @@
+---
+layout: draft
+title: Liquid testing page
+external_comments:
+  - name: LW
+    url: https://lesswrong.com
+  - name: Reddit
+    url: https://reddit.com
+  - name: Wikipedia
+    url: https://en.wikipedia.org/wiki/Martian_%28disambiguation%29
+---
+
+{%if page.external_comments.size > 0 %}
+  Comments elsewhere:
+  {% assign first_time = true %}
+  {% for site in page.external_comments -%}
+    {%- unless first_time %}; {% endunless -%}
+    {%- assign first_time = false -%}
+    <a href="{{ site.url }}">{{ site.name }}</a>
+  {%- endfor %}
+{% endif %}
+
+
