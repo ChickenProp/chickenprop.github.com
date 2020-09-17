@@ -10,14 +10,10 @@ external_comments:
     url: https://en.wikipedia.org/wiki/Martian_%28disambiguation%29
 ---
 
+There should be a hmm here:
+
 {%if page.external_comments.size > 0 %}
-  Comments elsewhere:
-  {% assign first_time = true %}
-  {% for site in page.external_comments -%}
-    {%- unless first_time %}; {% endunless -%}
-    {%- assign first_time = false -%}
-    <a href="{{ site.url }}">{{ site.name }}</a>
-  {%- endfor %}
+  Hmmm.
 {% endif %}
 
-
+Was there?
