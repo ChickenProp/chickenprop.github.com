@@ -7,6 +7,18 @@ layout: default
 
 <p><em>Posted on {{ page.date | date_to_long_string }}</em></p>
 
+{%if page.external_comments.size > 0 %}
+<p><em>
+  Comments elsewhere:
+  {% assign first_time = true %}
+  {% for site in page.external_comments -%}
+    {%- unless first_time %}; {% endunless -%}
+    {%- assign first_time = false -%}
+    <a href="{{ site.url }}">{{ site.name }}</a>
+  {%- endfor %}
+</em></p>
+{% endif %}
+
 <div id="disqus_thread"></div>
 <script async type="text/javascript" src="//reasonableapproximation.disqus.com/embed.js"></script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

@@ -2,6 +2,11 @@
 title: Against boots theory
 layout: post
 lw_xpost: true
+external_comments:
+  - name: LessWrong
+    url: https://www.lesswrong.com/posts/67tR3ZesBL3zfy8sA/against-boots-theory
+  - name: /r/slatestarcodex
+    url: https://www.reddit.com/r/slatestarcodex/comments/isk5v5/against_boots_theory/
 ---
 > The reason that the rich were so rich, Vimes reasoned, was because they managed to spend less money.
 >
