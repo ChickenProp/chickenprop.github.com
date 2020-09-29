@@ -1,7 +1,11 @@
 ---
 title: "Book Review: Order Without Law"
 layout: draft
+explicit_math: true
 ---
+
+### Shasta County
+
 Shasta County, northern California, is a rural area home to many cattle ranchers.[^present-tense] It has an unusual legal feature: its rangeland can be designated as either *open* or *closed*. (Most places in the country pick one or the other.) The county board of supervisors has the power to close range, but not to open it. When a range closure petition is circulated, the cattlemen have strong opinions about it. They like their range open.
 
 [^present-tense]: In this review, I use the present tense. But the book was published in 1991, based on research carried out in the 1980s.
@@ -32,7 +36,7 @@ So this is a puzzle. Range designation is legally relevant with regard to cattle
 
 What's up with this? Why do the cattlemen continue to be so wrong in the face of, well, everything?
 
----
+### What's up with this?
 
 *Order Without Law: How Neighbors Settle Disputes* is a study of, well, its subtitle. The author is a is a professor and legal scholar. He comes across as a low-key anarchist, and I've seen him quoted at length on some anarchist websites, and I wouldn't be surprised to learn that he's just a full-blown anarchist. He doesn't identify as one explicitly, at least not here, and he does respect what states bring to the table. He just wishes people would remember that they're not the only game in town. The thesis of the book could be summed up (in my words, not his) as: *we credit the government with creating public order, but if you look, it turns out that people create plenty of public order that has basically nothing to do with the legal system. Sometimes there is no relevant law, sometimes the order predates the law, and sometimes the order ignores the law.*
 
@@ -44,7 +48,7 @@ One oversight is that it's not clear to me how large the population Ellickson st
 
 Does Shasta County support that? I think not, but it's hard to say. Ellickson admittedly doesn't know the population size of the area he studied. (The [relevant division](https://censusreporter.org/profiles/06000US0608990450-central-shasta-ccd-shasta-county-ca/) according to Census Beareu had a population of 6,784 in 1980, but it's considerably larger: "This division includes both [the area in question] and larger rural territories to the north, south, and southeast.") But I feel like he could have been a lot more helpful. Roughly how many ranchers are there, how many ranchette owners, and how many farmers? (I think most of the relevant people are in one of those groups. I'm not sure to what extent we should count families as units. I'm not sure how many people in the area are in none of those groups.)  Overall I'd guess we're looking at perhaps 300-1000 people over perhaps 100-300 families, but I'm not confident.
 
-(I tracked down the minutes of the Shasta County Cattleman's Association, and they had 128 members in [June 2011](http://shastacountycattlemen.com/files/pdf/2011-pdf/Minutes-June-28-2011.pdf) but that's over twenty years later so who knows what changed in that time. I think "most ranchers are in the Association, but ranchette owners and farmers generally aren't" is probably a decent guess.)
+(I tracked down the minutes of the Shasta County Cattleman's Association, and they had 128 members in [June 2011](http://shastacountycattlemen.com/files/pdf/2011-pdf/Minutes-June-28-2011.pdf). I think "most ranchers are in the Association but ranchette owners and farmers generally aren't" is probably a decent guess. But that's over twenty years later, so who knows what changed in that time.)
 
 Near the end of part one, Ellickson poses the "what's up with this?" question. It kind of feels like that's what the book is building towards for part two. But instead it gives a fairly brief answer, and then part two is a completely different style. The book specifically says that's what's going to happen, but still, it's a little jarring.
 
@@ -60,7 +64,7 @@ This all seems plausible enough, though admittedly I'm fairly predisposed to the
 
 A counterpoint might be... these cases aren't all that common, and don't usually go to court, and when they do they're usually settled (on the advice of lawyers) instead of ruled. And "lawyers don't understand this specific part of the law" isn't all that implausible. So although the evidence Ellickson presents is overwhelming that the cattlemen are wrong, I'm not sure I can fault the cattlemen too hard for not changing their minds.
 
----
+### Taxonomy; against previous work
 
 Part one was mostly a case study, with some theorizing. Part two is mostly theorizing, with some case studies.
 
@@ -114,7 +118,7 @@ The other camp is law-and-society. These scholars tend to have a more realistic 
 
 (Also, some law-and-society scholars go too far in the other direction, thinking that the legal system is ineffectual. They're just as mistaken. See: Muslim Central Asia after the Russian Revolution; US civil rights laws in the 50s and 60s; range closure in Shasta County; "that the allocation of legal property rights in the intertidal zone affects labor productivity in the oyster industry, that the structure of workers' compensation systems influences the frequency of workplace fatalities, and that the content of medical malpractice law affects how claims are settled." [Footnotes removed.])
 
----
+### The hypothesis
 
 The main thrust of part two is to elaborate and defend Ellickson's own theory of norms, which he formed after studying Shasta County:
 
@@ -188,7 +192,7 @@ This one feels very out-there, but for completeness: the reason for using welfar
 
 Despite all this, I do think there's some "there" there. A decent amount of "there", even. I think Ellickson's use of welfare should be given a long, hard look, but I think it would come out of that ordeal mostly recognizable.
 
----
+### Dynamics
 
 There's another clarification that I think is needed. The phrase "develop and maintain" is a claim about dynamics, partial derivatives, conditions at equilibrium. It's not a claim that "all norms always maximize welfare" but that "norms move in the direction of maximizing welfare".
 
@@ -204,7 +208,7 @@ I don't even necessarily expect Ellickson to have good answers to these question
 
 I think this is my biggest criticism of the book.
 
----
+### Substance
 
 With all these clarifications weakening the hypothesis, does it still have substance?
 
@@ -214,7 +218,7 @@ And it's falsifiable. We can identify norms, by looking at patterns of behavior 
 
 But what we can't do is quantify the objective costs and benefits of various possible norm systems. So we fall back to intuitive assessments, looking at alternatives and pointing out problems they'd cause. Ellickson spends the next few chapters doing this, at varying levels of abstraction but often with real-world examples. This is not quite everything I'd hoped for from the word "falsifiable", but it'll do. He also makes occasional concrete predictions, admitting that if those fail the hypothesis would be weakened. He separates this analysis according to the five types of rules in the taxonomy, one chapter for each type except that procedural and constitutive norms are lumped together (and that chapter is short, they really get shafted). I'll just look at some of his examples.
 
----
+### Trespass
 
 Consider the Shasta County norm that a livestock owner is strictly responsible for cattle trespass damages. If we want to show that this norm is welfare maximizing, we have to compare it to alternatives. One alternative would be non-strict liability; another would be that trespass damages are borne by the victim.
 
@@ -224,7 +228,7 @@ To be welfare maximizing, costs should be borne by whoever can avoid them most c
 
 Ellickson makes a prediction here that things were different in the mid-nineteenth century. "During the early history of the state of California, irrigated pastures and ranchettes were rare, at-large cattle numerous, and motorized vehicles unknown. In addition, a century ago most rural residents were accustomed to handling livestock. Especially prior to the invention of barbed wire in 1874, the fencing of rangelands was rarely cost-justified. In those days an isolated grower of field crops in Shasta County, as one of the few persons at risk from at-large cattle, would have been prima facie the cheaper avoider of livestock damage to crops." And so the farmer would have been responsible for fencing animals out, and borne the costs if he failed to.
 
----
+### Lying, and things like it
 
 A common contract norm forbids people from lying about what they're trading. The hypothesis predicts we'd find such norms among any close-knit group of buyers and sellers. I bring this up for the exceptions that Ellickson allows:
 
@@ -236,7 +240,7 @@ I note that these exceptions add a complexity penalty. The more possible states 
 
 (It's also not clear to me why the hypothesis specifically expects such norms to be internalized, rather than enforced some other way. Possible answer: you do still need external enforcement of these norms, but that enforcement will be costly. It'll be cheaper if you can mostly expect people to obey them even if they don't expect to get caught, so that relies on self-enforcement. But is that a very general argument that almost all norms should be internalized? Well, maybe almost all norms *are* internalized. In any case, I don't think that clause was very important.)
 
----
+### Pandering to the SSC audience: have some whales
 
 The second-most-detailed case study in the book is whalers. If a whale is wounded by one ship and killed by another, who keeps it? What if a dead whale under tow is lost in a storm, and found by another ship? Although there were laws on these questions, those laws explicitly followed preexisting norms that the whalers themselves had developed.
 
@@ -262,17 +266,17 @@ His other answer is... that that might not be the sort of thing that norms are g
 
 There's some subtlety here, like maybe he's trying to say "norms aren't particularly good at this, so if there's another plausible source of rules, norm-makers would defer to them; but if there wasn't, norm-makers would go ahead and do it themselves". That feels implausible on the face of it though, and while I'm no expert, my understanding is that no other group did step up to prevent overfishing in time.
 
-Speaking of "admissions that the hypothesis sometimes fails": there are only five American court cases on this subject, and four of them involved whales caught between 1852 and 1862 in the Sea of Okhotsk; the other was an 1872 decision about a whale caught in that sea in an unstated year. Americans had been whaling for more than a century, so why did that happen? The whales in that area were bowheads, for which fast-fish may have been more utilitarian than first-iron. Ellickson speculates that "American whalers, accustomed to hunting sperm whales in the Pacific, may have had trouble making this switch." This is perhaps not so much the hypothesis failing as the hypothesis sometimes taking some time to become true, and I'm not going to particularly dock it points for that. But it seems worth being explicit that the hypothesis takes some time to become true, because then we can ask questions like "okay, how much time?" Ellickson doesn't ask questions like that.
+This section is one place where Ellickson talks about the hypothesis as concerning dynamics. There are only five American court cases on this subject, and four of them involved whales caught between 1852 and 1862 in the Sea of Okhotsk; the other was an 1872 decision about a whale caught in that sea in an unstated year. Americans had been whaling for more than a century, so why did that happen? The whales in that area were bowheads, for which fast-fish may have been more utilitarian than first-iron. Ellickson speculates that "American whalers, accustomed to hunting sperm whales in the Pacific, may have had trouble making this switch."
 
 (He does give an alternate explanation, that by that time the whaling industry was in decline and the community was becoming less close-knit. "The deviant whalers involved in the litigated cases, seeing themselves nearing their last periods of play, may have decided to defect.")
 
-I do wish he'd been clearer about what exactly a "fishery" is. Did two boats from different fisheries ever encounter each other?
+Minor complaint: I wish he'd been clearer about what exactly a "fishery" is. Did two boats from different fisheries ever encounter each other?
 
 There's something that stuck out to me especially in this section, which I don't think Ellickson ever remarked upon. A lot of norms seem to bend on questions that are *unambiguous given the facts* but where *the facts are unprovable*. If I take a whale that you're in fresh pursuit of, I can tell everyone that you'd lost its trail and only found me days later. Who's to know?
 
-Well, in the case of whalers, the answer is "everyone on both of our ships", that's too many people to maintain a lie. But even where it's just one person's word against another's, this seems mostly fine. If someone has a habit of lying, that's likely to build as a reputation even if no one can prove any of the lies.
+Well, in the case of whalers, the answer is "everyone on both of our ships". That's too many people to maintain a lie. But even where it's just one person's word against another's, this seems mostly fine. If someone has a habit of lying, that's likely to build as a reputation even if no one can prove any of the lies.
 
----
+### Remedies
 
 In private (i.e. non-criminal) law, when someone is found to be deviant, the standard remedy is to award damages. That doesn't always work. They might not have the assets to make good; or they might just be willing to pay that price to disrupt someone's world. So the legal system also has the power of injunctions, requiring or forbidding certain future actions. And if someone violates an injunction, the legal system can incarcerate them.
 
@@ -284,7 +288,7 @@ Remedial norms require a grievant to apply self-help measures in an escalating s
 
 "Sieze or destroy" - which should you do? Destroying assets is a deadweight loss, so it might seem that siezing them would be better for total welfare. But destruction has advantages too. Mainly, it's more obviously punitive, and so less likely to be seen as aggression and to lead to a feud. The Shasta County practice of driving a cow somewhere inconvenient isn't something you'd do for personal gain. But also, it's easier to calibrate (you can't sieze part of a cow, but you can wound it instead of killing). And it can be done surreptitiously, which is sometimes desired (though open punishment is usually prefered, to maintain public records).
 
----
+### Incentives all the way up
 
 We don't have a good understanding of how norms work to provide order. But the key is "altruistic" norm enforcement by third parties. (Those are Ellickson's scare quotes, not mine.) How do we reconcile that with the assumption of self-interested behavior?
 
@@ -300,9 +304,9 @@ Then that enforcer could "[create] incentives for cooperative activity that casc
 
 This might work even with just the perception of such an enforcer. God could be this figure, but so could "a critical mass of self-disciplined elders or other good citizens, known to be committed to the cause of cooperation". Art and literature could help too.
 
----
+### Anarchy in academia
 
-Academia seems to have a disproportionate number of legal centrists. So you might think professors would be unusually law-abiding. But when it comes to academic photocopying, they have much in common with the Shasta County cattlemen. The law says how they should go about copying materials for use in class. Fair-use doctrine is quite restrictive unless they get explicit permission. (Which may take some time. In one case study, 23 permission letters were sent to publishers and only 17 received a response in six months. Ellickson doesn't say how many were denied.) Professors decide they don't really like this, and they substitute their own set of norms.
+Academia seems to have a disproportionate number of legal centrists. So you might think professors would be unusually law-abiding. But when it comes to academic photocopying, they have a lot in common with the Shasta County cattlemen. The law says how they should go about copying materials for use in class. Fair-use doctrine is quite restrictive unless they get explicit permission. (Which may take some time. In one case study, 23 permission letters were sent to publishers and only 17 received a response in six months. Ellickson doesn't say how many were denied.) Professors decide they don't really like this, and they substitute their own set of norms.
 
 The Association of American Publishers tells us that campus copyright violation is (Ellickson quotes) "widespread, flagrant, and egregious". They seem to be right. Ellickson asked law professors directly, and almost all admit to doing it, though almost all would decline to copy major portions of books. The managers of law school copy rooms don't try to enforce the rules, leaving the professors to police themselves. Several commercial copy centres made multiple copies for him of an article from a professional journal. "I have overheard a staff member of a copy center tell a patron that copyright laws prevented him from photocopying more than 10 percent of a book presented as a hardcopy original; the patron then asked whether he himself could use the copy center's equipment to accomplish that task and was told that he could."
 
@@ -310,7 +314,7 @@ The Association of American Publishers tells us that campus copyright violation 
 
 So professors' norms seem to permit illegal repeated copying of articles and minor parts of books. That lets them avoid knowing fair-use doctrine in detail. And since the law would require them to write (and respond to) many requests for consent, it lets them avoid that too.
 
-Ellickson notes that Congress is unlikely to make welfare-maximizing copyright law. (Publishers are better lobbyists than professors and congress. And professors sense this fact.) This lets them frame their norms as principled subversion. I'm not sure if it's particularly relevant though - if copyright law was welfare-maximizing overall, but not for the professors, I think the hypothesis would still predict them to develop their own norms. But thinking back to the stuff on symbolism, maybe "being able to frame your actions as principled subversion" is a component of welfare.
+Professors sense that Congress is unlikely to make welfare-maximizing copyright law. (Publishers can hire better lobbyists than they can.) This lets them frame their norms as principled subversion. I'm not sure if it's particularly relevant though - if copyright law was welfare-maximizing overall, but not for the professors, I think the hypothesis would still predict them to develop their own norms. But thinking back to the stuff on symbolism, maybe "being able to frame your actions as principled subversion" is a component of welfare.
 
 Why will they copy articles, but not large portions of books? Authors of articles don't get paid much for them, and don't charge to mail reprints to colleagues or allow excerpts to be included in compilations. "It appears that most academic authors are so eager for readers to know and cite their work that they usually regard a royalty of zero or even less as perfectly acceptable. For them small-scale copying is not a misappropriation but a service." But book authors do receive royalties, and large-scale copying would diminish those significantly. So according to the hypothesis, this restraint comes from wanting to protect author-professors' royalty incomes, not from caring about publishers' and booksellers' revenues. (Though they might start to care about those, if they thought there might be a shortage of publishers and booksellers. They also might care more about university-affiliated publishers and booksellers.)
 
@@ -318,7 +322,7 @@ Why will they copy articles, but not large portions of books? Authors of article
 
 Notably, in the two leading cases around academic copying, the plaintiffs were publishers and the primary defendant was an off-campus copy center. This is consistent with the hypothesis. In these situations, those two parties have the most distant relationship. Publishers have no use for copy centers, and copy centers don't buy many books, so neither of them has informal power over the other. Even more notably, in one of these cases, university-run copy centers weren't included as defendants - that might anger the professors, who do have power over publishers.
 
----
+### Counterexamples?
 
 But Ellickson admits that all of this could be cherry-picking. So he looks at two well-known cases that he expects people to point to as counterexamples. (I hadn't heard of either of them, so I can't rule out that he's cherry-picking here, too. But I don't expect it.)
 
@@ -352,7 +356,7 @@ If a ritual is cheap to implement, I'd be inclined to give it a pass. There's co
 
 But for vicious and dangerous rituals, this doesn't seem sufficient. Ellickson mentions a tribe where they "cut a finger from the hand of each of a man's close female relatives after he dies"; what medical knowledge are they lacking that makes this seem welfare-maximizing?
 
----
+### Formal game theory
 
 Ellickson goes on to make predictions about a bunch of disputes relating to housing, and how people would solve them in practice regardless of what the law says. I don't want to go into detail on those because this review is long enough already.
 
@@ -369,49 +373,49 @@ In normal-form, these games look like this:
 <table>
 <thead>
   <tr>
-    <th colspan="4">Prisoner's Dilemma</th>
+    <th colspan="4" style="font-weight: bold">Prisoner's Dilemma</th>
     <th></th>
-    <th colspan="4">Specialized Labor<br></th>
+    <th colspan="4" style="font-weight: bold">Specialized Labor<br></th>
   </tr>
 </thead>
 <tbody>
   <tr>
     <td></td>
     <td></td>
-    <td colspan="2">**Player 2**</td>
+    <td colspan="2" style="font-weight: bold">Player 2</td>
     <td></td>
     <td></td>
     <td></td>
-    <td colspan="2">**Player 2**</td>
+    <td colspan="2" style="font-weight: bold">Player 2</td>
   </tr>
   <tr>
     <td></td>
     <td></td>
-    <td>**Cooperate**</td>
-    <td>**Defect**</td>
+    <td style="font-weight: bold">Cooperate</td>
+    <td style="font-weight: bold">Defect</td>
     <td></td>
     <td></td>
     <td></td>
-    <td>**Work**</td>
-    <td>**Shirk**</td>
+    <td style="font-weight: bold">Work</td>
+    <td style="font-weight: bold">Shirk</td>
   </tr>
   <tr>
-    <td rowspan="2">**Player 1**</td>
-    <td>**Cooperate**</td>
+    <td rowspan="2" style="font-weight: bold">Player 1</td>
+    <td style="font-weight: bold">Cooperate</td>
     <td>B, B</td>
     <td>D, A</td>
     <td></td>
-    <td rowspan="2">**Player 1**</td>
-    <td>**Work**</td>
+    <td rowspan="2" style="font-weight: bold">Player 1</td>
+    <td style="font-weight: bold">Work</td>
     <td>B, B</td>
     <td>D, A</td>
   </tr>
   <tr>
-    <td>**Defect**</td>
+    <td style="font-weight: bold">Defect</td>
     <td>A, D</td>
     <td>C, C</td>
     <td></td>
-    <td>**Shirk**</td>
+    <td style="font-weight: bold">Shirk</td>
     <td>A, E</td>
     <td>C, C</td>
   </tr>
@@ -464,9 +468,9 @@ He also says it carries through to the real world:
 >
 > More generally, the familiarity of the phrase "get even," the biblical remedy of an eye for an eye, the norm of reciprocity that George Homans calls one of the world's most common, anthropologists' findings of gift exchange, friends' tendencies to alternate in hosting social events - all these hint at the pervasiveness of something like an Even-Up approach to social interactions. [Footnotes removed.]
 
----
+### Summing up
 
-Summing up. Is this a good book? Yes, very much so. I found it fascinating both on the level of details and the level of ideas. Ellickson is fairly readable, and occasionally has a dry turn of phrase that I love. ("A drowning baby has neither the time nor the capacity to contract for a rescue.") And I don't know if this came across in my review, but he's an unusually careful thinker. He owns up to weaknesses. He'll make a claim and then offer citations of people disareeing. He makes predictions and admits that if they fail the hypothesis will be weakened. I think he made some mistakes, and I think his argument could have been clearer in places, but overall I'm impressed with his ability to think.
+Is this a good book? Yes, very much so. I found it fascinating both on the level of details and the level of ideas. Ellickson is fairly readable, and occasionally has a dry turn of phrase that I love. ("A drowning baby has neither the time nor the capacity to contract for a rescue.") And I don't know if this came across in my review, but he's an unusually careful thinker. He owns up to weaknesses. He'll make a claim and then offer citations of people disareeing. He makes predictions and admits that if they fail the hypothesis will be weakened. I think he made some mistakes, and I think his argument could have been clearer in places, but overall I'm impressed with his ability to think.
 
 Is the hypothesis true? I... don't think so, but if we add one more caveat, then maybe.
 
@@ -488,7 +492,7 @@ So I want to add a caveat acknowledging that sort of thing. I don't know how to 
 
 With this additional caveat, is the hypothesis true? I still wouldn't confidently say "yes", for a few reasons. My main inside-view objection is the ritual stuff, but there's also the outside-view "this is a complicated domain that I don't know well". But it does feel to me like a good rule of thumb, at least.
 
----
+### Further questions
 
 I want to finish up with some further questions.
 
