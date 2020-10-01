@@ -48,27 +48,27 @@ In normal-form, these games look like this:
   <tr>
     <td rowspan="2" style="font-weight: bold">Player 1</td>
     <td style="font-weight: bold">Cooperate</td>
-    <td>\( WW_=, WW_= \)</td>
-    <td>\( WS_=, SW_= \)</td>
+    <td>\( ww_=, ww_= \)</td>
+    <td>\( ws_=, sw_= \)</td>
     <td></td>
     <td rowspan="2" style="font-weight: bold">Player 1</td>
     <td style="font-weight: bold">Work</td>
-    <td>\( WW_=, WW_= \)</td>
-    <td>\( WS_1, SW_= \)</td>
+    <td>\( ww_=, ww_= \)</td>
+    <td>\( ws_1, sw_= \)</td>
   </tr>
   <tr>
     <td style="font-weight: bold">Defect</td>
-    <td>\( SW_=, WS_= \)</td>
-    <td>\( SS_=, SS_= \)</td>
+    <td>\( sw_=, ws_= \)</td>
+    <td>\( ss_=, ss_= \)</td>
     <td></td>
     <td style="font-weight: bold">Shirk</td>
-    <td>\( SW_=, WS_2 \)</td>
-    <td>\( SS_=, SS_= \)</td>
+    <td>\( sw_=, ws_2 \)</td>
+    <td>\( ss_=, ss_= \)</td>
   </tr>
   <tr>
-    <td colspan="4">\(SW_= &gt; WW_= &gt; SS_= &gt; WS_= \), and \(2WW_= &gt; SW_= + WS_= \)</td>
+    <td colspan="4">\(sw_= &gt; ww_= &gt; ss_= &gt; ws_= \), and \(2ww_= &gt; sw_= + ws_= \)</td>
     <td></td>
-    <td colspan="4">\(SW_= &gt; WW_= &gt; SS_= &gt; WS_1 &gt; WS_2 \), and \(2WW_= &gt; SW_= + WS_1 \)</td>
+    <td colspan="4">\(sw_= &gt; ww_= &gt; ss_= &gt; ws_1 &gt; ws_2 \), and \(2ww_= &gt; sw_= + ws_1 \)</td>
   </tr>
 </tbody>
 </table>
@@ -79,7 +79,7 @@ So most of the points I want to ding Ellickson here are because this is kind of 
 
 Honestly I don't think that's so implausible as a heuristic. I think "most work projects have gains from (little-C) cooperation" is a decent guess, and then one way to remove those gains could be if one player is much more skilled than the other. Still, Ellickson doesn't make this argument, or acknowledge that the assumption is kind of weird. And I do think it would be worth looking, at least briefly, at "symmetrical games with no gains from cooperation" and "asymmetrical games with gains from cooperation".
 
-Something weird on the face of it is that in Specialized Labor, Work/Work results in the same payoff to both players. Why assume that that's symmetrical? But I don't think this is a big deal. Plausibly people can calibrate how hard they work if they think they're getting a worse result than the other. But also I suspect you just don't change much by allowing it to be asymmetrical, provided that both payoffs are in between \(SW_=\) and \(SS_=\).
+Something weird on the face of it is that in Specialized Labor, Work/Work results in the same payoff to both players. Why assume that that's symmetrical? But I don't think this is a big deal. Plausibly people can calibrate how hard they work if they think they're getting a worse result than the other. But also I suspect you just don't change much by allowing it to be asymmetrical, provided that both payoffs are in between \(sw_=\) and \(ss_=\).
 
 More seriously, Ellickson's choice ignores the possibility that work might be worth doing selfishly. In both games, you maximize your own outcome by not working, and if that means the work doesn't get done, so be it. But that puts a narrow band on the value of a piece of work. It's not worth doing for the benefits it gives to one person, but it is worth doing for the benefits it gives to two. I think a lot of the situations Ellickson looks at don't really fit that model. For example, building a fence seems like something you'd often do of your own accord, simply for the benefits it gives to yourself, but Ellickson considers it a Prisoner's Dilemma.
 
