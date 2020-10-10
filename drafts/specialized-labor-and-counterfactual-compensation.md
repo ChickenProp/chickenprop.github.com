@@ -48,8 +48,14 @@ In normal-form, these games look like this:
   <tr>
     <td rowspan="2" style="font-weight: bold">Player 1</td>
     <td style="font-weight: bold">Work</td>
-    <td>$ ww_=, ww_= $</td>
-    <td>$ ws_=, sw_= $</td>
+    <td style="background-color: #EEE">
+      <span style="color: red">$ ww_= $</span>,
+      <span style="color: red">$ ww_= $</span>
+    </td>
+    <td>
+      <span style="color: red">$ ws_= $</span>,
+      <span style="color: green">$ sw_= $</span>
+    </td>
     <td></td>
     <td rowspan="2" style="font-weight: bold">Player 1</td>
     <td style="font-weight: bold">Work</td>
@@ -58,8 +64,14 @@ In normal-form, these games look like this:
   </tr>
   <tr>
     <td style="font-weight: bold">Shirk</td>
-    <td>$ sw_=, ws_= $</td>
-    <td>$ ss_=, ss_= $</td>
+    <td>
+      <span style="color: green">$ sw_= $</span>,
+      <span style="color: red">$ ws_= $</span>
+    </td>
+    <td>
+      <span style="color: green">$ ss_= $</span>,
+      <span style="color: green">$ ss_= $</span>
+    </td>
     <td></td>
     <td style="font-weight: bold">Shirk</td>
     <td>$ sw_=, ws_2 $</td>
