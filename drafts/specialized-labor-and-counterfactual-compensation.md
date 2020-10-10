@@ -8,7 +8,7 @@ Spoiler alert: I think he holds up reasonably well. I want to ding him a few poi
 
 My second purpose, which is valuable for the first but also valuable of itself, is to try to extend it further than Ellickson did.
 
-Ellickson discusses two games. One is the classic Prisoner's Dilemma, in which you either Cooperate (for personal benefit but social cost) or Defect (for personal cost but social benefit). Note that Ellickson specifies Cooperate/Cooperate as having more total utility than Cooperate/Defect or Defect/Cooperate; I consider this [correct](http://reasonableapproximation.net/2020/07/04/classifying-games-like-prisoners-dilemma.html), but not all authors include that condition.
+Ellickson discusses two games. One is the classic Prisoner's Dilemma, in which you either Cooperate (for personal benefit but social cost) or Defect (for personal cost but social benefit). Note that Ellickson specifies Cooperate/Cooperate as having more total utility than Cooperate/Defect or Defect/Cooperate; I consider this [correct](https://lesswrong.com/posts/KwbJFexa4MEdhJbs4/classifying-games-like-the-prisoner-s-dilemma#comment-xzA7K2To2N84NJgNj), but not all authors include that condition.
 
 The other he calls Specialized Labor, in which two people must choose whether to Work on some common project or Shirk their share of it. It differs from the Prisoner's Dilemma in two ways. First, it's asymmetrical; one player is a less effective worker than the other, and gets less payoff from Working while the other Shirks than does the other player. The other is that in this game, the socially optimal outcome is Work/Shirk, not Work/Work. ("Socially optimal" means maximizing the sum of the players' results. That's not a meaningful thing to do if the results are measured in utility, but it is if they're measured in welfare.)
 
@@ -59,8 +59,14 @@ In normal-form, these games look like this:
     <td></td>
     <td rowspan="2" style="font-weight: bold">Player 1</td>
     <td style="font-weight: bold">Work</td>
-    <td>$ ww_=, ww_= $</td>
-    <td>$ ws_1, sw_= $</td>
+    <td>
+      <span style="color: red">$ ww_= $</span>,
+      <span style="color: red">$ ww_= $</span>
+    </td>
+    <td style="background-color: #EEE">
+      <span style="color: red">$ ws_1 $</span>,
+      <span style="color: green">$ sw_= $</span>
+    </td>
   </tr>
   <tr>
     <td style="font-weight: bold">Shirk</td>
@@ -74,8 +80,14 @@ In normal-form, these games look like this:
     </td>
     <td></td>
     <td style="font-weight: bold">Shirk</td>
-    <td>$ sw_=, ws_2 $</td>
-    <td>$ ss_=, ss_= $</td>
+    <td>
+      <span style="color: green">$ sw_= $</span>,
+      <span style="color: red">$ ws_= $</span>
+    </td>
+    <td>
+      <span style="color: green">$ ss_= $</span>,
+      <span style="color: green">$ ss_= $</span>
+    </td>
   </tr>
   <tr>
     <td colspan="4">$ sw_= &gt; ww_= &gt; ss_= &gt; ws_= $, and $ 2ww_= &gt; sw_= + ws_= $</td>
@@ -89,7 +101,9 @@ How to read these symbols: the subscript is the player who gets the payoff, the 
 
 This notation is kind of experimental on my part. Ellickson instead uses symbols `$ A, B, C, D, E $` in descending order, but that makes it hard to remember which goes where in the grid. And when I extend it, the ordering will be lost, making it even more confusing.
 
-Comparing these games, he claims for example that norms will tend to punish someone who Shirks in a Prisoner's Dilemma, rather than rewarding those who Work, because eventually most people will Work and it's cheaper to sanction the thing that happens rarely. But in a Specialized Labor game, norms will tend to reward the efficient worker ("cheapest labor-provider") for Working, because that encourages people to obtain the skills necessary to perform this work. There's a background level of skills that everyone is expected to have, and people are punished for falling short of them and rewarded for exceeding them.
+To help make the structure more visible, I've colored the symbols in green when that player prefers them to the alternative, and red when that player prefers the alternative. So a Nash equilibrium has two green symbols. Note that each color only compares one payoff against one other; when `$ ws_1 $` is red, that means `$ ss_1 > ws_1 $`, since `$ ss_1 $` represents Player 1's payoff if he changes his move while Player 2 keeps hers the same. The quadrants with a darkened background are the socially optimal ones.
+
+Comparing these games, Ellickson claims for example that norms will tend to punish someone who Shirks in a Prisoner's Dilemma, rather than rewarding those who Work, because eventually most people will Work and it's cheaper to sanction the thing that happens rarely. But in a Specialized Labor game, norms will tend to reward the efficient worker ("cheapest labor-provider") for Working, because that encourages people to obtain the skills necessary to perform this work. There's a background level of skills that everyone is expected to have, and people are punished for falling short of them and rewarded for exceeding them.
 
 So most of the points I want to ding Ellickson here are because this is kind of a strange choice of games. For one thing, it seems to assume that: *teaming up to work is more expensive than working individually, if and only if players have unequal skill levels*.
 
@@ -103,7 +117,7 @@ Similarly you might suppose that the efficient worker doesn't just pay less to W
 
 More seriously, Ellickson's choice ignores the possibility that work might be worth doing selfishly. In both games, you maximize your own outcome by not working, and if that means the work doesn't get done, so be it. But that puts a narrow band on the value of a piece of work. It's not worth doing for the benefits it gives to one person, but it is worth doing for the benefits it gives to two. I think a lot of the situations Ellickson looks at don't really fit that model. For example, building a fence seems like something you'd often do of your own accord, simply for the benefits it gives to yourself, but Ellickson considers it a Prisoner's Dilemma.
 
-To model this possibility, we'd set `$ ws_1 > ss_= $`, and maybe `$ ws_2 > ss_= $` as well. This gives the game that I like to call the [Farmer's Dilemma](http://reasonableapproximation.net/2015/05/05/farmers-dilemma.html) and others call Chicken, Hawk/Dove or Snowdrift. ([And here's why I call it that.](https://www.greaterwrong.com/posts/KwbJFexa4MEdhJbs4/classifying-games-like-the-prisoner-s-dilemma#comment-aEC8trK7f3uczsXvM)) Normally I think of the Farmer's Dilemma as symmetrical, but the asymmetrical case seems fine to count as an instance of it, at least right now.
+To model this possibility, we'd set `$ ws_1 > ss_= $`, and maybe `$ ws_2 > ss_= $` as well. This gives the game that I like to call the [Farmer's Dilemma](http://reasonableapproximation.net/2015/05/05/farmers-dilemma.html) and others call Chicken, Hawk/Dove or Snowdrift. ([And here's why I call it that.](https://lesswrong.com/posts/KwbJFexa4MEdhJbs4/classifying-games-like-the-prisoner-s-dilemma#comment-aEC8trK7f3uczsXvM)) Normally I think of the Farmer's Dilemma as symmetrical, but the asymmetrical case seems fine to count as an instance of it, at least right now.
 
 The tricky thing about this game is that even though you'd be willing to do the work yourself if no one else benefitted, the fact that someone else *does* benefit makes you want them to join in and help with the work. If they decline,
 your only in-game way to punish them is not to do the work, which hurts you too - but if you don't punish them, you're a sucker. This is fundamentally different from the tricky thing with Prisoner's Dilemma and Specialized Labor, which in both cases is simply that people have no incentive to work. So it seems like an important omission. Especially because depending on the exact payoffs, it may be that "one player is a sucker while the other makes off like a bandit" is both a Nash equilibrium and socially optimal.
