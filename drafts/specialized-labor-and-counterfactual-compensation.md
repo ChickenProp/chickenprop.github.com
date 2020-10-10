@@ -82,7 +82,7 @@ In normal-form, these games look like this:
     <td style="font-weight: bold">Shirk</td>
     <td>
       <span style="color: green">$ sw_= $</span>,
-      <span style="color: red">$ ws_= $</span>
+      <span style="color: red">$ ws_2 $</span>
     </td>
     <td>
       <span style="color: green">$ ss_= $</span>,
@@ -130,6 +130,8 @@ He calls this the "liquidated-Kantian formula" but doesn't explain the name, and
 
 (To compare: actual compensation would be compensating you for the losses you actually suffered from working, `$ ss_= - ws_1 $`. Actual restitution would be handing over to you the gains I got from your work, `$ sw_= - ss_= $`. Counterfactual restitution would be handing over to you the gains I got from not working myself, `$ sw_= - ww_= $`. Each of these takes one player's payoff in one quadrant, and subtracts the same player's payoff in an adjacent quadrant. The actual variants are about differences between the world where no one worked and the worlds where one of us worked; they're about the effects of work that actually happened. The counterfactual variants are about the differences between the worlds where only one of us worked and the world where we both worked; they're about the effects of work that didn't happen.)
 
+(Also: yes, obviously there are caveats to apply when bringing this formula to the real world. Ellickson discusses them. I'm going to ignore them.)
+
 If we apply this formula to the Prisoner's Dilemmma, we get this:
 
 <table>
@@ -153,13 +155,25 @@ If we apply this formula to the Prisoner's Dilemmma, we get this:
   <tr>
     <td rowspan="2" style="font-weight: bold">Player 1</td>
     <td style="font-weight: bold">Work</td>
-    <td>$ ww_=, ww_= $</td>
-    <td>$ ww_=, sw_= + ws_= - ww_= $</td>
+    <td style="background-color: #EEE">
+      <span style="color: green">$ ww_= $</span>,
+      <span style="color: green">$ ww_= $</span>
+    </td>
+    <td>
+      <span style="color: green">$ ws_= $</span>,
+      <span style="color: red">$ sw_= + ws_= - ww_= $</span>
+    </td>
   </tr>
   <tr>
     <td style="font-weight: bold">Shirk</td>
-    <td>$ sw_= + ws_= - ww_=, ww_= $</td>
-    <td>$ ss_=, ss_= $</td>
+    <td>
+      <span style="color: red">$ sw_= + ws_= - ww_= $</span>,
+      <span style="color: green">$ ww_= $</span>
+    </td>
+    <td>
+      <span style="color: red">$ ss_= $</span>,
+      <span style="color: red">$ ss_= $</span>
+    </td>
   </tr>
   <tr>
     <td colspan="4">$ sw_= &gt; ww_= &gt; ss_= &gt; ws_= $, and $ 2ww_= &gt; sw_= + ws_= $</td>
@@ -234,11 +248,11 @@ There are other options for payment one might consider; I haven't even looked at
 
 While we're at it, let's confirm my intuition from above. "Asymmetrical games with gains from cooperation" have `$ ws_1 ≠ ws_2 $` but `$ 2ww_= > ws_1 + sw_= $`. In this case, counterfactual compensation does exactly what we want it to do, just like in the symmetrical Prisoner's Dilemma; we can choose any of the three ways to apply it. "Symmetrical games with no gains from cooperation" have `$ ws_1 = ws_2 $` but $ 2ww_= < ws_= + sw_= $`. The difficulty here is that there's no way to break the symmetry. Any of the three ways to apply counterfactual compensation will be equivalent, and leave us with two Nash equilibria in the two socially equal quadrants. The "discuss in advance" feature saves us again, I think; players don't need to somehow acausally cooperate to select one to Work and one to Shirk, they can just, like, talk about it.
 
+How does this work in the Farmer's Dilemma?
 
 
 
 
-(Obviously there are caveats to apply when bringing this formula to the real world. Ellickson discusses them.)
 
 How does this work in the Farmer's Dilemma? There's more cases to consider there, and I haven't looked in detail yet, but I think it mostly either improves the incentives or at least doesn't hurt them? So that's kind of a point to Ellickson, too.
 
