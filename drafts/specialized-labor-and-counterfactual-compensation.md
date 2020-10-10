@@ -81,11 +81,13 @@ Comparing these games, he claims for example that norms will tend to punish some
 
 So most of the points I want to ding Ellickson here are because this is kind of a strange choice of games. For one thing, it seems to assume that: *teaming up to work is more expensive than working individually, if and only if players have unequal skill levels*.
 
-Honestly I don't think that's so implausible as a heuristic. I think "most work projects have gains from (little-C) cooperation" is a decent guess, and then one way to remove those gains could be if one player is much more skilled than the other. Still, Ellickson doesn't make this argument, or acknowledge that the assumption is kind of weird. And I do think it would be worth looking, at least briefly, at "symmetrical games with no gains from cooperation" and "asymmetrical games with gains from cooperation".
+Honestly I don't think that's so implausible as a heuristic. I think "most work projects have gains from (little-C) cooperation" is a decent guess, and then one way to remove those gains could be if one player is much more skilled than the other. Still, Ellickson doesn't make this argument, or acknowledge that the assumption is kind of weird.
+
+Another way to justify the omission is if the ommitted possibilities don't add much of interest. Prisoner's Dilemma and Specialized Labor are opposite corners in a two-by-two grid parameterized by "gains from cooperation/no such gains" and "symmetrical/asymmetrical". If our tools for working with them can also be applied to the other corners without much extra effort, then there's no need to consider the others in detail. I had an intuition that this would be true, and I confirm it below. But Ellickson doesn't make this argument, either. I think it was a fine decision to omit the games, but I think it would have been worth a couple of sentences on why.
 
 Something weird on the face of it is that in Specialized Labor, Work/Work results in the same payoff to both players. Why assume that that's symmetrical? But I don't think this is a big deal. Plausibly people can calibrate how hard they work if they think they're getting a worse result than the other. But also I suspect you just don't change much by allowing it to be asymmetrical, provided that both payoffs are in between `$ sw_= $` and `$ ss_= $`.
 
-Similarly you might suppose that the efficient worker doesn't just pay less to Work than the inefficient worker, he also does a better job. In which case we might want to set `$ sw_1 &lt; sw_2 $`. But again, I doubt that matters much.
+Similarly you might suppose that the efficient worker doesn't just pay less to Work than the inefficient worker, he also does a better job. In which case we might want to set `$ sw_1 < sw_2 $`. But again, I doubt that matters much.
 
 More seriously, Ellickson's choice ignores the possibility that work might be worth doing selfishly. In both games, you maximize your own outcome by not working, and if that means the work doesn't get done, so be it. But that puts a narrow band on the value of a piece of work. It's not worth doing for the benefits it gives to one person, but it is worth doing for the benefits it gives to two. I think a lot of the situations Ellickson looks at don't really fit that model. For example, building a fence seems like something you'd often do of your own accord, simply for the benefits it gives to yourself, but Ellickson considers it a Prisoner's Dilemma.
 
@@ -100,7 +102,7 @@ How do we get the socially optimal result in Prisoner's Dilemma and Specialized 
 
 He calls this the "liquidated-Kantian formula" but doesn't explain the name, and I have only the vaguest understanding of where he might be going with it. Since the name hasn't caught on, I'm going to propose my own: *counterfactual compensation*. If I Shirk, I compensate you for your losses compared to the world where I worked.
 
-(To compare: regular compensation would be compensating you for the losses you actually suffered from working, `$ ss_= - ws_1 $`. Restitution would be handing over to you the gains I got from your work, $ ss_= - sw_2 $. Counterfactual restitution would be handing over to you the gains I got from not working myself, $ ww_= - sw_2 $. Each of these takes one player's payoff in one quadrant, and subtracts the same player's payoff in an adjacent quadrant. The factual variants are about differences between the world where no one worked and the worlds where one of us worked; they're about the effects of work that actually happened. The counterfactual variants are about the differences between the worlds where only one of us worked and the world where we both worked; they're about the effects of work that didn't happen.)
+(To compare: actual compensation would be compensating you for the losses you actually suffered from working, `$ ss_= - ws_1 $`. Actual restitution would be handing over to you the gains I got from your work, `$ sw_= - ss_= $`. Counterfactual restitution would be handing over to you the gains I got from not working myself, `$ sw_= - ww_= $`. Each of these takes one player's payoff in one quadrant, and subtracts the same player's payoff in an adjacent quadrant. The actual variants are about differences between the world where no one worked and the worlds where one of us worked; they're about the effects of work that actually happened. The counterfactual variants are about the differences between the worlds where only one of us worked and the world where we both worked; they're about the effects of work that didn't happen.)
 
 If we apply this formula to the Prisoner's Dilemmma, we get this:
 
@@ -143,14 +145,14 @@ Since `$ ww_= > sw_= + ws_= - ww_= $`, this puts the incentives in the correct p
 
 (In [my previous classification](http://reasonableapproximation.net/2020/07/04/classifying-games-like-prisoners-dilemma.html), depending on whether `$ sw_= + ws_= - ww_= ≷ ss_= $`, it hits the point where The Abundant Commons meets either Cake Eating or Studying For a Test. It's not unique in either case, because there are at most three distinct payout values.)
 
-Specialized Labor is more complicated. There are three ways we might decide to apply counterfactual compensation. We could say that the Shirker compensates the Worker for the Worker's costs, either `$ ss_= - ws_1 $` or `$ ss_= - ws_2 $` depending on who Worked. Or we could say that the Shirker compensates the Worker for what the *efficient* Worker's costs would have been, `$ ss_= - ws_1 $` regardless of who Worked. Or we could say that the efficient worker never owes anything to the inefficient worker; he gets to just say "sorry, I'm not going to pay you for work I could have done more easily".
+Specialized Labor is more complicated. There are three ways we might decide to apply counterfactual compensation. We could say that the Shirker compensates the Worker for the Worker's costs, either `$ ww_= - ws_1 $` or `$ ww_= - ws_2 $` depending on who Worked. Or we could say that the Shirker compensates the Worker for what the *efficient* Worker's costs would have been, `$ ww_= - ws_1 $` regardless of who Worked. Or we could say that the efficient worker never owes anything to the inefficient worker; he gets to just say "sorry, I'm not going to pay you for work I could have done more easily".
 
 Ellickson doesn't discuss these options, he just takes the last one. Here's what it looks like.
 
 <table>
 <thead>
   <tr>
-    <th colspan="4" style="font-weight: bold">Prisoner's Dilemma with counterfactual compensation</th>
+    <th colspan="4" style="font-weight: bold">Specialized Labor with counterfactual compensation</th>
   </tr>
 </thead>
 <tbody>
@@ -177,16 +179,38 @@ Ellickson doesn't discuss these options, he just takes the last one. Here's what
     <td>$ ss_=, ss_= $</td>
   </tr>
   <tr>
-    <td colspan="4">$ sw_= &gt; ww_= &gt; ss_= &gt; ws_1 &gt; ws_2 $, and $ 2ww_= &lt; sw_= + ws_= $</td>
+    <td colspan="4">$ sw_= &gt; ww_= &gt; ss_= &gt; ws_1 &gt; ws_2 $, and $ 2ww_= &lt; sw_= + ws_1 $</td>
   </tr>
 </tbody>
 </table>
 
-The debt is only owed from the inefficient worker to the efficient one; if the inefficient worker Works while the efficient worker Shirks, presumably the efficient worker just gets to say "sorry, I'm not going to pay you for work I could have done more easily". So the inefficient worker has no incentive to Work if the efficient worker Shirks. And if the efficient worker Works, the inefficient worker also has no incentive to Work, because by Shirking they get (A+D-B > B). And given that the ineffecient worker is Shirking, the efficient worker has incentive to Work (ending with B if they do, or C if they don't). Ellickson doesn't use the term "Nash equilibrium", but: in both cases, this B-D payment results in a single Nash equilibrium at the single socially optimal result.
+Player 2 has no incentive to Work, regardless of what Player 1 does, because `$ ss_= > ws_2 $` and (unlike in the Prisoner's Dilemma) `$ sw_= + ws_1 - ww_= > ww_= $`. And given that Player 2 is Shirking, Player 1 has incentive to Work. So again, we've moved the Nash equilibrium to the socially optimal quadrant.
 
 This isn't, like, a mind-blowing result that's going to blow open the field of game theory. But I don't remember seeing it before, and Ellickson doesn't attribute it to anyone else. I'm inclined to give him some credit for it. Even if others have had the insight before - which I expect they have - it seems like he's still doing competent work in a field outside his own.
 
 But then I do dock him a point because he doesn't comment on the fact that the inefficient worker gets a better result than the efficient worker. That seems bad to me, because it discourages people from becoming the efficient worker.
+
+What happens if we apply counterfactual compensation in the other possible ways? The only difference is in the bottom left quadrant, which becomes either `$ sw_= + ws_2 - ww_=, ww_= $` or `$ sw_= + ws_1 - ww_=, ww_= + ws_2 - ws_1 $`. The problem with both of these is that that quadrant might now be a Nash equilibrium. In the first case, Player 1 might prefer that quadrant over Work/Work, depending on `$ 2ww_= ≷ sw_= + ws_2 $`, and Player 2 will certainly prefer it over Shirk/Shirk. In the second case, Player 1 will certainly prefer that quadrant over Work/Work, and Player 2 might prefer it over Shirk/Shirk, depending on `$ ww_= + ws_2 - ws_1 ≷ ss_= $`. That's not great, we only want a Nash equilibrium in the socially optimal quadrant.
+
+On the other hand, I note that if `$ ws_1 - ws_2 $` is small, then the social cost is low; and if it's large, then (except perhaps with some fairly specific payoff values?) that quadrant isn't a Nash equilibrium. Meanwhile, if payoffs are uncertain - if people might disagree about who the more efficient worker is - then either of the other choices seems more robust.
+
+On the other other hand, a feature of how these games translate to the real world is that players encourage each other to discuss in advance. Someone building unilaterally may not get to claim this debt. So if they disagree about who the efficient worker is, that's unlikely to cause much grief.
+
+What about measures other than counterfactual compensation? Actual compensation (`$ ss_= - ws_1 $`) doesn't work. If a player expects the other to Shirk, they'd be indifferent to Working; and if they expect the other to Work, they might prefer to Work or not depending on `$ ww_= ≷ sw_= + ws_1 - ss_= $`. (That's only a problem in the Prisoner's Dilemma; in Specialized Labor, the inequality resolves as `$ < $` which gives the incentives we want.)
+
+Actual restitution (`$ sw_= - ss_= $`) is sometimes okay in a Prisoner's Dilemma, but if `$ ws_= + sw_= < 2ss_= $` then Shirk/Shirk remains a Nash equilibrium; players will only want to Work if they expect the other to also Work. In Specialized Labor it has the problem that players would prefer to Work than to pay restitution, and so Work/Shirk cannot be a Nash equilibrium.
+
+Counterfactual restitution (`$ sw_= - ww_= $`) has much the same problem in a Prisoner's Dilemma; if `$ ws_= + sw_= < ww_= + ss_= $` then Shirk/Shirk is a Nash equilibrium. And in both games, a player who expects the other to Work will be indifferent to Working.
+
+There are other options for payment one might consider; I haven't even looked at all of them of the form "one raw payoff minus another raw payoff". But so far, counterfactual compensation seems like the best option.
+
+(We could even consider values of the debt based on information outside of the original payoff matrix. But Ellickson points out that when deciding how to act in the first place, players will already want to figure out what the payoff matrix looks like. If the debt was based on other information, there'd be a further cost to gather that information.)
+
+While we're at it, let's confirm my intuition from above. "Asymmetrical games with gains from cooperation" have `$ ws_1 ≠ ws_2 $` but `$ 2ww_= > ws_1 + sw_= $`. In this case, counterfactual compensation does exactly what we want it to do, just like in the symmetrical Prisoner's Dilemma; we can choose any of the three ways to apply it. "Symmetrical games with no gains from cooperation" have `$ ws_1 = ws_2 $` but $ 2ww_= < ws_= + sw_= $`. The difficulty here is that there's no way to break the symmetry. Any of the three ways to apply counterfactual compensation will be equivalent, and leave us with two Nash equilibria in the two socially equal quadrants. The "discuss in advance" feature saves us again, I think; players don't need to somehow acausally cooperate to select one to Work and one to Shirk, they can just, like, talk about it.
+
+
+
+
 
 (Obviously there are caveats to apply when bringing this formula to the real world. Ellickson discusses them.)
 
