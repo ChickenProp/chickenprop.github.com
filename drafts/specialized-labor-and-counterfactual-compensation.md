@@ -2,11 +2,13 @@
 title: Specialized Labor and Counterfactual Compensation
 layout: draft
 ---
-I have two purposes in this post. The first is to review the formal game theory found in Robert Ellickson's *Order Without Law*. It's not a large part of the book, but it's the part that I'm most qualified to judge. Not that I'm a formal game theorist myself, but I'm closer to one of them than any kind of social scientist, historian or lawyer. If his formal game theory is nonsense, that would suggest that I ought to discount his writing on other fields, too. (Perhaps not discount it completely, especially because formal game theory is outside his main area of study. Then again, lots of the book is outside his main area of study.)
+I have three purposes in this post. The first is to review the formal game theory found in Robert Ellickson's *Order Without Law*. It's not a large part of the book, but it's the part that I'm most qualified to judge. Not that I'm a formal game theorist myself, but I'm closer to being one of them than to being any kind of social scientist, historian or lawyer. If his formal game theory is nonsense, that would suggest that I ought to discount his writing on other fields, too. (Perhaps not discount it completely, especially because formal game theory is outside his main area of study. Then again, lots of the book is outside his main area of study.)
 
 Spoiler alert: I think he holds up reasonably well. I want to ding him a few points, but nothing serious, and he possibly even contributes a minor original result.
 
 My second purpose, which is valuable for the first but also valuable of itself, is to try to extend it further than Ellickson did.
+
+My third is simply to be able to cut it from my in-progress review of the rest of the book.
 
 Ellickson discusses two games. One is the classic Prisoner's Dilemma, in which you either Cooperate (for personal benefit but social cost) or Defect (for personal cost but social benefit). Note that Ellickson specifies Cooperate/Cooperate as having more total utility than Cooperate/Defect or Defect/Cooperate; I consider this [correct](https://lesswrong.com/posts/KwbJFexa4MEdhJbs4/classifying-games-like-the-prisoner-s-dilemma#comment-xzA7K2To2N84NJgNj), but not all authors include that condition.
 
@@ -185,14 +187,14 @@ Since `$ ww_= > sw_= + ws_= - ww_= $`, this puts the incentives in the correct p
 
 (In [my previous classification](http://reasonableapproximation.net/2020/07/04/classifying-games-like-prisoners-dilemma.html), depending on whether `$ sw_= + ws_= - ww_= ≷ ss_= $`, this new game is at the point where The Abundant Commons meets either Cake Eating or Studying For a Test. It's not unique in either case, because there are at most three distinct payout values.)
 
-Specialized Labor is more complicated. There are three ways we might decide to apply counterfactual compensation. We could say that the Shirker compensates the Worker for the Worker's costs, either `$ ww_= - ws_1 $` or `$ ww_= - ws_2 $` depending on who Worked. Or we could say that the Shirker compensates the Worker for what the *efficient* Worker's costs would have been, `$ ww_= - ws_1 $` regardless of who Worked. Or we could say that the efficient worker never owes anything to the inefficient worker; he gets to just say "sorry, I'm not going to pay you for work I could have done more easily".
+Specialized Labor is more complicated. There are three ways we might decide to apply counterfactual compensation. We could say that the Shirker compensates the Worker for the Worker's costs, either `$ ww_= - ws_1 $` or `$ ww_= - ws_2 $` depending on who Worked. Or we could say that the Shirker compensates the Worker for what the *efficient* Worker's costs would have been, `$ ww_= - ws_1 $` regardless of who Worked. Or we could say that the efficient worker never owes anything to the inefficient worker; he gets to just say "sorry, I'm not going to pay you for work I could have done more easily". Lets call these approaches "actual-costs", "efficient-costs" and "substandard-uncompensated"
 
-Ellickson doesn't discuss these options, he just takes the last one. Here's what it looks like.
+Ellickson doesn't discuss these options, he just takes the substandard-uncompensated one. Here's what it looks like.
 
 <table>
 <thead>
   <tr>
-    <th colspan="4" style="font-weight: bold">Specialized Labor with counterfactual compensation</th>
+    <th colspan="4" style="font-weight: bold">Specialized Labor with counterfactual compensation (substandard-uncompensated)</th>
   </tr>
 </thead>
 <tbody>
@@ -313,10 +315,56 @@ So in normal form, the Farmer's Dilemma looks like this:
 </tbody>
 </table>
 
-Either of the top two quadrants could be socially optimal, depending whether `$ 2ww_= ≷ sw_= + ws_= $`.
+Either of the top two quadrants could be socially optimal, depending whether where are gains from cooperation (that is, whether `$ 2ww_= ≷ sw_= + ws_= $`). Shirk/Work may or may not be a Nash equilibrium, depending whether `$ ws_2 ≷ ss_= $`. So how does it look with counterfactual compensation? I'll consider the "gains/no gains from cooperation" cases separately.
 
+<table>
+<thead>
+  <tr>
+    <th colspan="4" style="font-weight: bold">Farmer's Dilemma with counterfactual compensation (substandard-uncompensated) and gains from cooperation</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td></td>
+    <td></td>
+    <td colspan="2" style="font-weight: bold">Player 2</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td style="font-weight: bold">Work</td>
+    <td style="font-weight: bold">Shirk</td>
+  </tr>
+  <tr>
+    <td rowspan="2" style="font-weight: bold">Player 1</td>
+    <td style="font-weight: bold">Work</td>
+    <td style="background: #EEE">
+      <span style="color: red">$ ww_= $</span>,
+      <span style="color: green">$ ww_= $</span>
+    </td>
+    <td>
+      <span style="color: green">$ ww_= $</span>,
+      <span style="color: red">$ sw_= + ws_1 - ww_= $</span>
+    </td>
+  </tr>
+  <tr>
+    <td style="font-weight: bold">Shirk</td>
+    <td>
+      <span style="color: green">$ sw_= $</span>,
+      $ ws_2 $
+    </td>
+    <td>
+      <span style="color: red">$ ss_= $</span>,
+      $ ss_= $
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4">$ sw_= &gt; ww_= &gt; ws_1 &gt; ss_=$, $ ws_1 &gt; ws_2 $, and $ 2ww_= &gt; sw_= + ws_1 $</td>
+  </tr>
+</tbody>
+</table>
 
-
+Oh dear. Substandard-uncompensated compensation is clearly not going to work; Shirk/Work might still be a Nash equilibrium. In Specialized Labor it was fine that the efficient Worker would prefer the inefficient worker to do all the work, because the inefficient worker would say "nuts to that". In a Farmer's Dilemma she might continue to Work, which we don't want.
 
 
 How does this work in the Farmer's Dilemma? There's more cases to consider there, and I haven't looked in detail yet, but I think it mostly either improves the incentives or at least doesn't hurt them? So that's kind of a point to Ellickson, too.
