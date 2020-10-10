@@ -101,7 +101,7 @@ How to read these symbols: the subscript is the player who gets the payoff, the 
 
 This notation is kind of experimental on my part. Ellickson instead uses symbols `$ A, B, C, D, E $` in descending order, but that makes it hard to remember which goes where in the grid. And when I extend it, the ordering will be lost, making it even more confusing.
 
-To help make the structure more visible, I've colored the symbols in green when that player prefers them to the alternative, and red when that player prefers the alternative. So a Nash equilibrium has two green symbols. Note that each color only compares one payoff against one other; when `$ ws_1 $` is red, that means `$ ss_1 > ws_1 $`, since `$ ss_1 $` represents Player 1's payoff if he changes his move while Player 2 keeps hers the same. The quadrants with a darkened background are the socially optimal ones.
+To help make the structure more visible, I've colored the symbols in green or red according to local incentive gradients - green for "this player prefers this outcome to the outcome they get from changing their move", red for the opposite of that. So when `$ ws_1 $` is red, that means `$ ss_1 > ws_1 $`, since `$ ss_1 $` represents Player 1's payoff if he changes his move while Player 2 keeps hers the same. A Nash equilibrium has two green symbols. I've also given a slightly darker background to the socially optimal quadrants.
 
 Comparing these games, Ellickson claims for example that norms will tend to punish someone who Shirks in a Prisoner's Dilemma, rather than rewarding those who Work, because eventually most people will Work and it's cheaper to sanction the thing that happens rarely. But in a Specialized Labor game, norms will tend to reward the efficient worker ("cheapest labor-provider") for Working, because that encourages people to obtain the skills necessary to perform this work. There's a background level of skills that everyone is expected to have, and people are punished for falling short of them and rewarded for exceeding them.
 
@@ -160,7 +160,7 @@ If we apply this formula to the Prisoner's Dilemmma, we get this:
       <span style="color: green">$ ww_= $</span>
     </td>
     <td>
-      <span style="color: green">$ ws_= $</span>,
+      <span style="color: green">$ ww_= $</span>,
       <span style="color: red">$ sw_= + ws_= - ww_= $</span>
     </td>
   </tr>
@@ -181,9 +181,9 @@ If we apply this formula to the Prisoner's Dilemmma, we get this:
 </tbody>
 </table>
 
-Since `$ ww_= > sw_= + ws_= - ww_= $`, this puts the incentives in the correct place. The socially optimal outcome hasn't changed - total welfare in each quadrant is the same as before - but now the Nash equilibrium is for both players to Work.
+Since `$ ww_= > sw_= + ws_= - ww_= $`, this puts the incentives in the correct place. The socially optimal outcome hasn't changed - total welfare in each quadrant is the same as before - but now the Nash equilibrium is for both players to Work, achieving that outcome.
 
-(In [my previous classification](http://reasonableapproximation.net/2020/07/04/classifying-games-like-prisoners-dilemma.html), depending on whether `$ sw_= + ws_= - ww_= ≷ ss_= $`, it hits the point where The Abundant Commons meets either Cake Eating or Studying For a Test. It's not unique in either case, because there are at most three distinct payout values.)
+(In [my previous classification](http://reasonableapproximation.net/2020/07/04/classifying-games-like-prisoners-dilemma.html), depending on whether `$ sw_= + ws_= - ww_= ≷ ss_= $`, this new game is at the point where The Abundant Commons meets either Cake Eating or Studying For a Test. It's not unique in either case, because there are at most three distinct payout values.)
 
 Specialized Labor is more complicated. There are three ways we might decide to apply counterfactual compensation. We could say that the Shirker compensates the Worker for the Worker's costs, either `$ ww_= - ws_1 $` or `$ ww_= - ws_2 $` depending on who Worked. Or we could say that the Shirker compensates the Worker for what the *efficient* Worker's costs would have been, `$ ww_= - ws_1 $` regardless of who Worked. Or we could say that the efficient worker never owes anything to the inefficient worker; he gets to just say "sorry, I'm not going to pay you for work I could have done more easily".
 
@@ -210,13 +210,25 @@ Ellickson doesn't discuss these options, he just takes the last one. Here's what
   <tr>
     <td rowspan="2" style="font-weight: bold">Player 1</td>
     <td style="font-weight: bold">Work</td>
-    <td>$ ww_=, ww_= $</td>
-    <td>$ ww_=, sw_= + ws_1 - ww_= $</td>
+    <td>
+      <span style="color: red">$ ww_= $</span>,
+      <span style="color: red">$ ww_= $</span>
+    </td>
+    <td style="background-color: #EEE">
+      <span style="color: green">$ ww_= $</span>,
+      <span style="color: green">$ sw_= + ws_1 - ww_= $</span>
+    </td>
   </tr>
   <tr>
     <td style="font-weight: bold">Shirk</td>
-    <td>$ sw_=, ws_2 $</td>
-    <td>$ ss_=, ss_= $</td>
+    <td>
+      <span style="color: green">$ sw_= $</span>,
+      <span style="color: red">$ ws_2 $</span>
+    </td>
+    <td>
+      <span style="color: red">$ ss_= $</span>,
+      <span style="color: green">$ ss_= $</span>
+    </td>
   </tr>
   <tr>
     <td colspan="4">$ sw_= &gt; ww_= &gt; ss_= &gt; ws_1 &gt; ws_2 $, and $ 2ww_= &lt; sw_= + ws_1 $</td>
@@ -248,7 +260,60 @@ There are other options for payment one might consider; I haven't even looked at
 
 While we're at it, let's confirm my intuition from above. "Asymmetrical games with gains from cooperation" have `$ ws_1 ≠ ws_2 $` but `$ 2ww_= > ws_1 + sw_= $`. In this case, counterfactual compensation does exactly what we want it to do, just like in the symmetrical Prisoner's Dilemma; we can choose any of the three ways to apply it. "Symmetrical games with no gains from cooperation" have `$ ws_1 = ws_2 $` but $ 2ww_= < ws_= + sw_= $`. The difficulty here is that there's no way to break the symmetry. Any of the three ways to apply counterfactual compensation will be equivalent, and leave us with two Nash equilibria in the two socially equal quadrants. The "discuss in advance" feature saves us again, I think; players don't need to somehow acausally cooperate to select one to Work and one to Shirk, they can just, like, talk about it.
 
-How does this work in the Farmer's Dilemma?
+How does this work in the Farmer's Dilemma? First we need to clarify exactly what set of games that refers to. In symmetrical games, I think of it as having `$ sw_= > ww_= > ws_= > ss_= $; that is, each player would prefer the other to do all the work, or failing that to help; but they'd still rather do it all themselves than for the work not to get done.
+
+I'm going to break symmetry by separating `$ ws_1 $` from `$ ws_2 $` as before. Without loss of generality, we can specify `$ ws_1 > ws_2 $`, but I'm not going to decide whether `$ ws_2 ≷ ss_= $`. It might be that only one player is skilled enough to benefit from Working alone.
+
+So in normal form, the Farmer's Dilemma looks like this:
+
+<table>
+<thead>
+  <tr>
+    <th colspan="4" style="font-weight: bold">Farmer's Dilemma</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td></td>
+    <td></td>
+    <td colspan="2" style="font-weight: bold">Player 2</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td style="font-weight: bold">Work</td>
+    <td style="font-weight: bold">Shirk</td>
+  </tr>
+  <tr>
+    <td rowspan="2" style="font-weight: bold">Player 1</td>
+    <td style="font-weight: bold">Work</td>
+    <td style="background: repeating-linear-gradient(-45deg, #EEE 0 10px, transparent 10px 20px)">
+      <span style="color: red">$ ww_= $</span>,
+      <span style="color: red">$ ww_= $</span>
+    </td>
+    <td style="background: repeating-linear-gradient(-45deg, #EEE 0 10px, transparent 10px 20px)">
+      <span style="color: green">$ ws_1 $</span>,
+      <span style="color: green">$ sw_= $</span>
+    </td>
+  </tr>
+  <tr>
+    <td style="font-weight: bold">Shirk</td>
+    <td>
+      <span style="color: green">$ sw_= $</span>,
+      $ ws_2 $
+    </td>
+    <td>
+      <span style="color: red">$ ss_= $</span>,
+      $ ss_= $
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4">$ sw_= &gt; ww_= &gt; ws_1 &gt; ss_=$, and $ ws_1 &gt; ws_2 $</td>
+  </tr>
+</tbody>
+</table>
+
+Either of the top two quadrants could be socially optimal, depending whether `$ 2ww_= ≷ sw_= + ws_= $`.
 
 
 
