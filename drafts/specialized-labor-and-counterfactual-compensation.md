@@ -126,7 +126,7 @@ your only in-game way to punish them is not to do the work, which hurts you too 
 
 The thesis of the book is to propose a certain hypothesis. (Not going into more detail here.) The hypothesis has no problem with that result, but humans often do. So Farmer's Dilemmas may be a fruitful place to look for failures of the hypothesis. But it may be that the relevant payoff structure is rare, in which case we wouldn't find much. (I wouldn't expect it with fence-building for example.)
 
-How do we get the socially optimal result in Prisoner's Dilemma and Specialized Labor? We introduce debts owed from those who Shirk to those who Work. Ellickson's possible minor original contribution is to point out that the value `$ ww_= - ws_1 $` works in both these games.
+Now suppose that we can, in certain quadrants, enforce that one player gives another player some of their payoff. The total payoff won't change in any quadrant, but the Nash equilibria might do. How do we get the socially optimal result by doing that? This is Ellickson's possible minor contribution. He points out that we can do this by introducing a debt from those who Shirk to those who work, and that the value `$ ww_= - ws_1 $` works in both these games.
 
 He calls this the "liquidated-Kantian formula" but doesn't explain the name, and I have only the vaguest understanding of where he might be going with it. Since the name hasn't caught on, I'm going to propose my own: *counterfactual compensation*. If I Shirk, I compensate you for your losses compared to the world where I worked.
 
@@ -242,11 +242,11 @@ Player 2 has no incentive to Work, regardless of what Player 1 does, because `$ 
 
 This isn't, like, a mind-blowing result that's going to blow open the field of game theory. But I don't remember seeing it before, and Ellickson doesn't attribute it to anyone else. I'm inclined to give him some credit for it. Even if others have had the insight before - which I expect they have - it seems like he's still doing competent work in a field outside his own.
 
-But then I do dock him a point because he doesn't comment on the fact that the inefficient worker gets a better result than the efficient worker. That seems bad to me, because it discourages people from becoming the efficient worker.
+One objection: the inefficient worker gets a better result than the efficient worker. That seems bad to me, because it discourages people from becoming the efficient worker. I don't think this is a big deal, though. For one thing, acquiring skills probably does increase your own payoff; your skills will feed into `$ ww_= $`, not just your `$ ws $`. (So it directly increases your payoff in Work/Work, and reduces your debt in Shirk/Work.) *Someone else* acquiring skills will increase your payoff even more, perhaps, but that's not a big problem. For another thing, such incentives can be handled out-of-game. I do think Ellickson should have acknowledged this issue, and I ding him a point for not doing so. But a brief note would have been fine.
 
-What happens if we apply counterfactual compensation in the other possible ways? The only difference is in the bottom left quadrant, which becomes either `$ sw_= + ws_2 - ww_=, ww_= $` or `$ sw_= + ws_1 - ww_=, ww_= + ws_2 - ws_1 $`. The problem with both of these is that that quadrant might now be a Nash equilibrium. In the first case, Player 1 might prefer that quadrant over Work/Work, depending on `$ 2ww_= ≷ sw_= + ws_2 $`, and Player 2 will certainly prefer it over Shirk/Shirk. In the second case, Player 1 will certainly prefer that quadrant over Work/Work, and Player 2 might prefer it over Shirk/Shirk, depending on `$ ww_= + ws_2 - ws_1 ≷ ss_= $`. That's not great, we only want a Nash equilibrium in the socially optimal quadrant.
+What happens if we apply counterfactual compensation in the other possible ways? The only difference is in the bottom left quadrant, which becomes either `$ sw_= + ws_2 - ww_=, ww_= $` (actual-costs) or `$ sw_= + ws_1 - ww_=, ww_= + ws_2 - ws_1 $` (efficient-costs). The problem with both of these is that that quadrant might now be a Nash equilibrium. In the first case, Player 1 might prefer that quadrant over Work/Work, depending on `$ 2ww_= ≷ sw_= + ws_2 $`, and Player 2 will certainly prefer it over Shirk/Shirk. In the second case, Player 1 will certainly prefer that quadrant over Work/Work, and Player 2 might prefer it over Shirk/Shirk, depending on `$ ww_= + ws_2 - ws_1 ≷ ss_= $`. That's not great, we only want a Nash equilibrium in the socially optimal quadrant.
 
-On the other hand, I note that if `$ ws_1 - ws_2 $` is small, then the social cost is low; and if it's large, then (except perhaps with some fairly specific payoff values?) that quadrant isn't a Nash equilibrium. Meanwhile, if payoffs are uncertain - if people might disagree about who the more efficient worker is - then either of the other choices seems more robust.
+On the other hand, I note that if `$ ws_1 - ws_2 $` is small, then the social cost is low; and if it's large, then (except perhaps with some fairly specific payoff values?) that quadrant isn't a Nash equilibrium. Meanwhile, if payoffs are uncertain - if people might disagree about who the more efficient worker is - then either of the other choices seems more robust. And this is more of an aesthetic judgment, but it's the kind of aesthetic judgment that sometimes hints at deeper problems: there's something a bit weird about how substandard-uncompensated in noncontinuous. A small change in Player 2's skills lead to a small change in her compensation in each quadrant, until she gets equally skilled as Player 1, at which point there's a large change in the Shirk/Work quadrant.
 
 On the other other hand, a feature of how these games translate to the real world is that players encourage each other to discuss in advance. Someone building unilaterally may not get to claim this debt. So if they disagree about who the efficient worker is, that's unlikely to cause much grief.
 
@@ -261,6 +261,8 @@ There are other options for payment one might consider; I haven't even looked at
 (We could even consider values of the debt based on information outside of the original payoff matrix. But Ellickson points out that when deciding how to act in the first place, players will already want to figure out what the payoff matrix looks like. If the debt was based on other information, there'd be a further cost to gather that information.)
 
 While we're at it, let's confirm my intuition from above. "Asymmetrical games with gains from cooperation" have `$ ws_1 ≠ ws_2 $` but `$ 2ww_= > ws_1 + sw_= $`. In this case, counterfactual compensation does exactly what we want it to do, just like in the symmetrical Prisoner's Dilemma; we can choose any of the three ways to apply it. "Symmetrical games with no gains from cooperation" have `$ ws_1 = ws_2 $` but $ 2ww_= < ws_= + sw_= $`. The difficulty here is that there's no way to break the symmetry. Any of the three ways to apply counterfactual compensation will be equivalent, and leave us with two Nash equilibria in the two socially equal quadrants. The "discuss in advance" feature saves us again, I think; players don't need to somehow acausally cooperate to select one to Work and one to Shirk, they can just, like, talk about it.
+
+---
 
 How does this work in the Farmer's Dilemma? First we need to clarify exactly what set of games that refers to. In symmetrical games, I think of it as having `$ sw_= > ww_= > ws_= > ss_= $; that is, each player would prefer the other to do all the work, or failing that to help; but they'd still rather do it all themselves than for the work not to get done.
 
@@ -364,12 +366,79 @@ Either of the top two quadrants could be socially optimal, depending whether whe
 </tbody>
 </table>
 
-Oh dear. Substandard-uncompensated compensation is clearly not going to work; Shirk/Work might still be a Nash equilibrium. In Specialized Labor it was fine that the efficient Worker would prefer the inefficient worker to do all the work, because the inefficient worker would say "nuts to that". In a Farmer's Dilemma she might continue to Work, which we don't want.
+Oh dear. Substandard-uncompensated compensation is clearly not going to work; Shirk/Work might still be a Nash equilibrium. In Specialized Labor it was fine that the efficient Worker would prefer the inefficient worker to do all the work, because the inefficient worker would say "nuts to that". In a Farmer's Dilemma she might continue to Work, which we don't want. It would be fine if we specified `$ ws_2 < ss_= $`.
 
+Fortunately, either of the others seems fine. Actual-costs again gives us `$ sw_= + ws_2 − ww_=, ww_= $` in that quadrant, which isn't a Nash equilibrium because `$ ww_= > sw_= + ws_2 − ww_= $`. (Compared to this quadrant, Player 1 would rather Work and Player 2 would rather Shirk.) And efficient-costs again gives us `$ sw_= + ws_1 − ww_=, ww_= + ws_2 - ws_1 $`, which isn't a Nash equilibrium because `$ ww_= > sw_= + ws_1 − ww_= $`. (Player 1 would still rather Work. Player 2 may or may not prefer to Shirk; if `$ ws_2 > ss_= $` she'll certainly prefer this quadrant, but might prefer it even if not.)
 
-How does this work in the Farmer's Dilemma? There's more cases to consider there, and I haven't looked in detail yet, but I think it mostly either improves the incentives or at least doesn't hurt them? So that's kind of a point to Ellickson, too.
+What about no gains from cooperation? If `$ ws_2 < ss_= $` we actually already have the desired result. The only Nash equilibrium is Work/Shirk which is socially optimal. But as discussed above, it's a crap result for Player 1, and gives him no incentive to become the efficient worker. Let's see what happens with counterfactual compensation.
 
-It's nice that the payment is based only on the players' possible outcomes, because they'll have to figure those values out anyway when deciding how to act. Other possible damage formulas (like C-D and A-C) apparently don't set up correct incentives, but Ellickson doesn't go into much detail on that.
+<table>
+<thead>
+  <tr>
+    <th colspan="4" style="font-weight: bold">Farmer's Dilemma with counterfactual compensation (substandard-uncompensated) and no gains from cooperation</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td></td>
+    <td></td>
+    <td colspan="2" style="font-weight: bold">Player 2</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td style="font-weight: bold">Work</td>
+    <td style="font-weight: bold">Shirk</td>
+  </tr>
+  <tr>
+    <td rowspan="2" style="font-weight: bold">Player 1</td>
+    <td style="font-weight: bold">Work</td>
+    <td>
+      <span style="color: red">$ ww_= $</span>,
+      <span style="color: red">$ ww_= $</span>
+    </td>
+    <td style="background: #EEE">
+      <span style="color: green">$ ww_= $</span>,
+      <span style="color: green">$ sw_= + ws_1 - ww_= $</span>
+    </td>
+  </tr>
+  <tr>
+    <td style="font-weight: bold">Shirk</td>
+    <td>
+      <span style="color: green">$ sw_= $</span>,
+      $ ws_2 $
+    </td>
+    <td>
+      <span style="color: red">$ ss_= $</span>,
+      $ ss_= $
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4">$ sw_= &gt; ww_= &gt; ws_1 &gt; ss_= $, $ ws_1 &gt; ws_2 $, and $ 2ww_= &lt; sw_= + ws_1 $</td>
+  </tr>
+</tbody>
+</table>
+
+Again, substandard-uncompensated doesn't really help; Shirk/Work will be a Nash equilibrium iff it was one before. But at least Player 1 gets a less-bad result from Work/Shirk. (Player 2 still does better than him.)
+
+Actual-costs might also be a Nash equilibrium in that quadrant, if `$ ww_= < sw_= + ws_2 − ww_= $`. And so might efficient-costs, if `$ ww_= + ws_2 - ws_1 > ss_= $` (which, again, always holds if `$ ws_2 > ss_= $`).
+
+So this is unfortunate. We can't reliably remove that Nash equilibrium with counterfactual compensation. Depending how we apply it, we might even make it an equilibrium when it wasn't before.
+
+---
+
+Summing up, counterfactual compensation:
+
+* Gives people good incentives in Prisoner's Dilemma.
+* Gives people good incentives in Specialized Labor, using substandard-uncompensated. Mostly-good incentives using the other implementations.
+* Gives people good incentives in the "gains from cooperation" variant of the Farmer's Dilemma, except that substandard-uncompensated only works sometimes.
+* Maybe kinda sorta helps a bit in the "no gains from cooperation" variant of the Farmer's Dilemma. Maybe not.
+
+So that's not amazing. I do think "Farmer's Dilemma with no gains from cooperation" is just fundamantally, in technical terms, a real bastard of a game. But even in the "gains from cooperation" variant, the way we calibrate it to get the best incentives is different from the way we calibrate it for the best incentives in Specialized Labor.
+
+So I appreciate Ellickson's contribution, and I think it's a real one. But it's not as much as we might have hoped. I think he had a blind spot about the Farmer's Dilemma, and his tools don't really work against it.
+
+---
 
 With this payment in mind, Ellickson proposes a variant Iterated Prisoner's Dilemma tournament, and a strategy for it that he calls "Even-Up". The tournament has rounds of both Prisoner's Dilemma and Specialized Labor, and payoffs for them can vary considerably. In between rounds, players can unilaterally choose to make a side payment to their partner. To apply the Even-Up strategy, a player would keep account of standing with their partner. They'd adjust that balance by B-D in the circumstances described above. Whenever the balance was close to zero, they'd play the socially optimal strategy. If they were in debt, they'd make a side payment. And if they were in credit, they'd Defect or Shirk when they'd otherwise Cooperate or Work. (But only if that would bring the balance closer to zero, i.e. if the debt owed was more than half of B-D. Though it's not clear to me why they wouldn't do it for any debt and then just make a side payment if appropriate. I suspect Ellickson is implicitly assuming transaction costs that he didn't bake into the tournament rules.) Note that Even-Up falls through to Tit-for-Tat in a normal IPD tournament.
 
