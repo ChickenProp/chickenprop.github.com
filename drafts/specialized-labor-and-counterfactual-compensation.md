@@ -12,7 +12,11 @@ My third is simply to be able to cut it from my in-progress review of the rest o
 
 Ellickson discusses two games. One is the classic Prisoner's Dilemma, in which you either Cooperate (for personal benefit but social cost) or Defect (for personal cost but social benefit). Note that Ellickson specifies Cooperate/Cooperate as having more total utility than Cooperate/Defect or Defect/Cooperate; I consider this [correct](https://lesswrong.com/posts/KwbJFexa4MEdhJbs4/classifying-games-like-the-prisoner-s-dilemma#comment-xzA7K2To2N84NJgNj), but not all authors include that condition.
 
-The other he calls Specialized Labor, in which two people must choose whether to Work on some common project or Shirk their share of it. It differs from the Prisoner's Dilemma in two ways. First, it's asymmetrical; one player is a less effective worker than the other, and gets less payoff from Working while the other Shirks than does the other player. The other is that in this game, the socially optimal outcome is Work/Shirk, not Work/Work. ("Socially optimal" means maximizing the sum of the players' results. That's not a meaningful thing to do if the results are measured in utility, but it is if they're measured in welfare.)
+The other he calls Specialized Labor, in which two people must choose whether to Work on some common project or Shirk their share of it. It differs from the Prisoner's Dilemma in two ways. First, it's asymmetrical; one player is a less effective worker than the other, and gets less payoff from Working while the other Shirks than does the other player. The other is that in this game, the socially optimal outcome is Work/Shirk, not Work/Work. (In [my taxonomy](http://reasonableapproximation.net/2020/07/04/classifying-games-like-prisoners-dilemma.html) that makes it closer to Too Many Cooks than Prisoner's Dilemma.)
+
+Note that payoffs aren't measured in utility. They're measured in something Ellickson calls "welfare". He doesn't really explore the formal consequences of this. But what it gives us is that, since welfare is supposed to be objective, we can sum different people's welfare; when I used the phrase "socially optimal" in the previous paragraph, meaning "the sum of both players' results", that was a meaningful thing to talk about. I'm not sure exactly what it costs us, except that I don't expect results about mixed strategies to hold. (Someone won't necessarily prefer "50% chance of 3 welfare" to "certain chance of 1 welfare".) We can still assume that people prefer higher amounts of welfare to lower amounts of it.[^assume-welfare]
+
+[^assume-welfare]: I'm not actually sure we can assume that, but that question is out of scope.
 
 I'm going to pretend that Cooperate and Defect are also called Work and Shirk, so that I don't have to use both names when talking about both games.
 
@@ -22,8 +26,6 @@ In normal-form, these games look like this:
 <thead>
   <tr>
     <th colspan="4" style="font-weight: bold">Prisoner's Dilemma</th>
-    <th></th>
-    <th colspan="4" style="font-weight: bold">Specialized Labor<br></th>
   </tr>
 </thead>
 <tbody>
@@ -31,17 +33,8 @@ In normal-form, these games look like this:
     <td></td>
     <td></td>
     <td colspan="2" style="font-weight: bold">Player 2</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td colspan="2" style="font-weight: bold">Player 2</td>
   </tr>
   <tr>
-    <td></td>
-    <td></td>
-    <td style="font-weight: bold">Work</td>
-    <td style="font-weight: bold">Shirk</td>
-    <td></td>
     <td></td>
     <td></td>
     <td style="font-weight: bold">Work</td>
@@ -58,7 +51,43 @@ In normal-form, these games look like this:
       <span style="color: red">$ ws_= $</span>,
       <span style="color: green">$ sw_= $</span>
     </td>
+  </tr>
+  <tr>
+    <td style="font-weight: bold">Shirk</td>
+    <td>
+      <span style="color: green">$ sw_= $</span>,
+      <span style="color: red">$ ws_= $</span>
+    </td>
+    <td>
+      <span style="color: green">$ ss_= $</span>,
+      <span style="color: green">$ ss_= $</span>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4">$ sw_= &gt; ww_= &gt; ss_= &gt; ws_= $, and $ 2ww_= &gt; sw_= + ws_= $</td>
+  </tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+  <tr>
+    <th colspan="4" style="font-weight: bold">Specialized Labor<br></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
     <td></td>
+    <td></td>
+    <td colspan="2" style="font-weight: bold">Player 2</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td style="font-weight: bold">Work</td>
+    <td style="font-weight: bold">Shirk</td>
+  </tr>
+  <tr>
     <td rowspan="2" style="font-weight: bold">Player 1</td>
     <td style="font-weight: bold">Work</td>
     <td>
@@ -74,16 +103,6 @@ In normal-form, these games look like this:
     <td style="font-weight: bold">Shirk</td>
     <td>
       <span style="color: green">$ sw_= $</span>,
-      <span style="color: red">$ ws_= $</span>
-    </td>
-    <td>
-      <span style="color: green">$ ss_= $</span>,
-      <span style="color: green">$ ss_= $</span>
-    </td>
-    <td></td>
-    <td style="font-weight: bold">Shirk</td>
-    <td>
-      <span style="color: green">$ sw_= $</span>,
       <span style="color: red">$ ws_2 $</span>
     </td>
     <td>
@@ -92,32 +111,30 @@ In normal-form, these games look like this:
     </td>
   </tr>
   <tr>
-    <td colspan="4">$ sw_= &gt; ww_= &gt; ss_= &gt; ws_= $, and $ 2ww_= &gt; sw_= + ws_= $</td>
-    <td></td>
     <td colspan="4">$ sw_= &gt; ww_= &gt; ss_= &gt; ws_1 &gt; ws_2 $, and $ 2ww_= &lt; sw_= + ws_1 $</td>
   </tr>
 </tbody>
 </table>
 
-How to read these symbols: the subscript is the player who gets the payoff, the first letter is their move, and the second letter is the other player's move. If the subscript is =, then this combination is symmetric. So `$ ws_1 $` is the payoff to Player 1, if he Works while Player 2 Shirks. `$ ws_2 $` is the payoff to Player 2, if she Works while Player 1 Shirks. `$ ws_= $` is both of these values, when they're equal to each other. And to be clear, when they're equal, `$ ws_1 $` can stand in for `$ ws_= $` just as easily as the other way around.
+How to read these symbols: the subscript is the player who gets the payoff, the first letter is their move, and the second letter is the other player's move. If the subscript is =, then this combination is symmetric.[^experimental] So `$ ws_1 $` is the payoff to Player 1, if he Works while Player 2 Shirks. `$ ws_2 $` is the payoff to Player 2, if she Works while Player 1 Shirks. `$ ws_= $` is both of these values, when they're equal to each other. And to be clear, when they're equal, `$ ws_1 $` can stand in for `$ ws_= $` just as easily as the other way around.
 
-This notation is kind of experimental on my part. Ellickson instead uses symbols `$ A, B, C, D, E $` in descending order, but that makes it hard to remember which goes where in the grid. And when I extend it, the ordering will be lost, making it even more confusing.
+[^experimental]: This notation is kind of experimental on my part. Ellickson instead uses symbols `$ A, B, C, D, E $` in descending order, but that makes it hard to remember which goes where in the grid. And when I extend it, the ordering will be lost, making it even more confusing.
 
-To help make the structure more visible, I've colored the symbols in green or red according to local incentive gradients - green for "this player prefers this outcome to the outcome they get from changing their move", red for the opposite of that. So when `$ ws_1 $` is red, that means `$ ss_1 > ws_1 $`, since `$ ss_1 $` represents Player 1's payoff if he changes his move while Player 2 keeps hers the same. A Nash equilibrium has two green symbols. I've also given a slightly darker background to the socially optimal quadrants.
+To help make the structure more visible, I've colored the symbols in green or red according to local incentive gradients - green for "this player prefers this outcome to the outcome they get from changing their move", red for the opposite of that. So when `$ ws_1 $` is red, that means `$ ss_1 > ws_1 $`, since `$ ss_1 $` represents Player 1's payoff if he changes his move while Player 2 keeps hers the same. A quadrant is a Nash equilibrium [iff](https://en.wikipedia.org/wiki/If_and_only_if) it has two green symbols. I've also given a slightly darker background to the socially optimal quadrants.
 
 Comparing these games, Ellickson claims for example that norms will tend to punish someone who Shirks in a Prisoner's Dilemma, rather than rewarding those who Work, because eventually most people will Work and it's cheaper to sanction the thing that happens rarely. But in a Specialized Labor game, norms will tend to reward the efficient worker ("cheapest labor-provider") for Working, because that encourages people to obtain the skills necessary to perform this work. There's a background level of skills that everyone is expected to have, and people are punished for falling short of them and rewarded for exceeding them.
 
-So most of the points I want to ding Ellickson here are because this is kind of a strange choice of games. For one thing, it seems to assume that: *teaming up to work is more expensive than working individually, if and only if players have unequal skill levels*.
+So most of the points I want to ding Ellickson here are because this is kind of a strange choice of games. For one thing, it seems to assume that: *teaming up to work is more expensive than working individually, iff players have unequal skill levels*.
 
 Honestly I don't think that's so implausible as a heuristic. I think "most work projects have gains from (little-C) cooperation" is a decent guess, and then one way to remove those gains could be if one player is much more skilled than the other. Still, Ellickson doesn't make this argument, or acknowledge that the assumption is kind of weird.
 
-Another way to justify the omission is if the ommitted possibilities don't add much of interest. Prisoner's Dilemma and Specialized Labor are opposite corners in a two-by-two grid parameterized by "gains from cooperation/no such gains" and "symmetrical/asymmetrical". If our tools for working with them can also be applied to the other corners without much extra effort, then there's no need to consider the others in detail. I had an intuition that this would be true, and I confirm it below. But Ellickson doesn't make this argument, either. I think it was a fine decision to omit the games, but I think it would have been worth a couple of sentences on why.
+Another way to justify the omission is if the ommitted possibilities don't add much of interest. Prisoner's Dilemma and Specialized Labor are opposite corners in a two-by-two grid parameterized by "synergistic/discordant" (gains or no gains from cooperation) and "symmetrical/asymmetrical". If our tools for working with them can also be applied to the other corners without much extra effort, then there's no need to consider the others in detail. I had an intuition that this would be true, and I confirm it below. But Ellickson doesn't make this argument, either. I think it was a fine decision to omit the games, but I think it would have been worth a couple of sentences on why.
 
 Something weird on the face of it is that in Specialized Labor, Work/Work results in the same payoff to both players. Why assume that that's symmetrical? But I don't think this is a big deal. Plausibly people can calibrate how hard they work if they think they're getting a worse result than the other. But also I suspect you just don't change much by allowing it to be asymmetrical, provided that both payoffs are in between `$ sw_= $` and `$ ss_= $`.
 
 Similarly you might suppose that the efficient worker doesn't just pay less to Work than the inefficient worker, he also does a better job. In which case we might want to set `$ sw_1 < sw_2 $`. But again, I doubt that matters much.
 
-More seriously, Ellickson's choice ignores the possibility that work might be worth doing selfishly. In both games, you maximize your own outcome by not working, and if that means the work doesn't get done, so be it. But that puts a narrow band on the value of a piece of work. It's not worth doing for the benefits it gives to one person, but it is worth doing for the benefits it gives to two. I think a lot of the situations Ellickson looks at don't really fit that model. For example, building a fence seems like something you'd often do of your own accord, simply for the benefits it gives to yourself, but Ellickson considers it a Prisoner's Dilemma.
+More seriously, Ellickson's choice ignores the possibility that work might be worth doing selfishly. In both games, you maximize your own outcome by not working, and if that means the work doesn't get done, so be it. But that puts a narrow band on the value of a piece of work. It's not worth doing for the benefits it gives to one person, but it is worth doing for the benefits it gives to two. I think a lot of the situations Ellickson looks at don't really fit that model. For example, building a fence seems like something you'd often do of your own accord, simply for the benefits it gives to yourself, but Ellickson considers it a Prisoner's Dilemma because most people have the relevant skills.
 
 To model this possibility, we'd set `$ ws_1 > ss_= $`, and maybe `$ ws_2 > ss_= $` as well. This gives the game that I like to call the [Farmer's Dilemma](http://reasonableapproximation.net/2015/05/05/farmers-dilemma.html) and others call Chicken, Hawk/Dove or Snowdrift. ([And here's why I call it that.](https://lesswrong.com/posts/KwbJFexa4MEdhJbs4/classifying-games-like-the-prisoner-s-dilemma#comment-aEC8trK7f3uczsXvM)) Normally I think of the Farmer's Dilemma as symmetrical, but the asymmetrical case seems fine to count as an instance of it, at least right now.
 
@@ -185,7 +202,7 @@ If we apply this formula to the Prisoner's Dilemmma, we get this:
 
 Since `$ ww_= > sw_= + ws_= - ww_= $`, this puts the incentives in the correct place. The socially optimal outcome hasn't changed - total welfare in each quadrant is the same as before - but now the Nash equilibrium is for both players to Work, achieving that outcome.
 
-(In [my previous classification](http://reasonableapproximation.net/2020/07/04/classifying-games-like-prisoners-dilemma.html), depending on whether `$ sw_= + ws_= - ww_= ≷ ss_= $`, this new game is at the point where The Abundant Commons meets either Cake Eating or Studying For a Test. It's not unique in either case, because there are at most three distinct payout values.)
+(In my taxonomy, depending on whether `$ sw_= + ws_= - ww_= ≷ ss_= $`, this new game is at the point where The Abundant Commons meets either Cake Eating or Studying For a Test. It's not unique in either case, because there are at most three distinct payout values.)
 
 Specialized Labor is more complicated. There are three ways we might decide to apply counterfactual compensation. We could say that the Shirker compensates the Worker for the Worker's costs, either `$ ww_= - ws_1 $` or `$ ww_= - ws_2 $` depending on who Worked. Or we could say that the Shirker compensates the Worker for what the *efficient* Worker's costs would have been, `$ ww_= - ws_1 $` regardless of who Worked. Or we could say that the efficient worker never owes anything to the inefficient worker; he gets to just say "sorry, I'm not going to pay you for work I could have done more easily". Lets call these approaches "actual-costs", "efficient-costs" and "substandard-uncompensated"
 
@@ -244,7 +261,7 @@ This isn't, like, a mind-blowing result that's going to blow open the field of g
 
 One objection: the inefficient worker gets a better result than the efficient worker. That seems bad to me, because it discourages people from becoming the efficient worker. I don't think this is a big deal, though. For one thing, acquiring skills probably does increase your own payoff; your skills will feed into `$ ww_= $`, not just your `$ ws $`. (So it directly increases your payoff in Work/Work, and reduces your debt in Shirk/Work.) *Someone else* acquiring skills will increase your payoff even more, perhaps, but that's not a big problem. For another thing, such incentives can be handled out-of-game. I do think Ellickson should have acknowledged this issue, and I ding him a point for not doing so. But a brief note would have been fine.
 
-What happens if we apply counterfactual compensation in the other possible ways? The only difference is in the bottom left quadrant, which becomes either `$ sw_= + ws_2 - ww_=, ww_= $` (actual-costs) or `$ sw_= + ws_1 - ww_=, ww_= + ws_2 - ws_1 $` (efficient-costs). The problem with both of these is that that quadrant might now be a Nash equilibrium. In the first case, Player 1 might prefer that quadrant over Work/Work, depending on `$ 2ww_= ≷ sw_= + ws_2 $`, and Player 2 will certainly prefer it over Shirk/Shirk. In the second case, Player 1 will certainly prefer that quadrant over Work/Work, and Player 2 might prefer it over Shirk/Shirk, depending on `$ ww_= + ws_2 - ws_1 ≷ ss_= $`. That's not great, we only want a Nash equilibrium in the socially optimal quadrant.
+What happens if we apply counterfactual compensation in the other possible ways? The only difference is in the bottom left quadrant, which becomes either `$ sw_= + ws_2 - ww_= $`, <span style="color: green">`$ ww_= $`</span> (actual-costs) or <span style="color: green">`$ sw_= + ws_1 - ww_= $`</span>, `$ ww_= + ws_2 - ws_1 $` (efficient-costs). The problem with both of these is that that quadrant might now be a Nash equilibrium. In the first case, Player 1 might prefer that quadrant over Work/Work, depending on `$ 2ww_= ≷ sw_= + ws_2 $`, and Player 2 will certainly prefer it over Shirk/Shirk. In the second case, Player 1 will certainly prefer that quadrant over Work/Work, and Player 2 might prefer it over Shirk/Shirk, depending on `$ ww_= + ws_2 - ws_1 ≷ ss_= $`. That's not great, we only want a Nash equilibrium in the socially optimal quadrant.
 
 On the other hand, I note that if `$ ws_1 - ws_2 $` is small, then the social cost is low; and if it's large, then (except perhaps with some fairly specific payoff values?) that quadrant isn't a Nash equilibrium. Meanwhile, if payoffs are uncertain - if people might disagree about who the more efficient worker is - then either of the other choices seems more robust. And this is more of an aesthetic judgment, but it's the kind of aesthetic judgment that sometimes hints at deeper problems: there's something a bit weird about how substandard-uncompensated in noncontinuous. A small change in Player 2's skills lead to a small change in her compensation in each quadrant, until she gets equally skilled as Player 1, at which point there's a large change in the Shirk/Work quadrant.
 
@@ -260,7 +277,7 @@ There are other options for payment one might consider; I haven't even looked at
 
 (We could even consider values of the debt based on information outside of the original payoff matrix. But Ellickson points out that when deciding how to act in the first place, players will already want to figure out what the payoff matrix looks like. If the debt was based on other information, there'd be a further cost to gather that information.)
 
-While we're at it, let's confirm my intuition from above. "Asymmetrical games with gains from cooperation" have `$ ws_1 ≠ ws_2 $` but `$ 2ww_= > ws_1 + sw_= $`. In this case, counterfactual compensation does exactly what we want it to do, just like in the symmetrical Prisoner's Dilemma; we can choose any of the three ways to apply it. "Symmetrical games with no gains from cooperation" have `$ ws_1 = ws_2 $` but $ 2ww_= < ws_= + sw_= $`. The difficulty here is that there's no way to break the symmetry. Any of the three ways to apply counterfactual compensation will be equivalent, and leave us with two Nash equilibria in the two socially equal quadrants. The "discuss in advance" feature saves us again, I think; players don't need to somehow acausally cooperate to select one to Work and one to Shirk, they can just, like, talk about it.
+While we're here, let's confirm my intuition from above. "Asymmetrical synergistic games" have `$ ws_1 ≠ ws_2 $` but `$ 2ww_= > ws_1 + sw_= $`. In this case, counterfactual compensation does exactly what we want it to do, just like in the symmetrical Prisoner's Dilemma; we can choose any of the three ways to apply it. "Symmetrical discordant games" have `$ ws_1 = ws_2 $` but $ 2ww_= < ws_= + sw_= $`. The difficulty here is that there's no way to break the symmetry. Any of the three ways to apply counterfactual compensation will be equivalent, and leave us with two Nash equilibria in the two socially equal quadrants. The "discuss in advance" feature saves us again, I think; players don't need to somehow acausally cooperate to select one to Work and one to Shirk, they can just, like, talk about it.
 
 ---
 
@@ -317,12 +334,12 @@ So in normal form, the Farmer's Dilemma looks like this:
 </tbody>
 </table>
 
-Either of the top two quadrants could be socially optimal, depending whether where are gains from cooperation (that is, whether `$ 2ww_= ≷ sw_= + ws_= $`). Shirk/Work may or may not be a Nash equilibrium, depending whether `$ ws_2 ≷ ss_= $`. So how does it look with counterfactual compensation? I'll consider the "gains/no gains from cooperation" cases separately.
+Either of the top two quadrants could be socially optimal, depending whether the game is synergistic or discordant (that is, whether `$ 2ww_= ≷ sw_= + ws_= $`). Shirk/Work may or may not be a Nash equilibrium, depending whether `$ ws_2 ≷ ss_= $`. So how does it look with counterfactual compensation? I'll consider the synergy and discord cases separately.
 
 <table>
 <thead>
   <tr>
-    <th colspan="4" style="font-weight: bold">Farmer's Dilemma with counterfactual compensation (substandard-uncompensated) and gains from cooperation</th>
+    <th colspan="4" style="font-weight: bold">Synergistic Farmer's Dilemma with counterfactual compensation (substandard-uncompensated)</th>
   </tr>
 </thead>
 <tbody>
@@ -366,16 +383,16 @@ Either of the top two quadrants could be socially optimal, depending whether whe
 </tbody>
 </table>
 
-Oh dear. Substandard-uncompensated compensation is clearly not going to work; Shirk/Work might still be a Nash equilibrium. In Specialized Labor it was fine that the efficient Worker would prefer the inefficient worker to do all the work, because the inefficient worker would say "nuts to that". In a Farmer's Dilemma she might continue to Work, which we don't want. It would be fine if we specified `$ ws_2 < ss_= $`.
+Oh dear. Substandard-uncompensated compensation is clearly not going to work; Shirk/Work might still be a Nash equilibrium. In Specialized Labor it was fine that the efficient Worker would prefer the inefficient worker to do all the work, because the inefficient worker would say "nuts to that". In a Farmer's Dilemma she might continue to Work, which we don't want. Even if we specified `$ ws_2 < ss_= $`, we'd simply have no Nash equilibrium; one player would always get a better result by changing their move.
 
-Fortunately, either of the others seems fine. Actual-costs again gives us `$ sw_= + ws_2 − ww_=, ww_= $` in that quadrant, which isn't a Nash equilibrium because `$ ww_= > sw_= + ws_2 − ww_= $`. (Compared to this quadrant, Player 1 would rather Work and Player 2 would rather Shirk.) And efficient-costs again gives us `$ sw_= + ws_1 − ww_=, ww_= + ws_2 - ws_1 $`, which isn't a Nash equilibrium because `$ ww_= > sw_= + ws_1 − ww_= $`. (Player 1 would still rather Work. Player 2 may or may not prefer to Shirk; if `$ ws_2 > ss_= $` she'll certainly prefer this quadrant, but might prefer it even if not.)
+Fortunately, either of the others seems fine. The payoffs for these are the same as in Specialized Labor, but their comparative values have changed. Actual-costs gives us <span style="color: red">`$ sw_= + ws_2 − ww_= $`</span>, <span style="color: red">`$ww_= $`</span> in that quadrant, which isn't a Nash equilibrium because `$ ww_= > sw_= + ws_2 − ww_= $`. (Compared to this quadrant, Player 1 would rather Work and Player 2 would rather Shirk.) And efficient-costs again gives us <span style="color: red">`$ sw_= + ws_1 − ww_= $`</span>, `$ ww_= + ws_2 - ws_1 $`, which isn't a Nash equilibrium because `$ ww_= > sw_= + ws_1 − ww_= $`. (Player 1 would still rather Work. Player 2 may or may not prefer to Shirk; if `$ ws_2 > ss_= $` she'll certainly prefer this quadrant, but might prefer it even if not.)
 
-What about no gains from cooperation? If `$ ws_2 < ss_= $` we actually already have the desired result. The only Nash equilibrium is Work/Shirk which is socially optimal. But as discussed above, it's a crap result for Player 1, and gives him no incentive to become the efficient worker. Let's see what happens with counterfactual compensation.
+What about the discordant case? If `$ ws_2 < ss_= $` we actually already have the desired result. The only Nash equilibrium is Work/Shirk which is socially optimal. But as discussed above, it's a crap result for Player 1, and my sense is that the "no incentive to become the efficient worker" problem now becomes a lot more of an issue. Let's see what happens with counterfactual compensation.
 
 <table>
 <thead>
   <tr>
-    <th colspan="4" style="font-weight: bold">Farmer's Dilemma with counterfactual compensation (substandard-uncompensated) and no gains from cooperation</th>
+    <th colspan="4" style="font-weight: bold">Discordant Farmer's Dilemma with counterfactual compensation (substandard-uncompensated)</th>
   </tr>
 </thead>
 <tbody>
