@@ -358,7 +358,7 @@ If a ritual is cheap to implement, I'd be inclined to give it a pass. There's co
 
 But for vicious and dangerous rituals, this doesn't seem sufficient. Ellickson mentions a tribe where they "cut a finger from the hand of each of a man's close female relatives after he dies"; what medical knowledge are they lacking that makes this seem welfare-maximizing?
 
-Another possible counterexample worth considering would be [Jonestown](https://en.wikipedia.org/wiki/Jonestown), and cults in general. (h/t whoever it was brought this to my attention.) I don't feel like I know enough about these to comment.
+Another possible counterexample worth considering would be [Jonestown](https://en.wikipedia.org/wiki/Jonestown), and cults in general. (h/t whoever it was brought this to my attention.) I don't feel like I know enough about these to comment, but I'm going to anyway. I wonder if part of what's going on is that cults effectively don't have the rule of law - they make it costly for you to leave, or to bring in outside enforcers, and so you can't really enforce your property rights or bodily autonomy. If so, it seems like the "workaday" assumption is violated, and cults are consistent with the hypothesis.
 
 ### Formal game theory
 
