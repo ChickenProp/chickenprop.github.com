@@ -23,6 +23,9 @@ time, mark, audio, video {
   /* vertical-align: baseline; */
 }
 
+/* Stops these from increasing distance between lines. */
+sup, sub { line-height: 0; }
+
 .nowrap { white-space: nowrap; }
 
 
@@ -35,7 +38,7 @@ body {
 	color: #232323;
 	background-color: #FBFAF7;
 	margin: 0;
-	line-height: 1.6em;
+	line-height: 1.6;
 	-webkit-font-smoothing: antialiased;
 
 }
