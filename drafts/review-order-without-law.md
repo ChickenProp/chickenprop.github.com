@@ -368,6 +368,8 @@ I think this is my biggest criticism of the hypothesis.
 
 Another possible counterexample worth considering would be [Jonestown](https://en.wikipedia.org/wiki/Jonestown), and cults in general. (h/t whoever it was brought this to my attention.) I don't feel like I know enough about these to comment, but I'm going to anyway. I wonder if part of what's going on is that cults effectively don't have the rule of law - they make it costly for you to leave, or to bring in outside enforcers, and so you can't really enforce your property rights or bodily autonomy. If so, it seems like the "workaday" assumption is violated, and the hypothesis isn't in play.
 
+Or, what about dueling traditions? We might again say the "workaday" assumption (that brings rules against murder) is violated, but that seems like a cheat. My vague understanding, at least of pistol dueling as seen in *Hamilton*, is it was less lethal than we might expect; and fell out of favor when improved guns made them more lethal. But neither of these feels enough to satisfy, and we should demand satisfaction. Did the group gain something that was worth the potential loss of life? Alternatively, were such things only ever a transition phase?
+
 ### Formal game theory
 
 Something I haven't touched on is Ellickson's use of formal game theory. To do justice to that section, I split it into [its own essay](http://reasonableapproximation.net/2020/11/14/specialized-labor-and-counterfactual-compensation.html). The tl;dr is that I think he handled it reasonably well, with forgiveable blind spots but not outright mistakes that I noticed. I don't feel like I need to discount the rest of the book (on subjects I know less well) based on his treatment of game theory.
