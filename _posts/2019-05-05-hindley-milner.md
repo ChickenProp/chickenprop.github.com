@@ -226,7 +226,7 @@ Lambda expressions are things like `\x -> Just x`, and in Elm they're used impli
 
 Or: suppose that the type declaration $x : μ$ would allow us to infer the judgment $e \sim μ'$. In that case, we could judge that $λx.e \sim (μ → μ)'$.
 
-Typically $e$ would be some expression mentioning the variable $x$, but it's no problem if not. In that case, if you can get $e \sim μ'$ at all, you can get it assuming any $x : μ$, and so you have $λx.e \sim (\mathtt{Int} → μ')$ and $λx.e \sim (\mathtt{String} → μ')$ and $λx.e \sim (\mathtt{Result String (List (Maybe Float))} → μ')$ and so on.
+Typically $e$ would be some expression mentioning the variable $x$, but it's no problem if not. In that case, if you can get $e \sim μ'$ at all, you can get it assuming any $x : μ$, and so you have $λx.e \sim (\mathtt{Int} → μ')$ and $λx.e \sim (\mathtt{String} → μ')$ and $λx.e \sim (\mathtt{Result\ String\ (List\ (Maybe\ Float))} → μ')$ and so on.
 
 Thus: given the declaration `x : Int`, we can infer the judgment `[x] ~ List Int`. And so we can infer the judgment `(\x -> [x]) ~ (Int -> List Int)`.
 
