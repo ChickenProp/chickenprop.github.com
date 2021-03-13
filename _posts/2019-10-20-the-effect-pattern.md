@@ -4,7 +4,7 @@ layout: post
 lw_xpost: true
 external_comments:
   - name: /r/elm
-    url: https://www.reddit.com/r/ProgrammingLanguages/comments/gmyc6v/haskenthetical_another_take_on_haskell_with_a/
+    url: https://www.reddit.com/r/elm/comments/dkou3c/the_effect_pattern_transparent_updates/
 ---
 I don't like writing tests in Elm[^dont-like-elm]. Naively, it seems like the fact that all Elm functions are pure would make it easy. But I've still never really been able to test the things I really want to.
 
