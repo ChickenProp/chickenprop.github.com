@@ -2,6 +2,9 @@
 title: "The Effect pattern: Transparent updates in Elm"
 layout: post
 lw_xpost: true
+external_comments:
+  - name: /r/elm
+    url: https://www.reddit.com/r/ProgrammingLanguages/comments/gmyc6v/haskenthetical_another_take_on_haskell_with_a/
 ---
 I don't like writing tests in Elm[^dont-like-elm]. Naively, it seems like the fact that all Elm functions are pure would make it easy. But I've still never really been able to test the things I really want to.
 
@@ -281,3 +284,7 @@ You can take your existing function `update : Msg -> Model -> (Model, Cmd Msg)`,
 * `runEffect : Effect -> Model -> Cmd Msg`
 
 defining the new `Effect` type as whatever makes this decomposition work nicely. I think this is a slight improvement in the codebase; and independently of that, I think it helps you to write better tests.
+
+### See also
+
+Delayed update, 13-Mar-2021: A commenter on /r/elm [points out](https://www.reddit.com/r/elm/comments/dkou3c/the_effect_pattern_transparent_updates/f4kaavp/) that [elm-program-test](https://package.elm-lang.org/packages/avh4/elm-program-test/latest/) does something similar. It looks like you use it by rewriting your program in basically the same way I recommend here, and then it implements a bunch of test helpers you can use on top of that. If you're interested in this direction, I recommend checking it out.
