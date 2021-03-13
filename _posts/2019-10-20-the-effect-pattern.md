@@ -82,7 +82,7 @@ initialModel
     |> .saved
 ```
 
-is `False`. And that works, but you need to know exactly what messages get sent in response to `IncBy 1`. In this case that's easy. In more involved cases,  you'll need to know it for every `Msg` constructor, and you're going to make a mistake.
+is `False`. And that works to detect the bug, but you need to know exactly what messages get sent in response to `IncBy 1`. In this case that's easy. In more involved cases,  you'll need to know it for every `Msg` constructor, and you're going to make a mistake.
 
 Here's how I'd rewrite for testability:
 
@@ -103,7 +103,7 @@ updateE msg model =
             )
         MultBy n ->
             ( { model | count = model.count * n, saved = False }
-            , [ESaveCount (model.count + n)]
+            , [ESaveCount (model.count * n)]
             )
         Saved ->
             ( { model | saved = True }, [] )
@@ -235,9 +235,9 @@ Really though, I'm not sure what's best. I do think the Effect pattern will help
 
 We haven't used this much yet, so there's a lot left to explore. Here are some thoughts I've had, but not developed very far, in no particular order.
 
-**Nomenclature.** We've gone from `update` to `update`, `updateE` and `runEffects`. I currently think `runEffects` is an okay name, but I feel like with no historical baggage, the name `update` would have gone to `updateE`. Then what would `update` be called? I left it as-is partly to avoid stepping on historical toes, and partly because I don't know. `runUpdate`? That would give us the pattern "`update` functions update the model and return some kind of what-next value, `run` functions produce `Cmd`s". (Of course, `runUpdates` violates that pattern. Maybe that should become `foldUpdate`...?)
+**Nomenclature.** We've gone from `update` to `update`, `updateE` and `runEffect`. I currently think `runEffect` is an okay name, but I feel like with no historical baggage, the name `update` would have gone to `updateE`. Then what would `update` be called? I left it as-is partly to avoid stepping on historical toes, and partly because I don't know. `runUpdate`? That would give us the pattern "`update` functions update the model and return some kind of what-next value, `run` functions produce `Cmd`s". (Of course, `runUpdates` violates that pattern. Maybe that should become `foldUpdate`...?)
 
-Also, we'll want a helper function to convert `updateE` and `runEffects` into the correct form. What do we call that function? The only sensible suggestion I have is `liftUpdate`, but I'm not sure I like it.
+Also, we'll want a helper function to convert `updateE` and `runEffect` into the correct form. What do we call that function? The only sensible suggestion I have is `liftUpdate`, but I'm not sure I like it.
 
 **Randomness.** The test I've demonstrated was deterministic. So have all the tests I've written for `Effect` so far. (At least one used a fuzzed input, but that doesn't feel like it counts.) To get randomness I imagine you'd need to put a `Seed` in the state parameter of `runUpdates`, and then use [`Random.step`](https://package.elm-lang.org/packages/elm-lang/core/latest/Random#step) (maybe with [`Test.Runner.fuzz`](https://package.elm-lang.org/packages/elm-explorations/test/1.2.2/Test-Runner#fuzz) to get you the `Generator` that you need).
 
@@ -245,7 +245,13 @@ Also, we'll want a helper function to convert `updateE` and `runEffects` into th
 
 **Full state machine.** In Haskell we use [quickcheck-state-machine](https://github.com/advancedtelematic/quickcheck-state-machine#readme), which I really like. Could we do something similar in Elm? I think it would be possible, though probably looking quite different. Elm doesn't have all of the type-level features that QSM relies on, but it also doesn't have all of the features that QSM needs to support.
 
-**Should `runEffect` see the model?** Reasons yes: it simplifies the `Effect` constructors; it reduces total amount of code; it allows one `stateless` function to work with both `updateE` and `runEffects`. Reasons no: it gives `runEffect` more rope to hang you with (more likely to be complicated, more likely to diverge in the codebase and test suite). We went with yes because in one of our components, many constructors would have needed many parameters. But we probably could have refactored a little so that many constructors would have needed only one parameter each.
+**Should `runEffect` see the model?** Reasons yes: it simplifies the `Effect` constructors; it reduces total amount of code; it allows one `stateless` function to work with both `updateE` and `runEffect`.[^avoid-old-data] Reasons no: it gives `runEffect` more rope to hang you with (more likely to be complicated, more likely to diverge in the codebase and test suite). We went with yes because in one of our components, many constructors would have needed many parameters. But we probably could have refactored a little so that many constructors would have needed only one parameter each.
+
+[^avoid-old-data]: Update 13-Mar-2021: A coworker points out another reason yes. Often you need to update model state and send a command using the new state value - you can see this when I handle `IncBy` and `MultBy` in both versions of the app, repeating `model.count + n` and `model.count * n`. If `runEffect` sees the model, it automatically uses the new state value. Sometimes you do want to use the old value, and then you can keep passing it in the effect constructor. But now you're doing so deliberately and explicitly.
+
+    This eliminates a subtle class of bugs where you accidentally pass in the old value, or some other incorrect value. In the first published version of this post, I had an `ESaveCount (model.count + n)` where I should have written `ESaveCount (model.count * n)`, but simply writing `ESaveCount model.count` would also have been easy, wrong, and hard to catch.
+
+    I find this fairly compelling.
 
 **Can you reuse mocked `runEffect` functions?** I touched on this above. That is, will you be able to write just one or two per component and use those in most of the tests for that component? (If not directly, then just wrapping them in some state-updating code that doesn't change the `Msg` they return.) Or will each test need a separate one? I certainly hope you can reuse them. If not, that might diminish a lot of the value. The fewer you have, the easier it is to keep them all correct when the real one changes.
 
@@ -272,6 +278,6 @@ Another possibility would be using wrappers to put your `updateE` in the right s
 You can take your existing function `update : Msg -> Model -> (Model, Cmd Msg)`, and decompose it into two others:
 
 * `updateE : Msg -> Model -> (Model, List Effect)`
-* `runEffects : Effect -> Model -> Cmd Msg`
+* `runEffect : Effect -> Model -> Cmd Msg`
 
 defining the new `Effect` type as whatever makes this decomposition work nicely. I think this is a slight improvement in the codebase; and independently of that, I think it helps you to write better tests.
