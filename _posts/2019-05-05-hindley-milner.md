@@ -2,6 +2,11 @@
 title: A reckless introduction to Hindley-Milner type inference
 layout: post
 lw_xpost: true
+external_comments:
+  - name: /r/haskell
+    url: https://www.reddit.com/r/haskell/comments/cs7jyu/a_reckless_introduction_to_hindleymilner_type/
+  - name: LessWrong
+    url: https://lesswrong.com/posts/vTS8K4NBSi9iyCrPo/a-reckless-introduction-to-hindley-milner-type-inference
 ---
 *(I've been editing this post on and off for almost a year. I'm not really happy with it, but I suspect I never will be.)*
 
@@ -154,9 +159,9 @@ For an HM system, you need a language to run type inference on, and you need typ
 
 Types come in a conceptual hierarchy which starts with **type constants**. That's things like, in Elm, `Int`, `Float`, `Bool`, `String`, `Date`, `()`. It also includes type variables, which in Elm are notated with initial lower-case, like `a` and `msg`. (Though the type variables `number`, `comparable` and `appendable` are special cases that I won't cover here.)
 
-Next in the type hierarchy is **applied types**. Here a "type function" is applied to arguments, which are type constants and/or other applied types. These are things like `List Int`, `Maybe (List Float)`, `Result () Date`, and `a -> String`. (In that last one, the type function is the arrow; Haskell would allow you to write it `(->) a String`. Also, `(->)` is the only type that HM specifically requires to exist.) Notably, an applied type must have a specific named type function as its root; you can't have `m Int`, which you would need for generalised monads.
+Next in the type hierarchy is **applied types**. Here a "type function" is applied to arguments, which are type constants and/or other applied types. These are things like `List Int`, `Maybe (List Float)`, `Result () Date`, and `a -> String`. (In that last one, the type function is the arrow; Haskell would allow you to write it `(->) a String`. Aside, `(->)` is the only type that HM specifically requires to exist; `a -> b` is the type of functions taking a parameter of type `a` and evaluating to a result of type `b`.) Notably, an applied type must have a specific named type function as its root; you can't have `m Int`, which you would need for generalised monads.
 
-Type constants and applied types are **monotypes**. You get a **polytype** by optionally sticking one or more "∀"s in front of a monotype. So for example `a -> Int` is a monotype, but `∀a. a -> Int` is a polytype. So is `∀a. ∀b. a -> Int -> b`, which is written equivalently as `∀a b. a -> Int -> b`. `∀b. a -> Int` is also a polytype; since the quantified variable doesn't show up, it's equivalent to the monotype `a -> Int`. We can do something like that to any monotype, so for simplicity we might as well decide that monotypes count as a special case of polytypes, not as a distinct set.
+Type constants and applied types are **monotypes**. You get a **polytype** by optionally sticking one or more "∀"s in front of a monotype. ("∀" is pronounced "for all", and in Haskell can be written `forall`.) So for example `a -> Int` is a monotype, but `∀a. a -> Int` is a polytype. So is `∀a. ∀b. a -> Int -> b`, which is written equivalently as `∀a b. a -> Int -> b`. `∀b. a -> Int` is also a polytype; since the quantified variable doesn't show up, it's equivalent to the monotype `a -> Int`. We can do something like that to any monotype, so for simplicity we might as well decide that monotypes count as a special case of polytypes, not as a distinct set.
 
 Type signatures in Elm typically have an implied "∀" over whichever variables it makes sense to quantify. (There's no syntax for explicitly writing the "∀".) So the type of `List.map` would be written
 
