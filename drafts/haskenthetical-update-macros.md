@@ -1,5 +1,5 @@
 ---
-title: "User-defined macros in Haskenthetical"
+title: "Haskenthetical update: user-defined macros"
 layout: draft
 ---
 A while back I [wrote](http://reasonableapproximation.net/2020/05/19/haskenthetical.html) about Haskenthetical, a language that I'm implementing for fun. I'm still working on it, at least from time to time.
@@ -97,6 +97,8 @@ I've added comments now. `#` is a comment to end of line, but it has to be surro
 [^surrounded]: Writing that I wasn't sure if it needed whitespace in front. Turns out it does. I didn't deliberately write it that way, I didn't think about the question at the time, but I think I prefer it.
 
 I also have an emacs major mode, which parses comments badly because emacs' easy-mode syntax highlighting only supports fairly specific kinds of syntax. But it's better than nothing.
+
+I discovered two bugs writing the previous post. The type checker was ignoring type annotations on λ parameters. I've fixed that. It also wasn't giving an error if a type annotation in a pattern match was more general than the type it matched. I've [only partly](https://www.reddit.com/r/ProgrammingLanguages/comments/k7cj7e/resources_on_typechecking_hindleymilner_with/gfgmgio/) fixed that. I think to fix it more thoroughly I'd need to implement constraints and constraint solving. I might also decide to eliminate that feature - GHC is [going in that direction](https://github.com/ghc-proposals/ghc-proposals/pull/128).
 
 ### What's next?
 
