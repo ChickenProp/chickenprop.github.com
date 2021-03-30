@@ -1,6 +1,7 @@
 ---
 title: "A command-line grammar of graphics"
-layout: draft
+layout: post
+lw_xpost: true
 ---
 Sometimes I'm at my command prompt and I want to draw a graph.
 
