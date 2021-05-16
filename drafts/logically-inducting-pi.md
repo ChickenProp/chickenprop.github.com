@@ -21,11 +21,11 @@ We'll fix the language as being first-order logic over ZF set theory. So the sen
 * Existential and universal quantifiers over these, like $\`\`∀x. ∃y. ∃z. y = {x} ∧ z = {y}"$.
 * Anything we can clearly convert into one of the above, like $\`\`\text{twin prime conjecture}"$ for the formula representing the [twin prime conjecture](https://en.wikipedia.org/wiki/Twin_prime#Twin_prime_conjecture). (I already snuck these in by referencing the symbols $5$, $6$ and $>$, which aren't basic. They're grounded in terms of sets and set membership.)
 
-So for any sentence like that, you can ask Lily for her price for that sentence, and she'll give you an answer. But that price might change over time, in discrete timesteps. We might ask for $ℙ_1(\`\`\\\{\\\} = \\\{\\\}")$, Lily's price on day 1 for the formula $\`\`\\\{\\\} = \\\{\\\}"$. Or we might ask for $ℙ_{1943}(\`\`twin prime conjecture")$, her price on day $1943$ for the formula representing the twin prime conjecture.
+So for any sentence like that, you can ask Lily for her price for that sentence, and she'll give you an answer. But that price might change over time, in discrete timesteps. We might ask for $ℙ_1(\`\`\\\{\\\} = \\\{\\\}")$, Lily's price on day 1 for the formula $\`\`\\\{\\\} = \\\{\\\}"$. Or we might ask for $ℙ_{1943}(\`\`\text{twin prime conjecture}")$, her price on day $1943$ for the formula representing the twin prime conjecture.
 
 This is the *type of agent* that can be a logical inductor. But what does it mean for an agent of this type to actually be a logical inductor?
 
-When we have a "market", we can treat the "prices" as, well, prices in a market, from $ \$0 $ to $ \$1 $. And if we have a market with prices, we might as well have **traders**. Travis the trader, every day, gets to look at the current and historical market prices and buy and sell whatever sentences he wants at current prices.
+When we have a "market", we can treat the "prices" as, well, prices in a market, from `$ $0 $` to `$ $1 $`. And if we have a market with prices, we might as well have **traders**. Travis the trader, every day, gets to look at the current and historical market prices and buy and sell whatever sentences he wants at current prices.
 
 Actually, that's a bit misleading. Travis, every day, gets to *write a simple function* which will look at the current and historical market prices and execute trades. Travis doesn't know the market prices until he's written the function, and the function is constrained in what it can do. I'm not sure if this is important for a lay understanding, but it's an important technical caveat.
 
@@ -33,9 +33,9 @@ Actually, that's a bit misleading. Travis, every day, gets to *write a simple fu
 
 So if Lily changes her prices in a predictable manner, Travis (if he expects to trade against Lily) can extract money from her. Suppose for some sentence $φ$, Lily's price $ℙ_n(φ)$ alternates between $0$ and $1$. (It need not be predictable when her price will change, only that it will never stop changing.) Then Travis on day $n$ can buy $1 - 2ℙ_n(φ)$ shares of $φ$. When her price is $0$, Travis will buy a share for free; when her price is $1$, Travis will sell a share for a dollar; over time, Travis will collect dollars. (He might also collect large amounts of credit or debit in $φ$, if Lily's price is more often one or the other.) Or if Lily's prices only ever rise, Travis can buy now and sell later, and by buying arbitrarily high amounts he can extract an arbitrarily high amount of money.
 
-But also, sentences have value of themselves, which is discovered over time. Suppose someone, Dopey the **decision process**, is chugging along behind the scenes, proving theorems. As soon as Dopey proves that a sentence is a theorem (i.e. true), it's worth $ \$1 $. If Dopey proves that a sentence is *not* a theorem (i.e. false), it's worth $ \$0 $. For the rest... there's a concept of "propositionally consistent" worlds, where we look at what *might* be true given what we know plus simple Boolean algebra. If the only thing Dopey has proved is $\`\`1\text{ is odd} ∨ 2\text{ is odd}"$ then any of $\`\`1\text{ is odd} ∧ ¬(2\text{ is odd})"$, $\`\`¬(1\text{ is odd}) ∧ 2\text{ is odd}"$, $\`\`1\text{ is odd} ∧ 2\text{ is odd}"$ are p.c. A sentence is worth money according to what fraction of p.c. worlds it's true in. So $\`\`2\text{ is odd}"$ might be worth $ \${2 \over 3} $ when Dopey proves $\`\`1\text{ is odd} ∨ 2\text{ is odd}"$, then $ \${1 \over 2} $ when Dopey subsequently proves $\`\`1\text{ is odd}"$, then $ \$0 $ when Dopey finally proves $\`\`¬(2\text{ is odd})"$.
+But also, sentences have value of themselves, which is discovered over time. Suppose someone, Dopey the **decision process**, is chugging along behind the scenes, proving theorems. As soon as Dopey proves that a sentence is a theorem (i.e. true), it's worth `$ $1 $`. If Dopey proves that a sentence is *not* a theorem (i.e. false), it's worth `$ $0 $`. For the rest... there's a concept of "propositionally consistent" worlds, where we look at what *might* be true given what we know plus simple Boolean algebra. If the only thing Dopey has proved is $\`\`1\text{ is odd} ∨ 2\text{ is odd}"$ then any of $\`\`1\text{ is odd} ∧ ¬(2\text{ is odd})"$, $\`\`¬(1\text{ is odd}) ∧ 2\text{ is odd}"$, $\`\`1\text{ is odd} ∧ 2\text{ is odd}"$ are p.c. A sentence is worth money according to what fraction of p.c. worlds it's true in. So $\`\`2\text{ is odd}"$ might be worth `$ ${2 \over 3} $` when Dopey proves $\`\`1\text{ is odd} ∨ 2\text{ is odd}"$, then `$ ${1 \over 2} $` when Dopey subsequently proves $\`\`1\text{ is odd}"$, then `$ $0 $` when Dopey finally proves $\`\`¬(2\text{ is odd})"$.
 
-(Actually, in the paper, sentences are simply worth $ \$1 $ for each p.c. world they're "true" in - note that a theorem is "true" in *every* p.c. world. My formulation here is more complicated, but maybe gives a better intuition for what's going on?)
+(Actually, in the paper, sentences are simply worth `$ $1 $` for each p.c. world they're "true" in - note that a theorem is "true" in *every* p.c. world. My formulation here is more complicated, but maybe gives a better intuition for what's going on?)
 
 So if Lily doesn't change her prices at all, Travis can *still* extract money from her, by buying sentences that Dopey's proved true and selling sentences that Dopey's proved false.
 
@@ -58,7 +58,7 @@ We look at the set
                  \sum_{i ≤ n} T_i( \overline{\mathbb{V}} )
                \right)
          \middle| n ∈ ℕ^+, \mathbb{W} ∈ \mathcal{PC}(D_n)
-       \right} $$
+       \right\} $$
 
 What is $T_i( \overline{\mathbb{V}} )$? $T_i$ is a trading strategy for day $i$, i.e. a combination of sentences.
 
