@@ -16,12 +16,12 @@ In the language of the paper, a logical inductor is a type of **market**, which 
 
 We'll fix the language as being first-order logic over ZF set theory. So the sentences are things like
 
-* Formulas in ZF directly; $\`\`\{\} = \{\}"$ and $\`\`6 > 5"$ and $\`\`5 > 6"$.
-* Formulas combined with connectives, like $\`\`\{\} = \{\} ∧ ¬(6 > 5)"$.
+* Formulas in ZF directly; $\`\`\\{\\} = \\{\\}"$ and $\`\`6 > 5"$ and $\`\`5 > 6"$.
+* Formulas combined with connectives, like $\`\`\\{\\} = \\{\\} ∧ ¬(6 > 5)"$.
 * Existential and universal quantifiers over these, like $\`\`∀x. ∃y. ∃z. y = {x} ∧ z = {y}"$.
 * Anything we can clearly convert into one of the above, like $\`\`\text{twin prime conjecture}"$ for the formula representing the [twin prime conjecture](https://en.wikipedia.org/wiki/Twin_prime#Twin_prime_conjecture). (I already snuck these in by referencing the symbols $5$, $6$ and $>$, which aren't basic. They're grounded in terms of sets and set membership.)
 
-So for any sentence like that, you can ask Lily for her price for that sentence, and she'll give you an answer. But that price might change over time, in discrete timesteps. We might ask for $ℙ_1(\`\`\{\} = \{\}")$, Lily's price on day 1 for the formula $\`\`\{\} = \{\}"$. Or we might ask for $ℙ_{1943}(\`\`twin prime conjecture"), her price on day $1943$ for the formula representing the twin prime conjecture.
+So for any sentence like that, you can ask Lily for her price for that sentence, and she'll give you an answer. But that price might change over time, in discrete timesteps. We might ask for $ℙ_1(\`\`\\{\\} = \\{\\}")$, Lily's price on day 1 for the formula $\`\`\\{\\} = \\{\\}"$. Or we might ask for $ℙ_{1943}(\`\`twin prime conjecture")$, her price on day $1943$ for the formula representing the twin prime conjecture.
 
 This is the *type of agent* that can be a logical inductor. But what does it mean for an agent of this type to actually be a logical inductor?
 
