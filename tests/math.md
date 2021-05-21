@@ -25,3 +25,9 @@ But I don't want most code blocks to process math, so `$foo - $bar` should be cl
     $foo - $bar.
 
 For that matter, sometimes I want to use currency in text, like $3 - $1. But that doesn't work. Backslashes work, but they need to be doubled up for markdown: \\$3 - \\$1.
+
+And sometimes I want dollars in math. I need to use backquotes or code blocks for that. `$ $0 $` backslashes. `$ \$1 $` backslashes. `$ \\$2 $` backslashes. `$ \\\$3 $` backslashes.
+
+And there's something funky going on with fractions after dollars? First, without a space. `$ ${0 \over 3} $` backslashes. `$ \${1 \over 3} $` backslashes. `$ \\${2 \over 3} $` backslashes. `$ \\\${3 \over 3} $` backslashes.
+
+And now including a space. `$ $ {0 \over 3} $` backslashes. `$ \$ {1 \over 3} $` backslashes. `$ \\$ {2 \over 3} $` backslashes. `$ \\\$ {3 \over 3} $` backslashes.
