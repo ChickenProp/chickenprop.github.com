@@ -3,21 +3,21 @@ title: "99% shorter"
 layout: draft
 lw_xpost: true
 ---
-I listen to podcasts while doing chores or at the gym, and often feel like I'm learning something but then can't really remember anything afterwards. So for the past ~month I've been doing an experiment where I write brief summaries of them afterwards, usually same-day but sometimes a bit later. Generally I avoid all forms of fact checking, both "what did the episode say" and "what is actually true", though I don't stop myself if I actually feel like it.
+I listen to podcasts while doing chores or at the gym, and often feel like I'm learning something but then can't really remember anything afterwards. So for the past ~month I've been doing an experiment where I write brief summaries of them afterwards, usually same-day but sometimes a bit later. Generally I avoid all forms of fact checking, both "what did the episode say" and "what is actually true", though I don't stop myself if I feel like doing it.
 
 I've been posting them to my shortform on LessWrong. Mostly in reply to [a single comment](https://lesswrong.com/posts/F5tF2ERAtK3RQzrfr/philh-s-shortform#comment-47yJKprTMqsGsyrgv) for tidiness, but two of them I accidentally posted to the top of the thread. Initially that was just because I wanted to be able to write them from both my work and personal laptops. (This blog is published through git. I don't have the repo on my work laptop, and probably shouldn't do.) But I kind of like it.
 
-I've skipped all the fiction podcasts I listen to, because that's not why I listen to fiction. Also most interviews, those seem generally hard to summarize, though it would probably be reasonable to extract a few individual points. And one Planet Money episode seemed like it would be irresponsible to summarize carelessly, and I didn't feel like trying to be careful about it. But I've summarized every episode of 99% Invisible and History of English, and all but that one episode of Planet Money, that I've listened to in this time. Also one episode of Rationally Speaking and one of Corecursive.
+I've skipped all the fiction podcasts I listen to, because that's not why I listen to fiction. Also most interviews, those seem generally hard to summarize, though it would probably be reasonable to extract a few individual points. And one [Planet Money](https://www.npr.org/sections/money/) episode seemed like it would be irresponsible to summarize carelessly, and I didn't feel like trying to be careful about it. But I've summarized every episode of [99% Invisible](https://99percentinvisible.org/) and [History of English](https://historyofenglishpodcast.com/), and all but that one episode of Planet Money, that I've listened to in this time. Also one episode of [Rationally Speaking](http://rationallyspeakingpodcast.org/) and one of [Corecursive](https://corecursive.com/).
 
 I'm not really sure what this experiment was trying to test. I was curious, so I did it. Some things I've maybe vaguely learned: first, I think I can generally do a decent summary. I frequently get distracted for a few seconds at a time, but there's a difference between that and being actually distracted, and I think it shows. (I listened to 99% Invisible, "Tanz Tanz Revolution", while looking at parking restrictions in my area and anticipating my evening plans. There's significant parts of that episode that just rolled right past me.) I don't think you could reliably pick out the episodes I didn't do same-day, I mostly don't even remember myself. (Hot Cheetos was several days later, but I did go over it a bit in my head in between, which I wouldn't have done if not for this project.)
 
-Second, I seem to retain less of History of English than other podcasts. That feels like it matches my intuition. I expect Causality, too, but that only recently released a new episode.
+Second, I seem to retain less of History of English than other podcasts. That feels like it matches my intuition. I expect [Causality](https://engineered.network/causality/), too, but that only recently released a new episode and I haven't listened to it yet.
 
 Third, this causes a marginal shift from podcasts towards music for me. I predicted this and I'm okay with it, I feel like I don't listen to music enough relative to how much I enjoy it.
 
 If I wanted to make it more of an experiment, I could randomly select some episodes to write up quickly, some to write up the next day, the next week, next month. Not sure how much I feel like this, but maybe. Another thing would be quizzing me on the episodes I did and didn't write up, without rereading. And I'm curious whether I'll ever actually want to refer to these, and if so whether I can predict which ones I will.
 
-I haven't been tracking my time, but I think they mostly take me 20-30 minutes to write? I listen between 1.5x and 2.1x speed depending on the podcast, so that's considerably longer than they usually take to listen to.
+I haven't been tracking my time closely, but I think they mostly take me 20-30 minutes to write? I listen between 1.5x and 2.1x speed depending on the podcast, so that's considerably longer than they usually take to listen to.
 
 Dunno what I'll do in future. Maybe write up some summaries, of episodes I found particularly interesting?
 
@@ -39,7 +39,7 @@ Concerns that if either demand raises (finding new uses: there are studies showi
 
 ### 99% Invisible #434 (9 Mar 2021): Artistic License
 
-This is the most American story.
+This is the most American story. (I actually wrote it up before starting this experiment.)
 
 After states start requiring license plates, Idaho realizes they can be used for advertising, and start boasting about Idaho potatoes on their plates. North Idahoans grumble because that’s more of a Southeast Idaho thing. Tourists start stealing plates as souvenirs, causing people to be very confused when they’re pulled over because who checks whether they still have a license plate.
 
@@ -47,7 +47,7 @@ Anyway, New Hampshire’s state motto is Live Free or Die, I don’t know if tha
 
 And then a Jehova’s Witness is like, no, I don’t want to, God gave me life and I’m not gonna give that up for freedom. So he starts covering up that bit with tape. And he gets arrested and the fuck-communists guy is now governor and not inclined to give an inch, so it goes to the Supreme Court who split 6-3 but the pro-freedom side wins, the government is not allowed to compel you to express your love of freedom.
 
-(Later: Texas allows specialty plates, some group designs a plate to support a cause and then you pay a little extra for it, some going to the group and some to the state. Most of these designs are just rubber stamped. But this is Texas, so the Sons of Confederate Veterans want a license plate supporting their cause, and they want the Confederate flag on it. The state says no, they sue the state, and the Supreme Court sides with the state 5-4.)
+Later: Texas allows specialty plates, some group designs a plate to support a cause and then you pay a little extra for it, some going to the group and some to the state. Most of these designs are just rubber stamped. But this is Texas, so the Sons of Confederate Veterans want a license plate supporting their cause, and they want the Confederate flag on it. The state says no, they sue the state, and the Supreme Court sides with the state 5-4.
 
 ### Corecursive (2 May 2021): Etherium Rescue
 
