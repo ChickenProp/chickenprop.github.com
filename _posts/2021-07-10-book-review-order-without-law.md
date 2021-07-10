@@ -1,6 +1,7 @@
 ---
 title: "Book Review: Order Without Law"
 layout: post
+lw_xpost: true
 explicit_math: true
 external_comments:
   - name: ACX
