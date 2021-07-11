@@ -8,8 +8,10 @@ external_comments:
     url: https://astralcodexten.substack.com/p/your-book-review-order-without-law
   - name: /r/slatestarcodex
     url: https://www.reddit.com/r/slatestarcodex/comments/mn4mwe/your_book_review_order_without_law/
+  - name: LessWrong
+    url: https://www.lesswrong.com/posts/JBSdqhxgKWQ8wCB5k/book-review-order-without-law
 ---
-*This review [originally appeared](https://astralcodexten.substack.com/p/your-book-review-order-without-law) on the blog [Astral Codex Ten](https://astralcodexten.substack.com/) as part of a contest. You can now read it here, with working footnotes. There's even an [audio version](https://open.spotify.com/episode/2NhdoFvz7ktK5Zef9X7ecu) as part of the ACX podcast; the footnotes are all read out at the end.*
+*This review [originally appeared](https://astralcodexten.substack.com/p/your-book-review-order-without-law) on the blog [Astral Codex Ten](https://astralcodexten.substack.com/) as part of a <a href="https://astralcodexten.substack.com/p/book-review-contest-winners">contest</a>. You can now read it here, with working footnotes. There's even an [audio version](https://open.spotify.com/episode/2NhdoFvz7ktK5Zef9X7ecu) as part of the ACX podcast; the footnotes are all read out at the end.*
 
 ### Shasta County
 
