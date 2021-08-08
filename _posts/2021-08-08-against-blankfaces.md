@@ -1,6 +1,6 @@
 ---
 title: 'Against "blankfaces"'
-layout: draft
+layout: post
 lw_xpost: true
 ---
 (Content note: minor spoilers for *Harry Potter and the Order of the Phoenix*.)
