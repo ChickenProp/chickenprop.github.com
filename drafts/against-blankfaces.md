@@ -3,6 +3,8 @@ title: 'Against "blankfaces"'
 layout: draft
 lw_xpost: true
 ---
+(Content note: minor spoilers for *Harry Potter and the Order of the Phoenix*.)
+
 Scott Aaronson writes about [blankfaces](https://www.scottaaronson.com/blog/?p=5675),
 
 > anyone who enjoys wielding the power entrusted in them to make others miserable by acting like a cog in a broken machine, rather than like a human being with courage, judgment, and responsibility for their actions. A blankface meets every appeal to facts, logic, and plain compassion with the same repetition of rules and regulations and the same blank stare—a blank stare that, more often than not, conceals a contemptuous smile.
