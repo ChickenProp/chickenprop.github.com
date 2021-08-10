@@ -2,6 +2,11 @@
 title: 'Against "blankfaces"'
 layout: post
 lw_xpost: true
+external_comments:
+  - name: LessWrong
+    url: https://www.lesswrong.com/posts/zcriHTKgKNehSSdyG/against-blankfaces
+  - name: /r/slatestarcodex
+    url: https://www.reddit.com/r/slatestarcodex/comments/p0ovo2/against_blankfaces/
 ---
 (Content note: minor spoilers for *Harry Potter and the Order of the Phoenix*.)
 
