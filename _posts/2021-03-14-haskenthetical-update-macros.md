@@ -83,7 +83,7 @@ But getting rid of one-module-per-file, this seemed like a reasonable solution. 
 
     4. Type check all the value definitions. This has to be simultaneous too, for the same reason. If type checking passes, add them to the environment, which doesn't strictly need to be simultaneous but is forced to be by my implementation. (Every defined value is a thunk storing a copy of the environment at the time it was defined. These environments do need to be mutually recursive.)
 
-    5. Type check the macro declarations, and add them to the environment. The type of a macro is `-> SyntaxTree SyntaxTree`, I think it's pretty okay for macros to be impure but in future they'll need to be augmented with some way for macros to consult the environment. We can do these one at a time, because macros declared in the same block can't reference each other directly. (They can generate references to each other.)
+    5. Type check the macro declarations, and add them to the environment. The type of a macro is `-> (List SyntaxTree) SyntaxTree`, I think it's pretty okay for macros to be impure but in future they'll need to be augmented with some way for macros to consult the environment. We can do these one at a time, because macros declared in the same block can't reference each other directly. (They can generate references to each other.)
 
 3. Treat the remaining top-level trees as another `(declarations ...)` block, and go through the same process. But this block is required to also contain a single top-level expression, after macroexpansion.
 
@@ -120,8 +120,8 @@ Half the macros I've written so far (`»`, `«`, `list`) could simply be functio
 I've been thinking about nomenclature a bit. Right now the `Either` type is called `+`, which might make sense if the `,` type was called `*` but it's called `,`. `List` and `Maybe` aren't built-in, but when I've been defining them I've been calling them `List` and `Maybe` with constructors `Nil` `Cons` `Nothing` `Just`. I'm thinking I might go with regex-inspired names,
 
 * The unit type becomes `ε`, with constructor also `ε`.
-* `+ $a $b` becames `|| $a $b`. Constructors `_| $a` and `|_ $b`, perhaps.
-* `Maybe $a` becomes `?? $a`. Constructors `ι $a` and `?ε`. (`ι` is the [inclusion map](https://en.wikipedia.org/wiki/Inclusion_map) `-> $a (?? $a)`.)
+* `+ $a $b` becames `|| $a $b`. Constructors `_| $a` and `|_ $b`, perhaps. (But which way around? I have no intuition for that.)
+* `Maybe $a` becomes `?? $a`. Constructors `ι $a` and `?ε`. (`ι` is the [inclusion map](https://en.wikipedia.org/wiki/Inclusion_map) `-> $a (?? $a)`. But lots of types might want one of those, so maybe it should be `?ι`, with `ι` for the only constructor of the type `ι $a`. Will Haskenthetical find that type useful like Haskell does?)
 * `List $a` becomes `** $a`. Constructors `:: $a (** $a)` and `*ε`, but I'm not sold on `::`.
 
 This seems pretty terrible, how do you pronounce any of that? But it also seems kind of fun.
