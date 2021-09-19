@@ -4,18 +4,32 @@
 // work if you try to load it asynchronously.
 
 (function () {
-    function formatDate (d) {
-        return (
-            d.toLocaleDateString('en-US', {weekday: 'short'})
-                + ', '
-                + d.toLocaleDateString('en-US', {month: 'short'})
-                + ' '
-                + d.toLocaleDateString('en-US', {day: '2-digit'})
-                + ' '
-                + d.toLocaleDateString('en-US', {year: 'numeric'})
-        );
+    function fmtDate(d, opts) {
+        return d.toLocaleString('en-US', opts);
     }
-    function createInput (placeholder, minLength, maxLength, width) {
+    function twoDigit(n) {
+        return n.toLocaleString('en-US', {minimumIntegerDigits: 2});
+    }
+
+    function prettyDate (d, precise) {
+        var dPart = (
+            fmtDate(d, {weekday: 'short'})
+                + ', '
+                + fmtDate(d, {month: 'short'})
+                + ' '
+                + fmtDate(d, {day: '2-digit'})
+                + ' '
+                + fmtDate(d, {year: 'numeric'})
+        );
+        if (!precise)
+            return dPart;
+
+        var tPart =
+            fmtDate(d, {hour: '2-digit', minute: '2-digit', second: '2-digit',
+                        hourCycle: 'h23', timeZoneName: 'short'});
+        return dPart + ' ' + tPart;
+    }
+    function createInput (value, placeholder, minLength, maxLength, width) {
         var inp = document.createElement('input');
         inp.placeholder = placeholder;
         inp.minLength = minLength;
@@ -24,74 +38,136 @@
         inp.style.width = width;
         inp.style.textAlign = 'center';
         inp.oninput = updateOutput;
+        inp.value = value;
         return inp;
     }
+    function createSimpleElement (tagName, textContent) {
+        var elt = document.createElement(tagName);
+        elt.appendChild(document.createTextNode(textContent));
+        return elt;
+    }
 
-    var startYearsInput = createInput('YYYY', 4, 4, '4em');
-    var startMonthsInput = createInput('MM', 1, 2, '3em');
-    var startDaysInput = createInput('DD', 1, 2, '3em');
-    var endYearsInput = createInput('YYYY', 4, 4, '4em');
-    var endMonthsInput = createInput('MM', 1, 2, '3em');
-    var endDaysInput = createInput('DD', 1, 2, '3em');
+    var now = new Date()
+    var startDateInputs = {
+        y: createInput('', 'YYYY', 4, 4, '4em'),
+        m: createInput('', 'MM', 1, 2, '3em'),
+        d: createInput('', 'DD', 1, 2, '3em')
+    };
+    var endDateInputs = {
+        y: createInput(fmtDate(now, {year: 'numeric'}), 'YYYY', 4, 4, '4em'),
+        m: createInput(fmtDate(now, {month: '2-digit'}), 'MM', 1, 2, '3em'),
+        d: createInput(fmtDate(now, {day: '2-digit'}), 'DD', 1, 2, '3em')
+    };
 
-    today = new Date();
-    endYearsInput.value = today.getFullYear();
-    endMonthsInput.value = today.getMonth() + 1;
-    endDaysInput.value = today.getDate();
+    var startTimeInputs = {
+        h: createInput('00', 'HH', 1, 2, '3em'),
+        m: createInput('00', 'MM', 1, 2, '3em'),
+        s: createInput('00', 'SS', 1, 2, '3em')
+    }
+    var endTimeInputs = {
+        // toLocaleString doesn't work with 2-digit for minutes and seconds.
+        // Firefox and chrome both buggy. Hours seem to work, but needs
+        // hourCycle too. This way is fine.
+        h: createInput(twoDigit(now.getHours()), 'HH', 1, 2, '3em'),
+        m: createInput(twoDigit(now.getMinutes()), 'MM', 1, 2, '3em'),
+        s: createInput(twoDigit(now.getSeconds()), 'SS', 1, 2, '3em')
+    }
 
     var container = document.createElement('div');
     var inputCont = document.createElement('div');
     var outputCont = document.createElement('p');
 
-    inputCont.appendChild(startYearsInput);
-    inputCont.appendChild(document.createTextNode('-'));
-    inputCont.appendChild(startMonthsInput);
-    inputCont.appendChild(document.createTextNode('-'));
-    inputCont.appendChild(startDaysInput);
+    function createDateCont(inputs, name) {
+        var dateCont = document.createElement('div');
+        dateCont.appendChild(inputs.y);
+        dateCont.appendChild(document.createTextNode('-'));
+        dateCont.appendChild(inputs.m);
+        dateCont.appendChild(document.createTextNode('-'));
+        dateCont.appendChild(inputs.d);
+        dateCont.appendChild(createSimpleElement('i', ' ' + name + ' date'));
+        return dateCont;
+    }
+    var startDateCont = createDateCont(startDateInputs, 'start')
+    var endDateCont = createDateCont(endDateInputs, 'end')
 
-    var startText = document.createElement('i');
-    startText.appendChild(document.createTextNode(' start date'));
-    inputCont.appendChild(startText);
+    function createTimeCont(inputs, name) {
+        var timeCont = document.createElement('div');
+        timeCont.style.display = 'none';
+        timeCont.appendChild(inputs.h);
+        timeCont.appendChild(document.createTextNode(':'));
+        timeCont.appendChild(inputs.m);
+        timeCont.appendChild(document.createTextNode(':'));
+        timeCont.appendChild(inputs.s);
+        timeCont.appendChild(createSimpleElement('i', ' ' + name + ' time'));
+        return timeCont;
+    }
+    var startTimeCont = createTimeCont(startTimeInputs, 'start');
+    var endTimeCont = createTimeCont(endTimeInputs, 'end');
 
+    inputCont.appendChild(startDateCont);
+    inputCont.appendChild(startTimeCont);
+    inputCont.appendChild(endDateCont);
+    inputCont.appendChild(endTimeCont);
+
+    var precisionLabel = document.createElement('label');
+    var precision = document.createElement('input');
+    precision.type = 'checkbox';
+    precision.onchange = updateOutput;
+    precisionLabel.appendChild(precision);
+    precisionLabel.appendChild(document.createTextNode(' precision mode'));
     inputCont.appendChild(document.createElement('br'));
-    inputCont.appendChild(endYearsInput);
-    inputCont.appendChild(document.createTextNode('-'));
-    inputCont.appendChild(endMonthsInput);
-    inputCont.appendChild(document.createTextNode('-'));
-    inputCont.appendChild(endDaysInput);
-
-    var endText = document.createElement('i');
-    endText.appendChild(document.createTextNode(' end date'));
-    inputCont.appendChild(endText);
+    inputCont.appendChild(precisionLabel);
 
     container.appendChild(inputCont);
     container.appendChild(outputCont);
+    // This will be the currently running script, if it wasn't loaded async.
     var thisScript = document.scripts[document.scripts.length - 1];
     thisScript.parentElement.insertBefore(container, thisScript);
 
     function updateOutput () {
-        var startYearsNum = +(startYearsInput.value || NaN);
-        var startMonthsNum = +(startMonthsInput.value || NaN) - 1;
-        var startDaysNum = +(startDaysInput.value || NaN);
-        var endYearsNum = +(endYearsInput.value || NaN);
-        var endMonthsNum = +(endMonthsInput.value || NaN) - 1;
-        var endDaysNum = +(endDaysInput.value || NaN);
+        startTimeCont.style.display = precision.checked ? 'block' : 'none';
+        endTimeCont.style.display = precision.checked ? 'block' : 'none';
 
-        if (isNaN(startYearsNum)
-            || isNaN(startMonthsNum)
-            || isNaN(startDaysNum)
-            || isNaN(endYearsNum)
-            || isNaN(endMonthsNum)
-            || isNaN(endDaysNum))
+        var startDateNums = {
+            y: +(startDateInputs.y.value || NaN),
+            m: +(startDateInputs.m.value || NaN) - 1,
+            d: +(startDateInputs.d.value || NaN)
+        }
+        var endDateNums = {
+            y: +(endDateInputs.y.value || NaN),
+            m: +(endDateInputs.m.value || NaN) - 1,
+            d: +(endDateInputs.d.value || NaN)
+        }
+
+        var nullTime = { h: 0, m: 0, s: 0 };
+        var startTimeNums = precision.checked ? {
+            h: +(startTimeInputs.h.value || NaN),
+            m: +(startTimeInputs.m.value || NaN),
+            s: +(startTimeInputs.s.value || NaN)
+        } : nullTime;
+        var endTimeNums = precision.checked ? {
+            h: +(endTimeInputs.h.value || NaN),
+            m: +(endTimeInputs.m.value || NaN),
+            s: +(endTimeInputs.s.value || NaN)
+        } : nullTime;
+
+        if ([startDateNums.y, startDateNums.m, startDateNums.d,
+             endDateNums.y, endDateNums.m, endDateNums.d,
+             startTimeNums.h, startTimeNums.m, startTimeNums.s,
+             endTimeNums.h, endTimeNums.m, endTimeNums.s
+            ].find(isNaN) !== undefined)
         {
             return;
         }
 
-        var startDate = new Date(startYearsNum, startMonthsNum, startDaysNum);
-        var endDate = new Date(endYearsNum, endMonthsNum, endDaysNum);
+        function mkDate(d, t) {
+            return new Date(d.y, d.m, d.d, t.h, t.m, t.s);
+        }
+        var startDate = mkDate(startDateNums, startTimeNums);
+        var endDate = mkDate(endDateNums, endTimeNums);
 
-        var oneMSec = 1 * 1000 * 1000 * 1000; // it's in milliseconds
-        var diffMSecs = Math.floor((endDate - startDate) / oneMSec);
+        var oneMSec = 1000 * 1000 * 1000; // one megasec in millisecs
+        var diffMSecs = Math.trunc((endDate - startDate) / oneMSec);
         var diffHMSecs = diffMSecs / 100;
 
         var prevHMSecs =
@@ -99,22 +175,48 @@
         var nextHMSecs =
             new Date(+startDate + Math.floor(diffHMSecs + 1) * oneMSec * 100);
 
+        var precisionDetail = '';
+        if (precision.checked) {
+            var diffSecs = Math.floor((endDate - startDate) / 1000);
+            var diffDays = Math.floor(Math.abs(diffSecs) / 86400);
+            var diffSecsRem = Math.abs(diffSecs) % 86400;
+
+            // Format the time by getting a date which has it as the time part.
+            var midnight = Date.UTC(2000, 0, 1);
+            var atTime = new Date(+midnight + diffSecsRem * 1000);
+            var hms = fmtDate(atTime, {hour: '2-digit',
+                                       minute: '2-digit',
+                                       second: '2-digit',
+                                       hourCycle: 'h23',
+                                       timeZone: 'UTC'});
+            precisionDetail = (
+                'To be precise, <b>'
+                    + diffSecs.toLocaleString('en-US')
+                    + "</b> seconds. That's <b>"
+                    + diffDays
+                    + '</b> days and <b>'
+                    + hms
+                    + '</b>.<br>'
+            );
+        }
+
         outputCont.innerHTML = (
             'Between <b>'
-                + formatDate(startDate)
+                + prettyDate(startDate, precision.checked)
                 + '</b> and <b>'
-                + formatDate(endDate)
+                + prettyDate(endDate, precision.checked)
                 + '</b>,<br>there are <b>'
                 + diffHMSecs.toLocaleString('en-US',
                                             { minimumFractionDigits: 2 })
                 + '</b> hundred megaseconds.<br>'
+                + precisionDetail
                 + Math.floor(diffHMSecs)
                 + ' hundred megaseconds passed on <b>'
-                + formatDate(prevHMSecs)
+                + prettyDate(prevHMSecs, precision.checked)
                 + '</b>.<br>'
                 + Math.floor(diffHMSecs + 1)
                 + ' hundred megaseconds will pass on <b>'
-                + formatDate(nextHMSecs)
+                + prettyDate(nextHMSecs, precision.checked)
                 + '</b>.<br>'
         );
     }
