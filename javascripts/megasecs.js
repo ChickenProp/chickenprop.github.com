@@ -29,6 +29,35 @@
                         hourCycle: 'h23', timeZoneName: 'short'});
         return dPart + ' ' + tPart;
     }
+
+    function secsToHMS (secs) {
+        // Format the time by getting a date which has it as the time part.
+        // Assumes the seconds are fewer than one day.
+        var midnight = Date.UTC(2000, 0, 1);
+        return fmtDate(new Date(+midnight + secs * 1000),
+                       {hour: '2-digit', minute: '2-digit', second: '2-digit',
+                        hourCycle: 'h23', timeZone: 'UTC'});
+    }
+
+    function yearsAndDaysBetween(startDate_, endDate_) {
+        // Calculate the number of years-and-days between two dates.
+        var startDate = startDate_ < endDate_ ? startDate_ : endDate_;
+        var endDate = startDate_ < endDate_ ? endDate_ : startDate_;
+
+        var nYears = endDate.getFullYear() - startDate.getFullYear();
+        var startDateThatYear = new Date(startDate);
+        startDateThatYear.setFullYear(endDate.getFullYear());
+
+        if (startDateThatYear > endDate) {
+            nYears--;
+            startDateThatYear.setFullYear(endDate.getFullYear() - 1);
+        }
+
+        return { years: nYears,
+                 days: Math.floor((endDate - startDateThatYear)
+                                  / (86400 * 1000)) };
+    }
+
     function createInput (value, placeholder, minLength, maxLength, width) {
         var inp = document.createElement('input');
         inp.placeholder = placeholder;
@@ -180,22 +209,19 @@
             var diffSecs = Math.floor((endDate - startDate) / 1000);
             var diffDays = Math.floor(Math.abs(diffSecs) / 86400);
             var diffSecsRem = Math.abs(diffSecs) % 86400;
+            var yearsAndDays = yearsAndDaysBetween(startDate, endDate);
 
-            // Format the time by getting a date which has it as the time part.
-            var midnight = Date.UTC(2000, 0, 1);
-            var atTime = new Date(+midnight + diffSecsRem * 1000);
-            var hms = fmtDate(atTime, {hour: '2-digit',
-                                       minute: '2-digit',
-                                       second: '2-digit',
-                                       hourCycle: 'h23',
-                                       timeZone: 'UTC'});
             precisionDetail = (
                 'To be precise, <b>'
                     + diffSecs.toLocaleString('en-US')
-                    + "</b> seconds. That's <b>"
-                    + diffDays
-                    + '</b> days and <b>'
-                    + hms
+                    + "</b> seconds.<br>That's <b>"
+                    + diffDays.toLocaleString('en-US')
+                    + '</b> days (<b>'
+                    + yearsAndDays.years
+                    + '</b> years, <b>'
+                    + yearsAndDays.days
+                    + '</b> days), and <b>'
+                    + secsToHMS(diffSecsRem)
                     + '</b>.<br>'
             );
         }
@@ -210,12 +236,13 @@
                                             { minimumFractionDigits: 2 })
                 + '</b> hundred megaseconds.<br>'
                 + precisionDetail
+                + '<b>'
                 + Math.floor(diffHMSecs)
-                + ' hundred megaseconds passed on <b>'
+                + '</b> hundred megaseconds passed on <b>'
                 + prettyDate(prevHMSecs, precision.checked)
-                + '</b>.<br>'
+                + '</b>.<br><b>'
                 + Math.floor(diffHMSecs + 1)
-                + ' hundred megaseconds will pass on <b>'
+                + '</b> hundred megaseconds will pass on <b>'
                 + prettyDate(nextHMSecs, precision.checked)
                 + '</b>.<br>'
         );
