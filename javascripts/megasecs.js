@@ -1,6 +1,7 @@
 // This creates a simple widget to calculate the time between two dates in units
 // of a hundred megaseconds. Use by inserting `<script src="..."></script>` at
-// the point in the document where the widget should appear.
+// the point in the document where the widget should appear. It probably won't
+// work if you try to load it asynchronously.
 
 (function () {
     function formatDate (d) {
@@ -65,7 +66,8 @@
 
     container.appendChild(inputCont);
     container.appendChild(outputCont);
-    document.body.appendChild(container);
+    var thisScript = document.scripts[document.scripts.length - 1];
+    thisScript.parentElement.insertBefore(container, thisScript);
 
     function updateOutput () {
         var startYearsNum = +(startYearsInput.value || NaN);
