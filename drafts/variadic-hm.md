@@ -119,9 +119,9 @@ Actually, I'm sure this doesn't fully explore the space. But I am going to leave
 
 ---
 
-The first paper I'm going to look at is the most recent one I've found:  Strickland, Tobin-Hochstadt and Felleisen, [Practical Variable-Arity Polymorphism](https://www2.ccs.neu.edu/racket/pubs/esop09-sthf.pdf) (2009, doi:[https://doi.org/10.1007/978-3-642-00590-9_3](10.1007/978-3-642-00590-0_3)). I linked this in my previous post. It implements typechecking for variadic functions in Typed Scheme, I think specifically meaning Typed [Racket](https://en.wikipedia.org/wiki/Racket_%28programming_language%29)? I'm not familiar with the language (I have done a little untyped Racket in the past), but from the sounds of things, its type system is fundamentally different from Hindley-Milner, and the implementation won't easily transfer.
+The first paper I'm going to look at is the most recent one I've found:  Strickland, Tobin-Hochstadt and Felleisen, [Practical Variable-Arity Polymorphism](https://www2.ccs.neu.edu/racket/pubs/esop09-sthf.pdf) (2009, doi:[10.1007/978-3-642-00590-0_3](https://doi.org/10.1007/978-3-642-00590-9_3)). I linked this in my previous post. It implements typechecking for variadic functions in Typed Scheme, I think specifically meaning Typed [Racket](https://en.wikipedia.org/wiki/Racket_%28programming_language%29)? I'm not familiar with the language (I have done a little untyped Racket in the past), but from the sounds of things, its type system is fundamentally different from Hindley-Milner, and the implementation won't easily transfer. (Both compile to [System F](https://en.wikipedia.org/wiki/System_F), but I don't think that helps.)
 
-But it does help me make sense of the space. It divides the functions it can type into two: uniform and non-uniform. Let's call the optional arguments the "rest parameter", as in the parameter which holds "the rest of the parameters". Uniform functions are those whose rest parameter is a homogeneous list, such that they could be replaced (at cost to ergonomics) with a function accepting a list as its final parameter. In my above examples, that's the arithmetic functions plus `list` and `list'`. In Typed Racket [syntax](https://docs.racket-lang.org/ts-guide/types.html), the types of these functions would be
+But it does help me make sense of the space. It divides the functions it can type into two: uniform and non-uniform. Let's call the optional arguments the "rest parameter", as in the parameter which holds "the rest of the parameters". Uniform functions are those whose rest parameter is a homogeneous list, such that they could be replaced (at cost to ergonomics) with a function accepting a list. In my above examples, that's the arithmetic functions plus `list` and `list'`. In Typed Racket [syntax](https://docs.racket-lang.org/ts-guide/types.html), the types of these functions would be
 
 ```
 (: + (-> Number Number Number * Number)) # also -, *, /
@@ -129,7 +129,7 @@ But it does help me make sense of the space. It divides the functions it can typ
 (: list' (All (a) (-> a * (Listof a) (Listof a))))
 ```
 
-With the `*` indicating "zero or more of the preceding type". These seem simple enough.
+With the `*` indicating "zero or more of the preceding type". These seem simple enough. (Though `list'` takes an argument after the variadic part, which makes things more complicated. Racket calls that function `list*` but I couldn't find a type declaration for it to be sure it's actually valid.)
 
 Then the other other functions handled by the paper are "non-uniform". Of my examples, I think that's just `map`, `trace` and maybe `unzip` natively.
 
@@ -139,9 +139,9 @@ Then the other other functions handled by the paper are "non-uniform". Of my exa
 (: unzip (All (a ...)) (-> (Listof (Tuple a ... a)) (Tuple (Listof a) ... a)))
 ```
 
-(I'm inventing the type `Tuple` here to refer to a collection with known size and types. `(Tuple Number String Bool)` would be equivalent to Haskell's `(Number, String, Bool)`. I don't know if anything like it actually exists, or can exist, in Typed Racket already.)
+For `unzip`, I'm inventing the type `Tuple` here to refer to a collection with known size and types. `(Tuple Number String Bool)` would be equivalent to Haskell's `(Number, String, Bool)`. I don't know if anything like it actually exists, or can exist, in Typed Racket already.
 
-These are a bit more involved. The `...` is doing two related but syntactically different things.[^ellipsis] In the variable list of `All` (the `(a b ...)` and `(a ...)`) it says the preceding variable corresponds to a list of types. In the body of `All`, it combines with both the preceding and following variables. `t ... b` means: "`b` was followed by ... in the type signature, so it corresponds to a list of types. Use a copy of `t` for each one of those types, and inside each copy, substitute `b` with the corresponding type from the list".
+These are a bit more involved. The `...` is doing two related but syntactically different things.[^ellipsis] In the variable list of `All` (the `(a b ...)` and `(a ...)`) it says the preceding variable corresponds to a list of types. In the body of `All`, it combines with both the preceding and following variables. `t ... b` means: "`b` was followed by `...` in the type signature, so it corresponds to a list of types. Use a copy of `t` for each one of those types, and inside each copy, substitute `b` with the corresponding type from the list".
 
 [^ellipsis]: It also makes it really hard to write code outlines while omitting certain parts.
 
@@ -149,7 +149,7 @@ So if `b ...` corresponds to `Integer String Number`, then `(Listof b) ... b` co
 
 I don't know if we strictly need the trailing variable in the body. You're only allowed one `...` in the variable list (right at the end), and the trailing variable is required to have been in the variable list followed by a `...`, so as far as I can tell it's unambiguous. (At least as long as there are no higher-rank types, which I don't think I've seen mentioned yet.)
 
-`printf`, `appF` and `appA` would also fit into this schema if it weren't for the constraints. But as far as I know Typed Racket has nothing analagous to Haskell's constraints.
+`printf`, `appF` and `appA` would also fit into this schema if it weren't for the constraints. But as far as I know Typed Racket has nothing analagous to Haskell's constraints. I don't know how much they complicate matters.
 
 That leaves four examples. `sort` and `renderCsv` don't fit the scheme because they can only accept one or two optional arguments, not an arbitrary number. (Typed Racket [does support optional arguments](https://docs.racket-lang.org/ts-guide/types.html#%28part._.Types_for_.Functions_with_.Optional_or_.Keyword_.Arguments%29), they're just not covered by this paper.)
 
@@ -174,14 +174,14 @@ First up: Dzeng and Haynes, [Type reconstruction for variable-arity procedures](
 
 I don't understand this first one: `map` is explicitly given as an example, with type
 
-    $$ (\mathit{pre} · ((γ∘δ) → α) :: (γ ∘ (δ \underline{\mathit{list}})))
-       → α \mathtt{list} $$
+    $$ (\mathit{pre} · ((γ∘δ) → α) :: (γ ∘ (\underline{\mathtt{list}}\ δ)))
+       → \mathtt{list}\ α $$
 
 But this might help illustrate the second problem, which I think is saying that type annotations are complicated.
 
-(Note that this is using a syntax where Haskell's `[a]` is written `a list`. I might have rearranged but I'm not sure how much it matters. Also I think the `$ \underline{\mathit{list}} $` should maybe be rendered `$ \underline{\mathtt{list}} $` but I might be missing something.)
+(Note that I've swapped from a postfix `$ α\ \mathtt{list} $` syntax to a prefix `$ \mathtt{list}\ α $` that I'm more used to. Also the `$ \underline{\mathtt{list}} $` was originally rendered `$ \underline{\mathit{list}} $` but I think that was a mistake.)
 
-What's not permitted is to pass in a variadic function and apply it with two different argument counts: `((λ (f) (+ (f 1) (f 2 3))) +)` is forbidden, even though `(+ 1)` and `(+ 2 3)` are both permissible. (I'd forbid `(+ 1)` myself but not important.) Combining this system with higher-rank types might avoid this limitation, but I don't know if they're compatible. The authors list two other ways to potentially avoid it, but both would need more investigation.
+What's not allowed is to pass in a variadic function and apply it with two different argument counts: `((λ (f) (+ (f 1) (f 2 3))) +)` is forbidden, even though `(+ 1)` and `(+ 2 3)` are both okay. (I'm inclined to forbid `(+ 1)` but that's not important.) Combining this system with higher-rank types might avoid this limitation, but I don't know if they're compatible. The authors list two other ways to potentially avoid it, but both would need more investigation.
 
 The other limitation I notice is: there's only one thing you can do with a "rest argument" (i.e. the collection of the arbitrarily-many arguments at the end), and that's to use it as another rest argument. There's even special syntax for that: you'd define a variadic function as `(λ (x &rest xs) ...)` (i.e. taking one required argument and arbitrarily many following that), and inside the body you'd call some other variadic function with `(g a b c &rest xs)`. So variadic functions need to be either built-in or defined in terms of other variadic functions.
 
@@ -195,7 +195,7 @@ Ignoring that problem for now, and considering whether we can type the example f
 
 * I dunno about `printf`. I'd need to figure out how typeclasses fit in.
 
-* I presented both `sort` and `renderCsv` with the optional arguments before the required ones. I think that rules them out. `renderCsv` would be fine if we swap the arguments, but `sort` also has typeclass stuff going on. Even ignoring *that*, I'm not sure if "explicit comparison function with optional key function" is as polymorphic as we'd like. That is, we could write a function that can be accepted at types
+* I presented both `sort` and `renderCsv` with the optional arguments before the required ones. I think that rules them out.[^opt-before-req] `renderCsv` would be fine if we swap the arguments, but `sort` also has typeclass stuff going on. Even ignoring *that*, I'm not sure if "explicit comparison function with optional key function" is as polymorphic as we'd like. That is, we could write a function that can be accepted at types
 
     ```haskell
     sort :: [a] -> (a -> a -> Ordering) -> [a]
@@ -210,19 +210,23 @@ Ignoring that problem for now, and considering whether we can type the example f
 
     with the third argument taking a default type as well as a default value.
 
+[^opt-before-req]: I'm not sure. It looks like there's nothing stopping us from constructing types corresponding to optional-before-required. But the paper describes a language syntax that forbids it. My weak guess is such types would break the inference algorithm.
+
 * `appF` and `appA` seem likely, the typeclass stuff is simpler than either `printf` or `sort`.
 
-* `unzip`, `«` and `»` I think probably won't work, but I'd want to look in more depth at how this system works.
+* `unzip` might be feasible. We'd need some way to interpret a row (see below) as a proper type. I don't know how difficult that would be.
 
-Um, so how does it work? It's based on extensible records, which I haven't yet looked at in depth. ([Extensible records with scoped labels](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/scopedlabels.pdf) is the paper I was planning to look into if I tried to add them to Haskenthetical, but it might not take a compatible approach.) A *row* is an infinite sequence of (mark, type) pairs, where a *mark* is either "present", "absent" or a mark variable. At some point all the marks become "absent", and then the types don't matter. Recall the type of `map` from above,
+* I think `«` and `»` are right out.
 
-    $$ (\mathit{pre} · ((γ∘δ) → α) :: (γ ∘ (δ \underline{\mathit{list}})))
-       → α \mathtt{list} $$
+So how does it work? It's based on extensible records, which I haven't yet looked at in depth. ([Extensible records with scoped labels](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/scopedlabels.pdf) is the paper I was planning to look into if I tried to add them to Haskenthetical, but it might not take a compatible approach.) A *row* is an infinite sequence of (mark, type) pairs, where a *mark* is either "present", "absent" or a mark variable. Rows can be equivalently constructed as pairs of (mark row, type row), where those are infinite sequences of the respective things. At some point all the marks become "absent", and then the types don't matter. Recall the type of `map` from above,
 
-This is quantified over three type variables. $γ$ is quantified over mark rows, i.e. infinite sequences of marks. $δ$ is quantified over type rows, i.e. infinite sequences of types. (Combining a mark row and a type row gives us an infinite sequence of (mark, type) pairs, i.e. a row.) And $α$ is quantified over proper types.
+    $$ (\mathit{pre} · ((γ∘δ) → α) :: (γ ∘ (\underline{\mathtt{list}}\ δ)))
+       → \mathtt{list}\ α $$
+
+This is quantified over three type variables. $γ$ is quantified over mark rows, and $δ$ over type rows, with $γ∘δ$ combining them into a row. And $α$ is quantified over proper types.
 
 Everything before the outermost `$ → $` is a row. (Functions in this system are of kind "row → type", not kind "type → type".) It has `$\mathit{pre} · ((γ∘δ) → α)$` as its head, a single field marked present with type `$ (γ∘δ) → α $`.
-`$ γ∘δ $` is itself a row. Then for the outer row, the tail has the same sequence of marks as the argument to its head, meaning the same number of arguments. `$ δ \underline{\mathtt{list}} $` is a row of "apply `list` to the types in `$ δ $`".
+`$ γ∘δ $` is itself a row. Then for the outer row, the tail `$ γ ∘ (\underline{\mathtt{list}}\ δ) $` has the same sequence of marks as the argument to its head, meaning the same number of arguments. `$ \underline{\mathtt{list}}\ δ $` is a type row of "apply `list` to the types in `$ δ $`".
 
 Then we might instantiate `$γ$` at `$ \mathit{pre} :: \mathit{pre} :: \underline{\mathit{abs}} $`, i.e. "two present fields and then nothing". And we might instantiate `$δ$` at `$ \mathtt{int} :: \mathtt{string} :: δ' $`, i.e. "an int, then a string, then another type row", and `$α$` at `$ \mathtt{bool} $`. Then we'd have something like the Haskell type
 
@@ -237,15 +241,15 @@ but it would be rendered in this type system as
             :: \mathit{pre} · \mathtt{string}
             :: \underline{\mathit{abs}} ∘ δ')
            → \mathtt{bool})
-       :: \mathit{pre} · \mathtt{int list}
-       :: \mathit{pre} · \mathtt{string list}
-       :: \underline{\mathit{abs}} ∘ (δ' \underline{\mathtt{list}}))
-    → \mathtt{bool list}
+       :: \mathit{pre} · \mathtt{list\ int}
+       :: \mathit{pre} · \mathtt{list\ string}
+       :: \underline{\mathit{abs}} ∘ (\underline{\mathtt{list}}\ δ'))
+    → \mathtt{list\ bool}
     $$
 
-Which, let us say, I do not love. And this kind of thing infects all functions, not just variadic ones! Still, maybe it can be made ergonomic. I think this paper deserves further study, though of course I don't know if I'll be doing it myself.
+Which, let us say, I do not love. And this kind of thing infects all functions, not just variadic ones! And I don't know how it interacts with partial application. Still, maybe it can be made ergonomic. I think this paper deserves further study, though of course I don't know if I'll be doing it myself.
 
-(Could we get optional arguments preceding required ones? The syntax the paper uses forbids this, but it seems the type system allows it. But my guess is that would break the inference algorithm.)
+I still don't know what infinitary tuples actually are.
 
 ---
 
@@ -253,9 +257,6 @@ Which, let us say, I do not love. And this kind of thing infects all functions, 
 
 
 
-
-
-Works with Typed Scheme. Compiles to System F, which GHC does too, but I think that's not very helpful. (But maybe I should be doing the same?) Gives examples of variable arity functions.
 
 
 
