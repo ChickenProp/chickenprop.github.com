@@ -45,7 +45,7 @@ Well this is awkward. I moved in here in 2019, but I wouldn't have given this ad
 
 That's not what "e.g." means, but the date is correct. I assume the residency status is too, I was born in England and never lived outside it.
 
-<a href="/images/uk-self-assessment/02.06-about-you-marital-status.png"><img src="/images/uk-self-assessment/02.06-about-you-marital-status.png" style="max-width: 100%" alt="screenshot"></a>
+<a href="/images/uk-self-assessment/02.06-marital-status.png"><img src="/images/uk-self-assessment/02.06-marital-status.png" style="max-width: 100%" alt="screenshot"></a>
 
 This is 'optional', so maybe there are people who don't have a marital status, as distinct from having the marital status 'single'? Or maybe, contra what they said above, it means I don't have to tell them, and then probably they'll treat me as single if I don't specify?
 
