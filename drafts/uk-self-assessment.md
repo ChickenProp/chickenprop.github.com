@@ -57,7 +57,7 @@ Well done for finding and documenting a bug, HMRC, but this sounds like it shoul
 
 <a href="/images/uk-self-assessment/02.05-residency-dob.png"><img src="/images/uk-self-assessment/02.05-residency-dob.png" style="max-width: 100%" alt="screenshot"></a>
 
-Residency is "based on whether you lived in England and Northern Ireland, Scotland or Wales for the majority of the tax year". I assume they mean "plurality", but maybe if you spent less than half the year in any of these, you don't pay tax at all. (Tax collectors hate him! Nonlocal man discovers one weird trick...)[^and-or]
+Residency is "based on whether you lived in England and Northern Ireland, Scotland or Wales for the majority of the tax year". I assume they mean "plurality", but maybe if you spent less than half the year in any of these, you don't pay tax at all. (Tax collectors hate him! Nonlocal man discovers one weird trick...)
 
 That's not what "e.g." means, but the date is correct.
 
@@ -154,14 +154,54 @@ I don't know what these are and the help text doesn't help much, but probably no
 
 <a href="/images/uk-self-assessment/04.08-pension-savings-tax-charges.png"><img src="/images/uk-self-assessment/04.08-pension-savings-tax-charges.png" style="max-width: 100%" alt="screenshot"></a>
 
-Again, long help text. But the gist seems to be that if I have more than £1,073,100 in pensions in total (5 significant digits! Impressive precision), or if I (or my employer) put more than £40,000 into pensions this year, I need to worry about this. Neither is the case for me.
+Again, long help text. But the gist seems to be that if I have more than £1,073,100 in pensions in total (5 significant digits! Impressive precision), or if I (or my employer) put more than £40,000 into pensions this year, I need to worry about this. Neither is the case for me. (Yet! Growth mindset.)
 
 ---
 
-One more page of basically the same thing, but this one is easy again. Yes, I contributed to a personal pension. Yes, I gave to charity. My partner and I are ineligible for married couple's allowance, being neither married nor in a civil partnership, and both born after 6 April 1935. Nor can I transfer 10% of my personal allowance to them, being neither married nor in a civil partnership. I don't want to claim other tax reliefs. I don't have a tax adviser. I... think I haven't used any tax avoidance schemes, but that probably relies on distinguishing between schemes that HMRC thinks are legit (like giving to charity) and schemes that HMRC thinks are kinda sus. I haven't used any disguised remuneration avoidance schemes. I am not acting in capacity or on behalf of anyone else.
+One more page of basically the same thing, but this one is easy again. Yes, I contributed to a personal pension. Yes, I gave to charity (and claimed gift aid). My partner and I are ineligible for married couple's allowance (we are neither married nor in a civil partnership, and anyway we were both born after 6 April 1935). Nor can I transfer 10% of my personal allowance to them (we are neither married nor in a civil partnership). I don't want to claim other tax reliefs. I don't have a tax adviser. I... think I haven't used any tax avoidance schemes, but that probably relies on distinguishing between schemes that HMRC thinks are legit (like giving to charity) and schemes that HMRC thinks are kinda sus. I haven't used any disguised remuneration avoidance schemes. I am not acting in capacity or on behalf of anyone else.
 
 There is one interesting one here.
 
 <a href="/images/uk-self-assessment/05.01-tax-refunded.png"><img src="/images/uk-self-assessment/05.01-tax-refunded.png" style="max-width: 100%" alt="screenshot"></a>
 
 I got a tax rebate in tax year 2020-2021 from 2019-2020, and then another in tax year 2021-2022 from 2020-2021. I think neither of these is what it's asking about. Rather, I think this is asking about rebates in tax year 2020-2021 from tax already paid in that tax year.
+
+---
+
+Having filled in those three pages, I get an overview page listing what I've filled in so far and what I still need to do. The first thing to do is income. I only had one employer this year, so I only have one section for that.
+
+The first three questions are answered by my P60, which I was able to find because my employer emailed it to me. They want to know my employer's PAYE reference, my pay before tax taken off, and my tax taken off. (My P60 agrees with my own records about how much tax I paid.)
+
+These last two are "optional". First time I did this, I thought that meant "we have a copy of your P60 too, so if you don't fill this in we'll fill it in for you". Nope, it means "if you don't fill this in we'll think it's 0".
+
+Then they want to know if I got any tips or other payments not on my P60, which I didn't. This one is optional too - if I try to enter 0 it complains and tells me to leave it blank.
+
+Also, some helpful Javascript on the page makes sure your numbers are given to two decimal places, i.e. pounds and pennies. You can't enter pennies, they'll be truncated (£567.89 becomes £567.00), but it makes sure to show you them.
+
+They also want to know if I was a director (no) and something about "inside off-payroll working engagements" (not entirely clear what this is, but no).
+
+I did have benefits, medical insurance. The value of that will be on my P11D, not my P60, but they don't ask for it here. That's on the next page, which I guess I won't get shown if I didn't have any?
+
+The final question almost caught me out:
+
+<a href="/images/uk-self-assessment/06.01-expenses.png"><img src="/images/uk-self-assessment/06.01-expenses.png" style="max-width: 100%" alt="screenshot"></a>
+
+I don't normally think of myself as having employment expenses. But I've been working from home, and this is how I claim back some of my utility bills.
+
+---
+
+My answers to that question added two new pages that weren't listed on the overview before. First for taxable benefits and expenses, listed on my P11D. I have an email copy of that too, I just copy the amount listed for medical insurance on that into the "private medical or dental insurance" box on the page.
+
+They even tell me which number to use. (I have three, "cost to employer", "amount made good or from which tax deducted" and "cash equivalent". The middle one is £0 and the others are equal, so it's not hard for me. But if the middle one wasn't £0, I wouldn't be sure whether to use "cost to employer" or "cash equivalent" - but the latter is the one labeled with an "11", so that's the one to use.)
+
+Then there's a page for expenses not reimbursed, of which WFH costs fall in "Other expenses and capital allowances".
+
+The help text doesn't make it clear how much I can claim, but the [link](https://www.gov.uk/tax-relief-for-employees/working-at-home) mostly does. I can claim for gas, electricity, metered water, business phone calls and dial-up internet; but only the amount of them that's related to my work. (Strictly it sounds like this would exclude things like the week when my ISP failed to connect me and I had to use mobile data for internet. As it happens I didn't use enough to pay extra, but if I had... I guess I'd be able to claim for some of it, even though this page only mentions dial-up?)
+
+I can claim up to £6/week without evidence, or more with evidence. (I don't have evidence.) I can only claim if I have to work from home, not if I do so by choice. I had to look this up, but there were four months where my office was closed (April, May, June and November), so call it 16 weeks. It's also not entirely clear whether that's "£6/week no matter how much I had to work from home that week" or whether I should think of it as £1.20/day, but that doesn't affect me personally. I assume I shouldn't count any holidays I took, but I don't think I took any in those months.
+
+Following this page there's one for providing any more information.
+
+I'm not sure what kind of thing I'd need to use it for, but I don't have anything to add. Which is good because it's kind of embarrassingly limited. I'm not allowed to use multiple lines or most punctuation?!
+
+<a href="/images/uk-self-assessment/07.01-other-information.png"><img src="/images/uk-self-assessment/07.01-other-information.png" style="max-width: 100%" alt="screenshot"></a>
