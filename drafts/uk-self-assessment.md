@@ -194,15 +194,27 @@ My answers to that question added two new pages that weren't listed on the overv
 
 They even tell me which number to use. (I have three, "cost to employer", "amount made good or from which tax deducted" and "cash equivalent". The middle one is £0 and the others are equal, so it's not hard for me. But if the middle one wasn't £0, I wouldn't be sure whether to use "cost to employer" or "cash equivalent" - but the latter is the one labeled with an "11", so that's the one to use.)
 
-Then there's a page for expenses not reimbursed, of which WFH costs fall in "Other expenses and capital allowances".
+Then there's a page for expenses not reimbursed. The weirdly specific thing on this page is the box for "fixed deductions for expenses":
 
-The help text doesn't make it clear how much I can claim, but the [link](https://www.gov.uk/tax-relief-for-employees/working-at-home) mostly does. I can claim for gas, electricity, metered water, business phone calls and dial-up internet; but only the amount of them that's related to my work. (Strictly it sounds like this would exclude things like the week when my ISP failed to connect me and I had to use mobile data for internet. As it happens I didn't use enough to pay extra, but if I had... I guess I'd be able to claim for some of it, even though this page only mentions dial-up?)
+<a href="/images/uk-self-assessment/07.01-fixed-deductions.png"><img src="/images/uk-self-assessment/07.01-fixed-deductions.png" style="max-width: 100%" alt="screenshot"></a>
+
+Based on the (long) help text, this seems to be "people in certain jobs and industries get to put specific numbers here, regardless of what their actual expenses were". (But they can choose to instead put their actual expenses in another box.) But if you're a "uniformed airline or helicoptor pilot, co-pilot, flight deck crew or cabin crew", you get a *different* box to put specific numbers in.
+
+<a href="/images/uk-self-assessment/07.02-airline.png"><img src="/images/uk-self-assessment/07.02-airline.png" style="max-width: 100%" alt="screenshot"></a>
+
+But as far as I know I do not work in such a job or industry. The only question relevant to me is "other".
+
+<a href="/images/uk-self-assessment/07.03-other-expenses.png"><img src="/images/uk-self-assessment/07.03-other-expenses.png" style="max-width: 100%" alt="screenshot"></a>
+
+The help text doesn't make it clear how much I can claim, but the [link](https://www.gov.uk/tax-relief-for-employees/working-at-home) mostly does. I can claim for gas, electricity, metered water, business phone calls and dial-up internet[^dial-up]; but only the amount of them that's related to my work. So I guess I should figure out how much higher my bills are WFH than they would be if I was in the office?
+
+[^dial-up]: When I switched ISP, there was a week when my new one failed to connect me and I had to use mobile data for internet. As it happens I didn't use more than my contracted amount, but if I had... strictly it doesn't sound like that would be covered? I kind of guess I'd be able to claim for some of it, even though this page only mentions dial-up, but I'm not sure.
 
 I can claim up to £6/week without evidence, or more with evidence. (I don't have evidence.) I can only claim if I have to work from home, not if I do so by choice. I had to look this up, but there were four months where my office was closed (April, May, June and November), so call it 16 weeks. It's also not entirely clear whether that's "£6/week no matter how much I had to work from home that week" or whether I should think of it as £1.20/day, but that doesn't affect me personally. I assume I shouldn't count any holidays I took, but I don't think I took any in those months.
 
 Following this page there's one for providing any more information.
 
-<a href="/images/uk-self-assessment/07.01-other-information.png"><img src="/images/uk-self-assessment/07.01-other-information.png" style="max-width: 100%" alt="screenshot"></a>
+<a href="/images/uk-self-assessment/07.04-other-information.png"><img src="/images/uk-self-assessment/07.04-other-information.png" style="max-width: 100%" alt="screenshot"></a>
 
 I'm not sure what kind of thing I'd need to use it for, but I don't have anything to add. Which is good because it's kind of embarrassingly limited. I'm not allowed to use multiple lines or most punctuation?!
 
@@ -214,9 +226,9 @@ Next up is pensions. I have two pensions that I contributed to this year, my emp
 
 I have a standing order to deposit into my SIPP every month, and then about 11 weeks later, 25% of that amount gets added as tax relief. (It's supposed to be 6-8 weeks, but it's not.) So do I count the tax relief in the tax year when it arrived, or the tax year when I deposited the money? So far I've been doing when I deposited, and that's what they suggest by telling me to multiply the amount I contributed by 1.25. On the other hand, if that calculation is always correct, why don't they save me the trouble and do it for me? In any case, there's nothing saying explicitly what to do. It probably doesn't make that much difference as long as I'm consistent year-on-year, so let's stick with "deposited".
 
-<a href="/images/uk-self-assessment/8.02-no-relief-given.png"><img src="/images/uk-self-assessment/8.02-no-relief-given.png" style="max-width: 100%" alt="screenshot"></a>
+<a href="/images/uk-self-assessment/08.02-no-relief-given.png"><img src="/images/uk-self-assessment/08.02-no-relief-given.png" style="max-width: 100%" alt="screenshot"></a>
 
-Meanwhile, my employer pension has two sources of contributions. There's the stuff "my employer pays", doesn't get written on my payslip, and the stuff "I pay", which does. These are both part of my compensation package, but I guess some people don't realize money is fungible or something? So as far as I can tell, what's happening is we pretend that if my employer doesn't write it on my payslip it's not coming out of my salary, and we make things more complicated and less transparent in service of this fiction.
+Meanwhile, my employer pension has two sources of contributions. There's the stuff "my employer pays", which doesn't get written on my payslip, and the stuff "I pay", which does. These are both part of my compensation package, but I think we like to pretend that if my employer doesn't write it on my payslip it's not causing me to get paid less? And we make things more complicated and less transparent in service of this fiction.
 
 Anyway, the stuff "my employer pays" I think isn't relevant here. The stuff "I pay" is. In my case, this is also paid relief at source, meaning it's deducted after I've paid tax on it. So that sounds like it matches "Payments to your employer's scheme which were not deducted from your pay before tax". Buuut... I *think* that question is trying to ask about payments which were *expected* to be deducted before tax. At my previous job that's how it happened, and it sounds like under certain circumstances that could have gone wrong and then I'd use this question to correct that.
 
