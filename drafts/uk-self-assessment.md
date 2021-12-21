@@ -202,6 +202,42 @@ I can claim up to £6/week without evidence, or more with evidence. (I don't hav
 
 Following this page there's one for providing any more information.
 
+<a href="/images/uk-self-assessment/07.01-other-information.png"><img src="/images/uk-self-assessment/07.01-other-information.png" style="max-width: 100%" alt="screenshot"></a>
+
 I'm not sure what kind of thing I'd need to use it for, but I don't have anything to add. Which is good because it's kind of embarrassingly limited. I'm not allowed to use multiple lines or most punctuation?!
 
-<a href="/images/uk-self-assessment/07.01-other-information.png"><img src="/images/uk-self-assessment/07.01-other-information.png" style="max-width: 100%" alt="screenshot"></a>
+---
+
+Next up is pensions. I have two pensions that I contributed to this year, my employer one and an SIPP. I'm not aware of having a retirement annuity contract whatever one of those is, and I don't have any overseas pensions, so there are only one or two questions relevant to me. Still, this page is frankly confusing.
+
+<a href="/images/uk-self-assessment/08.01-pension-tax-relief.png"><img src="/images/uk-self-assessment/08.01-pension-tax-relief.png" style="max-width: 100%" alt="screenshot"></a>
+
+I have a standing order to deposit into my SIPP every month, and then about 11 weeks later, 25% of that amount gets added as tax relief. (It's supposed to be 6-8 weeks, but it's not.) So do I count the tax relief in the tax year when it arrived, or the tax year when I deposited the money? So far I've been doing when I deposited, and that's what they suggest by telling me to multiply the amount I contributed by 1.25. On the other hand, if that calculation is always correct, why don't they save me the trouble and do it for me? In any case, there's nothing saying explicitly what to do. It probably doesn't make that much difference as long as I'm consistent year-on-year, so let's stick with "deposited".
+
+<a href="/images/uk-self-assessment/8.02-no-relief-given.png"><img src="/images/uk-self-assessment/8.02-no-relief-given.png" style="max-width: 100%" alt="screenshot"></a>
+
+Meanwhile, my employer pension has two sources of contributions. There's the stuff "my employer pays", doesn't get written on my payslip, and the stuff "I pay", which does. These are both part of my compensation package, but I guess some people don't realize money is fungible or something? So as far as I can tell, what's happening is we pretend that if my employer doesn't write it on my payslip it's not coming out of my salary, and we make things more complicated and less transparent in service of this fiction.
+
+Anyway, the stuff "my employer pays" I think isn't relevant here. The stuff "I pay" is. In my case, this is also paid relief at source, meaning it's deducted after I've paid tax on it. So that sounds like it matches "Payments to your employer's scheme which were not deducted from your pay before tax". Buuut... I *think* that question is trying to ask about payments which were *expected* to be deducted before tax. At my previous job that's how it happened, and it sounds like under certain circumstances that could have gone wrong and then I'd use this question to correct that.
+
+So I think contributions "I paid" to my employer pension actually go along with my SIPP contributions as the answer to the first question, and I leave this one blank. (It's not marked optional, but it doesn't accept 0.)
+
+---
+
+For charity, there's three questions that look maybe relevant.
+
+<a href="/images/uk-self-assessment/09.01-gift-aid.png"><img src="/images/uk-self-assessment/09.01-gift-aid.png" style="max-width: 100%" alt="screenshot"></a>
+
+For pensions I needed to figure out my contribution plus what was added, for charity I just need to give my own contribution. Obviously. Still, this number is easy to find in my records. (I tag all gift aided contributions in my ledger.)
+
+<a href="/images/uk-self-assessment/09.02-one-off.png"><img src="/images/uk-self-assessment/09.02-one-off.png" style="max-width: 100%" alt="screenshot"></a>
+
+I think this is a roundabout way of asking how much gift aid I expect to donate in tax years 2021-22 and/or 22-23? They'll assume it's the amount I donated this year, minus whatever I put here. And then they'll adjust my tax code for that, to reduce overpayments.
+
+Most of my charity donations were monthly recurring, but that left me slightly below my "10% of take-home" target, so I did do a one-off donation on top of that which I don't particularly expect to repeat. (But I haven't checked how far below my target I am right now.) But I do expect to donate more in total this year, so I'm going to leave this blank.
+
+<a href="/images/uk-self-assessment/09.03-foreign.png"><img src="/images/uk-self-assessment/09.03-foreign.png" style="max-width: 100%" alt="screenshot"></a>
+
+Not much help about what specific countries count as "certain" here, or what the definition of charity is for tax purposes. Some of the money I donate goes to [MIRI](https://intelligence.org/), which is not a UK charity. But it goes via [EA Funds](https://funds.effectivealtruism.org/), which is. So I'm pretty sure I haven't officially done this.
+
+For the rest: I'm not asking to treat any payments as being made in a year other than they were actually made. And I haven't given any shares, securities, land or buildings to charity, so I can ignore these.
