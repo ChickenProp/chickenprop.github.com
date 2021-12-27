@@ -7,13 +7,10 @@ The gov.uk [page on filing](https://www.gov.uk/log-in-file-self-assessment-tax-r
 
 <a href="/images/uk-self-assessment/01-personal-tax-account.png"><img src="/images/uk-self-assessment/01-personal-tax-account.png" style="max-width: 100%" alt="screenshot"></a>
 
-Logging in I get sent to my "personal tax account" page. It tells me I paid the right amount of tax for 2019-2020, but that has to be based on guesswork because they don't know how much I donated to charity or put into pensions.[^charity-pensions] I click that box and another page tells me how much they think I paid and that they think it was right, but they don't explain either number. According to my own records[^ledger] I think I paid about £230 more than they think I paid.
+Logging in I get sent to my "personal tax account" page and click the "complete your tax return" link in the top right box. I swear that was harder to find in the past. It explains who can and can't file a return, I assume I read that in a previous year and could then and still can, and I click 'start now'.
 
 [^charity-pensions]: For charity, they ask each time you file a return how much you expect to donate next year, so they have a decent guess for that. For pensions you'd think they have some idea, because they give me money every time money goes into my pensions. But also they ask later in the process how much money went into my pensions. So I'm not sure if they've taken it into account here.
 
-[^ledger]: I track my finances with [Ledger](https://en.wikipedia.org/wiki/Ledger_%28software%29), so this is fairly easy for me to calculate. There's a caveat that I got a tax rebate in January 2021 for apparently overpaying in tax year 2019-2020. I marked that as coming out of the same account that I mark the tax deductions on my payslip as going in to. Since it arrived in tax year 2020-2021, I need to add that amount back in to get the amount I paid in that tax year. I could also mark it as "it arrived in my current account on this date but came out of my tax account on that date".
-
-So I click the "complete your tax return" link in the top right box. I swear that was harder to find in the past. It explains who can and can't file a return, I assume I read that in a previous year and could then and still can, and I click 'start now'.
 
 The first page has a bunch of stuff filled in for me, mostly accurate. The all-caps HAZELDEN seems unnecessary, you don't need to worry about my handwriting.
 
@@ -39,7 +36,7 @@ For years I've been using my parents' address for all official stuff, which is e
 
 <a href="/images/uk-self-assessment/02.04-about-you-address-date.png"><img src="/images/uk-self-assessment/02.04-about-you-address-date.png" style="max-width: 100%" alt="screenshot"></a>
 
-Well this is awkward. I moved in here in 2019, but I wouldn't have given this address when filling in my 2019-2020 tax return. Will they get pissy with me if I give the date I moved in? Eh, probably not.
+Well this is awkward. I moved in here in 2019, but I wouldn't have given this address when filling in my 2019-20 tax return. Will they get pissy with me if I give the date I moved in? Eh, probably not.
 
 Almost every address form I've filled in for the past several years has let me give my postcode and then select my exact address from a short dropdown, or enter it manually. This address form does not offer that.
 
@@ -164,13 +161,13 @@ There is one interesting one here.
 
 <a href="/images/uk-self-assessment/05.01-tax-refunded.png"><img src="/images/uk-self-assessment/05.01-tax-refunded.png" style="max-width: 100%" alt="screenshot"></a>
 
-I got a tax rebate in tax year 2020-2021 from 2019-2020, and then another in tax year 2021-2022 from 2020-2021. I think neither of these is what it's asking about. Rather, I think this is asking about rebates in tax year 2020-2021 from tax already paid in that tax year.
+I got a tax rebate in tax year 2019-20 from 2018-19, and then another in tax year 2020-21 from 2019-20. I think neither of these is what it's asking about. Rather, I think this is asking about rebates in tax year 2020-21 from tax already paid in that tax year.
 
 ---
 
 Having filled in those three pages, I get an overview page listing what I've filled in so far and what I still need to do. The first thing to do is income. I only had one employer this year, so I only have one section for that.
 
-The first three questions are answered by my P60, which I was able to find because my employer emailed it to me. They want to know my employer's PAYE reference, my pay before tax taken off, and my tax taken off. (My P60 agrees with my own records about how much tax I paid.)
+The first three questions are answered by my P60, which I was able to find because my employer emailed it to me. They want to know my employer's PAYE reference, my pay before tax taken off, and my tax taken off.
 
 These last two are "optional". First time I did this, I thought that meant "we have a copy of your P60 too, so if you don't fill this in we'll fill it in for you". Nope, it means "if you don't fill this in we'll think it's 0".
 
@@ -220,7 +217,7 @@ I'm not sure what kind of thing I'd need to use it for, but I don't have anythin
 
 ---
 
-Next up is pensions. I have two pensions that I contributed to this year, my employer one and an SIPP. I'm not aware of having a retirement annuity contract whatever one of those is, and I don't have any overseas pensions, so there are only one or two questions relevant to me. Still, this page is frankly confusing.
+Next up is pensions. I have two pensions that I contributed to this year, my employer one and an [SIPP](https://en.wikipedia.org/wiki/Self-invested_personal_pension). I'm not aware of having a retirement annuity contract whatever one of those is, and I don't have any overseas pensions, so there are only one or two questions relevant to me. Still, this page is frankly confusing.
 
 <a href="/images/uk-self-assessment/08.01-pension-tax-relief.png"><img src="/images/uk-self-assessment/08.01-pension-tax-relief.png" style="max-width: 100%" alt="screenshot"></a>
 
@@ -240,11 +237,13 @@ For charity, there's three questions that look maybe relevant.
 
 <a href="/images/uk-self-assessment/09.01-gift-aid.png"><img src="/images/uk-self-assessment/09.01-gift-aid.png" style="max-width: 100%" alt="screenshot"></a>
 
-For pensions I needed to figure out my contribution plus what was added, for charity I just need to give my own contribution. Obviously. Still, this number is easy to find in my records. (I tag all gift aided contributions in my ledger.)
+For pensions I needed to figure out my contribution plus what was added, for charity I just need to give my own contribution. Obviously. Still, this number is easy to find in my records.[^ledger]
+
+[^ledger]: I track my finances with [Ledger](https://en.wikipedia.org/wiki/Ledger_%28software%29), and apply a tag to all gift aided charity contributions.
 
 <a href="/images/uk-self-assessment/09.02-one-off.png"><img src="/images/uk-self-assessment/09.02-one-off.png" style="max-width: 100%" alt="screenshot"></a>
 
-I think this is a roundabout way of asking how much gift aid I expect to donate in tax years 2021-22 and/or 22-23? They'll assume it's the amount I donated this year, minus whatever I put here. And then they'll adjust my tax code for that, to reduce overpayments.
+I think this is a roundabout way of asking how much gift aid I expect to donate in tax years 2021-22 and/or 22-23? They'll assume it's the amount I donated this year, minus whatever I put here. And then they'll adjust my PAYG tax code for that, to reduce overpayments.
 
 Most of my charity donations were monthly recurring, but that left me slightly below my "10% of take-home" target, so I did do a one-off donation on top of that which I don't particularly expect to repeat. (But I haven't checked how far below my target I am right now.) But I do expect to donate more in total this year, so I'm going to leave this blank.
 
@@ -252,4 +251,60 @@ Most of my charity donations were monthly recurring, but that left me slightly b
 
 Not much help about what specific countries count as "certain" here, or what the definition of charity is for tax purposes. Some of the money I donate goes to [MIRI](https://intelligence.org/), which is not a UK charity. But it goes via [EA Funds](https://funds.effectivealtruism.org/), which is. So I'm pretty sure I haven't officially done this.
 
-For the rest: I'm not asking to treat any payments as being made in a year other than they were actually made. And I haven't given any shares, securities, land or buildings to charity, so I can ignore these.
+I can ignore the rest: I'm not asking to treat any payments as being made in a year other than they were actually made; and I haven't given any shares, securities, land or buildings to charity.
+
+---
+
+The next three pages are about my "PAYE Notice of Coding". They never say what one of these is, but it seems to be a letter they send out, that as far as I can see doesn't contain the words "PAYE" or "notice of coding". (It does say "your tax code notice", which is at least similar.)
+
+Awkwardly, I can't find one more recent than 2018-19: not in my physical documents box, my "I should look through these documents at some point" pile, or my email. I'm sure I've had them more recently, so, um. They don't tell me what to do in this situation, but I guess presumably I can ask them for a new one? But... look at these questions.
+
+<a href="/images/uk-self-assessment/10.01-underpaid-2019-20.png"><img src="/images/uk-self-assessment/10.01-underpaid-2019-20.png" style="max-width: 100%" alt="screenshot"></a>
+
+The first is "does this number match what's on your coding notice?"
+
+It's not clear whether it's talking about 2019-20 or 2020-21. If I had to guess - and I suppose I kind of do? Then I'd guess it's asking about underpaid tax from 2019-20 and earlier that I should have paid back in 2020-21 through my tax code for 2020-21.
+
+<a href="/images/uk-self-assessment/10.02-underpaid-2020-21.png"><img src="/images/uk-self-assessment/10.02-underpaid-2020-21.png" style="max-width: 100%" alt="screenshot"></a>
+
+The second is also "does this number match what's on your coding notice?" I think the difference is that last one was talking about underpaid tax from previous years, and this one is talking about underpaid tax from 2020-21 that's already been put on my 2020-21 tax code.
+
+(For these, if I select "no" I get a space to put a different number and a space to tell them where that other number comes from.)
+
+<a href="/images/uk-self-assessment/10.03-other-debts.png"><img src="/images/uk-self-assessment/10.03-other-debts.png" style="max-width: 100%" alt="screenshot"></a>
+
+The third question doesn't look like the first two, although it does in the linked video and the help text sounds like it should. It's another "does this number match what's on your coding notice?" This time it's about... outstanding debts other than underpaid tax? What else might I owe to HMRC?
+
+So, okay. I confess I don't really know what's going on with any of this. But suppose I ask HMRC for a replacement Notice of Coding. Are they really going to give me a letter telling me a different number than they have on the website? If so, why not just take that number from wherever they got it for the letter, and put it on the website themselves?
+
+Plus, I've received tax refunds the last two years running, which seems like a weird thing to get if they think I owe them money?
+
+So I think I'm just gonna assume these are all £0.
+
+The [three](https://www.youtube.com/watch?v=8eox4JDo-f4) [linked](https://www.youtube.com/watch?v=_-Aj7ufr7rc) [videos](https://www.youtube.com/watch?v=8HiA2BS6VsY) are short (1:15 to 2:07), but they don't add much that's not in the help text, and I'd much rather they be presented as "text with embedded images" or even just plain text. At least they have subtitles.
+
+---
+
+The next page is one I can't do anything with until after I've submitted the return. This seems like a strange place for it.
+
+<a href="/images/uk-self-assessment/11.01-repayment.png"><img src="/images/uk-self-assessment/11.01-repayment.png" style="max-width: 100%" alt="screenshot"></a>
+
+Then we get a page about my student loan, which doesn't even have a help text. This is on my P60 again, and also I have it in my own records and I'm pretty sure on a letter somewhere.
+
+<a href="/images/uk-self-assessment/11.02-student-loan.png"><img src="/images/uk-self-assessment/11.02-student-loan.png" style="max-width: 100%" alt="screenshot"></a>
+
+Next they have two questions about underpaid tax.
+
+<a href="/images/uk-self-assessment/11.03-underpaid-2020-21.png"><img src="/images/uk-self-assessment/11.03-underpaid-2020-21.png" style="max-width: 100%" alt="screenshot"></a>
+
+The first is: if it turns out I didn't pay enough tax last year (2020-21, the year I'm filing for), do I want to pay it back through my tax code for next year (2022-23)? i.e. to get it automatically deducted from my payslip starting April 2022? That seems reasonable, sure. If I say no I have to pay it directly by January 2022. I think it's more likely I paid too much, but gonna say yes anyway.
+
+I can only do this if I file by 30th December, which is (*checks calendar*) soon.
+
+<a href="/images/uk-self-assessment/11.04-underpaid-2021-22.png"><img src="/images/uk-self-assessment/11.04-underpaid-2021-22.png" style="max-width: 100%" alt="screenshot"></a>
+
+The second is: if they think I'll owe[^owe-gross] tax this year (2021-22, the unfinished year I'm writing this), do I want it put onto my tax code for... also this year? But this doesn't apply to tax on employed earnings (i.e. the only thing I think I owe tax on) or pensions.
+
+[^owe-gross]: I think "owe" here means gross, not net. That is, the question isn't "will I have paid less tax in these buckets than I'm required to", which I don't think is a question that makes sense after I've paid any tax at all. (When I pay tax it doesn't offset specific tax buckets, it just offsets my total tax bill.) Rather, the question is "will the amount I'm required to pay in these buckets be more than £0".
+
+So, no, because I don't think I'll owe the relevant kind of tax, and if they decide I probably will that's going to confuse things. And no again, because if they decide I'll probably owe something, putting it on my tax code for this year (with three payslips to go) also seems like it's going to confuse things. Certainly it'll make updating my ledger mildly less convenient. If I was going to do this, I'd rather it go on my tax code for next year, like with the previous question.
