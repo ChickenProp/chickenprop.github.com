@@ -2,21 +2,27 @@
 layout: draft
 title: "Walkthrough: Filing a UK self-assessment tax return"
 ---
+I'm writing this guide for a few reasons. For one, it might be useful to someone, possibly me in future. For two, if I make a mistake, someone might call me out on it and then I can correct it. And for three, it gives me a venue to complain about things I think aren't very good about the online submission form and also our tax system.
+
+(Overall I'm pretty positive on the form! I'm gonna complain a lot, and I'm not going to point out all the places where it works and the instructions are clear and easy to follow. So this will probably come across quite negative, but that's because I'm counting down from perfection, not counting up from zero.)
+
+Most people in the UK don't have to file one of these. I started filing them when I started earning in the 40% tax bracket. I'm not sure I still have to - I think I got a message a year or two back saying I could stop - but if I don't I'll pay more tax than I need to.
+
+HMRC [publishes](https://www.gov.uk/government/publications/self-assessment-tax-return-sa100) a document called "how to fill in your tax return". (In previous years it had the reference SA150, and that's still in the filename, but it's no longer written under the title for some reason.) I actually haven't looked at it very much, it mostly doesn't seem to answer questions that the website leaves me with, but it might be helpful in theory.
+
+---
 
 The gov.uk [page on filing](https://www.gov.uk/log-in-file-self-assessment-tax-return) says you have to register first unless you sent a tax return last year. I've sent tax returns for several years running now, and I don't remember what registering was like.
 
 <a href="/images/uk-self-assessment/01-personal-tax-account.png"><img src="/images/uk-self-assessment/01-personal-tax-account.png" style="max-width: 100%" alt="screenshot"></a>
 
-Logging in I get sent to my "personal tax account" page and click the "complete your tax return" link in the top right box. I swear that was harder to find in the past. It explains who can and can't file a return, I assume I read that in a previous year and could then and still can, and I click 'start now'.
+Logging in from there I get sent to my "personal tax account" page and click the "complete your tax return" link in the top right box. I feel like that was harder to find in the past. It explains who can and can't file a return, I assume I read that in a previous year and could then and still can, and I click 'start now'.
 
-[^charity-pensions]: For charity, they ask each time you file a return how much you expect to donate next year, so they have a decent guess for that. For pensions you'd think they have some idea, because they give me money every time money goes into my pensions. But also they ask later in the process how much money went into my pensions. So I'm not sure if they've taken it into account here.
-
-
-The first page has a bunch of stuff filled in for me, mostly accurate. The all-caps HAZELDEN seems unnecessary, you don't need to worry about my handwriting.
+The first page has a bunch of stuff filled in for me, mostly accurate.
 
 <a href="/images/uk-self-assessment/02.01-about-you-name.png"><img src="/images/uk-self-assessment/02.01-about-you-name.png" style="max-width: 100%" alt="screenshot"></a>
 
-"P J" is my first two initials, not my first name, but nice try.
+"P J" is my first two initials, not my first name, but nice try. The all-caps HAZELDEN seems unnecessary, you don't need to worry about my handwriting.
 
 <a href="/images/uk-self-assessment/02.02-about-you-id.png"><img src="/images/uk-self-assessment/02.02-about-you-id.png" style="max-width: 100%" alt="screenshot"></a>
 
@@ -40,39 +46,37 @@ Well this is awkward. I moved in here in 2019, but I wouldn't have given this ad
 
 Almost every address form I've filled in for the past several years has let me give my postcode and then select my exact address from a short dropdown, or enter it manually. This address form does not offer that.
 
-The help for the country selector says
+<a href="/images/uk-self-assessment/02.05-about-you-address-country.png"><img src="/images/uk-self-assessment/02.05-about-you-address-country.png" style="max-width: 100%" alt="screenshot"></a>
 
 > Select the country where the income was earned from the drop-down menu.
 
-But there's no dropdown box (just radio buttons for UK/Abroad), and "where the income was earned" is not very clear and I feel like it might not always agree with one's address? Fortunately I have never lived or earned income outside the UK.
+There's no dropdown box, even if I select "Abroad". Also, this is still supposed to be asking about my address - "where the income was earned" is a different question. (And not a very clearly worded one, what if I earned income in multiple countries?) Fortunately I have never lived or earned income outside the UK.
 
-In the help for the postcode box, they have a note
+<a href="/images/uk-self-assessment/02.06-about-you-address-postcode.png"><img src="/images/uk-self-assessment/02.06-about-you-address-postcode.png" style="max-width: 100%" alt="screenshot"></a>
 
-> Important: when entering your UK postcode the letters within the postcode must be in capitals.
+Well done for finding and documenting a bug, HMRC, but I feel like it shouldn't be too hard to fix it and accept lowercase letters.
 
-Well done for finding and documenting a bug, HMRC, but this sounds like it should be an easy one to fix.
-
-<a href="/images/uk-self-assessment/02.05-residency-dob.png"><img src="/images/uk-self-assessment/02.05-residency-dob.png" style="max-width: 100%" alt="screenshot"></a>
+<a href="/images/uk-self-assessment/02.07-residency-dob.png"><img src="/images/uk-self-assessment/02.07-residency-dob.png" style="max-width: 100%" alt="screenshot"></a>
 
 Residency is "based on whether you lived in England and Northern Ireland, Scotland or Wales for the majority of the tax year". I assume they mean "plurality", but maybe if you spent less than half the year in any of these, you don't pay tax at all. (Tax collectors hate him! Nonlocal man discovers one weird trick...)
 
 That's not what "e.g." means, but the date is correct.
 
-<a href="/images/uk-self-assessment/02.06-marital-status.png"><img src="/images/uk-self-assessment/02.06-marital-status.png" style="max-width: 100%" alt="screenshot"></a>
+<a href="/images/uk-self-assessment/02.08-marital-status.png"><img src="/images/uk-self-assessment/02.08-marital-status.png" style="max-width: 100%" alt="screenshot"></a>
 
 This is 'optional', so maybe there are people who don't have a marital status, as distinct from having the marital status 'single'? Or maybe, contra what they said above, it means I don't have to tell them, and then probably they'll treat me as single if I don't specify?
 
 The options are: Single, Married, In Civil Partnership, Divorced, Civil Partnership dissolved, Widow, Widower, Surviving Civil Partner, Separated. Obviously you can be more than one of these in any given tax year, or even more than one of them simultaneously, so the help text is not very helpful. I guess the idea is you give the most specific version of the most recent change as of the end of the tax year? I don't know who would ever pick "separated". Luckily for me, the government hasn't decided it cares about long-term cohabiting relationships until we actively make them legible, at least not for tax purposes. So I get to just say "single" and not worry about it.
 
-This is the only part of the page (maybe of the whole tax return?) where your gender becomes relevant, and then only for widows and widowers.
+This is the only part of the tax return (at least the pages I saw) where your gender becomes relevant, and then only for widows and widowers. I don't know what the nonbinary version is, but they get left out.
 
-<a href="/images/uk-self-assessment/02.07-blind.png"><img src="/images/uk-self-assessment/02.07-blind.png" style="max-width: 100%" alt="screenshot"></a>
+<a href="/images/uk-self-assessment/02.09-blind.png"><img src="/images/uk-self-assessment/02.09-blind.png" style="max-width: 100%" alt="screenshot"></a>
 
 If they're assuming I didn't move house, you'd think they could assume I didn't go blind or get a blind spouse or civil partner.
 
-I wonder what counts as an "other register". I think it's a crime to lie on my tax return, and quite possibly a crime to lie to my local authority about being blind. But it might not be a crime to lie on Honest Joe's Register Of Definitely Actually Blind People, and then to truthfully tell HMRC that I'm on that register. (This sounds like the sort of thing that you [patiently explain](https://xkcd.com/651/) to a judge and then the judge adds a little extra to your fine for being a smartarse. You try to appeal and the appeals court rejects with the comment "lolno". If you're going to try this, I think the funniest way would be to borrow a guide dog to take to court with you but make no other pretense at blindness. Maybe carry a cane slung over your shoulder.)
+I wonder what counts as an "other register". I think it's a crime to lie on my tax return, and quite possibly a crime to lie to my local authority about being blind. But it might not be a crime to lie on Honest Joe's Register Of Definitely Actually Blind People, and then to truthfully tell HMRC that I'm on that register. (This sounds like the sort of thing that you [patiently explain](https://xkcd.com/651/) to a judge and then the judge adds a little extra to your fine for being a smartarse. You try to appeal and the appeals court rejects with the comment "lolno". If you're going to try this, I think the funniest way would be to borrow a guide dog to take to court with you, maybe carry a cane slung over your shoulder, but make no actual pretense at blindness.)
 
-<a href="/images/uk-self-assessment/02.08-student-loan.png"><img src="/images/uk-self-assessment/02.08-student-loan.png" style="max-width: 100%" alt="screenshot"></a>
+<a href="/images/uk-self-assessment/02.10-student-loan.png"><img src="/images/uk-self-assessment/02.10-student-loan.png" style="max-width: 100%" alt="screenshot"></a>
 
 There's nothing here telling you how to figure out if you're on plan 1 or plan 2, but I am indeed on plan 1. The Student Loan Company told them that (according to the help text), but apparently didn't tell them enough to know that I do not have and am not repaying a postgrad loan.
 
@@ -103,9 +107,9 @@ For capital gains it's not entirely obvious that the answer is no. Here's the ad
 
 This is fairly readable, but it keeps using words like "chargeable" and "allowable". Those sound like they have important technical definitions. Are we given the important technical defintions? Ha, no.
 
-So here's my current understanding. I have shares in some index funds in ISAs and pensions, but I'm pretty sure I should ignore those. And I own a handful of individual stocks and cryptocurrencies, that I shouldn't ignore.
+So here's my current understanding. I have shares in some index funds in ISAs and pensions, but I'm pretty sure I should ignore those. And I own a handful of individual stocks and cryptocurrencies, not in tax-protected accounts, that I shouldn't ignore.
 
-But so far all I've done is buy things and let their values go up or down. I haven't "disposed of" any of them: sold, traded or given away.[^trade-crypto] That means I don't need to worry about it. When I dispose of something, I'll need to work out how how much profit or loss I made on it, and also (as a separate question) how much it was worth at the time. If those amounts go over certain thresholds in total for the year (£12,300 and £49,200 respectively), then I need to fill in the capital gains section. And there's also another two reasons I might need to, but I'm confident I can ignore them too.
+But so far all I've done is buy things and let their values go up or down. I haven't "disposed of" any of them: sold, traded or given away.[^trade-crypto] That means I don't need to worry about it. When I dispose of something, I'll need to work out how how much profit or loss I made on it, and also (as a separate question) how much it was worth at the time. If those amounts go over certain thresholds in total for the year (£12,300 and £49,200 respectively), then I need to fill in the capital gains section. And there's also another two reasons I might need to, but I'm confident those don't apply to me either.
 
 [^trade-crypto]: In the current tax year I've done a small amount of trading, because I couldn't directly buy the thing I wanted to. My vague impression is that because I bought and traded on the same day I can ignore this? (I'm not sure where I heard that, and I feel like high-frequency traders probably can't get away with that.) But also we're talking amounts small enough that I'm not going to reach either threshold this tax year, whether I can ignore this or not.
 
@@ -119,9 +123,13 @@ The next page is the same sort of thing, but in my case less clear.
 
 <a href="/images/uk-self-assessment/04.01-interest.png"><img src="/images/uk-self-assessment/04.01-interest.png" style="max-width: 100%" alt="screenshot"></a>
 
-An important detail here is that you can omit interest earned in an ISA. Nothing on the page says so. You might think that if you only earned interest in an ISA, you say here that you earned interest, and later you tell them it was only in an ISA. At any rate, that's what I thought the first time. But then they told me I owed tax on all that interest, so I decided to go back and tell them I didn't earn any interest.
+An important detail here is that you can omit interest earned in an ISA. Nothing on the page says so. You might think that if you only earned interest in an ISA, you say here that you earned interest, and later you tell them it was only in an ISA. At any rate, that's what I thought the first time. But then they told me I owed tax on all that interest, so I decided to go back and tell them I didn't earn any interest.[^isa-sa150]
+
+[^isa-sa150]: The only thing I think I've used the SA150 for, is to confirm that this is correct.
 
 I guess that was lying on my tax return, and I just admitted to a crime? Thanks, HMRC.
+
+(I just double checked: if I say I did earn interest, I get a new page where they ask me about "interest that's already been taxed", "interest that hasn't yet been taxed", and "foreign interest that hasn't yet been taxed". There's nothing on that page, either, saying I can omit ISAs.)
 
 <a href="/images/uk-self-assessment/04.02-dividends.png"><img src="/images/uk-self-assessment/04.02-dividends.png" style="max-width: 100%" alt="screenshot"></a>
 
@@ -143,7 +151,7 @@ This seems to be an "if you made a mistake, that's fine, you can correct it now"
 
 This help text is long so I'm not including it. This includes casual earnings, and I might have had some of those? Certainly I have in other years, like the money I sometimes got for getting my brain scanned. But it says I don't need to report if the total from this plus self employment is less than £1,000, which it is for me.
 
-They don't mention gambling income, and mine isn't that high anyway, but I think that should be excluded.
+They don't mention gambling income, and [mine](http://reasonableapproximation.net/2020/03/19/bet-log.html) isn't that high anyway, but I think that should be excluded.
 
 <a href="/images/uk-self-assessment/04.07-income-tax-losses.png"><img src="/images/uk-self-assessment/04.07-income-tax-losses.png" style="max-width: 100%" alt="screenshot"></a>
 
@@ -195,7 +203,7 @@ Then there's a page for expenses not reimbursed. The weirdly specific thing on t
 
 <a href="/images/uk-self-assessment/07.01-fixed-deductions.png"><img src="/images/uk-self-assessment/07.01-fixed-deductions.png" style="max-width: 100%" alt="screenshot"></a>
 
-Based on the (long) help text, this seems to be "people in certain jobs and industries get to put specific numbers here, regardless of what their actual expenses were". (But they can choose to instead put their actual expenses in another box.) But if you're a "uniformed airline or helicoptor pilot, co-pilot, flight deck crew or cabin crew", you get a *different* box to put specific numbers in.
+Based on the (long) help text, this seems to be "people in certain jobs and industries get to put specific numbers here, regardless of what their actual expenses were". (But they can choose to instead put their actual expenses in another box.) But if you're "a uniformed airline or helicoptor pilot, co-pilot, flight deck crew or cabin crew", you get a *different* box to put specific numbers in.
 
 <a href="/images/uk-self-assessment/07.02-airline.png"><img src="/images/uk-self-assessment/07.02-airline.png" style="max-width: 100%" alt="screenshot"></a>
 
@@ -221,7 +229,7 @@ Next up is pensions. I have two pensions that I contributed to this year, my emp
 
 <a href="/images/uk-self-assessment/08.01-pension-tax-relief.png"><img src="/images/uk-self-assessment/08.01-pension-tax-relief.png" style="max-width: 100%" alt="screenshot"></a>
 
-I have a standing order to deposit into my SIPP every month, and then about 11 weeks later, 25% of that amount gets added as tax relief. (It's supposed to be 6-8 weeks, but it's not.) So do I count the tax relief in the tax year when it arrived, or the tax year when I deposited the money? So far I've been doing when I deposited, and that's what they suggest by telling me to multiply the amount I contributed by 1.25. On the other hand, if that calculation is always correct, why don't they save me the trouble and do it for me? In any case, there's nothing saying explicitly what to do. It probably doesn't make that much difference as long as I'm consistent year-on-year, so let's stick with "deposited".
+I have a standing order to deposit into my SIPP every month, and then about 11 weeks later, 25% of that amount gets added as tax relief. (It's supposed to be 6-8 weeks, but it's not.) So do I count the tax relief in the tax year when it arrived, or the tax year when I deposited the money? So far I've been doing when I deposited, and that's what they suggest by telling me to multiply the amount I contributed by 1.25. On the other hand, if that calculation is always correct, why don't they save me the trouble and do it for me? (Maybe they expect me to have a document somewhere giving the total amount?) In any case, there's nothing saying explicitly what to do. It probably doesn't make that much difference as long as I'm consistent year-on-year, so let's stick with "deposited".
 
 <a href="/images/uk-self-assessment/08.02-no-relief-given.png"><img src="/images/uk-self-assessment/08.02-no-relief-given.png" style="max-width: 100%" alt="screenshot"></a>
 
@@ -285,6 +293,8 @@ The [three](https://www.youtube.com/watch?v=8eox4JDo-f4) [linked](https://www.yo
 
 ---
 
+Nearly done! Quickfire round.
+
 The next page is one I can't do anything with until after I've submitted the return. This seems like a strange place for it.
 
 <a href="/images/uk-self-assessment/11.01-repayment.png"><img src="/images/uk-self-assessment/11.01-repayment.png" style="max-width: 100%" alt="screenshot"></a>
@@ -299,12 +309,65 @@ Next they have two questions about underpaid tax.
 
 The first is: if it turns out I didn't pay enough tax last year (2020-21, the year I'm filing for), do I want to pay it back through my tax code for next year (2022-23)? i.e. to get it automatically deducted from my payslip starting April 2022? That seems reasonable, sure. If I say no I have to pay it directly by January 2022. I think it's more likely I paid too much, but gonna say yes anyway.
 
-I can only do this if I file by 30th December, which is (*checks calendar*) soon.
+I can only do this if I file by 30th December, which is (*checks calendar*) soon. I guess if this guide does turn out to be useful to someone, they won't be able to take advantage of this, this year.
 
 <a href="/images/uk-self-assessment/11.04-underpaid-2021-22.png"><img src="/images/uk-self-assessment/11.04-underpaid-2021-22.png" style="max-width: 100%" alt="screenshot"></a>
 
-The second is: if they think I'll owe[^owe-gross] tax this year (2021-22, the unfinished year I'm writing this), do I want it put onto my tax code for... also this year? But this doesn't apply to tax on employed earnings (i.e. the only thing I think I owe tax on) or pensions.
+The second is: if they think I'll owe[^owe-gross] tax this year (2021-22, the unfinished year I'm writing this), do I want it put onto my tax code for... also this year? But this doesn't apply to tax on employed earnings (i.e. the only thing I think I owe tax on) or pensions. Also they apparently think 5 April 2022 gets the past tense.
 
-[^owe-gross]: I think "owe" here means gross, not net. That is, the question isn't "will I have paid less tax in these buckets than I'm required to", which I don't think is a question that makes sense after I've paid any tax at all. (When I pay tax it doesn't offset specific tax buckets, it just offsets my total tax bill.) Rather, the question is "will the amount I'm required to pay in these buckets be more than £0".
+[^owe-gross]: I think "owe" here means gross, not net. That is, the question isn't "will I have paid less tax in these buckets than I'm required to", which I don't think is a question that makes sense after I've paid any tax at all. (When I pay tax it doesn't offset specific tax buckets, it just offsets my total tax bill.) Rather, the question is "will the amount I'm required to pay in these buckets be more than £0". This is a different use of the word "owe" than in the previous question, but ¯\\_(ツ)\_/¯
 
 So, no, because I don't think I'll owe the relevant kind of tax, and if they decide I probably will that's going to confuse things. And no again, because if they decide I'll probably owe something, putting it on my tax code for this year (with three payslips to go) also seems like it's going to confuse things. Certainly it'll make updating my ledger mildly less convenient. If I was going to do this, I'd rather it go on my tax code for next year, like with the previous question.
+
+If I want to make "adjustments" I can do that, but I don't think it applies. (It sounds like these adjustments might be mostly "pretending things happened at different times than they actually happened"?)
+
+<a href="/images/uk-self-assessment/11.05-adjustments.png"><img src="/images/uk-self-assessment/11.05-adjustments.png" style="max-width: 100%" alt="screenshot"></a>
+
+The help texts all include "An entry will only be required in limited circumstances", and make it sound like calculating the amounts to go in these boxes is kind of complicated, so I'm glad I don't have to think about them.
+
+If I used provisional figures (I didn't) I give them details about those, and then finally there's a space for "anything else we should know" with the same restrictions on length and punctuation as before. Also I can attach a document if I want.
+
+<a href="/images/uk-self-assessment/11.06-provisional.png"><img src="/images/uk-self-assessment/11.06-provisional.png" style="max-width: 100%" alt="screenshot"></a>
+
+<a href="/images/uk-self-assessment/11.07-other-information.png"><img src="/images/uk-self-assessment/11.07-other-information.png" style="max-width: 100%" alt="screenshot"></a>
+
+---
+
+That's the last thing to fill in. Next there's a page where they repeat some of the things I said back to me, to confirm, and then a page to show me my tax calculation. Initially it just says how much they owe me (or presumably, how much I'd owe them, if that was the case). But then there's also a page showing the full calculation, which is super valuable.
+
+<a href="/images/uk-self-assessment/12.01-income.png"><img src="/images/uk-self-assessment/12.01-income.png" style="max-width: 100%" alt="screenshot"></a>
+
+The top three numbers here come directly from my return, and Personal Allowance is the same for most people, £12,500 for 2020-21. (If you earn over £100k it starts to decrease, giving a marginal 60% tax band in between two marginal 40% tax bands. I guess it was politically easier to raise taxes this way than to raise them in some more sensible way?) The rest are just adding and subtracting those numbers in the obvious way.
+
+Normally, of the "income on which tax is due", I'd pay 20% on the first £37,500 and 40% on the rest. But
+
+<a href="/images/uk-self-assessment/12.02-rate-limit.png"><img src="/images/uk-self-assessment/12.02-rate-limit.png" style="max-width: 100%" alt="screenshot"></a>
+
+The pension number is the amount I put in the first pension box above, "payments to registered pension schemes". That was money I'd paid into my pensions, *plus* tax relief I'd been given for it.
+
+The charity number is the amount of gift aid payments I made, *times 1.25*, because the number I entered didn't include tax relief. (That tax relief went to the charities, not to me.)
+
+The idea with these is that money I put into pensions, or give to charity, is money I don't have to pay tax on. So they make two adjustments for it:
+
+* Return 25% of the money I deposit/donate, to me (for pensions) or the charity (for charities). This happens without needing to fill in a tax return. For those in the basic rate tax bracket, it gives the right amount - £100 pre-tax becomes £80 post-tax, so when that £80 is moved somewhere else it becomes £100 again.
+
+* For higher rate taxpayers, move some money from the "pay 40% tax" bucket to the "pay 20% tax" bucket. £100 pre-tax becomes £60 post-tax, which (from the previous point) becomes £75 when moved to the pension pot or charity. So they move £75 between buckets, and instead of paying £30 on that I now pay £15. So of the original £100, I now have £15, the charity has £75, and HMRC has £10. This is the same as me giving the charity £75 pre-tax and then paying 40% tax on £25, so it works out fine, but man I find this math confusing.
+
+    If I actually want to give £100 pre-tax, I still need to give the charity £80. They'll claim back £20 and so will I, so I'll have given them £100 pre-tax and paid 40% tax on £33.33. Alternatively I can take the £15 I got returned from £60 and redonate that, becoming £18.75 to the charity, then also donate the £3.75 I get returned from that, and so on - in the limit, this works out as the charity having £100 and myself and HMRC having £0 each.
+
+    (When HMRC shifts money between buckets, a higher-rate taxpayer can become a basic-rate taxpayer. I assume the math still works out fine at the boundaries? I haven't checked though.)
+
+And so we have these calculations:
+
+<a href="/images/uk-self-assessment/12.03-final.png"><img src="/images/uk-self-assessment/12.03-final.png" style="max-width: 100%" alt="screenshot"></a>
+
+I'm not sure why "Income Tax due after allowances and reliefs" comes before "Income Tax due", but since I don't have any allowances and reliefs the numbers are the same for me. I assume student loan repayments would be different from £0 if the wrong amount had been automatically taken from my payslips.
+
+Now I get to download a PDF copy of what I just filled in, formatted on what I guess is a copy of the paper form I'd use if I wasn't doing it online. And then right before I submit, two more checkboxes to tick:
+
+(pic - submit checkboxes)
+<a href="/images/uk-self-assessment/12.04-declaration.png"><img src="/images/uk-self-assessment/12.04-declaration.png" style="max-width: 100%" alt="screenshot"></a>
+
+This first one seems less helpful than it might be, failing to distinguish "oops I did this wrong" from "I didn't need to do this". I guess they don't want to confuse non-mathematicians who didn't have any coronavirus support payments, and it still works as a reminder.
+
+I think after I click "submit" on this page, I'll enter my password again and be finished. But I haven't done that yet - I'll wait to see if anyone wants to tell me I did something wrong, first.
