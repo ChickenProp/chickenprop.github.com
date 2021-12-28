@@ -8,7 +8,7 @@ I'm writing this guide for a few reasons. For one, it might be useful to someone
 
 Most people in the UK don't have to file one of these. I started filing them when I started earning in the 40% tax bracket. I'm not sure I still have to - I think I got a message a year or two back saying I could stop - but if I don't I'll pay more tax than I need to.
 
-HMRC [publishes](https://www.gov.uk/government/publications/self-assessment-tax-return-sa100) a document called "how to fill in your tax return". (In previous years it had the reference SA150, and that's still in the filename, but it's no longer written under the title for some reason.) I actually haven't looked at it very much, it mostly doesn't seem to answer questions that the website leaves me with, but it might be helpful in theory.
+HMRC [publishes](https://www.gov.uk/government/publications/self-assessment-tax-return-sa100) a document called "how to fill in your tax return". (In previous years it had the reference SA150, and that's still in the filename, but it's no longer written under the title for some reason.) I actually haven't found it very helpful, it mostly doesn't seem to answer questions that the website leaves me with. But I guess it might be helpful in theory.
 
 ---
 
@@ -48,13 +48,11 @@ Almost every address form I've filled in for the past several years has let me g
 
 <a href="/images/uk-self-assessment/02.05-about-you-address-country.png"><img src="/images/uk-self-assessment/02.05-about-you-address-country.png" style="max-width: 100%" alt="screenshot"></a>
 
-> Select the country where the income was earned from the drop-down menu.
-
 There's no dropdown box, even if I select "Abroad". Also, this is still supposed to be asking about my address - "where the income was earned" is a different question. (And not a very clearly worded one, what if I earned income in multiple countries?) Fortunately I have never lived or earned income outside the UK.
 
 <a href="/images/uk-self-assessment/02.06-about-you-address-postcode.png"><img src="/images/uk-self-assessment/02.06-about-you-address-postcode.png" style="max-width: 100%" alt="screenshot"></a>
 
-Well done for finding and documenting a bug, HMRC, but I feel like it shouldn't be too hard to fix it and accept lowercase letters.
+"The postcode must be in capitals." Well done for finding and documenting a bug, HMRC, but I feel like it shouldn't be too hard to fix this one.
 
 <a href="/images/uk-self-assessment/02.07-residency-dob.png"><img src="/images/uk-self-assessment/02.07-residency-dob.png" style="max-width: 100%" alt="screenshot"></a>
 
@@ -111,7 +109,7 @@ So here's my current understanding. I have shares in some index funds in ISAs an
 
 But so far all I've done is buy things and let their values go up or down. I haven't "disposed of" any of them: sold, traded or given away.[^trade-crypto] That means I don't need to worry about it. When I dispose of something, I'll need to work out how how much profit or loss I made on it, and also (as a separate question) how much it was worth at the time. If those amounts go over certain thresholds in total for the year (£12,300 and £49,200 respectively), then I need to fill in the capital gains section. And there's also another two reasons I might need to, but I'm confident those don't apply to me either.
 
-[^trade-crypto]: In the current tax year I've done a small amount of trading, because I couldn't directly buy the thing I wanted to. My vague impression is that because I bought and traded on the same day I can ignore this? (I'm not sure where I heard that, and I feel like high-frequency traders probably can't get away with that.) But also we're talking amounts small enough that I'm not going to reach either threshold this tax year, whether I can ignore this or not.
+[^trade-crypto]: In the current tax year I've done a small amount of trading, because I couldn't directly buy the thing I wanted to. My vague impression is that because I bought and traded on the same day I can ignore this? (I'm not sure where I heard that. If it's true, I wonder if it's also true for high-frequency traders.) But also we're talking amounts small enough that I'm not going to reach either threshold this tax year, whether I can ignore this or not.
 
 So I can answer "no" to capital gains because I haven't disposed of anything. Also, outside of ISAs and pensions I had less than £49,200 and my on-paper gains for the year were less than £12,300, so I could answer "no" even if I'd sold everything at the end of the year.
 
@@ -175,7 +173,9 @@ I got a tax rebate in tax year 2019-20 from 2018-19, and then another in tax yea
 
 Having filled in those three pages, I get an overview page listing what I've filled in so far and what I still need to do. The first thing to do is income. I only had one employer this year, so I only have one section for that.
 
-The first three questions are answered by my P60, which I was able to find because my employer emailed it to me. They want to know my employer's PAYE reference, my pay before tax taken off, and my tax taken off.
+<a href="/images/uk-self-assessment/06.01-p60.png"><img src="/images/uk-self-assessment/06.01-p60.png" style="max-width: 100%" alt="screenshot"></a>
+
+They start with the company name, that I already gave them but I can change it now if I want I guess. After that, the next three questions are answered by my P60, which I was able to find because my employer emailed it to me.
 
 These last two are "optional". First time I did this, I thought that meant "we have a copy of your P60 too, so if you don't fill this in we'll fill it in for you". Nope, it means "if you don't fill this in we'll think it's 0".
 
@@ -189,7 +189,7 @@ I did have benefits, medical insurance. The value of that will be on my P11D, no
 
 The final question almost caught me out:
 
-<a href="/images/uk-self-assessment/06.01-expenses.png"><img src="/images/uk-self-assessment/06.01-expenses.png" style="max-width: 100%" alt="screenshot"></a>
+<a href="/images/uk-self-assessment/06.02-expenses.png"><img src="/images/uk-self-assessment/06.02-expenses.png" style="max-width: 200%" alt="screenshot"></a>
 
 I don't normally think of myself as having employment expenses. But I've been working from home, and this is how I claim back some of my utility bills.
 
@@ -215,7 +215,9 @@ The help text doesn't make it clear how much I can claim, but the [link](https:/
 
 [^dial-up]: When I switched ISP, there was a week when my new one failed to connect me and I had to use mobile data for internet. As it happens I didn't use more than my contracted amount, but if I had... strictly it doesn't sound like that would be covered? I kind of guess I'd be able to claim for some of it, even though this page only mentions dial-up, but I'm not sure.
 
-I can claim up to £6/week without evidence, or more with evidence. (I don't have evidence.) I can only claim if I have to work from home, not if I do so by choice. I had to look this up, but there were four months where my office was closed (April, May, June and November), so call it 16 weeks. It's also not entirely clear whether that's "£6/week no matter how much I had to work from home that week" or whether I should think of it as £1.20/day, but that doesn't affect me personally. I assume I shouldn't count any holidays I took, but I don't think I took any in those months.
+I can claim up to £6/week without evidence, or more with evidence.[^evidence] I can only claim if I have to work from home, not if I do so by choice. I had to look this up, but there were four months where my office was closed (April, May, June and November), so call it 16 weeks. It's also not entirely clear whether that's "£6/week no matter how much I had to work from home that week" or whether I should think of it as £1.20/day, but that doesn't affect me personally. I assume I shouldn't count any holidays I took, but I don't think I took any in those months.
+
+[^evidence]: I assume this means something like "reasonably compelling evidence that I spent the amount I claim to have spent". Strictly speaking, if I said "I spent £10/week extra" that would be evidence I spent £10/week extra, because I'm a fairly honest person (citation needed) and I am more likely to say something if that thing is true than if it is false. But I somehow feel like HMRC would not accept this evidence.
 
 Following this page there's one for providing any more information.
 
@@ -361,11 +363,10 @@ And so we have these calculations:
 
 <a href="/images/uk-self-assessment/12.03-final.png"><img src="/images/uk-self-assessment/12.03-final.png" style="max-width: 100%" alt="screenshot"></a>
 
-I'm not sure why "Income Tax due after allowances and reliefs" comes before "Income Tax due", but since I don't have any allowances and reliefs the numbers are the same for me. I assume student loan repayments would be different from £0 if the wrong amount had been automatically taken from my payslips.
+I'm not sure why "Income Tax due after allowances and reliefs" comes before "Income Tax due", but since I don't have any allowances or reliefs the numbers are the same for me. I assume student loan repayments would be different from £0 if the wrong amount had been automatically taken from my payslips.
 
 Now I get to download a PDF copy of what I just filled in, formatted on what I guess is a copy of the paper form I'd use if I wasn't doing it online. And then right before I submit, two more checkboxes to tick:
 
-(pic - submit checkboxes)
 <a href="/images/uk-self-assessment/12.04-declaration.png"><img src="/images/uk-self-assessment/12.04-declaration.png" style="max-width: 100%" alt="screenshot"></a>
 
 This first one seems less helpful than it might be, failing to distinguish "oops I did this wrong" from "I didn't need to do this". I guess they don't want to confuse non-mathematicians who didn't have any coronavirus support payments, and it still works as a reminder.
