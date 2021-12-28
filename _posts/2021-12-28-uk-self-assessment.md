@@ -1,5 +1,5 @@
 ---
-layout: draft
+layout: post
 title: "Walkthrough: Filing a UK self-assessment tax return"
 ---
 I'm writing this guide for a few reasons. For one, it might be useful to someone, possibly me in future. For two, if I make a mistake, someone might call me out on it and then I can correct it. And for three, it gives me a venue to complain about things I think aren't very good about the online submission form and also our tax system.
@@ -335,7 +335,7 @@ If I used provisional figures (I didn't) I give them details about those, and th
 
 ---
 
-That's the last thing to fill in. Next there's a page where they repeat some of the things I said back to me, to confirm, and then a page to show me my tax calculation. Initially it just says how much they owe me (or presumably, how much I'd owe them, if that was the case). But then there's also a page showing the full calculation, which is super valuable.
+That's the last thing to fill in. Next there's a page where they repeat some of the things I said back to me, to confirm, and then a page to show me my tax calculation. Initially it just says how much they owe me (or presumably, how much I'd owe them, if that was the case). But then there's also a page showing the full calculation, which I find super valuable for understanding how it all fits together and double checking that I haven't made any mistakes.
 
 <a href="/images/uk-self-assessment/12.01-income.png"><img src="/images/uk-self-assessment/12.01-income.png" style="max-width: 100%" alt="screenshot"></a>
 
@@ -351,9 +351,9 @@ The charity number is the amount of gift aid payments I made, *times 1.25*, beca
 
 The idea with these is that money I put into pensions, or give to charity, is money I don't have to pay tax on. So they make two adjustments for it:
 
-* Return 25% of the money I deposit/donate, to me (for pensions) or the charity (for charities). This happens without needing to fill in a tax return. For those in the basic rate tax bracket, it gives the right amount - £100 pre-tax becomes £80 post-tax, so when that £80 is moved somewhere else it becomes £100 again.
+* Return 25% of the money I deposit/donate, to me (for pensions) or the charity (for charities). This happens without needing to fill in a tax return. For those in the basic rate tax bracket, it gives the right amount - £100 pre-tax becomes £80 post-tax, so later we turn the £80 back into £100.
 
-* For higher rate taxpayers, move some money from the "pay 40% tax" bucket to the "pay 20% tax" bucket. £100 pre-tax becomes £60 post-tax, which (from the previous point) becomes £75 when moved to the pension pot or charity. So they move £75 between buckets, and instead of paying £30 on that I now pay £15. So of the original £100, I now have £15, the charity has £75, and HMRC has £10. This is the same as me giving the charity £75 pre-tax and then paying 40% tax on £25, so it works out fine, but man I find this math confusing.
+* For higher rate taxpayers, also move some money from the "pay 40% tax" bucket to the "pay 20% tax" bucket. £100 pre-tax becomes £60 post-tax, which (from the previous point) becomes £75 when moved to the pension pot or charity. So they move £75 between buckets, and instead of paying £30 on that I now pay £15. So of the original £100, I now have £15, the charity has £75, and HMRC has £10. This is the same as me giving the charity £75 pre-tax and then paying 40% tax on £25, so it works out fine, but man I find this math confusing.
 
     If I actually want to give £100 pre-tax, I still need to give the charity £80. They'll claim back £20 and so will I, so I'll have given them £100 pre-tax and paid 40% tax on £33.33. Alternatively I can take the £15 I got returned from £60 and redonate that, becoming £18.75 to the charity, then also donate the £3.75 I get returned from that, and so on - in the limit, this works out as the charity having £100 and myself and HMRC having £0 each.
 
