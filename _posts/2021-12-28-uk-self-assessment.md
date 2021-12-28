@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Walkthrough: Filing a UK self-assessment tax return"
+external_comments:
+  - name: /r/UKPersonalFinance
+    url: https://www.reddit.com/r/UKPersonalFinance/comments/rqez89/walkthrough_filing_a_selfassessment_tax_return/
 ---
 I'm writing this guide for a few reasons. For one, it might be useful to someone, possibly me in future. For two, if I make a mistake, someone might call me out on it and then I can correct it. And for three, it gives me a venue to complain about things I think aren't very good about the online submission form and also our tax system.
 
@@ -215,7 +218,9 @@ The help text doesn't make it clear how much I can claim, but the [link](https:/
 
 [^dial-up]: When I switched ISP, there was a week when my new one failed to connect me and I had to use mobile data for internet. As it happens I didn't use more than my contracted amount, but if I had... strictly it doesn't sound like that would be covered? I kind of guess I'd be able to claim for some of it, even though this page only mentions dial-up, but I'm not sure.
 
-I can claim up to £6/week without evidence, or more with evidence.[^evidence] I can only claim if I have to work from home, not if I do so by choice. I had to look this up, but there were four months where my office was closed (April, May, June and November), so call it 16 weeks. It's also not entirely clear whether that's "£6/week no matter how much I had to work from home that week" or whether I should think of it as £1.20/day, but that doesn't affect me personally. I assume I shouldn't count any holidays I took, but I don't think I took any in those months.
+I can claim up to £6/week without evidence, or more with evidence.[^evidence] I can only claim if I have to work from home, not if I do so by choice. ~~I had to look this up, but there were four months where my office was closed (April, May, June and November), so call it 16 weeks. It's also not entirely clear whether that's "£6/week no matter how much I had to work from home that week" or whether I should think of it as £1.20/day, but that doesn't affect me personally. I assume I shouldn't count any holidays I took, but I don't think I took any in those months.~~
+
+**Same-day update:** Reddit user pes_planus [points out](https://www.reddit.com/r/UKPersonalFinance/comments/rqez89/walkthrough_filing_a_selfassessment_tax_return/hqaa6n7/) that if you had to work from home for a single day due to Covid, [you can claim for the whole year](https://blog.moneysavingexpert.com/2020/04/martin-lewis--working-from-home-due-to-coronavirus--claim-p6-wk-/). At £6/week, that's £312 in total. This is the case for both 2020-21 and 2021-22.
 
 [^evidence]: I assume this means something like "reasonably compelling evidence that I spent the amount I claim to have spent". Strictly speaking, if I said "I spent £10/week extra" that would be evidence I spent £10/week extra, because I'm a fairly honest person (citation needed) and I am more likely to say something if that thing is true than if it is false. But I somehow feel like HMRC would not accept this evidence.
 
