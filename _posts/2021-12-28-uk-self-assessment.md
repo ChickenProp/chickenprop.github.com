@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Walkthrough: Filing a UK self-assessment tax return"
+lw_xpost: true
 external_comments:
   - name: /r/UKPersonalFinance
     url: https://www.reddit.com/r/UKPersonalFinance/comments/rqez89/walkthrough_filing_a_selfassessment_tax_return/
@@ -384,7 +385,7 @@ I think after I click "submit" on this page, I'll enter my password again and be
 
 <a href="/images/uk-self-assessment/12.05-receipt.png"><img src="/images/uk-self-assessment/12.05-receipt.png" style="max-width: 100%" alt="screenshot"></a>
 
-Woop! It takes up to 72 hours to process and I can make corrections in that time, assuming I don't realize I have any of those, I'm done.
+Woop! It takes up to 72 hours to process and I can make corrections in that time. But assuming I don't realize I have any of those, I'm done. At some point they're going to send me back the money I overpaid, historically that's gone into my bank account but I don't remember if I've had to do anything particular to make it happen. Certainly it wasn't very involved if I did.
 
 They give me a "submission receipt reference number", which looks like 32 digits in base 36 (numbers and uppercase letters, mine includes Z, I and O so probably all letters are possible). Sounds like it's a hash of the contents of my return, with a signature so that no one else can generate a valid one. Neat. It's also included in the PDF copy I downloaded earlier.
 
