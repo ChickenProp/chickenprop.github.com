@@ -13,6 +13,8 @@ Most people in the UK don't have to file one of these. I started filing them whe
 
 HMRC [publishes](https://www.gov.uk/government/publications/self-assessment-tax-return-sa100) a document called "how to fill in your tax return". (In previous years it had the reference SA150, and that's still in the filename, but it's no longer written under the title for some reason.) I actually haven't found it very helpful, it mostly doesn't seem to answer questions that the website leaves me with. But I guess it might be helpful in theory.
 
+**Update December 29:** I only know about the parts of this process that are relevant to me. Some questions about other parts are [answered](https://www.reddit.com/r/UKPersonalFinance/comments/rqez89/walkthrough_filing_a_selfassessment_tax_return/) in the comments on /r/UKPersonalFinance. Also, I generally find that community to be very helpful and knowledgable, so I find it reassuring that they only caught one mistake so far.
+
 ---
 
 The gov.uk [page on filing](https://www.gov.uk/log-in-file-self-assessment-tax-return) says you have to register first unless you sent a tax return last year. I've sent tax returns for several years running now, and I don't remember what registering was like.
@@ -377,3 +379,13 @@ Now I get to download a PDF copy of what I just filled in, formatted on what I g
 This first one seems less helpful than it might be, failing to distinguish "oops I did this wrong" from "I didn't need to do this". I guess they don't want to confuse non-mathematicians who didn't have any coronavirus support payments, and it still works as a reminder.
 
 I think after I click "submit" on this page, I'll enter my password again and be finished. But I haven't done that yet - I'll wait to see if anyone wants to tell me I did something wrong, first.
+
+**Update December 29:** Yep, that was it. There was a "submitting" spinner for about 30 seconds, and then
+
+<a href="/images/uk-self-assessment/12.05-receipt.png"><img src="/images/uk-self-assessment/12.05-receipt.png" style="max-width: 100%" alt="screenshot"></a>
+
+Woop! It takes up to 72 hours to process and I can make corrections in that time, assuming I don't realize I have any of those, I'm done.
+
+They give me a "submission receipt reference number", which looks like 32 digits in base 36 (numbers and uppercase letters, mine includes Z, I and O so probably all letters are possible). Sounds like it's a hash of the contents of my return, with a signature so that no one else can generate a valid one. Neat. It's also included in the PDF copy I downloaded earlier.
+
+I assume it's not intended to be confidential, but they don't say it's safe to share, so I won't.
