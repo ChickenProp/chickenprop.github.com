@@ -39,7 +39,7 @@ A variadic function is one which can accept argument lists of different length. 
     -- that's not super relevant here.
     ```
 
-* `»` and `«`, which take a function and then ≥ 2 arguments to interleave it with. Currently implemented as macros, and maybe I'd want them to be macros even if they could be functions, but . Often all or all-but-one of the arguments will be of the same type, such as you could use with Haskell's `foldr` and `foldl`. But they don't have to be. You could have `(» , 1 "foo" 3 "bar")` which would return `(, 1 (, "foo" (, 3 "bar")))`, the return type changing for every new argument you add.
+* `»` and `«`, which take a function and then ≥ 2 arguments to interleave it with. Currently implemented as macros, and maybe I'd want them to be macros even if they could be functions, but that's not the point right now. Often the function will have a type like `-> $a (-> $b $a)` or `-> $b (-> $a $a)`, and then all or all-but-one of the arguments will be of the same type - this will be equivalent to using haskell's `foldr` or `foldl`. But that's not required. You could have `(» , 1 "foo" 3 "bar")` which would return `(, 1 (, "foo" (, 3 "bar")))`, the return type changing for every new argument you add.
 
     ```haskell
     -- e.g. in (») (+) 1 2 3
@@ -77,7 +77,15 @@ A variadic function is one which can accept argument lists of different length. 
     map :: (a -> b -> c -> d) -> [a] -> [b] -> [c] -> [d]
     ```
 
-* Similarly for `unzip`. This isn't variadic, but it's plausible that a system allowing variadic functions would also allow it. (I think it's a harder problem, though. It seems to me that if you can get polymorphism over tuple length you also get polymorphism over function arity. But I don't know if the reverse holds.)
+* So could `zip` (`zip3`, `zip4`). Note that each of these is a specialization of a call to variadic `map`, but that doesn't mean variadic `map` gives us variadic `zip` for free. To define `zip` from `map` we'd presumably need a variadic tuple constructor, plus we'd need type checking to be able to combine them.
+
+    ```haskell
+    zip :: [a] -> [b] -> [(a, b)]
+    zip :: [a] -> [b] -> [c] -> [(a, b, c)]
+    zip :: [a] -> [b] -> [c] -> [d] -> [(a, b, c, d)]
+    ```
+
+* If we have `zip`, what about `unzip`? This isn't variadic, but it's plausible that a system allowing variadic functions would also allow it. (I think it's a harder problem, though. It seems to me that if you can get polymorphism over tuple length you essentially get polymorphism over function arity, perhaps with caveats around partial application. But I don't know if the reverse holds.)
 
     ```haskell
     unzip :: [(a, b)] -> ([a], [b])
@@ -85,7 +93,7 @@ A variadic function is one which can accept argument lists of different length. 
     unzip :: [(a, b, c, d)] -> ([a], [b], [c], [d])
     ```
 
-* Haskellers often find ourselves writing `f <$> a <*> b <*> c`. (`map` is a specialization of this, using the Applicative instance from ZipList.)
+* Haskellers often find ourselves writing `f <$> a <*> b <*> c`. (`map` is a specialization of this, using the `Applicative` instance from `ZipList`.) Haskell calls these functions `fmap` (restricted to `Applicative` as `liftA`), `liftA2` and `liftA3`.
 
     ```haskell
     -- Realistically I expect this first would need Applicative
@@ -94,7 +102,7 @@ A variadic function is one which can accept argument lists of different length. 
     appF :: Applicative f => (a -> b -> c -> d) -> f a -> f b -> f c -> f d
     ```
 
-* Or we might want one for `f <*> a <*> b <*> c`
+* Or we might want one for `f <*> a <*> b <*> c`. (`appF` is in turn a specialization of this, applying `pure` to its first argument.)
 
     ```haskell
     appA :: Applicative f => f (a -> b) -> f a -> f b
@@ -111,15 +119,13 @@ A variadic function is one which can accept argument lists of different length. 
     trace :: String -> (a -> b -> c -> d) -> a -> b -> c -> d
     ```
 
-(I'm using Haskell syntax for the types partly because Haskenthetical has no concept of typeclasses or rank-2 types, which some of the examples use. But also partly because it's probably easier to read. Which you might think would be a reason not to make Haskenthetical, but here we are.)
+(I'm using Haskell syntax for the types, rather than Haskenthetical syntax. Partly because Haskenthetical has no concept of typeclasses or rank-2 types, which some of the examples use. But also partly because it's probably easier to read. Which you might think would be a reason not to make Haskenthetical, but here we are.)
 
-I'm not, to be clear, saying that all or even any of these are good ideas. I mostly don't miss variadic functions in Haskell; they can be implemented hackily like in Text.Printf linked above, but I'm not sure I've ever felt the need to, and I've rarely-if-ever used its `printf`. But it seems worth exploring the space of the sorts of things I might want to consider trying to support, before making any decisions.
-
-Actually, I'm sure this doesn't fully explore the space. But I am going to leave it there for now.
+I'm not, to be clear, saying that all or even any of these are good ideas. I mostly don't miss variadic functions in Haskell; they can be implemented hackily like in Text.Printf linked above, but I'm not sure I've ever felt the need to, and I've rarely-if-ever used that `printf`. But it seems worth starting to explore the space of the sorts of things I might want to consider trying to support, before making any decisions.
 
 ---
 
-The first paper I'm going to look at is the most recent one I've found:  Strickland, Tobin-Hochstadt and Felleisen, [Practical Variable-Arity Polymorphism](https://www2.ccs.neu.edu/racket/pubs/esop09-sthf.pdf) (2009, doi:[10.1007/978-3-642-00590-0_3](https://doi.org/10.1007/978-3-642-00590-9_3)). I linked this in my previous post. It implements typechecking for variadic functions in Typed Scheme, I think specifically meaning Typed [Racket](https://en.wikipedia.org/wiki/Racket_%28programming_language%29)? I'm not familiar with the language (I have done a little untyped Racket in the past), but from the sounds of things, its type system is fundamentally different from Hindley-Milner, and the implementation won't easily transfer. (Both compile to [System F](https://en.wikipedia.org/wiki/System_F), but I don't think that helps.)
+The first paper I'm going to look at is the most recent one I've found:  Strickland, Tobin-Hochstadt and Felleisen, [Practical Variable-Arity Polymorphism](https://www2.ccs.neu.edu/racket/pubs/esop09-sthf.pdf) (2009, doi: [10.1007/978-3-642-00590-0_3](https://doi.org/10.1007/978-3-642-00590-9_3)). I linked this in my previous post. It implements typechecking for variadic functions in Typed Scheme, I think specifically meaning Typed [Racket](https://en.wikipedia.org/wiki/Racket_%28programming_language%29)? I'm not familiar with the language (I have done a little untyped Racket in the past), but from the sounds of things, its type system is fundamentally different from Hindley-Milner, and the implementation won't easily transfer. (Both compile to [System F](https://en.wikipedia.org/wiki/System_F), but I don't think that helps.)
 
 But it does help me make sense of the space. It divides the functions it can type into two: uniform and non-uniform. Let's call the optional arguments the "rest parameter", as in the parameter which holds "the rest of the parameters". Uniform functions are those whose rest parameter is a homogeneous list, such that they could be replaced (at cost to ergonomics) with a function accepting a list. In my above examples, that's the arithmetic functions plus `list` and `list'`. In Typed Racket [syntax](https://docs.racket-lang.org/ts-guide/types.html), the types of these functions would be
 
@@ -131,17 +137,18 @@ But it does help me make sense of the space. It divides the functions it can typ
 
 With the `*` indicating "zero or more of the preceding type". These seem simple enough. (Though `list'` takes an argument after the variadic part, which makes things more complicated. Racket calls that function `list*` but I couldn't find a type declaration for it to be sure it's actually valid.)
 
-Then the other other functions handled by the paper are "non-uniform". Of my examples, I think that's just `map`, `trace` and maybe `unzip` natively.
+Then the other other functions handled by the paper are "non-uniform". Of my examples, I think that's just `map`, `trace` and maybe `zip` and `unzip` natively.
 
 ```
 (: map (All (a b ...) (-> (-> b ... b a) (Listof b) ... b (Listof a))))
 (: trace (All (a b ...)) (-> String (-> b ... b a) b ... b a))
+(: zip (All (a ...)) (-> (Listof a) ... a (Listof (Tuple a ... a))))
 (: unzip (All (a ...)) (-> (Listof (Tuple a ... a)) (Tuple (Listof a) ... a)))
 ```
 
-For `unzip`, I'm inventing the type `Tuple` here to refer to a collection with known size and types. `(Tuple Number String Bool)` would be equivalent to Haskell's `(Number, String, Bool)`. I don't know if anything like it actually exists, or can exist, in Typed Racket already.
+For `zip` and `unzip`, I'm inventing the type `Tuple` here to refer to a collection with known size and types. `(Tuple Number String Bool)` would be equivalent to Haskell's `(Number, String, Bool)`. I don't know if anything like it actually exists, or can exist, in Typed Racket already.
 
-These are a bit more involved. The `...` is doing two related but syntactically different things.[^ellipsis] In the variable list of `All` (the `(a b ...)` and `(a ...)`) it says the preceding variable corresponds to a list of types. In the body of `All`, it combines with both the preceding and following variables. `t ... b` means: "`b` was followed by `...` in the type signature, so it corresponds to a list of types. Use a copy of `t` for each one of those types, and inside each copy, substitute `b` with the corresponding type from the list".
+These are a bit more involved. The `...` is doing two related but syntactically different things.[^ellipsis] In the variable list of `All` (the `(a b ...)` and `(a ...)`) it says the preceding variable corresponds to a list of types. In the body of `All`, it combines with both the preceding and following syntax elements. `t ... b` means: "`b` was followed by `...` in the type signature, so it corresponds to a list of types. Use a copy of `t` for each one of those types, and inside each copy, substitute `b` with the corresponding type from the list".
 
 [^ellipsis]: It also makes it really hard to write code outlines while omitting certain parts.
 
@@ -168,7 +175,7 @@ There's a brief discussion of that, mostly of the form "here's another paper tha
 
 ---
 
-First up: Dzeng and Haynes, [Type reconstruction for variable-arity procedures](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.40.3560&rep=rep1&type=pdf) (1994, doi:[10.1145/182590.182484](https://doi.org/10.1145/182590.182484)). This uses a thing called "infinitary tuples" to handle optional arguments and both uniform and non-uniform variadic functions. Practical Variable-Arity Polymorphism lists some limitations:
+First up: Dzeng and Haynes, [Type reconstruction for variable-arity procedures](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.40.3560&rep=rep1&type=pdf) (1994, doi: [10.1145/182590.182484](https://doi.org/10.1145/182590.182484)). This uses a thing called "infinitary tuples" to handle optional arguments and both uniform and non-uniform variadic functions. Practical Variable-Arity Polymorphism lists some limitations:
 
 > Most importantly, since their system does not support first-class polymorphic functions, they are unable to type many of the definitions of variable-arity functions, such as *map* or *fold*. Additionally, their system requires full type inference to avoid exposing users to the underlying details of row types, ...
 
@@ -177,7 +184,7 @@ I don't understand this first one: `map` is explicitly given as an example, with
     $$ (\mathit{pre} · ((γ∘δ) → α) :: (γ ∘ (\underline{\mathtt{list}}\ δ)))
        → \mathtt{list}\ α $$
 
-But this might help illustrate the second problem, which I think is saying that type annotations are complicated.
+But this might help illustrate the second problem, which I think is saying: type annotations are complicated, users won't want to deal with them.
 
 (Note that I've swapped from a postfix `$ α\ \mathtt{list} $` syntax to a prefix `$ \mathtt{list}\ α $` that I'm more used to. Also the `$ \underline{\mathtt{list}} $` was originally rendered `$ \underline{\mathit{list}} $` but I think that was a mistake.)
 
@@ -185,17 +192,17 @@ What's not allowed is to pass in a variadic function and apply it with two diffe
 
 The other limitation I notice is: there's only one thing you can do with a "rest argument" (i.e. the collection of the arbitrarily-many arguments at the end), and that's to use it as another rest argument. There's even special syntax for that: you'd define a variadic function as `(λ (x &rest xs) ...)` (i.e. taking one required argument and arbitrarily many following that), and inside the body you'd call some other variadic function with `(g a b c &rest xs)`. So variadic functions need to be either built-in or defined in terms of other variadic functions.
 
-How big a problem is this? I have no idea; the paper talks about type-checking, it contains zero implementations of variadic functions.
+How big a problem is this? I have no idea; the paper talks about type-checking, it contains zero implementations of variadic functions. Maybe a small handful of built-in ones would let us define everything we want.
 
 Ignoring that problem for now, and considering whether we can type the example functions from above:
 
-* `+`, `list` and `map` are given as examples. The other arithmetic functions would be fine, and I'm fairly confident `trace` would be too.
+* `+`, `list` and `map` are given as examples. The other arithmetic functions would be fine, and I'm fairly confident `zip` and `trace` would be too.
 
 * I think `list'` is not allowed, since it has an extra argument after the variadic part.
 
 * I dunno about `printf`. I'd need to figure out how typeclasses fit in.
 
-* I presented both `sort` and `renderCsv` with the optional arguments before the required ones. I think that rules them out.[^opt-before-req] `renderCsv` would be fine if we swap the arguments, but `sort` also has typeclass stuff going on. Even ignoring *that*, I'm not sure if "explicit comparison function with optional key function" is as polymorphic as we'd like. That is, we could write a function that can be accepted at types
+* I presented both `sort` and `renderCsv` with the optional arguments before the required ones. I think that rules them out.[^opt-before-req] `renderCsv` would be fine if we swap the arguments, but `sort` also has typeclass stuff going on. Even ignoring *that*, I'm not sure if we can make the "explicit comparison function with optional key function" as polymorphic as we'd like. That is, we could write a function that can be accepted at types
 
     ```haskell
     sort :: [a] -> (a -> a -> Ordering) -> [a]
@@ -247,83 +254,66 @@ but it would be rendered in this type system as
     → \mathtt{list\ bool}
     $$
 
-Which, let us say, I do not love. And this kind of thing infects all functions, not just variadic ones! And I don't know how it interacts with partial application. Still, maybe it can be made ergonomic. I think this paper deserves further study, though of course I don't know if I'll be doing it myself.
+Which, let us say, I do not love.[^indentation] And this kind of thing infects all functions, not just variadic ones! And I don't know how it interacts with partial application. Still, maybe it can be made ergonomic. I think this paper deserves further study, though of course I don't know if I'll be doing it myself.
+
+[^indentation]: Sorry it's not indented nicely, I'm not sure how to make Mathjax do that. I wouldn't love it however nicely laid out, though.
 
 I still don't know what infinitary tuples actually are.
 
 ---
 
+Next is Tullsen, [The Zip Calculus](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.37.2645&rep=rep1&type=pdf) (2000, doi: [10.1007/10722010_3](https://doi.org/10.1007/10722010_3)). This extends typed lambda calculus to get polymorphic-length tuples.
 
+This paper seems to come out of the "program transformation community", which I'm not familiar with. I suspect it's talking about things I know a little about in ways I don't recognize.
 
+The thing it extends is "`$\mathrm{F}_ω$`". Fortunately I recently came across the [lambda cube](https://en.wikipedia.org/wiki/Lambda_cube) so I know how to find out what that means. It's System F, which (as above) is what GHC compiles to as an intermediate step, plus the ability for the user to define their own types, which... I'd always assumed GHC's intermediate System F also had that, so maybe GHC actually compiles to `$\mathrm{F}_ω$`? But... later in the paper it talks about dependent typing, which `$\mathrm{F}_ω$` doesn't have, so maybe the paper is using nonstandard terminology? Argh.
 
+Anyway, I think of System F as a more powerful version of Hindley-Milner, but too powerful to automatically type check, so you need lots of type annotations. If we're making it more powerful I guess we're still going to need those.
 
+I confess I have trouble figuring out what this paper offers in any detail. It does give us a short list of functions that, if the language defines them built-in, we can build other functions out of. These are `list` and what it calls `seqTupleL` and `seqTupleR`. These aren't described except for their (identical) type signatures, and I have trouble reading those. But, I think in Haskell they'd have types
 
+    ```haskell
+    seqTuple_ :: Monad m => (a1 -> m b1) -> a1 -> m b1
+    seqTuple_ :: Monad m => (a1 -> m b1, a2 -> m b2) -> (a1, a2) -> m (b1, b2)
+    seqTuple_
+      :: Monad m
+      => (a1 -> m b1, a2 -> m b2, a3 -> m b3)
+      -> (a1, a2, a3)
+      -> m (b1, b2, b3)
+    ```
 
+And if I'm right about that, I'm pretty sure the semantics are "zip the tuple of functions with the tuple of parameters, apply them each in turn and sequence the effects (left-to-right / right-to-left)".
 
-Resources:
+Given these functions, we're specifically told we can implement `zip`, `unzip` and `appF`[^appf-monadic]. I'm pretty sure arithmetic will be possible, and I weakly guess that `printf`, `map`, `appA` and `trace` will be as well, while `«` and `»` won't be. I'm not sure about `list'`, `sort` or `renderCsv`.
 
-[Practical Variable-Arity Polymorphism](https://www2.ccs.neu.edu/racket/pubs/esop09-sthf.pdf) (2009?) Works with Typed Scheme. Compiles to System F, which GHC does too, but I think that's not very helpful. (But maybe I should be doing the same?) Gives examples of variable arity functions.
+[^appf-monadic]: `appF` is described with `Monad` constraints, but I gather the `Applicative` typeclass wasn't [introduced](https://www.staff.city.ac.uk/~ross/papers/Applicative.html) yet. I expect the `seqTuple_` functions could take `Applicative` instead of `Monad`, and then so could `appF`.
 
-"The Zip Calculus" (2000) - behind a paywall.
+One thing is that all of these functions are defined with variadic tuples, so that e.g. `map` would actually be
 
-[Type reconstruction for variable-arity procedures](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.40.3560&rep=rep1&type=pdf) (1994) Extends an ML. Haven't read yet.
+    ```haskell
+    map :: (a -> b) -> [a] -> [b]
+    map :: (a -> b -> c) -> ([a], [b]) -> [c]
+    map :: (a -> b -> c -> d) -> ([a], [b], [c]) -> [d]
+    ```
 
-[Faking It: Simulating Dependent Types in Haskell](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.22.2636&rep=rep1&type=pdf) (2002)
+which I assume leaves no room for partial application. Given this it would be convenient to have variadic `curry` and `uncurry` functions,
+
+    ```haskell
+    curry :: (a -> b -> c) -> (a, b) -> c
+    curry :: (a -> b -> c -> d) -> (a, b, c) -> d
+    curry :: (a -> b -> c -> d -> e) -> (a, b, c, d) -> e
+
+    uncurry :: ((a, b) -> c) -> a -> b -> c
+    uncurry :: ((a, b, c) -> d) -> a -> b -> c -> d
+    uncurry :: ((a, b, c, d) -> e) -> a -> b -> c -> d -> e
+    ```
+
+but no such luck. We're specifically told `curry` can't be typed, that's an area for future research. And `uncurry` would break us out of the variadic-tuple paradigm entirely.
+
+---
+
+Todo:
+
+[Faking It: Simulating Dependent Types in Haskell](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.22.2636&rep=rep1&type=pdf) (2002) https://doi.org/10.1017/S0956796802004355
 
 "Arity polymorphism and dependent types" (2000) - haven't found a pdf yet
-
-
-
-
-
-Ideally we maybe want types for
-
-+ - 2 or more numbers
-- - 1 or more numbers
-list - any number of values of the same type
-
-^ These are uniform. Might be most of the value?
-
-map : (a -> b -> ... -> z) -> list a -> list b -> ... -> list z
-
-^ does this generalize to fmap? It's already awkward with lists of different lengths. Plausibly we can generalize to fmap only for applicatives - though the list generalization is using the ZipList applicative, I think
-
-unzip : list (a, b) -> (list a, list b)
-      : list (a, b, c) -> (list a, list b, list c)
-      : list (a, b, ..., z) -> (list a, list b, ..., list z)
-
-^ is this possible in PVAP's scheme? Same question about generalizing to other functors
-
-But we also need things like (foldl +) i.e. using + as (Float -> Float -> Float). Still want to type (+ 1) as (Float -> Float), except ideally (?) (foldl (+ 1)) will type (+ 1) as (Float -> Float -> Float).
-
-And we want to be able to do something like ((+ 1 2) 3 4). I actually don't expect that to work at all, but ((partial + 1 2) 3 4) maybe?
-
-Certainly I think it's fine to treat (a b c d) different from ((((a) b) c) d). Haskell is looking at this too, "a quick look at impredicativity".
-
-
-Uniform types: we'd have something like
-
-(def (: + (» -> Float Float (… Float) Float))
-  (λ (x1 x2 (… xs)) (...)))
-
-
-Somehow we need (-> (… Float) Float) to be able to be instantiated as any of
-
-Float
-(-> Float Float)
-(-> Float (-> Float Float))
-(-> Float (-> Float (-> Float Float)))
-
-If we see (+ 1 2 3) we know to instantiate it as (» -> Float Float Float Float)
-
-But we also need to be able to instantiate
-
-(foldl + 0 (list 1 2 3))
-(zip-with + (list 1 2 3) (list 4 5 6))
-(zip-with-3 + (list 1 2 3) (list 4 5 6) (list 7 8 9))
-
-Maybe we need
-
-(-> (… Float) Float)
-
-to be a specific kind of mtype, `TUniVarFn Float Float` that we handle in matching/unification and substitution, somehow?
