@@ -110,7 +110,15 @@ A variadic function is one which can accept argument lists of different length. 
     appA :: Applicative f => f (a -> b -> c -> d) -> f a -> f b -> f c -> f d
     ```
 
-* Haskell offers an impure function `trace` which is useful in debugging. We might want something similar, wrapping around a function to log every time it's called:
+* I can even imagine wanting to lift only the final result, replacing `pure $ f a b c` with `puring f a b c`. That seems kind of useless by itself, but the general pattern might not be.
+
+    ```haskell
+    puring :: Applicative f => a -> f a
+    puring :: Applicative f => (a -> b) -> a -> f b
+    puring :: Applicative f => (a -> b -> c) -> a -> b -> f c
+    ```
+
+* Haskell offers an impure function `trace` which is useful in debugging. I could imagine wanting something similar, wrapping around a function to log every time it's called. The variadic part of the type here is equivalent to `puring` specialized to `Identity`, but not having to worry about typeclasses might make things simpler.
 
     ```haskell
     -- The first argument would be the function name or other identifier.
@@ -121,7 +129,7 @@ A variadic function is one which can accept argument lists of different length. 
 
 (I'm using Haskell syntax for the types, rather than Haskenthetical syntax. Partly because Haskenthetical has no concept of typeclasses or rank-2 types, which some of the examples use. But also partly because it's probably easier to read. Which you might think would be a reason not to make Haskenthetical, but here we are.)
 
-I'm not, to be clear, saying that all or even any of these are good ideas. I mostly don't miss variadic functions in Haskell; they can be implemented hackily like in Text.Printf linked above, but I'm not sure I've ever felt the need to, and I've rarely-if-ever used that `printf`. (I have sometimes wanted variadic tuples.) But it seems worth starting to explore the space of the sorts of things I might want to consider trying to support, before making any decisions.
+I'm not, to be clear, saying that all or even any of these are good ideas. I mostly don't miss variadic functions in Haskell; they can be implemented hackily like in Text.Printf linked above, but I'm not sure I've ever felt the need to, and I've rarely-if-ever used that `printf`. But it seems worth starting to explore the space of the sorts of things I might want to consider trying to support, before making any decisions.
 
 ---
 
@@ -137,7 +145,7 @@ But it does help me make sense of the space. It divides the functions it can typ
 
 With the `*` indicating "zero or more of the preceding type". These seem simple enough. (Though `list'` takes an argument after the variadic part, which makes things more complicated. Racket calls that function `list*` but I couldn't find a type declaration for it to be sure it's actually valid.)
 
-Then the other other functions handled by the paper are "non-uniform". Of my examples, I think that's just `map`, `trace` and maybe `zip` and `unzip` natively.
+Then the other other functions handled by the paper are "non-uniform". Of my examples, I think that's just `map`, `trace`, and maybe `zip` and `unzip` natively.
 
 ```
 (: map (All (a b ...) (-> (-> b ... b a) (Listof b) ... b (Listof a))))
@@ -156,7 +164,7 @@ So if `b ...` corresponds to `Integer String Number`, then `(Listof b) ... b` co
 
 I don't know if we strictly need the trailing variable in the body. You're only allowed one `...` in the variable list (right at the end), and the trailing variable is required to have been in the variable list followed by a `...`, so as far as I can tell it's unambiguous. (At least as long as there are no higher-rank types, which I don't think I've seen mentioned yet.)
 
-`printf`, `appF` and `appA` would also fit into this schema if it weren't for the constraints. But as far as I know Typed Racket has nothing analagous to Haskell's constraints. I don't know how much they complicate matters.
+`printf`, `appF`, `appA` and `puring` would also fit into this schema if it weren't for the constraints. But as far as I know Typed Racket has nothing analagous to Haskell's constraints. I don't know how much they complicate matters.
 
 That leaves four examples. `sort` and `renderCsv` don't fit the scheme because they can only accept one or two optional arguments, not an arbitrary number. (Typed Racket [does support optional arguments](https://docs.racket-lang.org/ts-guide/types.html#%28part._.Types_for_.Functions_with_.Optional_or_.Keyword_.Arguments%29), they're just not covered by this paper.)
 
@@ -219,7 +227,7 @@ Ignoring that problem for now, and considering whether we can type the example f
 
 [^opt-before-req]: I'm not sure. It looks like there's nothing stopping us from constructing types corresponding to optional-before-required. But the paper describes a language syntax that forbids it. My weak guess is such types would break the inference algorithm.
 
-* `appF` and `appA` seem likely, the typeclass stuff is simpler than either `printf` or `sort`.
+* `appF`, `appA` and `puring` seem likely, the typeclass stuff is simpler than either `printf` or `sort`.
 
 * `unzip` might be feasible. We'd need some way to interpret a row (see below) as a proper type. I don't know how difficult that would be.
 
@@ -262,7 +270,7 @@ I still don't know what infinitary tuples actually are.
 
 ---
 
-Next is Tullsen, [The Zip Calculus](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.37.2645&rep=rep1&type=pdf) (2000, doi: [10.1007/10722010_3](https://doi.org/10.1007/10722010_3)). This extends typed lambda calculus to get polymorphic-length tuples.
+Next is Tullsen, [The Zip Calculus](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.37.2645&rep=rep1&type=pdf) (2000, doi: [10.1007/10722010_3](https://doi.org/10.1007/10722010_3)). This extends typed lambda calculus to get variadic tuples.
 
 This paper seems to come out of the "program transformation community", which I'm not familiar with. I suspect it's talking about things I know a little about in ways I don't recognize.
 
@@ -270,10 +278,12 @@ The thing it extends is "`$\mathrm{F}_ω$`". Fortunately I recently came across 
 
 Anyway, I think of System F as a more powerful version of Hindley-Milner, but too powerful to automatically type check, so you need lots of type annotations. If we're making it more powerful I guess we're still going to need those.
 
-I confess I have trouble figuring out what this paper offers in any detail. It does give us a short list of functions that, if the language defines them built-in, we can build other functions out of. These are `list` and what it calls `seqTupleL` and `seqTupleR`. These aren't described except for their (identical) type signatures
+I confess I have trouble figuring out what this paper offers in any detail. I think I'd be able to eventually, but I'd need to put in more effort than I felt like right now.
+
+It does give us a short list of functions that, if the language defines them built-in, we can build other functions out of. These are `list` and what it calls `seqTupleL` and `seqTupleR`. These aren't described except for their (identical) type signatures
 
     $$ \mathtt{Monad\ m}
-       ⇒ ×⟨^{i} \mathtt{a}_{.i} → mathtt{m\ b}_{.i}⟩
+       ⇒ ×⟨^{i} \mathtt{a}_{.i} → \mathtt{m\ b}_{.i}⟩
        → ×\mathtt{a} → \mathtt{m}(×\mathtt{b}) $$
 
 which I think in Haskell correspond to the types
@@ -290,21 +300,37 @@ seqTuple_
 
 If I'm right about that, I'm pretty sure the semantics are "zip the tuple of functions with the tuple of parameters, apply them each in turn and sequence the effects (left-to-right / right-to-left)".
 
-Given these functions, we're specifically told we can implement `zip`, `unzip`, `map`[^zip-calculus-map] and `appF`[^appf-monadic]. I'm pretty sure arithmetic, `list'` and `appA` will be possible, and I weakly guess that `printf` and `trace` will be as well, while `«` and `»` won't be. I'm not sure about `sort` or `renderCsv`.
+Given these functions, we're specifically told we can implement `zip`, `unzip`, `map`[^zip-calculus-map] and `appF`[^appf-monadic]. I'm pretty sure arithmetic, `list'`, `appA`, `puring` and `trace` will be possible, and I weakly guess that `printf` will be as well, while `«` and `»` won't be. I'm not sure about `sort` or `renderCsv`.
 
 [^zip-calculus-map]: Like with the previous paper, PVAP said `map` wouldn't be possible: "The presented limitations of the Zip Calculus imply that it cannot assign a variable-arity type to the definition of `zipWith` (Haskell's name for Scheme’s *map*) without further extension". As far as I can tell it was simply wrong.
 
 [^appf-monadic]: `appF` is described with `Monad` constraints, but I gather the `Applicative` typeclass wasn't [introduced](https://www.staff.city.ac.uk/~ross/papers/Applicative.html) yet. I expect the `seqTuple_` functions could take `Applicative` instead of `Monad`, and then so could `appF`.
 
-One thing is that all of these functions are defined with variadic tuples, so that e.g. `map` would actually be
+One thing is that all of these functions are defined with variadic tuples, so that e.g. `map` would actually be accepted at types like
 
 ```haskell
 map :: (a -> b) -> [a] -> [b]
-map :: (a -> b -> c) -> ([a], [b]) -> [c]
-map :: (a -> b -> c -> d) -> ([a], [b], [c]) -> [d]
+map :: ((a, b) -> c) -> ([a], [b]) -> [c]
+map :: ((a, b, c) -> d) -> ([a], [b], [c]) -> [d]
 ```
 
-which I assume leaves no room for partial application. Given this it would be convenient to have variadic `curry` and `uncurry` functions,
+which I assume leaves no room for partial application. It might also be awkward when the final argument needs to be handled separately; I'm not sure if we could get
+
+```haskell
+list' :: [a] -> [a]
+list' :: (a, [a]) -> [a]
+list' :: (a, a, [a]) -> [a]
+```
+
+or if we'd be stuck with
+
+```haskell
+list' :: () -> [a] -> [a]
+list' :: a -> [a] -> [a]
+list' :: (a, a) -> [a] -> [a]
+```
+
+Given this limitation, it would be convenient to have variadic `curry` and `uncurry` functions,
 
 ```haskell
 curry :: (a -> b -> c) -> (a, b) -> c
