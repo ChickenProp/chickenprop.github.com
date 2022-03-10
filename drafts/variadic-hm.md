@@ -55,6 +55,8 @@ A variadic function is one which can accept argument lists of different length. 
 
 * `sort` might have one or two optional arguments - one for a comparison function and/or one for a a key function. (A key function is unnecessary if you have a comparison, but it might be convenient.)
 
+    Actually, we can't distinguish a comparison function from a key function based on the types, here. There's nothing stopping someone from writing an `Ord` instance for `a -> Ordering`, and then `sort compare [...]` might refer to either of the two-argument forms. I'm just going to ignore that problem though.
+
     ```haskell
     sort :: Ord a => [a] -> [a]
     sort :: (a -> a -> Ordering) -> [a] -> [a]
@@ -179,7 +181,7 @@ There's a pattern to the types, but not the pattern we need.
 
 So: this paper describes a way of typechecking a few of the functions we might like to typecheck, in a completely different type system than the one we want to use. What can we do in Hindley-Milner?
 
-There's a brief discussion of that, mostly of the form "here's another paper that made some progress in an HM system. It's not as powerful as what we have here". But those other papers fully exhaust what I've managed to find on the subject, so let's take a look.
+There's a brief discussion of that, mostly of the form "here's another paper that made some progress in an HM system. It's not as powerful as what we have here". But those other papers fully exhaust what I've managed to find on the subject, so let's take a look. I can't find Moggi, Arity polymorphism and dependent types (2000), which leaves three to look at.
 
 ---
 
@@ -196,11 +198,11 @@ But this might help illustrate the second problem, which I think is saying: type
 
 (Note that I've swapped from a postfix `$ α\ \mathtt{list} $` syntax to a prefix `$ \mathtt{list}\ α $` that I'm more used to. Also the `$ \underline{\mathtt{list}} $` was originally rendered `$ \underline{\mathit{list}} $` but I think that was a mistake.)
 
-What's not allowed is to pass in a variadic function and apply it with two different argument counts: `((λ (f) (* (f 1) (f 2 3))) -)` is forbidden, even though `(- 1)` and `(- 2 3)` are both okay. Combining this system with higher-rank types might avoid this limitation, but I don't know if they're compatible. The authors list two other ways to potentially avoid it, but both would need more investigation.
+I do notice two limitations myself. One is that you're not allowed to pass in a variadic function and apply it with two different argument counts: `((λ (f) (* (f 1) (f 2 3))) -)` is forbidden, even though `(- 1)` and `(- 2 3)` are both okay. Combining this system with higher-rank types might avoid this limitation, but I don't know if they're compatible. The authors list two other ways to potentially avoid it, but both would need more investigation. I don't know how big a deal this would be, it feels minor.
 
-The other limitation I notice is: there's only one thing you can do with a "rest argument" (i.e. the collection of the arbitrarily-many arguments at the end), and that's to use it as another rest argument. There's even special syntax for that: you'd define a variadic function as `(λ (x &rest xs) ...)` (i.e. taking one required argument and arbitrarily many following that), and inside the body you'd call some other variadic function with `(g a b c &rest xs)`. So variadic functions need to be either built-in or defined in terms of other variadic functions.
+The other is: there's only one thing you can do with a "rest argument" (i.e. the collection of the arbitrarily-many arguments at the end), and that's to use it as another rest argument. There's even special syntax for that: you'd define a variadic function as `(λ (x &rest xs) ...)` (i.e. taking one required argument and arbitrarily many following that), and inside the body you'd call some other variadic function with `(g a b c &rest xs)`. So variadic functions need to be either built-in or defined in terms of other variadic functions.
 
-How big a problem is this? I have no idea; the paper talks about type-checking, it contains zero implementations of variadic functions. Maybe a small handful of built-in ones would let us define everything we want.
+This feels like a bigger limitation, but again I don't really know. The paper only talks about type-checking - it contains zero implementations of variadic functions. Maybe a small handful of built-in ones would let us define everything we want.
 
 Ignoring that problem for now, and considering whether we can type the example functions from above:
 
@@ -240,8 +242,7 @@ So how does it work? It's based on extensible records, which I haven't yet looke
 
 This is quantified over three type variables. $γ$ is quantified over mark rows, and $δ$ over type rows, with $γ∘δ$ combining them into a row. And $α$ is quantified over proper types.
 
-Everything before the outermost `$ → $` is a row. (Functions in this system are of kind "row → type", not kind "type → type".) It has `$\mathit{pre} · ((γ∘δ) → α)$` as its head, a single field marked present with type `$ (γ∘δ) → α $`.
-`$ γ∘δ $` is itself a row. Then for the outer row, the tail `$ γ ∘ (\underline{\mathtt{list}}\ δ) $` has the same sequence of marks as the argument to its head, meaning the same number of arguments. `$ \underline{\mathtt{list}}\ δ $` is a type row of "apply `list` to the types in `$ δ $`".
+Everything before the outermost `$ → $` is a row. (Functions in this system are of kind "row → type", not kind "type → type".) It has `$\mathit{pre} · ((γ∘δ) → α)$` as its head, a single field marked present ("pre") with type `$ (γ∘δ) → α $`. `$ γ∘δ $` is itself a row. Then for the outer row, the tail `$ γ ∘ (\underline{\mathtt{list}}\ δ) $` has the same sequence of marks as the argument to its head, meaning the same number of arguments. `$ \underline{\mathtt{list}}\ δ $` is a type row of "apply `list` to the types in `$ δ $`".
 
 Then we might instantiate `$γ$` at `$ \mathit{pre} :: \mathit{pre} :: \underline{\mathit{abs}} $`, i.e. "two present fields and then nothing". And we might instantiate `$δ$` at `$ \mathtt{int} :: \mathtt{string} :: δ' $`, i.e. "an int, then a string, then another type row", and `$α$` at `$ \mathtt{bool} $`. Then we'd have something like the Haskell type
 
@@ -304,7 +305,7 @@ Given these functions, we're specifically told we can implement `zip`, `unzip`, 
 
 [^zip-calculus-map]: Like with the previous paper, PVAP said `map` wouldn't be possible: "The presented limitations of the Zip Calculus imply that it cannot assign a variable-arity type to the definition of `zipWith` (Haskell's name for Scheme’s *map*) without further extension". As far as I can tell it was simply wrong.
 
-[^appf-monadic]: `appF` is described with `Monad` constraints, but I gather the `Applicative` typeclass wasn't [introduced](https://www.staff.city.ac.uk/~ross/papers/Applicative.html) yet. I expect the `seqTuple_` functions could take `Applicative` instead of `Monad`, and then so could `appF`.
+[^appf-monadic]: `appF` is described with `Monad` constraints, but I gather the `Applicative` typeclass wasn't [introduced](https://www.staff.city.ac.uk/~ross/papers/Applicative.html) at the time. I expect the `seqTuple_` functions could take `Applicative` instead of `Monad`, and then so could `appF`.
 
 One thing is that all of these functions are defined with variadic tuples, so that e.g. `map` would actually be accepted at types like
 
@@ -348,8 +349,85 @@ I'd be really interested to see a more approachable version of this paper.
 
 ---
 
-Todo:
+McBride, [Faking It: Simulating Dependent Types in Haskell](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.22.2636&rep=rep1&type=pdf) (2002, doi: [10.1017/S0956796802004355](https://doi.org/10.1017/S0956796802004355))
 
-[Faking It: Simulating Dependent Types in Haskell](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.22.2636&rep=rep1&type=pdf) (2002) https://doi.org/10.1017/S0956796802004355
+I'm happy to say I understand this paper. It adds variadic `map` directly to Haskell using typeclasses. It then explores further in directions I'm going to ignore. The downside, as PVAP correctly notes, is that you need to explicitly pass in the number of variadic arguments as an initial argument.
 
-"Arity polymorphism and dependent types" (2000) - haven't found a pdf yet
+The code is simple enough. It felt a bit dated to me, in the past twenty years GHC has added a bunch of new features that seemed like they'd help make it more ergonomic. But I [couldn't find](https://www.reddit.com/r/haskell/comments/sqnjsq/whats_the_modern_idiomatic_way_to_write_this/) a much better way to write it using those, so whatever.
+
+The original is (equivalent to):
+
+```haskell
+{-# LANGUAGE FunctionalDependencies, FlexibleInstances, UndecidableInstances #-}
+
+data Zero = Zero
+data Suc n = Suc n
+
+one = Suc Zero :: Suc Zero
+two = Suc one :: Suc (Suc Zero)
+
+class ManyApp n fst rest | n fst -> rest where
+  manyApp :: n -> [fst] -> rest
+
+instance ManyApp Zero t [t] where
+  manyApp Zero fs = fs
+
+instance ManyApp n fst rest => ManyApp (Suc n) (t -> fst) ([t] -> rest) where
+  manyApp (Suc n) fs xs = manyApp n (zipWith ($) fs xs)
+
+nZipWith :: ManyApp n fst rest => n -> fst -> rest
+nZipWith n f = manyApp n (repeat f)
+```
+
+Here `manyApp` is the version where instead of just one function, we provide a list of them. The instances give us
+
+```haskell
+manyApp Zero :: [t]           -> [t]
+manyApp one  :: [s -> t]      -> [s] -> [t]
+manyApp two  :: [r -> s -> t] -> [r] -> [s] -> [t]
+--      ^ n     ^ fst            ^ rest
+```
+
+We define it recursively, in terms of its simpler definitions. Then `nZipWith` is easy to define in terms of `manyApp`, where it's not easy to define recursively in terms of itself.
+
+I mentioned having to specify the number of arguments as a downside, and it kind of is. But it allows us to preserve partial application, which I think none of the previous solutions have done. Consider the Haskell code
+
+```haskell
+zipWith (\a b c -> a + b + c :: Int) [1,2] [3,4]
+```
+
+Because we use the existing 2-ary `zipWith` function, this has type `[Int -> Int]`. If we used the existing 3-ary `zipWith3`, it would have type `[Int] -> [Int]`. If we use a variadic function, what type does it have?
+
+In Racket, as far as I know there's no partial application. A function that takes two arguments is different from a function that takes one argument and returns a function that takes one argument. To choose between the two interpretations, you'd need something like:
+
+```racket
+(map (λ (a b) (λ (c) (+ a b c))) '(1 2) '(3 4)) ; first interpretation
+(λ (cs) (map (λ (a b c) (+ a b c)) '(1 2) '(3 4) cs)) ; second interpretation
+```
+
+The Zip Calculus preserves partial application for fixed-arity functions, but not variadic ones. The two interpretations would be written as
+
+```haskell
+nZipWith (\(a, b) c -> a + b + c :: Int) ([1,2], [3,4])
+\cs -> nZipWith (\(a, b, c) -> a + b + c :: Int) ([1,2], [3,4], cs)
+```
+
+Which is basically the same as the Racket version, apart from syntax.
+
+And "infinitary tuples" has to do something similar. For the first interpretation, we'd use "a function taking a row with two variables and returning a function", and for the second we'd use "a function taking a row with three variables". The paper doesn't talk about how we'd distinguish those syntactically.
+
+Another option is to assume that `nZipWith` will never want to return a list of functions. I don't love that solution, but [here's someone implementing it](https://github.com/effectfully-ou/sketches/tree/master/avoid-overlapping-recursive) for `appF` (which they call `liftAn`).
+
+And I don't know if this would be possible, but I could imagine a type annotation being sufficient to distinguish. If you need to annotate every call to the function, I think I'd rather just specify the number of arguments. But if you only need them when it's ambiguous that could be neat.
+
+So what else can we already implement in Haskell with typeclasses? I think almost all of my original list of functions, actually. `«` and `»` feel too ambitious, and for `zip` and `unzip` I think you'd have to use nested tuples (e.g. `((a, b), c)` instead of `(a, b, c)`). (You could use regular tuples if you imposed a maximum size, and apparently [GHC only supports up to 62-ples anyway](https://stackoverflow.com/questions/46412823/why-are-ghc-tuples-limited-to-size-62/46416136).)
+
+Additionally, for several of these functions I think explicitly specifying the number of arguments would be unnecessary. `printf` already exists for example, and it doesn't need it. Arithmetic, `list` and `list'` and `renderCsv` should be fine too. `unzip` would need it if you use nested tuples (to distinguish between wanting `([a], [(b, c)])` and `([a], [b], [c])`, and I wouldn't be shocked if both that and `zip` need it in any case. `sort` might need you to specify which form you want.
+
+Something I haven't fully explored yet is how well type inference works with all this. My vague sense is that it should be mostly pretty good, though if you do something wrong the error messages might be confusing.
+
+---
+
+### Conclusion
+
+The main thing I take away from this is that I'm basically going to drop variadic functions from my radar for Haskenthetical. Infinitary tuples and the zip calculus don't feel like directions I want to go in. This might affect whether and when I add support for typeclasses.
