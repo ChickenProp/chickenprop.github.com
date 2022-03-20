@@ -4,7 +4,8 @@ $(function () {
         var html = $(this).html().replace(/\n$/, '');
         var isMath =
             (html.startsWith('$') && html.endsWith('$'))
-            || (html.startsWith('\\(') && html.endsWith('\\)'));
+            || (html.startsWith('\\(') && html.endsWith('\\)'))
+            || (html.startsWith('\\[') && html.endsWith('\\]'));
         if (isMath) {
             $(this).html(html);
             $(this).addClass('do-math');
