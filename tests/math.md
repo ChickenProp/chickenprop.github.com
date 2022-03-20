@@ -31,3 +31,5 @@ And sometimes I want dollars in math. I need to use backquotes or code blocks fo
 And there's something funky going on with fractions after dollars? First, without a space. `$ ${0 \over 3} $` backslashes. `$ \${1 \over 3} $` backslashes. `$ \\${2 \over 3} $` backslashes. `$ \\\${3 \over 3} $` backslashes.
 
 And now including a space. `$ $ {0 \over 3} $` backslashes. `$ \$ {1 \over 3} $` backslashes. `$ \\$ {2 \over 3} $` backslashes. `$ \\\$ {3 \over 3} $` backslashes.
+
+And I want to be able to use `\(` and `\)` delimiters too, like \( \sin(A) \).
