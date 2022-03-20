@@ -36,9 +36,9 @@ And I want to be able to use `\(` and `\)` delimiters too. Inline needs some bac
 
     \[ f(x) = x^3 - 2x^2 + 1. \]
 
-<span>
+<p>
 If I want to disable markdown without code blocks, e.g. to get consumed by LW, that seems impossible in only part of a line. But I can do it on a full line, like \( \sum_{n=1}^∞ a_n \). Or on a full block, like
-</span>
+</p>
 
 <div>
 \[ f(x) = \sin( x_1^3 - 2x_2^2 + 1 ). \]
