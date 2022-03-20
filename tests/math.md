@@ -36,8 +36,10 @@ And I want to be able to use `\(` and `\)` delimiters too. Inline needs some bac
 
     \[ f(x) = x^3 - 2x^2 + 1. \]
 
-And if I want to disable markdown without code blocks, e.g. to get consumed by LW, I think that's possible... <span>\( \sum_{n=1}^∞ a_n \)</span> and
+<span>
+If I want to disable markdown without code blocks, e.g. to get consumed by LW, that seems impossible in only part of a line. But I can do it on a full line, like \( \sum_{n=1}^∞ a_n \)</span>. Or on a full block, like
+</span>
 
 <div>
-\[ f(x) = x^3 - 2x^2 + 1. \]
+\[ f(x) = \sin\( x_1^3 - 2x_2^2 + 1 \). \]
 </div>
