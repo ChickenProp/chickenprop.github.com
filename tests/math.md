@@ -32,4 +32,6 @@ And there's something funky going on with fractions after dollars? First, withou
 
 And now including a space. `$ $ {0 \over 3} $` backslashes. `$ \$ {1 \over 3} $` backslashes. `$ \\$ {2 \over 3} $` backslashes. `$ \\\$ {3 \over 3} $` backslashes.
 
-And I want to be able to use `\(` and `\)` delimiters too, like \( \sin(A) \).
+And I want to be able to use `\(` and `\)` delimiters too. Inline needs some backslashes to be doubled like \\( \sin(A) \\). In code there's `\( \sin(A) \)`. And blocks:
+
+    \[ f(x) = x^3 - 2x^2 + 1. \]
