@@ -35,3 +35,9 @@ And now including a space. `$ $ {0 \over 3} $` backslashes. `$ \$ {1 \over 3} $`
 And I want to be able to use `\(` and `\)` delimiters too. Inline needs some backslashes to be doubled like \\( \sin(A) \\). In code there's `\( \sin(A) \)`. And blocks:
 
     \[ f(x) = x^3 - 2x^2 + 1. \]
+
+And if I want to disable markdown without code blocks, e.g. to get consumed by LW, I think that's possible... <span>\( \sum_{n=1}^∞ a_n \)</span> and
+
+<div>
+\[ f(x) = x^3 - 2x^2 + 1. \]
+</div>
