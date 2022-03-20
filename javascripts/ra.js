@@ -2,7 +2,10 @@ var disqus_shortname='reasonableapproximation';
 $(function () {
     $('code').each(function () {
         var html = $(this).html().replace(/\n$/, '');
-        if (html[0] == '$' && html[html.length-1] == '$') {
+        var isMath =
+            (html.startsWith('$') && html.endsWith('$'))
+            || (html.startsWith('\\(') && html.endsWith('\\)'));
+        if (isMath) {
             $(this).html(html);
             $(this).addClass('do-math');
 
