@@ -189,18 +189,19 @@ First up: Dzeng and Haynes, [Type reconstruction for variable-arity procedures](
 
 > Most importantly, since their system does not support first-class polymorphic functions, they are unable to type many of the definitions of variable-arity functions, such as *map* or *fold*. Additionally, their system requires full type inference to avoid exposing users to the underlying details of row types, ...
 
-I don't understand this first one: `map` is explicitly given as an example, with type
+I don't understand this first one: `map` is explicitly given as an example, with type[^type-edit]
 
 <div>
 \[ (\mathit{pre} · ((γ∘δ) → α) :: (γ ∘ (\underline{\mathtt{list}}\ δ)))
 → \mathtt{list}\ α \]
 </div>
 
-But this might help illustrate the second problem, which I think is saying: type annotations are complicated, users won't want to deal with them.
-
+[^type-edit]:
 <p>
 (Note that I've swapped from a postfix \( α\ \mathtt{list} \) syntax to a prefix \( \mathtt{list}\ α \) that I'm more used to. Also the \( \underline{\mathtt{list}} \) was originally rendered \( \underline{\mathit{list}} \) but I think that was a mistake.)
 </p>
+
+But this might help illustrate the second problem, which I think is saying: type annotations are complicated, users won't want to deal with them.
 
 I do notice two limitations myself. One is that you're not allowed to pass in a variadic function and apply it with two different argument counts: `((λ (f) (* (f 1) (f 2 3))) -)` is forbidden, even if `(- 1)` and `(- 2 3)` are both okay. Combining this system with higher-rank types might avoid this limitation, but I don't know if they're compatible. The authors list two other ways to potentially avoid it, but both would need more research. I don't know how big a deal this would be, but it feels minor. It's similar to (perhaps the same as) the restriction that lambda bindings are monomorphic, and I don't know if I've ever had a problem with that in practice.
 
@@ -368,7 +369,7 @@ I'd be really interested to see a more approachable-to-me version of this paper.
 
 Finally McBride, [Faking It: Simulating Dependent Types in Haskell](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.22.2636&rep=rep1&type=pdf) (2002, doi: [10.1017/S0956796802004355](https://doi.org/10.1017/S0956796802004355)).
 
-I'm happy to say I understand this paper. It adds variadic `map` directly to Haskell using typeclasses. It then explores further in directions I'm going to ignore. The downside, as PVAP correctly notes, is that you need to explicitly pass in the number of variadic arguments as an initial argument.
+I'm happy to say I understand (the relevant parts of) this paper. It adds variadic `map` directly to Haskell using typeclasses. It then explores further in directions I'm going to ignore. The downside, as PVAP correctly notes, is that you need to explicitly pass in the number of variadic arguments as an initial argument.
 
 The code is simple enough. It felt a bit dated to me: in the past twenty years GHC has added a bunch of new features that seemed like they'd help make it more ergonomic. But I [couldn't find](https://www.reddit.com/r/haskell/comments/sqnjsq/whats_the_modern_idiomatic_way_to_write_this/) a much better way to write it using those, so whatever.
 
@@ -423,7 +424,7 @@ Consider the Haskell code
 zipWith (\a b c -> a + b + c) [1,2] [3,4]
 ```
 
-That uses the existing 2-ary `zipWith` function, which means it has type `[Int -> Int]`[^int-literals]. (Its value is `[(+ 4), (+ 6)]`.) We could instead have used the existing 3-ary `zipWith3`, and then it would have type `[Int] -> [Int]`. If we used a variadic function, what type does it have? All the papers I looked at had some way of answering the question.
+That uses the existing 2-ary `zipWith` function, which means it has type `[Int -> Int]`[^int-literals]. (Its value is `[(+ 4), (+ 6)]`.) We could instead have used the existing 3-ary `zipWith3`, and then it would have type `[Int] -> [Int]`. If we used a variadic function, what type would it have? All the papers I looked at had some way of answering the question.
 
 [^int-literals]: Pedantic note: I'm assuming here that integer literals have type `Int`, not type `Num a => a`.
 
@@ -441,11 +442,7 @@ nZipWith (\(a, b) c -> a + b + c) ([1,2], [3,4]) -- [Int -> Int]
 \cs -> nZipWith (\(a, b, c) -> a + b + c) ([1,2], [3,4], cs) -- [Int] -> [Int]
 ```
 
-Which is basically the same as the Racket version, apart from syntax. Though, with the `TupleSections` extension, you could presumably write the second version as
-
-```haskell
-nZipWith (\(a, b, c) -> a + b + c) . ([1,2], [3,4], )
-```
+Which is basically the same as the Racket version, apart from syntax.
 
 And "infinitary tuples" has to do something similar. For the list of functions, we'd pass "a function taking a row with two variables and returning a function" as the first argument. For the function on lists we'd pass "a function taking a row with three variables". I guess the system must lose Haskell's equivalence between `\a b -> ...` and `\a -> \b -> ...`.
 
