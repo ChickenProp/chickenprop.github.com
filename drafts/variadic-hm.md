@@ -197,9 +197,10 @@ I don't understand this first one: `map` is explicitly given as an example, with
 </div>
 
 [^type-edit]:
-<p>
-(Note that I've swapped from a postfix \( α\ \mathtt{list} \) syntax to a prefix \( \mathtt{list}\ α \) that I'm more used to. Also the \( \underline{\mathtt{list}} \) was originally rendered \( \underline{\mathit{list}} \) but I think that was a mistake.)
-</p>
+
+    <p>
+    (Note that I've swapped from a postfix \( α\ \mathtt{list} \) syntax to a prefix \( \mathtt{list}\ α \) that I'm more used to. Also the \( \underline{\mathtt{list}} \) was originally rendered \( \underline{\mathit{list}} \) but I think that was a mistake.)
+    </p>
 
 But this might help illustrate the second problem, which I think is saying: type annotations are complicated, users won't want to deal with them.
 
