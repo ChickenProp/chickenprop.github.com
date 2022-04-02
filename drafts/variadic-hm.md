@@ -135,7 +135,7 @@ I'm not, to be clear, saying that all or even any of these are good ideas. I mos
 
 ### Not Hindley-Milner
 
-The first paper I'm going to look at is the most recent one I've found:  Strickland, Tobin-Hochstadt and Felleisen, [Practical Variable-Arity Polymorphism](https://www2.ccs.neu.edu/racket/pubs/esop09-sthf.pdf) (hereafter PVAP; 2009, doi: [10.1007/978-3-642-00590-0_3](https://doi.org/10.1007/978-3-642-00590-9_3)). I linked this in my previous post. It implements typechecking for variadic functions in Typed Scheme, I think specifically meaning Typed [Racket](https://en.wikipedia.org/wiki/Racket_%28programming_language%29)? I'm not familiar with the language (I have done a little untyped Racket in the past), but from the sounds of things, its type system is fundamentally different from Hindley-Milner, and the implementation won't easily transfer. (Both compile to [System F](https://en.wikipedia.org/wiki/System_F), but I don't think that helps.)
+The first paper I'm going to look at is the most recent one I've found:  Strickland, Tobin-Hochstadt and Felleisen, [Practical Variable-Arity Polymorphism](https://www2.ccs.neu.edu/racket/pubs/esop09-sthf.pdf) (hereafter PVAP; 2009, doi: <a href="https://doi.org/10.1007/978-3-642-00590-9_3">10.1007/978-3-642-00590-0_3</a>). I linked this in my previous post. It implements typechecking for variadic functions in Typed Scheme, I think specifically meaning Typed [Racket](https://en.wikipedia.org/wiki/Racket_%28programming_language%29)? I'm not familiar with the language (I have done a little untyped Racket in the past), but from the sounds of things, its type system is fundamentally different from Hindley-Milner, and the implementation won't easily transfer. (Both compile to [System F](https://en.wikipedia.org/wiki/System_F), but I don't think that helps.)
 
 But it does help me make sense of the space. It divides the functions it can type into two: uniform and non-uniform. Let's call the optional arguments the "rest parameter", as in the parameter which holds "the rest of the parameters". Uniform functions are those whose rest parameter is a homogeneous list, such that they could be replaced (at cost to ergonomics) with a function accepting a list. In my above examples, that's the arithmetic functions plus `list` and `list'`. In Typed Racket [syntax](https://docs.racket-lang.org/ts-guide/types.html), the types of these functions would be
 
@@ -181,7 +181,7 @@ There's a pattern to the types, but not the pattern we need.
 
 So: this paper describes a way of typechecking a few of the functions we might like to typecheck, in a completely different type system than the one we want to use. What can we do in Hindley-Milner?
 
-There's a brief discussion of that, mostly of the form "here's another paper that made some progress in an HM system. It's not as powerful as what we have here". But those other papers fully exhaust what I've managed to find on the subject, so let's take a look. I can't find Moggi, Arity polymorphism and dependent types (2000), which leaves three to look at.
+There's a brief discussion of that, mostly of the form "here's another paper that made some progress in an HM system. It's not as powerful as what we have here". But those other papers fully exhaust what I've managed to find on the subject, so let's take a look. I can't find Moggi, *Arity polymorphism and dependent types* (2000), which leaves three to look at.
 
 ### Infinitary Tuples
 
