@@ -1,6 +1,7 @@
 ---
 title: Variadic functions in Hindley Milner
-layout: draft
+layout: post
+lw_xpost: true
 ---
 I [previously mentioned](http://reasonableapproximation.net/2021/03/14/haskenthetical-update-macros.html) an interest in adding variadic functions to Haskenthetical, the "Haskell with a Lisp syntax" I'm vaguely working on.
 
