@@ -280,8 +280,6 @@ Which, let us say, I do not love.[^indentation] And this kind of thing infects a
 
 [^indentation]: Sorry it's not indented nicely, I'm not sure how to make Mathjax do that. I wouldn't love it however nicely laid out, though.
 
-I still don't know what infinitary tuples actually are.
-
 ### The Zip Calculus
 
 Next is Tullsen, [The Zip Calculus](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.37.2645&rep=rep1&type=pdf) (2000, doi: [10.1007/10722010_3](https://doi.org/10.1007/10722010_3)). This extends typed lambda calculus to get variadic tuples.
