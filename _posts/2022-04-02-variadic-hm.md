@@ -182,7 +182,7 @@ There's a pattern to the types, but not the pattern we need.
 
 So: this paper describes a way of typechecking a few of the functions we might like to typecheck, in a completely different type system than the one we want to use. What can we do in Hindley-Milner?
 
-There's a brief discussion of that, mostly of the form "here's another paper that made some progress in an HM system. It's not as powerful as what we have here". But those other papers fully exhaust what I've managed to find on the subject, so let's take a look. I can't find Moggi, *Arity polymorphism and dependent types* (2000), which leaves three to look at.
+There's a brief discussion of that, mostly of the form "here's another paper that made some progress in an HM system. It's not as powerful as what we have here". But those other papers fully exhaust what I've [managed to find](https://www.reddit.com/r/ProgrammingLanguages/comments/qavf7u/resources_on_variablearity_functions_in/) on the subject; and actually, I can't find a copy of Moggi, *Arity polymorphism and dependent types* (2000). That leaves three to look at.
 
 ### Infinitary Tuples
 
