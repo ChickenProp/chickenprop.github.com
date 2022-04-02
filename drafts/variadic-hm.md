@@ -405,11 +405,21 @@ manyApp two  :: [r -> s -> t] -> [r] -> [s] -> [t]
 
 We define it recursively, in terms of its simpler definitions. Then `nZipWith` is easy to define in terms of `manyApp`, where it's not easy to define recursively in terms of itself.
 
-So what else can we already implement in Haskell with typeclasses? I think most of my original list of functions. `sort` and `renderCsv` might have complications, `«` and `»` feel too ambitious, and for `zip` and `unzip` I think you'd have to use nested tuples (e.g. `((a, b), c)` instead of `(a, b, c)`). (You could use regular tuples if you imposed a maximum size, and apparently [GHC only supports up to 62-ples anyway](https://stackoverflow.com/questions/46412823/why-are-ghc-tuples-limited-to-size-62/46416136).)
+So what else can we already implement in Haskell with typeclasses? I think most of my original list of functions, and for several of them I think explicitly specifying the variadic count would be unnecessary.
 
-Additionally, for several of these functions I think explicitly specifying the number of arguments would be unnecessary. `printf` already exists for example, and it doesn't need it. Arithmetic, `list` and `list'` and `renderCsv` should be fine too. `unzip` would need it if you use nested tuples (to distinguish between wanting `([a], [(b, c)])` and `([a], [b], [c])`, and I wouldn't be shocked if both that and `zip` need it in any case. `sort` might need you to specify which form you want, at which point it really seems like you should just have different function names.
+I tried out a few of them, [see here](https://gist.github.com/ChickenProp/2f56ce8b2d056534fa9a049359a17af8). It's possible there are ways to improve on what I found, but my current sense is:
 
-Something I haven't fully explored yet is how well type inference works with all this. My vague sense is that it should be mostly pretty good, though if you do something wrong the error messages might be confusing. You will probably need to help out a bunch if you use variadic functions in weakly-constrained contexts. Like, `print (list "a" "b" "c")` won't work because it doesn't know if you want the `Show` instance on `[String]` or on `String -> [String]` or.... (Probably only one of these instances exists, but we can't rely on that.) But then you just need to add a type annotation, `print (list "a" "b" "c" :: [String])`.
+* Arithmetic, `list`, `printf`: work mostly fine with no variadic count, fine with it.
+* `list'`: works poorly with no variadic count, fine with it.
+* `zip`, `unzip`: need nested tuples, `((a, b), c)` rather than `(a, b, c)`. Given that, both work fine with variadic count. `zip` works poorly without, `unzip` doesn't for reasons related to the next section.
+* `renderCsv`: works (mostly?) fine with no variadic count.
+* `sort`: works okay with one optional argument and no variadic count. With two optional arguments, works fine with something specifying which form you want. (If they're independently optional, there are two two-argument forms, so it wouldn't necessarily be a "variadic count".) But at that point, really, just have different functions.
+* `map`, `appF`, `appA`, `puring`, `trace`: work fine with variadic count.
+* `»`, `«`: do not work.
+
+Here, I consider something to "work" if you can make it do what you want, and work "better" if it doesn't need much type hinting. "works fine" means you don't need type hinting in any places I wouldn't normally expect it in Haskell, and I think the error messages might even be pretty normal?
+
+So I think that with explicit counts, most of these work fine. Without the explicit counts, several of them work pretty okay, but they'll have difficulty if you use them in a weakly-constrained context. Like, `print (list "a" "b" "c")` won't work because it doesn't know if you want the `Show` instance on `[String]` or on `String -> [String]` or.... (Probably only one of these instances exists, but we can't rely on that.) But then you just need to add a type annotation, `print (list "a" "b" "c" :: [String])`. `list'` and `zip` need a lot more type annotations than is normal, for reasons I maybe have a shallow understanding of but not a deep one.
 
 ### Partial application
 
@@ -471,4 +481,4 @@ As I mentioned in the last section, this isn't a problem for every variadic func
 
 ### Conclusion
 
-The main thing I take away from this is that I'm basically going to drop variadic functions from my radar for Haskenthetical. Infinitary tuples and the zip calculus don't feel like directions I want to go in. This might affect whether and when I add support for typeclasses.
+The main thing I take away from this is that I'm basically going to drop variadic functions from my radar for Haskenthetical. Infinitary tuples and the zip calculus don't feel like directions I want to go in. This might affect whether, when and how I add support for typeclasses and various surrounding machinary.
