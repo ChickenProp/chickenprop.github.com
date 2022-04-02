@@ -433,14 +433,14 @@ That uses the existing 2-ary `zipWith` function, which means it has type `[Int -
 
 [^int-literals]: Pedantic note: I'm pretending here that integer literals have type `Int`, not type `Num a => a`.
 
-In Racket, as far as I know there's no partial application. A function that takes two arguments is different from a function that takes one argument and returns a function that takes one argument. So under PVAP, to choose between the two interpretations, you'd need something like:
+In Racket, as far as I know there's no implicit partial application. A function that takes two arguments is different from a function that takes one argument and returns a function that takes one argument. So under PVAP, to choose between the two interpretations, you'd need something like:
 
 ```racket
 (map (λ (a b) (λ (c) (+ a b c))) '(1 2) '(3 4)) ; [Int -> Int]
 (λ (cs) (map (λ (a b c) (+ a b c)) '(1 2) '(3 4) cs)) ; [Int] -> [Int]
 ```
 
-The Zip Calculus preserves partial application for fixed-arity functions, but not variadic ones. (More precisely, it has partial application for functions but not for variadic tuples.) The two interpretations would be written as
+The Zip Calculus preserves partial application for fixed-arity functions, but not variadic ones. (More precisely, it has partial application for functions but not for variadic tuples.) The two interpretations would be written along the lines of
 
 ```haskell
 nZipWith (\(a, b) c -> a + b + c) ([1,2], [3,4]) -- [Int -> Int]
@@ -451,7 +451,7 @@ Which is basically the same as the Racket version, apart from syntax.
 
 And "infinitary tuples" has to do something similar. For the list of functions, we'd pass "a function taking a row with two variables and returning a function" as the first argument. For the function on lists we'd pass "a function taking a row with three variables". I guess the system must lose Haskell's equivalence between `\a b -> ...` and `\a -> \b -> ...`.
 
-The typeclass solution to this is completely different. The inner function is the same for both interpretations, what changes is the initial "number of variadic arguments" argument.
+The typeclass solution to this is completely different. The inner function is the same for both interpretations, what changes is the initial "variadic count" argument.
 
 ```haskell
 nZipWith two (\a b c -> a + b + c) [1,2] [3,4] -- [Int -> Int]
@@ -462,7 +462,7 @@ This feels to me like the cleanest of the bunch. I introduced this initial argum
 
 How else might we solve this problem?
 
-One option is to assume that `nZipWith` will never want to return a list of functions. I don't love that solution, but [here's someone implementing it](https://github.com/effectfully-ou/sketches/tree/master/avoid-overlapping-recursive) for `appF` (which they call `liftAn`).
+One option is to assume that `nZipWith` will never want to return a list of functions. I don't love that solution, but [here's someone implementing it](https://github.com/effectfully-ou/sketches/tree/master/avoid-overlapping-recursive) for `appF` (which they call `liftAn`). I haven't checked how well it works.
 
 Something else that might work is to wrap the return value of the initial function in some singleton type.
 
@@ -475,7 +475,7 @@ This is kind of similar to "no partial applications", except you can still do pa
 
 And I don't know if this would be possible, but I could imagine using a type annotation to distinguish. If you need to annotate every call to the function, I think I'd rather just specify the number of arguments or something. But if you only need them when it's ambiguous that could be neat.
 
-As I mentioned in the last section, this isn't a problem for every variadic function. I think PVAP's uniform variadic functions don't have it. Beyond that I don't currently have a good sense of which functions will and won't.
+This isn't a problem for every variadic function. In the previous section, only about half the functions absolutely needed a variadic count, and this is why. (For `unzip`, it's about the ambiguity in `[((a, b), c)]`. Do you want to unzip one level to `([(a, b)], [c])`, or two to `(([a], [b]), [c])`?) Other functions had difficulty without the count, but I think that's for unrelated reasons. I think I have a decent intuitive sense of which functions will have this problem and which won't, but I couldn't give a brief description of it. Maybe something to do with matching structures between the initial argument and the rest of the type?
 
 ### Conclusion
 
