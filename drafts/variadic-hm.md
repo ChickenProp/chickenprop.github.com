@@ -433,7 +433,7 @@ zipWith (\a b c -> a + b + c) [1,2] [3,4]
 
 That uses the existing 2-ary `zipWith` function, which means it has type `[Int -> Int]`[^int-literals]. (Its value is `[(+ 4), (+ 6)]`.) We could instead have used the existing 3-ary `zipWith3`, and then it would have type `[Int] -> [Int]`. If we used a variadic function, what type would it have? All the papers I looked at had some way of answering the question.
 
-[^int-literals]: Pedantic note: I'm assuming here that integer literals have type `Int`, not type `Num a => a`.
+[^int-literals]: Pedantic note: I'm pretending here that integer literals have type `Int`, not type `Num a => a`.
 
 In Racket, as far as I know there's no partial application. A function that takes two arguments is different from a function that takes one argument and returns a function that takes one argument. So under PVAP, to choose between the two interpretations, you'd need something like:
 
