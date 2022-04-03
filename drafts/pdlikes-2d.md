@@ -2,7 +2,7 @@
 title: PD-alikes in two dimensions
 layout: draft
 ---
-Some time after writing [Classifying games like the prisoner's dilemma], I read a paper (I forget which) which pointed out that these games can be specified with just two numbers.
+Some time after writing [Classifying games like the prisoner's dilemma](http://reasonableapproximation.net/2020/07/04/classifying-games-like-prisoners-dilemma.html), I read a paper (I forget which) which pointed out that these games can be specified with just two numbers.
 
 Recall that they have the following payoff matrix:
 
