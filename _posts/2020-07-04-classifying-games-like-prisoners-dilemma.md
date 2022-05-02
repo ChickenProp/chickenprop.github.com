@@ -2,6 +2,7 @@
 title: "Classifying games like the Prisoner's Dilemma"
 layout: post
 lw_xpost: true
+tags: [game theory]
 external_comments:
   - name: LessWrong
     url: https://lesswrong.com/posts/KwbJFexa4MEdhJbs4/classifying-games-like-the-prisoner-s-dilemma

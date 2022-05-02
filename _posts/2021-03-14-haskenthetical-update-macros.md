@@ -2,6 +2,7 @@
 title: "Haskenthetical update: user-defined macros"
 layout: post
 lw_xpost: true
+tags: [haskenthetical, software]
 ---
 A while back I [wrote](http://reasonableapproximation.net/2020/05/19/haskenthetical.html) about Haskenthetical, a language that I'm implementing for fun. I'm still working on it, at least from time to time.
 
