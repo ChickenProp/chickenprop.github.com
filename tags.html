@@ -6,7 +6,7 @@ title: A Tagged Approximation
 
 <table>
   {% for tag in site.tags %}
-    <tr name="{{ tag[0] | slugify}}">
+    <tr id="{{ tag[0] | slugify}}">
       <td colspan="3"><h3>{{ tag[0] }}</h3></td>
     </tr>
     {% for post in tag[1] %}

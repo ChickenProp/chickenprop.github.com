@@ -7,6 +7,18 @@ layout: default
 
 <p><em>Posted on {{ page.date | date_to_long_string }}</em></p>
 
+{%if page.tags.size > 0 %}
+<p><em>
+  Tagged:
+  {% assign first_time = true %}
+  {% for tag in page.tags -%}
+    {%- unless first_time %}; {% endunless -%}
+    {%- assign first_time = false -%}
+    <a href="{{ site.url }}/tags.html/{{ tag | slugify }}">{{ tag }}</a>
+  {%- endfor %}
+</em></p>
+{% endif %}
+
 {%if page.external_comments.size > 0 %}
 <p><em>
   Comments elsewhere:
