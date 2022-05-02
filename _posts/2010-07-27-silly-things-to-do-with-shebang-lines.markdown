@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Silly Things to do with Shebang Lines
+tags: [software]
 ---
 *(Fri, 6 Dec 2013: Importing this post from its [original home as a gist](https://gist.github.com/ChickenProp/492976).)*
 
@@ -33,7 +34,7 @@ So I got to thinking about a program that would act like `env` for this purpose,
 
 Of course, such a program already exists: its name is shell. `sh` accepts the `-c` option to pass a shell expression on the command line. If this expression comes from a shebang line, word-splitting will be performed just like when typing directly into a shell. As a bonus (arguably), you even get to use things like pipelines, output redirection, shell built-in commands, and forking to the background, all in the shebang line of a script.
 
-There is one downside: normally with a shebang line you can think of the script name and any arguments as being implicitly appended. This no longer holds: `sh -c` takes an expression, not a program name, and expressions don't take arguments in the same way that programs do. Instead you need to access these arguments through shell variables `$0` through `$9`, `$*` and `$@`. 
+There is one downside: normally with a shebang line you can think of the script name and any arguments as being implicitly appended. This no longer holds: `sh -c` takes an expression, not a program name, and expressions don't take arguments in the same way that programs do. Instead you need to access these arguments through shell variables `$0` through `$9`, `$*` and `$@`.
 
 Alas, my first tests failed. It seems that `-c` requires its argument to be, well, a separate argument, so it's not much use with a shebang. (This is the case when `sh` is linked to Bash. Perhaps other shells are different, but if it doesn't work in Bash's `sh`-emulation mode, it probably can't be considered portable.)
 

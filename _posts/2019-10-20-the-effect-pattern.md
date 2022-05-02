@@ -2,6 +2,7 @@
 title: "The Effect pattern: Transparent updates in Elm"
 layout: post
 lw_xpost: true
+tags: [software]
 external_comments:
   - name: /r/elm
     url: https://www.reddit.com/r/elm/comments/dkou3c/the_effect_pattern_transparent_updates/

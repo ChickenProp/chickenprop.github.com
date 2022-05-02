@@ -2,6 +2,7 @@
 layout: post
 title: Your Opponent Can Precommit Too
 lw_xpost: true
+tags: [game theory, rationality]
 ---
 [Chicken](http://en.wikipedia.org/wiki/Chicken_%28game%29) is a well-known two-player game in which the players get inside different cars, drive towards each other, and hope that the other player swerves out of the way. If both players swerve, they both lose small amounts of charisma. If one player swerves and the other doesn't, the swerver loses a slightly larger amount of charisma, and the non-swerver gains a small amount. If neither player swerves, both lose a large (occasionally fatal) amount of HP, and a small amount of charisma.
 

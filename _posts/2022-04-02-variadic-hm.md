@@ -3,6 +3,13 @@ title: Variadic functions in Hindley Milner
 layout: post
 lw_xpost: true
 tags: [haskenthetical, software]
+external_comments:
+  - name: /r/ProgrammingLanguages
+    url: https://www.reddit.com/r/ProgrammingLanguages/comments/tx6g2w/variadic_functions_in_hindleymilner/
+  - name: /r/haskell
+    url: https://www.reddit.com/r/haskell/comments/tx6h1p/variadic_functions_in_hindleymilner/
+  - name: LessWrong
+    url: https://www.lesswrong.com/posts/5cYKLPj2AB6H4FtDA/variadic-functions-in-hindley-milner
 ---
 I [previously mentioned](http://reasonableapproximation.net/2021/03/14/haskenthetical-update-macros.html) an interest in adding variadic functions to Haskenthetical, the "Haskell with a Lisp syntax" I'm vaguely working on.
 

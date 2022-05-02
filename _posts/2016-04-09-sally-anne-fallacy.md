@@ -2,6 +2,7 @@
 title: The Sally-Anne Fallacy
 layout: post
 lw_xpost: true
+tags: [rationality]
 ---
 I'd like to coin a term. The **Sally-Anne fallacy** is the mistake of assuming that somone believes something, simply because that thing is true.[^outside]
 

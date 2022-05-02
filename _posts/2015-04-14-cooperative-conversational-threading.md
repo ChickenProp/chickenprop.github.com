@@ -2,6 +2,7 @@
 title: Cooperative conversational threading
 layout: post
 lw_xpost: true
+tags: [culture, rationality, practical]
 ---
 Sometimes at LW meetups, I'll want to raise a topic for discussion. But we're currently already talking about something, so I'll wait for a lull in the current conversation. But it feels like the duration of lull needed before I can bring up something totally unrelated, is longer than the duration of lull before someone else will bring up something marginally related. And so we can go for a long time, with the topic frequently changing incidentally, but without me ever having a chance to change it deliberately.
 

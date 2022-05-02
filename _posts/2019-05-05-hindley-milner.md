@@ -2,6 +2,7 @@
 title: A reckless introduction to Hindley-Milner type inference
 layout: post
 lw_xpost: true
+tags: [software]
 external_comments:
   - name: /r/haskell
     url: https://www.reddit.com/r/haskell/comments/cs7jyu/a_reckless_introduction_to_hindleymilner_type/

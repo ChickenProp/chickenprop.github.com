@@ -2,6 +2,7 @@
 title: "A command-line grammar of graphics"
 layout: post
 lw_xpost: true
+tags: [software]
 external_comments:
   - name: LessWrong
     url: https://lesswrong.com/posts/cs3GK3BJteLETyucu/a-command-line-grammar-of-graphics

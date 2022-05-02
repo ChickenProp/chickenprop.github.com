@@ -2,6 +2,7 @@
 title: "In my culture: the responsibilities of open source maintainers"
 layout: post
 lw_xpost: true
+tags: [culture, software]
 external_comments:
   - name: LessWrong
     url: https://lesswrong.com/posts/agHgwj3En5p6KHzz7/in-my-culture-the-responsibilities-of-open-source

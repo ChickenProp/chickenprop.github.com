@@ -2,9 +2,11 @@
 layout: post
 title: Fascists and Rakes
 lw_xpost: true
+tags: [culture, rationality]
+external_comments:
+  - name: LessWrong
+    url: http://lesswrong.com/r/discussion/lw/jfj/fascists_and_rakes/
 ---
-*[Cross-posted to Less Wrong.](http://lesswrong.com/r/discussion/lw/jfj/fascists_and_rakes/)*
-
 It feels like most people have a moral intuition along the lines of "you should let people do what they want, unless they're hurting other people". We follow this guideline, and we expect other people to follow it. I'll call this the permissiveness principle, that behaviour should be permitted by default. When someone violates the permissiveness principle, we might call them a fascist, someone who exercises control for the sake of control.
 
 And there's another moral intuition, the harm-minimising principle: "you should not hurt other people unless you have a good reason". When someone violates harm-minimisation, we might call them a rake, someone who acts purely for their own pleasure without regard for others.

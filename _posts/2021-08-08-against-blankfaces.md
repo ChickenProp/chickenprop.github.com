@@ -2,6 +2,7 @@
 title: 'Against "blankfaces"'
 layout: post
 lw_xpost: true
+tags: [culture]
 external_comments:
   - name: LessWrong
     url: https://www.lesswrong.com/posts/zcriHTKgKNehSSdyG/against-blankfaces

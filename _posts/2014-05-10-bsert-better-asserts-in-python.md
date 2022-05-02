@@ -1,6 +1,7 @@
 ---
 title: bsert - "Better" asserts in Python
 layout: post
+tags: [software]
 ---
 I like Python, but one of the things I dislike is the `assert` statement. Its simplest form provides no help if it fails:
 

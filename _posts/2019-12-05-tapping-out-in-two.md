@@ -2,6 +2,7 @@
 layout: post
 lw_xpost: true
 title: Tapping Out In Two
+tags: [culture, practical]
 _comment_list:
   - https://www.reddit.com/r/london/comments/7zdhzg/londons_property_market_worth_twice_the_combined/dunkdae/?context=3
   - https://www.reddit.com/r/london/comments/8x31yb/statement_from_london_pride_about_the_terf/e20mx72/

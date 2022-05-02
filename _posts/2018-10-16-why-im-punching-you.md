@@ -2,6 +2,7 @@
 title: "\"Now here's why I'm punching you...\""
 lw_xpost: true
 layout: post
+tags: [culture]
 ---
 Related: [be nice, at least until you can coordinate meanness](http://slatestarcodex.com/2016/05/02/be-nice-at-least-until-you-can-coordinate-meanness/).
 

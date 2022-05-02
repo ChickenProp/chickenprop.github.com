@@ -14,7 +14,7 @@ layout: default
   {% for tag in page.tags -%}
     {%- unless first_time %}; {% endunless -%}
     {%- assign first_time = false -%}
-    <a href="{{ site.url }}/tags.html/{{ tag | slugify }}">{{ tag }}</a>
+    <a href="{{ site.url }}/tags.html#{{ tag | slugify }}">{{ tag }}</a>
   {%- endfor %}
 </em></p>
 {% endif %}

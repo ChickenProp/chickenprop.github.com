@@ -2,6 +2,7 @@
 title: Pareto improvements are rarer than they seem
 layout: post
 lw_xpost: true
+tags: [game theory, economics]
 ---
 *this is surely not an original insight, but I haven't seen it before*
 

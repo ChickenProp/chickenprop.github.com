@@ -2,6 +2,7 @@
 title: "Chris Masterjohn on Coronavirus, Part 2"
 layout: post
 lw_xpost: true
+tags: [practical]
 ---
 **Update (May 8th 2020):** Some small updates to the interferon and vitamin D sections.
 

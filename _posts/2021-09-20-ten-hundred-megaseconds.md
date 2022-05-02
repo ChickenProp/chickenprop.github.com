@@ -2,6 +2,7 @@
 title: Ten Hundred Megaseconds
 layout: post
 lw_xpost: true
+tags: [culture]
 ---
 A megasecond, one million seconds, is 11 days and 14 hours. (13 hours, 46 minutes and 40 seconds, assuming no leap seconds.) About a week and a half. Ten megaseconds is 116 days. (115, plus 17:46:40.) A bit less than four months, a third of a year. A hundred megaseconds is 1,157 days. (Plus 9:46:40[^minutes-seconds].) Roughly three years and two months - it could be 61 or 62 days depending on leap years.
 

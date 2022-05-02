@@ -2,6 +2,7 @@
 title: Against boots theory
 layout: post
 lw_xpost: true
+tags: [economics]
 external_comments:
   - name: LessWrong
     url: https://www.lesswrong.com/posts/67tR3ZesBL3zfy8sA/against-boots-theory

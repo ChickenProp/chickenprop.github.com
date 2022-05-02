@@ -1,6 +1,7 @@
 ---
 title: "Unix pro tip: Print and pipe"
 layout: post
+tags: [software]
 ---
 Sometimes you (or at least, I) want to run a command for its output, but also want to pipe it through another command. For example, see the results of a `find` but also count how many hits it got. I've sometimes lamented that there's no easy way to do this. But the other day I had a flash of insight and figured out how:
 

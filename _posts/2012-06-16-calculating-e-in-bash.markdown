@@ -2,6 +2,7 @@
 layout: post
 title: Calculating e in bash
 explicit_math: true
+tags: [software]
 ---
 *(Fri, 6 Dec 2013: Importing this post from its [original home as a gist](https://gist.github.com/ChickenProp/2942612).)*
 

@@ -2,6 +2,7 @@
 layout: post
 title: "Walkthrough: Filing a UK self-assessment tax return"
 lw_xpost: true
+tags: [practical]
 external_comments:
   - name: /r/UKPersonalFinance
     url: https://www.reddit.com/r/UKPersonalFinance/comments/rqez89/walkthrough_filing_a_selfassessment_tax_return/

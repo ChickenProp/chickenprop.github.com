@@ -2,6 +2,7 @@
 title: "Chris Masterjohn on Coronavirus, Part 1"
 layout: post
 lw_xpost: true
+tags: [practical]
 ---
 **Update (April 28th 2020):** [Part 2](http://reasonableapproximation.net/2020/04/28/chris-masterjohn-on-coronavirus-part-2.html) published. Also a minor update to the ACE2 section.
 

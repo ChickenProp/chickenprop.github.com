@@ -2,7 +2,7 @@
 title: Specialized Labor and Counterfactual Compensation
 layout: post
 lw_xpost: true
-tags: [game theory]
+tags: [game theory, economics]
 ---
 I have three purposes in this post. The first is to review the formal game theory found in Robert Ellickson's *Order Without Law*. It's not a large part of the book, but it's the part that I'm most qualified to judge. Not that I'm a formal game theorist myself, but I'm closer to being one of them than to being any kind of social scientist, historian or lawyer. If his formal game theory is nonsense, that would suggest that I ought to discount his writing on other fields, too. (Perhaps not discount it completely, especially because formal game theory is outside his main area of study. Then again, lots of the book is outside his main area of study.)
 
