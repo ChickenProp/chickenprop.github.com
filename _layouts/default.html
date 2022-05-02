@@ -48,11 +48,6 @@
         <h1 class="header"><a href="/">A Reasonable Approximation</a></h1>
         <h3><a href="/archive.html">Latest posts</a></h3>
         <ul>
-          <li>
-            <small>
-              <a href="/archive.html">all</a> | <a href="/tags.html">tags</a>
-            </small>
-          </li>
           {% comment %}There's no easy way to increment an integer, so use hacky string-length method.{% endcomment %}
           {% assign shown = '' %}
           {% for post in site.posts %}
@@ -62,6 +57,11 @@
               <li><a href="{{ post.url }}">{{ post.title }}</a></li>
             {% endif %}
           {% endfor %}
+          <li>
+            <small>
+              <a href="/archive.html">all</a> | <a href="/tags.html">tags</a>
+            </small>
+          </li>
         </ul>
       </header>
       <section>
