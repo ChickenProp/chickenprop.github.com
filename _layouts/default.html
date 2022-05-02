@@ -46,26 +46,31 @@
     <div class="wrapper">
       <header>
         <h1 class="header"><a href="/">A Reasonable Approximation</a></h1>
-	<h3><a href="/archive.html">Latest posts</a></h3>
-	<ul>
-	  {% comment %}There's no easy way to increment an integer, so use hacky string-length method.{% endcomment %}
-	  {% assign shown = '' %}
-	  {% for post in site.posts %}
-	    {% if shown.size < 5 %}
-	      {% capture temp %}{{ shown }}*{% endcapture %}
+        <h3><a href="/archive.html">Latest posts</a></h3>
+        <ul>
+          <li>
+            <small>
+              <a href="/archive.html">all</a> | <a href="/tags.html">tags</a>
+            </small>
+          </li>
+          {% comment %}There's no easy way to increment an integer, so use hacky string-length method.{% endcomment %}
+          {% assign shown = '' %}
+          {% for post in site.posts %}
+            {% if shown.size < 5 %}
+              {% capture temp %}{{ shown }}*{% endcapture %}
               {% assign shown = temp %}
-	      <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-	    {% endif %}
-	  {% endfor %}
-	</ul>
+              <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
       </header>
       <section>
-	{{ content }}
+        {{ content }}
       </section>
       <footer>
-	<p><small><a href="/rss.xml">RSS</a>
-	    | <a href="https://admonymous.co/philh">Anonymous feedback</a>
-	    | <a href="http://philh.net">The author</a></small></p>
+        <p><small><a href="/rss.xml">RSS</a>
+            | <a href="https://admonymous.co/philh">Anonymous feedback</a>
+            | <a href="http://philh.net">The author</a></small></p>
         <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a>
             <br>using the Dinky theme (more or less)</small></p>
       </footer>
