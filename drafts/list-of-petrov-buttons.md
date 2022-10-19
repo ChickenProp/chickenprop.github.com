@@ -20,11 +20,11 @@ What happened: the Oxford party got notified of an incoming launch. We opened a 
 
 We made it through right up to the time limit with no one pressing either button. My understanding of what happened next is that the time on the Seattle laptop ticked down to zero. Someone there pressed the button, which they now believed to be disabled, in celebration. The time on the laptop and the time on the server were slightly out of sync. The button was not disabled. A nuke got launched.
 
-At any rate, Seattle convinced us that something along those lines had happen. We did not launch a retaliatory nuke. (This was still an option because we had one inbound.) We sent them a video putting our cake in the fire.
+At any rate, Seattle convinced us that something along those lines had happened. We did not launch a retaliatory nuke. (This was still an option because we had one inbound.) We sent them a video putting our cake in the fire.
 
 ### 2019, LessWrong (+ Raemon's house): Success
 
-125 people were [sent codes](https://lesswrong.com/posts/vvzfFcbmKgEsDBRHh/honoring-petrov-day-on-lesswrong-in-2019) that could be used to take down the front page of LessWrong.
+125 people were [sent codes](https://lesswrong.com/posts/vvzfFcbmKgEsDBRHh/honoring-petrov-day-on-lesswrong-in-2019) that could be used to take down the front page of LessWrong for 24 hours.
 
 Additionally, Raemon [held a party](https://lesswrong.com/posts/krgNxiooRfnP9L4ZD/follow-up-to-petrov-day-2019?commentId=zPvS7fDk2Jg5CSvQ6) at his house, where he gave everyone his codes and the party would end if LW got taken down.
 
@@ -40,19 +40,23 @@ User Chris_Leong fell for it, and the site went down.
 
 [Postmortem](https://lesswrong.com/posts/KQnYogkFTKc9wpWjY/postmortem-to-petrov-day-2020) from a LW admin. [Postmortem](https://lesswrong.com/posts/K7jrkyKArvxJ224GD/on-destroying-the-world) from Chris, with comments from the attacker.
 
-### 2021, LessWrong/EA Forum: Success
-
-This year, 100 members of LessWrong were [given codes](https://lesswrong.com/posts/EW8yZYcu3Kff2qShS/petrov-day-2021-mutually-assured-destruction) that could be used to take down the EA Forum, and [vice versa](https://forum.effectivealtruism.org/posts/hyWgdmHTNGSHM5ZaE/honoring-petrov-day-on-the-ea-forum-2021).
-
-No one did: [LW retrospective](https://lesswrong.com/posts/wgreyTFhrNmgJBjMD/petrov-day-retrospective-2021), [EAF retrospective](https://forum.effectivealtruism.org/posts/3srgcFcDLpXWPsm8P/petrov-day-retrospective-2021).
-
 ### 2021, Austin/Ottawa: Success
 
 I don't think much info is publicly available, but it [sounds like](https://lesswrong.com/posts/siaqKf77SNNyu8t5H/austin-petrov-day-and-potluck?commentId=ngavKjhjpKEfxrArK) a similar setup to Oxford/Seattle, perhaps without false alarms. No one pressed the button.
 
+### 2021, LessWrong/EA Forum: Success
+
+This year, 100 members of LessWrong were [given codes](https://lesswrong.com/posts/EW8yZYcu3Kff2qShS/petrov-day-2021-mutually-assured-destruction) that could be used to take down the EA Forum, and [vice versa](https://forum.effectivealtruism.org/posts/hyWgdmHTNGSHM5ZaE/honoring-petrov-day-on-the-ea-forum-2021). (This year they'd go down for the rest of the day, not for 24 full hours.)
+
+No one did: [LW retrospective](https://lesswrong.com/posts/wgreyTFhrNmgJBjMD/petrov-day-retrospective-2021), [EAF retrospective](https://forum.effectivealtruism.org/posts/3srgcFcDLpXWPsm8P/petrov-day-retrospective-2021).
+
 ### 2022, London: Success
 
 This was at the ACX Schelling meetup, and most participants didn't know it was happening. I bought a button that I carried around with me, and a cake with Stanislav Petrov's face on it that I hid in my bag. (I didn't want it sitting out in case someone ate it without realizing, or decided it would be funny to mess with the game.)
+
+<a href="//reasonableapproximation.net/images/list-of-petrov-buttons/button.jpg"><img src="//reasonableapproximation.net/images/list-of-petrov-buttons/button.jpg" alt="A button" style="width: 45%"></a>
+<a href="//reasonableapproximation.net/images/list-of-petrov-buttons/cake-boxed.jpg"><img src="//reasonableapproximation.net/images/list-of-petrov-buttons/cake-boxed.jpg" alt="A cake in a box" style="width: 45%"></a>
+</div>
 
 Initially the button was locked. We had lightning talks planned, and I gave the first one. I opened with something along the lines of: "I have a cake with me. I think it looks very nice, and I'm looking forward to sharing it with you all. However! I also have a button. If anyone presses the button, I will destroy the cake. This isn't a joke, this isn't a trick, I'm not going to reward you, I'm just going to destroy the cake. *puts mic down, unlocks button, picks mic back up* The button is now live. You may be wondering why I'm doing this..."
 
@@ -64,11 +68,14 @@ Ultimately, no one pressed the button. One person stroked it, and one person hel
 
 After 2 1/2 hours, I locked the button back up and brought out the cake. Once we'd started eating it, some people wanted to press the button so I unlocked it again. I didn't tell anyone this until afterwards, but it's a very satisfying button to press.
 
-It seems a handful of people didn't think there was actually a cake, which I'm a little sad about. (It's unclear how many people, partly because "the cake is a lie" is a meme, but one person explicitly said they thought that.) That's not the kind of lie I'd tell. Not that most people had any reason to think that about me, but I'm still a little sad about it.
+It seems a handful of people didn't think there was actually a cake, which I'm a little sad about. (It's unclear how many people, partly because "the cake is a lie" is a meme. But one person explicitly told me they thought that.) That's not the kind of lie I'd tell. Not that most people had any reason to think that about me, but I'm still a little sad about it.
+
+<a href="//reasonableapproximation.net/images/list-of-petrov-buttons/votes.jpg"><img src="//reasonableapproximation.net/images/list-of-petrov-buttons/votes.jpg" alt="A whiteboard with votes" style="width: 45%"></a>
+<a href="//reasonableapproximation.net/images/list-of-petrov-buttons/cake-cut.jpg"><img src="//reasonableapproximation.net/images/list-of-petrov-buttons/cake-cut.jpg" alt="A whiteboard with votes" style="width: 45%"></a>
 
 ### 2022, LessWrong: Failure
 
-[The plan](https://lesswrong.com/posts/KTEciTeFwL2tTujZk/lw-petrov-day-2022-monday-9-26) was that this year, pretty much any existing LW user with non-negative karma would be able to press the button. But only high-karma users would be able to do so all day; every hour, the karma threshold needed to press it would lower. Also, unlike previous years, someone who pressed the button would remain anonymous.
+[The plan](https://lesswrong.com/posts/KTEciTeFwL2tTujZk/lw-petrov-day-2022-monday-9-26) was that this year, pretty much any existing LW user with non-negative karma would be able to press the button. (Which again would only take the site down for the rest of the day.) But only high-karma users would be able to do so all day; every hour, the karma threshold needed to press it would lower. Also, unlike previous years, someone who pressed the button would remain anonymous.
 
 What actually happened was that users with exactly 0 karma were also able to press the button from the start of the day. One of them did, after 2:55 (but only 1:50 after the code was actually published). Habryka figured that out without learning their identity, and the site got reset for a do-over.
 
@@ -76,7 +83,7 @@ Then the whole site went down briefly when someone tried to fix a different Petr
 
 And then [finally](https://lesswrong.com/posts/ytuLbHbdQweAwGk9L/petrov-day-retrospective-2022) it went down after 21:33. Presumably this time the button was pressed by someone who was supposed to be able to. There were 1,504 such users.
 
-I had weakly bet [on Manifold](https://manifold.markets/Multicore/what-of-petrov-day-will-elapse-befo) that the site would go down before eight hours were up. (Specifically I bet the market down from 34% to 30%.) Despite the bug I consider my prediction to have been wrong. I'm happy about that.
+I had bet [on Manifold](https://manifold.markets/Multicore/what-of-petrov-day-will-elapse-befo) that the site would go down before eight hours were up. (Specifically I bet the market down from 34% to 30%.) Despite the bug I consider my prediction to have been wrong. I'm happy about that.
 
 ### 2022, St Louis: Success
 
