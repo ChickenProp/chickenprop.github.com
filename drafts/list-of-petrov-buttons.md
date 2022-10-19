@@ -56,7 +56,6 @@ This was at the ACX Schelling meetup, and most participants didn't know it was h
 
 <a href="//reasonableapproximation.net/images/list-of-petrov-buttons/button.jpg"><img src="//reasonableapproximation.net/images/list-of-petrov-buttons/button.jpg" alt="A button" style="width: 45%"></a>
 <a href="//reasonableapproximation.net/images/list-of-petrov-buttons/cake-boxed.jpg"><img src="//reasonableapproximation.net/images/list-of-petrov-buttons/cake-boxed.jpg" alt="A cake in a box" style="width: 45%"></a>
-</div>
 
 Initially the button was locked. We had lightning talks planned, and I gave the first one. I opened with something along the lines of: "I have a cake with me. I think it looks very nice, and I'm looking forward to sharing it with you all. However! I also have a button. If anyone presses the button, I will destroy the cake. This isn't a joke, this isn't a trick, I'm not going to reward you, I'm just going to destroy the cake. *puts mic down, unlocks button, picks mic back up* The button is now live. You may be wondering why I'm doing this..."
 
