@@ -1,7 +1,8 @@
 ---
 title: A list of Petrov buttons
-layout: draft
+layout: post
 tags: [game theory]
+lw_xpost: true
 ---
 A thing people sometimes do in relation to Petrov day, is to have a button. And if anyone presses the button, something negative happens.
 
