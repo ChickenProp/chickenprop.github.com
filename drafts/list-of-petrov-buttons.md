@@ -1,6 +1,7 @@
 ---
 title: A list of Petrov buttons
 layout: draft
+tags: [game theory]
 ---
 A thing people sometimes do in relation to Petrov day, is to have a button. And if anyone presses the button, something negative happens.
 
@@ -76,7 +77,7 @@ It seems a handful of people didn't think there was actually a cake, which I'm a
 
 [The plan](https://lesswrong.com/posts/KTEciTeFwL2tTujZk/lw-petrov-day-2022-monday-9-26) was that this year, pretty much any existing LW user with non-negative karma would be able to press the button. (Which again would only take the site down for the rest of the day.) But only high-karma users would be able to do so all day; every hour, the karma threshold needed to press it would lower. Also, unlike previous years, someone who pressed the button would remain anonymous.
 
-What actually happened was that users with exactly 0 karma were also able to press the button from the start of the day. One of them did, after 2:55 (but only 1:50 after the code was actually published). Habryka figured that out without learning their identity, and the site got reset for a do-over.
+What actually happened was that users with exactly 0 karma were also able to press the button from the start of the event. One of them did, two hours fifty-five minutes after it began (but only 1:50 after the password needed to press the button was actually published). Habryka figured that out without learning their identity, and the site got reset for a do-over.
 
 Then the whole site went down briefly when someone tried to fix a different Petrov-day-related bug.
 
