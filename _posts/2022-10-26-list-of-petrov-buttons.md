@@ -3,6 +3,9 @@ title: A list of Petrov buttons
 layout: post
 tags: [game theory]
 lw_xpost: true
+external_comments:
+  - name: LessWrong
+    url: https://lesswrong.com/posts/gLpYbWzqL2jArMepD/a-list-of-petrov-buttons
 ---
 A thing people sometimes do in relation to Petrov day, is to have a button. And if anyone presses the button, something negative happens.
 
@@ -89,6 +92,12 @@ I had bet [on Manifold](https://manifold.markets/Multicore/what-of-petrov-day-wi
 ### 2022, St Louis: Success
 
 I don't know much detail and don't know if it's been written about publicly. But what I'm told is that if anyone had pressed the button, the party would have been over and everyone would have had to go home. No one pressed the button.
+
+### 2022, Champaign-Urbana: Success
+
+LW user benjamincosman [says](https://www.lesswrong.com/posts/gLpYbWzqL2jArMepD/a-list-of-petrov-buttons?commentId=XR5WDGvZaJBBWuNmS):
+
+> I ran a very small Petrov Day gathering this year in Champaign-Urbana. (We had 5-6 people I think?) I put a Staples "Easy" button on the table and said if anyone presses it then the event ends immediately and we all leave without talking. (Or that I would do so anyway, obviously I couldn't make anyone else.) No one pressed the button.
 
 ### Things I'm not counting
 
