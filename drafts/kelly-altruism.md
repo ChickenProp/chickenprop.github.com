@@ -2,7 +2,7 @@
 title: On Kelly and altruism
 layout: draft
 tags: rationality
-explicit-math: true
+explicit_math: true
 ---
 There was a [twitter thread](https://twitter.com/SBF_FTX/status/1337250686870831107) that triggered some confusion amongst myself and some other people in a group chat I'm in.[^author]
 
