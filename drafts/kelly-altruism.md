@@ -2,6 +2,7 @@
 title: On Kelly and altruism
 layout: draft
 tags: rationality
+explicit-math: true
 ---
 There was a [twitter thread](https://twitter.com/SBF_FTX/status/1337250686870831107) that triggered some confusion amongst myself and some other people in a group chat I'm in.[^author]
 
@@ -81,35 +82,35 @@ So that's convenient. I dunno if it's a coincidence or what, but it's useful. If
 
 To me, Kelly is about getting that good thing. If you have a utility function, just place whatever bet size maximizes expected utility. If instead you want to get that good thing, Kelly tells you how to do that, under a certain betting framework. And the way to do that is to place bets that maximize expected log-money.
 
-If you have a utility function and it's proportional to log-money, then you'll happen to get the good thing; but far more important than that, will be the fact that you're maximizing expected log-money. If you bet according to a different utility function, then a Kelly bettor will almost certainly be richer than you over time, but you're sitting on a bigger pile of expected utility, which is what you care about.
+If you have a utility function and it's proportional to log-money, then you'll happen to get the good thing; but far more important than that, will be the fact that you're maximizing expected log-money. If you bet according to a different utility function, then a Kelly bettor will almost certainly be richer than you over time; but you're (for now) sitting on a bigger pile of expected utility, which is what you care about.
 
 Or maybe you want to mix things up a bit. For example, you might care a bit more about your average returns, and a bit less about being the richest person in the room, than a Kelly bettor. Then you could bet something above the Kelly amount, but less than your full bankroll. You'll almost certainly end up with less than the Kelly bettor, but *on average* you'll still earn more than them.
 
-I'm not sure what to call this good thing. I'm going to go with "Kelly-optimizing" one's bankroll. Though I want to emphasize that Kelly-optimization might be a meaningful concept in situations unlike the betting framework we're currently talking about. (For example, if you might be offered a second bet before the first pays off.)
+I'm not sure what to call this good thing. I'm going to go with "Kelly-optimizing" one's bankroll. I want to clarify a few things about Kelly-optimization:
 
-I also want to emphasize that although Kelly-optimization and maximizing expected log-money are equivalent in that particular framework, they might not be equivalent in other frameworks.
+* It might be a meaningful concept in situations unlike the betting framework we're currently talking about. In those situations, the name might be confusing, because what "Kelly betting" normally means might not be a thing you can do - or it might be a thing you can do, but it doesn't Kelly-optimize.
 
-(In a framework where they do differ, might one have a utility function that's maximized in expectation by Kelly-optimizing one's bankroll? I think the answer is "yes but it would be weird and for our current purposes we can say no".)
+* In some situations, different good things about Kelly optimization might not all come together. You might need to choose between them.
+
+* Similarly, in some situations, Kelly-optimization might not come from maximizing expected log-money. (When it doesn't, might one still have a utility function that's maximized in expectation by Kelly-optimizing one's bankroll? I think the answer is roughly "yes but it would be weird and for our current purposes we can say no".)
 
 ### On the tweets
 
 So in this lens, the author's argument seems confused. "My utility function is linear in money, so Kelly says" no it doesn't, if you have a utility function or if you're maximizing the expected value of anything then Kelly can go hang.
 
-...but not everyone thinks about Kelly the same way I do, and I don't necessarily think that's wrong of them.
+...but not everyone thinks about Kelly the same way I do, and I don't necessarily think that's wrong of them. So, what are some non-confused possibilities?
 
-Anyway, what are some non-confused possibilities?
+One is that the author has a utility function that's roughly linear in his own wealth. Or, more likely, *roughly values* money in a way that's roughly linear in his own wealth, such that Kelly-optimizing isn't optimizing according to his preferences. And then yeah I think the argument basically goes through. If you want to maximize expected log of "money donated to charity", then yes, that will look a lot like maximizing expected "money you personally donate to charity". This has nothing to do with Kelly, according to me.
 
-One is that the tweeter has a utility function that's roughly linear in his own wealth. Or, more likely, *roughly values* money in a way that's roughly linear in his own wealth, such that Kelly-optimizing isn't optimizing according to his preferences. And then yeah I think the argument basically goes through. If you want to maximize expected log of "money donated to charity", then yes, that will look a lot like maximizing expected "money you personally donate to charity".
-
-Another is that the tweeter wants to Kelly-optimize the amount of money he can donate. In that case I think Kelly *doesn't care* that the backdrop is trillions of dollars. Like, if your bankroll is $1M, and there's $1T out in the world, but you can't access that $1T... you're still Kelly-optimizing the total amount of money in the world by Kelly betting on your own bankroll.
+Another is that the author wants to Kelly-optimize the amount of money he can donate. In that case I think it doesn't matter that the backdrop is trillions of dollars. To Kelly-optimize the total amount donated to charity, he should Kelly-optimize the amount he personally donates.
 
 But here we come to the "everyone contributing to the cause" argument.
 
 Suppose you have two people who each want to Kelly-optimize their own bankroll. Alice gets offered a handful of bets, and Kellies them. Bob gets offered a handful of bets, and Kellies them.
 
-And now suppose they both want to Kelly-optimize their total bankroll. So they combine them into one. Whenever Alice gets a bet, she Kellies according to *their combined bankrolls*. Whenever Bob gets a bet, he Kellies according to *their combined bankrolls*. And in the end, their total bankroll will almost certainly be higher than the sum of the individual bankrolls, in the first case.
+And now suppose instead they both want to Kelly-optimize their total bankroll. So they combine them into one. Whenever Alice gets a bet, she Kellies according to *their combined bankrolls*. Whenever Bob gets a bet, he Kellies according to *their combined bankrolls*. And in the end, their total bankroll will almost certainly be higher than the sum of the individual bankrolls, in the first case.
 
-Really though, I think the value here doesn't come from combining their money but from combining their bets. I've assumed the combined bankroll gets twice as many bets as either of the individual ones. That might not be the case - perhaps one bet is offered per day, anyone who wants can accept it, and it must be accepted in the morning and pays out in the afternoon. In that case teaming up doesn't help.
+But to be clear, I think the value doesn't come from combining their money but from combining their bets. I've assumed the combined bankroll gets twice as many bets as either of the individual ones. That might not be the case - perhaps one bet is offered per day, anyone who wants can accept it, and it must be accepted in the morning and pays out in the afternoon. In that case teaming up doesn't help.
 
 But I do think something like this, combined with reasonable assumptions about charity and how bets are offered, suggests betting above Kelly. Like, maybe Alice and Bob don't want to literally combine their bankrolls, but they do trust each other pretty well and are willing to give or lend each other moderate amounts of money, and the two of them encounter different bets. Then I think to Kelly-optimize their individual or combined bankrolls, each of them should probably be betting above Kelly.
 
