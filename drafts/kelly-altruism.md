@@ -118,6 +118,6 @@ Or maybe Alice doesn't encounter bets (or can't act on them or doesn't trust her
 
 ### Conclusion
 
-So was the tweeter's math right? Man, I dunno. I'm inclined to say something like, "not as written but he was hand waving in the right directions"? Such that if he'd tried to be rigorous I expect that he'd have succeeded, though I also expect he'd have used the word "Kelly" in ways that I'd say were confusing.
+So was the author's math right? Man, I dunno. I'm inclined to say something like, "not as written but he was hand waving in the right directions"? Such that if he'd tried to be rigorous I expect that he'd have succeeded, though I also expect he'd have used the word "Kelly" in ways that I'd say were confusing.
 
 In any case I think *I* understand what's going on better than I used to. Hopefully you do, too.
