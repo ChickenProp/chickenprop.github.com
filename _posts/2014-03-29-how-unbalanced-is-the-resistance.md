@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How unbalanced is The Resistance?
+comments: true
 ---
 I'm a fan of the board/card game [The Resistance](http://en.wikipedia.org/wiki/The_Resistance_%28game%29), but I feel like the base game is significantly unbalanced in favour of the spies. I think that if the spies play well, they will usually win regardless of how well the resistance plays; and I think that playing well simply involves not acting like spies. (To be precise, I think that if the spies always act in public the way they would if they weren't spies, the game becomes very easy for them; they don't need to execute complicated plots to try to throw suspicion on an innocent, and they don't need to subtly communicate with each other about which of them is going to throw a failure card down on this mission. This isn't necessarily easy for them, but it's fairly simple in principle, and I expect it becomes easier with practice.)
 

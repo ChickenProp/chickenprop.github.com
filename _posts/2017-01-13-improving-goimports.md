@@ -2,6 +2,7 @@
 layout: post
 title: Improving goimports
 tags: [software]
+comments: true
 ---
 
 *Epistemic status: Pure dilettantism. I have never used Go. This might make me unqualified to say what I'm about to say. But it's okay, because I use the word "seems" a lot.*

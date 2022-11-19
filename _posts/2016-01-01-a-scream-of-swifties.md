@@ -1,6 +1,7 @@
 ---
 title: A Scream of Swifties
 layout: post
+comments: true
 ---
 *Inspired by [Slate Star Codex](http://slatestarcodex.com/2015/10/02/swifties-3-the-race-is-not-to-the-swifty/)*
 

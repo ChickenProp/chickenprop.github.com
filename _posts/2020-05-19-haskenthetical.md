@@ -3,6 +3,7 @@ title: Haskenthetical
 layout: post
 lw_xpost: true
 tags: [haskenthetical, software]
+comments: true
 external_comments:
   - name: LessWrong
     url: https://lesswrong.com/posts/LCcmgwChdidMjhu9d/short-essays-on-various-things-i-ve-watched

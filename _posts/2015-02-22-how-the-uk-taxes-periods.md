@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How the UK taxes periods
+comments: true
 ---
 *Content note: politics, gender politics.*
 

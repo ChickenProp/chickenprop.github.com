@@ -1,6 +1,7 @@
 ---
 title: The Mathematics of Matched Betting
 layout: post
+comments: true
 ---
 I've been doing a little bit of matched betting lately[^lately]. The idea is that you place two opposite bets on the same event, calibrated so that your profit will be the same no matter which bet wins. If you do this entirely with your own money, your profit will (under reasonable assumptions) be negative. But bookmakers often offer free bets; you can use matched betting to extract most of the amount of that free bet as actual money.
 

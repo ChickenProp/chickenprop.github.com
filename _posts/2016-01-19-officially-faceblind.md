@@ -1,6 +1,7 @@
 ---
 title: Officially faceblind
 layout: post
+comments: true
 ---
 I realized a few years ago that I was at least somewhat faceblind/[prosopagnosic](https://en.wikipedia.org/wiki/Prosopagnosia). A while back I took an [online test](http://www.bbk.ac.uk/psychology/psychologyexperiments/experiments/facememorytest/startup.php) out of curiousity, and scored low. They said that if I was in London and interested in further tests, I should leave my email address. A few days ago I went in for those tests, and now I have a PhD student (Katie) also telling me I'm faceblind. Which makes it official, I guess.
 
