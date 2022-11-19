@@ -4,6 +4,9 @@ layout: post
 lw_xpost: true
 tags: [game theory, economics]
 comments: true
+external_comments:
+  - name: Hacker News
+    url: https://news.ycombinator.com/item?id=9494255
 ---
 Suppose you and I are farmers, owning adjacent fields. One day you have a brilliant idea. If we dig a ditch from the nearby river, between our fields, then irrigating our fields becomes a lot less work. It would cost two [utils](https://en.wikipedia.org/wiki/Utility) to dig the ditch - one utilon each - and we'd get five utils each from its existence.
 
