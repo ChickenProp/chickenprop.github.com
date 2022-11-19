@@ -1,9 +1,9 @@
 ---
 title: "Blog meta: disabling comments"
-layout: draft
+layout: post
 comments: true
 ---
-I don't know how many people read this blog[^analytics], but it doesn't receive many comments. This is the 54th post on it and it only has 31 comments on 16 posts. I'm not currently signed in to disqus and signing in is enough friction that there are some comments from years ago that I meant to reply to, and a spam comment that I intended to delete.
+I don't know how many people read this blog[^analytics], but it doesn't receive many comments. This is the 54th post on it, and only 16 of those have comments, 31 in total. I'm not currently signed in to disqus and signing in is enough friction that there are some comments from years ago that I meant to reply to, and a spam comment that I intended to delete.
 
 [^analytics]: I do have google analytics, but I haven't looked at it in years and I don't know if it still works.
 
@@ -11,9 +11,9 @@ I also noticed at some point that disqus inserts ads. I have an ad blocker on my
 
 So I'm disabling comments. I don't actually want to lose the comments that have been written (except the spam one), so for now I'm just going to disable disqus everywhere except the posts that already have comments (and except except for the post that only has one comment which is spam). I'll leave it on this post too, just in case. In future maybe I'll recreate the comment threads in the post bodies or something.
 
-In case you do want to comment on something: at the bottom of many posts I have links to external comment threads. Almost everything I write these days gets crossposted to LessWrong,[^lw-xpost] even if it's not very relevant to that site, so there's generally a comment thread there you can use. I also often link to things on reddit and very occasionally Hacker News. However, I only add these links if there are actually any comments on them, and it might take me a few days. [Against boots theory](//reasonableapproximation.net/2020/09/14/against-boots-theory.html) was the first post I did this with, I've likely missed some links on posts from before then.
+In case you do want to comment on something, somewhere I'll see it: at the bottom of many posts I have links to external comment threads. Almost everything I write these days gets crossposted to LessWrong,[^lw-xpost] even if it's not very relevant to that site, so there's generally a comment thread there you can use. I also often link to things on reddit. However, I only add these links if there are actually any comments on them, and it might take me a few days. [Against boots theory](https://reasonableapproximation.net/2020/09/14/against-boots-theory.html) was the first post I did this with, I've likely missed some links on posts from before then.
 
-If there are no such links but you want to leave a comment somewhere I'm likely to see it:
+If there are no such links,
 
 * You could try to find places I've crossposted. My [LW](https://www.lesswrong.com/users/philh) and [reddit](https://www.reddit.com/user/philh/submitted/) profiles might help, especially if it's recent. (LW crossposting is automatic, it should happen within an hour of me publishing but not always.)
 
