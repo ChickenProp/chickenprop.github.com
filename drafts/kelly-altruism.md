@@ -145,9 +145,7 @@ The framework in question is:
 
 ### Appendix Ⅱ: technical definition
 
-<p>
-In Kelly's original paper, he defines the growth rate of a strategy \( λ \) as
-</p>
+In Kelly's [original paper](https://www.princeton.edu/~wbialek/rome/refs/kelly_56.pdf), he defines the growth rate of a strategy \\( λ \\) as
 
 <div>
 \[ G(λ) = \lim_{n → ∞} {1 \over n} \log {V_n(λ) \over V_0(λ)} \]
