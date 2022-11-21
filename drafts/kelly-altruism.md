@@ -2,7 +2,6 @@
 title: On Kelly and altruism
 layout: draft
 tags: rationality
-explicit_math: true
 ---
 *One-sentence summary: Kelly is not about optimizing a utility function; in general I recommend you either stop pretending you have one of those, or stop talking about Kelly.*
 
@@ -16,23 +15,23 @@ The relevant tweets are these (I've omitted some):
 
 > 4) There are a number of ways to approach this question, but to start: what do you want, in the first place?  What’s your utility function?
 
-> 5) In other words--how cool would it be to make $10,000?  How about $1,000,000--is that 100 times as good?
+> 5) In other words--how cool would it be to make \\$10,000?  How about \\$1,000,000--is that 100 times as good?
 >
 > For most people the answer is ‘no, it’s more like 10 times as good’.  This is because of decreasing marginal utility of money.
 
-> 8) One reasonable utility function here is U = log(W): approximating your happiness as logarithmic in your wealth.  That would mean going from $10k to $100k is worth about as much as going from $100k to $1m, which feels…. reasonable?
+> 8) One reasonable utility function here is U = log(W): approximating your happiness as logarithmic in your wealth.  That would mean going from \\$10k to \\$100k is worth about as much as going from \\$100k to \\$1m, which feels…. reasonable?
 >
 > (this is what the Kelly Criteria assumes)
 
-> 9) So, if you have $100k, Kelly would suggest you risk half of it ($50k).  This is a lot!  But also 75% odds are good.
+> 9) So, if you have \\$100k, Kelly would suggest you risk half of it (\\$50k).  This is a lot!  But also 75% odds are good.
 
 > 10) What about a wackier bet?  How about you only win 10% of the time, but if you do you get paid out 10,000x your bet size?  (For now, let’s assume you only get to do this bet once.)
 
-> 11) Kelly suggests you only bet $10k: you’ll almost certainly lose.  And if you kept doing this much more than $10k at a time, you’d probably blow out.
+> 11) Kelly suggests you only bet \\$10k: you’ll almost certainly lose.  And if you kept doing this much more than \\$10k at a time, you’d probably blow out.
 >
 > That this bet is great expected value; you win 1,000x your bet size, way better than the first one!  It’s just very risky.
 
-> 12) In many cases I think $10k is a reasonable bet.  But I, personally, would do more.  I’d probably do more like $50k.
+> 12) In many cases I think \\$10k is a reasonable bet.  But I, personally, would do more.  I’d probably do more like \\$50k.
 >
 > Why?  Because ultimately my utility function isn’t really logarithmic.  It’s closer to linear.
 
@@ -40,13 +39,13 @@ The relevant tweets are these (I've omitted some):
 >
 > And the scale of the world’s problems is…. Huge.
 
-> 14) 400,000 people die of malaria each year.  It costs something like $5k to save one person from malaria, or $2b total per year.  So if you want to save lives in the developing world, you can blow $2b a year just on malaria.
+> 14) 400,000 people die of malaria each year.  It costs something like \\$5k to save one person from malaria, or \\$2b total per year.  So if you want to save lives in the developing world, you can blow \\$2b a year just on malaria.
 
 > 15) And that’s just the start.  If you look at the scale of funds spent on diseases, global warming, emerging technological risk, animal welfare, nuclear warfare safety, etc., you get numbers reaching into the trillions.
 
 > 16) So at the very least, you should be using that as your baseline: and kelly tells you that when the backdrop is trillions of dollars, there’s essentially no risk aversion on the scale of thousands or millions.
 
-> 17) Put another way: if you’re maximizing EV(log(W+$1,000,000,000,000)) and W is much less than a trillion, this is very similar to just maximizing EV(W).
+> 17) Put another way: if you’re maximizing EV(log(W+\\$1,000,000,000,000)) and W is much less than a trillion, this is very similar to just maximizing EV(W).
 
 > 18) Does this mean you should be willing to accept a significant chance of failing to do much good sometimes?
 >
@@ -54,9 +53,9 @@ The relevant tweets are these (I've omitted some):
 
 > 19) And more generally, if you look at everyone contributing to the cause as one portfolio--which is certainly true from the perspective of the child dying from malaria--they aren’t worried about who it was that funded their safety.
 
-> 22) So given all that, why not bet all $100k?  Why only $50k?
+> 22) So given all that, why not bet all \\$100k?  Why only \\$50k?
 >
-> Because if you bet $100k and lose, you can never bet again.  And to the extent you think you have future ways to provide value that are contingent on having some amount of funding, it can be important to keep that.
+> Because if you bet \\$100k and lose, you can never bet again.  And to the extent you think you have future ways to provide value that are contingent on having some amount of funding, it can be important to keep that.
 
 The thing we were trying to figure out was, is his math right? And here's my current understanding of that matter.
 
@@ -72,7 +71,7 @@ If you happen to have a utility function, and that utility function increases li
 
 (I don't think any human has a utility function.[^so-much-the-worse] I think it can be a useful shorthand to talk as though we do, sometimes. I think this is not one of those times. Especially not a utility function that can be expressed purely in terms of money.)
 
-[^so-much-the-worse]: I think I've seen some people, who agree humans don't have utility functions, go on to say: "and so much the worse for utility functions! If humans don't have them we should find something more useful to talk about." My take is: "and so much the worse for humans! If we don't have utility functions we're missing out."
+[^so-much-the-worse]: I think I've seen some people, who agree humans don't have utility functions, go on to say: "and so much the worse for utility functions! If humans don't have them we should find something more useful to talk about." My take is: "and so much the worse for humans! If we don't have utility functions we're missing out." But, that doesn't mean we have them.
 
 The (something good) is that, over a long enough time, you'll almost certainly get more money than someone else who was offered the same bets as you and started with the same amount of money but regularly bet different amounts on them. But this is NOT the same thing as maximizing your average (AKA "expected") amount of money over time; "almost certainly" hides a small number of outcomes that make a lot of difference to that calculation.
 
@@ -80,7 +79,7 @@ This sounds like a very good thing to me! Like, do I want to almost certainly be
 
 (Oh, also, I don't need to choose whether I'm getting that good thing for money or log-money or what. It's the same for any monotonically increasing function of money.)
 
-Separately from that: yeah, I think going from $10k to $100k sounds about as good as going from $100k to $1m. So if we're in a situation where it makes sense to pretend I have a utility function, then it's probably reasonable to pretend my supposed utility function is logarithmic in money.
+Separately from that: yeah, I think going from \\$10k to \\$100k sounds about as good as going from \\$100k to \\$1m. So if we're in a situation where it makes sense to pretend I have a utility function, then it's probably reasonable to pretend my supposed utility function is logarithmic in money.
 
 So that's convenient. I dunno if it's a coincidence or what, but it's useful. If we tried to pretend my utility function was linear in money then I'd be sad about losing that good thing, and then it would be hard to keep pretending.
 
@@ -90,7 +89,7 @@ If you have a utility function and it's proportional to log-money, then you'll h
 
 Or maybe you want to mix things up a bit. For example, you might care a bit more about your average returns, and a bit less about being the richest person in the room, than a Kelly bettor. Then you could bet something above the Kelly amount, but less than your full bankroll. You'll almost certainly end up with less than the Kelly bettor, but *on average* you'll still earn more than them.
 
-I'm not sure what to call this good thing. I'm going to go with "rank-optimizing" one's bankroll, focusing on the "be the richest person in the room" part; though I worry that it suggests competing with other people, where really you're competing with counterfactual versions of yourself. See Appendix Ⅱ for a technical definition of rank-optimization; also, I want to clarify a few things about it:
+I'm not sure what to call this good thing. I'm going to go with "rank-optimizing" one's bankroll, focusing on the "be the richest person in the room" part; though I worry that it suggests competing with other people, where really you're competing with counterfactual versions of yourself. See Appendix Ⅱ for an (admittedly flawed) technical definition of rank-optimization; also, I want to clarify a few things about it:
 
 * It might be a meaningful concept in situations unlike the betting framework we're currently talking about.
 
@@ -126,7 +125,7 @@ I'm not super confident about this part, so I'm leaving it out of the one-senten
 
 ### Conclusion
 
-So was the author's math right? Man, I dunno. I'm inclined to say no; he was hand waving in almost the right directions, but I currently think that if he'd tried to formalize his hand waving he'd have made a key mistake. That being: I think that the math says "sure, bet high right now, but slow down when you become a big part of the donor pool". I think maybe he thought it said "...but slow down when you get close to solving all the world's problems". It's not entirely clear from the tweets though, and since I don't want to try comparing this theory to how he actually behaved in practice, I'll leave it there.
+So was the author's math right? Man, I dunno. I'm inclined to say no; he was hand waving in almost the right directions, but I currently think that if he'd tried to formalize his hand waving he'd have made a key mistake. That being: I think that if you want to rank-optimize, the math says "sure, bet high right now, but slow down when you become a big part of the donor pool". I think maybe he thought it said "...but slow down when you get close to solving all the world's problems". It's not entirely clear from the tweets though, in part because he was using the word Kelly in a place where I think it didn't belong. Since I don't want to try comparing this theory to how he actually behaved in practice, I'll leave it there.
 
 In any case I think *I* understand what's going on better than I used to. Kelly is not about optimizing a utility function.
 
@@ -146,35 +145,53 @@ The framework in question is:
 
 ### Appendix Ⅱ: technical definition
 
-In Kelly's original paper, he defines the growth rate of a strategy `$ λ $` as
+<p>
+In Kelly's original paper, he defines the growth rate of a strategy \( λ \) as
+</p>
 
-    $$ G(λ) = \lim_{n → ∞} {1 \over n} \log {V_n(λ) \over V_0(λ)} $$
+<div>
+\[ G(λ) = \lim_{n → ∞} {1 \over n} \log {V_n(λ) \over V_0(λ)} \]
+</div>
 
-where `$ V_n(λ) $` is the bettor's portfolio after `$ n $` steps. This is awkward because `$ V_n(λ) $` is a random variable, so so is `$ G(λ) $`. But in the framework we're using, in the space of strategies "bet some fraction of our bankroll that depends on the parameters of the bet", `$ G $` takes on some value with probability `$ 1 $`. Kelly betting maximizes that value. So we could try to define rank-optimization as finding the strategy that maximizes the growth rate.
+<p>
+where \( V_n(λ) \) is the bettor's portfolio after \( n \) steps. This is awkward because \( V_n(λ) \) is a random variable, so so is \( G(λ) \). But in the framework we're using, in the space of strategies "bet some fraction of our bankroll that depends on the parameters of the bet", \( G \) takes on some value with probability \( 1 \). Kelly betting maximizes that value. So we could try to define rank-optimization as finding the strategy that maximizes the growth rate.
+</p>
 
-I find this awkward and confusing, so here's a definition that I think will be equivalent for the framework we're using. A strategy `$ λ $` is rank-optimal if for all strategies `$ μ $`,
+<p>
+I find this awkward and confusing, so here's a definition that I think will be equivalent for the framework we're using. A strategy \( λ \) is rank-optimal if for all strategies \( μ \),
+</p>
 
-    $$ \lim_{n → ∞} P(V_n(λ) ≥ V_n(μ)) = 1. $$
+<div>
+\[ \lim_{n → ∞} P(V_n(λ) ≥ V_n(μ)) = 1. \]
+</div>
 
 (And we can also talk about a strategy being "equally rank-optimal" as or "more rank-optimal" than another, in the obvious ways. I'm pretty sure this will be a partial order in general, and I suspect a total order among strategy spaces we care about.)
 
-I think this has both advantages and disadvantages over the definition based on growth rate. An advantage is that it works with super- or sub-exponential growth. (Subexponential growth like `$ V_n = n $` has a growth rate of `$ 0 $`, so it's not preferred ov `$ V_n = 1 $`. Superexponential growth like `$ V_n = e^{e^n} $` has infinite growth rate which is awkward.)
+<p>
+I think this has both advantages and disadvantages over the definition based on growth rate. An advantage is that it works with super- or sub-exponential growth. (Subexponential growth like \( V_n = n \) has a growth rate of \( 0 \), so it's not preferred over \( V_n = 1 \). Superexponential growth like \( V_n = e^{e^n} \) has infinite growth rate which is awkward.)
+</p>
 
-A disadvantage is it doesn't work well with strategies that are equivalent in the long run but pay off at different times. (If we consider a coin toss game, neither of the strategies "call heads" and "call tails" will get a long-run advantage, so we can't use rank-optimality to compare them. The limit in the definition will approach `$ {1 \over 2 } $`.) I consider this a major flaw, and wonder if there's some neat way to fix it. Still, hopefully it's fine for current purposes?
+<p>
+A disadvantage is it doesn't work well with strategies that are equivalent in the long run but pay off at different times. (If we consider a coin toss game, neither of the strategies "call heads" and "call tails" will get a long-run advantage, so we can't use rank-optimality to compare them. The limit in the definition will approach \( {1 \over 2 } \).) I think this isn't a problem in the current betting framework, but I consider it a major flaw. Hopefully there's some neat way to fix it.
+</p>
 
 What I don't currently expect to see is a betting framework and space of strategies where
 
 * We can calculate a growth rate for each strategy;
 * Rank-optimality gives us a total order on strategies;
-* There are strategies `$ λ, μ $` with `$ G(λ) > G(μ) $` but `$ μ $` is more rank-optimal than `$ λ $`.
+* There are strategies \\( λ, μ \\) with \\( G(λ) > G(μ) \\) but \\( μ \\) is more rank-optimal than \\( λ \\).
 
 I wouldn't be totally shocked by that happening, math has been known to throw me some curveballs even in the days when I could call myself a mathematician. But it would surprise me a bit.
 
-Given this definition, it's clear that a rank-optimal strategy maximizes every percentile of return. E.g. suppose `$ λ $` is more rank-optimal than `$ μ $`, but the median of `$ V_n(μ) $` is higher than the median of `$ V_n(λ) $`. Then we'd have `$ P(V_n(μ) > V_n(λ)) ≥ {1 \over 4} $`; so this can't hold in the limit.
+<p>
+Given this definition, it's clear that a rank-optimal strategy maximizes every percentile of return. E.g. suppose \( λ \) is more rank-optimal than \( μ \), but the median of \( V_n(μ) \) is higher than the median of \( V_n(λ) \). Then we'd have \( P(V_n(μ) > V_n(λ)) ≥ {1 \over 4} \); so this can't hold in the limit.
+</p>
 
 It's also clear that rank-optimizing for money is the same as rank-optimizing for log-money, or for any monotonically increasing function of money. (Possible caveats around non-strict monotonic functions and the long-run equivalence thing from above?)
 
-In some situations a rank-optimal strategy might not maximize modal return. I'm not sure if it will always minimize "expected time to reach some payoff much larger than `$ V_0 $`".
+<p>
+In some situations a rank-optimal strategy might not maximize modal return. I'm not sure if it will always minimize "expected time to reach some payoff much larger than \( V_0 \)".
+</p>
 
 ### Appendix Ⅲ: rank-optimizing as utility function
 
@@ -188,6 +205,8 @@ I guess it would mean that the part of the world state we're looking at isn't my
 
 It also means I'm not expecting my utility function to change in future. Like, with money, I have a certain amount of money now, and I can calculate the utility of it; and I have a random variable for how much money I'll have in future, and I can calculate the utility of those amounts as another random variable. With rank-optimality, I'm not expecting my strategy to be more or less rank-optimal in future. That's convenient because maximizing expected utility is just maximizing current utility, but it's also weird.
 
-For that matter, I haven't given a way to quantify rank-optimization. We can say `$ λ $` is "more rank-optimal" than `$ μ $` but not "twice as rank optimal". So maybe I mean my utility function has a `$ 1 $` if I'm entirely rank-optimal and a `$ 0 $` if I'm not? But that's weird too. If we can calculate growth rate then we can quantify it like that, I guess.
+<p>
+For that matter, I haven't given a way to quantify rank-optimization. We can say \( λ \) is "more rank-optimal" than \( μ \) but not "twice as rank optimal". So maybe I mean my utility function has a \( 1 \) if I'm entirely rank-optimal and a \( 0 \) if I'm not? But that's weird too. If we can calculate growth rate then we can quantify it like that, I guess.
+</p>
 
-So in general I do not expect rank-optimizing your returns to maximize your expected utility for any utility function you're likely to have, or even any utility function you're likely to pretend to have; unless rank-optimizing your returns also happens to maximize "expected `$ f $` of money" for some function `$ f $`.
+So in general I don't expect rank-optimizing your returns to maximize your expected utility, for any utility function you're likely to have; or even any utility function you're likely to pretend to have. Not unless it happens to be the case that the way to rank-optimize your returns is *also* a way to maximize some more normal utility function like "expected log-money", for reasons that may have nothing to do with rank-optimization.
