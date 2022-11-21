@@ -63,7 +63,7 @@ The thing we were trying to figure out was, is his math right? And here's my cur
 
 The first thing I'd say is, I think the way he talks about [Kelly](https://en.wikipedia.org/wiki/Kelly_criterion) here is confusing. My understanding is:
 
-Under a certain betting framework, if you place bets that maximize expected log-money, then you get (something good). See Appendix Ⅰ for the definition of the framework, if you want the technical details.
+Under a certain betting framework, if you place bets that each maximize expected log-money, then you get (something good). See Appendix Ⅰ for the definition of the framework, if you want the technical details.
 
 If you happen have a utility function, and that utility function increases logarithmically with money, then you maximize your expected utility while also getting (something good).
 
@@ -79,13 +79,13 @@ This sounds like a very good thing to me! Like, do I want to almost certainly be
 
 (Oh, also, I don't need to choose whether I'm getting that good thing for money or log-money or what. It's the same for any monotonically increasing function of money.)
 
-Separately from that: yeah, I think going from \\$10k to \\$100k sounds about as good as going from \\$100k to \\$1m. So if we're in a situation where it makes sense to pretend I have a utility function, then it's probably reasonable to pretend my supposed utility function is logarithmic in money.
+Separately from that: yeah, I think going from \\$10k to \\$100k sounds about as good as going from \\$100k to \\$1m. So if I'm in a situation where it makes sense to pretend I have a utility function, then it's probably reasonable to pretend my supposed utility function is logarithmic in money.
 
-So that's convenient. I dunno if it's a coincidence or what, but it's useful. If we tried to pretend my utility function was linear in money then I'd be sad about losing that good thing, and then it would be hard to keep pretending.
+So that's convenient. I dunno if it's a coincidence or what, but it's useful. If I tried to pretend my utility function was linear in money then I'd be sad about losing that good thing, and then it would be hard to keep pretending.
 
-To me, Kelly is about getting that good thing. If you have a utility function, just place whatever bet size maximizes expected utility. If instead you want to get that good thing, Kelly tells you how to do that, under a certain betting framework. And the way to do that is to place bets that maximize expected log-money.
+To me, Kelly is about getting that good thing. If you have a utility function, just place whatever bet size maximizes expected utility. If instead you want to get that good thing, Kelly tells you how to do that, under a certain betting framework. And the way to do that is to place bets that each maximize expected log-money.
 
-If you have a utility function and it's proportional to log-money, then you'll happen to get the good thing; but far more important than that, will be the fact that you're maximizing expected log-money. If you bet according to a different utility function, then a Kelly bettor will almost certainly be richer than you over time; but you're (for now) sitting on a bigger pile of expected utility, which is what you care about.
+If you have a utility function and it's proportional to log-money, then you'll happen to get the good thing; but far more important than that, will be the fact that you're maximizing expected log-money. If you have a utility function and it's different, and you bet accordingly, then a Kelly bettor will almost certainly be richer than you over time; but you're (for now) sitting on a bigger pile of expected utility, which is what you care about.
 
 Or maybe you want to mix things up a bit. For example, you might care a bit more about your average returns, and a bit less about being the richest person in the room, than a Kelly bettor. Then you could bet something above the Kelly amount, but less than your full bankroll. You'll almost certainly end up with less than the Kelly bettor, but *on average* you'll still earn more than them.
 
@@ -193,7 +193,7 @@ It's also clear that rank-optimizing for money is the same as rank-optimizing fo
 In some situations a rank-optimal strategy might not maximize modal return. I'm not sure if it will always minimize "expected time to reach some payoff much larger than \( V_0 \)".
 </p>
 
-### Appendix Ⅲ: rank-optimizing as utility function
+### Appendix Ⅲ: rank-optimization as utility function
 
 A utility function is a function from "states of the world" to real numbers, which represent "how much we value that particular state of the world", that satisfies certain conditions.
 
@@ -203,10 +203,10 @@ Suppose I say "my utility function is such that I maximize it in expectation by 
 
 I guess it would mean that the part of the world state we're looking at isn't my money. It's my strategy for making money, along with all the other possible strategies I could have used and the betting framework I'm in. That's weird.
 
-It also means I'm not expecting my utility function to change in future. Like, with money, I have a certain amount of money now, and I can calculate the utility of it; and I have a random variable for how much money I'll have in future, and I can calculate the utility of those amounts as another random variable. With rank-optimality, I'm not expecting my strategy to be more or less rank-optimal in future. That's convenient because maximizing expected utility is just maximizing current utility, but it's also weird.
+It also means I'm not expecting my utility function to change in future. Like, with money, I have a certain amount of money now, and I can calculate the utility of it; and I have a random variable for how much money I'll have in future, and I can calculate the utility of those amounts as another random variable. With rank-optimality, I'm not expecting my strategy to be more or less rank-optimal in future. That's convenient because to maximize expected utility I just have to maximize current utility, but it's also weird.
 
 <p>
-For that matter, I haven't given a way to quantify rank-optimization. We can say \( λ \) is "more rank-optimal" than \( μ \) but not "twice as rank optimal". So maybe I mean my utility function has a \( 1 \) if I'm entirely rank-optimal and a \( 0 \) if I'm not? But that's weird too. If we can calculate growth rate then we can quantify it like that, I guess.
+For that matter, I haven't given a way to quantify rank-optimization. We can say one strategy is "more rank-optimal" than another but not "twice as rank optimal". So maybe I mean my utility function has a \( 1 \) if I'm entirely rank-optimal and a \( 0 \) if I'm not? But that's weird too. If we can calculate growth rate then we can quantify it like that, I guess.
 </p>
 
 So in general I don't expect rank-optimizing your returns to maximize your expected utility, for any utility function you're likely to have; or even any utility function you're likely to pretend to have. Not unless it happens to be the case that the way to rank-optimize your returns is *also* a way to maximize some more normal utility function like "expected log-money", for reasons that may have nothing to do with rank-optimization.
