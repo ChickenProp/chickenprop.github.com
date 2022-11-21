@@ -43,3 +43,15 @@ If I want to disable markdown without code blocks, e.g. to get consumed by LW, t
 <div>
 \[ f(x) = \sin( x_1^3 - 2x_2^2 + 1 ). \]
 </div>
+
+Trying some other things:
+
+<>
+First, I wonder if *empty tags* disable markdown on a line.
+</>
+
+<p>
+Second, I wonder if I can disable it on *multiple lines*,
+
+with just *one set of tags*.
+</p>
