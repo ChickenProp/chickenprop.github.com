@@ -28,9 +28,7 @@
           elements: [ 'this-doesnt-exist' ],{% comment %}I just want MathJax not to do anything unless I explicitly tell it to. This might not be the best way.{% endcomment%}
         {% endif %}
         "HTML-CSS": {
-          linebreaks: { automatic: true },
-          // For some reason the default size is 132%, this resets it to ~100%.
-          scale: 76
+          linebreaks: { automatic: true }
         },
         skipStartupTypeset: true,
       })
