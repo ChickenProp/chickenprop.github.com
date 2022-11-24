@@ -73,9 +73,11 @@ If you happen to have a utility function, and that utility function increases li
 
 [^so-much-the-worse]: I think I've seen some people, who agree humans don't have utility functions, go on to say: "and so much the worse for utility functions! If humans don't have them we should find something more useful to talk about." My take is: "and so much the worse for humans! If we don't have utility functions we're missing out." But, that doesn't mean we have them.
 
-The (something good) is that, over a long enough time, you'll almost certainly get more money than someone else who was offered the same bets as you and started with the same amount of money but regularly bet different amounts on them. But this is NOT the same thing as maximizing your average (AKA "expected") amount of money over time; "almost certainly" hides a small number of outcomes that make a lot of difference to that calculation.
+The (something good) is that, over a long enough time, you'll almost certainly get more money than someone else who was offered the same bets as you and started with the same amount of money but regularly bet different amounts on them.
 
-This sounds like a very good thing to me! Like, do I want to almost certainly be the richest peson in the room? Do I want to maximize my median payoff, *and* the 1st percentile and 99th percentile and in fact every percentile, *all at once*? Oh, and while I'm at it, maximize my most-likely payoff and minimize "the average time I'll take to reach any given amount of money much more than what I have now"? Yes please!
+This is NOT the same thing as maximizing your average (AKA "expected") amount of money over time. "Almost certainly" hides a small number of outcomes that make a lot of difference to that calculation. Someone who repeatedly bets their entire bankroll will *on average* have more money than a Kelly bettor; it's just all concentrated in a single vanishingly unlikely branch where they're incredibly wealthy, and the rest of the time they have nothing. Someone who repeatedly bets more than Kelly but less than their entire bankroll, will *on average* have more than the Kelly bettor but less than the full-bankroll bettor; but still less than the Kelly bettor almost all the time, and very rarely much more.
+
+It still sounds like a very good thing to me! Like, do I want to almost certainly be the richest peson in the room? Do I want to maximize my median payoff, *and* the 1st percentile and 99th percentile and in fact every percentile, *all at once*? Oh, and while I'm at it, maximize my most-likely payoff and minimize "the average time I'll take to reach any given amount of money much more than what I have now"? Yes please!
 
 (Oh, also, I don't need to choose whether I'm getting that good thing for money or log-money or what. It's the same for any monotonically increasing function of money.)
 
@@ -87,7 +89,7 @@ To me, Kelly is about getting that good thing. If you have a utility function, j
 
 If you have a utility function and it's proportional to log-money, then you'll happen to get the good thing; but far more important than that, will be the fact that you're maximizing expected log-money. If you have a utility function and it's different, and you bet accordingly, then a Kelly bettor will almost certainly be richer than you over time; but you're (for now) sitting on a bigger pile of expected utility, which is what you care about.
 
-Or maybe you want to mix things up a bit. For example, you might care a bit more about your average returns, and a bit less about being the richest person in the room, than a Kelly bettor. Then you could bet something above the Kelly amount, but less than your full bankroll. You'll almost certainly end up with less than the Kelly bettor, but *on average* you'll still earn more than them.
+Or maybe you want to mix things up a bit. For example, you might care a bit more about your average returns, and a bit less about being the richest person in the room, than a Kelly bettor. Then you could bet something above the Kelly amount, but less than your full bankroll. You'll almost certainly end up with less than the Kelly bettor, but *on average* you'll still earn more than them thanks to unlikely branches.
 
 I'm not sure what to call this good thing. I'm going to go with "rank-optimizing" one's bankroll, focusing on the "be the richest person in the room" part; though I worry that it suggests competing with other people, where really you're competing with counterfactual versions of yourself. See Appendix Ⅱ for an (admittedly flawed) technical definition of rank-optimization; also, I want to clarify a few things about it:
 
@@ -113,13 +115,17 @@ Suppose you have two people who each want to rank-optimize their own bankroll. A
 
 And now suppose instead they both want to rank-optimize their total bankroll. So they combine them into one. Whenever Alice gets a bet, she Kellies according to *their combined bankrolls*. Whenever Bob gets a bet, he Kellies according to *their combined bankrolls*. And in the end, their total bankroll will almost certainly be higher than the sum of the individual bankrolls, in the first case.
 
-...Well, maybe. I think the value here doesn't come from sharing their money but from sharing their bets. I've assumed the combined bankroll gets all of the bets from either of the individual ones. That might not be the case - perhaps one bet is offered per day, anyone who wants can accept it, and it must be accepted in the morning and pays out in the afternoon. In that case teaming up doesn't help.
+...Well, maybe. I think the value here doesn't come from sharing their money but from sharing their bets. I've assumed the combined bankroll gets all of the bets from either of the individual ones. That might not be the case - consider betting on a sports match. Ignoring transaction costs, it doesn't make a difference if one of them Kellies their combined bankroll, or each of them Kellies their individual bankrolls. "Each of them Kellies their combined bankroll" isn't an option in this framework, so teaming up doesn't help.
 
 But I do think something like this, combined with reasonable assumptions about charity and how bets are found, suggests betting above Kelly. Like, maybe Alice and Bob don't want to literally combine their bankrolls, but they do trust each other pretty well and are willing to give or lend each other moderate amounts of money, and the two of them encounter different bets. Then I *think* that to rank-optimize their individual or combined bankrolls, each of them should probably be betting above Kelly.
 
 Or maybe Alice doesn't encounter bets (or can't act on them or doesn't trust herself to evaluate them or...), but she does encounter Bob and Carol and Dennis and somewhat trusts all of them to be aligned with her values. Then if she gives each of them some money, and is willing to give them more in future if they lose money, I *think* that she wants them to make above-Kelly bets. (Just giving them more money to begin with might be more rank-optimal, but there might be practical reasons not to, like not having it yet.)
 
 Does she want people to bet almost their entire bankrolls? Under strong assumptions, and if the total pool is big enough relative to the bettor... I'm not sure, but I think yes?
+
+This relies on individual donors being small relative to the donor pool. When you're small, maximizing expected log of the pool size (which, in this framework, rank-optimizes the pool size) looks a lot like maximizing your own expected contributions linearly. When you're big, that's no longer the case.
+
+It *doesn't* depend on the size of the problem you're trying to solve. That number just isn't an input to any of the relevant calculations, not that I've found. It might be relevant if you're thinking about diminishing marginal returns, but you don't need to think about those if you're rank-optimizing.
 
 I'm not super confident about this part, so I'm leaving it out of the one-sentence summary. But I do think that rank-optimizing charity donations often means betting above Kelly.
 
@@ -208,3 +214,5 @@ For that matter, I haven't given a way to quantify rank-optimization. We can say
 </p>
 
 So in general I don't expect rank-optimizing your returns to maximize your expected utility, for any utility function you're likely to have; or even any utility function you're likely to pretend to have. Not unless it happens to be the case that the way to rank-optimize your returns is *also* a way to maximize some more normal utility function like "expected log-money", for reasons that may have nothing to do with rank-optimization.
+
+*Thanks to Justis Mills for comments; and to various members of the LW Europe telegram channel, especially Verglasz, for helping me understand this.*
