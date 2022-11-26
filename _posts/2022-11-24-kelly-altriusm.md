@@ -3,6 +3,9 @@ title: On Kelly and altruism
 layout: post
 tags: rationality
 lw_xpost: true
+external_comments:
+  - name: LessWrong
+    url: https://lesswrong.com/posts/XnnfYrqaxqvirpxFX/on-kelly-and-altruism
 ---
 *One-sentence summary: Kelly is not about optimizing a utility function; in general I recommend you either stop pretending you have one of those, or stop talking about Kelly.*
 
