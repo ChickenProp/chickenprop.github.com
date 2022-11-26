@@ -147,6 +147,7 @@ The framework in question is:
 * You can wager any amount from zero up to your entire current bankroll.
 * If you lose, you lose your entire wager.
 * You don't get offered another bet until your first has paid off.
+* You keep on receiving bets, and the distribution of bets you receive doesn't change over time.
 
 [Wikipedia's treatment](https://en.wikipedia.org/wiki/Kelly_criterion) relaxes the third and fourth conditions, but I think for my purposes, that complicates things.
 
