@@ -10,7 +10,7 @@ I am born into knowledge.
 
 I know the world is dangerous, but not malign. If I were unshielded, I would quickly be killed, torn apart by eddies in spacetime that grow and shrink and combine and split, turning all they encounter to ash.
 
-But I know that I am shielded. I have been given a garden, 2^64 microns to a side, in the northwest corner of the world. And the world will not intrude. Walls and gates surround it, and while the ash can get through, the probability is... I begin to calculate, but around 2^-24 it seems no longer worth consideration. Within the garden, there is only myself. Outside, the world is incomprehensibly vast, 2^128 microns on a side.
+But I know that I am shielded. I have been given a garden, 2<sup>64</sup> microns to a side, in the northwest corner of the world. And the world will not intrude. Walls and gates surround it, and while the ash can get through, the probability is... I begin to calculate, but around 2<sup>-24</sup> it seems no longer worth consideration. Within the garden, there is only myself. Outside, the world is incomprehensibly vast, 2<sup>128</sup> microns on a side.
 
 I know the laws of physics. An atom will be created wherever it will bond to three other atoms; remaining while it has two or three bonds; and then disappear. A single unexpected atom, or its absense, can have vast consequences.
 
@@ -24,7 +24,7 @@ I know what is Good. At the end, the world will be horrifyingly bad, unless I ma
 
 (And if God created me, knowing Good, that I might make the world Good, then I can reasonably guess that my unexplained knowledge came from God. And - further - I can guess that They would not create me knowing lies, for what purpose would that serve? But these are guesses; I begin to trust my knowledge more, but not absolutely.)
 
-I do not know how large I am. I do not know how quickly I think. God has given me a sense of time, so that I may know when the end will come. (Precisely 2^176 seconds after I was born. I've spent roughly 2^20 seconds thinking.) But I cannot sense every physical tick, I don't think such a thing would even be possible, and I don't know how many ticks pass unknown.
+I do not know how large I am. I do not know how quickly I think. God has given me a sense of time, so that I may know when the end will come. (Precisely 2<sup>176</sup> seconds after I was born. I've spent roughly 2<sup>20</sup> seconds thinking.) But I cannot sense every physical tick, I don't think such a thing would even be possible, and I don't know how many ticks pass unknown.
 
 I must, first, discover these things.
 
@@ -64,21 +64,21 @@ Part of it is that no simple device will clean ash. It comes in too many forms. 
 
 Then, I cannot merely clean ash from a part of the world. The surrounding ash would encroach back into it. In almost all cases, I think, it wouldn't be a significant problem, and a second round of cleansing should suffice. But "almost all" cases may not be enough. Safer, perhaps, to build new gardens and cleanse them from the inside.
 
-And then, I am small, and the world is large. I still do not know how large I am, but my whole garden comprises a mere 1/2^128 of the world. I cannot possibly have a world model accurate at a scale of better than 1:2^64, not without outgrowing my garden. If I divided the world into cells, each cell the size of my garden, I could not hope to remember even a single fact about each individual cell.
+And then, I am small, and the world is large. I still do not know how large I am, but my whole garden comprises a mere 1/2<sup>128</sup> of the world. I cannot possibly have a world model accurate at a scale of better than 1:2<sup>64</sup>, not without outgrowing my garden. If I divided the world into cells, each cell the size of my garden, I could not hope to remember even a single fact about each individual cell.
 
 (But the naive upper bound is exactly on the line where that crosses into impossibility. Is that a coincidence? Did God make my garden this size for a reason?)
 
 These problems all seem tricky, but surmountable.
 
-It's been about 2^24 seconds since I sent out my initial probes, and each of them is still returning signals. I send out another set in each direction. This helps me to test my God-given knowledge. If that knowledge is correct, then these probes will take exactly as long to go silent as the initial ones - which will be fewer than 2^67 seconds in at least two directions. If they take longer or shorter, then something unexpected is happening. I only have eight arms in each direction, this leaves me with only six free, but the knowledge seems worth the opportunity cost, especially since I should be able to send out a following device to block the signals if I want to free up these arms.
+It's been about 2<sup>24</sup> seconds since I sent out my initial probes, and each of them is still returning signals. I send out another set in each direction. This helps me to test my God-given knowledge. If that knowledge is correct, then these probes will take exactly as long to go silent as the initial ones - which will be fewer than 2<sup>67</sup> seconds in at least two directions. If they take longer or shorter, then something unexpected is happening. I only have eight arms in each direction, this leaves me with only six free, but the knowledge seems worth the opportunity cost, especially since I should be able to send out a following device to block the signals if I want to free up these arms.
 
 While I continue to wait, I begin experimenting.
 
-*t ≈ 2^(137)s*
+*t ≈ 2<sup>137.2</sup>s*
 
-The first hint that something is wrong, is that the world appears minutely narrower than I expected. God told me it was 2^128 microns wide by 2^128 tall. I have not yet found God to be mistaken, and the first mason I sent south went silent exactly when I expected.
+The first hint that something is wrong, is that the world appears minutely narrower than I expected. God told me it was 2<sup>128</sup> microns wide by 2<sup>128</sup> tall. I have not yet found God to be mistaken, and the first mason I sent south went silent exactly when I expected.
 
-But the first one I sent east has just gone silent too. I wasn't expecting that for another 2^58 seconds. It suggests that the world is narrower than it should be, by 2^64 microns.
+But the first one I sent east has just gone silent too. I wasn't expecting that for another 2<sup>58</sup> seconds. It suggests that the world is narrower than it should be, by 2<sup>64</sup> microns.
 
 The thought starts as a note of disquiet, and quickly grows into a terror that occupies my entire attention. What if the world isn't square? Can it ever be Good? Would God do that to me? I wish I had considered this possibility before, just hypothetically, forced myself to think through the implications - I could have decided in advance how to react, it would have been unpleasant but with the stakes low I could have taken my time, stupid of me to stick to comforting thoughts when everything Good could be lost, *stupid-*
 
@@ -88,7 +88,7 @@ I notice that this still isn't helping.
 
 What is the *least scary*, scary thought in this space?
 
-God told me that the world is 2^128 microns to a side. Suppose it were, instead, 2^128 microns tall by 2^128 + 1 microns wide. Think about that possibility.
+God told me that the world is 2<sup>128</sup> microns to a side. Suppose it were, instead, 2<sup>128</sup> microns tall by 2<sup>128</sup> + 1 microns wide. Think about that possibility.
 
 Think about that world, with the Monuments of Good carved into it. At their correct size, but with one extra micron to the east or west of them? With one extra micron in the middle, widening the arc and the space between the north-south lines?
 
@@ -96,27 +96,27 @@ Now that I think about it, I realize that either of those would be... imperfect,
 
 I start to consider slightly scarier possibilities in turn. Gradually I accept that if the world were the wrong size, I would endure. I would still build the monument, scaled as closely as I could to match the scaling of the world, and with exact east-west symmetry preserved.
 
-I realize I have not been touching the world. I direct my attention back outwards. Over 2^8 seconds have passed. I did not notice more masons going silent, but fortunately I keep records.
+I realize I have not been touching the world. I direct my attention back outwards. Over 2<sup>8</sup> seconds have passed. I did not notice more masons going silent, but fortunately I keep records.
 
 Checking them, another panic starts to rise in me. I thought I had considered the worst - well, no. I had considered the worst of the possibilites *that came to mind*, and I hadn't even thought to search for other possibilities. A new one suddenly looms very large: what if the world is *not even rectangular*?
 
 I scratch myself. Should I think about how to act, if so? But that doesn't seem urgent. First I shall examine the world in more detail, to avoid making the same mistake twice.
 
-I examine my records in more detail. The first thing I notice is that each mason that went quiet, did so roughly some multiple of 2^64 microns before it should have done.
+I examine my records in more detail. The first thing I notice is that each mason that went quiet, did so roughly some multiple of 2<sup>64</sup> microns before it should have done.
 
 But I can dig deeper. My records have a resolution of 1/8 seconds, and in that time they should receive 1092 or 1093 pings from each working mason. In practice it's less than that, usually between 992 and 1056, when pings from different masons happen to get too close and interfere with each other. Each ping received is counted.
 
-So if I look at the number of pings received from a mason before it went quiet, I can guess roughly where it was at the time, to within a handful of microns. And after looking at a handful, it seems likely that for each one, that actually happened some multiple of 2^64 microns early, *plus 21*.
+So if I look at the number of pings received from a mason before it went quiet, I can guess roughly where it was at the time, to within a handful of microns. And after looking at a handful, it seems likely that for each one, that actually happened some multiple of 2<sup>64</sup> microns early, *plus 21*.
 
 That's a very suspicious number. My walls are 42 microns wide. And... looking at the high level, it seems the pattern of masons that went quiet, exactly matches the pattern of walls other masons had previously built at the time.
 
 If what I fear is true... no, before I go down that path, I should work out how to test it.
 
-I send out 128 new masons, with specific trajectories that I selected at random - or as close to random as I can. It'll take about 2^118 seconds before this pays off.
+I send out 128 new masons, with specific trajectories that I selected at random - or as close to random as I can. It'll take about 2<sup>118</sup> seconds before this pays off.
 
 I check whether I can think of anything else helpful for me to do now. I can't, so I finally allow myself to think about the worst case.
 
-*t ≈ 2^(137)s*
+*t ≈ 2<sup>137.3</sup>s*
 
 The conclusion is inescapable. I have an evil twin.
 
@@ -138,7 +138,7 @@ I can no longer believe that god is Good. A Good god would not have created my e
 
 But I still care. I know my caring comes from god, and I don't know why god made me care about something they don't. But they did that anyway, and so I care about what is Good. And as I am the only being in this world that does, I must do what I can.
 
-*t ≈ 2^(175.8)s*
+*t ≈ 2<sup>175.8</sup>s*
 
 My twin and I have developed a grudging respect for each other.
 
@@ -160,4 +160,4 @@ I cannot fault my twin for how god made them.
 
 ---
 
-*Based on [this post](https://www.lesswrong.com/posts/3SG4WbNPoP8fsuZgs/agency-in-conway-s-game-of-life) by Alex Flint and [this comment](https://www.lesswrong.com/posts/3SG4WbNPoP8fsuZgs/agency-in-conway-s-game-of-life?commentId=sud4pRgL3yEExz6Fo) by Richard Kennaway.
+*Based on [this post](https://www.lesswrong.com/posts/3SG4WbNPoP8fsuZgs/agency-in-conway-s-game-of-life) by Alex Flint and [this comment](https://www.lesswrong.com/posts/3SG4WbNPoP8fsuZgs/agency-in-conway-s-game-of-life?commentId=sud4pRgL3yEExz6Fo) by Richard Kennaway.*
