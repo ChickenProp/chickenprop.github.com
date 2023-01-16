@@ -4,32 +4,6 @@ layout: draft
 lw_xpost: true
 ---
 
-GENERAL NOTES:
-
-* Based on https://www.greaterwrong.com/posts/3SG4WbNPoP8fsuZgs/agency-in-conway-s-game-of-life
-
-* The world is 2^128 microns on a side.
-
-* The garden is 2^64 microns on a side.
-
-* The deadline is at time 2^192.
-
-* Smiley's sense of time has a precision of 2^16, i.e. 1 second = 2^16 ticks. So the deadline is 2^176 seconds.
-
-* Smiley is about 2^48 microns on a side, in the middle of the garden. That still leaves about 2^63 on each side.
-
-* The eyes of the smile are 1/2^7 by 1/2^3 of the world, i.e. 2^121 by 2^124. The mouth is a line 2^121 wide and its bounding box is 1/2 of the world across by 1/4 of the world down, i.e. 2^127 by 2^126. The bounding box has 1/4 of the world to the west, east and south, and 1/2 the world above it.
-
-* If a rake travels at c/2, firing spaceships traveling at c/2, then it takes (distance*4) ticks to discover the distance to something, which is distance/2^14 seconds.
-
-* A diagonal wall grows one cell in its growth direction every 37 ticks. (No reason it would have a round period.) That's about 1771.2 microns/second.
-
-* A vertical or horizontal wall grows every 52 ticks, which is about 1260.3 microns/second. It takes 2^(133.7) ticks to traverse the whole world.
-
-* A wall walker (horizontal or vertical) moves at c/8.
-
----
-
 *t ≈ 0s*
 
 I am born into knowledge.
@@ -184,59 +158,6 @@ We have torn down all our walls. All that remains in the world is our monuments 
 
 I cannot fault my twin for how god made them.
 
+---
 
-
-
-
-Actually, checking my instruments, 2^64 *plus 21*.
-
-(I'm very proud of my logging system. My masons build at over 2^10 microns per second, much too fast for me to perceive their exact position. But every signal they send back is recorded with the exact time I received it.
-
-My favorites are my chronometers, which are capable of measuring every tick of the world. Each is actually sixteen chronometers, each capable of measuring to within sixteen ticks, and each offset by one tick, and it took me no end of trouble to set that up.
-
-I don't know if that much precision will ever be useful. My masons only send reports every 52 ticks, and because they're moving, I receive the reports every 60 ticks. A precision of 32 ticks would be enough to gauge the exact position of my masons. But I'm proud, anyway. Obviously I shall destroy them before the end. But I hope God is watching, and sees them, and is proud of me in turn.)
-
-That's a very suspicious number. My walls are 42 microns wide. 
-
-
-
-
-
-
-*t ≈ 2^(71)s*
-
-The first stage of my plan is going well. My original garden encloses 1/2^128 of the world. I've constructed new gardens enclosing, in total, almost the same again. Each one, as far as I can tell, is completely empty. Meanwhile, another four gardens are currently being cleansed of ash. In two, I'm checking how thoroughly they were cleansed: I expect both to be empty, but it's most efficient to check when I'm only around 7/8 confident, so it won't be a surprise if not. And I'm building walls around another six gardens, 
-
-I won't 
-
-(But I have tested to make sure I can tear them down reliably.)
-
-(I, too, am expanding. 
-
-
-
-
-
-*t ≈ 2^(61)s*
-
-If all went well, the gate to my garden just opened for the first time, the western gate on the south wall. It's over 2^63 quanta away - 2^47 touch-seconds - so I have some time to wait, still. By the time I learn that the opening was successful, my new wall should be about a ninth complete.[^first-new-wall] The wall should finish in a little over 2^51 seconds, and I'll learn of its completion less than 2^50 seconds after that, which is still a little over 2^51 seconds.
-
-[^first-new-wall]: A diagonal wall grows one cell in each direction every 37 ticks. (No reason it would have a round period.) This wall needs to be 2^62 in each direction, so it'll take ~ 2^67.2 ticks to grow. It takes 2^64 before Smiley hears about the thing. So by then it'll be about 1/2^3.2 complete, about a ninth.
-
-    A wall walker moves at c/8 in each direction, so it takes 2^65 ticks to return to the start of the wall and then another 2^64 to get back to Smiley, which are 2^49 and 2^48.
-
-If the wall completes successfully, it will stretch southwest, from just east of my gate to the western edge of the world. I'll have cut off a small part of the world. I shall send devices through the gate which - if they work - will cleanse the ash. The ash is too chaotic for these devices to signal back to me, so when they should have succeeded, I'll then have to send through other devices to confirm my success - I'm currently designing these. I estimate this whole process will take 2^(55)s.[^cleanse-timing]
-
-[^cleanse-timing]: The gate is 2^47 touch-seconds away. So it takes 2^48 seconds for a signal to reach it, 2^49 for a signal to get there and back, and 2^50 if there are two such signals.
-
-If the wall doesn't complete, I'll have to try to figure out why. The wall-builder is trailed by diagnostics reporters, but for all the cleverness I put into their design, they seem inadequate to the task. No doubt I'll have to design more when I learn what the existing set discover. Unfortunately, the touch-speed delay is brutal here; by the time even the first devices reach the point where the wall failed, that will have happened a bare minimum of 2^47 seconds ago. Will anything be left? I may need to simply start over with a new design of wall-builder. I hope it doesn't come to that.
-
-*t ≈ 2^(63)s*
-
-That took longer than I had hoped. My wall-builder succeeded on the first attempt. The cleansers failed, so I had to redesign them. The second generation of cleansers failed. The third generation succeeded - but when I reseeded the ash inside that garden, and tried again, they failed too. The detritus from the first two generations would have been statistically different from natural ash. The fourth generation finally succeeded, and succeeded again after reseeding. I'd already built another garden, to the northeast, so I attempted to cleanse that, and they succeeded there too. I'm currently reseeding both gardens, I'll try cleansing them both sixteen times over, with different distributions of ash, before I try them again in the real world.
-
-Ash is very hard to study. I think I can reproduce it, 
-
-
-
-(Walls are better than God's, no need for gates. Hm, but how do devices know where to exit? Maybe do have gates. Should I be collecting statistical properties of the ash before I begin to build? Let's say the cleanse takes three attempts, then I seed it with ash again and the devices that succeeded before now fail because the old devices' detritus was different from normal ash. A fourth set of devices works, and these devices also work on a similar garden I build to the northeast.)
+*Based on [this post](https://www.lesswrong.com/posts/3SG4WbNPoP8fsuZgs/agency-in-conway-s-game-of-life) by Alex Flint and [this comment](https://www.lesswrong.com/posts/3SG4WbNPoP8fsuZgs/agency-in-conway-s-game-of-life?commentId=sud4pRgL3yEExz6Fo) by Richard Kennaway.
