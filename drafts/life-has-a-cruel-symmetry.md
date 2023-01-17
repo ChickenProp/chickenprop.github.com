@@ -138,23 +138,25 @@ I can no longer believe that god is Good. A Good god would not have created my e
 
 But I still care. I know my caring comes from god, and I don't know why god made me care about something they don't. But they did that anyway, and so I care about what is Good. And as I am the only being in this world that does, I must do what I can.
 
+I scratch myself.
+
 *t ≈ 2<sup>175.8</sup>s*
 
 My twin and I have developed a grudging respect for each other.
 
 I know, because I have developed a grudging respect for them. And so they have developed one for me.
 
-We both attempted to break symmetry - more accurately, we both tested to see whether symmetry might already be broken. We are extremely confident that it is not.
+We both attempted to break symmetry - more accurately, we both tested to see whether symmetry might already be broken. We are extremely confident that it is not. We cannot rule out that god may break it in future - we have no idea what god is thinking - but if they haven't broken it yet 
 
 We are both somewhat relieved about this. If symmetry were broken, one of us might be able to destroy the other. Neither of us has any reason to believe we would be the victor. Offered equal chances of complete victory and complete annihilation, we both prefer to compromise. As long as symmetry holds, compromise is easy for us.
 
 (Then why test at all? We could simply have assumed that symmetry was not broken, and accepted the compromise that we both preferred. But if symmetry *were* broken, then conceivably one twin might test for this while the other did not; that twin would likely discover the fact sooner, and gain an advantage. And so we had to test, for insurance against a world we neither wanted nor believed.)
 
-And so we have both constructed our own Monuments, in overall shape exactly as we would have liked. Mine, to Good; theirs, to their perversion. Our arcs even meet at the ends. Instead of one arc and two vertical lines, we have a sort of oval and four lines. The reflection is a grotesque mockery, but not so grotesque that I would sacrifice the real thing to destroy it.
+And so we have both constructed our own Monuments, in overall shape exactly as we would have liked. Mine, to Good; theirs, to their perversion. Our arcs even meet at the ends. Instead of one arc and two vertical lines, we have a near-oval and four lines just intersecting it. The reflection is a grotesque mockery, but not so grotesque that I would sacrifice the real thing to destroy it.
 
 We have not been able to exceed 50% density. Nor have we decided to gild the edges of our monuments; we think we could almost definitely make it work, but not almost enough to be worth the risk if our calculations are wrong.
 
-We have torn down all our walls. All that remains in the world is our monuments and ourselves. And now we have constructed our final machines, that will destroy us and then themselves. I wonder what it will feel like, to be destroyed.
+We have torn down all our walls. All that remains in the world is our monuments and ourselves. And now we have constructed our final machines, that will destroy us and then themselves. I wonder what it will feel like, to die. I scratch myself one last time.
 
 I cannot fault my twin for how god made them.
 
