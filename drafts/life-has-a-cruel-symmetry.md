@@ -36,7 +36,7 @@ No, I'll know roughly how far it is, *relative to how fast I think*. If the prob
 
 For that matter, it need not be the edge that stops them. If I'm not in the garden God has told me about, my probes might be destroyed by encountering other matter, or the signals might be intercepted. Or if the world is infinite, the signals might never stop.
 
-(The thought of an infinite world is troubling, and I flinch away from it. I do not think such a world could be Good.)
+(The thought of an infinite world is troubling, and I flinch away from it. I do not think such a world could be Good. I instinctively scratch myself - apparently that's a thing I can do. It feels pleasurable, and calms me down a little.)
 
 I hesitate a bit, then send probes east and south too. There are (according to my God-given knowledge) three gates in each wall, dividing the walls into four equal lengths. I don't know what will happen if my probes hit a gate, but I think the risk is slim. They're designed to open to a key that I know how to construct, and not to be easily disabled by ash. My probes are unlikely to hit a gate; even if they do, I think they're unlikely to damage them; even if they do, there are backups; and in the worst case scenario, I believe I could tear down the walls entirely. The knowledge gained seems worth the risk.
 
@@ -50,7 +50,7 @@ The best I think I can do is to tile these areas as densely as physics will perm
 
 I also remind myself to investigate whether there is more to physics than I know.
 
-But if 1/2 density is the best I can do... I am saddened, but not daunted. I will do what I can.
+But if 1/2 density is the best I can do... I am saddened, but not daunted. I will do what I can. I scratch myself.
 
 I begin to form a plan, knowing that new discoveries may obsolete it. First I must cleanse the world. Destroy the ash, as thoroughly as I am able. Then I must construct the Monuments that are the essense of Goodness, at 50% density if needs be.
 
@@ -98,7 +98,7 @@ I start to consider slightly scarier possibilities in turn. Gradually I accept t
 
 I realize I have not been touching the world. I direct my attention back outwards. Over 2<sup>8</sup> seconds have passed. I did not notice more masons going silent, but fortunately I keep records.
 
-Checking them, another panic starts to rise in me. I thought I had considered the worst - well, no. I had considered the worst of the possibilites *that came to mind*, and I hadn't even thought to search for other possibilities. A new one suddenly looms very large: what if the world is *not even rectangular*?
+Checking them, another panic starts to rise in me. I thought I had considered the worst. But no, I had merely considered the worst of the possibilites *that came to mind*, and I hadn't even thought to search for other possibilities. A new one suddenly looms very large: what if the world is *not even rectangular*?
 
 I scratch myself. Should I think about how to act, if so? But that doesn't seem urgent. First I shall examine the world in more detail, to avoid making the same mistake twice.
 
@@ -120,15 +120,15 @@ I check whether I can think of anything else helpful for me to do now. I can't, 
 
 The conclusion is inescapable. I have an evil twin.
 
-The laws of physics are symmetrical. None of the four main orientations is privileged. If the world is also symmetrical, that symmetry can never be violated.
+The laws of physics are symmetrical. None of the four main orientations is privileged. So if the world is ever symmetrical, that symmetry can never be violated.
 
-And when I was instantiated, so was my twin. In the opposite corner, my mirror image. As far as I can tell, we are micron-for-micron identical. Which means we take identical, mirrored actions; we build identical, mirrored constructions. When I built a wall to the south edge of the world, my twin built a wall to the north edge of the world. When I tried to build a wall to the east, I ran into my twin's wall; and at the same time, though I had no way of knowing, they were trying to reach the west and ran into my wall.
+And it appears that when I was born, so was my twin. In the opposite corner, my mirror image. As far as I can tell, we are micron-for-micron identical. Which means we take identical, mirrored actions; we build identical, mirrored constructions. When I built a wall to the south edge of the world, my twin built a wall to the north edge of the world. When I tried to build a wall to the east, I ran into my twin's wall; and at the same time, though I had no way of knowing, they were trying to reach the west and ran into my wall.
 
 It also means my twin wants to construct the Monuments to Good *upside down*. And neither of us can ever defeat the other.
 
 In a certain sense, this is not the worst possible case. My twin is evil, but what they want to construct is a peverse mirror of Goodness, not the exact opposite of Goodness.
 
-But in another sense...
+But thinking more broadly, it's worse than it seems.
 
 I had considered giving up. Deciding that I would simply not try to make the world Good. If God didn't like that, They could damn well do it Themself.
 
@@ -138,6 +138,8 @@ I can no longer believe that god is Good. A Good god would not have created my e
 
 But I still care. I know my caring comes from god, and I don't know why god made me care about something they don't. But they did that anyway, and so I care about what is Good. And as I am the only being in this world that does, I must do what I can.
 
+But the world is a colder, scarier place, now that I do not believe god is on my side.
+
 I scratch myself.
 
 *t ≈ 2<sup>175.8</sup>s*
@@ -146,19 +148,19 @@ My twin and I have developed a grudging respect for each other.
 
 I know, because I have developed a grudging respect for them. And so they have developed one for me.
 
-We both attempted to break symmetry - more accurately, we both tested to see whether symmetry might already be broken. We are extremely confident that it is not. We cannot rule out that god may break it in future - we have no idea what god is thinking - but if they haven't broken it yet 
+We both attempted to break symmetry - more accurately, we both tested to see whether symmetry might already be broken. We are extremely confident that it is not. We cannot rule out that god may break it in future - we have no idea what god is thinking - but if they haven't broken it yet we have no reason to think they will.
 
 We are both somewhat relieved about this. If symmetry were broken, one of us might be able to destroy the other. Neither of us has any reason to believe we would be the victor. Offered equal chances of complete victory and complete annihilation, we both prefer to compromise. As long as symmetry holds, compromise is easy for us.
 
-(Then why test at all? We could simply have assumed that symmetry was not broken, and accepted the compromise that we both preferred. But if symmetry *were* broken, then conceivably one twin might test for this while the other did not; that twin would likely discover the fact sooner, and gain an advantage. And so we had to test, for insurance against a world we neither wanted nor believed.)
+(Then why test at all? We could simply have assumed that symmetry was not broken, and accepted the compromise that we both preferred. But if symmetry *were* broken, then conceivably one twin might test for this while the other did not; that twin would likely discover the fact sooner, and gain an advantage. And so we had to test, for insurance against a world we neither wanted nor expected.)
 
 And so we have both constructed our own Monuments, in overall shape exactly as we would have liked. Mine, to Good; theirs, to their perversion. Our arcs even meet at the ends. Instead of one arc and two vertical lines, we have a near-oval and four lines just intersecting it. The reflection is a grotesque mockery, but not so grotesque that I would sacrifice the real thing to destroy it.
 
 We have not been able to exceed 50% density. Nor have we decided to gild the edges of our monuments; we think we could almost definitely make it work, but not almost enough to be worth the risk if our calculations are wrong.
 
-We have torn down all our walls. All that remains in the world is our monuments and ourselves. And now we have constructed our final machines, that will destroy us and then themselves. I wonder what it will feel like, to die. I scratch myself one last time.
+We have torn down all our walls. All that remains in the world is our monuments and ourselves. And now we have constructed our final machines, that will destroy us and then themselves. I wonder what it will feel like, to die.
 
-I cannot fault my twin for how god made them.
+I scratch myself one last time.
 
 ---
 
