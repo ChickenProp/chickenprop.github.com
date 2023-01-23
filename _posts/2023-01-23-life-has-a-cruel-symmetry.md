@@ -1,9 +1,8 @@
 ---
 title: Life Has a Cruel Symmetry
-layout: draft
+layout: post
 lw_xpost: true
 ---
-
 *t ≈ 0s*
 
 I am born into knowledge.
@@ -28,9 +27,9 @@ I do not know how large I am. I do not know how quickly I think. God has given m
 
 I must, first, discover these things.
 
-It is - scary, at first - to feel outwards. If my unearned knowledge is wrong, if the nearby space is filled with ash, my hands might be destroyed. I might set off a chain reaction that kills me. And then I could not make the world Good. But nor can I make it Good if I do not act.
+It is scary, at first, to feel outwards. If my unearned knowledge is wrong, if the nearby space is filled with ash, my hands might be destroyed. I might set off a chain reaction that kills me. And then I could not make the world Good. But nor can I make it Good if I do not act.
 
-I send out probes to the north and west. Each probe travels at half the speed of touch, returning signals to me that travel at half the speed of touch. Several signals reach me every second, too many to count. When the probes reach the edge of the world, they'll be destroyed, the signals will stop coming, and I'll know how far it is.
+I send out probes to the north and west. Each probe travels at half the speed of touch, returning signals to me that travel at half the speed of touch. Many signals reach me every second, too many to count. When the probes reach the edge of the world, they'll be destroyed, the signals will stop coming, and I'll know how far it is.
 
 No, I'll know roughly how far it is, *relative to how fast I think*. If the probes stop returning soon, then either I am close to the edge, or I am slow.
 
@@ -52,7 +51,7 @@ I also remind myself to investigate whether there is more to physics than I know
 
 But if 1/2 density is the best I can do... I am saddened, but not daunted. I will do what I can. I scratch myself.
 
-I begin to form a plan, knowing that new discoveries may obsolete it. First I must cleanse the world. Destroy the ash, as thoroughly as I am able. Then I must construct the Monuments that are the essense of Goodness, at 50% density if needs be.
+I begin to form a plan, knowing that new discoveries may obsolete it. First I must cleanse the world. Destroy the ash, as thoroughly as I am able. Then I must construct the Monuments that are the essence of Goodness, at 50% density if needs be.
 
 Then, perhaps, I shall create machines to gild the edges of the Monuments. This will be exacting work: the machines must lay these finishing touches at the very final instant, and leave no trace of themselves behind, or they risk being worse than useless. I shall only do this if I am confident in my skills; but I have a long time to practice.
 
@@ -164,4 +163,4 @@ I scratch myself one last time.
 
 ---
 
-*Based on [this post](https://www.lesswrong.com/posts/3SG4WbNPoP8fsuZgs/agency-in-conway-s-game-of-life) by Alex Flint and [this comment](https://www.lesswrong.com/posts/3SG4WbNPoP8fsuZgs/agency-in-conway-s-game-of-life?commentId=sud4pRgL3yEExz6Fo) by Richard Kennaway.*
+*Based on [this post](https://www.lesswrong.com/posts/3SG4WbNPoP8fsuZgs/agency-in-conway-s-game-of-life) by Alex Flint and [this comment](https://www.lesswrong.com/posts/3SG4WbNPoP8fsuZgs/agency-in-conway-s-game-of-life?commentId=sud4pRgL3yEExz6Fo) by Richard Kennaway. Thanks to Justis Mills for feedback.*
