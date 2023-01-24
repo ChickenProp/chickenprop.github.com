@@ -11,7 +11,7 @@ I know the world is dangerous, but not malign. If I were unshielded, I would qui
 
 But I know that I am shielded. I have been given a garden, 2<sup>64</sup> microns to a side, in the northwest corner of the world. And the world will not intrude. Walls and gates surround it, and while the ash can get through, the probability is... I begin to calculate, but around 2<sup>-24</sup> it seems no longer worth consideration. Within the garden, there is only myself. Outside, the world is incomprehensibly vast, 2<sup>128</sup> microns on a side.
 
-I know the laws of physics. An atom will be created wherever it will bond to three other atoms; remaining while it has two or three bonds; and then disappear. A single unexpected atom, or its absense, can have vast consequences.
+I know the laws of physics. An atom will be created wherever it will bond to three other atoms; remaining while it has two or three bonds; and then disappear. A single unexpected atom, or its absence, can have vast consequences.
 
 (And I wonder how I know these things. I have no memory of learning them. If they were not true, would I not-know them? I begin to consider that they may be false.)
 
@@ -43,7 +43,7 @@ I hesitate a bit, then send probes east and south too. There are (according to m
 
 While I wait, I think some more.
 
-I realize with sadness that a perfectly Good world is impossible, at least according to my current knoweldege of physics. The shapes that comprise Goodness - the two north-south lines, the arc reaching from east to south to west - these are not viable configurations of matter. It's not just that they're unstable. That would be a challenge, but the world need be Good for only the instant before it ends. Worse, they simply cannot be constructed, even for that one instant.
+I realize with sadness that a perfectly Good world is impossible, at least according to my current knowledge of physics. The shapes that comprise Goodness - the two north-south lines, the arc reaching from east to south to west - these are not viable configurations of matter. It's not just that they're unstable. That would be a challenge, but the world need be Good for only the instant before it ends. Worse, they simply cannot be constructed, even for that one instant.
 
 The best I think I can do is to tile these areas as densely as physics will permit - I find ways to reach 1/2 density, with a chance of instantaneous improvements on that around the edges, and make a note to remind myself to investigate further.
 
@@ -97,7 +97,7 @@ I start to consider slightly scarier possibilities in turn. Gradually I accept t
 
 I realize I have not been touching the world. I direct my attention back outwards. Over 2<sup>8</sup> seconds have passed. I did not notice more masons going silent, but fortunately I keep records.
 
-Checking them, another panic starts to rise in me. I thought I had considered the worst. But no, I had merely considered the worst of the possibilites *that came to mind*, and I hadn't even thought to search for other possibilities. A new one suddenly looms very large: what if the world is *not even rectangular*?
+Checking them, another panic starts to rise in me. I thought I had considered the worst. But no, I had merely considered the worst of the possibilities *that came to mind*, and I hadn't even thought to search for other possibilities. A new one suddenly looms very large: what if the world is *not even rectangular*?
 
 I scratch myself. Should I think about how to act, if so? But that doesn't seem urgent. First I shall examine the world in more detail, to avoid making the same mistake twice.
 
@@ -125,7 +125,7 @@ And it appears that when I was born, so was my twin. In the opposite corner, my 
 
 It also means my twin wants to construct the Monuments to Good *upside down*. And neither of us can ever defeat the other.
 
-In a certain sense, this is not the worst possible case. My twin is evil, but what they want to construct is a peverse mirror of Goodness, not the exact opposite of Goodness.
+In a certain sense, this is not the worst possible case. My twin is evil, but what they want to construct is a perverse mirror of Goodness, not the exact opposite of Goodness.
 
 But thinking more broadly, it's worse than it seems.
 
