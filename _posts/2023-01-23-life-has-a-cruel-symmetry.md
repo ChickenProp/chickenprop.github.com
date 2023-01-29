@@ -2,6 +2,9 @@
 title: Life Has a Cruel Symmetry
 layout: post
 lw_xpost: true
+external_comments:
+  - name: /r/rational
+    url: https://www.reddit.com/r/rational/comments/10kaxij/c_life_has_a_cruel_symmetry/
 ---
 *t ≈ 0s*
 
