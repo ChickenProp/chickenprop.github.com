@@ -1,10 +1,10 @@
 ---
-title: Effects of descaling a kettle
+title: Does descaling a kettle help?
 layout: draft
 ---
 I've heard that descaling a kettle makes it more efficient, and can save me time and money.
 
-Okay, but how much? For some reason my my intuition says it'll be basically unnoticable. Let's try and figure it out.
+Okay, but how much? For some reason my my intuition says it'll be basically unnoticable. Let's try to figure it out, and then actually try it.
 
 ### The Models
 
@@ -24,11 +24,11 @@ This implies, if there's no limescale, that the power transfer should be infinit
 
 But doing some field research (i.e. looking at my kettle) makes me think it's a bad model in this case. Here's what it looks like:
 
-<a href="//reasonableapproximation.net/images/effects-of-descaling/before.jpg"><img src="//reasonableapproximation.net/images/effects-of-descaling/before.jpg" height="500"></a>
+<a href="//reasonableapproximation.net/images/does-descaling-help/before.jpg"><img src="//reasonableapproximation.net/images/does-descaling-help/before.jpg" height="500"></a>
 
 (This kettle was last descaled around August 2020. I know because I bought vinegar for it, and thanks to online shopping the receipt is in my email.)
 
-It seems that I have some limescale over some of the heating element, and zero limescale over some of it. The "no limescale gives ∞ W/K" model is going to give ∞ W/K no matter how small the no-limescale area is. So scratch that model.
+It seems that I have some limescale over some of the heating element (bits of the metal plate at the bottom, and the tube around where it passes through the plate), and zero limescale over some of it. The "no limescale gives ∞ W/K" model is going to give ∞ W/K no matter how small the no-limescale area is. So scratch that model.
 
 I don't feel like trying to model the rate of power transfer from an un-limescaled heating element to water. I don't know what material it's made of (some kind of steel I suppose?), and I don't know what property of that material to look up. Plus it probably depends on how fast water convects.
 
@@ -40,7 +40,7 @@ When we turn the kettle on, we start putting 2200 W into the heating element, an
 
 Energy used to heat the heating element is essentially wasted. I don't know if other kettle designs could do away with one entirely, but as long as we have a heating element there's going to be some wastage. We can minimize the wastage by having the heating element be low-volume (so not much energy needed to heat it) but high surface area (so high rate of energy transfer to the water).
 
-If the rate of energy transfer is 1 W/K, then we reach 100% efficiency when the heating element is 2200K hotter than the water. But long before you reach that point you're going to melt the plastic of the kettle, which would be bad. (The highest melting temperature of any plastic listed on [this page](https://plasticranger.com/melting-point-of-plastics/) is 390°C.)
+If the rate of energy transfer is 1 W/K, then we reach 100% efficiency when the heating element is 2200 K hotter than the water. But long before you reach that point you're going to melt the plastic of the kettle, which would be bad. (The highest melting temperature of any plastic listed on [this page](https://plasticranger.com/melting-point-of-plastics/) is 390°C.)
 
 If it's 10 W/K, then we reach 100% efficiency at 220 K hotter than the water. Some plastics can survive 320°C, but idk, it still seems bad.
 
@@ -78,7 +78,7 @@ As for the time... ten seconds isn't much, but the time cost of boiling a kettle
 
 (We don't get to count "time spent writing this post" against descaling. I'm not writing it to save myself time, I'm writing it to practice my sience skills and have fun doing so.)
 
-Okay, actual calculations: we're making a 97K difference in water temperature. The specific heat capacity [is](https://en.wikipedia.org/wiki/Specific_heat_capacity) 4.184 J/K·g, and the density is 1 g/ml. The power transfer at 100% efficiency is 2200 W. So for $x$ ml of water, we need a minimum of ${97 · 4.184 \over 2200} x$ s to boil. For 473 ml that's 87.3 s, and for 1500 ml that's 276.7 s.
+Okay, actual calculations: we're making a 97 K difference in water temperature. The specific heat capacity [is](https://en.wikipedia.org/wiki/Specific_heat_capacity) 4.184 J/K·g, and the density is 1 g/ml. The power transfer at 100% efficiency is 2200 W. So for $x$ ml of water, we need a minimum of ${97 · 4.184 \over 2200} x$ s to boil. For 473 ml that's 87.3 s, and for 1500 ml that's 276.7 s.
 
 If you want to make some predictions before you see the actual times, here's some space for you to do so.
 
@@ -94,7 +94,7 @@ If you want to make some predictions before you see the actual times, here's som
 
 ### The results
 
-The actual pre-descaling times: for small I measured 103, 105 and 107 s, average 105. That's 17.7 s or 20% higher than theoretical minimum. For large I measured 296, 290 and 300 s, average 295.3. That's 18.7 s or 7% higher than optimal.
+The actual pre-descaling times: for small I measured 103, 105 and 107 s, average 105. That's 17.7 s or 20% higher than theoretical minimum. For large I measured 296, 290 and 300 s, average 295.3. That's 18.7 s or 7% higher than minimum.
 
 I think this is looking pretty good for the "initial efficency, not eventual efficiency" models. I still expect descaling to make less than a 10 s difference in both.
 
@@ -112,6 +112,6 @@ If you want to change your predictions, here's some space for that.
 
 I had to descale twice, the first time I don't think I put in enough vinegar relative to water. Here's what it looked like after the second attempt:
 
-<a href="//reasonableapproximation.net/images/effects-of-descaling/after.jpg"><img src="//reasonableapproximation.net/images/effects-of-descaling/after.jpg" height="500"></a>
+<a href="//reasonableapproximation.net/images/does-descaling-help/after.jpg"><img src="//reasonableapproximation.net/images/does-descaling-help/after.jpg" height="500"></a>
 
 Also, my partner pointed out that post-descaling, the 2-cup mark holds slightly more water than it used to. I think this is less than the uncertainty in my measurements anyway, and in practice I use those markings to decide how much to fill my kettle so maybe it's correct not to control for this effect. Still, I'm a little embarrassed I didn't think of it in advance.
