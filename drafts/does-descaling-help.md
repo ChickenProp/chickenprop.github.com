@@ -1,5 +1,5 @@
 ---
-title: Does descaling a kettle help?
+title: Does descaling a kettle help? Theory and practice
 layout: draft
 ---
 I've heard that descaling a kettle makes it more efficient, and can save me time and money.
@@ -62,7 +62,7 @@ My immediate temptation is to boil a large amount of water, so that the effect i
 
 I don't trust my models, so I'm going to try both small and large amounts. For small amounts, I'm going to fill the kettle to the "2 cup" line. I'm in the UK so that ought to be 568 ml, but most of my mugs are only 500 ml and it's not quite enough to fill one of them. Checking in a measuring jug, it's somewhere between 450 and 500 ml, so likely a US pint, 473 ml. There's some noise here because the kettle has a wide diameter, so we only get small differences in the water level for the volume poured in. My rough guess without measuring is a 5 ml difference between runs is plausible. For large amounts, I'm just going to empty my entire 1.5 l bottle of fridge-water into the kettle. There's some noise here because the bottle doesn't have markings at all and I don't bother to fill it right to the brim, but I do try to get it to roughly the same place. A 5 ml difference between runs seems plausible here too.
 
-I'll use water from the fridge, to mostly control for initial temperature (my guess is it'll start around 3°C). I'm not going to bother trying to control for room temperature or for where in the fridge I keep the water or what phase of the cooling cycle the fridge is in at the time. I'm going to assume that the kettle cuts off when all the water is at 100°C. I'll only measure the first boil of the day, and that way the kettle has definitely had time to cool down overnight.
+I'll use water from the fridge, to mostly control for initial temperature (my guess is it'll start around 3°C). I'm not going to bother trying to control for room temperature or for where in the fridge I keep the water or what phase of the cooling cycle the fridge is in at the time. I'm going to assume that the kettle cuts off when all the water is at 100°C. I'll only measure the first boil of the day, and that way the kettle has definitely had time to cool down overnight. (In hindsight:) I didn't control for whether the kettle had had water sitting in it overnight; that could plausibly make the heating element a few degrees below room temperature.
 
 There's one more calculation to do first, and that's to figure out how quickly it would boil assuming no energy wasted. Then I can make some predictions; do the pre-descaling boils; possibly adjust my predictions; descale; do the post-descaling boils; and compare.
 
@@ -113,5 +113,15 @@ If you want to change your predictions, here's some space for that.
 I had to descale twice, the first time I don't think I put in enough vinegar relative to water. Here's what it looked like after the second attempt:
 
 <a href="//reasonableapproximation.net/images/does-descaling-help/after.jpg"><img src="//reasonableapproximation.net/images/does-descaling-help/after.jpg" height="500"></a>
+
+Now I measured 103, 104 and 104 s for small, average 103.7, 1.3 s faster than before. And 298, 296, 293 s for large, average 295.7, 0.3 s slower than before.
+
+I assume these results aren't statistically significant, and I'm sure they're not practically significant. Descaling my kettle basically just doesn't speed it up unless it's much more scaly than it was this time. You know your kettle better than I do, but my guess is it won't speed up yours either. Don't be fooled by big vinegar.
+
+I should have given a numeric probability for "no detectable difference". (The probability I was reluctant to give was for "I notice a difference when I'm not measuring".) Thinking back, I think that just before descaling I would have given this... something like 30-50% probability?
+
+### The caveats
+
+There may be other reasons to descale your kettle. Some friends mentioned flavor; I don't remember hearing that as a reason before, and I didn't notice a difference, but I'm the opposite of a supertaster. One mentioned getting scum on top of tea when a kettle is too scaly; I haven't noticed that either, but I'm probably also the opposite of a super-scum-noticer.
 
 Also, my partner pointed out that post-descaling, the 2-cup mark holds slightly more water than it used to. I think this is less than the uncertainty in my measurements anyway, and in practice I use those markings to decide how much to fill my kettle so maybe it's correct not to control for this effect. Still, I'm a little embarrassed I didn't think of it in advance.
