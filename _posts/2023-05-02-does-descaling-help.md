@@ -1,6 +1,8 @@
 ---
 title: Does descaling a kettle help? Theory and practice
-layout: draft
+layout: post
+lw_xpost: true
+tags: [practical]
 ---
 I've heard that descaling a kettle makes it more efficient, and can save me time and money.
 
