@@ -1,5 +1,5 @@
 ---
-title: How tall is the Shard?
+title: "How tall is the Shard, really?"
 layout: draft
 ---
 [According to Wikipedia](https://en.wikipedia.org/wiki/The_Shard), the Shard (the tallest building in the UK) stands "309.6 meters (1,016 feet) high". I put this in my Anki deck as "Height of the Shard / 310m", but I was saying "height" to mean "tallness" (because I don't much like that word) and I had assumed Wikipedia was using it the same way. So I thought the Shard was 310 m tall.
@@ -82,9 +82,9 @@ Sometimes with tall buildings the issue is that there are multiple things that c
 
 Might it be that different sources define sea level differently? Perhaps, but this isn't enough by itself unless someone used different sea levels for the top and the bottom. I'm not sure how much difference we can expect this to explain.
 
-How about forgetting the difference between height and tallness? This does seem plausible to me. I could imagine someone standing at the top of the Shard with a device telling them they're (say) 309.6 m above sea level, and forgetting to also use that device on the ground.
+How about forgetting the difference between height and tallness? This does seem plausible to me. I could imagine someone standing at the top of the Shard with a device telling them they're (say) 309.6 m above sea level, and forgetting to also use that device on the ground. It seems to roughly fit, but not closely enough to be conclusive and of course none of the numbers are sourced well enough for this error to be detectable in the methodology.
 
-I could then imagine those two heights getting rounded to 309 m and 310 m respectively; or 309.6 m getting truncated to 309 m; or 306 m tallness getting rounded to 310 m; and that could explain some of the numbers I see.
+I could then imagine those two heights getting rounded to 309 m and 310 m respectively; or 309.6 m getting truncated to 309 m; or 306 m tallness getting rounded to 310 m; and that could explain some of the numbers I see. Converting meters to feet and back can also generate new numbers.
 
 It's also possible that different sources are counting from different bottoms. I don't think there's a street-level entrance that would get us above 306 m, but maybe including a basement.
 
