@@ -20,9 +20,9 @@ The first thing to do[^first] is to look at Wikipedia's sources. It doesn't have
 
 [^first]: Not the first thing I actually did, but I feel a bit embarrassed I didn't think of it sooner.
 
-Skyscraperpage lists the source for the height as http://www.the-shard.com, and [the about page](https://www.the-shard.com/about/) on that site says: "How tall is The Shard? The Shard is 309.6 metres, or 1,016 feet, high and is Western Europe's tallest building." You'd certainly expect the Shard's official webpage to be right about this, but also it says "high" not "tall" so it could be a misdirect.
+Skyscraperpage lists the source for the height as <http://www.the-shard.com>, and [the about page](https://www.the-shard.com/about/) on that site says: "How tall is The Shard? The Shard is 309.6 metres, or 1,016 feet, high and is Western Europe's tallest building." You'd certainly expect the Shard's official webpage to be right about this, but also it says "high" not "tall" so it could be a misdirect.
 
-Next[^next], does Maher have any sources? For 306 m tallness he just says "most sources" give that figure, which seems wrong to me. For 3 m above sea level, I think that comes from its height at the top. He quotes someone at Ordnance Survey saying the top of the Shard is 308.9 m above sea level, which gives around 3 m for the base.
+Next[^next], does Maher have any sources? For 306 m tallness he just says "most sources" give that figure. For 3 m above sea level, I think that comes from its height at the top. He quotes someone at Ordnance Survey saying the top of the Shard is 308.9 m above sea level, which gives around 3 m for the base.
 
 [^next]: Also not actually next.
 
@@ -34,7 +34,7 @@ Most of my research was just googling things. Search terms included "how tall is
 
 [SkyscraperCity](https://www.skyscrapercity.com/threads/the-shard-southwark-309m-72-fl.407549/page-833): says both "309m" and "310m" with no apparent shame. But also, that link points to page 833 of 1385 of a discussion thread[^fandom], and at this particular point people are discussing its height above sea level. (And comparing to the then-future "The Pinnacle", which became [22 Bishopsgate](https://en.wikipedia.org/wiki/22_Bishopsgate).) It seems the Shard is level with The Thames nearby, which at that point is tidal. Some commenters think that means it's at sea level at least some of the time, but someone else points out no: "A river can be tidal some distance above high water mark for the sea. Consider what happens when the tide comes in - the sea effectively "comes up" the river mouth, which will slow down flow of water down the river, which will start backing up. As it backs up, the level upstream will increase as less water is getting out. Thus a river can be tidal above the high tide point of the sea itself." Makes sense to me.
 
-[^fandom]: It's 22,770 posts as of December 2022. Apparently the skyscraper fandom means business.
+[^fandom]: It's 22,770 posts as of December 2022. I guess the skyscraper fandom means business.
 
 Someone else says it's 16 m above sea level according to Google Maps, but I can't find that info on Google Maps myself. (But it does label it as "306m-high glass & steel tower with views", if I'm zoomed in the right amount. I can't see that string anywhere else.)
 
@@ -66,11 +66,11 @@ And my final source is the aviation charts for nearby London City Airport. (Than
 
 ### The exciting conclusion
 
-So... I'm not sure, really. I think my best guess is that it's 306 m tall according to some perfectly reasonable way to measure that, possibly the most reasonable. This is consistent with (i.e. lower than) the heights given by both OS and the aviation charts, and those are close enough that the difference might be caused by differing ideas of sea level.
+So... I'm not sure, really. I think my best guess is that it's 306 m tall according to some perfectly reasonable way to measure that, possibly the most reasonable. This is consistent with (i.e. lower than) the heights given by both OS and the aviation charts, and those are close enough that the difference might be caused by differing ideas of sea level. And it's the only number I remember seeing lower than those, other than the aviation charts.
 
 If this is right then it's about 3 m above sea level at the ground, which is close enough to the benchmark height that I can believe it. I don't think I believe the "16 m above sea level" value; even a combination of "confused about which street level we're measuring from" and "differing ideas of sea level" seems like it couldn't give that. I also don't think I believe the 4.7 m from the ground configuration table - that table suggests that before development, the ground there was within 5 cm of sea level, and in particular below the nearby Thames most or all of the time. Not inconceivable, but in context I doubt.
 
-This makes the aviation charts wrong about its tallness, which is my biggest sticking point here. But I'm not sure how reliable to expect them to be about that. Height seems far more relevant to their interests, and they could easily be using a ground-height measurement at some nearby point.
+This makes the aviation charts wrong about its tallness, which is my biggest sticking point here. But I'm not sure how reliable to expect them to be about that. Height seems far more relevant to their interests than tallness, and they could easily be using a ground-height measurement at some nearby point.
 
 I think the funniest way to resolve this for good, would be for someone to announce plans for a 307 m tall building with its base 4 m above sea level, and specifically claim it as taller than the Shard. The skyscraper fandom will presumably erupt into civil war, but when the dust settles we can hope they'll have uncovered the truth.
 
