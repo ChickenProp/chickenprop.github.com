@@ -3,7 +3,11 @@ title: "How tall is the Shard, really?"
 layout: post
 lw_xpost: true
 tags: [silly]
-test_publishing: "maybe"
+external_comments:
+  - name: LessWrong
+    url: https://www.lesswrong.com/posts/xtHsES35AhrCEF8ad/how-tall-is-the-shard-really
+  - name: /r/london
+    url: https://www.reddit.com/r/london/comments/14gsodr/how_tall_is_the_shard_really/
 ---
 [According to Wikipedia](https://en.wikipedia.org/wiki/The_Shard), the Shard (the tallest building in the UK) stands "309.6 meters (1,016 feet) high". I put this in my Anki deck as "Height of the Shard / 310m", but I was saying "height" to mean "tallness" (because I don't much like that word) and I had assumed Wikipedia was using it the same way. So I thought the Shard was 310 m tall.
 

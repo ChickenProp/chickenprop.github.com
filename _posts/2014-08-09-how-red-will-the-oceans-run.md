@@ -1,6 +1,7 @@
 ---
 title: How Red Will the Oceans Run?
 layout: post
+tags: [silly, math]
 ---
 *In which I inexpertly channel [Randall Munroe](http://what-if.xkcd.com/)*
 

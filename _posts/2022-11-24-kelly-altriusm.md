@@ -1,7 +1,7 @@
 ---
 title: On Kelly and altruism
 layout: post
-tags: rationality
+tags: [rationality, math]
 lw_xpost: true
 external_comments:
   - name: LessWrong

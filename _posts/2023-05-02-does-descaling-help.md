@@ -2,7 +2,10 @@
 title: Does descaling a kettle help? Theory and practice
 layout: post
 lw_xpost: true
-tags: [practical]
+tags: [practical, silly, math]
+external_comments:
+  - name: LessWrong
+    url: https://www.lesswrong.com/posts/4fPsFvDx8Q3KkiFyC/does-descaling-a-kettle-help-theory-and-practice
 ---
 I've heard that descaling a kettle makes it more efficient, and can save me time and money.
 
@@ -127,3 +130,5 @@ I should have given a numeric probability for "no detectable difference". (The p
 There may be other reasons to descale your kettle. Some friends mentioned flavor; I don't remember hearing that as a reason before, and I didn't notice a difference, but I'm the opposite of a supertaster. One mentioned getting scum on top of tea when a kettle is too scaly; I haven't noticed that either, but I'm probably also the opposite of a super-scum-noticer.
 
 Also, my partner pointed out that post-descaling, the 2-cup mark holds slightly more water than it used to. I think this is less than the uncertainty in my measurements anyway, and in practice I use those markings to decide how much to fill my kettle so maybe it's correct not to control for this effect. Still, I'm a little embarrassed I didn't think of it in advance.
+
+**Update:** Shortly after this, I semi-accidentally descaled my kettle's filter, which is something it hadn't occured to me to do. It pours so much more easily now! It used to be that if it was more than about half full it would drip water down the spout when I tried to pour it, but it doesn't do that any more. 10/10, will descale the filter again, even if not the heating element.

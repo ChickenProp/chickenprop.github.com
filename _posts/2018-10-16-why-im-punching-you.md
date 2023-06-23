@@ -3,6 +3,9 @@ title: "\"Now here's why I'm punching you...\""
 lw_xpost: true
 layout: post
 tags: [culture]
+external_comments:
+  - name: LessWrong
+    url: https://www.lesswrong.com/posts/Btdy7Fefer7S5J6qE/now-here-s-why-i-m-punching-you
 ---
 Related: [be nice, at least until you can coordinate meanness](http://slatestarcodex.com/2016/05/02/be-nice-at-least-until-you-can-coordinate-meanness/).
 

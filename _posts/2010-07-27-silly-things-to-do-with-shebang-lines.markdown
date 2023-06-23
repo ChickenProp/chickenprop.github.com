@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Silly Things to do with Shebang Lines
-tags: [software]
+tags: [software, silly]
 comments: true
 ---
 *(Fri, 6 Dec 2013: Importing this post from its [original home as a gist](https://gist.github.com/ChickenProp/492976).)*
