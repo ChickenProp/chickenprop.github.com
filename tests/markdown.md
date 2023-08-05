@@ -64,9 +64,11 @@ Which [seems to be](https://docs.github.com/en/pages/setting-up-a-github-pages-s
 
 <div markdown="1">
 
-*I wonder what this does*
+*if it's split over multiple lines*
 
-*with two lines*
+with surrounding whitespace
+
+*they're paragraph broken again*
 
 </div>
 

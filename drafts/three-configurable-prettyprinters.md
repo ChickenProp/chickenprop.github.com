@@ -65,8 +65,7 @@ Here's how pretty-simple would render a particular representation of a chess gam
 <th>pretty-gist</th>
 </tr>
 <tr>
-<td>
-
+<td markdown="1">
 ```
 GameState
   { turn = White
@@ -90,10 +89,8 @@ GameState
           }
       ...
 ```
-
 </td>
-<td>
-
+<td markdown="1">
 ```
 GameState { turn = White
           , pBlackWin = 35%
@@ -172,7 +169,7 @@ Another problem is, I expect consistency to be hard. Whatever design decisions I
 
 Those are problems for users. There's also a problem for implementers: roughly speaking, you're going to be allowing the user to pass a renderer for every field of every constructor of your type. For non-parameterized types (like the keys of an `IntMap`) that can be in the actual config type, and for parameterized types (like the keys of a `Map`) it comes in separate arguments later, but it's going to be there. That's going to be tedious for you.
 
-<details>
+<details markdown="1">
 <summary>Implementation for <code>Maybe</code></summary>
 
 ```haskell
@@ -203,7 +200,7 @@ gistMaybe (defaultConfigMaybe { showConstructors = True })
 
 </details>
 
-<details>
+<details markdown="1">
 <summary>Implementation for <code>GameState</code></summary>
 
 ```haskell
@@ -404,7 +401,7 @@ For another, if a type shows up at multiple places in the data structure, you pr
 
 You're also going to be dealing with nested record updates, which I find unpleasant and have a bunch of [questions](https://www.reddit.com/r/haskell/comments/128aifn/monthly_hask_anything_april_2023/jepke16/) about. That's somewhat the case with the classless solution too, but I think less deeply nested due to the structure of arguments and the lack of `Gister`. And here, you'll sometimes be doing type-changing record updates, and I think the future of those is uncertain (they're not supported by [`OverloadedRecordUpdate`](https://ghc.gitlab.haskell.org/ghc/doc/users_guide/exts/overloaded_record_update.html)).
 
-<details>
+<details markdown="1">
 <summary>Implementation for <code>Maybe</code></summary>
 
 ```haskell
@@ -436,7 +433,7 @@ gistF (\c -> c { showConstructors = True }) $ Just ()
 
 </details>
 
-<details>
+<details markdown="1">
 <summary>Implementation for <code>GameState</code></summary>
 
 ```haskell
@@ -649,7 +646,7 @@ How does this fare? The big advantage over the previous solutions is the "config
 
 I think the big downsides are that it's wildly complicated, and we've lost the ability to render anything we can't write a `Gist` instance for (which also means users can't override implementers' decisions). But also a bunch of other downsides. When you do want to render different occurrences of the same type differently, it's awkward. You won't get errors or warnings if your config gets out of sync with the type you're rendering. Encapsulation is tricky, internals of your types might be exposed in ways you don't want. It's not necessarily clear how you'd want newtypes to be configured, and newtype-deriving only gives you one option which might not be what you want.
 
-<details>
+<details markdown="1">
 <summary>Implementation for <code>Maybe</code></summary>
 
 ```haskell
@@ -689,7 +686,7 @@ gist [configF @Maybe $ \c -> c { showConstructors = pure True }] $ Just ()
 
 </details>
 
-<details>
+<details markdown="1">
 <summary>Implementation for <code>GameState</code></summary>
 
 ```haskell
