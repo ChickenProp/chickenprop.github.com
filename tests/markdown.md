@@ -46,6 +46,40 @@ what I get:
 
 I think this needs to be fixed in my posts, as long as I'm stuck with kramdown.
 
+Attempts at markdown in html:
+
+<div>
+*this shouldn't work*
+</div>
+
+<div>
+
+*this should*
+
+</div>
+
+<table>
+<tr>
+<td>
+
+*does this?*
+
+</td>
+</tr>
+</table>
+
+<table>
+<tr>
+
+<td>
+
+*how about this?*
+
+</td>
+
+</tr>
+</table>
+
 [^1]: Like this
 [^here]: And this
 [^2]: And this
