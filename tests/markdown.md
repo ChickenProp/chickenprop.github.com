@@ -32,31 +32,35 @@ and
 2. one line
 3. one line
 
-Blockquotes ideally should carry over between paragraphs, but I don't think that's possible with kramdown. What I want:
+Blockquotes carry over between paragraphs. This is just one quote:
 
 > one
 >
 > two
 
-what I get:
+this is two:
 
 > one
 
 > two
 
-I think this needs to be fixed in my posts, as long as I'm stuck with kramdown.
-
 Attempts at markdown in html:
 
-<div>
+<p>
 *this shouldn't work*
-</div>
+</p>
 
-<div>
+<p>
 
-*this should*
+*this should but seems not to*
 
-</div>
+</p>
+
+<p markdown="1">
+
+*this probably shouldn't but seems worth trying*
+
+</p>
 
 <table>
 <tr>
