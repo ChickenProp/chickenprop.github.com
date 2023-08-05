@@ -46,41 +46,35 @@ this is two:
 
 Attempts at markdown in html:
 
-<p>
-*this shouldn't work*
-</p>
-
-<p>
-
-*this should but seems not to*
-
-</p>
-
 <p markdown="1">
+*this is how to do it using kramdown syntax*
 
-*this probably shouldn't but seems worth trying*
+Which [seems to be](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/setting-a-markdown-processor-for-your-github-pages-site-using-jekyll) the default
+</p>
+
+<p>
+
+*if I switch to GFM*, this should work
 
 </p>
 
+<p>
+*this shouldn't in either processor*
+</p>
+
+<div markdown="1">
+
+*I wonder what this does*
+
+*with two lines
+
+</div>
+
 <table>
 <tr>
-<td>
-
-*does this?*
-
+<td markdown="1">
+*in a table, it goes inside the td I think?*
 </td>
-</tr>
-</table>
-
-<table>
-<tr>
-
-<td>
-
-*how about this?*
-
-</td>
-
 </tr>
 </table>
 
