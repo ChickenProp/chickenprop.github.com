@@ -66,7 +66,7 @@ Which [seems to be](https://docs.github.com/en/pages/setting-up-a-github-pages-s
 
 *I wonder what this does*
 
-*with two lines
+*with two lines*
 
 </div>
 
