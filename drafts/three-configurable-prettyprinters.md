@@ -1,11 +1,12 @@
 ---
+todo: link to repo, both in general and specific commits for implementations
 title: Three configurable prettyprinters
 layout: draft
 tags: [software]
 ---
-*I gave a [fifteen minute talk](https://www.youtube.com/watch?v=TBBHGR4ZlZM) about this at Zurihac 2023. If you read this document, I don't think there's much point in additionally watching the video.*
+*I gave a [fifteen minute talk](https://www.youtube.com/watch?v=TBBHGR4ZlZM) about this at Zurihac 2023. If you read this essay, I don't think there's much point in additionally watching the video.*
 
-I've been exploring a new-to-me approach to stringification.
+I've been exploring a new-to-me approach to stringification. Except that right now it's three different approaches that broadly share a common goal. I call it/them [`pretty-gist`](https://github.com/ChickenProp/pretty-gist).
 
 The lowest-friction way to stringify things in Haskell is usually `show`. It gives the user close to zero ability to control how the thing is rendered.
 
@@ -29,9 +30,9 @@ If you're a Haskell user, I'm interested to hear your thoughts. I have some spec
 
 ## Design goals
 
-* As a user, you should be able to target configurations specifically or generally. "All lists" or "all lists of Ints" or "only lists found at this specific point in the data structure". "All floating-point numbers" or "`Float` but not `Double`".
+* It should pretty-print, with indentation that adjusts to the available width.
 
-* It should pretty-print, with indentation that adjusts to the available width and configurable layout options.
+* As a user, you should be able to target configurations specifically or generally. "All lists" or "all lists of Ints" or "only lists found at this specific point in the data structure". "All floating-point numbers" or "`Float` but not `Double`".
 
 * It should be low boilerplate, both as a user and an implementer.
 
@@ -61,8 +62,8 @@ Here's how pretty-simple would render a particular representation of a chess gam
 
 <table>
 <tr>
-<th>pretty-simple</th>
-<th>pretty-gist</th>
+<th style="font-weight: bold">pretty-simple</th>
+<th style="font-weight: bold">pretty-gist</th>
 </tr>
 <tr>
 <td markdown="1">
@@ -119,7 +120,7 @@ It's not visible here, but pretty-simple has the ability to colorize its output.
 
 But the most important is rendering each `Maybe Piece` as a single character. There are three parts to that: a `Nothing` is rendering as `_`; a `Just` is simply rendering the value it contains with no wrapper; and a `Piece` is rendering as a single character. The combination makes it much easier to see most of the state of the game. You can no longer see when each piece last moved. But if that's not usually useful to you, it's fine not to show it by default.
 
-(At this point, chess pedants may be pointing out that this data type doesn't capture everything you need for chess. You can't reliably tell whether en passant is currently legal. Maybe there are other problems too. Yes, well done chess pedants, you're very clever. Now shut up.)
+(At this point, chess pedants may be pointing out that this data type doesn't capture everything you need for chess. You can't reliably tell whether en passant is currently legal. Maybe there are other problems too. Yes, well done chess pedants, you're very clever, now shut up.)
 
 ## Possible designs
 
@@ -129,7 +130,7 @@ I've come up with several possible designs for this making different tradeoffs. 
 
 Perhaps the very simplest solution is just to write a custom renderer every time I need one. I'm not going to do that.
 
-A level up from that is to write renderers for lots of different data types and combine them. We can write
+A level up from that, which I've implemented in the module [`Gist.Classless`](https://github.com/ChickenProp/pretty-gist/blob/aedcfc3a8adbd0c658b1370cee25500451fe68a4/src/Gist/Classless.hs), is to write renderers for lots of different data types and combine them. We can write
 
 ```haskell
 newtype Prec = Prec Int -- precedence level, 0 - 11
@@ -165,7 +166,7 @@ It also has some things to disrecommend it. Most notably, it's very verbose. You
 
 This also means that changes to your data structure are very often going to need to be reflected in your renderers, which sounds tedious.
 
-Another problem is, I expect consistency to be hard. Whatever design decisions I make, they're not enforced through anything. So someone who disagrees with them, or simply isn't paying attention to them, can easily make different ones, and then users need to remember things. (E.g. I had `gistList`, `gistTuple2` and `gistFloat` both take precedence parameters, but they'll completely ignore them. So maybe someone in a similar situation decides not to bother with those parameters.)
+Another problem is, I expect consistency to be hard. Whatever design decisions I make, they're not enforced through anything. So someone who disagrees with them, or simply isn't paying attention to them, can easily make different ones, and then users need to remember things. (E.g. I had `gistList`, `gistTuple2` and `gistFloat` all take precedence parameters, but they'll completely ignore them. So maybe someone in a similar situation decides not to bother with those parameters.)
 
 Those are problems for users. There's also a problem for implementers: roughly speaking, you're going to be allowing the user to pass a renderer for every field of every constructor of your type. For non-parameterized types (like the keys of an `IntMap`) that can be in the actual config type, and for parameterized types (like the keys of a `Map`) it comes in separate arguments later, but it's going to be there. That's going to be tedious for you.
 
@@ -326,9 +327,10 @@ instance Gist a => Gist [a] where
   gistPrec = ...
 ```
 
-This is the foundation of what I formerly called the "simple" approach, which is implemented in the module `Gist.Simple`.
+This is the foundation of the approach I've implemented in the module
+[`Gist.OneClass`](https://github.com/ChickenProp/pretty-gist/blob/aedcfc3a8adbd0c658b1370cee25500451fe68a4/src/Gist/OneClass.hs).
 
-There are a few significant complications. One is, this won't handle `String` well, because that's just `[Char]`. Other typeclasses (including `Show`) solve this by having an extra method for "how to handle lists of this type"; then you give that method a default implementation, but override it for `Char`. This seems fine as a solution, by which I mean "I hate it but I don't have any better ideas". I'm not going to bother showing it here. (Also it's not actually implemented for this solution in the code yet.)
+There are a few significant complications. One is, this won't handle `String` well, because that's just `[Char]`. Other typeclasses (including `Show`) solve this by having an extra method for "how to handle lists of this type"; then you give that method a default implementation, but override it for `Char`. This seems fine as a solution, by which I mean "I hate it but I don't have any better ideas". I'm not going to bother showing it here. (Also it's not actually implemented for this approach in the code yet.)
 
 Next: the typechecking here doesn't work very well. If we try
 
@@ -567,7 +569,7 @@ This makes "update the config of every occurrence of a type" easy. It makes "upd
 
 (This last bit sounds almost more trouble than it's worth. But without it, it becomes super awkward to handle things like "only show three levels deep of this self-referential data type".)
 
-This is currently implemented in the `Gist.Monadic` module. There's also a `Gist.Dynamic` module which has just the config-data-structure part, and is actually the implementation I've fleshed out the most. But I currently think it's not worth exploring more and not worth discussing in depth by itself.
+This is currently implemented in the [`Gist.TwoClass`](https://github.com/ChickenProp/pretty-gist/blob/aedcfc3a8adbd0c658b1370cee25500451fe68a4/src/Gist/TwoClass.hs) module. There's also a [`Gist.Dynamic`](https://github.com/ChickenProp/pretty-gist/blob/aedcfc3a8adbd0c658b1370cee25500451fe68a4/src/Gist/Dynamic.hs) module which has just the config-data-structure part, and is actually the implementation I've fleshed out the most. But I currently think it's not worth exploring more and not worth discussing in depth by itself.
 
 Somewhat simplified, here's the main stuff going on with this solution:
 
