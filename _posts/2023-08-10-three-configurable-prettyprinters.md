@@ -1,7 +1,6 @@
 ---
-todo: link to repo, both in general and specific commits for implementations
 title: Three configurable prettyprinters
-layout: draft
+layout: post
 tags: [software]
 ---
 *I gave a [fifteen minute talk](https://www.youtube.com/watch?v=TBBHGR4ZlZM) about this at Zurihac 2023. If you read this essay, I don't think there's much point in additionally watching the video.*
@@ -10,7 +9,7 @@ I've been exploring a new-to-me approach to stringification. Except that right n
 
 The lowest-friction way to stringify things in Haskell is usually `show`. It gives the user close to zero ability to control how the thing is rendered.
 
-The [`Show1`](https://hackage.haskell.org/package/base-4.18.0.0/docs/Data-Functor-Classes.html#t:Show1) and [`Show2`](https://hackage.haskell.org/package/base-4.18.0.0/docs/Data-Functor-Classes.html#t:Show2) classes give some control, but only in limited ways. Importantly, they only work on paramaterized values; you could use `Show2` to change how you render the keys of a `Map Int String`, but not of an `IntMap String`.
+The [`Show1`](https://hackage.haskell.org/package/base-4.18.0.0/docs/Data-Functor-Classes.html#t:Show1) and [`Show2`](https://hackage.haskell.org/package/base-4.18.0.0/docs/Data-Functor-Classes.html#t:Show2) classes give some control, but only in limited ways. Importantly, they only work on parameterized values; you could use `Show2` to change how you render the keys of a `Map Int String`, but not of an `IntMap String`.
 
 There are also things that give you some control over layout, but not much control over content. For example, [aeson-pretty](https://hackage.haskell.org/package/aeson-pretty) lets you pretty-print json data, and [pretty-simple](https://hackage.haskell.org/package/pretty-simple) can pretty-print typical output from `show`. Both let you configure indent width, and pretty-simple additionally lets you choose some different layout styles (where to put newlines and parentheses) and stuff. But they both operate by a model where you produce a relatively simple data structure that they know how to deal with, they give you a few knobs and render it in full. (For aeson-pretty the data structure is JSON, for pretty-simple it's a custom type that they parse from `show` output and that's pretty good at reproducing it.)
 
