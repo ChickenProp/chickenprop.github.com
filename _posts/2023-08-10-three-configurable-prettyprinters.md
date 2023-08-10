@@ -821,4 +821,4 @@ So some things I'd like to know from readers:
 
 I have some opinions on these myself, but I'd prefer to wait and see what others say before revealing. I also have another possible approach vaguely in mind; but if I waited to explore it before publishing, then this would never get finished.
 
-The canonical public place to leave comments is the reddit thread (link incoming). But I've also set up a [google form](https://forms.gle/wjW9dxr9r9qXmHLB8) you can fill in if you prefer.
+The canonical public place to leave comments is the [reddit thread](https://www.reddit.com/r/haskell/comments/15nr7ky/rfc_three_configurable_prettyprinters/). But I've also set up a [google form](https://forms.gle/wjW9dxr9r9qXmHLB8) you can fill in if you prefer.
