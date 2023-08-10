@@ -2,6 +2,12 @@
 title: Three configurable prettyprinters
 layout: post
 tags: [software]
+lw_xpost: true
+external_comments:
+  - name: /r/haskell
+    url: https://www.reddit.com/r/haskell/comments/15nr7ky/rfc_three_configurable_prettyprinters/
+  - name: Haskell Discourse
+    url: https://discourse.haskell.org/t/rfc-three-configurable-prettyprinters/7265
 ---
 *I gave a [fifteen minute talk](https://www.youtube.com/watch?v=TBBHGR4ZlZM) about this at Zurihac 2023. If you read this essay, I don't think there's much point in additionally watching the video.*
 
