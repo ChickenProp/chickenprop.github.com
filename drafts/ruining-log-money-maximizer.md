@@ -69,7 +69,7 @@ Admittedly, I'm not giving Logan much choice here. He can either bet everything 
 
 Then if Logan's current bankroll is \\( x \\), I tell him that if he wagers \\( w \\), I'll wager \\( f(x, x-w) - x \\) (giving him 60% chance of coming away with \\( f(x, x-w) \\) and 40% chance of coming away with \\( x-w \\)). He'll want to bet everything he can on this. I spent some time trying to find an example of such a function but my math isn't what it used to be; I'm just going to hope there are no hidden complications here.
 
-So what are the similarities and differences here?
+So what are the similarities and differences?
 
 Difference: Logan's bets grow a lot faster than Linda's. For some fixed probability of bankrupting them, I need a lot less money for Linda than Logan. Similarity: I need an infinite bankroll to pull this off with probability 1, so who cares how fast the bets grow?
 
@@ -79,13 +79,13 @@ Difference: I bring Linda down to £0.00, and then she'd like to bet more but sh
 
 (Admittedly, "not allowed to subdivide the penny" feels arbitrary to me in a way that "not allowed to go negative" doesn't. But note that Linda would *totally* be able to take on debt if she's seeing 20% return on investment. Honestly I think a lot of what's going on here, is that "not allowed to go negative" is something that's easy to model mathematically, while "not allowed to infinitely subdivide" is something that's hard to model.)
 
-Difference: for Logan, but not for Linda, I need to know how much money he starts with for this to work.
+Difference: for Logan, but not for Linda, I need to know how much money he starts with for this to work. Or at least an upper bound.
 
-But all of that feels like small fry compared to this big similarity. I can (given an infinite bankroll and a certain level of trollishness) offer either one of them a series of bets, such that they'll accept every bet in turn and put as much money as they can on it; and then eventually they'll lose and have to stop betting. They'll know this in advance, and they'll play anyway, they'll lose all or almost all of their money, and they won't regret their decisions. If you think this is a problem for Linda's utility function, it's a problem for Logan's too.
+But all of that feels like small fry compared to this big similarity. I can (given an infinite bankroll, a certain level of trollishness, and knowledge of Logan's financial situation) offer either one of them a series of bets, such that they'll accept every bet in turn and put as much money as they can on it; and then eventually they'll lose and have to stop betting. They'll know this in advance, and they'll play anyway, they'll lose all or almost all of their money, and they won't regret their decisions. If you think this is a problem for Linda's utility function, it's a problem for Logan's too.
 
 ### What about a Kelly bettor?
 
-I've previously made the case that we should distinguish between "maximizing expected log-money", the thing Logan does; and "betting Kelly", a strategy that merely happens to place the same bets as Logan in certain situations. According to my usage of the term, one bets Kelly when one wants to "rank-optimize" one's wealth, i.e. to almost surely become richer than anyone who doesn't bet Kelly, over a long enough time period.
+I've [previously made the case](https://www.lesswrong.com/posts/XnnfYrqaxqvirpxFX/on-kelly-and-altruism) that we should distinguish between "maximizing expected log-money", the thing Logan does; and "betting Kelly", a strategy that merely happens to place the same bets as Logan in certain situations. According to my usage of the term, one bets Kelly when one wants to "rank-optimize" one's wealth, i.e. to become richer with probability 1 than anyone who doesn't bet Kelly, over a long enough time period.
 
 It's well established that when offered the bets that ruin Linda, Kelly bets the same as Logan. But what does Kelly do when offered the bets that ruin Logan?
 
