@@ -46,9 +46,9 @@ I can't offer Logan a bet that he'll stake his entire fortune on. No possible re
 
 But I can offer him a bet that he'll stake *all but a penny* on. I can make the odds of that bet 60/40 in his favor, like the bets Linda was taking above, or any other finite probability. Then if he wins, I can offer him another bet at the same odds. And another, until he eventually loses and can't bet any more. And just like Linda, he'll be able to see this coming and he'll endorse his actions every step of the way.
 
-How do I do this? I can't simply increase the payoff-to-stake ratio of the bet. If a bet returns some multiple of your stake, and has a 60% chance of winning, Logan will never bet more than 60% of his bankroll on it.
+How do I do this? I can't simply increase the payoff-to-stake ratio of the bet. If a bet returns some multiple of your stake, and has a 60% chance of winning, Logan's preferred amount to stake will never be more than 60% of his bankroll.
 
-But who says bets need to have a fixed payoff-to-stake ratio? Logan starts with £1, which he values at \\( \ln(100) ≈ 4.6052 \\).[^zero-point] I can offer him a bet where he wagers his £0.99 against my £20.55, with 60% chance of winning. He values that bet at
+But who says I need to give him that option? Logan starts with £1, which he values at \\( \ln(100) ≈ 4.6052 \\).[^zero-point] I can offer him a bet where he wagers £0.99 against £20.55 from me, with 60% chance of winning. He values that bet at
 
 [^zero-point]: I'm setting Logan's zero-utility point at £0.01, which means we take the log of the number of pennies he has. But we could do it in pounds instead, or use a different base of logarithm, without changing anything.
 
@@ -56,9 +56,9 @@ But who says bets need to have a fixed payoff-to-stake ratio? Logan starts with 
 \[ 0.4\ln(100 - 99) + 0.6\ln(100 + 2055) ≈ 4.6053 \]
 </p>
 
-so he'll accept it. He'd *rather* wager some fraction of £0.99 against the same fraction of £20.55, but if I'm not giving him that option, he'll take what he can get.
+so he'll accept it. He'd *rather* wager some fraction of £0.99 against the same fraction of £20.55 (roughly £0.58 against £11.93), but if that's not on the table, he'll take what he can get.
 
-If he wins he has £21.55 to his name, which he values at \\( \\ln(2155) ≈ 7.6755 \\). So I offer him to wager his £21.54 against my £3573.85, 60% chance of winning, which he values at... still \\( 7.6755 \\) but it's higher at the 7th decimal place. And so on, the stakes I offer growing exponentially - Logan is indifferent between a certainty of \\( £x \\) and a 60% chance of \\( £x^{5/3} \\) (plus 40% chance of £0.01), so I just have to offer slightly more than that (minus his current bankroll).
+If he wins he has £21.55 to his name, which he values at \\( \\ln(2155) ≈ 7.6755 \\). So I offer him to wager £21.54 against my £3573.85, 60% chance of winning, which he values at... still \\( 7.6755 \\) but it's higher at the 7th decimal place. And so on, the stakes I offer growing exponentially - Logan is indifferent between a certainty of \\( £x \\) and a 60% chance of \\( £x^{5/3} \\) (plus 40% chance of £0.01), so I just have to offer slightly more than that (minus his current bankroll).
 
 Admittedly, I'm not giving Logan much choice here. He can either bet everything or nothing. Can I instead offer him bets where he chooses how much of his money to put in, and he still puts in all but a penny? I'm pretty sure yes: we just need to find a function \\( f : ℝ\_{>0}^2 → ℝ\_{>0} \\) such that whenever \\( a ∈ (0, x] \\),
 
@@ -69,7 +69,7 @@ Admittedly, I'm not giving Logan much choice here. He can either bet everything 
 
 Then if Logan's current bankroll is \\( x \\), I tell him that if he wagers \\( w \\), I'll wager \\( f(x, x-w) - x \\) (giving him 60% chance of coming away with \\( f(x, x-w) \\) and 40% chance of coming away with \\( x-w \\)). He'll want to bet everything he can on this. I spent some time trying to find an example of such a function but my math isn't what it used to be; I'm just going to hope there are no hidden complications here.
 
-So what are the similarities and differences?
+So what are the similarities and differences between Linda and Logan?
 
 Difference: Logan's bets grow a lot faster than Linda's. For some fixed probability of bankrupting them, I need a lot less money for Linda than Logan. Similarity: I need an infinite bankroll to pull this off with probability 1, so who cares how fast the bets grow?
 
@@ -95,7 +95,7 @@ Still: when offered Logan's all-or-nothing bets, Kelly accepts at most a finite 
 
 What about the bets where Logan got to choose how much he put in? Kelly would prefer to bet nothing (except a finite number of times) than to go all-in infinitely many times. But might she bet smaller amounts, infinitely often?
 
-What are some possible strategies here? One is "bet a fixed amount every time"; this has some probability of eventually going bankrupt (i.e. ending up with less than the fixed amount), but I think the probability is less than \\( 1 \\). I don't think any of these strategies will be more or less rank-optimal than any of the others.
+What are some possible strategies here? One is "bet a fixed amount every time"; this has some probability of eventually going bankrupt (i.e. ending up with less than the fixed amount), but I think the probability is less than 1. I don't think any of these strategies will be more or less rank-optimal than any of the others.
 
 Another is "bet all but a fixed amount every time". This has probability 1 of eventually being down to that amount. Assuming you then stop, this strategy is more rank-optimal the higher that amount is (until it reaches your starting capital, at which point it's equivalent to not betting).
 
