@@ -1,5 +1,5 @@
 ---
-layout: draft
+layout: post
 title: "Ruining an expected-log-money maximizer"
 lw_xpost: true
 tags: [rationality, math]
@@ -22,11 +22,11 @@ I make three replies to this. Firstly, the utility function is not up for grabs!
 
 And, at some future time, after she's gone bankrupt, ask Linda if she thinks any of her past decisions were mistakes, given what she knew at the time. She'll say no: she took the bet that maximized her expected wealth at every step, and one of them went against her, but that's life. Just think of how much money she'd have right now if it hadn't! (And nor had the next one, or the one after....) It was worth the risk.
 
-You might ask "but what happens after the game finishes? With probability 1, Linda has no money, and Logan has infinite". But there is no after! Logan's never going to stop. You could consider various limits as \\( t→∞ \\), but limits aren't always well-behaved[^convergence]. And if you impose some stopping behavior on the game - a fixed or probabilistic round limit - then you'll find that Linda's strategy just uncontroversially gives her better payoffs (according to \\( U\_ν \\)) after the game than Logan's, when her probability of being bankrupt is only *extremely close* to 1.
+You might ask "but what happens after the game finishes? With probability 1, Linda has no money, and Logan has infinite". But there is no after! Logan's never going to stop. You could consider various limits as \\( t→∞ \\), but limits aren't always well-behaved[^convergence]. And if you impose some stopping behavior on the game - a fixed or probabilistic round limit - then you'll find that Linda's strategy just uncontroversially gives her better payoffs (according to Linda) after the game than Logan's, when her probability of being bankrupt is only *extremely close* to 1.
 
 [^convergence]: I think that Linda's strategy [converges in probability](https://en.wikipedia.org/wiki/Convergence_of_random_variables#Convergence_in_probability) to the random variable that's always 0; and Logan's converges pointwise to a function that's 0 everywhere so it doesn't converge in probability to anything. But I haven't checked in detail.
 
-Or, "but at some point Logan is going to be richer than Linda ever was! With probability 1, Logan will surpass Linda according to Linda's values." Yes, but you're comparing Logan's wealth at time \\( t\_2 \\) to Linda's wealth at time \\( t\_1 \\). And when Logan's wealth does surpass the amount she had when she lost it all, she can console herself with the knowledge that if she *hadn't* lost it all, she'd be *raking it in* right now. She's okay with that.
+Or, "but at some point Logan is going to be richer than Linda ever was! With probability 1, Logan will surpass Linda according to Linda's values." Yes, but you're comparing Logan's wealth at some point in time to Linda's wealth at some earlier point in time. And when Logan's wealth does surpass the amount she had when she lost it all, she can console herself with the knowledge that if she *hadn't* lost it all, she'd be *raking it in* right now. She's okay with that.
 
 I suppose one thing you could do here is pretend you can fit infinite rounds of the game into a finite time. Then Linda has a choice to make: she can either maximize expected wealth at \\( t\_n \\) for all finite \\( n \\), or she can maximize expected wealth at \\( t\_ω \\), the timestep immediately after all finite timesteps. We can wave our hands a lot and say that making her own bets would do the former and making Logan's bets would do the latter, though I don't endorse the way we're treating infinties here.
 
