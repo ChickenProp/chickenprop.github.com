@@ -3,6 +3,11 @@ layout: post
 title: "Ruining an expected-log-money maximizer"
 lw_xpost: true
 tags: [rationality, math]
+external_comments:
+  - name: LessWrong
+    url: https://www.lesswrong.com/posts/JAmyTWoukk8xzhE9n/ruining-an-expected-log-money-maximizer
+  - name: /r/slatestarcodex
+    url: https://www.reddit.com/r/slatestarcodex/comments/15wncic/ruining_an_expectedlogmoney_maximizer/
 ---
 Suppose you have a game where you can bet any amount of money. You have a 60% chance of doubling your stake and a 40% chance of losing it.
 
@@ -85,7 +90,7 @@ But all of that feels like small fry compared to this big similarity. I can (giv
 
 ### What about a Kelly bettor?
 
-I've [previously made the case](https://www.lesswrong.com/posts/XnnfYrqaxqvirpxFX/on-kelly-and-altruism) that we should distinguish between "maximizing expected log-money", the thing Logan does; and "betting Kelly", a strategy that merely happens to place the same bets as Logan in certain situations. According to my usage of the term, one bets Kelly when one wants to "rank-optimize" one's wealth, i.e. to become richer with probability 1 than anyone who doesn't bet Kelly, over a long enough time period.
+I've [previously made the case](https://reasonableapproximation.net/2022/11/24/kelly-altriusm.html) that we should distinguish between "maximizing expected log-money", the thing Logan does; and "betting Kelly", a strategy that merely happens to place the same bets as Logan in certain situations. According to my usage of the term, one bets Kelly when one wants to "rank-optimize" one's wealth, i.e. to become richer with probability 1 than anyone who doesn't bet Kelly, over a long enough time period.
 
 It's well established that when offered the bets that ruin Linda, Kelly bets the same as Logan. But what does Kelly do when offered the bets that ruin Logan?
 
