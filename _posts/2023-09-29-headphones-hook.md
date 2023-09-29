@@ -5,8 +5,8 @@ lw_xpost: true
 ---
 Some months ago I got a 3D printer. (An Anycubic Kobra Go, which was pretty high up the list of "best value for money for a starter printer" that I found through [/r/3Dprinting](https://www.reddit.com/r/3Dprinting/) at the time.) I haven't used it much, but recently I used it to solve an itch. I wanted my headphones to be in easy reach, so I designed and printed a hook that I could slide over the edge of the table near my desk. This is the first thing I've designed and I'm pretty happy with how it came out!
 
-<a href="//reasonableapproximation.net/images/Headphones-hook/hook-1.jpg"><img src="//reasonableapproximation.net/images/Headphones-hook/hook-1.jpg" alt="A picture of the hook by itself" style="width: 45%"></a>
-<a href="//reasonableapproximation.net/images/Headphones-hook/hook-2.jpg"><img src="//reasonableapproximation.net/images/Headphones-hook/hook-2.jpg" alt="A picture of the hook being used" style="width: 45%"></a>
+<a href="//reasonableapproximation.net/images/headphones-hook/hook-1.jpg"><img src="//reasonableapproximation.net/images/headphones-hook/hook-1.jpg" alt="A picture of the hook by itself" style="width: 45%"></a>
+<a href="//reasonableapproximation.net/images/headphones-hook/hook-2.jpg"><img src="//reasonableapproximation.net/images/headphones-hook/hook-2.jpg" alt="A picture of the hook being used" style="width: 45%"></a>
 
 The curve was pretty awkward. I was working with [OpenSCAD](https://en.wikipedia.org/wiki/OpenSCAD) (maybe something else would have been easier?) which doesn't have an easy way that I found to draw nice curves. (Lines in general seem annoying, you can extrude a 2d shape to 3d but not a 1d shape to 2d?)
 
