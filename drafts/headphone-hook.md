@@ -13,13 +13,16 @@ The curve was pretty awkward. I was working with [OpenSCAD](https://en.wikipedia
 
 I decided to go with an Archimedean spiral, and did a bunch of math to figure out how the various parameters had to relate to each other.[^params] I ended up with equations that I'd have had to solve numerically because they probably had no closed form. Then rather than writing a simple script to give me the answers I just eyeballed it, figuring I could redo it properly if I felt like it. Seems basically fine though.
 
-[^params]: There are six parameters: x and y position of the center, initial and final radius, and the angular section to draw. There are two points I wanted the curve to pass through, plus I wanted it to be tangent to the horizontal at the first point, and I wanted the start and end points of the curve to be vertically above each other. It turns out that leaves one degree of freedom, letting me choose a smaller curve with more upswing at the end or a larger one with less. At the extreme it would just be a semicircle. I went with a spiral that would have 5.4 cm between each turn, if it had multiple turns.
+[^params]: There are six parameters: x and y position of the center, initial and final radius, and the angular section to draw. There are two points I wanted the curve to pass through, plus I wanted it to be tangent to the horizontal at the first point, and I wanted the start and end points of the curve to be vertically above each other. It turns out that leaves one degree of freedom, letting me choose a smaller curve with more upswing at the end or a larger one with less. I went with a spiral that would have 5.4 cm between each turn, if it had multiple turns.
 
 I ended up printing three copies. The first had a nozzle jam about half way through so it came out shitty. You can see it in the background of the second pic. It actually works, but it doesn't have enough friction on the table so it sags down. I can use it for looping cable over, though a deeper hook would be better at that. The second was mostly fine, but I decided I wanted 100% infill on the curve for strength and for some reason I did that by making the walls thick. In hindsight that's silly, it's pretty flexible and when you bend it a bit it starts to split along the middle. So I did one with normal walls and normal 100% infill and it's absolutely fine. These two are the ones actually holding it up in the second picture, I might print a third to get less pressure on the padding.
 
 I could have made something simpler if I wanted to fasten it to the table, either with screws or duct tape. But I like that it doesn't need that.
 
 The exact design probably won't be any use to anyone who doesn't have the same model of cheap folding table as me. But in case it's interesting or helpful, here's the .scad:
+
+<details markdown="1">
+<summary>Source code for the hook</summary>
 
 ```scad
 top_depth = 1.5;
@@ -125,3 +128,5 @@ module archimedean(center, a, b, theta_1, theta_2, width=1, $fn=24) {
     polyline(points, width=width);
 }
 ```
+
+</details>
