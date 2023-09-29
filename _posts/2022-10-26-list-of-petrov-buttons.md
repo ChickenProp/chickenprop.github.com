@@ -99,6 +99,16 @@ LW user benjamincosman [says](https://www.lesswrong.com/posts/gLpYbWzqL2jArMepD/
 
 > I ran a very small Petrov Day gathering this year in Champaign-Urbana. (We had 5-6 people I think?) I put a Staples "Easy" button on the table and said if anyone presses it then the event ends immediately and we all leave without talking. (Or that I would do so anyway, obviously I couldn't make anyone else.) No one pressed the button.
 
+### 2023, Waterloo: Success
+
+Joint event between the Waterloo, Ontario rationalist and EA groups. Jenn, the organizer of the rationalist group, writes:
+
+> * this was a meetup we had in conjunction with the Waterloo EA group on September 27th, 2023.
+> * we had 2 buttons, one for a fruit platter and 1 for a cake. We divided people into 2 halves of the room based on if they wanted fruit or cake, and then explained the typical rules. (this was partly inspired by your write-up of the uk ceremony one year when someone gave an impassioned speech about why cake was bad)
+> * the buttons stayed unpressed for the duration of the x-risk and petrov day presentation given by EA Waterloo
+> * afterwards we dug in.
+> * people did say that we probably should have given more opportunity for button presses after the presentation during more free social time, we'll do that if we run this ritual in future years
+
 ### Things I'm not counting
 
 Here are some things that I don't think belong on the above list, but I do kind of expect someone to point me at them if I don't mention them.
