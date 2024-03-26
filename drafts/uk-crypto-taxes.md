@@ -3,7 +3,7 @@ title: Cryptocurrency taxation in the UK
 layout: draft
 tags: [practical]
 ---
-Mostly out of curiosity, I've been looking into how cryptocurrency is taxed in the UK. It's not easy to get what I consider to be a full answer, but here's my current understanding, as far as I felt like looking into it. HMRC's [internal cryptoassets manual](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual) is available but I didn't feel like reading it all, and some of it seems out of date (e.g. [this page](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto22110) talks about the "beacon chain" which I think is no longer a thing since ethereum transitioned to proof-of-stake). I also have no particular reason to trust or distrust the non-government sources I use here. I am not any form of accountant and it would be surprising if I don't get anything wrong.
+Mostly out of curiosity, I've been looking into how cryptocurrency is taxed in the UK. It's not easy to get what I consider to be a full answer, but here's my current understanding, as far as I felt like looking into it. HMRC's [internal cryptoassets manual](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual) is available but I didn't feel like reading it all, and some of it seems out of date (e.g. page [CRYPTO22110](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto22110) talks about the "beacon chain" which I think is no longer a thing since ethereum transitioned to proof-of-stake). I also have no particular reason to trust or distrust the non-government sources I use here. I am not any form of accountant and it would be surprising if I don't get anything wrong.
 
 My impression is HMRC tends to be pretty tolerant of people making good faith mistakes? In that if they audit you and you underpaid, they'll make you pay what you owe but you won't get in any other trouble. Maybe they'd consider "I followed the advice of some blogger who explicitly said he wasn't an accountant" to be a good faith mistake? I dunno, but if you follow my advice and get audited, I'd love to hear what the outcome is.
 
@@ -15,7 +15,7 @@ But with crypto, you might buy on multiple occasions, then sell only some of wha
 
 [^pooling]: At least not as far as I know. Like, if I have £5581.21 in my bank account, the bank doesn't keep track of each of those 558,121 individual pennies, and when I pay for something decide *which* of those pennies is leaving my account. So if my grandmother asks what I spent my birthday money on, it may (or may not) be the case that she sent me £30 and I subsequently spent £30 on a giant dildo that I don't want to talk to her about; but I can truthfully tell her "that's a meaningless question, grandma". And as far as I know crypto works the same way. But who knows, there are a lot of cryptocurrencies out there and it wouldn't shock me if some of them don't. Compare [premium bonds](https://en.wikipedia.org/wiki/Premium_Bond): NS&I keeps track of exactly which bonds you own, and when you sell them they decide exactly which bonds you no longer own.
 
-Crypto works like stocks here. For stocks HMRC explains how it works in a document titled [HS283 Shares and Capital Gains Tax (2023)](https://www.gov.uk/government/publications/shares-and-capital-gains-tax-hs284-self-assessment-helpsheet/hs284-shares-and-capital-gains-tax-2023), and there's also the [internal manual page](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto22200) which agrees.
+Crypto works like stocks here. For stocks HMRC explains how it works in a document titled [HS283 Shares and Capital Gains Tax (2023)](https://www.gov.uk/government/publications/shares-and-capital-gains-tax-hs284-self-assessment-helpsheet/hs284-shares-and-capital-gains-tax-2023), and there's also manual page [CRYPTO22200](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto22200) which agrees.
 
 The rule is that when you sell coins in a particular currency, you sell them in the following order:
 
@@ -94,7 +94,7 @@ For mining, the market price at the time you recieve the coins counts as miscell
 
 For staking, you can either count it as miscellaneous income or savings income. These two have different tax-free allowances. Unclear if you can count some as miscellaneous and some as savings to use both? Again you can deduct "reasonable expenses" whatever that means.
 
-[This reddit thread](https://www.reddit.com/r/UKPersonalFinance/comments/rb13mc/uk_tax_implications_of_crypto_staking/) suggests "savings interest or miscellaneous income?" is just a grey area, in which case I'd expect HMRC to be pretty tolerant of you choosing either but kinda ಠ_ಠ if they notice you trying to use both. It links to HMRC internal manual page [CRYPTO21200](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto21200) which sounds to me like it's just miscellaneous income.
+[This reddit thread](https://www.reddit.com/r/UKPersonalFinance/comments/rb13mc/uk_tax_implications_of_crypto_staking/) suggests "savings interest or miscellaneous income?" is just a grey area, in which case I'd expect HMRC to be pretty tolerant of you choosing either but kinda ಠ_ಠ if they notice you trying to use both. It links to manual page [CRYPTO21200](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto21200) which sounds to me like it's just miscellaneous income.
 
 I think the normal way staking works is that to get income, you need to lock your coins up for some period of time. New coins you receive are automatically locked, and when you want to do anything with them, you have to unlock them. So do you count as earning the coins when they arrive, or when you first unlock them? (When you initiate the unlocking, or when it completes?) "When they arrive" sounds like a pain in the ass, that can happen every few days with no engagement on your part and a different market price every time. But "when you unlock" has the same problem as CGT: are you unlocking coins you locked, or coins you earned, or what?
 
@@ -120,7 +120,7 @@ I guess this means that if exchange rates don't go your way, you might end up wi
 
 > Buying crypto with stablecoins is viewed as trading crypto for crypto, so any profits are subject to Capital Gains Tax.
 
-and the [HMRC internal manual](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto10100), shortly after talking about stablecoins, saying:
+and manual page [CRYPTO10100](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto10100), shortly after talking about stablecoins, saying:
 
 > HMRC does not consider cryptoassets to be currency or money.
 
@@ -148,6 +148,6 @@ Another option would be to take the market price soon after they split. Suppose 
 
 ### Airdrops and NFTs
 
-I don't even really know what airdrops are and I don't care how they're taxed, but I suppose some readers might so [here's an HMRC internal manual page](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto21250) on them.
+I don't even really know what airdrops are and I don't care how they're taxed, but I suppose some readers might so manual page [CRYPTO21250](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto21250) talks about them.
 
 I don't care about NFTs either and didn't see a manual page on them, so ¯\\\_(ツ)\_/¯.
