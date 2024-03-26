@@ -3,7 +3,7 @@ title: Cryptocurrency taxation in the UK
 layout: draft
 tags: [practical]
 ---
-Mostly out of curiosity, I've been looking into how cryptocurrency is taxed in the UK. It's not easy to get what I consider to be a full answer, but here's my current understanding, as far as I felt like looking into it. I am not any form of accountant, I have no particular reason to trust or distrust the non-government sources I use here, and it would be surprising if I don't get anything wrong.
+Mostly out of curiosity, I've been looking into how cryptocurrency is taxed in the UK. It's not easy to get what I consider to be a full answer, but here's my current understanding, as far as I felt like looking into it. HMRC's [internal cryptoassets manual](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual) is available but I didn't feel like reading it all, and some of it seems out of date (e.g. [this page](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto22110) talks about the "beacon chain" which I think is no longer a thing since ethereum transitioned to proof-of-stake). I also have no particular reason to trust or distrust the non-government sources I use here. I am not any form of accountant and it would be surprising if I don't get anything wrong.
 
 My impression is HMRC tends to be pretty tolerant of people making good faith mistakes? In that if they audit you and you underpaid, they'll make you pay what you owe but you won't get in any other trouble. Maybe they'd consider "I followed the advice of some blogger who explicitly said he wasn't an accountant" to be a good faith mistake? I dunno, but if you follow my advice and get audited, I'd love to hear what the outcome is.
 
@@ -15,7 +15,7 @@ But with crypto, you might buy on multiple occasions, then sell only some of wha
 
 [^pooling]: At least not as far as I know. Like, if I have £5581.21 in my bank account, the bank doesn't keep track of each of those 558,121 individual pennies, and when I pay for something decide *which* of those pennies is leaving my account. So if my grandmother asks what I spent my birthday money on, it may (or may not) be the case that she sent me £30 and I subsequently spent £30 on a giant dildo that I don't want to talk to her about; but I can truthfully tell her "that's a meaningless question, grandma". And as far as I know crypto works the same way. But who knows, there are a lot of cryptocurrencies out there and it wouldn't shock me if some of them don't. Compare [premium bonds](https://en.wikipedia.org/wiki/Premium_Bond): NS&I keeps track of exactly which bonds you own, and when you sell them they decide exactly which bonds you no longer own.
 
-I assume crypto works like stocks here, and for stocks HMRC explains how it works in a document titled [HS283 Shares and Capital Gains Tax (2023)](https://www.gov.uk/government/publications/shares-and-capital-gains-tax-hs284-self-assessment-helpsheet/hs284-shares-and-capital-gains-tax-2023).
+Crypto works like stocks here. For stocks HMRC explains how it works in a document titled [HS283 Shares and Capital Gains Tax (2023)](https://www.gov.uk/government/publications/shares-and-capital-gains-tax-hs284-self-assessment-helpsheet/hs284-shares-and-capital-gains-tax-2023), and there's also the [internal manual page](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto22200) which agrees.
 
 The rule is that when you sell coins in a particular currency, you sell them in the following order:
 
@@ -50,7 +50,9 @@ Then my section 104 holding contains:
 * Then, 0 BTC purchased at a total of £0, average meaningless.
   * Here I sold 0.15 BTC purchased at a total of £360, and I sold them for £45 after fees, so that's £315 loss.
 
-For the first two buckets, the document doesn't say what happens if you buy at two different prices in a bucket and don't sell all of the bucket. That is, suppose that the middle three events above all happened on the same day. What do I count as the purchase price of those coins? Unclear, maybe it's explained somewhere else, but my guess is I'm supposed to average them together in the same way. In that case, it would work out as:
+For the same-day bucket, all buys get grouped together and all sells get grouped together. For the 30-day bucket, you match transactions one at a time, the earliest buy against the earliest sell. (Unclear if you get to group them by day; I don't see anything saying you do, but if you don't then interactions with the same-day rule get weird.)
+
+So for example, suppose the middle three events above all happened on the same day. In that case, it would work out as:
 
 * My section 104 holding is initially empty.
 * Then, it contains 0.1 BTC purchased at a total of £105, average £1050/BTC.
@@ -62,11 +64,22 @@ For the first two buckets, the document doesn't say what happens if you buy at t
 * That bucket enters my section 104 holding. This now contains 0.15 BTC purchased at a total of £210, average £1400/BTC.
 * I sell my remaining BTC for £45, which is a loss of £165.
 
-In both cases my total loss is £285, which makes sense. But I might get taxed differently, if this happened over multiple tax years.
+And if the middle three all happened within 30 days of each other, then:
+
+* My section 104 holding is initially empty.
+* Then, it contains 0.1 BTC purchased at a total of £105, average £1050/BTC.
+* Then, 0.2 BTC purchased at a total of £220, average £1100/BTC.
+* The subsequent buy and sell get matched:
+  * I buy 0.1 BTC for £305 and sell it for £130, making a loss of £175.
+  * I also sell 0.05 BTC for £65, that I'd bought at £55, making a profit of £10.
+  * So in total that sale makes me a loss of £165, and the 30-day bucket contains -0.05 BTC purchased at £55.
+* That bucket enters my section 104 holding. This now contains 0.15 BTC purchased at a total of £165, average £1100/BTC.
+* I sell my remaining BTC for £45, which is a loss of £120.
+
+In all cases my total loss is £285, which makes sense. But I might get taxed differently, if this happened over multiple tax years.
 
 Some more edge cases:
 
-* It's not clear what happens if there are overlapping buckets - like, I sell on September 1 and 15, and buy on September 10 and 20. If in total I buy more than I sold on September 1, then what counts for the B&B rule against the September 15 sale?
 * I have no idea how these rules would apply if you're playing with options or short selling. I think those are both things you can do with crypto?
 * If you receive crypto as a gift, you count it as coming in at market price on the day you recieved it. I'm not sure exactly how that's meant to be calculated (on any given day, lots of buys and sells happened for lots of different prices on various different legible exchanges; and lots also happened outside of legible exchanges) but I assume if you google "historical bitcoin prices" and use a number you find there you're probably good. So it's as if you were gifted cash and used it to buy crypto.
 * Similarly, if you give it away as a gift, it's treated as disposing of it at market price on the day, as if you'd sold it for cash and gifted the cash.
@@ -133,6 +146,8 @@ Another option would be to take the market price soon after they split. Suppose 
 >
 > HMRC has the power to enquire into an apportionment method that it believes is not just and reasonable. Therefore, whichever method an individual chooses to use, they should keep a record of this and be consistent throughout their tax returns.
 
-### Airdrops
+### Airdrops and NFTs
 
-I don't even really know what airdrops are and I don't care how they're taxed, but I suppose some readers might so [here's the HMRC internal manual page](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto21250) on them.
+I don't even really know what airdrops are and I don't care how they're taxed, but I suppose some readers might so [here's an HMRC internal manual page](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto21250) on them.
+
+I don't care about NFTs either and didn't see a manual page on them, so ¯\\\_(ツ)\_/¯.
