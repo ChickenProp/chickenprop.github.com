@@ -151,3 +151,183 @@ Another option would be to take the market price soon after they split. Suppose 
 I don't even really know what airdrops are and I don't care how they're taxed, but I suppose some readers might so manual page [CRYPTO21250](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto21250) talks about them.
 
 I don't care about NFTs either and didn't see a manual page on them, so ¯\\\_(ツ)\_/¯.
+
+### Ledger
+
+I like to track my finances with [ledger](https://ledger-cli.org), which means I want some way to encode these rules in that.
+
+I think I have something that works decently, which I demonstrate in a sample file that you can see here:
+
+<details markdown="1">
+<summary>Example ledger file</summary>
+
+```ledger
+;; This ledger demonstrates calculating capital gains on cryptocurrency for UK
+;; taxes. For more info see:
+;; https://reasonableapproximation.net/2024/03/28/uk-crypto-taxes.html
+;;
+;; I think it's mostly fairly standard outside of the `Holdings` top-level
+;; account. You can do e.g. `ledger bal not Holdings` to hide that. It doesn't
+;; make use of lot dates or prices to do matching (that's not how the UK needs
+;; you to do things). It doesn't use virtual postings.
+;;
+;; It doesn't work in hledger because that doesn't support posting cost
+;; expressions like `0.01 ETH @ (£300 / 0.01)`. If you replace those with their
+;; calculated value it seems fine.
+;;
+;; It should work fairly straightforwardly with stocks as well as crypto, with
+;; the caveat that I'm not sure how to encode stock splits and don't know if
+;; there are other fiddly details to complicate matters.
+;;
+;; The things I'm most unhappy about are that it doesn't balance to 0, and that
+;; there's no help with average prices of Section 104 holdings.
+
+2020/01/01 Buy
+    ; When we buy an asset, we record it in two places. `Assets` holds what we
+    ; currently own, grouped in some way that's convenient for general use (by
+    ; which account they're in, currency, whatever). `Holdings` holds the same,
+    ; but grouped by capital gains buckets.
+    ;
+    ; Annoyingly, they don't balance, since for capital gains purposes the price
+    ; includes transaction fees. So the total ETH balance comes to 0 but the £
+    ; balance comes to `Expenses:Fees`.
+    ;
+    ; The `@` and `@@` ensure the ETH and GBP amounts balance with each other.
+    ; But the `Holdings` exchange rate is wrong, so we use `(@@)` to avoid that
+    ; getting put in the price database.
+    ;
+    ; S104 is "Section 104". That's the technical term for that bucket.
+    Assets:ETH                                  0.13 ETH @ £765.38
+    Assets:GBP                              £-100.00
+    Expenses:Fees                              £0.50
+    Holdings:S104:ETH                          -0.13 ETH (@@) £100.00
+    Holdings:S104:ETH                        £100.00
+
+2020/01/10 Buy
+    ; So after this, the "Holdings:S104:ETH" account records that we own 0.21
+    ; ETH, that we paid £200.00 for.
+    Assets:ETH                                  0.08 ETH @ £1243.75
+    Assets:GBP                              £-100.00
+    Expenses:Fees                              £0.50
+    Holdings:S104:ETH                          -0.08 ETH (@@) £100.00
+    Holdings:S104:ETH                        £100.00
+
+2020/01/31 Staking
+    ; When we get staking income, we can either record it as Income in ETH or £.
+    ; Recording it as ETH seems more powerful, since it lets us answer all of:
+    ;
+    ; * "how much ETH have I got from staking?" (`ledger bal`)
+    ; * "how much £ is that worth now?" (`ledger bal -X £`)
+    ; * "how much was it worth when I got it?" (`ledger bal -X £ --historical`)
+    ;
+    ; Recording in £ would mean `ledger bal` fully balances in ETH (at least all
+    ; buys and sells do), and total balance in £ equals `Expenses:Fees`. That
+    ; seems like a potentially useful sanity check. We can at least check that
+    ; non-staking transactions balance like that with
+    ;
+    ;     ledger bal not @Staking
+    ;
+    ; Still, I'm not sure this is better than just recording in £.
+    ;
+    ; We don't need to add every staking distribution individually. We can group
+    ; several together and add them all at once, as long as they don't need to
+    ; be distinguished for capital gains or income tax reasons or something. But
+    ; then the price isn't accurate, so we probably want to follow it with an
+    ; explicit entry for the price on the final day.
+    Assets:ETH                                0.0014 ETH
+    Income:Staking:ETH                       -0.0014 ETH
+    Holdings:S104:ETH                        -0.0014 ETH (@) £942.86
+    Holdings:S104:ETH                          £1.32
+
+; This gives the actual price at the time we most recently received staking
+; income. Price database entries given by `@` and `@@` are saved at midnight, so
+; might as well use that time here too. We could equivalently leave out the
+; time, `P 2020/01/31 ETH £981.38`.
+P 2020/01/31 00:00:00 ETH £981.38
+
+2020/02/05 Sell
+    ; At this point, S104 holds 0.2114 ETH bought for a total of £201.32,
+    ; average £952.32. That means 0.0514 ETH was bought for £48.95. I don't know
+    ; if there's a way to have ledger help with that calculation or enforce that
+    ; we did it right.
+    Assets:ETH                               -0.0514 ETH @ £1578.97
+    Assets:GBP                                £80.66
+    Expenses:Fees                              £0.50
+    Income:Capital Gains:ETH                 £-31.71
+    Holdings:S104:ETH                         0.0514 ETH (@@) £80.66
+    Holdings:S104:ETH                        £-48.95
+
+2020/03/01 Sell
+    ; Now a more complicated sell that we'll match with some non-S104 buys.
+    ;
+    ; When we buy, we know by the end of the day which Holdings bucket(s) it
+    ; needs to go in. But when we sell, any buys or other acquisitions in the
+    ; next 30 days affect which bucket(s) we're drawing from. So we won't be
+    ; able to complete this transaction until April. (The bed-and-breakfasting
+    ; bucket for this sell runs March 2-31 inclusive.) Until we do we might
+    ; choose to just write the Assets and Expenses postings, leaving the
+    ; transaction not to balance in ETH until we come back and fill in the rest.
+    ;
+    ; This counts as a capital loss (positive income), since after transaction
+    ; fees, we buy it back in future for slightly more than we sell it for now.
+    ;
+    ; The three +ETH and the three -£ in Holdings empty out those buckets, and
+    ; in this case there's none left over to take from the S104 bucket. The
+    ; `(@)`s ensure that if we get cap gains wrong, the whole thing won't
+    ; balance.
+    Assets:ETH                                 -0.08 ETH @ £1635.90
+    Assets:GBP                               £130.37
+    Expenses:Fees                              £0.50
+    Income:Capital Gains:ETH                   £1.06
+    Holdings:SameDay:20200301:ETH               0.01 ETH (@) (£130.37 / 0.08)
+    Holdings:SameDay:20200301:ETH            £-16.71
+    Holdings:BnB:20200301:ETH                   0.05 ETH (@) (£130.37 / 0.08)
+    Holdings:BnB:20200301:ETH                £-80.45
+    Holdings:BnB:20200301:ETH                   0.02 ETH (@) (£130.37 / 0.08)
+    Holdings:BnB:20200301:ETH                £-34.27
+    ; Suppose that the Mar 31 buy below didn't happen. Then the last 0.02 ETH
+    ; here would come from the S104 bucket. At this point the bucket contains
+    ; 0.16 ETH bought for £114.72, average £952.31. (It changed slightly in the
+    ; last transaction because of rounding errors.) So 0.02 ETH was bought for
+    ; £19.05. In that case the Income posting and the last two Holdings postings
+    ; would be replaced with:
+    ;
+    ; Income:Capital Gains:ETH               £-14.16
+    ; Holdings:S104:ETH                         0.02 ETH (@) (£130.37 / 0.08)
+    ; Holdings:S104:ETH                      £-19.05
+
+2020/03/01 Buy
+    ; We buy some back on the very same day. This is within 30 days after the
+    ; Feb 5 sell, but the sell from today takes precedence. If we bought more
+    ; than 0.08 ETH here, then the remainder would go in a BnB bucket to match
+    ; against that. After today, the `SameDay:20200301` account is empty.
+    Assets:ETH                                  0.01 ETH @ £1620.81
+    Assets:GBP                               £-16.71
+    Expenses:Fees                              £0.50
+    Holdings:SameDay:20200301:ETH              -0.01 ETH (@@) £16.71
+    Holdings:SameDay:20200301:ETH             £16.71
+
+2020/03/07 Buy
+    ; We buy some more back within 30 days after selling, so this is also
+    ; matched against the Mar 1 buy. It's 31 days after Feb 5, so it doesn't
+    ; get matched against that.
+    Assets:ETH                                  0.05 ETH @ £1599.01
+    Assets:GBP                               £-80.45
+    Expenses:Fees                              £0.50
+    Holdings:BnB:20200301:ETH                  -0.05 ETH (@@) £80.45
+    Holdings:BnB:20200301:ETH                 £80.45
+
+2020/03/31 Buy
+    ; And more on the final day in the BnB window. Only 0.02 ETH gets matched
+    ; against the previous sale, the rest goes into the S104 bucket. After
+    ; today, the `BnB:20200301` account is empty.
+    Assets:ETH                                  0.05 ETH @ £1703.67
+    Assets:GBP                               £-85.68
+    Expenses:Fees                              £0.50
+    Holdings:BnB:20200301:ETH                  -0.02 ETH (@) (£85.68 / 0.05)
+    Holdings:BnB:20200301:ETH                 £34.27
+    Holdings:S104:ETH                          -0.03 ETH (@) (£85.68 / 0.05)
+    Holdings:S104:ETH                         £51.41
+```
+
+</details>
