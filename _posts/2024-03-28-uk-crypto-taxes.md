@@ -124,7 +124,7 @@ and manual page [CRYPTO10100](https://www.gov.uk/hmrc-internal-manuals/cryptoass
 
 > HMRC does not consider cryptoassets to be currency or money.
 
-So I think that no, stablecoins are not an exception; and that coinbase's USDC interest counts as miscellaneous (and non-foreign) income, not personal savings income, unless you decide that staking income is also personal savings income.
+So I think that no, stablecoins are not an exception. And I weakly guess that coinbase's USDC interest counts as miscellaneous (and non-foreign) income, not personal savings income, unless you decide that staking income is also personal savings income.
 
 ### What if there's a fork?
 
