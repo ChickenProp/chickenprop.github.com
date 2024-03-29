@@ -2,10 +2,15 @@
 title: Cryptocurrency taxation in the UK
 layout: post
 tags: [practical]
+external_comments:
+  - name: /r/ukpersonalfinance
+    url: https://www.reddit.com/r/UKPersonalFinance/comments/1bprll5/
 ---
-Mostly out of curiosity, I've been looking into how cryptocurrency is taxed in the UK. It's not easy to get what I consider to be a full answer, but here's my current understanding, as far as I felt like looking into it. HMRC's [internal cryptoassets manual](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual) is available but I didn't feel like reading it all, and some of it seems out of date (e.g. page [CRYPTO22110](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto22110) talks about the "beacon chain" which I think is no longer a thing since ethereum transitioned to proof-of-stake). I also have no particular reason to trust or distrust the non-government sources I use here. I am not any form of accountant and it would be surprising if I don't get anything wrong.
+Mostly out of curiosity, I've been looking into how cryptocurrency is taxed in the UK. It's not easy to get what I consider to be a full answer, but here's my current understanding, as far as I felt like looking into it. HMRC's [internal cryptoassets manual](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual) is available but I didn't feel like reading it all, and some of it seems out of date (e.g. page [CRYPTO22110](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto22110) seems to have been written while Ethereum was in the process of transitioning from proof-of-work to proof-of-stake). I also have no particular reason to trust or distrust the non-government sources I use here. I am not any form of accountant and it would be surprising if I don't get anything wrong.
 
 My impression is HMRC tends to be pretty tolerant of people making good faith mistakes? In that if they audit you and you underpaid, they'll make you pay what you owe but you won't get in any other trouble. Maybe they'd consider "I followed the advice of some blogger who explicitly said he wasn't an accountant" to be a good faith mistake? I dunno, but if you follow my advice and get audited, I'd love to hear what the outcome is.
+
+After I published, reddit user ec265 [pointed me](https://www.reddit.com/r/UKPersonalFinance/comments/1bprll5/article_cryptocurrency_taxation_in_the_uk/kwxvv4k/) at [another article](https://recap.io/guides/crypto-tax-uk-a-comprehensive-guide) that seems more thorough than this one. I wouldn't have bothered writing this if I'd found that sooner. I didn't spot anywhere where it disagrees with me, which is good.
 
 ### Capital gains tax
 
@@ -84,7 +89,7 @@ Some more edge cases:
 * If you receive crypto as a gift, you count it as coming in at market price on the day you recieved it. I'm not sure exactly how that's meant to be calculated (on any given day, lots of buys and sells happened for lots of different prices on various different legible exchanges; and lots also happened outside of legible exchanges) but I assume if you google "historical bitcoin prices" and use a number you find there you're probably good. So it's as if you were gifted cash and used it to buy crypto.
 * Similarly, if you give it away as a gift, it's treated as disposing of it at market price on the day, as if you'd sold it for cash and gifted the cash.
 * I think in both the above cases, if you buy or sell below market price as a favor (to yourself or the seller respectively) you still have to consider market price.
-* If you trade one coin for another, you treat it as disposing of the first for GBP and buying the second for GBP. I assume you're supposed to use the market price in both cases, but if those don't match up I dunno what you're supposed to do. Not sure if fees are supposed to count for the sale (reducing your profit at the time) or the purchase (reducing your profit later) or what.
+* If you trade one coin for another, you treat it as disposing of the first for GBP and buying the second for GBP. Mark both the sell and the buy at the market price of the second, so that if you're somehow trading £1000 of one coin for £1200 of another, £200 of profits is taxable now. I assume you also count fees for the sell, reducing your profit now.
 
 ### Mining and staking
 
@@ -94,7 +99,7 @@ For mining, the market price at the time you recieve the coins counts as miscell
 
 For staking, you can either count it as miscellaneous income or savings income. These two have different tax-free allowances. Unclear if you can count some as miscellaneous and some as savings to use both? Again you can deduct "reasonable expenses" whatever that means.
 
-[This reddit thread](https://www.reddit.com/r/UKPersonalFinance/comments/rb13mc/uk_tax_implications_of_crypto_staking/) suggests "savings interest or miscellaneous income?" is just a grey area, in which case I'd expect HMRC to be pretty tolerant of you choosing either but kinda ಠ_ಠ if they notice you trying to use both. It links to manual page [CRYPTO21200](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto21200) which sounds to me like it's just miscellaneous income.
+[This reddit thread](https://www.reddit.com/r/UKPersonalFinance/comments/rb13mc/uk_tax_implications_of_crypto_staking/) suggests "savings interest or miscellaneous income?" is just a grey area, in which case I'd expect HMRC to be pretty tolerant of you choosing either but kinda ಠ_ಠ if they notice you trying to use both. It links to manual page [CRYPTO21200](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto21200) which sounds to me like it's just miscellaneous income. ec265 agrees.
 
 I think the normal way staking works is that to get income, you need to lock your coins up for some period of time. New coins you receive are automatically locked, and when you want to do anything with them, you have to unlock them. So do you count as earning the coins when they arrive, or when you first unlock them? (When you initiate the unlocking, or when it completes?) "When they arrive" sounds like a pain in the ass, that can happen every few days with no engagement on your part and a different market price every time. But "when you unlock" has the same problem as CGT: are you unlocking coins you locked, or coins you earned, or what?
 
