@@ -5,6 +5,7 @@ tags: [practical]
 external_comments:
   - name: /r/ukpersonalfinance
     url: https://www.reddit.com/r/UKPersonalFinance/comments/1bprll5/
+lw_xpost: true
 ---
 Mostly out of curiosity, I've been looking into how cryptocurrency is taxed in the UK. It's not easy to get what I consider to be a full answer, but here's my current understanding, as far as I felt like looking into it. HMRC's [internal cryptoassets manual](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual) is available but I didn't feel like reading it all, and some of it seems out of date (e.g. page [CRYPTO22110](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto22110) seems to have been written while Ethereum was in the process of transitioning from proof-of-work to proof-of-stake). I also have no particular reason to trust or distrust the non-government sources I use here. I am not any form of accountant and it would be surprising if I don't get anything wrong.
 
