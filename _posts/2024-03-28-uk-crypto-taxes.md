@@ -5,6 +5,10 @@ tags: [practical]
 external_comments:
   - name: /r/ukpersonalfinance
     url: https://www.reddit.com/r/UKPersonalFinance/comments/1bprll5/
+  - name: /r/plaintextaccounting
+    url: https://www.reddit.com/r/plaintextaccounting/comments/1bsz7tr/
+  - name: Plain Text Accounting forum
+    url: https://forum.plaintextaccounting.org/t/repost-example-calculating-uk-capital-gains-with-ledger/227
 lw_xpost: true
 ---
 Mostly out of curiosity, I've been looking into how cryptocurrency is taxed in the UK. It's not easy to get what I consider to be a full answer, but here's my current understanding, as far as I felt like looking into it. HMRC's [internal cryptoassets manual](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual) is available but I didn't feel like reading it all, and some of it seems out of date (e.g. page [CRYPTO22110](https://www.gov.uk/hmrc-internal-manuals/cryptoassets-manual/crypto22110) seems to have been written while Ethereum was in the process of transitioning from proof-of-work to proof-of-stake). I also have no particular reason to trust or distrust the non-government sources I use here. I am not any form of accountant and it would be surprising if I don't get anything wrong.
@@ -162,7 +166,15 @@ I don't care about NFTs either and didn't see a manual page on them, so ¯\\\_(�
 
 I like to track my finances with [ledger](https://ledger-cli.org), which means I want some way to encode these rules in that.
 
-I think I have something that works decently, which I demonstrate in a sample file that you can see here:
+I think I have something that works decently, which I demonstrate in a sample file that you can see here.
+
+I think it's mostly fairly standard outside of the `Holdings` top-level account. You can do e.g. `ledger bal not Holdings` to hide that. It doesn't make use of lot dates or prices to do matching (that's not how the UK needs you to do things). It doesn't use virtual postings.
+
+It doesn't work in hledger because that doesn't support posting cost expressions like `0.01 ETH @ (£300 / 0.01)`. If you replace those with their calculated value it seems fine.
+
+It should work fairly straightforwardly with stocks as well as crypto, with the caveat that I'm not sure how to encode stock splits and don't know if there are other fiddly details to complicate matters.
+
+The things I'm most unhappy about are that it doesn't balance to 0, and that there's no help with average prices of Section 104 holdings.
 
 <details markdown="1">
 <summary>Example ledger file</summary>
@@ -171,22 +183,6 @@ I think I have something that works decently, which I demonstrate in a sample fi
 ;; This ledger demonstrates calculating capital gains on cryptocurrency for UK
 ;; taxes. For more info see:
 ;; https://reasonableapproximation.net/2024/03/28/uk-crypto-taxes.html
-;;
-;; I think it's mostly fairly standard outside of the `Holdings` top-level
-;; account. You can do e.g. `ledger bal not Holdings` to hide that. It doesn't
-;; make use of lot dates or prices to do matching (that's not how the UK needs
-;; you to do things). It doesn't use virtual postings.
-;;
-;; It doesn't work in hledger because that doesn't support posting cost
-;; expressions like `0.01 ETH @ (£300 / 0.01)`. If you replace those with their
-;; calculated value it seems fine.
-;;
-;; It should work fairly straightforwardly with stocks as well as crypto, with
-;; the caveat that I'm not sure how to encode stock splits and don't know if
-;; there are other fiddly details to complicate matters.
-;;
-;; The things I'm most unhappy about are that it doesn't balance to 0, and that
-;; there's no help with average prices of Section 104 holdings.
 
 2020/01/01 Buy
     ; When we buy an asset, we record it in two places. `Assets` holds what we
