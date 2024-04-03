@@ -47,7 +47,7 @@ But here's the thing that triggered me to write this post. **We can still get th
     \[   \text{size-of-impact}
        → \text{many-Crocs}
        ← \text{DRESS-WELL}
-       ← \\text{size-of-impact} \\
+       ← \text{size-of-impact} \\
     
        P(\text{many-Crocs}\, | \mathop{do}(\text{DRESS-WELL})) = \, 9\%
     \]
