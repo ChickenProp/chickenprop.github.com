@@ -7,6 +7,30 @@ layout: default
 
 {{ content }}
 
+{%if page.tags.size > 0 %}
+<p><em>
+  Tagged:
+  {% assign first_time = true %}
+  {% for tag in page.tags -%}
+    {%- unless first_time %}; {% endunless -%}
+    {%- assign first_time = false -%}
+    <a href="{{ site.url }}/tags.html#{{ tag | slugify }}">{{ tag }}</a>
+  {%- endfor %}
+</em></p>
+{% endif %}
+
+{%if page.external_comments.size > 0 %}
+<p><em>
+  Comments elsewhere:
+  {% assign first_time = true %}
+  {% for site in page.external_comments -%}
+    {%- unless first_time %}; {% endunless -%}
+    {%- assign first_time = false -%}
+    <a href="{{ site.url }}">{{ site.name }}</a>
+  {%- endfor %}
+</em></p>
+{% endif %}
+
 <p><em>This is a draft. Please assume that I would prefer you not to share it, unless I've told you otherwise.</em></p>
 
 {% if page.comments %}
