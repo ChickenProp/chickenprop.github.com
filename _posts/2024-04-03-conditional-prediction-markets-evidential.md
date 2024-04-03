@@ -1,6 +1,6 @@
 ---
 title: "Conditional prediction markets are evidential, not causal"
-layout: draft
+layout: post
 tags: [math, rationality]
 external_comments:
   - name: LessWrong
