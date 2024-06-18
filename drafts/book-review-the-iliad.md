@@ -4,10 +4,6 @@ layout: draft
 ---
 *Translated by Emily Wilson*
 
-Book Review: The Iliad
-
-Translated by Emily Wilson
-
 1.
 
 I didn't know what the Iliad was about. I thought it was the story of how Helen of Troy gets kidnapped, triggering the Trojan war, which lasts a long time and eventually gets settled with a wooden horse.
@@ -120,7 +116,7 @@ I also had very little sense of time, distance, or the motivations or powers of 
 
 There were long lists that bored me, and sometimes Homer seemed to be getting paid by the word—lots of passages were repeated verbatim, and a few repeated again. (Agamemnon dictates the reward he'll offer Achilles to a messenger, then the messenger passes it on to Achilles, and we're told it again after Patroclus' death.)
 
-We're often told that some characters are the best at something or other, but given little reason to believe it. Notably, Hector is supposedly the most fearsome Trojan fighter, but he doesn't live up to this. He almost loses one-on-one against Ajax before the gods intervene to stop the battle; he gets badly injured fighting Ajax again; and even after being healed, he only takes down Patroclus after Patroclus has been badly wounded by someone else. And Achilles is supposed to be the fastest runner, but when he chases after Hector, he doesn't catch up until Hector stops running away. Lots of people are described as "favored by Zeus" but Zeus doesn't seem to do jack for them.
+We're often told that some characters are the best at something or other, but given little reason to believe it. Notably, Hector is supposedly the most fearsome Trojan fighter, but he doesn't live up to his reputation. He almost loses one-on-one against Ajax before the gods intervene to stop the battle; he gets badly injured fighting Ajax again; and even after being healed, he only takes down Patroclus after Patroclus has been badly wounded by someone else. And Achilles is supposed to be the fastest runner, but when he chases after Hector, he doesn't catch up until Hector stops running away. Lots of people are described as "favored by Zeus" but Zeus doesn't seem to do jack for them.
 
 Even when the narrative supports the narrator, it feels cheap. Achilles is supposedly the best Greek fighter, and when he fights, he wins. So that fits. But how did he become so good at it? Did he train harder? Does he have some secret technique? Supernatural strength? We're not told. (His invulnerability-except-heel isn't a part of this story, and half of everyone is the son of some god or goddess so that's no advantage to him. To be fair: a reader points out that Superman stories don't necessarily give his backstory either.)
 
@@ -219,3 +215,5 @@ I can't read the marks in the Iliad. I don't know what parts of what it shows ar
 I listened to the audiobook of the Iliad because I happened to know that it was originally listened-to, not read, so it seemed closer to the intended experience. But in hindsight, I can't get the intended experience and I shouldn't have tried.
 
 I think to get the most out of the Iliad, I should have read it along with copious historical notes, and deliberately treated it as "learning about ancient Greece" at least as much as "reading a fun story".
+
+*Originally submitted to the [ACX book review contest 2024](https://www.astralcodexten.com/p/book-review-contest-rules-2024); not a finalist. Thanks to Linda Linsefors and Janice Roeloffs for comments.*
