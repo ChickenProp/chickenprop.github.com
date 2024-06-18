@@ -1,6 +1,7 @@
 ---
 title: "Book review: the Iliad"
-layout: draft
+layout: post
+lw_xpost: true
 ---
 *Translated by Emily Wilson*
 
