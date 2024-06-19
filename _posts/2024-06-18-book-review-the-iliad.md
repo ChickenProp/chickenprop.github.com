@@ -2,6 +2,11 @@
 title: "Book review: the Iliad"
 layout: post
 lw_xpost: true
+external_comments:
+  - name: LessWrong
+    url: https://www.lesswrong.com/posts/bdz4yPxxRMxeKJHay
+  - name: /r/slatestarcodex
+    url: https://www.reddit.com/r/slatestarcodex/comments/1diy5ax/
 ---
 *Translated by Emily Wilson*
 
@@ -163,7 +168,7 @@ In fact, it's not a coincidence that I listened to the Iliad soon after reading 
 
 (Also not a coincidence that I read [A Midsummer Night's Dream](https://en.wikipedia.org/wiki/A_Midsummer_Night%27s_Dream) soon after watching [Get Over It](https://en.wikipedia.org/wiki/Get_Over_It_%28film%29). Reading the source material radically changed my opinion of that film. It went from "this is pretty fun, worth watching" to "this is excellent, one of my favorite movies".[^get-over-it] Similarly, [See How They Run](https://en.wikipedia.org/wiki/See_How_They_Run_%282022_film%29) was improved by having recently seen [The Mousetrap](https://en.wikipedia.org/wiki/The_Mousetrap).)
 
-[^get-over-it]: Spoilers follow. Get Over It is a musical adaptation of A Midsummer Night's Dream, set in a high school where the students are putting on a musical adaptation of A Midsummer Night's Dream. What I love about it is the way the adaptation in the film interacts with the adaptation that is the film. The play-in-the-film is a musical, so that makes the film a musical. And more twistily, the protagonist of the film plays the protagonist of the play, and the antagonist plays the antagonist, as you'd expect. But these roles have been swapped - Lysander is the protagonist of the play but the antagonist of the film, playing Demetrius in the play; and Demetrius is the antagonist of the play but the protagonist of the film, playing Lysander in the play. Hermia and Helena play themselves. In the climax, film-Demetrius declares his love for film-Helena by improvising some lines where play-Lysander declares his love for play-Helena. So he changes the ending of their play, which makes the ending of the film match the ending of the original play.
+[^get-over-it]: Spoilers follow. Get Over It is a musical adaptation of A Midsummer Night's Dream, set in a high school where the students are putting on a musical adaptation of A Midsummer Night's Dream. What I love about it is the way the adaptation in the film interacts with the adaptation that is the film. The play-in-the-film is a musical, so that makes the film a musical. And more twistily, the protagonist of the film plays the protagonist of the play, and the antagonist plays the antagonist, as you'd expect. But these roles have been swapped—Lysander is the protagonist of the play but the antagonist of the film, playing Demetrius in the play; and Demetrius is the antagonist of the play but the protagonist of the film, playing Lysander in the play. Hermia and Helena play themselves. In the climax, film-Demetrius declares his love for film-Helena by improvising some lines where play-Lysander declares his love for play-Helena. So he changes the ending of their play, which makes the ending of the film match the ending of the original play.
 
 A closely related thing here is that because lots of other people have read the classics, they've also written about the classics and about reading the classics. So if you enjoy reading commentary on the thing you've just read, the classics have you covered.
 
