@@ -4,7 +4,11 @@ layout: post
 lw_xpost: true
 tags: [culture]
 ---
-A megasecond, one million seconds, is 11 days and 14 hours. (13 hours, 46 minutes and 40 seconds, assuming no leap seconds.) About a week and a half. Ten megaseconds is 116 days. (115, plus 17:46:40.) A bit less than four months, a third of a year. A hundred megaseconds is 1,157 days. (Plus 9:46:40[^minutes-seconds].) Roughly three years and two months - it could be 61 or 62 days depending on leap years.
+A megasecond, one million seconds, is 11 days and 14 hours. (13 hours, 46 minutes and 40 seconds, assuming no leap seconds.) About a week and a half.
+
+Ten megaseconds is 116 days. (115, plus 17:46:40.) A bit less than four months, a third of a year.
+
+A hundred megaseconds is 1,157 days. (Plus 9:46:40[^minutes-seconds].) Roughly three years and two months - it could be 61 or 62 days depending on leap years.
 
 [^minutes-seconds]: Why are the minutes and seconds always the same? Because 46 minutes and 40 seconds is 2800 seconds, and the remainder when dividing (10 × 2800) by (60 × 60) is also 2800. So multiply the previous duration by 10 and you get the same number of minutes and seconds left over. For similar reasons, the number of hours after hitting 10 megaseconds will keep looping: 17, 9, 1, 17, 9, 1.
 
