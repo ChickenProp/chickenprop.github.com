@@ -18,14 +18,14 @@ I think all this data was collected on October 28 2024. I'm splitting things out
 
 I could export 951 posts from reddit. (That's a weird number; I suspect it means there were 49 posts I couldn't see.) The oldest were in December 2019, which means I have about 4 5/6 years of data. In a given calendar year, I can easily count: how many posts were there? And how many comments were there, on posts made in that calendar year? (So a comment in January 2022 on a post from December 2021, would be counted for 2021.)
 
-| Year                | Posts | Comments |
-|---------------------|-------|----------|
-| 2020                | 296   | 2156     |
-| 2021                | 236   | 1339     |
-| 2022                | 215   | 1074     |
-| 2023                | 132   | 639      |
-| 2024 (extrapolated) | 76    | 505      |
-| 2024 (raw)          | 63    | 421      |
+| **Year**                | **Posts** | **Comments** |
+|-------------------------|-----------|--------------|
+| 2020                    | 296       | 2156         |
+| 2021                    | 236       | 1339         |
+| 2022                    | 215       | 1074         |
+| 2023                    | 132       | 639          |
+| 2024 (extrapolated)     | 76        | 505          |
+| 2024 (raw)              | 63        | 421          |
 
 By either measure, 2024 has about a quarter of 2020 activity levels.
 
@@ -33,17 +33,17 @@ By either measure, 2024 has about a quarter of 2020 activity levels.
 
 I got a list of every topic on the discourse, with its creation date, "last updated" date (probably date of last reply in most cases), number of replies and number of views. The first post was in November 2017.
 
-| Year                | Posts (C) | Replies (C) | Views (C) | Posts (U) | Replies (U) | Views (U) |
-|---------------------|-----------|-------------|-----------|-----------|-------------|-----------|
-| 2017                | 46        | 366         | 90830     | 29        | 151         | 46081     |
-| 2018                | 819       | 5273        | 1634539   | 817       | 5284        | 1617704   |
-| 2019                | 685       | 4437        | 1113453   | 695       | 4488        | 1137001   |
-| 2020                | 610       | 4104        | 882214    | 613       | 4201        | 908361    |
-| 2021                | 482       | 3502        | 603199    | 485       | 3528        | 608075    |
-| 2022                | 332       | 1698        | 336095    | 329       | 1548        | 319918    |
-| 2023                | 294       | 1544        | 221806    | 298       | 1711        | 243834    |
-| 2024 (extrapolated) | 224       | 1422        | 115503    | 227       | 1438        | 116898    |
-| 2024 (raw)          | 187       | 1185        | 96253     | 189       | 1198        | 97415     |
+| **Year**                | **Posts (C)** | **Replies (C)** | **Views (C)** | **Posts (U)** | **Replies (U)** | **Views (U)** |
+|-------------------------|---------------|-----------------|---------------|---------------|-----------------|---------------|
+| 2017                    | 46            | 366             | 90830         | 29            | 151             | 46081         |
+| 2018                    | 819           | 5273            | 1634539       | 817           | 5284            | 1617704       |
+| 2019                    | 685           | 4437            | 1113453       | 695           | 4488            | 1137001       |
+| 2020                    | 610           | 4104            | 882214        | 613           | 4201            | 908361        |
+| 2021                    | 482           | 3502            | 603199        | 485           | 3528            | 608075        |
+| 2022                    | 332           | 1698            | 336095        | 329           | 1548            | 319918        |
+| 2023                    | 294           | 1544            | 221806        | 298           | 1711            | 243834        |
+| 2024 (extrapolated)     | 224           | 1422            | 115503        | 227           | 1438            | 116898        |
+| 2024 (raw)              | 187           | 1185            | 96253         | 189           | 1198            | 97415         |
 
 The "C" columns count according to a post's creation date, and the "U" columns count by "last updated" date.
 
@@ -59,20 +59,20 @@ For every package listed on [the repository](https://package.elm-lang.org/), I g
 
 My understanding is: if a package has any version compatible with 0.19, then every version of that package is listed, including ones not compatible with 0.19. If not it's not listed at all. So numbers before 2019 are suspect (0.19 was released in August 2018).
 
-| Year                | Total | Initial | Major | Minor | Patch |
-|---------------------|-------|---------|-------|-------|-------|
-| 2014                | 1     | 1       | 0     | 0     | 0     |
-| 2015                | 130   | 24      | 28    | 31    | 47    |
-| 2016                | 666   | 102     | 137   | 145   | 282   |
-| 2017                | 852   | 170     | 147   | 208   | 327   |
-| 2018                | 1897  | 320     | 432   | 337   | 808   |
-| 2019                | 1846  | 343     | 321   | 373   | 809   |
-| 2020                | 1669  | 288     | 343   | 366   | 672   |
-| 2021                | 1703  | 225     | 385   | 359   | 734   |
-| 2022                | 1235  | 175     | 277   | 289   | 494   |
-| 2023                | 1016  | 155     | 223   | 255   | 383   |
-| 2024 (extrapolated) | 866   | 137     | 167   | 204   | 359   |
-| 2024 (raw)          | 722   | 114     | 139   | 170   | 299   |
+| **Year**                | **Total** | **Initial** | **Major** | **Minor** | **Patch** |
+|-------------------------|-----------|-------------|-----------|-----------|-----------|
+| 2014                    | 1         | 1           | 0         | 0         | 0         |
+| 2015                    | 130       | 24          | 28        | 31        | 47        |
+| 2016                    | 666       | 102         | 137       | 145       | 282       |
+| 2017                    | 852       | 170         | 147       | 208       | 327       |
+| 2018                    | 1897      | 320         | 432       | 337       | 808       |
+| 2019                    | 1846      | 343         | 321       | 373       | 809       |
+| 2020                    | 1669      | 288         | 343       | 366       | 672       |
+| 2021                    | 1703      | 225         | 385       | 359       | 734       |
+| 2022                    | 1235      | 175         | 277       | 289       | 494       |
+| 2023                    | 1016      | 155         | 223       | 255       | 383       |
+| 2024 (extrapolated)     | 866       | 137         | 167       | 204       | 359       |
+| 2024 (raw)              | 722       | 114         | 139       | 170       | 299       |
 
 Package releases have declined by about half since 2020. Initial (0.48x) and major (0.49x) releases have gone down slightly faster than minor (0.56x) and patch (0.53x) ones, which might mean something or might just be noise.
 
