@@ -95,6 +95,10 @@ For things not linked from there:
 * [hnhiring.com](https://hnhiring.com/trends?technologies=elm) shows generally 0-1 Elm jobs/month since 2023. There was also a dry spell from April 2019 to November 2020, but it's clearly lower right now than in 2018, 2021 and 2022.
 * [Elmcraft](https://elmcraft.org/) is a website that I think is trying to be a community hub or something? Other than linking to Elm Weekly and the podcasts, it has a "featured article" (from April) and "latest videos" (most recently from 2023).
 * How many long-form articles are being written about Elm? Not sure if there's an easy way to get stats on this.
+* The [elm tag on StackOverflow](https://stackoverflow.com/questions/tagged/elm?tab=newest&pagesize=50) has had 6 questions asked this year, 22 in 2023. I couldn't be bothered to count further back.
+* Github also lets you search for "repositories written partially in *language*, created between *date1* and *date2*". So e.g. [elm repos created in 2023](https://github.com/search?q=created%3A2023-01-01..2023-12-31+language%3AElm&type=repositories&ref=advsearch). Quick summary: 2.6k in 2019; 2.3k in 2020; 1.7k in 2021; 1.5k in 2022; 1.2k in 2023; 731 so far in 2024 (extrapolate to 877).[^github-unreliable]
+
+[^github-unreliable]: I've also seen 2k for both 2019 and 2020, so these numbers probably aren't very reliable.
 
 ### My take
 
