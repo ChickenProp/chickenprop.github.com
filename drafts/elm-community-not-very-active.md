@@ -51,9 +51,11 @@ So posts and replies have fallen to about 35% of 2020 levels. Views have fallen 
 
 ### Package releases
 
-For every package listed on https://package.elm-lang.org/, I got the release dates of all its versions.[^claude] So we can also ask how frequently packages are getting released, and we can break it up into initial/major/minor/patch updates.
+For every package listed on [the repository](https://package.elm-lang.org/), I got the release dates of all its versions.[^claude] So we can also ask how frequently packages are getting released, and we can break it up into initial/major/minor/patch updates.
 
 [^claude]: Irrelevant aside, but I think this and the previous section were the first and second times I tried to get an LLM to write code for me. I used Claude. It took some back and forth, due to a combination of bugs, unclear specifications, and me occasionally changing my mind. But overall it worked very well.
+
+  In particular, for a given package, say [elm/browser](https://package.elm-lang.org/packages/elm/browser/), how do you get the release dates of its versions? I can't see that info on the website, but Claude found a [releases.json](https://package.elm-lang.org/packages/elm/browser/releases.json) file that has it. Left to myself, I don't know if I'd have found that file. it's plausible I would have just ended up crawling github.
 
 My understanding is: if a package has any version compatible with 0.19, then every version of that package is listed, including ones not compatible with 0.19. If not it's not listed at all. So numbers before 2019 are suspect (0.19 was released in August 2018).
 
@@ -94,7 +96,7 @@ For things not linked from there:
 * [Elmcraft](https://elmcraft.org/) is a website that I think is trying to be a community hub or something? Other than linking to Elm Weekly and the podcasts, it has a "featured article" (from April) and "latest videos" (most recently from 2023).
 * How many long-form articles are being written about Elm? Not sure if there's an easy way to get stats on this.
 
-### Summary
+### My take
 
 I do not think the Elm community is "very active" by most reasonable standards. For example:
 
