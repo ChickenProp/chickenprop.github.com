@@ -16,7 +16,7 @@ I think all this data was collected on October 28 2024. I'm splitting things out
 
 ### Subreddit
 
-I could export 951 posts from reddit. (That's a weird number; I suspect it means there were 49 posts I couldn't see.) The oldest were in December 2019, which means I have about 4 5/6 years of data. In a given calendar year, I can easily count: how many posts were there? And how many comments were there, on posts made in that calendar year? (So a comment in January 2022 on a post from December 2021, would be counted for 2021.)
+I could export 951 posts from reddit. (That's a weird number; I suspect it means there were 49 posts I couldn't see.) The oldest were in December 2019, which means I have about 4⅚ years of data. In a given calendar year, I can easily count: how many posts were there? And how many comments were there, on posts made in that calendar year? (So a comment in January 2022 on a post from December 2021, would be counted for 2021.)
 
 | **Year**                | **Posts** | **Comments** |
 |-------------------------|-----------|--------------|
