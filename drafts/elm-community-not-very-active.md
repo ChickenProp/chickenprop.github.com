@@ -55,7 +55,7 @@ For every package listed on [the repository](https://package.elm-lang.org/), I g
 
 [^claude]: Irrelevant aside, but I think this and the previous section were the first and second times I tried to get an LLM to write code for me. I used Claude. It took some back and forth, due to a combination of bugs, unclear specifications, and me occasionally changing my mind. But overall it worked very well.
 
-  In particular, for a given package, say [elm/browser](https://package.elm-lang.org/packages/elm/browser/), how do you get the release dates of its versions? I can't see that info on the website, but Claude found a [releases.json](https://package.elm-lang.org/packages/elm/browser/releases.json) file that has it. Left to myself, I don't know if I'd have found that file. it's plausible I would have just ended up crawling github.
+    In particular, for a given package, say [elm/browser](https://package.elm-lang.org/packages/elm/browser/), how do you get the release dates of its versions? I can't see that info on the website, but Claude found a [releases.json](https://package.elm-lang.org/packages/elm/browser/releases.json) file that has it. Left to myself, I don't know if I'd have found that file. it's plausible I would have just ended up crawling github.
 
 My understanding is: if a package has any version compatible with 0.19, then every version of that package is listed, including ones not compatible with 0.19. If not it's not listed at all. So numbers before 2019 are suspect (0.19 was released in August 2018).
 
