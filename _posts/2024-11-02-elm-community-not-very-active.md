@@ -1,6 +1,6 @@
 ---
 title: 'The Elm community is not "very active"'
-layout: draft
+layout: post
 ---
 
 I sometimes see people describe the Elm community as "very active". For example:
