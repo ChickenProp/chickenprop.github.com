@@ -1,6 +1,9 @@
 ---
 title: 'The Elm community is not "very active"'
 layout: post
+external_comments:
+  - name: /r/elm
+    url: https://www.reddit.com/r/elm/comments/1gi06vs/the_elm_community_is_not_very_active/
 ---
 
 I sometimes see people describe the Elm community as "very active". For example:
