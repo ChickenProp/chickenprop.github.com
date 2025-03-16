@@ -1,5 +1,5 @@
 ---
-title: Boots theory in Ankh-Morpork
+title: Boots theory and Sybil Ramkin
 layout: draft
 ---
 
@@ -11,7 +11,7 @@ The popular explanation of the theory comes from Sam Vimes, a resident of Ankh-M
 
 To be clear, this is beside the point of my previous essay. I was talking about 21st Century Earth Anglosphere because that's what I know; and whenever I see someone bring up boots theory, they're talking about Earth (usually 21st Century Anglosphere) and not Ankh-Morpork. But multiple commentors brought it up.
 
-[Radmonger](https://www.reddit.com/r/slatestarcodex/comments/isk5v5/against_boots_theory/g58g364/)
+[Radmonger](https://www.reddit.com/r/slatestarcodex/comments/isk5v5/against_boots_theory/g58g364/):
 
 > you need to understand Vimes as making a distinction not between the upper class and everyone else, but the middle class and the working class, between homeowners and renters.
 
@@ -35,7 +35,7 @@ These are basically right. (I'm not sure about all of JC O's specific details, a
 
 > She was, Vimes had been told, the richest woman in Ankh-Morpork. In fact she was richer than all the other women in Ankh-Morpork rolled, if that were possible, into one.
 >
-> It was going to be a strange wedding, people said. Vimes treated his social superiors with barely concealed distaste, because the women made his head ache and the men made his fists itch. And Sybil Ramkin was the last survivor of one of the oldest families in Ankh. But they'd been thrown together like twigs in a whirlpool, and had yielded to the inevitable . . .
+> It was going to be a strange wedding, people said. Vimes treated his social superiors with barely concealed distaste, because the women made his head ache and the men made his fists itch. And Sybil Ramkin was the last survivor of one of the oldest families in Ankh. But they'd been thrown together like twigs in a whirlpool, and had yielded to the inevitable …
 >
 > When he was a little boy, Sam Vimes had thought that the very rich ate off gold plates and lived in marble houses.
 >
@@ -59,7 +59,7 @@ There's, um, a lot to unpack here. It's kind of fractally wrong.
 
 Note that bits of this don't make sense when taken literally. "Lady Ramkin was so rich she could afford to stomp around the place in rubber boots and a tweed skirt that had belonged to her mother. She was so rich she could afford to live on biscuits and cheese sandwiches." These are not expensive things compared to the alternatives.
 
-I think the subtext here is something like "Lady Ramkin is so rich she doesn't need to try to impress people". Looking back at *Guards! Guards!* (the first book featuring Vimes and Ramkins), that's spelled out more explicitly: "A couple of women were moving purposefully among the boxes. Ladies, rather. They were far too untidy to be mere women. No ordinary women would have dreamed of looking so scruffy; you needed the complete self-confidence that comes with knowing who your great-great-great-great-grandfather was before you could wear clothes like that."
+I think the subtext here is something like "Lady Ramkin is so rich she doesn't need to try to impress people". Looking back at *Guards! Guards!* (the first book featuring Vimes and Ramkin), that's spelled out more explicitly: "A couple of women were moving purposefully among the boxes. Ladies, rather. They were far too untidy to be mere women. No ordinary women would have dreamed of looking so scruffy; you needed the complete self-confidence that comes with knowing who your great-great-great-great-grandfather was before you could wear clothes like that."
 
 I'm tempted to attribute this to personality (speculatively, "autism") rather than wealth. But I think it does rhyme with discussions of class that I've seen. ("Rich people don't want you to mistake them for middle-class, so they visibly spend money. The people richer than them aren't going to be mistaken for middle-class, but they don't want you to think they're merely "rich", so they avoid visibly spending money.") Let's stipulate that the subtext is accurate, and move on.
 
@@ -86,19 +86,19 @@ No: I'm pretty sure "Sybil Ramkin doesn't spend much money on things other than 
 >
 > "Sorry?"
 >
-> "Oh, my father had property all over the city," she said. "Quite useless to me, really. So I told my agent to give Sergeant Colon the keys to the old house in Pseudopolis Yard. It’ll do it good to be aired."
+> "Oh, my father had property all over the city," she said. "Quite useless to me, really. So I told my agent to give Sergeant Colon the keys to the old house in Pseudopolis Yard. It'll do it good to be aired."
 
 > Lady Ramkin's coach rattled into the plaza making a noise like a roulette wheel and pounded straight for Vimes, stopping in a skid that sent it juddering around in a semi-circle and forced the horses either to face the other way or plait their legs.
 
 > An effort had been made to spruce up the Ramkin mansion, he noticed. The encroaching shrubbery had been pitilessly hacked back. An elderly workman atop a ladder was nailing the stucco back on the walls while another, with a spade, was rather arbitrarily defining the line where the lawn ended and the old flower beds had begun.
 >
-> ...
+> […]
 >
 > To his amazement the door was eventually opened by a butler so elderly that he might have been resurrected by the knocking.
 
 > A terrible premonition took hold of Vimes at the same moment as a gust of Captivation, the most expensive perfume available anywhere in Ankh-Morpork blew past him.
 
-> Vimes was vaguely aware of ... a slightly anxious face that suggested that a whole battalion of skilled painters and decorators had only just dismantled their scaffolding and gone home
+> Vimes was vaguely aware of […] a slightly anxious face that suggested that a whole battalion of skilled painters and decorators had only just dismantled their scaffolding and gone home
 
 > He must have eaten, because servants appeared out of nowhere with things stuffed with other things, and came back later and took the plates away. The butler reanimated occasionally to fill glass after glass with strange wines. The heat from the candles was enough to cook by.
 
@@ -114,7 +114,7 @@ I'm not willing to credit that she does this. But even if I was, how much does i
 
 Plus, even when she's not explicitly trying to seduce him, she feeds Vimes bacon, fried potatoes, eggs, cake and bread pudding. Does Vimes get to eat these things often? ("Vimes thought about the meals at his lodgings. Somehow the meat was always gray, with mysterious tubes in it."[^raise])
 
-[^raise]: Admittedly the watchmen get a raise at the end of that book, so he might not still be eating mysterious tubes now that he's earning $38/month. The amount of his raise is unclear: in *Guards! Guards* he's said to earn $9/month above the others' $30/month, but now in *Men at Arms* he earns $38/month. Let's say these are different currencies, and guess that in *Guards! Guards!* he was earning about $30/month in *Men at Arms* dollars, so he's been given a 25% raise. That's hefty! He indeed might not be eating mysterious tubes any more.
+[^raise]: Admittedly the watchmen get a raise at the end of that book, so he might not still be eating mysterious tubes now that he's earning \\$38/month. The amount of his raise is unclear - in *Guards! Guards* he's said to earn \\$9/month above the others' \\$30/month, but now in *Men at Arms* he earns \\$38/month - but maybe he's eating better now? Not so much better though: "Hitherto Sam Vimes' idea of a good meal was liver without tubes. Haute cuisine had been bits of cheese on sticks stuck into half a grapefruit."
 
 This is not a person who lives on less money than Sam Vimes, and it's hard to believe Sam Vimes - a policeman, someone for whom "noticing things" is part of the job description, who is engaged to this woman - is ignorant of the fact.
 
@@ -138,17 +138,17 @@ That's based on *Guards! Guards!* What if we completely ignore that book, and ju
 
 > And this wasn't one of the old hip bath, drag-it-in-front-of-the-fire jobs, no. The Ramkin mansion collected water off the roof into a big cistern, after straining out the pigeons, and then it was heated by an ancient geyser [footnote: "Who stoked the boiler."]
 
-(i.e. that's another person getting paid by Sybil.)
+(i.e. that's another person who needs to be paid.)
 
 > Lady Sybil was devoting to her wedding all the directness of thought she'd normally apply to breeding out a tendency towards floppy ears in swamp dragons. Half a dozen cooks had been busy in the kitchens for three days. They were roasting a whole ox and doing amazing stuff with rare fruit.
 
-(Sybil Ramkin is so rich she can afford to live on biscuits and cheese sandwiches. But sometimes she likes to slum it, and spend money like she was merely well-off.)
+(Sybil Ramkin is so rich she can afford to live on biscuits and cheese sandwiches. But sometimes she likes to slum it, and spend money as if she was merely well-off.)
 
 Also, I didn't find a convenient quote for this but she hosts a dinner for a bunch of other rich people and somehow I doubt she asked them to pay for it.
 
 I can offer two defenses of Vimes here. One is that all of these quotes are from after the quote about boots theory, so *maybe* he didn't know all this at the time, and then he'd still be wrong but a bit less embarrassingly wrong.
 
-The stronger one is that it's revealed he gives away almost half his income to the widows and orphans of coppers. That roughly doubles the apparent spending power of his $38/month. So when he thinks Sybil spends less than he does, she has more margin to do that in.
+The stronger one is that it's revealed he gives away almost half his income to the widows and orphans of coppers. That roughly doubles the apparent spending power of his \\$38/month. So when he thinks Sybil spends less than he does, she has more margin to do that in.
 
 But still. *C'mon.*
 
@@ -158,7 +158,7 @@ I don't think we see much else of the very very rich. We're told Vimes doesn't e
 
 So why does Vimes think those thoughts? I don't have a [Watsonian](https://tvtropes.org/pmwiki/pmwiki.php/Main/WatsonianVersusDoylist) explanation. One possible Doylist explanation is that Pratchett put it in the book because he wanted to comment on 20th Century Earth Anglosphere economics, and didn't notice or didn't care that it didn't make sense in context.
 
-...but as someone who thinks it *also* doesn't make sense for 20th Century Earth Anglosphere economics, I think there's a slightly different explanation.
+…but as someone who thinks it *also* doesn't make sense for 20th Century Earth Anglosphere economics, I think there's a slightly different explanation.
 
 I think boots theory is a very foolish thing for Sam to believe of Ankh-Morpork, or for Pratchett to believe of Earth. But for whatever reason, lots of people do seem to believe it of Earth.
 
