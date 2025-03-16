@@ -61,7 +61,7 @@ Note that bits of this don't make sense when taken literally. "Lady Ramkin was s
 
 I think the subtext here is something like "Lady Ramkin is so rich she doesn't need to try to impress people". Looking back at *Guards! Guards!* (the first book featuring Vimes and Ramkin), that's spelled out more explicitly: "A couple of women were moving purposefully among the boxes. Ladies, rather. They were far too untidy to be mere women. No ordinary women would have dreamed of looking so scruffy; you needed the complete self-confidence that comes with knowing who your great-great-great-great-grandfather was before you could wear clothes like that."
 
-I'm tempted to attribute this to personality (speculatively, "autism") rather than wealth. But I think it does rhyme with discussions of class that I've seen. ("Rich people don't want you to mistake them for middle-class, so they visibly spend money. The people richer than them aren't going to be mistaken for middle-class, but they don't want you to think they're merely "rich", so they avoid visibly spending money.") Let's stipulate that the subtext is accurate, and move on.
+I'm tempted to attribute this to personality (speculatively, "autism") rather than wealth. But I think it does rhyme with discussions of class that I've seen. (Roughly: rich people don't want you to mistake them for middle-class, so they visibly spend money. The people richer than them aren't in danger of being mistaken for middle-class, but they don't want you to think they're merely "rich", so they avoid visibly spending money.) Let's stipulate that the subtext is accurate, and move on.
 
 The mention of wine is out of place. Rich people don't have access to durable wine that isn't depleted when drunk. If Sybil Ramkin has a lot of wine, it's not because someone made a relatively small up-front investment in wine and now there's no need to buy wine ever again. It's because someone spent a lot of money to buy a lot of wine, and it just hasn't all been drunk *yet*.
 
@@ -91,14 +91,12 @@ No: I'm pretty sure "Sybil Ramkin doesn't spend much money on things other than 
 > Lady Ramkin's coach rattled into the plaza making a noise like a roulette wheel and pounded straight for Vimes, stopping in a skid that sent it juddering around in a semi-circle and forced the horses either to face the other way or plait their legs.
 
 > An effort had been made to spruce up the Ramkin mansion, he noticed. The encroaching shrubbery had been pitilessly hacked back. An elderly workman atop a ladder was nailing the stucco back on the walls while another, with a spade, was rather arbitrarily defining the line where the lawn ended and the old flower beds had begun.
->
-> […]
->
+
 > To his amazement the door was eventually opened by a butler so elderly that he might have been resurrected by the knocking.
 
 > A terrible premonition took hold of Vimes at the same moment as a gust of Captivation, the most expensive perfume available anywhere in Ankh-Morpork blew past him.
 
-> Vimes was vaguely aware of […] a slightly anxious face that suggested that a whole battalion of skilled painters and decorators had only just dismantled their scaffolding and gone home
+> Vimes was vaguely aware of a brilliant blue dress that sparkled in the candlelight, a mass of hair the colour of chestnuts, a slightly anxious face that suggested that a whole battalion of skilled painters and decorators had only just dismantled their scaffolding and gone home, and a faint creaking that said underneath it all mere corsetry was being subjected to the kind of tensions more usually found in the heart of large stars.
 
 > He must have eaten, because servants appeared out of nowhere with things stuffed with other things, and came back later and took the plates away. The butler reanimated occasionally to fill glass after glass with strange wines. The heat from the candles was enough to cook by.
 
@@ -114,7 +112,7 @@ I'm not willing to credit that she does this. But even if I was, how much does i
 
 Plus, even when she's not explicitly trying to seduce him, she feeds Vimes bacon, fried potatoes, eggs, cake and bread pudding. Does Vimes get to eat these things often? ("Vimes thought about the meals at his lodgings. Somehow the meat was always gray, with mysterious tubes in it."[^raise])
 
-[^raise]: Admittedly the watchmen get a raise at the end of that book, so he might not still be eating mysterious tubes now that he's earning \\$38/month. The amount of his raise is unclear - in *Guards! Guards* he's said to earn \\$9/month above the others' \\$30/month, but now in *Men at Arms* he earns \\$38/month - but maybe he's eating better now? Not so much better though: "Hitherto Sam Vimes' idea of a good meal was liver without tubes. Haute cuisine had been bits of cheese on sticks stuck into half a grapefruit."
+[^raise]: Admittedly the watchmen get a raise at the end of that book, so he might not still be eating mysterious tubes now that he's earning \\$38/month. The amount of his raise is unclear - in *Guards! Guards* he's said to earn \\$9/month above the others' \\$30/month before the raise, but now in *Men at Arms* he earns \\$38/month - but maybe he's eating better now? Not so much better though: "Hitherto Sam Vimes' idea of a good meal was liver without tubes. Haute cuisine had been bits of cheese on sticks stuck into half a grapefruit."
 
 This is not a person who lives on less money than Sam Vimes, and it's hard to believe Sam Vimes - a policeman, someone for whom "noticing things" is part of the job description, who is engaged to this woman - is ignorant of the fact.
 
@@ -130,7 +128,7 @@ That's based on *Guards! Guards!* What if we completely ignore that book, and ju
 >
 > That was another new thing. The rich even had rooms for dressing in, and clothes to wear while you went into the dressing rooms to get dressed.
 
-(Hardly "rubber boots and a tweed skirt that had belonged to her mother.")
+(Hardly "rubber boots and a tweed skirt that had belonged to her mother", or "three rooms in a thirty-four-roomed mansion".)
 
 > "His lordship … that is, her ladyship's father … he required to have his back scrubbed," said Willikins.
 
@@ -144,11 +142,13 @@ That's based on *Guards! Guards!* What if we completely ignore that book, and ju
 
 (Sybil Ramkin is so rich she can afford to live on biscuits and cheese sandwiches. But sometimes she likes to slum it, and spend money as if she was merely well-off.)
 
-Also, I didn't find a convenient quote for this but she hosts a dinner for a bunch of other rich people and somehow I doubt she asked them to pay for it.
+Also, I didn't find a convenient quote for this, but she hosts a dinner for a bunch of other rich people and somehow I doubt she asks them to pay for it.
 
-I can offer two defenses of Vimes here. One is that all of these quotes are from after the quote about boots theory, so *maybe* he didn't know all this at the time, and then he'd still be wrong but a bit less embarrassingly wrong.
+I can offer two defenses of Vimes here. One is that all of this is from from after the quote about boots theory, so - again, as long as we're pretending *Guards! Guards!* never happened - *maybe* he didn't know all this at the time, and then he'd still be embarrassingly wrong but a bit *less* embarrassingly wrong. Like, he'd be making up shit that defies common sense, and it's weird he knows so little about his fiancée, but he wouldn't be making up shit that contradicts what he's seen himself.
 
-The stronger one is that it's revealed he gives away almost half his income to the widows and orphans of coppers. That roughly doubles the apparent spending power of his \\$38/month. So when he thinks Sybil spends less than he does, she has more margin to do that in.
+The stronger one is that it's revealed he gives away \\$14/month to the widows and orphans of coppers. That increases the apparent spending power of his \\$38/month. So when he thinks Sybil spends less than he does, she has more margin to do that in.[^spending-power]
+
+[^spending-power]: That is: I've been assuming that his \\$38/month was enough for one person to live a sort of lower-middle-class lifestyle with tubes in his liver. But he only lives on \\$24/month. So if Sybil spends less than him, she's not spending "less than the cost of a single person's lower-middle-class lifestyle". She's actually spending "less than the cost of one and a half people's lower-middle-class lifestyles". Of course, this only works if we count Vimes' charitable givings as part of his expenditures, but not Sybil's.
 
 But still. *C'mon.*
 
@@ -156,7 +156,7 @@ Might Vimes have been right in general, but wrong about Sybil Ramkin?
 
 I don't think we see much else of the very very rich. We're told Vimes doesn't either. (*Men at Arms*: "He hadn't had much experience with the rich and powerful.") If there's any reason for Vimes to think "the rich spend less money than the poor" is true in any sense in Ankh-Morpork, I don't know it.
 
-So why does Vimes think those thoughts? I don't have a [Watsonian](https://tvtropes.org/pmwiki/pmwiki.php/Main/WatsonianVersusDoylist) explanation. One possible Doylist explanation is that Pratchett put it in the book because he wanted to comment on 20th Century Earth Anglosphere economics, and didn't notice or didn't care that it didn't make sense in context.
+So why does Vimes think those thoughts? I don't have a [Watsonian](https://fanlore.org/wiki/Watsonian_vs._Doylist) explanation. One possible Doylist explanation is that Pratchett put it in the book because he wanted to comment on 20th Century Earth Anglosphere economics, and didn't notice or didn't care that it didn't make sense in context.
 
 …but as someone who thinks it *also* doesn't make sense for 20th Century Earth Anglosphere economics, I think there's a slightly different explanation.
 
