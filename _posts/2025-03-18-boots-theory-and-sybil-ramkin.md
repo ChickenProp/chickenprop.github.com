@@ -1,6 +1,8 @@
 ---
 title: Boots theory and Sybil Ramkin
-layout: draft
+layout: post
+lw_xpost: true
+tags: [economics]
 ---
 
 I previously [wrote about Boots theory](https://reasonableapproximation.net/2020/09/14/against-boots-theory.html), the idea that "the rich are so rich because they spend less money". My one-sentence take is: I'm pretty sure rich people spend more money than poor people, and an observation can't be explained by a falsehood.
