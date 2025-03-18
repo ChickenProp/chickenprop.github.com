@@ -4,6 +4,8 @@ layout: post
 lw_xpost: true
 tags: [economics]
 external_comments:
+  - name: LessWrong
+    url: https://www.lesswrong.com/posts/KZrp5tJeLvoSbDryF/boots-theory-and-sybil-ramkin
   - name: /r/slatestarcodex
     url: https://www.reddit.com/r/slatestarcodex/comments/1jehgrf/boots_theory_and_sybil_ramkin/
 ---
