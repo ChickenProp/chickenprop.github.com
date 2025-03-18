@@ -76,8 +76,8 @@ Another is, I think there's a motte-and-bailey going on between levels one and t
 
 And relatedly: if we want to help people escape poverty, we need to know on what levels boots theory is true or false.[^feedback-loops] If we want to know that, we need to be able to distinguish the levels. If "boots theory" can refer to any of these levels, then simply calling boots theory "true" (or even "false") is uninformative. We need to be more precise than that. To be fair, the quora commenters make specific falsifiable claims, which is commendable. But the claims are meant to be specific examples of a general phenomenon, and the general phenomenon is simply "boots theory", and it's not clear what they think that means.
 
-**Update 18 Mar 2025:** This post has a followup, [Boots theory and Sybil Ramkin](//reasonableapproximation.net/2025/03/18/boots-theory-and-sybil-ramkin.html).
-
 [^feedback-loops]: I'm not too confident about this, and I don't want to get too distracted with object-level claims about how to actually fight poverty. But my sense is that: to the extent that level two is true, giving someone money fairly reliably sets up positive feedback loops that help them save more money in future. To the extent that it's not true, these feedback loops don't come for free. Maybe we can seek out spending categories where it is true, or groups of people for whom it is true. Maybe we can teach people how to find and take advantage of these feedback loops. If even level one isn't true, we don't get these loops at all. Of course, maybe it's worth giving people money even if we don't get the feedback loops.
 
 I advise that if you talk about boots theory, you make it clear which level you're talking about. But maybe don't use that name at all. If you're talking about level one, the name "ghetto tax" seems fine. If you do want to talk about levels two or three, I don't have a good altiernative name to suggest. But since I don't think those levels are true, I'm not sure that's a big problem.
+
+**Update 18 Mar 2025:** This post has a followup, [Boots theory and Sybil Ramkin](//reasonableapproximation.net/2025/03/18/boots-theory-and-sybil-ramkin.html).
