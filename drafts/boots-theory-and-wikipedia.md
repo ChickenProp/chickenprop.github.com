@@ -2,7 +2,7 @@
 title: Boots theory and Wikipedia
 layout: draft
 ---
-I've previously complained about how people often repeat a quote that starts with
+I've [previously complained](https://reasonableapproximation.net/2020/09/14/against-boots-theory.html) about how people often repeat a quote that starts with
 
 > The reason that the rich were so rich, Vimes reasoned, was because they managed to spend less money.
 
@@ -30,11 +30,11 @@ This doesn't talk about boots theory at all, but let's follow the citations anyw
 
 [1] is The Guardian, [Terry Pratchett estate backs Jack Monroe's idea for 'Vimes Boots' poverty index](https://web.archive.org/web/20220329192126/https://www.theguardian.com/books/2022/jan/26/terry-pratchett-jack-monroe-vimes-boots-poverty-index). This is an article about someone named Jack Monroe creating a price index, intended as an alternative to CPI, and naming it the "Vimes Boots Index".
 
-As a source for the claim, the relevant part of this is quoting Rhianna Pratchett, who says:
+As a source for Wikipedia's claim, the relevant part of this is quoting Rhianna Pratchett, who says:
 
 > My father used his anger about inequality, classism, xenophobia and bigotry to help power the moral core of his work. One of his most famous lightning-rods for this was Commander Vimes of the Ankh-Morpork City Watch
 
-Of course, Commander is a different rank than Captain. (Vimes is promoted from Captain to Commander in *Men at Arms*.)
+I note pedantically that Commander is a different rank than Captain. (Vimes is promoted from Captain to Commander in *Men at Arms*.)
 
 On the subject of boots theory, we have the original quote from *Men at Arms*, starting (as usual) with "the reason that the rich were so rich". Rihanna calls it a "musing on how expensive it is to be poor via the cost of boots".
 
@@ -42,11 +42,11 @@ We're not told how the index is calculated or how it relates to boots theory exc
 
 (Incidentally, [Monroe's own Wikipedia page](https://en.wikipedia.org/wiki/Jack_Monroe) doesn't mention the Vimes Boots Index at all.)
 
-[2] is an NYT financial advice column, I think? [Spend the Money for the Good Boots, and Wear Them Forever](https://web.archive.org/web/20230520182351/https://www.nytimes.com/2016/02/02/your-money/spend-the-money-for-the-good-boots-and-wear-them-forever.html). It mostly boils down to someone giving an example where spending more money now saved money in the long run. He bought $300 ski pants that have lasted 17 years and counting, and claims that if he'd bought $50 ski pants instead, he'd have had to buy a new pair every year, spending over $800.
+[2] is an NYT financial advice column, I think? [Spend the Money for the Good Boots, and Wear Them Forever](https://web.archive.org/web/20230520182351/https://www.nytimes.com/2016/02/02/your-money/spend-the-money-for-the-good-boots-and-wear-them-forever.html). It mostly boils down to someone giving an example where buying an expensive thing now saved money in the long run compared to buying cheap things. He bought \\$300 ski pants that have lasted 17 years and counting, and claims that if he'd bought \\$50 ski pants instead, he'd have had to buy a new pair every year, spending over \\$800.
 
-But there's an important calculation that he skips. If he'd *invested* $300 in the S&P 500 in 1999, [this site](https://www.officialdata.org/us/stocks/s-p-500/1999?amount=300&endYear=2016) claims it would have been worth $762 nominal in 2016, or $528 inflation-adjusted. So yes, if he has the numbers right, it seems like this was probably a good financial investment in his part.
+Note, there's an important calculation that he skips. If he'd *invested* \\$300 in the S&P 500 in 1999, [this site](https://www.officialdata.org/us/stocks/s-p-500/1999?amount=300&endYear=2016) claims it would have been worth \\$762 nominal in 2016, or \\$528 inflation-adjusted. So yes, if he has the numbers right, it seems like this was probably a good financial investment on his part.
 
-Anyway. This article does back the cited claim (albeit without using the phrase "City Watch"). On the subject of boots theory, it includes the original quote (starting, as usual, with "the reason that the rich were so rich") and doesn't take it any further than "you can spend more money now to spend less money in total".
+Anyway. This article does back the cited claim (albeit without using the phrase "City Watch"). On the subject of boots theory, it includes the original quote (starting, as usual, with "the reason that the rich were so rich") and doesn't take it any further than "you can spend more money now to spend less money in total". The example it gives matches Wikipedia's definition of boots theory.
 
 Back to Wikipedia:
 
@@ -56,7 +56,7 @@ We just discussed [2]. [3] is Gizmodo, [*Discworld*'s Famous 'Boots Theory' Is P
 
 > Monroe drew parallels to the famous passage's explanation to how low-income families in the UK have seen supermarkets either noticeably increase prices on "budget" lines of basic food and goods (an example Monroe used cited an over 300% increase on a bag of rice at one store in the last year, while cutting the amount of rice in the bag in half) as the country faces the continuing economic effects of Brexit, the covid-19 pandemic, and general supply chain issues. With these lines, aimed at low-income households, either pricing up or being replaced with more expensive store-brand ranges, struggling families are being forced to turn to charities and food banks to sustain themselves, reckoning with over a decade of cuts to social support programs by Britain's series of Conservative governments, including Boris Johnson's current cabinet, itself rather busy right now trying to hide a long string of embarrassing, potentially illegal social gatherings by the Prime Minister during covid-19 lockdowns.
 
-...except that I don't see the connection. But boy, impressive segue in that second sentence.
+...except that I don't see much connection. But boy, impressive segue in that second sentence.
 
 Wikipedia now gives the original quote, starting as usual with "the reason that the rich were so rich". This is citation 4, pointing at *Men at Arms*. Then:
 
@@ -80,11 +80,11 @@ Wikipedia:
 
 This might be the shortest extract of the quote I've seen yet.
 
-("Particularly relevant" seems to come from a footnote on page 213. I can find it through search but there's no preview available for the page.)
+("Particularly relevant" seems to come from a footnote on page 213. I can locate it through search but there's no preview available for the page.)
 
 Wikipedia:
 
-> In 2013, an article by the US ConsumerAffairs made reference to the theory in regard to purchasing items on credit, specifically regarding children's boots from the retailer Fingerhut; a $25 pair of boots, at the interest rates being offered, would cost $37 if purchased over seven months.[7]
+> In 2013, an article by the US ConsumerAffairs made reference to the theory in regard to purchasing items on credit, specifically regarding children's boots from the retailer Fingerhut; a \\$25 pair of boots, at the interest rates being offered, would cost \\$37 if purchased over seven months.[7]
 
 This seems to switch the idea from "in the long run, repeatedly buying cheap things costs more than buying expensive things" to "buying things with money you don't have yet costs more than buying things with money you do have yet". Or, "people won't typically lend you money for free".
 
@@ -104,15 +104,15 @@ We get the original quote, starting with "the reason that the rich were so rich"
 
 [^electric-payments]: I'm not sure I fully understand what's going on here, but I think roughly speaking, there are three ways to pay for electricity and gas.
 
-  1. Direct debit, where you pay a fixed amount each month. They'll try to calculate it so you pay the same amount every month, even though you don't use the same amount every month. So over time you'll build up a credit or debit, and if that gets too large they'll adjust your payments. (I'm not actually sure if they'll let you build up a debit.)
+    1. Direct debit, where you pay a fixed amount each month. They'll try to calculate it so you pay the same amount every month, even though you don't use the same amount every month. So over time you'll build up a credit or debit, and if that gets too large they'll adjust your payments. (I'm not actually sure if they'll let you build up a debit.)
 
-  2. Quarterly, where every quarter you pay for the electricity you used in the last quarter.
+    2. Quarterly, where every quarter you pay for the electricity you used in the last quarter.
 
-  3. Prepaid, where you have to pay for the electricity you use before you use it.
+    3. Prepaid, where you have to pay for the electricity you use before you use it.
 
-  (1) is substantially cheper than (2), which is marginally cheaper than (3). But (1) and (2) are only available if the electric company trusts you to pay for electricity you've already used.
+    (1) is substantially cheper than (2), which is marginally cheaper than (3). But (1) and (2) are only available if the electric company trusts you to pay for electricity you've already used.
 
-  Why these price differences? I don't know. If I had to guess: I think the way prepaid meters work is you go to a shop and buy a physical object representing a certain amount of electricity and present that physical object to your electric meter. That probably has higher transaction costs than direct debit or quarterly bank transfers. And direct debit sometimes involves you lending them money, so they'll pay you for that; and I expect it's more reliable from their perspective than quarterly payments.
+    Why these price differences? I don't know. If I had to guess: I think the way prepaid meters work is you go to a shop and buy a physical object representing a certain amount of electricity and present that physical object to your electric meter. That probably has higher transaction costs than direct debit or quarterly bank transfers. And direct debit sometimes involves you lending them money, so they'll pay you for that; and I expect it's more reliable from their perspective than quarterly payments.
 
 Wikipedia:
 
@@ -134,9 +134,7 @@ Wikipedia:
 
 > In an article titled "The Price of Poverty" published in Tribune Magazine in 2022, the theory was cited as explaining the economic predicament in the United Kingdom. Examples provided included the higher cost of renting compared to home ownership, higher interest rates for loans to impoverished people, the effects of food poverty on educational advancement, and healthcare costs.[10]
 
-Tribune, (The Price of Poverty)(https://tribunemag.co.uk/2022/06/inflation-prices-cost-of-living-crisis-energy-food-housing)
-
-This one doesn't give the original quote at all, describing boots theory in its own words:
+Tribune, [The Price of Poverty](https://tribunemag.co.uk/2022/06/inflation-prices-cost-of-living-crisis-energy-food-housing). This one doesn't give the original quote at all, describing boots theory in its own words:
 
 > This obvious injustice—subsidies for businesses, cost hikes for workers—is only one example of the reality spread across our economic system: that being in poverty is much more expensive than being rich.
 >
@@ -150,25 +148,25 @@ This one doesn't give the original quote at all, describing boots theory in its 
 
 Here are the examples the article gives:
 
-* > subsidies for businesses, cost hikes for workers
+> subsidies for businesses, cost hikes for workers
 
-  Roughly speaking, I think the idea here is "rich people's cost of living is going down and poor people's is going up". But that's talking about acceleration, not velocity.
+Roughly speaking, I think the idea here is "rich people's cost of living is going down and poor people's is going up". But that's talking about acceleration, not velocity.
 
-* > Housing costs for private tenants have jumped by nearly 50% above the general rate of inflation in the last 25 years. House prices have also soared, but home ownership remains, often, the cheaper option.
+> Housing costs for private tenants have jumped by nearly 50% above the general rate of inflation in the last 25 years. House prices have also soared, but home ownership remains, often, the cheaper option.
 
-  So this is "spending more money up front is cheaper in the long term". (Note: costs of home ownership here do take into account "interest lost by paying a deposit rather than saving.")
+So this is "spending more money up front is cheaper in the long term". (Note: costs of home ownership here do take into account "interest lost by paying a deposit rather than saving.")
 
-* > Borrowing costs are also much higher for poor people because they are seen by lenders as higher risk, meaning they pay more interest on debt like overdrafts and credit cards.
+> Borrowing costs are also much higher for poor people because they are seen by lenders as higher risk, meaning they pay more interest on debt like overdrafts and credit cards.
 
-  "Poor people get less favorable terms when borrowing money."
+"Poor people get less favorable terms when borrowing money."
 
-* > In 2021, a study by the Food Foundation found that the poorest fifth of British society would need to spend 40% of their income to reach the government’s healthy eating guidelines. The chronic malnutrition caused by poverty has long-term costs, both to individuals and to society as a whole.
+> In 2021, a study by the Food Foundation found that the poorest fifth of British society would need to spend 40% of their income to reach the government’s healthy eating guidelines. The chronic malnutrition caused by poverty has long-term costs, both to individuals and to society as a whole.
 
-  "Poor people don't get enough food, and that causes them long term problems."
+"Poor people don't get enough food, and that causes them long term problems."
 
-* > A 2016 study by the Joseph Rowntree Foundation found that healthcare spending accounted for the largest portion of additional spending associated with poverty, at £29 billion. ... The British Medical Journal has warned that unless the government acts to address the Cost of Living crisis, poverty, and therefore health inequalities and the costs associated with treating and managing them, will increase.
+> A 2016 study by the Joseph Rowntree Foundation found that healthcare spending accounted for the largest portion of additional spending associated with poverty, at £29 billion. ... The British Medical Journal has warned that unless the government acts to address the Cost of Living crisis, poverty, and therefore health inequalities and the costs associated with treating and managing them, will increase.
 
-  "Poor people are less healthy, and more expensive for the government to provide healthcare to."
+"Poor people are less healthy, and more expensive for the government to provide healthcare to."
 
 ---
 
@@ -188,6 +186,8 @@ Other than those, here are some things that citations relate to boots theory:
 * Costs of living are going down for rich people and up for poor people.
 * Poor people don't get enough food, and that causes them long term problems.
 * Poor people are less healthy, and more expensive for the government to provide healthcare to.
+
+...and for some of these, Wikipedia even includes them inline. You don't need to click through to the citations to realize that multiple different concepts are getting confused.
 
 (Someone in the [talk page](https://en.wikipedia.org/w/index.php?title=Talk:Boots_theory&oldid=1279789206) has noticed the same thing: "The instances listed here aren't really examples of the same mechanism.")
 
