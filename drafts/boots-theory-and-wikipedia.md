@@ -96,7 +96,7 @@ Wikipedia:
 
 > In 2013, an article by the US ConsumerAffairs made reference to the theory in regard to purchasing items on credit, specifically regarding children's boots from the retailer Fingerhut; a \\$25 pair of boots, at the interest rates being offered, would cost \\$37 if purchased over seven months.[7]
 
-This seems to switch the idea from "in the long run, repeatedly buying cheap things costs more than buying expensive things" to "buying things with money you don't have yet costs more than buying things with money you do have yet". Or, "people won't typically lend you money for free".
+This seems to switch the idea from "in the long run, repeatedly buying cheap things costs more than buying expensive things" to "buying things with money you don't hand over yet costs more than buying things with money you hand over immediately". Or, "people won't typically lend you money for free".
 
 The article (ConsumerAffairs, [Fingerhut boots and the Vimes' Boots paradox](https://web.archive.org/web/20220208213650/https://www.consumeraffairs.com/news/fingerhut-boots-and-the-vimes-boots-paradox-111413.html)) even notices this leap. ("though we haven't tested this ourselves, we're sure that Carrini boots or Reebok sneakers bought from Fingerhut are just as good as Carrini or Reebok items bought elsewhere.)
 
@@ -194,8 +194,8 @@ Other than those, here are some things that citations relate to boots theory:
 
 * You can spend more money now to spend less money in total. (More general than Wikipedia's definition.)
 * Being poor is more expensive than being rich. (More general again.)
-* Buying things with money you don't have yet costs more than buying things with money you do have yet.
-* Sometimes, if you have money, people will lend you money for free.
+* Buying things with money you don't hand over yet costs more than buying things with money you hand over immediately.
+* Except that sometimes it costs less.
 * Poor people get less favorable terms when borrowing money.
 * Costs of living are going down for rich people and up for poor people.
 * Poor people don't get enough food, and that causes them long term problems.
