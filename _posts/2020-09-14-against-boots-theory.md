@@ -81,3 +81,5 @@ And relatedly: if we want to help people escape poverty, we need to know on what
 I advise that if you talk about boots theory, you make it clear which level you're talking about. But maybe don't use that name at all. If you're talking about level one, the name "ghetto tax" seems fine. If you do want to talk about levels two or three, I don't have a good altiernative name to suggest. But since I don't think those levels are true, I'm not sure that's a big problem.
 
 **Update 18 Mar 2025:** This post has a followup, [Boots theory and Sybil Ramkin](//reasonableapproximation.net/2025/03/18/boots-theory-and-sybil-ramkin.html).
+
+**Update 1 Aug 2025:** And another followup, [Boots theory and Wikipedia](//reasonableapproximation.net/2025/08/01/boots-theory-and-wikipedia.html).
