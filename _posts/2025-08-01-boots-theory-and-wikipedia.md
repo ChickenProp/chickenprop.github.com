@@ -1,6 +1,7 @@
 ---
 title: Boots theory and Wikipedia
-layout: draft
+layout: post
+lw_xpost: true
 ---
 I've [previously complained](https://reasonableapproximation.net/2020/09/14/against-boots-theory.html) about how people often repeat a quote that starts with
 
@@ -112,7 +113,7 @@ Dorset Eye, [Mike Deverell discusses five reasons why those with less end up pay
 
 Welp, uh, this is kind of a case where people *will* lend you money for free, if you have money.[^electric-payments] It fits a broad "being poor is expensive" narrative, but it's not a case where rich people buy a more expensive thing up front to save money in the long run.
 
-Other than fuel poverty, the article gives four more reasons "why it's so difficult to climb out of the poverty trap": VAT, other taxes, food poverty and austerity. None seem to have any relation to boots theory.
+Other than fuel poverty, the article gives four more reasons "why it's so difficult to climb out of the poverty trap": VAT, other taxes, food poverty and austerity. None seem to have any relation to boots theory. The article doesn't explicitly say they're examples of it, and Wikipedia doesn't mention them, so I'll leave them out.
 
 We get the original quote, starting with "the reason that the rich were so rich".
 
@@ -170,7 +171,9 @@ Roughly speaking, I think the idea here is "rich people's cost of living is goin
 
 > Housing costs for private tenants have jumped by nearly 50% above the general rate of inflation in the last 25 years. House prices have also soared, but home ownership remains, often, the cheaper option.
 
-So this is "spending more money up front is cheaper in the long term". (Note: costs of home ownership here do take into account "interest lost by paying a deposit rather than saving.")
+So this is "spending more money up front is cheaper in the long term". You can even *kind of* make it fit the original definition: when you rent, you repeatedly purchase "the right to live in this place for the next month", but when you buy, you purchase that right once and keep it indefinitely. And the rights you purchase when you rent are typically worse than the rights you purchase when you buy (e.g. more restrictive about pets, or decoration, or interior layout).
+
+(Note: costs of home ownership here do take into account "interest lost by paying a deposit rather than saving.")
 
 > Borrowing costs are also much higher for poor people because they are seen by lenders as higher risk, meaning they pay more interest on debt like overdrafts and credit cards.
 
@@ -190,7 +193,7 @@ Remember that Wikipedia's definition is
 
 > The **Sam Vimes theory of socioeconomic unfairness**, often called simply the **boots theory**, is an economic theory that people in poverty have to buy cheap and subpar products that need to be replaced repeatedly, proving more expensive in the long run than more expensive items.
 
-Of the citations, it seems like two back this up? One with an example about ski pants, and one with an example about t-shirts.
+Of the citations, it seems like three back this up? One with an example about ski pants, one with an example about t-shirts, and one talking about home ownership versus renting.
 
 Other than those, here are some things that citations relate to boots theory:
 
