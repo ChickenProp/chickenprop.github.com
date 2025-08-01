@@ -108,15 +108,17 @@ Wikipedia:
 
 > In 2016, the left-wing blog Dorset Eye also ran an article discussing the theory, giving fuel poverty in the United Kingdom as an example of its application, citing a 2014 Office for National Statistics (ONS) report that those who pre-paid for electricity—who were most likely to be subject to fuel poverty—paid 8% more on their electricity bills than those who paid by direct debit.[8]
 
-Welp, uh, this is kind of a case where people *will* lend you money for free, if you have money.[^electric-payments] It fits a broad "being poor is expensive" narrative, but it's not a case where rich people buy a more expensive thing up front to save money in the long run. Quite the opposite!
+Dorset Eye, [Mike Deverell discusses five reasons why those with less end up paying more](https://dorseteye.com/mike-deverell-discusses-five-reasons-why-those-with-less-end-up-paying-more/).
 
-Other than fuel poverty, the article gives four more reasons "why it’s so difficult to climb out of the poverty trap": VAT, other taxes, food poverty and austerity. None seem to have any relation to boots theory.
+Welp, uh, this is kind of a case where people *will* lend you money for free, if you have money.[^electric-payments] It fits a broad "being poor is expensive" narrative, but it's not a case where rich people buy a more expensive thing up front to save money in the long run.
+
+Other than fuel poverty, the article gives four more reasons "why it's so difficult to climb out of the poverty trap": VAT, other taxes, food poverty and austerity. None seem to have any relation to boots theory.
 
 We get the original quote, starting with "the reason that the rich were so rich".
 
 [^electric-payments]: I'm not sure I fully understand what's going on here, but I think roughly speaking, there are three ways to pay for electricity and gas.
 
-    1. Direct debit, where you pay a fixed amount each month. They'll try to calculate it so you pay the same amount every month, even though you don't use the same amount every month. So over time you'll build up a credit or debit, and if that gets too large they'll adjust your payments. (I'm not actually sure if they'll let you build up a debit.)
+    1. Direct debit, where you pay a fixed amount each month. They'll try to calculate it so you pay the same amount every month, even though you don't use the same amount every month. So over time you'll build up a credit or debit, and if that gets too large they'll adjust your payments.
 
     2. Quarterly, where every quarter you pay for the electricity you used in the last quarter.
 
