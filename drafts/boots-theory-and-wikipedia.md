@@ -22,11 +22,13 @@ Come to think of it, this is actually a stronger claim than what I called level 
 
 So that's what Wikipedia says "boots theory" refers to. Let's follow its citations and see why Wikipedia says that.
 
+---
+
 Wikipedia:
 
 > In the Discworld series of novels by Terry Pratchett, Sam Vimes is the captain of the City Watch of the fictional city-state of Ankh-Morpork.[1][2]
 
-This doesn't talk about boots theory at all, but let's follow the citations anyway.
+This doesn't talk about boots theory at all, but following the citations anyway:
 
 [1] is The Guardian, [Terry Pratchett estate backs Jack Monroe's idea for 'Vimes Boots' poverty index](https://web.archive.org/web/20220329192126/https://www.theguardian.com/books/2022/jan/26/terry-pratchett-jack-monroe-vimes-boots-poverty-index). This is an article about someone named Jack Monroe creating a price index, intended as an alternative to CPI, and naming it the "Vimes Boots Index".
 
@@ -48,6 +50,8 @@ Note, there's an important calculation that he skips. If he'd *invested* \\$300 
 
 Anyway. This article does back the cited claim (albeit without using the phrase "City Watch"). On the subject of boots theory, it includes the original quote (starting, as usual, with "the reason that the rich were so rich") and doesn't take it any further than "you can spend more money now to spend less money in total". The example it gives matches Wikipedia's definition of boots theory.
 
+---
+
 Back to Wikipedia:
 
 > In the 1993 novel Men at Arms, the second novel focusing on the City Watch through Vimes' perspective, Vimes muses on how expensive it is to be poor:[2][3]
@@ -57,6 +61,8 @@ We just discussed [2]. [3] is Gizmodo, [*Discworld*'s Famous 'Boots Theory' Is P
 > Monroe drew parallels to the famous passage's explanation to how low-income families in the UK have seen supermarkets either noticeably increase prices on "budget" lines of basic food and goods (an example Monroe used cited an over 300% increase on a bag of rice at one store in the last year, while cutting the amount of rice in the bag in half) as the country faces the continuing economic effects of Brexit, the covid-19 pandemic, and general supply chain issues. With these lines, aimed at low-income households, either pricing up or being replaced with more expensive store-brand ranges, struggling families are being forced to turn to charities and food banks to sustain themselves, reckoning with over a decade of cuts to social support programs by Britain's series of Conservative governments, including Boris Johnson's current cabinet, itself rather busy right now trying to hide a long string of embarrassing, potentially illegal social gatherings by the Prime Minister during covid-19 lockdowns.
 
 ...except that I don't see much connection. But boy, impressive segue in that second sentence.
+
+---
 
 Wikipedia now gives the original quote, starting as usual with "the reason that the rich were so rich". This is citation 4, pointing at *Men at Arms*. Then:
 
@@ -70,6 +76,8 @@ On the subject of boots theory, we get the original quote, refreshingly *not* st
 
 (That sounds a lot like "poor people spend more money than rich people", but they're not quite the same. If I say "owning an Aston Martin is more expensive than owning a Ford", you probably assume that the cost of driving, maintaining and insuring a Martin in some minimal adequate condition is higher than doing that for a Ford. But some people will voluntarily spend more than the minimum, and some Ford owners will spend more on their cars than some Martin owners; and Ford owners may well spend more than Martin owners on non-car stuff. So it would be coherent to say something like: "being poor is more expensive than being rich, in the sense that poor people are forced to spend more money on daily living activities. But rich people typically spend more than they're forced to, and more than poor people overall, on daily living activities and other stuff." I'm not sure if I've previously realized this distinction.)
 
+---
+
 Wikipedia:
 
 > In the book *Fashion in the Fairy Tale Tradition*, Rebecca-Anne C. Do Rozario argued "shoes and economic autonomy are inexorably linked" in fairy tales, citing the Boots theory as "particularly relevant" and "an insightful metaphor for inequality".[6]
@@ -82,6 +90,8 @@ This might be the shortest extract of the quote I've seen yet.
 
 ("Particularly relevant" seems to come from a footnote on page 213. I can locate it through search but there's no preview available for the page.)
 
+---
+
 Wikipedia:
 
 > In 2013, an article by the US ConsumerAffairs made reference to the theory in regard to purchasing items on credit, specifically regarding children's boots from the retailer Fingerhut; a \\$25 pair of boots, at the interest rates being offered, would cost \\$37 if purchased over seven months.[7]
@@ -91,6 +101,8 @@ This seems to switch the idea from "in the long run, repeatedly buying cheap thi
 The article (ConsumerAffairs, [Fingerhut boots and the Vimes' Boots paradox](https://web.archive.org/web/20220208213650/https://www.consumeraffairs.com/news/fingerhut-boots-and-the-vimes-boots-paradox-111413.html)) even notices this leap. ("though we haven't tested this ourselves, we're sure that Carrini boots or Reebok sneakers bought from Fingerhut are just as good as Carrini or Reebok items bought elsewhere.)
 
 We're given the original quote, starting as usual with "the reason that the rich were so rich".
+
+---
 
 Wikipedia:
 
@@ -114,13 +126,13 @@ We get the original quote, starting with "the reason that the rich were so rich"
 
     Why these price differences? I don't know. If I had to guess: I think the way prepaid meters work is you go to a shop and buy a physical object representing a certain amount of electricity and present that physical object to your electric meter. That probably has higher transaction costs than direct debit or quarterly bank transfers. And direct debit sometimes involves you lending them money, so they'll pay you for that; and I expect it's more reliable from their perspective than quarterly payments.
 
+---
+
 Wikipedia:
 
 > In a 2020 discussion paper for the Social and Political Research Foundation, Sitara Srinivas used the theory to analyze how sustainable fashion is inaccessible compared to fast fashion.[9]
 
-[Stitching a new narrative: engaging wiih sustainability in the fashion industry](https://sprf.in/wp-content/uploads/2021/01/Sustainability-and-Fast-Fashion.pdf)
-
-The relevant part is:
+[Stitching a new narrative: engaging with sustainability in the fashion industry](https://sprf.in/wp-content/uploads/2021/01/Sustainability-and-Fast-Fashion.pdf). The relevant part is:
 
 > Because of the higher pay to workers and quality of materials used, sustainable fashion usually is more expensive. As previously stated, a fast fashion brand white t-shirt costs on average Rs 824. A sustainably produced t-shirt on the other hand costs on average Rs 4825[4]. For the average working or middle class consumer, who may not have the money to invest in a piece of quality clothing that will last long, but also at the same time has the aspiration to dress fashionably, sustainable fashion then becomes an unachievable goal.
 >
@@ -129,6 +141,8 @@ The relevant part is:
 Followed by the original quote, starting as usual with "the reason that the rich were so rich".
 
 So this broadly matches Wikipedia's description of the term. It doesn't come right out and say "buying the expensive t-shirt is cheaper in the long run". But it's at least hinting in that direction.
+
+---
 
 Wikipedia:
 
