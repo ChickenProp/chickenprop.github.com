@@ -1,6 +1,7 @@
 ---
 title: Zendo for large groups
-layout: draft
+layout: post
+lw_xpost: true
 ---
 I'm a big fan of the game [Zendo](https://en.wikipedia.org/wiki/Zendo_%28game%29). But I don't think it suits large groups very well. The more other players there are, the more time you spend sitting around; and you may well get only one turn. I also think a game tends to take longer with more players.
 
