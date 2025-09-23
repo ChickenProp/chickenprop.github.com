@@ -2,5 +2,10 @@ name: A Reasonable Approximation
 description: philh's blog
 url: http://reasonableapproximation.net
 
+# Unsure if this is helpful. But I published a post soon after midnight and it
+# didn't show up. Possibly the server was still the day before. This might
+# cause posts in the future to be published.
+future: true
+
 kramdown:
   smart_quotes: ['apos', 'apos', 'quot', 'quot']
