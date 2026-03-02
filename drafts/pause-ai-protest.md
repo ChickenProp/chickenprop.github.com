@@ -6,7 +6,7 @@ On Saturday I attended my first ever [protest](https://luma.com/o0p4htmk). It wa
 
 To be clear about where I stand: I believe that AI labs are worryingly close to developing superintelligence. I won't be shocked if it happens in the next five years, and I'd be surprised if it takes fifty years at current trajectories. I believe that if they get there, [everyone will die](https://ifanyonebuildsit.com/). I want these labs to stop trying to make LLMs smarter.
 
-But other than that, Mrs. Lincoln, I'm pretty bullish on AI progress. I'm aware that people have a lot of non-existential concerns about it. Some of those concerns are frankly dumb (water use)[^opinions], but others are worth taking seriously (deepfakes, job loss). Overall I think it'll be good for the human race.
+But other than that, Mrs. Lincoln, I'm pretty bullish on AI progress. I'm aware that people have a lot of non-existential concerns about it. Some of those concerns are dumb (water use)[^opinions], but others are worth taking seriously (deepfakes, job loss). Overall I think it'll be good for the human race.
 
 [^opinions]: In this piece I'm sharing my opinions, but I'm not trying to explain why I hold them and I'm not trying to convince anyone of them. I'm not carefully differentiating between opinions I hold confidently and opinions I'm less sure about.
 
@@ -32,11 +32,11 @@ How did it turn into this? I don't have much sense of whether the attendees were
 
 Should I hold my nose and join in anyway? I think it's important for different groups to be able to ally on points of common interest, even if they have deep enduring disagreements. But this didn't particularly feel like the other group was cooperating with me on that. And I'm not really a fan of uncomplicatedly supporting the lesser evil, even if the stakes are high. I don't know how to thread the needle between "Northern Conservative Baptist Great Lakes Region Council of 1912? Die, heretic!" and "I don't *like* this pitchfork mob, but no one else is on my side". But I don't think I want to thread it here.
 
-I could imagine myself feeling pretty differently about the whole thing in retrospect depending on the news coverage. If journalists cover this as being about extinction, then maybe I'll think it was a good thing. If they cover it as being about Billionaire Tech CEOs Bad (which I think it mostly was despite the stated purpose), I'll be kinda sad that I gave it a +1 with my presence. What I've seen so far: [SWLondoner](https://www.swlondoner.co.uk/news/27022026-pressing-pause-on-ai-london-activists-to-march-in-largest-ai-safety-protest-yet) is surprisingly positive, [MIT Technology Review](https://www.technologyreview.com/2026/03/02/1133814/i-checked-out-londons-biggest-ever-anti-ai-protest/) is mixed.
+I could imagine myself feeling pretty differently about the whole thing in retrospect depending on the news coverage. If journalists cover this as being about extinction, then maybe I'll feel better about having attended. If they cover it as being about Billionaire Tech CEOs Bad (which I think it mostly was despite the stated purpose), I'll be kinda sad that I gave it a +1 with my presence. What I've seen so far: [SWLondoner](https://www.swlondoner.co.uk/news/27022026-pressing-pause-on-ai-london-activists-to-march-in-largest-ai-safety-protest-yet) is surprisingly positive, [MIT Technology Review](https://www.technologyreview.com/2026/03/02/1133814/i-checked-out-londons-biggest-ever-anti-ai-protest/) is mixed.
 
 I still feel broadly positive about PauseAI.[^engagement] I don't think they acted poorly here. I might go to another protest that they organize. But probably not if they jointly organize it with some other group I dislike.
 
-[^engagement]: I haven't had much engagement with them as a group apart from this protest. I've met and liked Joseph, the UK director. And I consider Matilda, the UK deputy director, a friend. I ran this by her before publishing.
+[^engagement]: I haven't had much engagement with them as a group apart from this protest. I've met and liked Joseph, the UK director. And I consider Matilda, the UK deputy director, a friend. I shared this with her before publishing.
 
 My feelings about the chants I remember:
 
@@ -49,7 +49,7 @@ My feelings about the chants I remember:
 
 ---
 
-Occasionally there would be a call-and-response like, "do we want (bad thing) to happen? *NO!* Are we gonna stop it? *YES!*" I don't remember if I chimed in on the predictive claims about the future. I felt kinda conflicted about it if I did. I know we weren't really being asked to make snap predictive judgements about the future and all come to the same answer and yell it out simultaneously, and I don't think anyone's going to hold it against my Brier score if we fail to stop (bad thing), but... I dunno. Autism. I endorse protest organizers continuing to use these calls-and-response until someone comes up with some better technology to do the thing they do.
+Occasionally there would be a call-and-response like, "do we want Bad Thing to happen? *NO!* Are we gonna stop it? *YES!*" I don't remember if I chimed in on the predictive claims about the future. I felt kinda conflicted about it if I did. I know we weren't really being asked to make snap predictive judgements about the future and all come to the same answer and yell it out simultaneously, and I don't think anyone's going to hold it against my Brier score if we fail to stop Bad Thing, but... I dunno. Autism. I endorse protest organizers continuing to use these calls-and-response until someone comes up with some better technology to do the thing they do.
 
 At one point a few people crossed through the walking line, and one of them said "we're not counter-protesters, we're just crossing". I thought that was mildly funny and mildly confusing, because why would we have thought they were counterprotesters? A few moments later one of them said "they didn't find that funny" in a tone that sounded to me like they thought we were offended.
 
@@ -57,7 +57,7 @@ At one point a few people crossed through the walking line, and one of them said
 
 After the protest was a [people's assembly](https://en.wikipedia.org/wiki/Popular_assembly). I think this bit was fully organized by Pull the Plug, and it's not the public facing bit of the event, so it's worth talking about separately from the protest.
 
-The format of this event was that people sat in small groups around a dozen or so tables, and had a facilitated conversation about "what are our concerns about AI" and "what do we think should be done about it". Then each table picked someone to summarize our conversation for the room, some of whom noticed that no one was giving them "round it up please" hand gestures and took advantage of this fact. Finally someone summarized all those summaries.
+The format of this part was that people sat in small groups around a dozen or so tables, and had a facilitated conversation about "what are our concerns about AI" and "what do we think should be done about it". Then each table picked someone to summarize our conversation for the room, some of whom noticed that no one was giving them "round it up please" hand gestures and took advantage of this fact. Finally someone summarized all those summaries.
 
 The conversation at my table was pretty fine. Three of us were mostly worried about extinction, three were mostly worried about other things. In summary, extinction was the first thing mentioned out of a long list of things. (But it's not like I volunteered to summarize. And if I had done it, I would have felt like a dick giving extinction as much weight in summary as the rest combined, even if I think that was about about representative for the table.)
 
@@ -73,4 +73,4 @@ I feel like I come across pretty snarky and conceited in this. I'm not gonna say
 
 I do think this is kind of out of distribution for my writing, and not how I want to usually write. But if I tried to write something more measured here, I think it would be less honest and I probably would never publish.
 
-But also, this piece more than most of what I write is *about* me. I could say "I can see why you'd be tempted to chant *techbros, back in the basement*, but I'm not a fan because...". But I think it's more important, here, to say that my reaction to it is "fuck you, assholes". If protest organizers want people like me to feel good about attending protests, they should know that that's my reaction to that chant.
+But also, this piece more than most of what I write is *about* me. I could say "I can see why you'd be tempted to chant *CEOS, back in the basement! Techbros, back in the basement!*, but I'm not a fan because...". But I think it's more important, here, to say that my reaction to it is "fuck you, assholes". If protest organizers want people like me to feel good about attending protests, they should know that that's my reaction to that chant.
