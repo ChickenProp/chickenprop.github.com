@@ -59,7 +59,7 @@ After the protest was a [people's assembly](https://en.wikipedia.org/wiki/Popula
 
 The format of this part was that people sat in small groups around a dozen or so tables, and had a facilitated conversation about "what are our concerns about AI" and "what do we think should be done about it". Then each table picked someone to summarize our conversation for the room, some of whom noticed that no one was giving them "round it up please" hand gestures and took advantage of this fact. Finally someone summarized all those summaries.
 
-The conversation at my table was pretty fine. Three of us were mostly worried about extinction, three were mostly worried about other things. In summary, extinction was the first thing mentioned out of a long list of things. (But it's not like I volunteered to summarize. And if I had done it, I would have felt like a dick giving extinction as much weight in summary as the rest combined, even if I think that was about about representative for the table.)
+The conversation at my table was pretty fine. Three of us were mostly worried about extinction, three were mostly worried about other things. In summary, extinction was the first thing mentioned out of a long list of things. (But it's not like I volunteered to summarize. And if I had done it, I would have felt like a dick giving extinction as much weight in summary as the rest combined, even if I think that was about representative for the table.)
 
 Another table reported that the thing they could all agree on was, you know those annoying buttons like WhatsApp has where you can talk to an AI? They all agreed that people should be able to hide those buttons.
 
