@@ -1,8 +1,10 @@
 ---
 title: Thoughts on the Pause AI protest
-layout: draft
+layout: post
+lw_xpost: true
+tags: [practical]
 ---
-On Saturday I attended my first ever [protest](https://luma.com/o0p4htmk). It was jointly organized by [PauseAI](https://pauseai.uk/), [Pull the Plug](https://pulltheplug.uk/) and a handful of other groups I forget. I have mixed feelings about it.
+On Saturday (Feb 28, 2026) I attended my first ever [protest](https://luma.com/o0p4htmk). It was jointly organized by [PauseAI](https://pauseai.uk/), [Pull the Plug](https://pulltheplug.uk/) and a handful of other groups I forget. I have mixed feelings about it.
 
 To be clear about where I stand: I believe that AI labs are worryingly close to developing superintelligence. I won't be shocked if it happens in the next five years, and I'd be surprised if it takes fifty years at current trajectories. I believe that if they get there, [everyone will die](https://ifanyonebuildsit.com/). I want these labs to stop trying to make LLMs smarter.
 
