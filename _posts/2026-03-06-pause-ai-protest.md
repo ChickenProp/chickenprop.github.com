@@ -2,7 +2,7 @@
 title: Thoughts on the Pause AI protest
 layout: post
 lw_xpost: true
-tags: [practical]
+tags: [culture]
 ---
 On Saturday (Feb 28, 2026) I attended my first ever [protest](https://luma.com/o0p4htmk). It was jointly organized by [PauseAI](https://pauseai.uk/), [Pull the Plug](https://pulltheplug.uk/) and a handful of other groups I forget. I have mixed feelings about it.
 
