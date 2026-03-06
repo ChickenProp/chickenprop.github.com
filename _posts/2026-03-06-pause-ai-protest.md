@@ -3,6 +3,9 @@ title: Thoughts on the Pause AI protest
 layout: post
 lw_xpost: true
 tags: [culture]
+external_comments:
+  - name: LessWrong
+    url: https://www.lesswrong.com/posts/z4jikoM4rnfB8fuKW/thoughts-on-the-pause-ai-protest
 ---
 On Saturday (Feb 28, 2026) I attended my first ever [protest](https://luma.com/o0p4htmk). It was jointly organized by [PauseAI](https://pauseai.uk/), [Pull the Plug](https://pulltheplug.uk/) and a handful of other groups I forget. I have mixed feelings about it.
 
@@ -46,6 +49,7 @@ My feelings about the chants I remember:
 * "Pause AI! 'Cause we don't wanna die!" Even better.
 * "Pull the plug! Pull the plug!" Eh. I'd think this was okay, less good than "pause AI" because it's less specific, but fine. But it's the name of a group that by this time I thought was kinda dumb, and I didn't want to promote that group, so I didn't join in this chant.
 * "Stop the slop! Stop the slop!" Nah, slop is not what I'm worried about.
+* "Whose streets? *Our streets!* Whose tech? *Our tech!* Whose future? *Our future!*" I don't know why you're bringing the streets into this / I think I subscribe to a different theory of property ownership than you / okay fine I guess. (But I still didn't join in on the "our future" because I was distracted by the other parts.)
 * "CEOs, back in the basement! Techbros, back in the basement!" Fuck you, assholes.
 * "[Unintelligible - freedom?] for humans! Not for clankers!" Admittedly this was only one guy, but he shouted it a few times. My snap judgment of this guy... look, I don't think this sort of snap judgment is super reliable, and talking this kind of shit about randos (even anonymous ones) feels like not something I want to lean into. But I also want to talk about my experience of this protest, and snap judgments I made during it are part of that, so here goes. My snap judgment of this guy is some combination of: "if LLMs start walking around in robot bodies, he'll happily take a baseball bat to them" / "he's probably an okay guy as long as he isn't required to treat any member of a group he doesn't like as a moral patient".
 
