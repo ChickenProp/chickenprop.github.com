@@ -1,6 +1,7 @@
 ---
 title: Sabbatical
-layout: draft
+layout: post
+lw_xpost: false
 ---
 About a month ago I left my job. I plan to take the next six months (until December) as a sabbatical.
 
