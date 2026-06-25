@@ -30,7 +30,7 @@ anyway[^yak]. It got merged in April 2026, so about a year and a half after I
 started.
 
 [^yak]: I haven't tried making UndecidableInstances per-instance. This yak is
-not yet shaved.
+    not yet shaved.
 
 This is how it went. I didn't start writing until January 2026, and I got
 distracted and didn't finish writing until June 2026, so there's gonna be a
@@ -92,19 +92,19 @@ to parse modifiers on expressions, I had a hell of a time figuring out what to
 edit, and it turned out my implementation sucked.
 
 [^parser-specs]: The three I'm thinking of are the GHC source code itself, which
-is not very readable; the [Haskell 2010 language
-report](https://www.haskell.org/onlinereport/haskell2010/haskellch10.html),
-which is wildly out of date; and "piece together descriptions of the spec from
-proposals, and from how the proposals propose to change it", which is neither
-readable nor up-to-date. It would be nice to have dedicated documentation for
-"this is the syntax GHC accepts, including how it varies depending on language
-extensions".
+    is not very readable; the [Haskell 2010 language
+    report](https://www.haskell.org/onlinereport/haskell2010/haskellch10.html),
+    which is wildly out of date; and "piece together descriptions of the spec
+    from proposals, and from how the proposals propose to change it", which is
+    neither readable nor up-to-date. It would be nice to have dedicated
+    documentation for "this is the syntax GHC accepts, including how it varies
+    depending on language extensions".
 
 [^parser-docs]: In general, the GHC source code seems *very* well documented.
-And bits of the parser have great documentation. But "what does this production
-rule accept and why does it exist in the first place" is often a mystery. To be
-fair my sense is that this would be very hard to do well. The documentation of
-shift/reduce conflicts could probably be improved though.
+    And bits of the parser have great documentation. But "what does this
+    production rule accept and why does it exist in the first place" is often a
+    mystery. To be fair my sense is that this would be very hard to do well. The
+    documentation of shift/reduce conflicts could probably be improved though.
 
 Hadrian was kinda confusing. I had a lot of test failures on master until I
 figured out to pass `--test-way=normal`, but I don't think I ever figured out
@@ -128,7 +128,7 @@ shown in any way distinct from a simple "master has some commits your branch
 doesn't".
 
 [^pr]: GHC is hosted on gitlab, which calls them "merge requests" rather than
-"pull requests", but I'm sticking to calling them PRs here.
+    "pull requests", but I'm sticking to calling them PRs here.
 
 The thing I would have most liked to improve was getting intermediate feedback.
 I rarely-or-never got replies to "here's what I have so far, it would be nice to
@@ -165,12 +165,12 @@ patterns and expressions to parse how I'd expect, so I dropped them. Someone
 else can figure them out later if they want.
 
 [^pattern-decomposing]: Patterns have a lot in common with types and
-expressions, but there's an important difference here. A type `A b c` can be
-read as `(A b) c`, i.e. "the type `A`, with the type `b` applied to give the
-type `A b`, and then the type `c` applied to give the type `A b c`. Similar for
-expressions. That doesn't work with patterns: if `A b c` is a pattern, then `A`
-and `A b` are *not* patterns, and if you try to write `let (A b) c = ...` you
-get a parse error.
+    expressions, but there's an important difference here. A type `A b c` can be
+    read as `(A b) c`, i.e. "the type `A`, with the type `b` applied to give the
+    type `A b`, and then the type `c` applied to give the type `A b c`. Similar
+    for expressions. That doesn't work with patterns: if `A b c` is a pattern,
+    then `A` and `A b` are *not* patterns, and if you try to write `let (A b) c
+    = ...` you get a parse error.
 
 ### `head.hackage`
 
@@ -191,8 +191,8 @@ compile with both the existing compiler and your changes. In my case, I needed a
 patch to [`linear-generics`](https://hackage.haskell.org/package/linear-generics)[^linear-generics-pr]. Notes on how updating this went:
 
 [^linear-generics-pr]: It would have been polite of me to submit a PR to the
-`linear-generics` repository itself, in preparation for the new GHC version.
-Maybe I'll do that at some future point.
+    `linear-generics` repository itself, in preparation for the new GHC version.
+    Maybe I'll do that at some future point.
 
 - `./run-ci` seems to have two different relevant GHC versions. It compiles and
   runs some Haskell code to coordinate the main work, and it uses the `ghc` on
