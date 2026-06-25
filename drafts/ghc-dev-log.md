@@ -1,7 +1,8 @@
 ---
-title: Dev log: implementing new syntax in GHC
+title: "Dev log: implementing new syntax in GHC"
 layout: draft
 lw_xpost: true
+tags: [software]
 ---
 In September 2024, I started working on a patch to GHC.
 
