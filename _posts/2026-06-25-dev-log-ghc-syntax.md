@@ -1,6 +1,6 @@
 ---
 title: "Dev log: implementing new syntax in GHC"
-layout: draft
+layout: post
 lw_xpost: true
 tags: [software]
 ---
