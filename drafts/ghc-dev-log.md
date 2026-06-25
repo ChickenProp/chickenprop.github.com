@@ -1,6 +1,7 @@
 ---
-title: GHC dev log
+title: Dev log: implementing new syntax in GHC
 layout: draft
+lw_xpost: true
 ---
 In September 2024, I started working on a patch to GHC.
 
@@ -26,15 +27,21 @@ but with different syntax that doesn't yet exist".
 > could do that myself".
 
 Then a few months later I decided to try implementing the new syntax
-anyway[^yak]. It got merged in April 2026, so about a year and a half after I
-started.
+anyway[^yak]. I opened a
+[PR](https://gitlab.haskell.org/ghc/ghc/-/merge_requests/14781)[^pr] in
+September 2025, and it got merged in April 2026, so about a year and a half
+after I started. For most of that period I wasn't putting many hours into it.
 
 [^yak]: I haven't tried making UndecidableInstances per-instance. This yak is
     not yet shaved.
 
+[^pr]: GHC is hosted on gitlab, which calls them "merge requests" rather than
+    "pull requests", but I'm sticking to calling them PRs here.
+
 This is how it went. I didn't start writing until January 2026, and I got
 distracted and didn't finish writing until June 2026, so there's gonna be a
-bunch of detail missing or misremembered.
+bunch of detail missing or misremembered. There's no particular theme or
+narrative here, it just seemed like a useful kind of thing to have written down.
 
 ### ghc
 
@@ -122,17 +129,21 @@ again. Maybe I should have just stuck with `default` the whole time, I dunno
 how much difference it would have made to the iteration speed.
 
 I think the line "Merge request must be rebased, because a fast-forward merge is
-not possible" attached to the PR[^pr] is very misleading. Marge Bot can merge
-it, unless there are actual conflicts. I don't remember if actual conflicts are
-shown in any way distinct from a simple "master has some commits your branch
-doesn't".
-
-[^pr]: GHC is hosted on gitlab, which calls them "merge requests" rather than
-    "pull requests", but I'm sticking to calling them PRs here.
+not possible" that was attached to the PR while it was open was very misleading.
+[Marge Bot](https://gitlab.haskell.org/marge-bot) can merge it, unless there are
+actual conflicts. I don't remember if actual conflicts are shown in any way
+distinct from a simple "master has some commits your branch doesn't".
 
 The thing I would have most liked to improve was getting intermediate feedback.
 I rarely-or-never got replies to "here's what I have so far, it would be nice to
 get some preliminary thoughts on it". Of course, this doesn't scale.
+
+Similarly, there was a month where I had nothing to do but wait for comments;
+eventually I pinged @triagers and that got the ball rolling. Maybe I should just
+done that from the beginning, but I didn't want to seem pushy.
+
+When I did get a review, comments were generally helpful and pushed me to
+improve the code, especially documentation.
 
 Again, overall the experience of working on GHC was great.
 
@@ -149,12 +160,12 @@ about what you want or what's possible. But if you start by building it, it
 might turn out that other people don't want the thing you want.) So I had to
 submit a new proposal suggesting changes to the accepted one.
 
-I had this open in parallel with working on the PR. That was helpful
+I had this open in parallel with working on the code. That was helpful
 because I could update each based on progress in the other (comments on the
 proposal, or experience writing code). It would have been awkward if my patch
 proposal had been rejected, but I didn't think that was likely.
 
-Some questions from Simon Peyton-Jones (!!Simon Peyton Jones!!) made me drop
+Some questions from Simon Peyton Jones (!!Simon Peyton Jones!!) made me drop
 "modifiers attached to types and expressions" entirely, after already
 implementing them. The original proposal specified that `%a C x` would attach
 the modifier to `C` in both types and expressions, and that was what my "make
@@ -172,6 +183,11 @@ else can figure them out later if they want.
     then `A` and `A b` are *not* patterns, and if you try to write `let (A b) c
     = ...` you get a parse error.
 
+I opened the PR here in November 2024, and got some useful feedback. Then it
+languished for a bit until September 2025, after I opened the PR against GHC and
+asked for review. That got a bit more useful feedback, and then it was approved
+in December 2025.
+
 ### `head.hackage`
 
 When the PR on GHC was almost-ready-to-go, it was getting test failures in CI
@@ -188,7 +204,9 @@ GHC's solution to this is a repository named
 bunch of patches to existing code, and GHC CI tries to compile the patched
 packages. If you break something, you add a patch that allows the package to
 compile with both the existing compiler and your changes. In my case, I needed a
-patch to [`linear-generics`](https://hackage.haskell.org/package/linear-generics)[^linear-generics-pr]. Notes on how updating this went:
+[patch](https://gitlab.haskell.org/ghc/head.hackage/-/merge_requests/437) to
+[`linear-generics`](https://hackage.haskell.org/package/linear-generics)[^linear-generics-pr].
+Notes on how updating this went:
 
 [^linear-generics-pr]: It would have been polite of me to submit a PR to the
     `linear-generics` repository itself, in preparation for the new GHC version.
