@@ -3,6 +3,9 @@ title: "Dev log: implementing new syntax in GHC"
 layout: post
 lw_xpost: true
 tags: [software]
+external_comments:
+  - name: /r/haskell
+    url: https://www.reddit.com/r/haskell/comments/1ufkj7r/dev_log_implementing_new_syntax_in_ghc/
 ---
 In September 2024, I started working on a patch to GHC.
 
@@ -152,7 +155,7 @@ Again, overall the experience of working on GHC was great.
 
 Before you get a large user-facing change into GHC, you need to make a proposal
 for it. In my case, someone had already made the proposal, and it had been
-accepted.
+[accepted](https://github.com/ghc-proposals/ghc-proposals/blob/master/proposals/0370-modifiers.rst).
 
 Unfortunately, the accepted proposal was deficient in some ways. This is
 entirely unsurprising, and not a knock against the author. (If you decide what
