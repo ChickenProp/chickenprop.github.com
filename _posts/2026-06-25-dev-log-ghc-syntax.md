@@ -6,6 +6,8 @@ tags: [software]
 external_comments:
   - name: /r/haskell
     url: https://www.reddit.com/r/haskell/comments/1ufkj7r/dev_log_implementing_new_syntax_in_ghc/
+  - name: Haskell Discourse
+    url: https://discourse.haskell.org/t/dev-log-implementing-new-syntax-in-ghc/14319
 ---
 In September 2024, I started working on a patch to GHC.
 
