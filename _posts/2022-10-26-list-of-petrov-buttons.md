@@ -109,6 +109,19 @@ Joint event between the Waterloo, Ontario rationalist and EA groups. Jenn, the o
 > * afterwards we dug in.
 > * people did say that we probably should have given more opportunity for button presses after the presentation during more free social time, we'll do that if we run this ritual in future years
 
+### 2023, LessWrong: it's complicated
+
+[Retrospective](https://www.lesswrong.com/posts/c7uQLGrCBLjkbZhPq/petrov-day-retrospective-2023-re-the-most-important-virtue)
+
+### 2024, London: Success
+
+We had a party with a button. If someone pressed the button, they'd get some chocolate, but there'd be an unknown-but-increasing-every-time chance that the party would end. (The chance was later revealed to be initially 1/20, increasing by 1/20 (additively, so 2/20 then 3/20) each time.) No one pressed the button.
+
+### 2024, LessWrong: Success
+
+[Retrospective](https://www.lesswrong.com/posts/NsxFcB2EAxcY6cdGh/2024-petrov-day-retrospective)
+
+
 ### Things I'm not counting
 
 Here are some things that I don't think belong on the above list, but I do kind of expect someone to point me at them if I don't mention them.
