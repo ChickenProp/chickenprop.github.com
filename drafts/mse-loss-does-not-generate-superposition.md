@@ -216,10 +216,10 @@ In this encoding, each neuron simply represents a single feature. Since there ar
 
 So our estimates will be
 
-* $\hat{y}_i = y_i$, for the $D$ features that are represented;
-* $\hat{y}_i = 0$, for the $T-D$ other features.
+* $\hat{y}_i = y_i$, for the $D$ features that are represented;
+* $\hat{y}_i = 0$, for the $T-D$ other features.
 
-So all the loss is going to come from the unrepresented features. The number of unrepresented features is $T-D$ and the probability of a feature being activated is $z \over T$. The activated unrepresented features give loss $1$ and the nonactivated unrepresented features give loss $0$.
+So all the loss is going to come from the unrepresented features. The number of unrepresented features is $T-D$ and the probability of a feature being activated is $z \over T$. The activated unrepresented features give loss $1$ and the nonactivated unrepresented features give loss $0$.
 
 So ultimately,
 
@@ -227,9 +227,9 @@ $$ \mathrm{MSE}_\mathrm{1fpn} = {1 \over T} {z \over T}(T-D) = {z \over T}\left(
 
 We can probably slightly improve on this for $z > 1$. The current loss is good enough for this post, but details in footnote[^1fpn-improvement].
 
-[^1fpn-improvement]: First, note that if we allowed affine readouts, then our estimate for unrepresented features could be $\hat{y}_i = a$, for some constant $a$. We'd choose $a$ to trade off between "false positives" and "false negatives"; the optimal choice is $a = {z \over T}$, which gives $\mathrm{MSE}_\mathrm{1fpn} = z\left(1 - {D \over T}\right)\left(1 - {z \over T}\right)$.
+[^1fpn-improvement]: First, note that if we allowed affine readouts, then our estimate for unrepresented features could be $$\hat{y}_i = a$$, for some constant $a$. We'd choose $a$ to trade off between "false positives" and "false negatives"; the optimal choice is $$a = {z \over T}$$, which gives $$\mathrm{MSE}_\mathrm{1fpn} = z\left(1 - {D \over T}\right)\left(1 - {z \over T}\right)$$.
 
-    With linear readouts, we don't have that constant. But $\sum_{j=1}^D e_j$ is linear, and lies between $0$ and $z$. So we could set $\hat{y}_i = a'\sum_{j=1}^D e_j$, for some constant $a'$.
+    With linear readouts, we don't have that constant. But $$\sum_{j=1}^D e_j$$ is linear, and lies between $0$ and $z$. So we could set $$\hat{y}_i = a'\sum_{j=1}^D e_j$$, for some constant $a'$.
     
     This doesn't help for $z=1$. If $\sum_{j=1}^D e_j = 1$, then we know the active feature is represented, and we want to predict the unrepresented features as $0$; if it's $0$, then we know the active feature is unrepresented, but we have no way to predict the unrepresented features as anything except $0$.
     
@@ -257,7 +257,7 @@ $$ e_j = \sum_{i=1}^T R_{i,j}y_i $$
 
 $$ \hat{y}_i = a \sum_{j=1}^D R_{i,j}e_j $$
 
-So that $e_j$ is "the number of active features that this neuron represents" (and $\sum_{j=1}^D e_j = z$), and each $e_j$ is either $0$ or $1$).
+So that $e_j$ is "the number of active features that this neuron represents" (and $\sum_{j=1}^D e_j = z$), and each $e_j$ is either $0$ or $1$).
 
 Each $\hat{y}_i$ is either $0$ or $a$. We can split $\hat{y}$ into three parts:
 
@@ -340,7 +340,7 @@ $$v_2 = \textstyle{\left(-\frac{1}{2},\frac{\sqrt{3}}{2}\right)}$$
 
 $$v_3 = \textstyle{\left(-\frac{1}{2},-\frac{\sqrt{3}}{2}\right)}$$
 
-With $(v_i · v_j)_{i ≠ j} = - {1 \over 2}$. Using the embedding schema from before, if feature $j$ is activated then $\hat{y}_i = a(v_i · v_j)$, and so the active feature has loss $(1-a)^2$ and the two inactive features have loss $\left({a \over 2}\right)^2$. That gives us
+With $(v_i · v_j)_{i ≠ j} = - {1 \over 2}$. Using the embedding schema from before, if feature $j$ is activated then $\hat{y}_i = a(v_i · v_j)$, and so the active feature has loss $(1-a)^2$ and the two inactive features have loss $\left({a \over 2}\right)^2$. That gives us
 
 $$ \mathrm{MSE}_\mathrm{best\_sup} = \frac{1}{3}\left( (1-a)^2 + 2\left(\frac{a}{2}\right)^2\right) = \frac{1}{3}\left((1-a)^2 + \frac{1}{2}a^2\right)$$
 
@@ -393,7 +393,7 @@ So even the best version of superposition is still no better than the orthogonal
 
 Our proof is incomplete in a handful of ways.
 
-* For $z=1$, we got an exact result for $\mathrm{MSE}_\mathrm{1fpn}$, but our result for $\mathrm{MSE_{1npf}}$ assumed $T \over D$ was large or an integer. 
+* For $z=1$, we got an exact result for $$\mathrm{MSE}_\mathrm{1fpn}$$, but our result for $$\mathrm{MSE_{1npf}}$$ assumed $$T \over D$$ was large or an integer.
 * For $z>1$ we didn't get exact loss values for our orthogonal embeddings; but the loss will be lower than the calculated values, which strengthens the result.
 * We assumed that random vectors were a good implementation of superposition, even though we managed to improve on them for some specific values.
 * We also didn't investigate what happens if fewer-than-$z$ features are allowed to be active.
@@ -404,6 +404,6 @@ For $z=1$, we suspect that the optimal MSE loss will be the same for every embed
 
 Why? Because it would be surprising if both (what we call) "the best" superposition solution, and the two orthogonal solutions, would all be ideal; but nothing in between is as good.
 
-But if so, why is $\mathrm{MSE}_\mathrm{best\\_sup}$ better than our result for $\mathrm{MSE}_\mathrm{rand\\_sup}$? We think because we picked a single value of $a$ for our superposition unembeddings. "The best" superposition is symmetrical, so using the same $a$ for all features is correct. But a random embedding won't be symmetrical. Some features will be closer to others and would ideally have a lower $a$, while more lonely features will ideally have a higher $a$, but we didn't tune them. This rhymes with the discussion of "what if $T \over D$ isn't an integer" in footnote[^t-over-d-noninteger].
+But if so, why is $$\mathrm{MSE}_\mathrm{best\_sup}$$ better than our result for $$\mathrm{MSE}_\mathrm{rand\_sup}$$? We think because we picked a single value of $a$ for our superposition unembeddings. "The best" superposition is symmetrical, so using the same $a$ for all features is correct. But a random embedding won't be symmetrical. Some features will be closer to others and would ideally have a lower $a$, while more lonely features will ideally have a higher $a$, but we didn't tune them. This rhymes with the discussion of "what if $T \over D$ isn't an integer" in footnote[^t-over-d-noninteger].
 
 We don't think every embedding is exacly equal for $z\geq2$.
