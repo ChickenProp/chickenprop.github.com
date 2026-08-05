@@ -3,6 +3,9 @@ title: The goalposts are shrouded, not moving
 layout: draft
 tags: [rationality]
 lw_xpost: true
+external_comments:
+  - name: LessWrong
+    url: https://www.lesswrong.com/posts/HPSHtrJtgPNaTdjxH/the-goalposts-are-shrouded-not-moving
 ---
 **Alice:** Are there any examples of X?  
 **Bob:** Here.  
