@@ -11,7 +11,7 @@ external_comments:
 
 If you're training any type of toy model of superposition, Mean Squared Error (MSE) loss is unusually bad.[^superposition]
 
-[^superposition]: Superposition is a fuzzy concept, with no precise consensus definition. We mean that each feature is encoded linearly, using almost orthogonal direction. But actually, for this post it's enough to say that it's definitely not superposition if all feature embeddings are exactly orthogonal, or if any two feature embeddings are identical. For the purpose of this post, we'll consider everything else "superposition". 
+[^superposition]: Superposition is a fuzzy concept, with no precise consensus definition. We mean that each feature is encoded linearly, using almost orthogonal direction. But actually, for this post it's enough to say that it's definitely not superposition if all feature embeddings are exactly orthogonal, or if any two feature embeddings are identical. For the purpose of this post, we'll consider everything else "superposition".
 
     Even with this overly broad definition, we'll still show that MSE Loss doesn't favor superposition over non-superposition.
 
@@ -19,7 +19,7 @@ If you're training any type of toy model of superposition, Mean Squared Error (M
 
 We aren't the first to notice that MSE loss doesn't work. In [Toy Models of Superposition](https://transformer-circuits.pub/2022/toy_model/index.html) the effective loss function is $\mathrm{MSE}(\mathrm{ReLU}(\mathrm{target} - \mathrm{model\\_output}))$, because they noticed that plain $\mathrm{MSE}(\mathrm{target} - \mathrm{model\\_output})$ doesn't work.
 
-More recently [Compressed Computation Under $L^4$ Loss is Likely Computation in Superposition](https://www.lesswrong.com/posts/cTRKj3giaZN5Ysyx2/compressed-computation-under-l-loss-is-likely-computation-in) again demonstrated that MSE loss dosn't work. MSE loss is the same as $L^2$ loss [^same], because MSE is just the square of the $L^2$ norm. The above mentioned paper showed that $L^{2.5}$, $L^{3}$, $L^{4}$, $L^{6}$, $L^{8}$ all worked to produce superpossition encodings, but $L^2$ doesn't.
+More recently [Compressed Computation Under $L^4$ Loss is Likely Computation in Superposition](https://www.lesswrong.com/posts/cTRKj3giaZN5Ysyx2/compressed-computation-under-l-loss-is-likely-computation-in) again demonstrated that MSE loss dosn't work. MSE loss is the same as $L^2$ loss[^same], because MSE is just the square of the $L^2$ norm. The above mentioned paper showed that $L^{2.5}$, $L^{3}$, $L^{4}$, $L^{6}$, $L^{8}$ all worked to produce superposition encodings, but $L^2$ doesn't.
 
 [^same]: They have the same minimum, and the gradient is always in the same direction, so they're functinally the same under gradient descent. 
 
@@ -75,7 +75,7 @@ Another in-the-wild observation is [this project](https://www.lesswrong.com/post
 
 # General setup for both the Experiments and Math
 
-Imagine you're training a neural network. At the last hidden layer of the model, you'd like to incentivise the network to represent the final output in superpossition. 
+Imagine you're training a neural network. At the last hidden layer of the model, you'd like to incentivise the network to represent the final output in superposition.
 
 The last hidden layer has $D$ neurons, and the output has $T$ features where $T$ is larger than $D$. Each feature can either be active, represented by $1$, or inactive, represented by $0$. There are at most $z$ active features at any one time.
 
@@ -188,7 +188,7 @@ We consider the math in this section to be our main result, and the strongest ev
 
 Since you've made it here we assume you like math. So we'll define the general setup again, now using math notation.
 
-You're trying to implement (or at least closely approximate) some function with a neural network. The functions we're looking at here have output type $\{0,1\}^T$ (i.e. they output a $T$-dimensional vector of $1$s and $0$s) where at most $z$ of the output values are $1$. The network's final hidden layer has $D$ neurons, and the network's approximation of the answer is read out as some linear function of the final layer.
+You're trying to implement (or at least closely approximate) some function with a neural network. The functions we're looking at here have output type $\\{0,1\\}^T$ (i.e. they output a $T$-dimensional vector of $1$s and $0$s) where at most $z$ of the output values are $1$. The network's final hidden layer has $D$ neurons, and the network's approximation of the answer is read out as some linear function of the final layer.
 
 We're interested in questions of whether and how networks can encode certain information, so the function you're trying to implement doesn't matter. For simplicity, we'll say it's the identity function: your network takes a vector of $T$ binary inputs (where at most $z$ of the inputs are $1$), and spits out $T$ real outputs, and is trying to reproduce the input as closely as possible.
 
@@ -200,7 +200,7 @@ As another simplification, we'll say that *exactly* $z$ of the inputs will be $1
 
 And so our moving parts are:
 * We have a random vector $y$ of $T$ binary inputs, where exactly $z$ of them are $1$ and the rest $0$.
-* This feeds into a vector $e = f(y)$ of $D$ neurons, where $f:\{0,1\}^T → ℝ^D$ is some function we get to choose how we like.
+* This feeds into a vector $e = f(y)$ of $D$ neurons, where $f:\\{0,1\\}^T → ℝ^D$ is some function we get to choose how we like.
 * Then we read a vector $\hat{y} = g(e)$ of $T$ estimates, where $g:ℝ^D → ℝ^T$ is some *linear*[^linear] function that we also get to choose.
 
 [^linear]: We could also allow the function to be [affine](https://en.wikipedia.org/wiki/Affine_transformation) (i.e. "linear plus some constant"). The difference between linear and affine is going to be small for large D, because if the constant is helpful, you can just sacrifice a neuron to get it (the "augmented matrix" representation).
@@ -318,13 +318,13 @@ $$𝔼(\varepsilon_1^2) = (z-1)a^2/D.$$
 
 Then the total loss is
 
-$$\begin{aligned} \mathrm{MSE}_\mathrm{rand\\_sup} &= \frac{1}{T}𝔼\Big(z(1 - (a + \varepsilon_1))^2 + (T - z)\varepsilon_0^2\Big) \\ &= \frac{z}{T}\left((1-a)^2 + (T-1){a^2 \over D} \right) \end{aligned}$$
+$$\begin{aligned} \mathrm{MSE}_\mathrm{rand\_sup} &= \frac{1}{T}𝔼\Big(z(1 - (a + \varepsilon_1))^2 + (T - z)\varepsilon_0^2\Big) \\ &= \frac{z}{T}\left((1-a)^2 + (T-1){a^2 \over D} \right) \end{aligned}$$
 
 This is minimized at $a = {D \over T+D-1}$, ultimately giving
 
-$$\mathrm{MSE}_\mathrm{rand\\_sup} = \frac{z}{T}\left(1 - {D \over T + D - 1}\right).$$
+$$\mathrm{MSE}_\mathrm{rand\_sup} = \frac{z}{T}\left(1 - {D \over T + D - 1}\right).$$
 
-Clearly ${D \over T + D - 1} < {D \over T},$which gives us $\mathrm{MSE}_\mathrm{orth} < \mathrm{MSE}_\mathrm{rand\\_sup}$.
+Clearly $${D \over T + D - 1} < {D \over T},$$ which gives us $$\mathrm{MSE}_\mathrm{orth} < \mathrm{MSE}_\mathrm{rand\_sup}$$.
 
 A question remains: whether random embeddings are really a good representation of superposition. Since we defined superposition to be almost anything except the two previous embedding schemas, can't we do better than random? The answer to this is yes, as we'll see in the next two sections.
 
@@ -342,15 +342,15 @@ $$v_3 = \textstyle{\left(-\frac{1}{2},-\frac{\sqrt{3}}{2}\right)}$$
 
 With $(v_i · v_j)_{i ≠ j} = - {1 \over 2}$. Using the embedding schema from before, if feature $j$ is activated then $\hat{y}_i = a(v_i · v_j)$, and so the active feature has loss $(1-a)^2$ and the two inactive features have loss $\left({a \over 2}\right)^2$. That gives us
 
-$$ \mathrm{MSE}_\mathrm{best\\_sup} = \frac{1}{3}\left( (1-a)^2 + 2\left(\frac{a}{2}\right)^2\right) = \frac{1}{3}\left((1-a)^2 + \frac{1}{2}a^2\right)$$
+$$ \mathrm{MSE}_\mathrm{best\_sup} = \frac{1}{3}\left( (1-a)^2 + 2\left(\frac{a}{2}\right)^2\right) = \frac{1}{3}\left((1-a)^2 + \frac{1}{2}a^2\right)$$
 
 which is minimised at $a=\frac{2}{3}$, and so
 
-$$ \mathrm{MSE}_\mathrm{best\\_sup} = {1 \over 9},$$
+$$ \mathrm{MSE}_\mathrm{best\_sup} = {1 \over 9},$$
 
 which is indeed better than
 
-$$\mathrm{MSE}_\mathrm{rand\\_sup} = \frac{z}{T}\left(1 - {D \over T + D - 1}\right) = \frac{1}{6}.$$
+$$\mathrm{MSE}_\mathrm{rand\_sup} = \frac{z}{T}\left(1 - {D \over T + D - 1}\right) = \frac{1}{6}.$$
 
 We conclude that in this case (and by extension, in general) it is possible to do better than choosing the embedding vectors at random. But what really matters is whether the best-case superposition beats the other embedding options. And no, they turn out to have exactly the same loss:
 
@@ -376,7 +376,7 @@ with $(v_i · v_j)_{i ≠ j} = - {1 \over 3}$.
 
 Same reasoning as before. If feature $j$ is activated then $\hat{y}_i = a(v_i · v_j)$, and so the active feature has loss $(1-a)^2$ and the three inactive features have loss $\left({a \over 3}\right)^2$. We minimize MSE at $a = {3 \over 4}$, giving
 
-$$\mathrm{MSE}_\mathrm{best\\_sup} = \frac{1}{4}\left( (1 - a)^2 + {a^2 \over 3}\right) = {1 \over 16}$$
+$$\mathrm{MSE}_\mathrm{best\_sup} = \frac{1}{4}\left( (1 - a)^2 + {a^2 \over 3}\right) = {1 \over 16}$$
 
 which again matches 
 
