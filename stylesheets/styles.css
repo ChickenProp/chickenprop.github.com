@@ -223,9 +223,9 @@ header {
 	position:fixed;
 	margin: 30px 25px 0 0;
 	-webkit-font-smoothing: antialiased;
-	/* 40px above the header (body padding + margin), guess ~100px for the
+	/* 40px above the header (body padding + margin), guess ~110px for the
            fixed footer below it. Scroll instead of overlapping the footer. */
-	max-height: calc(100vh - 140px);
+	max-height: calc(100vh - 150px);
 	overflow-y: auto;
 }
 
