@@ -2,6 +2,7 @@
 title: The goalposts are shrouded, not moving
 layout: draft
 tags: [rationality]
+lw_xpost: true
 ---
 **Alice:** Are there any examples of X?  
 **Bob:** Here.  
@@ -21,7 +22,7 @@ The thing is, I think in this situation, Alice often isn't moving the goalposts.
 
 What Alice wants to know here is *should she believe* the supplement helps. Asking for research is a proxy for that, and the research Bob finds answers her proxy but doesn't say much about the real question.
 
-This is probably frustrating for Bob! If he doesn't know why Alice is asking, or doesn't know why the things he finds don't help her, it might look to him a lot like she's moving the goalposts / fighting a rearguard retreat against the evidence. Like she's just looking for reasons to dismiss what he's bringing, so she doesn't have to change her mind. But it's an importantly different thing going on.
+This is probably frustrating for Bob! If he doesn't know why Alice is asking, or doesn't know why the things he finds don't help her, it might look to him a lot like she's moving the goalposts / fighting a rearguard retreat against the evidence. Like she's just looking for reasons to dismiss what he's bringing up, so she doesn't have to change her mind. But it's an importantly different thing going on.
 
 If Bob thinks this kind of thing might be going on, he might ask: "okay, help me understand here what you're actually looking for? Right now I expect that if I give another example, it'll be wrong again in some way I can't predict."
 
