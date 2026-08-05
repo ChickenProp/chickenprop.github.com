@@ -164,9 +164,11 @@ Dotted green lines are the negative of the embedding vectors.
 
 <a href="https://hackmd.io/_uploads/HJf5lXSaWx.png"><img src="https://hackmd.io/_uploads/HJf5lXSaWx.png" style="width:95%" alt="T3_D2_z1_withCE"></a>
 
-![T4_D2_z1_withCE](https://hackmd.io/_uploads/BJkDl7HaZg.png)
-![T5_D2_z1_withCE](https://hackmd.io/_uploads/HyyPlQB6Zx.png)
-![T5_D2_z2](https://hackmd.io/_uploads/rJ1De7rTZe.png)
+<a href="https://hackmd.io/_uploads/BJkDl7HaZg.png"><img src="https://hackmd.io/_uploads/BJkDl7HaZg.png" style="width:95%" alt="T4_D2_z1_withCE"></a>
+
+<a href="https://hackmd.io/_uploads/HyyPlQB6Zx.png"><img src="https://hackmd.io/_uploads/HyyPlQB6Zx.png" style="width:95%" alt="T5_D2_z1_withCE"></a>
+
+<a href="https://hackmd.io/_uploads/rJ1De7rTZe.png"><img src="https://hackmd.io/_uploads/rJ1De7rTZe.png" style="width:95%" alt="T5_D2_z2"></a>
 
 Superposition here looks like "vectors and their negations being far away from each other". And just as we claim, MSE loss does not consistently produce superposition: it's common for vectors to be nearly on top of each other. Our math (next section) suggests that no embedding should be prefered over any other embeding when when using MSE loss (at least for $z=1$). The results seem to confirm this, since the MSE embeddings are very varied. 
 
