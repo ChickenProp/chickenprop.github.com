@@ -17,7 +17,7 @@ If you're training any type of toy model of superposition, Mean Squared Error (M
 
 # Related work
 
-We aren't the first to notice that MSE loss doesn't work. In [Toy Models of Superposition](https://transformer-circuits.pub/2022/toy_model/index.html) the effective loss function is $\mathrm{MSE}(\mathrm{ReLU}(\mathrm{target} - \mathrm{model\_output}))$, because they noticed that plain $\mathrm{MSE}(\mathrm{target} - \mathrm{model\_output})$ doesn't work.
+We aren't the first to notice that MSE loss doesn't work. In [Toy Models of Superposition](https://transformer-circuits.pub/2022/toy_model/index.html) the effective loss function is $\mathrm{MSE}(\mathrm{ReLU}(\mathrm{target} - \mathrm{model\\_output}))$, because they noticed that plain $\mathrm{MSE}(\mathrm{target} - \mathrm{model\\_output})$ doesn't work.
 
 More recently [Compressed Computation Under $L^4$ Loss is Likely Computation in Superposition](https://www.lesswrong.com/posts/cTRKj3giaZN5Ysyx2/compressed-computation-under-l-loss-is-likely-computation-in) again demonstrated that MSE loss dosn't work. MSE loss is the same as $L^2$ loss [^same], because MSE is just the square of the $L^2$ norm. The above mentioned paper showed that $L^{2.5}$, $L^{3}$, $L^{4}$, $L^{6}$, $L^{8}$ all worked to produce superpossition encodings, but $L^2$ doesn't.
 
@@ -36,8 +36,8 @@ Which resulted in me (Linda) using MSE loss in attempted superposition toy exper
 
 Suppose you want to train a neural network to encode more features than it has neurons. If you train this network using MSE loss on these features, the network is not incentivized to encode them in superposition. So if there's anything else going on in the experiment that may push the solution towards non-superposition, you're most likely going to end up with non-superposition. This can be an issue when trying to do toy models specifically of superposition. One of us (Linda) has run into this problem. 
 
-**However, the solution is easy:** Don't use MSE loss, instead use some other loss instead. If cross-entropy loss is not applicable, you can use $\mathrm{loss}\!=\!\mathrm{mean}\left(\mathrm{error}^4\right)$
-instead of $\mathrm{loss}\!=\!\mathrm{mean}\left(\mathrm{error}^2\right)$.
+**However, the solution is easy:** Don't use MSE loss, instead use some other loss instead. If cross-entropy loss is not applicable, you can use $\mathrm{loss}\\!=\\!\mathrm{mean}\left(\mathrm{error}^4\right)$
+instead of $\mathrm{loss}\\!=\\!\mathrm{mean}\left(\mathrm{error}^2\right)$.
 
 In this post we pressent three lines of evidence for this claim: 
 
@@ -318,19 +318,19 @@ $$𝔼(\varepsilon_1^2) = (z-1)a^2/D.$$
 
 Then the total loss is
 
-$$\begin{aligned} \mathrm{MSE}_\mathrm{rand\_sup} &= \frac{1}{T}𝔼\Big(z(1 - (a + \varepsilon_1))^2 + (T - z)\varepsilon_0^2\Big) \\ &= \frac{z}{T}\left((1-a)^2 + (T-1){a^2 \over D} \right) \end{aligned}$$
+$$\begin{aligned} \mathrm{MSE}_\mathrm{rand\\_sup} &= \frac{1}{T}𝔼\Big(z(1 - (a + \varepsilon_1))^2 + (T - z)\varepsilon_0^2\Big) \\ &= \frac{z}{T}\left((1-a)^2 + (T-1){a^2 \over D} \right) \end{aligned}$$
 
 This is minimized at $a = {D \over T+D-1}$, ultimately giving
 
-$$\mathrm{MSE}_\mathrm{rand\_sup} = \frac{z}{T}\left(1 - {D \over T + D - 1}\right).$$
+$$\mathrm{MSE}_\mathrm{rand\\_sup} = \frac{z}{T}\left(1 - {D \over T + D - 1}\right).$$
 
-Clearly ${D \over T + D - 1} < {D \over T},$which gives us $\mathrm{MSE}_\mathrm{orth} < \mathrm{MSE}_\mathrm{rand\_sup}$.
+Clearly ${D \over T + D - 1} < {D \over T},$which gives us $\mathrm{MSE}_\mathrm{orth} < \mathrm{MSE}_\mathrm{rand\\_sup}$.
 
 A question remains: whether random embeddings are really a good representation of superposition. Since we defined superposition to be almost anything except the two previous embedding schemas, can't we do better than random? The answer to this is yes, as we'll see in the next two sections.
 
 ## z=1, D=2, T=3
 
-Notice that all the calculations for $\mathrm{MSE}_\mathrm{rand\_sup}$ are exact, and not just some large limit result. So we can check the smallest possible case to see if there's a better option for superpositional embedding.
+Notice that all the calculations for $\mathrm{MSE}_\mathrm{rand\\_sup}$ are exact, and not just some large limit result. So we can check the smallest possible case to see if there's a better option for superpositional embedding.
 
 In the case $z=1$, $D=2$, $T=3$, it sems clear that the best superposition embedding should be the vertices of an equilateral triangle:
 
@@ -342,15 +342,15 @@ $$v_3 = \textstyle{\left(-\frac{1}{2},-\frac{\sqrt{3}}{2}\right)}$$
 
 With $(v_i · v_j)_{i ≠ j} = - {1 \over 2}$. Using the embedding schema from before, if feature $j$ is activated then $\hat{y}_i = a(v_i · v_j)$, and so the active feature has loss $(1-a)^2$ and the two inactive features have loss $\left({a \over 2}\right)^2$. That gives us
 
-$$ \mathrm{MSE}_\mathrm{best\_sup} = \frac{1}{3}\left( (1-a)^2 + 2\left(\frac{a}{2}\right)^2\right) = \frac{1}{3}\left((1-a)^2 + \frac{1}{2}a^2\right)$$
+$$ \mathrm{MSE}_\mathrm{best\\_sup} = \frac{1}{3}\left( (1-a)^2 + 2\left(\frac{a}{2}\right)^2\right) = \frac{1}{3}\left((1-a)^2 + \frac{1}{2}a^2\right)$$
 
 which is minimised at $a=\frac{2}{3}$, and so
 
-$$ \mathrm{MSE}_\mathrm{best\_sup} = {1 \over 9},$$
+$$ \mathrm{MSE}_\mathrm{best\\_sup} = {1 \over 9},$$
 
 which is indeed better than
 
-$$\mathrm{MSE}_\mathrm{rand\_sup} = \frac{z}{T}\left(1 - {D \over T + D - 1}\right) = \frac{1}{6}.$$
+$$\mathrm{MSE}_\mathrm{rand\\_sup} = \frac{z}{T}\left(1 - {D \over T + D - 1}\right) = \frac{1}{6}.$$
 
 We conclude that in this case (and by extension, in general) it is possible to do better than choosing the embedding vectors at random. But what really matters is whether the best-case superposition beats the other embedding options. And no, they turn out to have exactly the same loss:
 
@@ -376,7 +376,7 @@ with $(v_i · v_j)_{i ≠ j} = - {1 \over 3}$.
 
 Same reasoning as before. If feature $j$ is activated then $\hat{y}_i = a(v_i · v_j)$, and so the active feature has loss $(1-a)^2$ and the three inactive features have loss $\left({a \over 3}\right)^2$. We minimize MSE at $a = {3 \over 4}$, giving
 
-$$\mathrm{MSE}_\mathrm{best\_sup} = \frac{1}{4}\left( (1 - a)^2 + {a^2 \over 3}\right) = {1 \over 16}$$
+$$\mathrm{MSE}_\mathrm{best\\_sup} = \frac{1}{4}\left( (1 - a)^2 + {a^2 \over 3}\right) = {1 \over 16}$$
 
 which again matches 
 
@@ -404,6 +404,6 @@ For $z=1$, we suspect that the optimal MSE loss will be the same for every embed
 
 Why? Because it would be surprising if both (what we call) "the best" superposition solution, and the two orthogonal solutions, would all be ideal; but nothing in between is as good.
 
-But if so, why is $\mathrm{MSE}_\mathrm{best\_sup}$ better than our result for $\mathrm{MSE}_\mathrm{rand\_sup}$? We think because we picked a single value of $a$ for our superposition unembeddings. "The best" superposition is symmetrical, so using the same $a$ for all features is correct. But a random embedding won't be symmetrical. Some features will be closer to others and would ideally have a lower $a$, while more lonely features will ideally have a higher $a$, but we didn't tune them. This rhymes with the discussion of "what if $T \over D$ isn't an integer" in footnote[^t-over-d-noninteger].
+But if so, why is $\mathrm{MSE}_\mathrm{best\\_sup}$ better than our result for $\mathrm{MSE}_\mathrm{rand\\_sup}$? We think because we picked a single value of $a$ for our superposition unembeddings. "The best" superposition is symmetrical, so using the same $a$ for all features is correct. But a random embedding won't be symmetrical. Some features will be closer to others and would ideally have a lower $a$, while more lonely features will ideally have a higher $a$, but we didn't tune them. This rhymes with the discussion of "what if $T \over D$ isn't an integer" in footnote[^t-over-d-noninteger].
 
 We don't think every embedding is exacly equal for $z\geq2$.
