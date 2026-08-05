@@ -34,7 +34,7 @@ $(function () {
     $('a.footnote').each(function () {
         var id = $(this).attr('href').substr(1);
         var text = $('[id="' + id + '"]').text();
-        text = $.trim(text.replace(/( ↩\d?)+$/, ''));
+        text = $.trim(text.replace(/( ↩\d*)+\s*$/, ''));
         $(this).attr('title', text);
     });
 });
