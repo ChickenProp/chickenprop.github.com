@@ -223,6 +223,10 @@ header {
 	position:fixed;
 	margin: 30px 25px 0 0;
 	-webkit-font-smoothing: antialiased;
+	/* 40px above the header (body padding + margin), guess ~100px for the
+           fixed footer below it. Scroll instead of overlapping the footer. */
+	max-height: calc(100vh - 140px);
+	overflow-y: auto;
 }
 
 p.header {
@@ -298,6 +302,11 @@ footer {
 	line-height: 1em; /* maybe should only be for <small>? */
 }
 
+/* Break lines between links rather than inside them. */
+footer a {
+	white-space: nowrap;
+}
+
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
@@ -319,6 +328,10 @@ footer {
 
   header {
     padding-right:320px;
+    /* Reset the behavior that makes the header and footer not overlap on wider
+       screens. */
+    max-height:none;
+    overflow-y:visible;
   }
 
   section {
