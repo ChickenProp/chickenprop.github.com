@@ -1,6 +1,6 @@
 ---
 title: MSE loss does not generate superposition
-layout: draft
+layout: post
 tags: [math]
 external_comments:
   - name: LessWrong
