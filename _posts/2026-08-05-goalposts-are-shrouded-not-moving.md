@@ -1,6 +1,6 @@
 ---
 title: The goalposts are shrouded, not moving
-layout: draft
+layout: post
 tags: [rationality]
 lw_xpost: true
 external_comments:
