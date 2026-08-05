@@ -31,10 +31,12 @@ $(function () {
     // Add title text to footnotes. Very dependent on how the markdown compiler
     // handles them. If the same footnote is referenced multiple times, the
     // first is given a `↩` link, the second a `↩2` link, and presumably so on.
+    // There are non-breaking spaces at least before the first, possibly in
+    // between them.
     $('a.footnote').each(function () {
         var id = $(this).attr('href').substr(1);
         var text = $('[id="' + id + '"]').text();
-        text = $.trim(text.replace(/( ↩\d*)+\s*$/, ''));
+        text = $.trim(text.replace(/(\s↩\d*)+$/, ''));
         $(this).attr('title', text);
     });
 });
