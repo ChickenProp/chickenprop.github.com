@@ -162,7 +162,8 @@ By default embedding vectors are green. But small embeddings are yellow (norm is
 
 Dotted green lines are the negative of the embedding vectors.
 
-![T3_D2_z1_withCE](https://hackmd.io/_uploads/HJf5lXSaWx.png)
+<a href="https://hackmd.io/_uploads/HJf5lXSaWx.png"><img src="https://hackmd.io/_uploads/HJf5lXSaWx.png" style="width:95%" alt="T3_D2_z1_withCE"></a>
+
 ![T4_D2_z1_withCE](https://hackmd.io/_uploads/BJkDl7HaZg.png)
 ![T5_D2_z1_withCE](https://hackmd.io/_uploads/HyyPlQB6Zx.png)
 ![T5_D2_z2](https://hackmd.io/_uploads/rJ1De7rTZe.png)
