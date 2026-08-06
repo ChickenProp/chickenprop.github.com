@@ -7,6 +7,7 @@ external_comments:
     url: https://www.lesswrong.com/posts/bdz4yPxxRMxeKJHay
   - name: /r/slatestarcodex
     url: https://www.reddit.com/r/slatestarcodex/comments/1diy5ax/
+tags: [reviews]
 ---
 *Translated by Emily Wilson*
 

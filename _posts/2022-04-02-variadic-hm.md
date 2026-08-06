@@ -2,7 +2,7 @@
 title: Variadic functions in Hindley Milner
 layout: post
 lw_xpost: true
-tags: [haskenthetical, software]
+tags: [haskenthetical, software, haskell]
 external_comments:
   - name: /r/ProgrammingLanguages
     url: https://www.reddit.com/r/ProgrammingLanguages/comments/tx6g2w/variadic_functions_in_hindleymilner/

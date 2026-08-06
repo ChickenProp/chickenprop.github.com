@@ -7,6 +7,7 @@ external_comments:
     url: https://www.lesswrong.com/posts/EaTtrrNZaonJPwHLq/boots-theory-and-wikipedia
   - name: /r/slatestarcodex
     url: https://www.reddit.com/r/slatestarcodex/comments/1mf7frs/boots_theory_and_wikipedia/
+tags: [economics]
 ---
 I've [previously complained](https://reasonableapproximation.net/2020/09/14/against-boots-theory.html) about how people often repeat a quote that starts with
 

@@ -2,7 +2,7 @@
 title: A reckless introduction to Hindley-Milner type inference
 layout: post
 lw_xpost: true
-tags: [software]
+tags: [software, haskell]
 comments: true
 external_comments:
   - name: /r/haskell

@@ -1,6 +1,7 @@
 ---
 title: Data surgery is not rocket science
 layout: post
+tags: [software]
 ---
 This is a story of me failing to do something, and some thoughts on how I might have succeeded.
 

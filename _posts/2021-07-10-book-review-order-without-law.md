@@ -3,7 +3,7 @@ title: "Book Review: Order Without Law"
 layout: post
 lw_xpost: true
 explicit_math: true
-tags: [economics]
+tags: [economics, reviews]
 external_comments:
   - name: ACX
     url: https://astralcodexten.substack.com/p/your-book-review-order-without-law

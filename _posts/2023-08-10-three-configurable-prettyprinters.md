@@ -1,7 +1,7 @@
 ---
 title: Three configurable prettyprinters
 layout: post
-tags: [software]
+tags: [software, haskell]
 lw_xpost: true
 external_comments:
   - name: /r/haskell

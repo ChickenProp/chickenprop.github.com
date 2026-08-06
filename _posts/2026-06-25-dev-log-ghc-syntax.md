@@ -2,7 +2,7 @@
 title: "Dev log: implementing new syntax in GHC"
 layout: post
 lw_xpost: true
-tags: [software]
+tags: [software, haskell]
 external_comments:
   - name: /r/haskell
     url: https://www.reddit.com/r/haskell/comments/1ufkj7r/dev_log_implementing_new_syntax_in_ghc/
