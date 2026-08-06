@@ -18,6 +18,8 @@ The popular explanation of the theory comes from Sam Vimes, a resident of Ankh-M
 
 To be clear, this is beside the point of my previous essay. I was talking about 21st Century Earth Anglosphere because that's what I know; and whenever I see someone bring up boots theory, they're talking about Earth (usually 21st Century Anglosphere) and not Ankh-Morpork. But multiple commentors brought it up.
 
+<!-- more -->
+
 [Radmonger](https://www.reddit.com/r/slatestarcodex/comments/isk5v5/against_boots_theory/g58g364/):
 
 > you need to understand Vimes as making a distinction not between the upper class and everyone else, but the middle class and the working class, between homeowners and renters.

@@ -17,6 +17,8 @@ My impression is HMRC tends to be pretty tolerant of people making good faith mi
 
 After I published, reddit user ec265 [pointed me](https://www.reddit.com/r/UKPersonalFinance/comments/1bprll5/article_cryptocurrency_taxation_in_the_uk/kwxvv4k/) at [another article](https://recap.io/guides/crypto-tax-uk-a-comprehensive-guide) that seems more thorough than this one. I wouldn't have bothered writing this if I'd found that sooner. I didn't spot anywhere where it disagrees with me, which is good.
 
+<!-- more -->
+
 ### Capital gains tax
 
 Very loosely speaking, capital gains is when you buy something, wait a bit, and then sell it for a different price than you bought it for. You have an allowance which [in 2023-24](https://www.gov.uk/guidance/capital-gains-tax-rates-and-allowances) is £6,000, so you only pay on any gains you have above that. The [rate](https://www.gov.uk/capital-gains-tax/rates) is 10% or 20% depending on your income.

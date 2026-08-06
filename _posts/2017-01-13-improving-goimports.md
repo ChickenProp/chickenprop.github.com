@@ -11,6 +11,8 @@ In Go, if you have an unused import, your program fails to compile. This has mad
 
 The devs [decline](https://golang.org/doc/faq#unused_variables_and_imports) to add a compiler flag to change this behaviour, "because compiler options should not affect the semantics of the language and because the Go compiler does not report warnings, only errors that prevent compilation". This strikes me as reasonable, if not the decision I personally would make.
 
+<!-- more -->
+
 Instead, they suggest this pattern:
 
 ```go

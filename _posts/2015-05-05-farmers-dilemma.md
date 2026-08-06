@@ -18,6 +18,8 @@ You object that I'm being dumb not to take those four utils.
 
 (Unfortunately for you, I am a member of [*H. economicus*](http://en.wikipedia.org/wiki/Homo_economicus) and have a natural immunity to arguments about "fairness" and "not being a douchebag".)
 
+<!-- more -->
+
 ---
 
 The farmer's dilemma is game-theoretically equivalent to [chicken](http://en.wikipedia.org/wiki/Chicken_%28game%29). Both of us choose to either cooperate by digging the ditch ("swerve" in chicken), or defect by sitting at home ("straight" in chicken). If both of us cooperate ("C/C"), we both get an okay result. If both of us defect ("D/D"), we both get a terrible result. If one of us cooperates while the other defects ("C/D"), then the defector gets the best possible result for themselves, and the cooperator gets a result between C/C and D/D.

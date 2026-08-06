@@ -10,6 +10,8 @@ This seemed like a fun challenge that would exercise skills there isn't much cal
 
 To help, the friend provided two small files from the same app: one a successful recording, and one corrupt like the target file.
 
+<!-- more -->
+
 The simplest thing was to simply try playing the broken files with mplayer, just in case. It didn't work, and gave an error message saying (among other things) "moov atom not found".
 
 The next thing was to look at all the files in a hex editor, which in this case was "`hexdump -C` piped into less" because I don't think I have a dedicated hex editor installed. I quickly noticed that the good recording had the bytes `moov` at location 0x1d, while the corrupt recordings both had the bytes `free` there.

@@ -15,6 +15,8 @@ If you maintain an open source project, what responsibilities do you have toward
 
 I thought I'd take a stab at describing my best guess as to how we answer it [in my culture](https://medium.com/@ThingMaker/in-my-culture-29c6464072b2): in the culture that exists only in my mind, but that I think (and hope) many copies of me would implement, if we had that opportunity. (That culture doesn't attempt to exclude people who *aren't* copies of me, so it does need to be robust to attack. In my culture, we do not just assume in defiance of all evidence that everyone is friendly and trustworthy.)
 
+<!-- more -->
+
 Some of this will probably seem obvious to many readers, like "in my culture, murder is considered bad". Probably different bits to different readers. I'm interested in discovering which bits seem obvious to almost everyone, and which bits are controversial.
 
 A lot of it follows from how I think about responsibility in general. But if you start to think "extending this response to this other situation, you'd get this, and that's a terrible idea"... in my culture, we don't immediately assume from this that I'm endorsing a terrible idea. Instead we check. Maybe I [disagree](https://www.greaterwrong.com/posts/6ntmpCvPDh3uhAi6j/the-sally-anne-fallacy) that that's how it extends. Maybe I hadn't thought about this, and you can change my mind about the initial response. Maybe I just straightforwardly endorse a terrible idea: in that case, it'll be much easier to push back once you've gotten me to admit to it.

@@ -12,6 +12,8 @@ The thing I'm pleased to have implemented recently is user-defined macros. This 
 
 These aren't hygienic macros, partly because when I used Racket a little at my old job I never really got my head around those, but also because they would have been more work. I'm more inclined to go for Clojure's approach of [namespace qualifying](http://clojure-doc.org/articles/language/macros.html#macro-hygiene-and-gensym), but since I don't have any kind of namespaces yet it seems premature to think of that.
 
+<!-- more -->
+
 ### Quasiquote
 
 The biggest test of Haskenthetical yet has been using these macros to [implement](https://github.com/ChickenProp/haskenthetical/blob/master/examples/quote.hth) <sup><small>[¶](https://github.com/ChickenProp/haskenthetical/blob/e2a0472d72df7134f5729db27b373e499d834186/examples/quote.hth)</small></sup> quoting (`quote`, like a standard lisp `'`) and quasiquoting (`qq`, like `` ` ``, using `↑` and `↑↑` for splicing). Quasiquoting in particular was one of the hardest pieces of code I think I've ever written, and it's only 100 lines in the end. Some of the things that made it difficult:

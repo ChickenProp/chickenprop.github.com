@@ -9,6 +9,8 @@ A book sometimes cited on LessWrong as recommended reading is E.T. Jaynes' [*Pro
 
 The book has over 750 pages. This will take me a long time, if I finish at all. I'm not committing to finishing. For example, if this turns out not to be a thing worth doing, I hope that I will notice that and stop. I'm also not committing to any particular posting rate while I continue.
 
+<!-- more -->
+
 ## Preface
 
 Jaynes starts by telling us the audience of his book: readers with some knowledge of applied math "at the advanced undergraduate level or preferably higher". Prior experience with statistics and probability is unnecessary and might be harmful.

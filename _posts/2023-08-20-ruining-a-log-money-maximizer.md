@@ -19,6 +19,8 @@ Logan has a utility function that's logarithmic in money, \\( U\_\\text{Logan}(m
 
 Some people take this as a reason to be Logan, not Linda. Why have a utility function that causes you to make bets that leave you eventually destitute, instead of a utility function that causes you to make bets that leave you rich?
 
+<!-- more -->
+
 ### In defense of Linda
 
 I make three replies to this. Firstly, the utility function is not up for grabs! You should be very suspicious any time someone suggests changing how much you value something.

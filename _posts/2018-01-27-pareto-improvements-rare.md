@@ -14,6 +14,8 @@ If Adam just gives Beth his baseball card, is that a Pareto improvement? Naively
 
 But I claim not, because if Adam has the card, he can sell it to Beth for $100. He would much prefer doing that over just giving her the card. But if Beth has the card, he can't do that. He assigns no intrinsic value to the card, but he can still value it as a trading chip.
 
+<!-- more -->
+
 Now suppose Adam has the baseball card but Beth also has a copy of that card. Then Beth has less desire for Adam's card, so this situation also isn't a Pareto improvement over the original. By giving something to Beth, we've made Adam's situation worse, *even though Adam likes Beth and values her happiness*.
 
 And I think situations like this are common. The ability to give someone something they want, is a form of power; and power is instrumentally useful. And the less someone wants, the less able you are to give them something they want[^generalize].

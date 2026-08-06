@@ -11,6 +11,8 @@ This post isn't advice about how to get into matched betting. That market is pro
 
 Instead, I want to go into the math behind it, in more depth than I've seen in other places. None of this math is complicated, but some of it is useful, and I haven't found it anywhere else. (I even deliberately went looking.)
 
+<!-- more -->
+
 ### A simple example
 
 (If you've seen one example of matched betting, you've seen them all, and you can skip this particular one.)

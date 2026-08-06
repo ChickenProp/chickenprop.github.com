@@ -9,6 +9,8 @@ Partly because I don't think I've taken more than two weeks' holiday at a time s
 
 Partly because, man, the world is not standing still. 2026-2031 is going to look very different from 2016-2021, and probably I should spend a bit of time orienting to "what do I even do with my life, going forwards". It's not impossible for me to do that while I have a full time job, but I do think I'll be better at it without one.
 
+<!-- more -->
+
 I don't plan to make any long term commitments until December. But some things I'd like to do in that time:
 
 * See if I can help with AI notkilleveryoneism.

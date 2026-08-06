@@ -15,6 +15,8 @@ There's a longer form,
 
 but this is verbose, and evaluates `x` and `y` twice. And if `x` and `y` are dictionaries nested three deep, it might not be easy to tell what's different between them.
 
+<!-- more -->
+
 I'm aware of two approaches that improve the situation. [`nose`](http://nose.readthedocs.org/en/latest/index.html) has a [`--failure-detail`](http://nose.readthedocs.org/en/latest/plugins/failuredetail.html) plugin that tries to automatically give you more detail. When
 
     assert x == y

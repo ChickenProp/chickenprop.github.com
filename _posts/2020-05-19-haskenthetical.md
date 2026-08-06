@@ -20,6 +20,8 @@ I call it "toy" in the sense of... well, right now it's a toy like an RC plane i
 
 (And honestly, even the first 80% is super ambitious. I don't *expect* to get that far, it would just be nice to. If I never touch the project again after this, I won't consider my time wasted.)
 
+<!-- more -->
+
 If you're curious, [the source code is available here](https://github.com/ChickenProp/haskenthetical)<sup><small>[¶](https://github.com/ChickenProp/haskenthetical/tree/54d7571f1662af68418840645435ab7d0e719003)</small></sup>[^permalinks]. If you have [stack](https://en.wikipedia.org/wiki/Stack_\(Haskell\)), `stack build --fast` should suffice to build and then `stack exec -- haskenthe -h` to run the executable.
 
 [^permalinks]: I'm using ¶ to indicate links to the state of the repository as of this writing.

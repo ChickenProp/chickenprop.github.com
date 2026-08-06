@@ -16,6 +16,8 @@ I didn't know what the Iliad was about. I thought it was the story of how Helen 
 
 Instead it's just a few days, nine years into that war. The Greeks are camped on the shores near Troy. Agamemnon, King of the Greeks, refuses to return a kidnapped woman to her father for ransom. (Lots of women get kidnapped.) Apollo smites the Greeks with arrows which are plague, and after a while the other Greeks get annoyed enough to tell Agamemnon off. Achilles is most vocal, so Agamemnon returns that woman but takes one of Achilles' kidnapped women instead.
 
+<!-- more -->
+
 Achilles gets upset and decides to stop fighting for Agamemnon. He prays to his mother, a goddess, wanting the Greeks to suffer ruin without him. She talks to Zeus, who arranges the whole thing, though Hera (his wife and sister) and Athena aren't happy about it because they really want Troy sacked.
 
 So Zeus sends a dream to Agamemnon, telling him to attack Troy. Agamemnon decides to test the Greek fighters, telling them it's time to give up and sail home. So they start running back to the ships, but Athena tells Odysseus to stop them, which he does mostly by telling them to obey orders.

@@ -31,6 +31,8 @@ But this behaviour does have consequences, especially with the use of higher-ord
 
 (Scripts using `sudo` and `nice` in a shebang seem unlikely to be distributed, but might find use in site-local maintenance scripts. `env` can be used to make a script more portable, in case a program isn't in a consistent location across systems.)
 
+<!-- more -->
+
 So I got to thinking about a program that would act like `env` for this purpose, but splitting its arguments on whitespace, or even doing full shell-like parsing of quotes.
 
 Of course, such a program already exists: its name is shell. `sh` accepts the `-c` option to pass a shell expression on the command line. If this expression comes from a shebang line, word-splitting will be performed just like when typing directly into a shell. As a bonus (arguably), you even get to use things like pipelines, output redirection, shell built-in commands, and forking to the background, all in the shebang line of a script.

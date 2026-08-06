@@ -7,6 +7,8 @@ I'm a big fan of the game [Zendo](https://en.wikipedia.org/wiki/Zendo_%28game%29
 
 Here's an alternate ruleset you can use if you have a large group. I think I've played it 2-3 times, with 15-ish? players, and it's finished in about 30 minutes each time, including explaining the rules to people who'd never played Zendo before.
 
+<!-- more -->
+
 For people who know the [typical rules](https://www.looneylabs.com/rules/zendo), here's the diff from them:
 
 * After the initial two samples are given, players run experiments[^terminology] in real time, whenever they feel like they have one they want to run, and the universe marks them. There's no turn taking, and no need to wait for one player to finish their experiment before you start constructing yours. Just try to make it clear when you have finished.

@@ -16,6 +16,8 @@ external_comments:
 
 The thing is, I think in this situation, Alice often isn't moving the goalposts. Instead, she's looking for something, and not fully specifying it up-front. Maybe because she's speaking imprecisely. Maybe because she doesn't know quite what she's looking for, but does know when she sees something that that's not it.
 
+<!-- more -->
+
 **Alice:** Any research showing that supplement helps?  
 **Bob:** Yes, here's a trial.  
 **Alice:** Anything not funded by the manufacturer?  

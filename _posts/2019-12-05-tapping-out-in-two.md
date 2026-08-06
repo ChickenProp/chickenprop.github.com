@@ -21,6 +21,8 @@ I'm one of those people who feels personally called out by xkcd's "[Duty Calls](
 
 As pastimes go, there's nothing particularly wrong with internet arguments. But sometimes I get involved in one and I want to stop being involved in one and that's not easy.
 
+<!-- more -->
+
 I could just, like, stop posting. Or I could let them say something, and then respond with something like, "yeah, I'm still not convinced, but I don't really have time to get into this any more". But then *the other person wins*, and that's terrible. It potentially looks to onlookers like I stopped because I couldn't find something to say any more. And in at least some cases, it would feel kind of rude: if they've put a lot of thought into their most recent post, it's a bit dismissive to just leave. In the past, when people have done that to me, I've disliked it, at least some times. (Well, at least once. I remember one specific occasion when I disliked it, and there may have been others.)
 
 Another thing I could do is respond to their most recent post, and then say "and now I'm done". But that feels rude, too, and I certainly haven't liked it when people have done it to me. (Why not? It puts me in the position where I don't know whether to respond. Responding feels petty, and kind of a waste of time; not responding feels like they win, and that's terrible.) If they do reply, then I'm shut off completely; I can't even make a minor clarification on the order of "no, you somehow interpreted me as saying exactly the opposite of what I actually said".

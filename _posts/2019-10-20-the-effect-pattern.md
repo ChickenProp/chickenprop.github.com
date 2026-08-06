@@ -15,6 +15,8 @@ It's possible that I'm not very good at writing tests in general. But even if th
 
 I have another hypothesis, which is: much of the reason is that although Elm functions are *pure*, in the sense of "given the same input, they return the same output" - they aren't necessarily *transparent*, in the sense of "you can look at the output and verify that it's correct".
 
+<!-- more -->
+
 To recap[^accessibility], I would describe the Elm architecture as consisting of:
 
 [^accessibility]: I'm not going to recap in detail. This post is mostly targeted at people who already know Elm. I kind of hope others can get something from it too, but I'm not trying hard for that.

@@ -11,6 +11,8 @@ external_comments:
 
 There was a [twitter thread](https://twitter.com/SBF_FTX/status/1337250686870831107) that triggered some confusion amongst myself and some other people in a group chat I'm in.[^author]
 
+<!-- more -->
+
 [^author]: The [author](https://en.wikipedia.org/wiki/Sam_Bankman-Fried) of the tweets is, as the saying goes, best known for other work. That other work is not relevant here.
 
 The relevant tweets are these (I've omitted some):

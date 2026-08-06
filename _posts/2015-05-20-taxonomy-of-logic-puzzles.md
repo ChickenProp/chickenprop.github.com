@@ -12,6 +12,8 @@ This might be too subjective to be worth talking about, but I suspect not, and t
 
 Let's vaguely pretend that logic puzzles have a sort of fundamental particle which is the *insight*. You collect insights, and then you use insights to collect other insights, and eventually you win.
 
+<!-- more -->
+
 Now I'm going to describe five types of puzzle.[^types]
 
 **Deep**: For example, the [blue eyes puzzle](https://xkcd.com/blue_eyes.html). I consider this one to be actually pretty easy. You ask what happens with one blue-eyed person, then two, then three, and just proceed by induction. (Even if you don’t know the terms *common knowledge* and *mutual knowledge* and the difference between them, in the two-person case you can say “she tells Alice that Bob can see blue eyes” and in the three-person case you can say “she tells Alice that Bob knows that Carol can see blue eyes” and so on.) There's only one real insight, which you apply lots of times. Or just a couple of times until you get bored and assume/prove the pattern continues.

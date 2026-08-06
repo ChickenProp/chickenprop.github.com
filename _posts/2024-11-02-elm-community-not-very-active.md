@@ -15,6 +15,8 @@ Elm community is very active."
 
 Is this true? Let's get some statistics, including historical ones, and see what comes up.
 
+<!-- more -->
+
 I think all this data was collected on October 28 2024. I'm splitting things out by year, so we can roughly extrapolate to the end of 2024 by multiplying numbers by 1.2.
 
 ### Subreddit

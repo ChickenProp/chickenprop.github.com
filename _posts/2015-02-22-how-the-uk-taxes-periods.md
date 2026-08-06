@@ -13,6 +13,8 @@ According to the petition,
 
 At least the first sentence of this is true. Sanitary products have VAT of 5% imposed on them. Exotic meats (including horse, ostrich, crocodile and kangaroo) do not.
 
+<!-- more -->
+
 Sanitary products are covered by [VAT notice 701/18](https://www.gov.uk/government/publications/vat-notice-70118-womens-sanitary-protection-products/vat-notice-70118-womens-sanitary-protection-products#products-and-rates), which reduces the rate on them from the standard rate (currently 20%) to 5%. It applies only to "any sanitary protection product that is designed and marketed solely for the absorption or collection of menstrual flow or lochia (discharge from the womb following childbirth)". That is, this reduction was introduced specifically to reduce tax on sanitary products.
 
 Exotic meats are covered by [701/14](https://www.gov.uk/government/publications/vat-notice-70114-food/vat-notice-70114-food#general-food-products), which covers food in general. Most food is zero-rated. There are further exceptions for some things, including chocolate covered biscuits (but not chocolate chip biscuits), which are standard-rated; exotic meats are not one of those things. What seems to have happened here is that the government decided that most food should be zero-rated, and then made a list of foods that shouldn't, and exotic meats didn't happen to make it on to the second list for whatever reason.

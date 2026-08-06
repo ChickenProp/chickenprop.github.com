@@ -10,6 +10,8 @@ If you hang out on [/r/scifi](http://reddit.com/r/scifi/) for long enough, you'l
 
 And, well, they're *wrong*.
 
+<!-- more -->
+
 I want to call it a "no true Scotsman" fallacy. Unfortunately, there's no good definition of science fiction that I can point to and say "whatever *Star Wars* has or doesn't have, that you think makes it not science fiction, is not part of the definition".
 
 Worse, the person in question usually *has* a definition of science fiction. (In this case, "science fiction embraces change".) And indeed, it's a definition that *Star Wars* does not attain.

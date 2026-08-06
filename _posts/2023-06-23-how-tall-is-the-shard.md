@@ -17,6 +17,8 @@ But [according to Bron Maher in Londonist](https://londonist.com/london/secret/s
 
 Is that so? I was curious enough to investigate[^hills], but it turns out I don't really know how to.
 
+<!-- more -->
+
 [^hills]: The main point of the article is to teach us that there's a [point in London](https://en.wikipedia.org/wiki/Crystal_Palace_transmitting_station) higher than the tip of the Shard. I find that mildly interesting, but not very surprising, since I'm aware of the concept of hills. But "actually this building is less tall than you think because people keep giving its height instead of its tallness" is... kinda surprising, if true, but in a not-very-surprising way.
 
 (Also: Maher says the Shard is 306 m, not 309 m, not "not 310 m". And he gets 309 from Wikipedia, quoting it on the [list of highest points in London](https://en.wikipedia.org/wiki/List_of_highest_points_in_London), which talks about "the 309 m (1,014 ft) tall Shard". Where did those extra 60 cm go? The article on the Shard itself also has that number, in the "records" section near the bottom, but the infobox on the right has 309.6/1,016. So is it 306 m, 309 m, or 309.6 m?)

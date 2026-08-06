@@ -10,6 +10,8 @@ Quick note about a thing I didn't properly realize until recently. I don't know 
 
 tl;dr: Conditional prediction markets tell you "in worlds where *thing* happens, does *other-thing* happen?" They don't tell you "if I make *thing* happen, will *other-thing* happen?"
 
+<!-- more -->
+
 Suppose you have a conditional prediction market like: "if Biden passes the DRESS-WELL act, will at least 100,000 Americans buy a pair of [Crocs](https://en.wikipedia.org/wiki/Crocs#Products) in 2025?" Let's say it's at 10%, and assume it's well calibrated (ignoring problems of liquidity and time value of money and so on).
 
 Let's even say we have a pair of them: "if Biden doesn't pass the DRESS-WELL act, will at least 100,000 Americans buy a pair of Crocs in 2025?" This is at 5%.

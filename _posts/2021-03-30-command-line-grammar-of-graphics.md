@@ -19,6 +19,8 @@ If you're not familiar with the grammar of graphics, I'd summarize it as: you bu
 
 So, rather than adapt myself to the world, I've tried to adapt the world to myself.
 
+<!-- more -->
+
 There's a python implementation of the paradigm, called [plotnine](https://plotnine.readthedocs.io/en/stable/).[^other-ggs] (It has its own [gallery](https://plotnine.readthedocs.io/en/stable/gallery.html).) And now I've written a command-line interface to plotnine.
 
 It's not as powerful as it plausibly could be. But it's pretty powerful[^power], and if I stop developing now I might find it fully satisfies my needs in future. For example, I took a [dataset](https://github.com/owid/covid-19-data/tree/master/public/data/) of covid cases-per-capita timeseries for multiple countries. Then both of these graphs came from the same input file, only manipulated by grep to restrict to twelve countries:

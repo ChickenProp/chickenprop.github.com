@@ -7,6 +7,8 @@ comments: true
 
 Explaining a joke is like dissecting a frog: it's one way to learn about frogs. If you want me to explain any of these, ask, and I will explain [without making fun of you](https://xkcd.com/1053/).
 
+<!-- more -->
+
 ---
 
 "I hear someone playing a triangle in the corridor," said Tom haltingly.

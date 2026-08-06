@@ -18,6 +18,8 @@ I've [previously complained](https://reasonableapproximation.net/2020/09/14/agai
 
 Here's an oversight in my previous complaint: I didn't look at Wikipedia. I picked up vibes from a few internet randos, but not the specific internet randos who edit the world's premier encyclopedia.
 
+<!-- more -->
+
 Part of what I want to point out here is "there's no consensus on what the term *boots theory* refers to". If I'm wrong about that, and just happened to read the wrong internet randos, it seems likely that Wikipedia will tell me what the consensus is. So let's take a look.
 
 As I write, the most recent revision is from [March 17 2025](https://en.wikipedia.org/w/index.php?title=Boots_theory&oldid=1281009304), and it tells us:

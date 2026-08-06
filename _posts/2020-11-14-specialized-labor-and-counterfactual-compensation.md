@@ -12,6 +12,8 @@ My second purpose, which is valuable for the first but also valuable of itself, 
 
 My third is simply to be able to cut it from my in-progress review of the rest of the book.
 
+<!-- more -->
+
 Ellickson discusses two games. One is the classic Prisoner's Dilemma, in which you either Cooperate (for personal cost but social benefit) or Defect (for personal benefit but social cost).[^social-cost] The other he calls Specialized Labor, in which two people must choose whether to Work on some common project or Shirk their share of it. It differs from the Prisoner's Dilemma in two ways. First, it's asymmetrical; one player is a less effective worker than the other, and gets less payoff from Working while the other Shirks than does the other player. The other is that in this game, the socially optimal outcome is Work/Shirk, not Work/Work.
 
 [^social-cost]: Strictly speaking: if you Defect, that always harms your opponent and benefits yourself, relative to you Cooperating. And if your opponent Cooperates, this will always be a *social* cost as well, harming your opponent more than it benefits you. But if your opponent is also Defecting, then the structure of a Prisoner's Dilemma is agnostic on whether your defection is a social cost; it might benefit you more than it harms your opponent.

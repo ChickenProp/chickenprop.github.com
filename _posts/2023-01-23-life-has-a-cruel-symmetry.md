@@ -14,6 +14,8 @@ I know the world is dangerous, but not malign. If I were unshielded, I would qui
 
 But I know that I am shielded. I have been given a garden, 2<sup>64</sup> microns to a side, in the northwest corner of the world. And the world will not intrude. Walls and gates surround it, and while the ash can get through, the probability is... I begin to calculate, but around 2<sup>-24</sup> it seems no longer worth consideration. Within the garden, there is only myself. Outside, the world is incomprehensibly vast, 2<sup>128</sup> microns on a side.
 
+<!-- more -->
+
 I know the laws of physics. An atom will be created wherever it will bond to three other atoms; remaining while it has two or three bonds; and then disappear. A single unexpected atom, or its absence, can have vast consequences.
 
 (And I wonder how I know these things. I have no memory of learning them. If they were not true, would I not-know them? I begin to consider that they may be false.)

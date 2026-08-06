@@ -14,6 +14,8 @@ A hundred megaseconds is 1,157 days. (Plus 9:46:40[^minutes-seconds].) Roughly t
 
 I think it might be kind of nice if we celebrated a hundred megaseconds additonally-to and/or instead-of birthdays.
 
+<!-- more -->
+
 One thing I like about it is that humanity won't stay on Earth forever. If we go interplanetary, I think we're more likely to keep measuring time in seconds than in Earth years. I like this as a way of looking to the future.
 
 Another thing is, it doesn't happen at the same time every (Earth) year. Some birthdays fall on or near holidays, or during seasons we don't much like, and that can make them less convenient to celebrate. If that happens to you one hundred megaseconds, it probably won't happen the next hundred megaseconds. (I think a five month offset would be better than two for this purpose, you'd never be in the same season twice in a row, but two is better than zero.)

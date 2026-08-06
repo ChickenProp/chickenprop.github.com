@@ -10,6 +10,8 @@ I've created an interactive graph of <a href="http://bl.ocks.org/ChickenProp/raw
 >
 > (However, see [The Thin Blue Line That Stays Strangely Horizontal](http://slatestarcodex.com/2013/09/21/the-thin-blue-line-that-stays-bizarrely-horizontal/), which questions the validity of DW-NOMINATE.)
 
+<!-- more -->
+
 Background: I made this last year for a [Udacity](https://en.wikipedia.org/wiki/Udacity) course, "Data Visualization and D3.js". I needed to submit a visualization for marking, and this was my submission. I'm grateful for feedback provided by Udacity and by some of my friends. Without that, the result would certainly have been worse.
 
 The source is [available on GitHub](https://github.com/ChickenProp/dwnom-interactive), including datasets and some python scripts I used to process them. The README also documents some of the design history.

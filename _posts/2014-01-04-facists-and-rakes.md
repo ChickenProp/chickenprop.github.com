@@ -15,6 +15,8 @@ But sometimes people disagree about what counts as "hurting other people". Maybe
 
 What should happen here is that people try to work out exactly what it is they disagree about and why. What actually happens is that people appeal to permissiveness.
 
+<!-- more -->
+
 Of course, by the permissiveness principle, people should be allowed to believe what they want, because holding a belief is harmless as long as you don't act on it. So we say something like "I have no problem with people being morally opposed to eating tic-tacs, but they shouldn't impose their beliefs on the rest of us."
 
 Except that by the harm-minimising principle, those people probably *should* impose their beliefs on the rest of us. Forbidding you to eat tic-tacs doesn't hurt you much, and it saves the tic-tacs a lot of grief.

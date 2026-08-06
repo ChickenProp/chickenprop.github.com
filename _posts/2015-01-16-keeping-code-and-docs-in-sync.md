@@ -12,6 +12,8 @@ And of course, having written a function and documented it (in whatever order) -
 
 You can't have a rule "don't edit the code unless you first edit the documentation", because a lot of code edits don't need doc changes. A more complicated rule like "don't edit the code unless you first edit the documentation, unless the documentation doesn't change" would probably just be forgotten. After a while, whenever I ask myself if the documentation is going to change, I'm just going to return the cached answer "no" without thinking. In any case it has the same problem: I don't know what I'm going to change until I change it.
 
+<!-- more -->
+
 ---
 
 So here's my half-baked proposal that might help to solve some of the problem of keeping code in sync with documentation:

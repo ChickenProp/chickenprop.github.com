@@ -13,6 +13,8 @@ Roughly it involves two steps. One: do something that makes our lizard hindbrain
 
 I organised a CoZE exercise for LessWrong London on Septmeber 1st. We had a total of eight participants, I think I was the only one who'd done any structured CoZE before.
 
+<!-- more -->
+
 My plan was: we meet at 11am, have a discussion about CoZE, play some improv games to warm up, and then head to the nearby mall for 1.30 pm. In reality, the discussion started closer to 12pm, with some people showing up part way through or not until it was finished.
 
 After finishing the discussion, we didn't end up doing any improv games. We also became slightly disorganised; we agreed on a meeting time an hour and a half in the future, but then our group didn't really split up until about twenty minutes after that. I could have handled this better. We got distracted by the need for lunch, which I could have made specific plans for. (Ideally I would have started the discussion after lunch, but shops close early on Sunday.)

@@ -20,6 +20,8 @@ One such game is the [Prisoner's Dilemma](https://en.wikipedia.org/wiki/Prisoner
 
 I usually think of a Prisoner's Dilemma as also having $2W > X + Y > 2Z$. That specifies that mutual cooperation has the highest total return - it's "socially optimal" in a meaningful sense[^socially-optimal] - while mutual defection has the lowest. It also means you can model the "defect" action as "take some value for yourself, but destroy value in the process". (Alternatively, "cooperate" as "give some of your value to your playmate[^playmate], adding to that value in the process".) We might consider instead:
 
+<!-- more -->
+
 [^socially-optimal]: My use of the phrase comes from Ellickson's [Order Without Law](https://www.hup.harvard.edu/catalog.php?isbn=9780674641693). Part of why I'm writing this is to help clarify my thinking about that book. I don't mean to imply anything in particular by it, I just like the ring of it better than alternatives like "welfare maximizing".
 
 [^playmate]: Calling them your "opponent" assumes a level of antagonism that may not be present.

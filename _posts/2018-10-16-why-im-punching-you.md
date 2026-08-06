@@ -17,6 +17,8 @@ Given that punching people is sometimes better than the alternatives, I think we
 
 But I think it's probably a good idea to try to avoid having those conversations *while actually punching people*.
 
+<!-- more -->
+
 Here's what I mean. Alice thinks that punching Bob is better than the alternatives. But she thinks that if she just starts punching, Carol and Dave and Eve might not understand why. Not even if she tells them what Bob has done. She thinks punching Bob is better than the alternives, but she thinks the reasons for that are slightly complicated and haven't previously been articulated very well, at least not in a way that makes them [common knowledge](https://www.lesswrong.com/posts/9QxnfMYccz9QRgZ5z/the-costly-coordination-mechanism-of-common-knowledge).
 
 So she writes an essay in which:

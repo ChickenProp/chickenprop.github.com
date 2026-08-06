@@ -18,6 +18,8 @@ I call this a reckless introduction, because my main source is [wikipedia](https
 
 I'm also trying to tie in some quasi-philosophy that surely isn't original to me but I don't know if or where I've encountered it before.[^constraints-liberties]
 
+<!-- more -->
+
 [^constraints-liberties]: While writing this essay I came across the talk [Constraints Liberate, Liberties Constrain](https://www.youtube.com/watch?v=GqmsQeSzMdwz). From the title and the context I encountered it, it sounds like it's on the same subject. But I haven't watched it, because it's in the form of a 50 minute video.
 
 ### Background

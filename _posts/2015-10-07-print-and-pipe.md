@@ -14,6 +14,8 @@ proc1 | tee /dev/stderr | proc2    # general case
 
 `tee` will print the output of `proc1` to both stdout and stderr. stderr goes to the terminal and stdout goes to `proc2`.
 
+<!-- more -->
+
 You can make it more convenient with an alias:
 
 ```sh

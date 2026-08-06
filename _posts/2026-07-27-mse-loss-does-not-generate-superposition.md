@@ -15,6 +15,8 @@ If you're training any type of toy model of superposition, Mean Squared Error (M
 
     Even with this overly broad definition, we'll still show that MSE Loss doesn't favor superposition over non-superposition.
 
+<!-- more -->
+
 # Related work
 
 We aren't the first to notice that MSE loss doesn't work. In [Toy Models of Superposition](https://transformer-circuits.pub/2022/toy_model/index.html) the effective loss function is $\mathrm{MSE}(\mathrm{ReLU}(\mathrm{target} - \mathrm{model\\_output}))$, because they noticed that plain $\mathrm{MSE}(\mathrm{target} - \mathrm{model\\_output})$ doesn't work.

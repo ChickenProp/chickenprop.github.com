@@ -17,6 +17,8 @@ Scott Aaronson writes about [blankfaces](https://www.scottaaronson.com/blog/?p=5
 
 I want to push back against this a bit.
 
+<!-- more -->
+
 First, one of the defining aspects of blankfacedness is their internal experience. It's someone who *enjoys* wielding their power. This is a very hard thing to judge from the outside.
 
 I used to work in a cinema. One day a mother came in with her young child, perhaps fivish years old. She was late for a busy screening, and the person selling tickets warned they might not be able to sit together. She said that was fine, bought popcorn and went in. Soon afterwards she came back out, complaining that they couldn't sit together. She wanted a refund for the tickets (fine) and popcorn (not fine, but she insisted). The conversation between her and my manager escalated a bit. I don't remember who brought up the police, but she at least was very confident that she knew her rights and the police would back her up if they arrived. Eventually he gave her a refund.

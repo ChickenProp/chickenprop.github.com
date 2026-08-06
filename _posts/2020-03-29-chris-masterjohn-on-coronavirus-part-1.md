@@ -14,6 +14,8 @@ Should we trust him? On the one hand, "nutritionist" is not a profession I neces
 
 (Only the last one of those should be considered a problem with the report; the rest are just priors.)
 
+<!-- more -->
+
 On the other hand, Chris previously turned me on to [zinc](https://www.greaterwrong.com/posts/un2fgBad4uqqwm9sH/is-this-info-on-zinc-lozenges-accurate) so he has some credibility with me. Also, although I'm out of my depth in actually evaluating the science, I do think I have a decent bullshit detector, and the report is superficially very convincing to me.[^bullshit] I get the sense that he actually really knows what he's doing, is weighing the evidence appropriately and making claims that are justified by it. He admits to uncertainty, and some of his recommendations are "this probably won't help, but just in case"; but he does speak precisely enough to be falsifiable. This doesn't mean he's right, of course. But I think he's worth some people paying some attention to.
 
 [^bullshit]: There are some things that kind of smell like bullshit to me. Most notably, I feel like at times, the report goes into a lot of detail on things that aren't super relevant, like the renin-angiotensin system that ACE2 plays a part in. As far as I've seen so far, the precise mechanics of that don't really matter. Meanwhile, a lot of the important claims are speculative - necessarily so, because things are moving too fast to have good evidence here, but speculative all the same. In combination, this can kind of feel like... "throw a lot of impeccably researched, uncontroversial and unimportant science at the reader; then try to sneak in the difficult bits under the radar"? I'm sure there's a term for this that I'm forgetting.

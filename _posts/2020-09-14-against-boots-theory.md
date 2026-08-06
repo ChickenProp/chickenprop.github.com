@@ -28,6 +28,8 @@ Is it even a contributing factor? Is *part of* the reason why the rich are so ri
 
 That's less obvious, but I predict not. I predict that the rich spend more than the poor in total, but also on boots, laptops, smartphones, cars, and most other things. There might be exceptions where rich people consume less of the thing than poor people - bus tickets, for example - but I think if you group spending in fairly natural ways, the rich will spend more than the poor in almost every group.
 
+<!-- more -->
+
 * Maybe they spend less money on their daily wear boots, but own more pairs of shoes for different occasions. Or maybe they decide that they care about other things than lifetime cost for their daily wear boots, and spend more on those, too. (Being rich means they can *afford* to care about other things than lifetime cost.)
 
 * Apparently famous people often get comped meals, but I bet most of them still spend more money on food than I do.

@@ -15,6 +15,8 @@ I [previously mentioned](http://reasonableapproximation.net/2021/03/14/haskenthe
 
 It sounds difficult. This is an attempt to figure out just how difficult, partly by looking at the state of the art.
 
+<!-- more -->
+
 A variadic function is one which can accept argument lists of different length. A well-known example in many languages is [printf](https://en.wikipedia.org/wiki/Printf_format_string#Programming_languages_with_printf). Here are a bunch of functions I might want to be variadic in Haskenthetical, along with examples in Haskell of types I might want to use them as:
 
 * `+`, accepting any number ≥ 2 of numbers and returning a number of the same type.

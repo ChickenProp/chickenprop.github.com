@@ -11,6 +11,8 @@ Which is fine. I shouldn't expect people to want to talk about something just be
 
 At the last meetup I had two topics that I wanted to raise, and realized that I had no way of raising them, which was a third topic worth raising. So when an interruption occured in the middle of someone's thought - a new person arrived, and we did the "hi, welcome, join us" thing - I jumped in. "Before you start again, I have three things I'd like to talk about at some point, but not now. Carry on." Then he started again, and when that topic was reasonably well-trodden, he prompted me to transition.
 
+<!-- more -->
+
 Then someone else said that he also had two things he wanted to talk about, and could I just list my topics and then he'd list his? (It turns out that no I couldn't. You can't dangle an interesting train of thought in front of the London LW group and expect them not to follow it. But we did manage to initially discuss them only briefly.)
 
 This worked pretty well. Someone more conversationally assertive than me might have been able to take advantage of a less solid interruption than the one I used. Someone less assertive might not have been able to use that one.

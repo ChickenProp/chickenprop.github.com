@@ -12,6 +12,8 @@ Hearing this strategy, you head down to your local Chicken field, armed with you
 
 Are you still going to remove your own wheel? Or are you going to swerve?
 
+<!-- more -->
+
 ---
 
 It's easy to think that Chicken can turn into a game of "who can precommit first". We race to remove our steering wheels; if I win, then you have to swerve or crash, and if you win, then I have to swerve or crash.

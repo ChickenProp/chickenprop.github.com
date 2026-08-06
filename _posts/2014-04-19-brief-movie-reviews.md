@@ -4,6 +4,8 @@ layout: post
 ---
 I don't expect anyone cares about what I think about the movies I've seen lately, so I'm bundling those thoughts into one post to be less annoying.
 
+<!-- more -->
+
 ### The Lego Movie
 
 This is the most pure fun I've had watching a movie in a long time. It's going for funny, and it is, the whole way through. As I write this, I saw the movie almost a month ago, and remembering some of the jokes still makes me smile.

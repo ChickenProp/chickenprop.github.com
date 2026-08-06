@@ -13,6 +13,8 @@ I'd like to know how often the button gets pressed, so I compiled a list of all 
 
 Here's the list. As I learn about other events, past or future, I'll try to keep it updated.
 
+<!-- more -->
+
 ### 2018, Oxford/Seattle: Failure
 
 Parties happened simultaneously in these two places. I was at the Oxford one, which was actually camping in a field outside Oxford. We both had laptops connected to a web app.

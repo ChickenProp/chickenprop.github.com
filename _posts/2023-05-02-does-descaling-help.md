@@ -11,6 +11,8 @@ I've heard that descaling a kettle makes it more efficient, and can save me time
 
 Okay, but how much? For some reason my my intuition says it'll be basically unnoticable. Let's try to figure it out, and then actually try it.
 
+<!-- more -->
+
 ### The Models
 
 There's a first-order approximation which says this should be impossible: heating things up is 100% efficient. What's the limescale going to do, convert some electricity into forms of energy other than heat?

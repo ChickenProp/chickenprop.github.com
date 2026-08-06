@@ -11,6 +11,8 @@ What follows is discussion of the tests, my scores, and what they mean. I've bee
 
 A note: if you think you might be faceblind, and you'd be interested in getting more detailed tests, it might be a good idea not to read the below. I expect it wouldn't significantly bias the results if you did, except for one bit that I've <a href="http://www.rot13.com/">rot13ed</a>. But I don't trust myself to make that call. If you're in London, you can take the above test like me and see what happens. Otherwise I'm not sure how you'd go about getting more tests.
 
+<!-- more -->
+
 ---
 
 The object/face recognition tests were "memorise these things, then we show you a sequence of things and you have to say if each of these things was a thing in the first set". The things were houses, cars, horses, and bald women's faces. I was bad at all of these: 4% for cars, 2% for houses, and <1% for horses and women. (Average score was higher for women than horses, and my score was higher for horses than women, so I'm worse at women than horses. I think Katie told me I was somewhere between -5σ and -6σ for women. Under normality, -5σ is one in thirty million, but this is clearly not normal.) So it seems I have some level of general object agnosia, but more specific prosopagnosia on top of that.

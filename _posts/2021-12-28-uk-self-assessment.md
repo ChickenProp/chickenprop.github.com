@@ -17,6 +17,8 @@ HMRC [publishes](https://www.gov.uk/government/publications/self-assessment-tax-
 
 **Update December 29:** I only know about the parts of this process that are relevant to me. Some questions about other parts are [answered](https://www.reddit.com/r/UKPersonalFinance/comments/rqez89/walkthrough_filing_a_selfassessment_tax_return/) in the comments on /r/UKPersonalFinance. Also, I generally find that community to be very helpful and knowledgable, so I find it reassuring that they only caught one mistake so far.
 
+<!-- more -->
+
 ---
 
 The gov.uk [page on filing](https://www.gov.uk/log-in-file-self-assessment-tax-return) says you have to register first unless you sent a tax return last year. I've sent tax returns for several years running now, and I don't remember what registering was like.

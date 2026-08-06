@@ -2,6 +2,8 @@ name: A Reasonable Approximation
 description: philh's blog
 url: http://reasonableapproximation.net
 
+excerpt_separator: "<!-- more -->"
+
 # Unsure if this is helpful. But I published a post soon after midnight and it
 # didn't show up. Possibly the server was still the day before. This might
 # cause posts in the future to be published.

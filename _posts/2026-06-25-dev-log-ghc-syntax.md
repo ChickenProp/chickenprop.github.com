@@ -18,6 +18,8 @@ like a fairly small improvement that I could possibly even implement myself. The
 answer was, roughly, "someone's suggested it, and people are broadly in favor,
 but with different syntax that doesn't yet exist".
 
+<!-- more -->
+
 > So it seems the story is, people want to phase out use of these annotations
 > (which are weird because comments shouldn't change whether a program is
 > accepted or not) in favor of extending use of modifier syntax (currently used

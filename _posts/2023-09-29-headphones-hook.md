@@ -10,6 +10,8 @@ Some months ago I got a 3D printer. (An Anycubic Kobra Go, which was pretty high
 
 The curve was pretty awkward. I was working with [OpenSCAD](https://en.wikipedia.org/wiki/OpenSCAD) (maybe something else would have been easier?) which doesn't have an easy way that I found to draw nice curves. (Lines in general seem annoying, you can extrude a 2d shape to 3d but not a 1d shape to 2d?)
 
+<!-- more -->
+
 I decided to go with an Archimedean spiral, and did a bunch of math to figure out how the various parameters had to relate to each other.[^params] I ended up with equations that I'd have had to solve numerically because they probably had no closed form. Then rather than writing a simple script to give me the answers I just eyeballed it, figuring I could redo it properly if I felt like it. Seems basically fine though.
 
 [^params]: There are six parameters: x and y position of the center, initial and final radius, and the angular section to draw. There are two points I wanted the curve to pass through, plus I wanted it to be tangent to the horizontal at the first point, and I wanted the start and end points of the curve to be vertically above each other. It turns out that leaves one degree of freedom, letting me choose a smaller curve with more upswing at the end or a larger one with less. I went with a spiral that would have 5.4 cm between each turn, if it had multiple turns.

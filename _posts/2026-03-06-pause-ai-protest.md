@@ -17,6 +17,8 @@ But other than that, Mrs. Lincoln, I'm pretty bullish on AI progress. I'm aware 
 
 Again, that's aside from the bit where I expect AI to kill us all, which is an important bit.
 
+<!-- more -->
+
 The ostensible point of the march was trying to get Sam Altman and Dario Amodei to publicly support a "pause in principle" - to support a global pause on AI development backed by international treaty. I think this would be great! (Demis Hassabis has already said he would, though I think his exact words were "I think so" and I'd rather he be a bit more committed.) I think a global pause treaty would be bad for the economy (and through it, bad for the people who participate in the economy) and I don't like the level of government oversight I think it would require; but on the other hand, global human extinction would be pretty bad.
 
 My point estimate is that about 300 people showed up. (80% CI... 200 to 500?) We started outside OpenAI HQ. My girlfriend and I were given orange-and-black placards (PauseAI colors) with messages we endorsed. ("Pause AI", "if you can't steer, don't race", "just don't build AGI until there's expert consensus it won't cause human extinction".) I think about half the placards were like that, a third were Pull the Plug branded (with "Pull the Plug", or with sad-looking electrical sockets and no text), and the rest were assorted individual ones. ("Fuck AI. Fuck it to death". A pig with the ChatGPT logo for a butthole. I'm pretty sure there were also ones I liked.)

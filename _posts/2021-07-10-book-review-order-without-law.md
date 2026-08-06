@@ -24,6 +24,8 @@ If you ask why, they'll tell you it's because of what happens if a motorist hits
 
 They are simply wrong about this. Range designation has no legal effect on what happens when a motorist hits a cow. (Or, maybe not quite *no* effect. There's some, mostly theoretical, reason to think it might make a small difference. But certainly the ranchers exaggerate it.) When these cases go to court, ranchers either settle or lose, and complain that lawyers don't understand the law.
 
+<!-- more -->
+
 Even if they were right about the law, they have insurance for such matters. They'll tell you that their insurance premiums will rise if the range closes, but insurers don't adjust their rates on that level of granularity. One major insurer doesn't even adjust its rates between Shasta County and other counties in California. They might plausibly want to increase their coverage amount, but the cost of that is on the order of $10/year.
 
 No, the actual effect that range designation has, is on what happens when a rancher's cow accidentally trespasses on someone else's land. In closed range, the owner is responsible for fencing in his cattle. If they trespass on someone else's land, he's [strictly liable](https://en.wikipedia.org/wiki/Strict_liability) for any damage they cause. In open range, the landowner is responsible for fencing the cattle out; the cattle owner is only liable for damages if the land was entirely fenced or if he took them there deliberately. (Law enforcement also has more power to impound cattle in closed range, but most years they don't do that even once.)

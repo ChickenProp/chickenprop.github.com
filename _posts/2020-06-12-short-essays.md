@@ -8,6 +8,8 @@ external_comments:
 ---
 Sometimes I write things in places that aren't here. Sometimes I think those things are worth preserving. Some of those things follow, with minor editing, mostly on the subject of various movies that I've watched. Also two stage musicals, one TV show, one short story, and one music video. They were written over the past four years, so I can't necessarily talk intelligently about these things any more. When I name a thing, spoilers generally follow.
 
+<!-- more -->
+
 ### I don't really get *[The Hurt Locker](https://en.wikipedia.org/wiki/The_Hurt_Locker)*
 
 It seemed like it was going to be a film about a cowboy with a death wish, who should be removed from duty but isn't because of institutional dysfunction in the US army. Or something along those lines.

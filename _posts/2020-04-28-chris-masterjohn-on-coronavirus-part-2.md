@@ -10,6 +10,8 @@ tags: [practical]
 
 Background on this in [part one](http://reasonableapproximation.net/2020/03/29/chris-masterjohn-on-coronavirus-part-1.html).
 
+<!-- more -->
+
 ### General info: Interferon
 
 [Interferon](https://en.wikipedia.org/wiki/Interferon) is an antiviral that our immune system naturally releases when it detects invasion. But SARS-CoV and MERS-CoV (the virus that causes MERS) manage to avoid this response. The trigger is the presence of double-stranded RNA, which viruses need but our own cells don't. (We make single-stranded RNA from DNA, and then proteins from single-stranded RNA. We never need to copy our RNA. But viruses do need to copy their RNA, and apparently that means viral RNA needs to be double-stranded.) SARS-CoV and MERS-CoV hide their double-stranded RNA inside "double-membrane vesicles" to avoid detection.
